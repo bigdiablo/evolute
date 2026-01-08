@@ -865,15 +865,33 @@ body.login {
 
 /* ========== MAIN ========== */
 
+.dashboard #Main *,
+.dashboard #Main *::before,
+.dashboard #Main *::after {
+    box-sizing: border-box;
+}
+
 .dashboard b.bt,
 .dashboard .blueBox b.bt,
 .dashboard b.bt b,
 .dashboard b.bb,
 .dashboard b.bb b,
-.dashboard div.grid_1_1#leftInnerGrid,
 .dashboard .clear,
 .dashboard .secondary {
     display: none;
+}
+
+.dashboard #Header,
+.dashboard #HeaderContent,
+.dashboard #Navigation,
+.dashboard .roundedBox,
+.dashboard .roundedBox2,
+.dashboard .roundedBox3,
+.dashboard .roundedBox4,
+.dashboard .roundedBox5,
+.dashboard .sellerHomeContentBoxL .roundedBox,
+.dashboard .sellerHomeContentBoxR .roundedBox {
+    min-width: 0 !important;
 }
 
 .dashboard #Main {
@@ -883,6 +901,8 @@ body.login {
     min-height: 100vh;
     padding: 32px;
     background-color: #FAFAFA;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .dashboard #MainContent {
@@ -891,6 +911,7 @@ body.login {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .dashboard #PrimaryContent {
@@ -904,10 +925,13 @@ body.login {
     display: flex;
     flex-direction: column;
     width: 100%;
+    float: none;
 }
 
 .dashboard .grid_600px_340px .primary {
-    width: 100%;
+    width: 100% !important;
+    float: none;
+    box-sizing: border-box;
 }
 
 .dashboard .grid_600px_340px .primary > .roundedBox {
@@ -942,16 +966,35 @@ body.login {
 .dashboard .sellerHomeContentBoxL,
 .dashboard .sellerHomeContentBoxR {
     display: contents;
+    width: auto !important;
+    float: none !important;
+    margin: 0 !important;
 }
 
 .dashboard .grid_1_1 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.dashboard div.grid_1_1#leftInnerGrid {
+    display: grid;
+    margin-top: 0;
 }
 
 .dashboard .grid_1_1 .column {
     display: contents;
+    width: auto !important;
+    float: none !important;
+    margin: 0 !important;
+}
+
+.dashboard .grid_1_1 .column1,
+.dashboard .grid_1_1 .column2 {
+    width: auto !important;
+    margin: 0 !important;
 }
 
 .dashboard .sellerHomeContentBoxL .roundedBox,
