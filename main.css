@@ -474,8 +474,6 @@ body.login {
     margin-right: 0;
 }
 
-.dashboard .userInfo #accountName,
-.dashboard .userInfo #accountBalance,
 .dashboard .userInfo #transferBalance,
 .dashboard .userInfo #links {
     display: flex;
@@ -504,11 +502,12 @@ body.login {
 .dashboard #links::before {
     content: 'Menu';
     display: block;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
+    line-height: 20px;
     color: #71717A;
     padding: 6px 8px;
-    margin-top: 8px;
+    margin-bottom: 2px;
 }
 
 .dashboard #links a{
@@ -532,11 +531,16 @@ body.login {
 
 .dashboard .userInfo #accountName,
 .dashboard .userInfo #accountBalance {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    font-size: 12px;
+    font-size: 0 !important;
+    padding: 0 !important;
+}
+
+.dashboard .userInfo::before {
+    content: 'Account';
+    display: block;
+    font-size: 14px;
     font-weight: 500;
+    line-height: 20px;
     color: #71717A;
     padding: 6px 8px;
 }
