@@ -401,6 +401,8 @@ body.login {
     max-width: none;
     width: 300px;
     height: 100vh;
+    z-index: 666;
+    background-color: var(--text-white);
     border-right: 1px solid #E4E4E7;
 }
 
@@ -630,15 +632,15 @@ body.login {
     text-align: center;
     padding: 0;
     height: auto !important;
-    background: red;
 }
 
 #MainNavigation.tabs ul {
     display: flex;
     flex-direction: column;
+    gap: 4px;
     width: 100%;
     margin: 0;
-    padding: 0px;
+    padding: 0 14px;
     list-style: none;
     position: relative;
     left: 0;
@@ -646,16 +648,127 @@ body.login {
     z-index: 6;
 }
 
+#MainNavigation.tabs ul::before {
+    content: 'Administration';
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #71717A;
+    padding: 6px 8px;
+}
+
 #MainNavigation.tabs ul li {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
     height: auto;
     float: left;
     text-align: left;
     overflow: hidden;
-    padding: 6px 8px;
+    padding: 0;
     margin-left: 0 !important;
     margin-bottom: 0 !important;
+}
+
+#MainNavigation.tabs ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 6px 8px !important;
+    color: #09090B;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 20px !important;
+    text-decoration: none !important;
+    position: relative;
+    border-radius: 4px;
+    transition: all .3s ease;
+}
+
+#MainNavigation.tabs ul li a:hover {
+    background-color: #F4F4F5;
+}
+
+#MainNavigation.tabs ul li a.selected,
+#MainNavigation.tabs ul li a:hover .selected,
+#MainNavigation.tabs ul li a:active .selected {
+    position: relative;
+    top: 0;
+    background: none;
+    padding: 0;
+    color: var(--primary-cyan);
+    cursor: pointer;
+    text-decoration: none !important;
+    background-color: #F4F4F5;
+}
+
+#Navigation b.bl {
+    display: none;
+}
+
+#SubNavigation.subtabs {
+    float: left;
+    font-size: 14px;
+    font-weight: 500 !important;
+    line-height: 20px;
+    text-align: left !important;
+}
+
+div#SubNavigation {
+    background: none;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0px;
+    padding-bottom: 0 !important;
+    margin-right: 0 !important;
+    z-index: 1;
+}
+
+div#SubNavigation.subtabs ul {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    z-index: 1;
+}
+
+#SubNavigation.subtabs ul li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    float: left;
+    text-align: left;
+    overflow: hidden;
+    margin-left: 0px;
+    background: transparent;
+    border: none;
+    margin-top: 0;
+    padding: 0;
+}
+
+#SubNavigation.subtabs ul li a {
+    display: block;
+    white-space: nowrap;
+    padding: 0;
+    color: #09090B !important;
+    text-decoration: none;
+    font-size: 14px !important;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    border: 1px solid #000;
+}
+
+#SubNavigation.subtabs ul li a:hover {
+    background-color: #F4F4F5;
 }
