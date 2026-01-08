@@ -1,0 +1,490 @@
+@charset "utf-8";
+
+:root {
+    --primary-cyan: #00ade1;
+    --primary-green: #56b45e;
+    --primary-blue: #0060a7;
+    --primary-dark-blue: #004279;
+    --primary-gray: #7d878e;
+    --secondary-cyan: #00ade1;
+    --secondary-orange: #e8712c;
+    --secondary-gray: #5a6066;
+    --secondary-black: #000000;
+    --secondary-light-gray: #b4bcc4;
+    --text-gray: #6b7280;
+    --border-gray: #e5e7eb;
+    --error-red: #CC3300;
+}
+
+html,
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-style: normal;
+    line-height: normal;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    background: white;
+}
+
+/* ========== LOGIN ========== */
+
+body.login {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: linear-gradient(135deg, var(--primary-dark-blue) 0%, var(--primary-blue) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.login #Header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    min-height: 40px;
+    min-width: auto;
+    max-width: none;
+    padding: 20px 0 !important;
+    background-color: white;
+    border-radius: 12px 12px 0 0;
+}
+
+.login #HeaderContent {
+    min-width: auto;
+}
+
+.login #air {
+    display: flex;
+    vertical-align: middle;
+    width: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.login #logoDiv {
+    display: flex;
+    float: none;
+    clear: none;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.login #logoDiv img {
+    display: none;
+}
+
+.login #logoDiv::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 792 195.87'%3E%3Cstyle%3E.cls-1%7Bfill:%237d878e%7D.cls-2%7Bfill:%23fff%7D.cls-3%7Bfill:%2300ade1%7D.cls-4%7Bfill:%23004279%7D.cls-5%7Bfill:%230060a7%7D.cls-6%7Bfill:%2356b45e%7D%3C/style%3E%3Cg%3E%3Cpath class='cls-1' d='M257.25,52.44c-26.17,0-47.45,21.29-47.45,47.45s21.29,47.45,47.45,47.45c13.68,0,26.69-5.91,35.71-16.2,2.93-3.35,2.6-8.44-.75-11.38-3.35-2.93-8.44-2.6-11.38.75-5.96,6.8-14.55,10.7-23.58,10.7-17.27,0-31.33-14.05-31.33-31.33s14.05-31.33,31.33-31.33c14.49,0,26.71,9.89,30.28,23.26h-41.02c-4.45,0-8.06,3.61-8.06,8.06s3.61,8.06,8.06,8.06h50.13c4.45,0,8.06-3.61,8.06-8.06,0-26.17-21.29-47.45-47.45-47.45Z'/%3E%3Cpath class='cls-1' d='M738.19,52.44c-26.16,0-47.45,21.29-47.45,47.45s21.29,47.45,47.45,47.45c13.68,0,26.69-5.91,35.71-16.2,2.93-3.35,2.6-8.44-.75-11.38-3.35-2.93-8.44-2.6-11.38.75-5.96,6.8-14.55,10.7-23.58,10.7-17.27,0-31.33-14.05-31.33-31.33s14.05-31.33,31.33-31.33c14.49,0,26.71,9.89,30.28,23.26h-41.02c-4.45,0-8.06,3.61-8.06,8.06s3.61,8.06,8.06,8.06h50.13c4.45,0,8.06-3.61,8.06-8.06,0-26.17-21.29-47.45-47.45-47.45Z'/%3E%3Cpath class='cls-1' d='M448.02,52.44c-26.17,0-47.45,21.29-47.45,47.45s21.29,47.45,47.45,47.45c13.68,0,26.69-5.91,35.71-16.2,7.57-8.65,11.74-19.75,11.74-31.25,0-26.17-21.29-47.45-47.45-47.45ZM471.6,120.53c-5.96,6.8-14.55,10.7-23.58,10.7-17.27,0-31.33-14.05-31.33-31.33s14.05-31.33,31.33-31.33,31.33,14.05,31.33,31.33c0,7.6-2.75,14.92-7.75,20.63Z'/%3E%3Cpath class='cls-1' d='M618.15,55.42c-4.45,0-8.06,3.61-8.06,8.06v40.36c0,6.64-2.41,13.04-6.77,18.03-5.21,5.95-12.72,9.36-20.61,9.36-15.1,0-27.39-12.29-27.39-27.39v-40.36c0-4.45-3.61-8.06-8.06-8.06s-8.06,3.61-8.06,8.06v40.36c0,23.99,19.52,43.51,43.51,43.51,12.54,0,24.48-5.42,32.75-14.86,6.94-7.93,10.77-18.11,10.77-28.66v-40.36c0-4.45-3.61-8.06-8.06-8.06Z'/%3E%3Cpath class='cls-1' d='M683.27,131.23c-15.1,0-27.39-12.29-27.39-27.39v-40.39h23.22c4.45,0,8.06-3.61,8.06-8.06s-3.61-8.06-8.06-8.06h-23.22v-27.77c0-4.45-3.61-8.06-8.06-8.06s-8.06,3.61-8.06,8.06v33.89c-.15.62-.25,1.27-.25,1.94s.09,1.32.25,1.94v46.51c0,23.99,19.52,43.51,43.51,43.51,4.45,0,8.06-3.61,8.06-8.06s-3.61-8.06-8.06-8.06Z'/%3E%3Cpath class='cls-1' d='M515.72,12.82c-4.45,0-8.06,3.61-8.06,8.06v117.28c0,4.45,3.61,8.06,8.06,8.06s8.06-3.61,8.06-8.06V20.89c0-4.45-3.61-8.06-8.06-8.06Z'/%3E%3Cpath class='cls-1' d='M360.86,146.95c.19-.28.36-.57.51-.87.02-.04.05-.07.07-.11l39.39-78.89c1.99-3.98.37-8.83-3.61-10.82-3.98-1.99-8.83-.37-10.82,3.61l-32.18,64.44-32.18-64.44c-1.99-3.98-6.83-5.6-10.82-3.61-3.98,1.99-5.6,6.83-3.61,10.82l39.39,78.89s.05.07.07.11c.16.3.32.59.52.87,0,0,.01.02.02.02.19.28.41.54.64.79.06.07.12.13.18.19.19.19.39.38.59.56.05.05.1.09.16.14.25.2.52.39.8.56.07.05.15.08.23.13.14.08.27.16.41.23.07.04.15.06.23.1.12.06.25.11.37.16.21.08.42.16.63.22.11.03.22.07.34.1.25.06.49.11.74.15.09.01.18.03.27.05.34.04.68.07,1.02.07,0,0,0,0,0,0s0,0,0,0c.34,0,.68-.03,1.02-.07.09-.01.18-.03.27-.05.25-.04.49-.09.74-.15.11-.03.22-.06.34-.1.21-.07.42-.14.63-.22.13-.05.25-.1.37-.16.07-.03.15-.06.23-.1.14-.07.28-.15.41-.23.08-.04.15-.08.23-.13.28-.17.55-.36.8-.56.06-.04.11-.09.16-.14.21-.18.4-.36.59-.55.06-.07.13-.13.19-.2.23-.25.44-.51.63-.79,0,0,.01-.02.02-.03Z'/%3E%3C/g%3E%3Cpath class='cls-4' d='M66.5,125.36c-16.06-15.64-37.2-24.31-59.6-24.47,1.53,46.57,39.08,84.02,85.7,85.36l-.03-1.5c-.63-22.54-9.89-43.63-26.07-59.39Z'/%3E%3Cpath class='cls-3' d='M92.58,9.63C46.3,10.98,8.94,47.92,6.94,94.03c46.66-.35,84.62-37.9,85.64-84.4Z'/%3E%3Cpath class='cls-6' d='M183.44,94c-2-45.54-38.48-82.13-83.98-84.3.5,22.03,9.23,42.74,24.72,58.5,15.78,16.06,36.8,25.2,59.26,25.8Z'/%3E%3Cpath class='cls-5' d='M99.48,184.74l-.04,1.44c45.83-2.17,82.52-39.26,84.04-85.26-45.87,1.19-82.71,37.89-84,83.83Z'/%3E%3Cpath class='cls-2' d='M183.44,94c-22.46-.6-43.48-9.74-59.26-25.8-15.49-15.77-24.22-36.47-24.72-58.5-1.42-.07-2.84-.1-4.28-.1-.87,0-1.74.02-2.61.04-1.03,46.5-38.99,84.04-85.64,84.4-.06,1.3-.09,2.6-.09,3.91,0,.99.02,1.97.05,2.94,22.4.16,43.54,8.83,59.6,24.47,16.18,15.76,25.43,36.85,26.07,59.39l.03,1.5c.86.02,1.73.04,2.59.04,1.42,0,2.84-.04,4.25-.1l.04-1.44c1.29-45.93,38.13-82.63,84-83.83.03-.99.06-1.98.06-2.98,0-1.32-.03-2.63-.09-3.94Z'/%3E%3C/svg%3E");
+    display: block;
+    width: 180px;
+    height: auto;
+}
+
+.login #Main {
+    display: flex;
+}
+
+.login .roundedBox .hdr {
+    display: none !important;
+}
+
+.login div.roundedBox {
+    display: flex;
+    flex-direction: column;
+    min-width: auto;
+    width: 400px;
+    gap: 20px;
+    border: none !important;
+    margin: 0;
+    padding: 0 20px 20px;
+    border-radius: 0 0 12px 12px;
+}
+
+.login .sectionHeader,
+.login .clear,
+.login b.bt,
+.login b.bt b,
+.login b.bb,
+.login b.bb b {
+    display: none;
+}
+
+.login .buttonGroup {
+    padding: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+}
+
+.login .yui-button {
+    border-width: 0;
+    border-style: none;
+    border-color: transparent;
+    background: none !important;
+    margin: 0 !important;
+    width: 100%;
+}
+
+.login .yui-button .first-child {
+    border-width: 0;
+    border-style: none;
+    border-color: transparent;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+}
+
+.login #submitButton-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    background-color: var(--primary-blue);
+}
+
+.login .inputGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100%;
+}
+
+.login .mainLabelContent {
+    display: flex;
+    padding-right: 0;
+    line-height: 1;
+}
+
+.login label.required {
+    font-weight: bold;
+    line-height: 1;
+    color: var(--text-gray) !important;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.login .mainLabel .requiredMarker {
+    display: none;
+}
+
+.login .optionsContent {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    padding-left: 0 !important;
+    line-height: 1 !important;
+    position: relative;
+}
+
+.login .textInput {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    padding: 0 12px;
+    width: 100%;
+    height: 40px;
+    color: var(--text-gray) !important;
+    border-radius: 8px;
+    background: #fff;
+    outline: none;
+    box-shadow: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px solid var(--border-gray) !important;    
+}
+
+.login #NestedFormPage div.options input:focus {
+    background-color: transparent !important;
+}
+
+.login .formSectionContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    width: auto;
+}
+
+.login #PrimaryContent {
+    padding: 0 !important;
+}
+
+.login #NestedFormPage div.options {
+    display: flex;
+    width: 100% !important;
+    padding: 0px;
+}
+
+.login .forgotPassword {
+    display: flex;
+    color: var(--primary-blue);
+    font-size: 12px !important;
+    font-weight: 600;
+    line-height: 1;
+    padding: 0 !important;
+}
+
+.login a:link,
+.login a:visited,
+.login a:active {
+    color: var(--primary-blue);
+}
+
+.login #usernameField,
+.login #passwordField,
+.login #emailField {
+    padding-left: 40px;
+}
+
+.login .optionsContent:has(#usernameField)::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M15.333 3.91699C16.4835 3.91699 17.4158 4.84956 17.416 6V14C17.4158 15.1504 16.4835 16.084 15.333 16.084H4.66602C3.51583 16.0836 2.58318 15.1502 2.58301 14V6C2.58318 4.84977 3.51583 3.91734 4.66602 3.91699H15.333ZM4.08301 14C4.08318 14.3218 4.34426 14.5836 4.66602 14.584H15.333C15.6551 14.584 15.9158 14.322 15.916 14V8.03418L11.0752 11.1172C11.0667 11.1226 11.0576 11.1287 11.0488 11.1338C10.7312 11.3181 10.3701 11.415 10.0029 11.415C9.6355 11.415 9.27378 11.3183 8.95605 11.1338C8.9475 11.1288 8.93902 11.1235 8.93066 11.1182L4.08301 8.03223V14ZM12.0098 12.0098H12V12H12.0098V12.0098ZM4.66602 5.41699C4.34426 5.41734 4.08318 5.6782 4.08301 6V6.25488L9.71289 9.83789C9.80105 9.88839 9.90129 9.91498 10.0029 9.91504C10.1029 9.915 10.201 9.88869 10.2881 9.83984L15.916 6.25488V6C15.9158 5.67798 15.6551 5.41699 15.333 5.41699H4.66602Z' fill='%236b7280'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.login .optionsContent:has(#passwordField)::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 11px;
+    width: 18px;
+    height: 18px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M10 3.25C11.8807 3.25018 13.416 4.78622 13.416 6.66699V8.58301H13.666C14.6324 8.58301 15.4158 9.36667 15.416 10.333V15C15.4158 15.9663 14.6324 16.75 13.666 16.75H6.33301C5.42709 16.7498 4.68144 16.061 4.5918 15.1787L4.58301 15V10.333C4.58319 9.36677 5.36677 8.58318 6.33301 8.58301H6.58301V6.66699C6.58301 4.78622 8.11927 3.25017 10 3.25ZM6.33301 10.083C6.1952 10.0832 6.08319 10.1952 6.08301 10.333V15L6.08789 15.0498C6.11107 15.1638 6.21224 15.2498 6.33301 15.25H13.666C13.804 15.25 13.9158 15.1379 13.916 15V10.333C13.9158 10.1951 13.804 10.083 13.666 10.083H6.33301ZM12.0098 12.0098H12V12H12.0098V12.0098ZM10 4.75C8.94769 4.75018 8.08301 5.61465 8.08301 6.66699V8.58301H11.916V6.66699C11.916 5.61465 11.0523 4.75018 10 4.75Z' fill='%236b7280'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.login .optionsContent:has(#emailField)::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M15.333 3.91699C16.4835 3.91699 17.4158 4.84956 17.416 6V14C17.4158 15.1504 16.4835 16.084 15.333 16.084H4.66602C3.51583 16.0836 2.58318 15.1502 2.58301 14V6C2.58318 4.84977 3.51583 3.91734 4.66602 3.91699H15.333ZM4.08301 14C4.08318 14.3218 4.34426 14.5836 4.66602 14.584H15.333C15.6551 14.584 15.9158 14.322 15.916 14V8.03418L11.0752 11.1172C11.0667 11.1226 11.0576 11.1287 11.0488 11.1338C10.7312 11.3181 10.3701 11.415 10.0029 11.415C9.6355 11.415 9.27378 11.3183 8.95605 11.1338C8.9475 11.1288 8.93902 11.1235 8.93066 11.1182L4.08301 8.03223V14ZM12.0098 12.0098H12V12H12.0098V12.0098ZM4.66602 5.41699C4.34426 5.41734 4.08318 5.6782 4.08301 6V6.25488L9.71289 9.83789C9.80105 9.88839 9.90129 9.91498 10.0029 9.91504C10.1029 9.915 10.201 9.88869 10.2881 9.83984L15.916 6.25488V6C15.9158 5.67798 15.6551 5.41699 15.333 5.41699H4.66602Z' fill='%236b7280'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.login .userLogin {
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+
+.login #FormPageContent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login .grid_450px_350px {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    width: 400px;
+}
+
+.login .grid_450px_350px .secondary {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    margin-right: 0;
+    float: left;
+    position: relative;
+    background-color: white;
+}
+
+.login .sideBar {
+    margin-right: 0;
+    padding: 0 20px 20px;
+    width: 100%;
+}
+
+.login .sideBar h4 {
+    display: none;
+}
+
+.login .sideBar .sideBarGroup {
+    color: var(--primary-blue) !important;
+    font-size: 14px;
+    font-weight: 500 !important;
+    line-height: 1.5;
+    margin: 0;
+    background: rgba(0, 96, 167, 0.1);
+    padding: 10px;
+    border: 1px solid var(--primary-blue);
+    border-radius: 6px;
+}
+
+.login #validationErrors {
+    background-color: white;
+    border: 0;
+    padding: 0 20px 10px !important;
+    margin: 0 !important;
+}
+
+.login #validationErrors ol {
+    margin-top: 0 !important;
+}
+
+.login #validationErrors ol li {
+    margin-left: 0 !important;
+    padding: 0 !important;
+    color: var(--error-red);
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+}
+
+/* ========== DASHBOARD ========== */
+.dashboard .clear {
+    display: none;
+}
+
+.dashboard #Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding: 0;
+    min-width: auto;
+    max-width: none;
+    width: 360px;
+    height: 100vh;
+
+}
+
+#logoLinksContainer {
+    width: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+#Navigation {
+    padding: 0px;
+    width: auto;
+    min-width: auto;
+    max-width: none;
+    margin: 0;
+    margin-bottom: 0;
+    height: auto;
+}
+
+.dashboard #HeaderContent {
+    min-width: auto;
+}
+
+.dashboard #logoDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    float: left;
+    clear: right;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 16px 14px;
+    background: blue;
+}
+
+.dashboard #logoDiv img {
+    display: none;
+}
+
+.dashboard #logoDiv #logo::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 792 195.87'%3E%3Cstyle%3E.cls-1%7Bfill:%23fff%7D.cls-2%7Bfill:%23fff%7D.cls-3%7Bfill:%23fff%7D.cls-4%7Bfill:%23fff%7D.cls-5%7Bfill:%23fff%7D.cls-6%7Bfill:%23fff%7D%3C/style%3E%3Cg%3E%3Cpath class='cls-1' d='M257.25,52.44c-26.17,0-47.45,21.29-47.45,47.45s21.29,47.45,47.45,47.45c13.68,0,26.69-5.91,35.71-16.2,2.93-3.35,2.6-8.44-.75-11.38-3.35-2.93-8.44-2.6-11.38.75-5.96,6.8-14.55,10.7-23.58,10.7-17.27,0-31.33-14.05-31.33-31.33s14.05-31.33,31.33-31.33c14.49,0,26.71,9.89,30.28,23.26h-41.02c-4.45,0-8.06,3.61-8.06,8.06s3.61,8.06,8.06,8.06h50.13c4.45,0,8.06-3.61,8.06-8.06,0-26.17-21.29-47.45-47.45-47.45Z'/%3E%3Cpath class='cls-1' d='M738.19,52.44c-26.16,0-47.45,21.29-47.45,47.45s21.29,47.45,47.45,47.45c13.68,0,26.69-5.91,35.71-16.2,2.93-3.35,2.6-8.44-.75-11.38-3.35-2.93-8.44-2.6-11.38.75-5.96,6.8-14.55,10.7-23.58,10.7-17.27,0-31.33-14.05-31.33-31.33s14.05-31.33,31.33-31.33c14.49,0,26.71,9.89,30.28,23.26h-41.02c-4.45,0-8.06,3.61-8.06,8.06s3.61,8.06,8.06,8.06h50.13c4.45,0,8.06-3.61,8.06-8.06,0-26.17-21.29-47.45-47.45-47.45Z'/%3E%3Cpath class='cls-1' d='M448.02,52.44c-26.17,0-47.45,21.29-47.45,47.45s21.29,47.45,47.45,47.45c13.68,0,26.69-5.91,35.71-16.2,7.57-8.65,11.74-19.75,11.74-31.25,0-26.17-21.29-47.45-47.45-47.45ZM471.6,120.53c-5.96,6.8-14.55,10.7-23.58,10.7-17.27,0-31.33-14.05-31.33-31.33s14.05-31.33,31.33-31.33,31.33,14.05,31.33,31.33c0,7.6-2.75,14.92-7.75,20.63Z'/%3E%3Cpath class='cls-1' d='M618.15,55.42c-4.45,0-8.06,3.61-8.06,8.06v40.36c0,6.64-2.41,13.04-6.77,18.03-5.21,5.95-12.72,9.36-20.61,9.36-15.1,0-27.39-12.29-27.39-27.39v-40.36c0-4.45-3.61-8.06-8.06-8.06s-8.06,3.61-8.06,8.06v40.36c0,23.99,19.52,43.51,43.51,43.51,12.54,0,24.48-5.42,32.75-14.86,6.94-7.93,10.77-18.11,10.77-28.66v-40.36c0-4.45-3.61-8.06-8.06-8.06Z'/%3E%3Cpath class='cls-1' d='M683.27,131.23c-15.1,0-27.39-12.29-27.39-27.39v-40.39h23.22c4.45,0,8.06-3.61,8.06-8.06s-3.61-8.06-8.06-8.06h-23.22v-27.77c0-4.45-3.61-8.06-8.06-8.06s-8.06,3.61-8.06,8.06v33.89c-.15.62-.25,1.27-.25,1.94s.09,1.32.25,1.94v46.51c0,23.99,19.52,43.51,43.51,43.51,4.45,0,8.06-3.61,8.06-8.06s-3.61-8.06-8.06-8.06Z'/%3E%3Cpath class='cls-1' d='M515.72,12.82c-4.45,0-8.06,3.61-8.06,8.06v117.28c0,4.45,3.61,8.06,8.06,8.06s8.06-3.61,8.06-8.06V20.89c0-4.45-3.61-8.06-8.06-8.06Z'/%3E%3Cpath class='cls-1' d='M360.86,146.95c.19-.28.36-.57.51-.87.02-.04.05-.07.07-.11l39.39-78.89c1.99-3.98.37-8.83-3.61-10.82-3.98-1.99-8.83-.37-10.82,3.61l-32.18,64.44-32.18-64.44c-1.99-3.98-6.83-5.6-10.82-3.61-3.98,1.99-5.6,6.83-3.61,10.82l39.39,78.89s.05.07.07.11c.16.3.32.59.52.87,0,0,.01.02.02.02.19.28.41.54.64.79.06.07.12.13.18.19.19.19.39.38.59.56.05.05.1.09.16.14.25.2.52.39.8.56.07.05.15.08.23.13.14.08.27.16.41.23.07.04.15.06.23.1.12.06.25.11.37.16.21.08.42.16.63.22.11.03.22.07.34.1.25.06.49.11.74.15.09.01.18.03.27.05.34.04.68.07,1.02.07,0,0,0,0,0,0s0,0,0,0c.34,0,.68-.03,1.02-.07.09-.01.18-.03.27-.05.25-.04.49-.09.74-.15.11-.03.22-.06.34-.1.21-.07.42-.14.63-.22.13-.05.25-.1.37-.16.07-.03.15-.06.23-.1.14-.07.28-.15.41-.23.08-.04.15-.08.23-.13.28-.17.55-.36.8-.56.06-.04.11-.09.16-.14.21-.18.4-.36.59-.55.06-.07.13-.13.19-.2.23-.25.44-.51.63-.79,0,0,.01-.02.02-.03Z'/%3E%3C/g%3E%3Cpath class='cls-4' d='M66.5,125.36c-16.06-15.64-37.2-24.31-59.6-24.47,1.53,46.57,39.08,84.02,85.7,85.36l-.03-1.5c-.63-22.54-9.89-43.63-26.07-59.39Z'/%3E%3Cpath class='cls-3' d='M92.58,9.63C46.3,10.98,8.94,47.92,6.94,94.03c46.66-.35,84.62-37.9,85.64-84.4Z'/%3E%3Cpath class='cls-6' d='M183.44,94c-2-45.54-38.48-82.13-83.98-84.3.5,22.03,9.23,42.74,24.72,58.5,15.78,16.06,36.8,25.2,59.26,25.8Z'/%3E%3Cpath class='cls-5' d='M99.48,184.74l-.04,1.44c45.83-2.17,82.52-39.26,84.04-85.26-45.87,1.19-82.71,37.89-84,83.83Z'/%3E%3Cpath class='cls-2' d='M183.44,94c-22.46-.6-43.48-9.74-59.26-25.8-15.49-15.77-24.22-36.47-24.72-58.5-1.42-.07-2.84-.1-4.28-.1-.87,0-1.74.02-2.61.04-1.03,46.5-38.99,84.04-85.64,84.4-.06,1.3-.09,2.6-.09,3.91,0,.99.02,1.97.05,2.94,22.4.16,43.54,8.83,59.6,24.47,16.18,15.76,25.43,36.85,26.07,59.39l.03,1.5c.86.02,1.73.04,2.59.04,1.42,0,2.84-.04,4.25-.1l.04-1.44c1.29-45.93,38.13-82.63,84-83.83.03-.99.06-1.98.06-2.98,0-1.32-.03-2.63-.09-3.94Z'/%3E%3C/svg%3E");
+    display: block;
+    width: 180px;
+    height: auto;
+}
+
+.dashboard #Main {
+    display: flex;
+    margin-left: 360px;
+}
+
+.dashboard #toolbar {
+    display: flex;
+    padding: 0 14px;
+}
+
+.dashboard .userInfo {
+    display: flex;
+    flex-direction: column;
+    width: 199%;
+    white-space: nowrap;
+    gap: 10px;
+    width: auto;
+    float: right;
+    font-size: 85%;
+    margin-top: 0;
+    margin-right: 0;
+}
+
+.dashboard .userInfo #accountName,
+.dashboard .userInfo #accountBalance,
+.dashboard .userInfo #transferBalance,
+.dashboard .userInfo #links {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    float: left;
+    clear: right;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+}
