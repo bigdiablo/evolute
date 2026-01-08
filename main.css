@@ -460,11 +460,6 @@ body.login {
     height: auto;
 }
 
-.dashboard #Main {
-    display: flex;
-    margin-left: 300px;
-}
-
 .dashboard #toolbar {
     display: flex;
     padding: 0 14px;
@@ -897,20 +892,20 @@ body.login {
 .dashboard #Main {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    min-height: 100vh;
+    width: calc(100vw - 300px);
+    height: auto;
     padding: 32px;
     background-color: #FAFAFA;
     box-sizing: border-box;
     overflow-x: hidden;
+    margin-left: 300px;
 }
 
 .dashboard #MainContent {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 0;
     box-sizing: border-box;
 }
 
