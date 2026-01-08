@@ -1,0 +1,5454 @@
+/* =========================================================
+   base.css
+   ========================================================= */
+/*yui reset.css*/body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul {list-style:none;}caption,th {text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym {border:0;}
+/*yui fonts.css*/body{font:13px arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}table {font-size:inherit;font:100%;}select, input, textarea {font:99% arial,helvetica,clean,sans-serif;}pre, code {font:115% monospace;*font-size:100%;}body * {line-height:1.22em;}
+.clear{clear:both;background:transparent none repeat scroll 0%;height:0px;display:block;overflow:hidden;margin:0px;padding:0px;}
+.none{display:none;}
+.hidden{visibility:hidden;}
+
+/* =========================================================
+   formfields.css
+   ========================================================= */
+
+   .inputGroup {
+    clear: both;
+    overflow: visible;
+    padding: 0.5em 0 0.5em 0;
+    margin: 0 0 0 0;
+    float: left;
+    width: 100%;
+}
+
+.option .inputGroup {
+    border: none;
+}
+
+.mainLabel {
+    margin: 0;
+    padding: 0px 0 0 0;
+    position: static;
+    text-align: right;
+    width: 25%;
+    float: left;
+}
+
+.disabled {
+    color: #888;
+}
+
+.mainLabel .requiredMarker {
+    margin-right: -0.59em;
+    padding-left: 0.2em;
+    color: #AD0036;
+}
+
+.disabled .mainLabel .requiredMarker {
+    color: #666;
+}
+
+.stackedForm .mainLabel {
+    width: 100%;
+    text-align: left;
+}
+
+.mainLabelContent {
+    padding-right: 1em;
+    line-height: 1.25em
+}
+
+.inputGroup label {
+    font-size: 93%;
+    line-height: 1.5em;
+}
+
+label.required {
+    font-weight: bold;
+    line-height: 1.5em;
+}
+
+div.error, div.biderror table td, div.biderror table th {
+    background: #FFFFCC;
+}
+
+.error .mainLabel label,
+label.error, 
+div.biderror table td,
+div.biderror table th {
+    color: #CC3300;
+    font-weight: bold;
+}
+
+label.checkbox {
+    text-indent: -15px;
+    padding-left: 15px;
+    display: block;
+}
+
+.options {
+    padding: 0 0 0 0;
+    margin: 0;
+    width: 75%;
+    float: left;
+    position: static;
+    text-align: left;
+    clear: right
+}
+
+.stackedForm .options {
+    width: 100%;
+}
+
+.optionsContent {
+    padding-left: 1em;
+    line-height: 1.5em;
+    background: transparent;
+}
+
+.options .option {
+    padding-bottom: 5px;
+}
+
+.options .subOption {
+    padding-left: 2em;
+}
+
+.inline .option,.inputGroup .inlineOption {
+    display: inline;
+    padding-right: 1em;
+}
+
+.formSection,.formSectionAlternate {
+    clear: both;
+    padding-bottom: 5px;
+    margin: 10px 0px 5px 0px;
+    border: 1px solid #CCC; *
+    zoom: 1.0
+}
+
+.formSectionAlternate {
+    padding-bottom: 0px
+}
+
+.formSectionContent {
+    padding: 0 0 0 0;
+    width: auto
+}
+
+.options .prefix {
+    margin-left: -0.78em;
+    padding-right: 0.2em;
+}
+
+.stackedForm .options .prefix {
+    position: static;
+    margin-right: 0;
+}
+
+.instructions {
+    font-size: 93%;
+    color: #666;
+    margin: 0 10% 0 10%;
+    font-family: helvetica, sans-serif;
+}
+
+.mainLabel .instructions,.options .instructions,.options .inlineHelp {
+    padding-top: 4px;
+    margin: 0;
+    font-size: 93%;
+    color: #666;
+}
+
+.options .inlineHelp {
+    padding-left: 5px;
+}
+
+#FormFields {
+    padding: 0 0 10px 0;
+    clear: both;
+}
+
+#Form .disclaimer {
+    padding: 10px 10px 0 10px;
+}
+
+#TaskIndicators {
+    background: transparent url('/images/amerivalue/action-arrow.gif') no-repeat
+        30px bottom;
+    padding: 5px 0 13px 0;
+    margin-bottom: 2px;
+    font-weight: normal;
+    text-align: left;
+    float: left;
+    width: 100%;
+}
+
+#TaskIndicators ul {
+    float: right;
+}
+
+#TaskIndicators ul li {
+    float: left;
+    margin: 0px 0 0px 15px;
+    padding: 0 0px 0px 0px;
+    color: #AAA;
+    border-right: 0px solid #CCC;
+    font-size: 123.1%;
+}
+
+#TaskIndicators ul li.current {
+    color: #444;
+    border-bottom: 2px solid #2176CB;
+    border-top: 0px solid #2176CB;
+}
+
+#TaskIndicators ul li.current span {
+    color: #2176CB;
+}
+
+#TaskIndicators ul li span {
+    font-size: 138.5%;
+    padding-right: 0.1em;
+    color: #A0C9F2;
+}
+
+#MainTitle {
+    color: #2C4F68;
+    margin: 0.5em 0 0 0.7em
+}
+
+#MainTitle .inlinePhone {
+    white-space: nowrap;
+    color: #2176CB;
+    font-size: 85%;
+}
+
+.sectionHeader {
+    background: #EBEAEA;
+    margin-bottom: 0px;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #FFF;
+    border-bottom: 1px solid #CCC;
+    clear: both;
+}
+
+.sectionHeader h2 {
+    font-size: 93%;
+    font-weight: bold;
+}
+
+.calendarWithSelects .showCalendarButton {
+    border: none;
+    padding: 0;
+    margin: 0;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+    vertical-align: middle;
+    background: transparent url('/images/controls/calendar/calendar.gif') no-repeat
+        top left;
+}
+
+.calendarWithSelects .hiddenCalendarContainer {
+    display: none;
+    position: absolute;
+}
+
+/***************************************************
+ *  Buttons
+ **************************************************/
+.yui-button {
+    float: left;
+}
+
+.buttonGroup {
+    float: right;
+    text-align: right;
+    clear: both;
+    padding: 0 3px 0 0;
+    white-space: nowrap;
+    margin-right: .3em;
+}
+
+.buttonGroup span.first-child button,.buttonGroup span.first-child a {
+    font-weight: bold;
+    font-size: 100%
+}
+
+.buttonGroup span.first-child button {
+    /* padding-bottom: 0.35em; */
+}
+
+.buttonGroup span.first-child a {
+    /* position: relative; */
+    /* top: -1px */
+}
+
+/*
+.buttonGroup span.yui-link-button span.first-child a {
+    padding: .3em 14px; }
+.buttonGroup span.yui-submit-button span.first-child { 
+    padding: .2em 0px .33em 1px }
+*/
+html:first-child .buttonGroup span.first-child button,html:first-child .buttonGroup span.first-child a
+    {
+    /* padding: 0px 4px 1px 4px; */
+}
+
+.buttonGroup input.firstAlternate {
+    margin-right: 5em;
+}
+
+/***************************************************
+ *  Bid Page styles
+ **************************************************/
+.widgets {
+    clear: both;
+}
+
+.widgetColumn {
+    float: left;
+    clear: none;
+    width: 24.999999%;
+}
+
+.widgetColumnContent {
+    padding-right: 10px;
+}
+
+.widgets .inputGroup {
+    padding: 0;
+    margin: 0 0 10px 0;
+    background: none;
+    border: none;
+}
+
+.widgets .mainLabel {
+    display: block;
+    border: 1px solid #DDD;
+    margin: 0;
+    border-bottom: 1px dashed #DDD;
+    float: none;
+    width: auto;
+    text-align: left;
+    font-weight: bold;
+    background: #FBFBFB;
+}
+
+.widgets .mainLabel .mainLabelContent {
+    padding: 2px 5px 2px 5px;
+}
+
+.widgets .options {
+    width: auto;
+    display: block;
+    float: none;
+}
+
+.widgets .options .optionsContent {
+    padding: 5px;
+    font-size: 93%;
+    border: 1px solid #DDD;
+    border-top: none;
+}
+
+#BidGrid {
+    width: 74.99999%;
+    float: left;
+}
+
+#BidGridContent {
+    border: 1px solid #EEE;
+    background: #FBFBFB;
+    padding: 2px 5px 2px 5px;
+    margin: 0 10px 10px 0
+}
+
+#StateSelection {
+    width: 25%;
+    float: left;
+}
+
+#StateSelectionContent {
+    padding-right: 10px;
+}
+input[type='text'], input[type='password'] {
+    border-top: solid 1px #ccc;
+    border-right: solid 1px #ccc;
+    border-bottom: solid 1px #ddd;
+    border-left: solid 1px #ddd;
+}
+
+/* =========================================================
+   lp.css
+   ========================================================= */
+
+body {
+    color: #000;
+    background-color: #FFF;
+    margin: 0px auto;
+}
+
+html : *,* :focus,* :active {
+    outline: 0px;
+}
+a { cursor: pointer }
+a:link,a:visited,a:active {
+    color: #2F466B;
+}
+
+strong {
+    font-weight: bold;
+}
+
+h1,div.pageHeader {
+    font-size: 138.5%;
+    font-weight: bold;
+    /* WATCH THIS */
+    margin: 6px 0px 0px 0px;
+    color: #003366;
+}
+
+h2 {
+    font-size: 116%;
+}
+
+#HeaderContent {
+    min-width: 940px;   
+}
+
+#logoDiv {
+    float: left;
+    clear: right;
+    margin-left: 12px;
+    margin-top: 2px
+}
+
+:focus,:active {
+    outline: none;
+}
+/* top container for logo & links */
+#logoLinksContainer {
+    width: auto;
+    padding: 10px 0px 4px 0px;
+}
+/* top-right links & such in header */
+.userInfo {
+    width: auto;
+    float: right;
+    font-size: 85%;
+    margin-top: 0px;
+    margin-right: 14px;
+}
+
+.userInfo img {
+    vertical-align: middle;
+}
+
+.userInfo #accountName,
+.userInfo #accountBalance,
+.userInfo #transferBalance,
+.userInfo #links {
+    float: left; 
+    clear: right;
+    margin: 6px 6px 0px;
+}
+.userInfo #transferBalance {
+    position: relative;
+    margin-top: 0px;
+    font-size: 115%;
+    font-weight: bold;
+}
+#Header {
+    padding: 5px 10px 0 10px;
+    min-width: 800px;
+    max-width: 1800px;
+}
+
+#air {
+    vertical-align: middle;
+    width: auto;
+    padding: 10px 0px 14px 0px;
+    /*padding-bottom: 4px*/
+}
+
+.space {
+    width: 100%;
+    margin: 4px;
+    clear: both;
+}
+
+/* Page content styles */
+.sideBar,.inlineSideBar,.inlineSideBar2 {
+    margin-right: 0px;
+    padding: 6px 10px 10px 10px;
+}
+
+.sideBar h4,.inlineSideBar h4 {
+    font-weight: bold;
+    font-size: 108%;
+    border-bottom: 1px solid transparent;
+    margin: 0px 5px 5px 12px;
+}
+
+.sideBar .sideBarGroup,.inlineSideBar .sideBarGroup {
+    margin: 0 10px 10px 12px;
+    font-size: 88%;
+    *font-size: 87%
+}
+
+.inlineSideBar,.inlineSideBar .sideBarGroup {
+    font-size: 95% !important;
+    font-size: 90% !important;
+}
+
+.sideBar .sideBarGroup ol,
+.sideBar .sideBarGroup ul {
+    margin: 1.0em 0px;
+    margin-left: 18px;
+}
+.pageContent ol,
+.pageContent ul {
+    font-size: 95%;
+    margin: 0.75em 0px;
+    margin-left: 2em;
+}
+.sideBar .sideBarGroup ol {
+    margin-left: 22px
+}
+
+.sideBar .sideBarGroup ol li,
+.pageContent ol li {
+    list-style: decimal;
+}
+
+.sideBar .sideBarGroup ul li,
+.inlineSideBar .sideBarGroup ul li,
+.pageContent ul li {
+    list-style-type: disc;
+}
+
+.sideBar .sideBarGroup ul li,
+.sideBar .sideBarGroup ol li,
+.inlineSideBar .sideBarGroup ul li {
+    font-size: 98.95%;
+    *font-size: 98%;
+    padding-left: 0.25em;
+    margin-bottom: 0.25em;
+    list-style-position: outside;
+}
+.sideBar .sideBarGroup li ul li,
+.inlineSideBar .sideBarGroup li ul li {
+    list-style: circle;
+    font-size: 105%;
+}
+
+.sideBarGroup ul li>ul {
+    font-size: 92%;
+}
+
+.sideBar .sideBarGroup p em,.inlineSideBar .sideBarGroup p em {
+    font-size: smaller;
+    font-style: italic;
+}
+
+.sideBar div h2,.inlineSideBar div h2 {
+    height: 1.75 em
+}
+
+.sideBar div p,.inlineSideBar div p {
+    margin-top: .5em
+}
+
+div.roundedBox div.inlineSideBar,
+div.roundedBox2 div.inlineSideBar,
+div.roundedBox3 div.inlineSideBar,
+div.roundedBox div.inlineSideBar2,
+div.roundedBox2 div.inlineSideBar2,
+div.roundedBox3 div.inlineSideBar2 {
+    padding: 0 10px;
+    font-size: 85%;
+}
+
+/* new nav styles */
+#Navigation {
+    padding: 0px;
+    width: auto;
+    min-width: 1100px;
+    max-width: 1800px;
+    height: auto;
+    margin: 0px 12px;
+    margin-bottom: 0px;
+    height: auto;
+}
+
+#Navigation b.tl,
+#Navigation b.tc,
+#Navigation b.tr,
+#Navigation b.bl,
+#Navigation b.bc,
+#Navigation b.br {
+    font-size: 1px;
+    margin: 0px;
+    display: block;
+    position: relative;
+    top: 0px;
+    height: 36px;
+    margin-bottom: -36px;
+}
+
+#Navigation b.bl,#Navigation b.bc,#Navigation b.br {
+    height: 24px;
+    background: transparent;
+    margin-bottom: 0;
+}
+
+#Navigation b.tl {
+    background: url('/images/navigation/top-left-off.gif') top left no-repeat;
+}
+
+#Navigation b.tl.current {
+    background: url('/images/navigation/top-left-on.gif') top left no-repeat;
+}
+
+#Navigation b.tc {
+    padding: 0px;
+    left: 0px;
+    float: left;
+    clear: left;
+    background: url('/images/navigation/top-middle-off.gif') top left repeat-x;
+    width: 99.9%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+#Navigation b.tr {
+    background: url('/images/navigation/top-right-off.gif') top right no-repeat;
+    z-index: 4;
+}
+
+#Navigation b.bl {
+    width: 12px;
+    float: left;
+    background: url('/images/navigation/bottom-left.gif') 0px 1px no-repeat;
+    z-index: 3
+}
+
+#MainNavigation.tabs {
+    line-height: normal;
+    font-size: 85%;
+    width: auto;
+    margin: auto 0px;
+    text-align: center;
+    padding: 0;
+    height: 35px;
+}
+
+#MainNavigation.tabs ul {
+    width: 100%;
+    margin: auto 0px;
+    padding: 0px;
+    list-style: none;
+    position: relative;
+    left: 11px;
+    text-align: center;
+    z-index: 6;
+}
+
+/* Opera only. */
+html:first-child div#MainNavigation.tabs ul li {
+    position: relative;
+    /* top: -35px; */
+}
+
+#MainNavigation.tabs ul li {
+    position: relative;
+    display: block;
+    height: 37px;
+    float: left;
+    text-align: center;
+    overflow: hidden;
+    margin-left: 0px;
+    margin-bottom: -2px;
+}
+
+#MainNavigation.tabs ul li a {
+    display: block;
+    font-size: 110%;
+    text-decoration: none;
+    position: relative;
+    padding: 10px 16px;
+    color: #FFF;
+    font-weight: normal;
+}
+
+#MainNavigation.tabs ul li a:hover,
+#MainNavigation.tabs ul li a:focus,
+#MainNavigation.tabs ul li a:active {
+    border: 0;
+    outline: 0;
+}
+
+#MainNavigation.tabs ul li a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#MainNavigation.tabs ul li a.selected {
+    z-index: 100;
+    font-weight: bold;
+}
+
+#MainNavigation.tabs ul li a.selected,
+#MainNavigation.tabs ul li a:hover .selected,
+#MainNavigation.tabs ul li a:active .selected {
+    position: relative;
+    top: -0px;
+    background: url('/images/navigation/top-middle-on.gif') repeat-x -2px 0px;
+    padding: 10px 16px;
+    color: #9DC61F;
+    cursor: pointer;
+}
+
+#MainNavigation.tabs ul li a.selected:hover {
+    text-decoration: none;
+    cursor: default
+}
+
+/******************* subnavigation selectors *******************/
+div#SubNavigation {
+    background: url('/images/navigation/bottom-middle.gif') repeat-x;
+    height: 24px;
+    width: 99.5%;
+    overflow: hidden;
+    margin: -2px 0px;
+    padding: 0px;
+    padding-bottom: 3px;
+    margin-right: -10px;
+    z-index: 1;
+}
+
+#SubNavigation.subtabs {
+    float: left;
+    font-size: 85%;
+    line-height: normal;
+    text-align: center
+}
+
+div#SubNavigation.subtabs ul {
+    margin: 0px auto;
+    padding: 2px 0px 0px 14px;
+    list-style: none;
+    z-index: 1;
+}
+
+#SubNavigation.subtabs ul li {
+    width: auto;
+    float: left;
+    text-align: center;
+    overflow: hidden;
+    margin-left: 0px;
+    background: transparent;
+    border: none;
+    margin-top: 0;
+    padding: 1px 10px;
+}
+
+#SubNavigation.subtabs ul li a {
+    display: block;
+    white-space: nowrap;
+    padding: 0.2em 0 0 0;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 100%;
+    font-weight: normal
+}
+
+#SubNavigation.subtabs ul li.current a,
+#SubNavigation.subtabs ul li a:hover {
+    padding: 0.2em 0 0 0;
+    color: #9DC61F;
+    text-decoration: none;
+}
+
+#SubNavigation.subtabs ul li a:active,
+#SubNavigation.subtabs ul li a:focus,
+#SubNavigation.subtabs ul li a:hover {
+    color: #9DC61F;
+}
+
+#SubNavigation.subtabs ul li.current a {
+    font-weight: normal;
+}
+
+#Navigation b.br {
+    width: 12px;
+    float: right;
+    top: -2px;
+    background: url('/images/navigation/bottom-right.gif') top left no-repeat;
+    z-index: 1;
+}
+
+/* end navigation styles */
+#PrimaryContent {
+    padding: 0 22px;
+}
+
+#FormPage,.formPage {
+    width: 750px;
+}
+
+#NestedFormPage {
+    width: 400px;
+    font-size: 97%
+}
+
+#NestedFormPage h1#MainTitle {
+    margin: 0px;
+}
+
+}
+#NestedFormPage div.inputGroup {
+    padding: 0.25em 0px 0.25em 0px;
+}
+
+#NestedFormPage div.formSectionContent p,
+#NestedFormPage div.formSectionContent p.instructions {
+    padding: 0px 0px 12px 12px;
+    font-size: 97%;
+    font-weight: normal;
+}
+
+#NestedFormPage div.formSectionContent p.instructions {
+    margin: 0px;
+}
+
+#NestedFormPage div.formSectionContent p.center {
+    margin-top: 8px;
+    text-align: center
+}
+
+#NestedFormPage div.mainLabel {
+    width: 32%
+}
+
+#NestedFormPage div.options {
+    width: 68%;
+    padding: 0px;
+}
+
+#NestedFormPage div.options input,#NestedFormPage div.options select {
+    font-size: 97%
+}
+
+#NestedFormPage div.options input:focus {
+    background-color: #D1E7A2
+}
+
+#NestedFormPage div#validationErrors div.sectionHeader b.htop b.center {
+    width: 95%;
+}
+
+#NestedFormPage table.nestedListTable tfoot td.important {
+    text-align: left;
+    font-size: 100%
+}
+
+#Footer,#FooterWithoutBorderTop {
+    padding: 16px 10px 10px 10px;
+    margin-top: 10px;
+    border-top: 1px solid #999;
+    font-size: 85%;
+    text-align: center;
+    background-color: #FBFBFB;
+    height: 50px;
+}
+
+#FooterWithoutBorderTop {
+    border-top: none
+}
+
+#Footer p {
+    padding-bottom: 10px;
+}
+
+p.description {
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+p.information,p.information1 {
+    font-weight: bolder;
+    padding: 1.125em;
+    padding-left: 1.66em;
+    margin: 0px;
+}
+
+p.information {
+    background: url('/images/icons/info.gif') .25% 49% no-repeat;
+}
+
+p.information1 {
+    padding-left: 2em;
+    padding-top: 0.45em;
+    color: #B65426;
+    font-size: 105%;
+}
+
+/****************** Table styles *************************/
+table.gridTable td,table.gridTable th {
+    padding: 0.2em;
+}
+
+table.gridTable th {
+    font-weight: bold;
+    font-size: 123.1%;
+}
+
+table.gridTable td {
+    font-size: 90%;
+    background: #FFF;
+    border-top: 1px solid #EEE;
+}
+
+table.gridTable tr.even td {
+    background: transparent;
+    background-color: #FBFBFB
+}
+
+table.gridTable tbody th {
+    background: #FFF;
+    border-top: 1px solid #EEE;
+}
+
+table.gridTable tbody tr.even th {
+    background: transparent;
+    background-color: #FBFBFB
+}
+
+table.listTable,table.leadListTable {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-collapse: separate;
+    border: 1px solid #CCC;
+    /* border-bottom:none; */
+    width: 100%
+}
+
+table.nestedListTable {
+    margin: 0px;
+    margin-top: -0.5px;
+    border: none;
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+table.leadListTable {
+    margin: .5em 0px;
+    border-bottom: 1px solid #ccc;
+}
+
+table.listTable th,
+table.nestedListTable th,
+table.leadListTable th {
+    padding: 0.2em 1em 0.2em 1em;
+    background-color: #EEE;
+    /* border-color: #FFF #CCC #999 #FFF */
+    border-color: #EEE #CCC #999 #EEE;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 94%;
+    text-align: center;
+}
+
+table.nestedListTable th {
+    border: none;
+    background-color: #FAFAFA
+}
+
+table.nestedListTable thead tr th {
+    border: solid 1px #ccc !important;
+    border-right: none !important;
+    border-top: none;
+    background-color: #F6F6F6;
+    text-align: left;
+}
+
+table.nestedListTable tr.colheaders th {
+    padding: 0.1em 0.5em 0.1em 0.5em;
+    font-weight: bold;
+    border-top: solid 1px #ccc;
+}
+
+table.nestedListTable thead tr.actions td {
+    border-bottom: none;
+}
+
+table.nestedListTable thead tr th.center,
+table.nestedListTable td.center,
+div.center,
+.center {
+    text-align: center;
+}
+.nowrap { white-space: nowrap }
+table.nestedListTable thead tr th.first,
+table.nestedListTable thead tr:first-child {
+    border-left: none !important
+}
+
+table.nestedListTable thead tr th.last {
+    border-left: solid 1px #ccc !important;
+}
+
+table.nestedListTable tr.colheaders th.superheader,
+table.nestedListTable tr.colheaders th.subheader {
+    padding: 2px;
+    text-align: center;
+    width: auto
+}
+
+table.nestedListTable tr.colheaders th.subheader {
+    font-size: 90%;
+    border-top: none !important;
+}
+
+table.nestedListTable thead tr.colheaders th.empty {
+    /* border-right: solid 2px #fc3; */
+}
+
+table.nestedListTable thead tr.actions td.paginationTop div#search,
+div#search {
+    white-space: nowrap;
+    position: relative;
+    top: 0px;
+    min-width: 900px;
+}
+
+table.nestedListTable thead tr.actions td.paginationTop div#search div {
+    float: left;
+    clear: right;
+    padding: 0px 4px
+}
+
+table.leadListTable th {
+    padding: 0.5em
+}
+
+table.listTable td,
+table.nestedListTable td,
+table.leadListTable td {
+    border-collapse: separate;
+    background: transparent;
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 90%;
+    padding: 0.5em 0.6em 0.5em 0.6em;
+}
+
+table.nestedListTable td {
+    padding: .25em 0.5625em;
+}
+
+table.leadListTable td {
+    padding: 0.5em;
+}
+
+table.nestedListTable tbody tr.details td.innerheader {
+    background-color: #f6f6f6;
+}
+
+table.listTable td.last,
+table.nestedListTable td.last,
+table.leadListTable td.last {
+    border-bottom: none;
+}
+
+table.nestedListTable td div.nestedYuiButton {
+    clear: left;
+    float: right;
+    position: relative;
+    top: -20px;
+    margin: 0px;
+    line-height: 1.125em
+}
+table.nestedListTable tr.details,
+table.nestedListTable tr.details td {
+    cursor: default;
+    border: none; }
+
+p.actionRequired,
+span.actionRequired,
+table.nestedListTable td.actionRequired,
+p.actionRequired2,
+.warning,
+.info {
+    background: url('../images/icons/warning.gif') no-repeat 8px 50%;
+    padding-left: 2.5em;
+    font-weight: bold;
+}
+
+p.actionRequired {
+    margin-top: 0.5em
+}
+
+p.actionRequired2 {
+    margin-top: 0.25em; 
+    *margin-top: 0;
+    padding-top: 0.25em;
+    padding-top: 0.125em;
+    background-position: 8px 2px;
+}
+
+.warning, .info {
+    background-position: top left;
+    line-height: auto;
+    padding: 0.125em;
+    padding-left: 1.66em;
+    margin: 0px;
+}
+div.bd p.warning {
+    padding-left: 1.5em;
+    padding-top: 0px;
+}
+.info {
+    font-weight: normal;
+    background: url('../images/icons/info.gif') no-repeat left 2px;
+}
+p.info:first-letter {
+    padding-left: 1.5em;
+}
+.bold,table.nestedListTable td.bold {
+    font-weight: bold
+}
+
+table.listTable tr.even td,
+table.nestedListTable tr.even td,
+table.nestedListTable tr.even th.tableSectionHeader,
+table.leadListTable tr.even td {
+    background: transparent;
+    background-color: #FBFBFB
+}
+
+table.nestedListTable tbody td.borderBottom,
+table.ordersTable tbody td.borderBottom {
+    border-bottom: solid 1px #ccc;
+}
+
+table.listTable th {
+    background: #FAFAFA;
+    border: none;
+    border-bottom: 1px solid #CCCCCC;
+    text-align: left;
+}
+
+table.listTable tfoot tr.actions td,
+table.listTable thead tr.actions td {
+    font-size: 100%;
+}
+
+table.listTable thead h2,
+table.nestedListTable thead h2,
+table.leadListTable thead h2 {
+    font-weight: bold;
+}
+
+table.leadListTable td.checkbox {
+    text-align: center
+}
+
+table.nestedListTable td.paginationTop {
+    padding: 0px 14px 14px 14px;
+    border-bottom: none;
+}
+
+table#connectionsTable thead tr.actions td.paginationTop {
+    padding: 0;
+}
+
+table.nestedListTable td.paginationBottom {
+    padding: 14px 14px 0px 14px;
+}
+
+table.nestedListTable tfoot td.important {
+    font-size: 105%;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 1.5em
+}
+
+table.nestedListTable tr.sectionStart th.tableSectionHeader,
+table.nestedListTable tr.sectionStart th.tableSectionHeaderAlternate {
+    border-bottom: solid 1px #ccc;
+    font-weight: 500
+}
+
+table.nestedListTable tr.sectionStart th.tableSectionHeaderAlternate {
+    /* background-color: #D1E7A2 */
+    background-color: #fefdfa;
+}
+
+table.ordersTable {
+    min-width: 1100px
+}
+
+span.actionRequired {
+    color: #B65426;
+    padding-bottom: 0px;
+    margin-top: 1.5em
+}
+
+/* search buttons; used in nestedListTable header rows */
+div#search {
+    margin-bottom: 2px;
+}
+
+div#search div#checkBoxDiv {
+    position: relative;
+    top: 0px;
+    float: left;
+    clear: right;
+    margin: 0px 0px 0px 10px;
+    padding: 0px 10px;
+    /* LC-10929
+    display: none; */
+}
+
+div#search div#selectorDiv {
+    padding-top: 2px;
+    float: left;
+    clear: right;
+    width: auto;
+}
+
+div#search div#searchButtonDiv,
+div#search div#searchButtonDiv2 {
+    margin-top: 1px;
+    float: left;
+    clear: right;
+}
+
+div#search div#searchButtonDiv {
+    position: relative;
+    top: -1px;
+}
+
+div#search div#checkBoxDiv div {
+    white-space: nowrap;
+    float: left;
+    clear: right;
+    padding: 0.25em 0.5em 0.5em 0
+}
+
+div#search div#checkBoxDiv div input[type='checkbox'] {
+    position: relative;
+    top: 2px
+}
+
+span#searchButton span.first-child {
+    padding: 0px 0px 0px 0px
+}
+
+span#searchButton span.first-child button {
+    font-weight: bold
+}
+
+table.ordersTable div#search {
+    padding: 0px;
+    margin-top: 4px;
+}
+
+td.ACTIVE {
+    color: #829427;
+}
+
+td.CLOSED {
+    color: #666;
+}
+
+td.PAUSED {
+    color: #CC3300;
+}
+
+td.ACCEPTED {
+    color: #829427;
+}
+
+td.DECLINED,td.EXPIRED,td.WITHDRAWN {
+    color: #CC3300;
+}
+
+table.target,
+div.target {
+    border-collapse: separate;
+    line-height: 0;
+    font-size: 108%;
+    display: none;
+    width: auto;
+    margin: 10px; 
+    *margin: 0px !important;
+    border: none
+}
+
+table.target {
+    width: 100%;
+    font-size: 10px;
+}
+
+ul.target {
+    margin: 0px
+}
+
+div.target {
+    cursor: default;
+    padding: 0 2px 0 0.25em;
+    margin-top: 0px
+}
+
+div.target input[type="radio"] {
+    float: left
+}
+
+div.target label {
+    font-size: 108%;
+    float: left;
+    clear: right;
+    margin-left: 0.3em;
+    cursor: pointer
+}
+
+div.details {
+    cursor: default
+}
+
+table.target thead tr th {
+    background-color: #ddd;
+    border: none
+}
+
+table.nestedListTable tbody tr td.date {
+    text-align: ":"
+}
+
+ul.text {
+    
+}
+
+table.nestedListTable td.expando,
+div.expando,
+li.expando,
+table.nestedListTable td.contracto,
+div.contracto,
+li.contracto {
+    padding-left: 1.5em;
+    background-color: #fff;
+    cursor: pointer
+}
+
+table.nestedListTable.expando:hover,
+table.nestedListTable.contracto:hover,
+div.expando:hover,
+div.contracto:hover,
+li.expando:hover,
+li.contracto:hover {
+    color: #B65426;
+    cursor: pointer
+}
+
+table.nestedListTable td.expando,div.expando {
+    background: url("/images/dealertrack/icon_plus.gif") 4px 50% no-repeat;
+}
+
+li.expando {
+    list-style-image: url("/images/dealertrack/icon_plus.gif");
+    list-style-position: inside;
+}
+
+table.nestedListTable td.contracto,div.contracto {
+    background: url("/images/dealertrack/icon_minus.gif") 4px 50% no-repeat
+}
+
+li.contracto {
+    list-style-image: url("/images/dealertrack/icon_minus.gif");
+    list-style-position: inside;
+}
+
+li.expando span,li.contracto span {
+    position: relative;
+    left: -6px;
+}
+
+table.nestedListTable tr.parentRow:hover {
+    background-color: #E7EFBC
+}
+
+.selectedRow {
+    background-color: #E7EFBC
+}
+
+table.nestedListTable tr.details td.productDetails,
+table.nestedListTable tr.details th {
+    padding-left: 20px;
+}
+
+table.nestedListTable tr.actions td span#lpConnectLinkTop {
+    margin-bottom: 10px;
+}
+
+table.nestedListTable tr.actions td span#lpConnectLinkBottom {
+    margin-top: 10px;
+}
+
+/****************** Bid grid/ lead store Styles *********************/
+table.cBoxes {
+    width: 100%;
+    margin: 0px;
+}
+
+table.cBoxes td {
+    vertical-align: middle;
+    padding: 1px 0px;
+    margin: 0px;
+}
+
+table.cBoxes td label {
+    padding-left: 2px;
+    margin-left: 0px;
+    text-align: left;
+    font-size: 100%;
+}
+
+table.cBoxes input {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* createbid.vm -- temporary */
+#container {
+    padding: 10px 20px 20px 0px;
+    width: 450px;
+    _width: 500px;
+}
+
+#container ul.text {
+    position: relative;
+    list-style: none;
+    padding: 0px;
+    border: none;
+}
+
+#container ul.text li {
+    
+}
+
+#container ul.text li div {
+    /*border-bottom: 1px solid #CCC; */
+    font-size: 94%;
+    padding: 0.125em 0.25em;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+#container ul.text li div.even,div.even {
+    background-color: #FBFBFB;
+}
+
+#container ul.text li div.target div input {
+    float: left;
+}
+
+#container ul.text li div.target div label {
+    float: left;
+    clear: right;
+}
+
+#container ul.text li div.target div.clear {
+    font-size: 1px;
+    line-height: 0px;
+    border: none;
+}
+
+#container ul.text li div.target span {
+    margin-left: 2em;
+}
+
+#container ul.text li div img {
+    vertical-align: middle;
+    border: none
+}
+
+/* lead store results table */
+div#searchResultsContainer {
+    min-width: 740px;
+}
+
+table.leadListTable {
+    border: none;
+    margin-top: 0px;
+    margin-bottom: 0px
+}
+
+table.leadListTable tr.actions td.first,
+table.leadListTable tr.actions td.last {
+    padding: 0px 4px
+}
+
+table.leadListTable div.lsListingTop,
+table.leadListTable div.lsListingBottom {
+    width: 99.5%;
+    margin: 0px 4px 10px 0px;
+}
+
+table.leadListTable div.lsListingBottom {
+    margin: 14px 4px 0px 0px
+}
+
+table.leadListTable div.lsPaginationTop,
+table.leadListTable div.lsPaginationBottom {
+    white-space: nowrap;
+    float: left;
+    padding: 4px
+}
+
+div#topNote,div#bottomNote {
+    float: left;
+    padding: 6px
+}
+
+div#topNote b,div#bottomNote b {
+    color: #00AA22
+}
+
+div#topCartButton,div#bottomCartButton {
+    float: left;
+    clear: right;
+}
+
+div#topCartButton div#topButton {
+    float: left;
+    position: relative;
+    top: -2px;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+div#topCartButton div#topNumber,
+div#bottomCartButton div#bottomNumber {
+    float: left;
+    clear: right;
+    margin-left: 10px;
+}
+
+div#bottomCartButton div#bottomButton {
+    float: left;
+    position: relative;
+    top: -2px
+}
+
+#leadStoreTopCart,#leadStoreBottomCart {
+    float: left;
+    width: 100%;
+}
+
+#leadStoreTopCart {
+    margin-bottom: 10px
+}
+
+#leadStoreBottomCart {
+    margin-top: 10px;
+    position: relative;
+    top: 200px
+}
+
+#leadStoreTopCart div,#leadStoreBottomCart div {
+    clear: left;
+    float: right;
+    margin: 2px
+}
+
+/* top div */
+#infoDiv {
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+#infoDiv .message {
+    float: left;
+    margin-right: 10px
+}
+
+#infoDiv .actionRequired {
+    padding-top: 1px
+}
+
+#infoDiv .checkoutButton {
+    float: right;
+    clear: right;
+    margin-top: 2px;
+    padding-top: 8px;
+    font-weight: bold;
+}
+
+#infoDiv #instructionsContainer {
+    float: left;
+    clear: right;
+    margin: 0px auto;
+	margin-top: 10px;
+	*margin-top: 0px;
+}
+
+#infoDiv #instructionsContainer p.instructions {
+	margin-top: 6px;
+	*margin-top: 0px;
+}
+
+/* main container */
+#leadStoreSearch {
+    padding-left: 310px;
+    position: relative;
+    top: -10px;
+}
+
+/* left side */
+#leadStoreSearchFields {
+    width: 300px;
+    margin-left: -310px;
+    margin-right: -100%;
+    float: left;
+    position: relative;
+    left: -310px;
+    padding-left: 310px
+}
+
+/* saved/scheduled searches */
+#searchNameDiv div.label {
+    float: left;
+    text-align: right;
+    padding-right: 0.5em;
+    padding-top: 0.125em
+}
+
+#searchNameDiv div.textBox {
+    float: left;
+    clear: right;
+    padding-right: 0.5em
+}
+
+#searchNameDiv div.submitButton {
+    float: left;
+    clear: right;
+    position: relative;
+    top: -2px
+}
+
+#scheduleSearchSubmitButton-button {
+    font-weight: bold
+}
+
+#scheduleControls {
+    margin: 6px 0px 2px 0px;
+    width: 100%;
+    padding: 0px
+}
+
+#scheduleControls table.trafficDrivers td label {
+    padding-left: 2px;
+}
+
+#scheduleControls div.captionDiv {
+    padding-top: 8px;
+    clear: both
+}
+
+#scheduleControls div#scheduleCaptionDiv {
+    margin-top: 8px
+}
+
+#scheduleControls div.captionDiv span:after {
+    content: ":"
+}
+
+#scheduleControls div.searchDays {
+    float: left;
+    width: 72%;
+}
+
+#scheduleControls div.searchHours {
+    float: right;
+    width: 28%;
+}
+
+#scheduleControls div.leadLimits {
+    float: left;
+    width: 55%;
+    margin-left: 2px
+}
+
+#scheduleControls div.submitButton {
+    float: right;
+    clear: right
+}
+
+div#additionalAttrs {
+    float: left;
+    clear: right
+}
+
+/** auto trim groups **/
+div.boxContentTrim {
+    padding: 2px 2px 0px 10px;
+    font-size: 85%;
+}
+
+div.boxContentTrim table.cBoxes td {
+    vertical-align: top
+}
+
+div.boxContentTrim table.cBoxes td.checkboxCell {
+    padding-top: 0px;
+}
+
+div.boxContentTrim table.cBoxes label {
+    font-size: 10px;
+}
+
+div.checkAllNone {
+    width: auto;
+    margin: 0px auto;
+    white-space: nowrap;
+    text-align: center;
+    padding: 8px 4px 0px 0px;
+    font-size: 90%;
+    font-weight: bold
+}
+
+div.boxContentTrim div.checkAllNone {
+    font-size: 105%; *
+    font-size: 103%;
+    margin-bottom: 10px
+}
+
+div.boxContentTrim div.groupContainer {
+    padding: 2px 0px;
+    border-top: solid 1px #eee;
+}
+
+div.boxContentTrim div.groupContainer .even {
+    background-color: #FAFBFB
+}
+
+span.groupTitle {
+    font-weight: bold;
+    font-size: 95%
+}
+
+div.titleColumn {
+    width: 60%; *
+    width: 54%;
+    float: left
+}
+
+div.buttonColumn {
+    width: 38%; *
+    width: 44%;
+    float: right;
+    padding-top: 1px; *
+    padding-top: 0px
+}
+
+div.buttonColumn label {
+    position: relative;
+    top: -3px; *
+    top: -1px
+}
+
+/* right side */
+#searchResultsContainer {
+    width: 100%;
+    float: left;
+    clear: right;
+}
+
+/* save search success */
+span#saveSuccess {
+    display: block;
+    z-index: 9;
+    font-size: 12px;
+    line-height: 1.125em;
+    position: relative;
+    top: -40px;
+    margin-bottom: -38px;
+    padding: 2px 0.75em 0px 22px;
+    margin-right: 4px;
+    float: right;
+    clear: right;
+    color: #E0E1E2;
+    background-repeat: no-repeat;
+    background-position: 2px 0px
+}
+
+#storeSearchResults { /* margin: 0px;
+    width: 100%; */ /*padding: 2px;
+    border: 1px solid #ccc */
+    
+}
+
+#filterSourceBidGroup {
+    font-size: 90%;
+    margin-top: .5em;
+    padding-right: 0px;
+    /* hack to keep the selector under control */
+    max-width: 270px;
+    overflow-x: hidden;
+}
+
+#bidgroupContent {
+    width: auto;
+    max-width: 900px;
+}
+
+div#bidgroupContent div.inputGroup div.mainLabel {
+    width: 5%;
+    margin-left: 10px;
+}
+
+#bidgroupContent.narrow {
+    width: 620px
+}
+
+#bidTabs {
+    position: relative;
+    left: 20px;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    background: transparent;
+}
+
+#bidTabs ul#bidgridTabs {
+    list-style: none;
+    margin: 0;
+    padding: 10px 10px 0;
+    max-width: 770px;
+    position: relative;
+    top: 1px;
+}
+
+#bidTabs ul#bidgridTabs li {
+    float: left;
+    background: url('/images/common/right-ordertab-off.gif') right top no-repeat;
+    text-align: center;
+    overflow: hidden;
+    margin-left: 0px;
+    position: relative;
+}
+
+html:first-child div#bidTabs ul#bidgridTabs li {
+    top: 1px
+}
+
+#bidTabs ul#bidgridTabs li a {
+    display: block;
+    background: url('/images/common/left-ordertab-off.gif') left top no-repeat;
+    padding: 6px 20px 2px 20px;
+    position: relative;
+    top: 0px;
+    border-bottom: solid 1px #ccc;
+    text-decoration: none;
+}
+
+#bidTabs ul#bidgridTabs li a.current {
+    border-bottom: solid 1px #fff;
+    z-index: 2;
+}
+
+/** Links at top right of bidgroup **/
+#bidgroupContent span#toggleViewSpan {
+    position: relative;
+    top: 14px;
+    display: inline;
+    float: right;
+    font-size: 93%;
+}
+
+#bidgroupContent div#nameFieldHelpLink {
+    margin: -2px 0 -16px 2px;
+}
+
+#bidgroupContent div#nameField {
+    margin: -2px 2px;
+}
+
+#bidgroupContent span#howtoLink {
+    position: relative;
+    top: -27px;
+    margin-bottom: -27px;
+    left: 49.0%;
+    white-space: nowrap;
+    display: inline;
+}
+
+/* left-hand container for filters, etc. */
+div#bidoptions {
+    width: 100%;
+    margin: auto 0px;
+}
+
+div#bidoptions div.narrow {
+    width: 75%;
+}
+
+div#bidoptions div#dataDiv,div#bidoptions div#infoDiv {
+    /* float: left; */
+}
+
+div#bidoptions div.varWidth1 {
+    width: 100%;
+}
+
+div#bidoptions div.varWidth2 {
+    /* width: 75%; */
+}
+
+div#bidoptions div#infoDiv {
+    display: none;
+    width: 24.3%;
+    clear: right;
+    margin: -9px 0px 0px 4px;
+}
+
+div#bidoptions div#filters,
+div#bidoptions div#bids,
+div#bidoptions div#settings {
+    position: relative;
+    float: left;
+    clear: left;
+    width: 100%;
+    margin: 0px auto;
+    /* margin-left: 2px; */
+}
+
+div#bidoptions div#pricingContainer,
+div#bidoptions div#filtersContainer,
+div#bidoptions div#settingsContainer {
+    /* width: 97%; */
+    /* padding: 0px 10px */
+}
+
+div#filtersContainer {
+    position: relative;
+}
+
+div#pricingContainer span.pricingMsg,
+div#changePeriodContainer span.pricingMsg,
+div#acceptRateContainer2 span.pricingMsg,
+div#returnRateContainer2 span.pricingMsg,
+div#volumeLimits span.pricingMsg,
+div#oliDiv span.pricingMsg {
+    display: block;
+    margin: 6px;
+}
+
+div#filtersContainer span.pricingMsg {
+    margin-top: 0px;
+}
+
+div#acceptRate span.pricingMsg {
+    padding-left: 10px;
+}
+
+div#returnRate span.pricingMsg {
+    padding-left: 10px;
+}
+
+div#bidoptions div#bids div#bidinfo {
+    margin-bottom: 10px;
+}
+
+div#bidoptions div#bids div#bidinfo span {
+    margin-left: 6px;
+}
+
+div#bidoptions div#transparency,
+div#bidoptions div#filterinfo,
+div#bidoptions div#priceinfo,
+div#bidoptions div#settingsinfo,
+div#bidoptions div#priceEstimatesDiv {
+    float: left;
+    clear: both;
+    width: 93%;
+}
+
+div#bidoptions div#priceEstimatesDiv h2,
+div#bidoptions div#priceEstimatesDiv div.boxContent {
+    text-align: left;
+}
+
+div#filters div.checkboxes div.tableContainer {
+    margin-left: 10px
+}
+
+div#filters table.cBoxes tbody td {
+    font-size: 90%;
+}
+
+div#filters table.cBoxes tr.odd,
+div#filters div#loantovalue table tr.odd,
+div#bids table.pricegrid tr.odd {
+    background-color: #F6F6F6
+}
+
+div#filters table.cBoxes td.checkboxCell {
+    text-align: right;
+    width: 14px
+}
+
+div#filters table.cBoxes td label {
+    margin-left: .33em;
+}
+
+div#filters div.checkboxes,div#filters div.radioGroup {
+    width: 100%
+}
+
+div#filters div.checkboxes div.radioGroup {
+    margin: -4px 0px 10px 10px;
+    clear: both;
+    padding: 4px
+}
+
+div#filters input[type="radio"] {
+    position: relative;
+    top: .125em;
+}
+
+div#filters div.checkboxes div.radioGroup div {
+    float: left;
+}
+
+div#filters div.filter label.radioLabel,
+div#filters div.checkboxes div.radioGroup div label,
+div#filters div.filter div label,
+div#filters div.filter div p label,
+div#filters div#exclusivity div label,
+div#filters div#paydayfirstpos div label {
+    padding: 0 .75em 0 0;
+    line-height: 1.5em;
+}
+
+div#filters div.checkboxes p.inputgroup label,
+div#filters div.radioGroup div label.radioLabel {
+    margin-left: .3em
+}
+
+div#filters div.checkboxes div.dependents {
+    position: relative;
+    margin-left: 22px
+}
+
+div#filters div.checkboxes div.dependents table.cBoxes {
+    width: 90%;
+}
+
+div#filters div.checkboxes div.checkAll {
+    margin: 0px auto;
+    text-align: center;
+    padding: 4px 0px 2px 0px
+}
+
+div#filters div.radioGroup div {
+    padding: 2px .5em 0px .5em;
+    margin-left: 4px
+}
+div.titleDiv {
+    margin: 0px auto;
+    text-align: center
+}
+div.titleDiv h3,
+div#filters div.filter h3,
+div#filters div.titleDiv h3,
+div#filters div.filter div.titleDiv h3,
+div#settings div.titleDiv h3,
+div#pricing div.titleDiv h3,
+div#relationship div.titleDiv h3,
+div.summaryContainer div.titleDiv h3 {
+    text-align: left;
+    display: block;
+    padding: .33em .25em;
+    font-weight: bold;
+    background-color: #F0F0F1;
+    border-top: solid 1px #CCC;
+    margin: 0 1px 4px 1px;
+    /* width: 99.7%; */
+    font-size: 110%;
+}
+/* div#relationship.summaryContainer div.titleDiv h3,
+div#otherSettings.summaryContainer div.titleDiv h3 {
+    width: 97.9%;
+    margin: 0 3px 4px 12px;
+    position: static;
+}*/
+div#filters div#exclusivity div {
+    float: left;
+}
+
+div#filters div.filter {
+    margin-bottom: 4px;
+}
+
+div#filters div#loantovalue table td.title {
+    padding: 0px .5em 0px 10px
+}
+
+div#filters div#marketattr div.checkbox {
+    float: left;
+    margin-left: 10px;
+    padding-top: 2px
+}
+
+div#filters div#marketattr div.checkboxLabel {
+    float: left;
+    clear: right;
+    padding-left: .5em
+}
+
+div#filters div#marketattr div#leadquality,
+div#filters div#marketattr div#sourceconnect {
+    padding: 0 4px;
+    margin-left: 26px
+}
+
+div#filters div#exclusivity div {
+    margin-left: 4px;
+    padding-top: 2px
+}
+
+div#filters div.checkboxes p.inputgroup,
+div#filters div#zipradius p,
+div#filters div#ziplistDiv p,
+div#filters div.dropDown div.dropDownContainer {
+    margin-left: 10px;
+    padding-top: 2px
+}
+
+div#filters div.dropDown div.dropDownContainer {
+    width: 400px;
+    min-width: 175px
+}
+
+div#filters div#timeRange div.dropDownContainer {
+    width: auto;
+}
+
+div#filters div#timeRange div.dropDownContainer div.selector {
+    float: left;
+    clear: right;
+}
+
+div#filters div#timeRange div.dropDownContainer div.label {
+    float: left;
+    text-align: right;
+    margin-right: 6px;
+    width: 10%;
+    white-space: nowrap;
+}
+
+div#bids table.pricegrid {
+    width: 100%;
+    margin-bottom: 10px
+}
+
+div#bids table.pricegrid th,div#bids table.pricegrid td {
+    padding: .25em 1.25em;
+    border-collapse: collapse;
+}
+
+table.pricegrid th.colHeaders,table.pricegrid td.label {
+    font-weight: bold;
+    font-size: 98%
+}
+
+table.pricegrid thead th.colHeaders {
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+}
+
+table.pricegrid thead tr.toplabel,table.pricegrid tfoot tr.bottomLabel {
+    background-color: #F0F0F1;
+}
+
+table.pricegrid thead tr.toplabel th,
+table.pricegrid tfoot tr.bottomLabel td {
+    padding: 0.75em
+}
+
+/* moved to transparency */
+table.pricegrid th.progress {
+    display: block;
+    width: 20px;
+    height: 16px
+}
+
+table.pricegrid th.mainHeader,table.pricegrid td.mainHeader {
+    font-weight: bold;
+    font-size: 100%;
+    padding: 0px 1em;
+}
+
+table.pricegrid th.mainHeader {
+    text-align: center
+}
+
+table.pricegrid th.left {
+    text-align: left
+}
+
+table.pricegrid tbody tr.estimate {
+    display: none;
+}
+
+table.pricegrid tbody td.estimate {
+    font-size: smaller;
+    color: #B65426;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+div#settings div.content {
+    margin-bottom: 8px
+}
+
+div#settings div.content div.formSectionContent div.mainLabel {
+    width: 40%
+}
+
+div#settings div.content div.formSectionContent div.options {
+    width: 50%
+}
+
+/* div#bidgroupContent form#bid */
+div#settings div.content div.formSectionContent div.options div.optionsContent #weekdayCap,
+div#settings div.content div.formSectionContent div.options div.optionsContent #weekendCap {
+    margin-left: 0.875em;
+}
+
+div#bidoptions div#transparency p {
+    margin-bottom: 0.33em;
+    margin-left: 0.33em
+}
+
+div#bidoptions div#priceEstimatesDiv div.buttonGroup div#progress-indicator {
+    float: left;
+    width: 16px;
+    height: 16px;
+    background: url('/images/common/progress_fff.gif') no-repeat top left;
+    margin: 6px 6px 6px 0px;
+    visibility: hidden;
+}
+
+div#bidoptions div#transparency h4 div.estimate {
+    float: right;
+    position: relative;
+    top: -19px;
+    padding: 0.33em
+}
+
+/* Opera */
+html:first-child div#bidoptions div#transparency h2 span#progress-indicator {
+    top: 0px
+}
+
+html:first-child div#bidoptions div#transparency h4 div.estimate {
+    top: -4px
+}
+
+div.content div.olidetails, 
+div.option div.olidetails {
+    float: left;
+    clear: right;
+    width: auto;
+    padding: .33em;
+    display: none;
+    outline: solid 1px #ccc;
+}
+
+div.content div.oliDetailsEven,
+div.option div.oliDetailsEven {
+    background-color: #E5E5E5;
+}
+
+div.content div.oliDetailsOdd,
+div.option div.oliDetailsOdd {
+    background-color: #F9EBD1;
+}
+
+div.content div.olidetails ul {
+    float: left;
+    margin-right: 10px
+}
+
+div#buttons {
+    margin: 10px 0px 0px 10px;
+    clear: both;
+}
+
+div#buttons span#backNextButtons {
+    float: left;
+}
+
+div.subtabHeading {
+    height: 33px;
+    border-bottom: none !important;
+    display: none;
+    width: auto !important;
+}
+
+div.subtabHeading h2 {
+    margin-bottom: 40px;
+    padding-bottom: 0px;
+}
+
+/* order creation screen */
+div.clickable {
+    font-size: 93%;
+    padding-top: 4px;
+    padding-left: 4px
+}
+
+div.clickable label {
+    position: relative;
+    top: -2px
+}
+
+div.clickable:hover {
+    cursor: pointer;
+    background-color: #D1E7A2
+}
+
+/* order edit/confirmation screens */
+.state-change-button {
+    border-color: #7D98B8 !important;
+    background-position: 0 -1300px !important;
+}
+
+.state-change-button .first-child {
+    border-color: #7D98B8 !important;
+}
+
+.state-change-button:hover {
+    border-color: #808080 !important;
+    background-position: 0 0 !important;
+}
+
+.state-change-button .first-child:hover {
+    border-color: #808080 !important;
+}
+
+/* confirmation screen */
+.activate-button {
+    background: url('/images/orders/green_sprite.png') !important;
+    background-position: 0 79px !important;
+}
+
+.activate-button button {
+    color: #003300 !important;
+}
+
+.activate-button:hover,.deactivate-button:hover,.login-button:hover {
+    background-position: 0 0 !important;
+}
+
+.activate-button button:hover {
+    color: #000 !important;
+}
+
+.deactivate-button {
+    background: url('/images/orders/red_sprite.png') !important;
+    background-position: 0 79px !important;
+}
+
+.login-button {
+    background: url('/images/common/orange_sprite.png') !important;
+    background-position: 0 79px !important;
+}
+
+.deactivate-button button,.login-button button {
+    color: #fff !important;
+    text-outline: #ccc 1px 1px;
+}
+
+.login-button a {
+    color: #fff !important;
+    text-outline: #ccc 1px 1px;
+}
+
+.deactivate-button:hover {
+    background-position: 0 0 !important;
+}
+
+.deactivate-button button:hover,.login-button button:hover {
+    color: #000 !important;
+}
+
+.login-button a:hover {
+    color: #000 !important;
+}
+
+.buttonGroup .disabled-button {
+    background-position: 0 0 !important;
+}
+
+div.buttonGroup span.disabled-button span.first-child button {
+    color: #ccc !important;
+}
+
+/* @see lp_macros.vm -> lpDrawRadioButtonWithDescription */
+/* used in order management/settings.vm */
+span.radioButtonExtra {
+    color: #666;
+    font-size: 97%;
+    padding-left: 1.125em;
+    white-space: nowrap;
+}
+
+/* orders listing/series page */
+.orders-active-icon,.orders-inactive-icon,.orders-action-icon {
+    position: relative;
+    right: -4px;
+    width: 16px;
+    height: 16px;
+}
+
+.orders-active-icon {
+    background-color: #2F466B;
+}
+
+.orders-inactive-icon {
+    background-color: #808080;
+}
+
+.orders-inactive-icon:hover {
+    cursor: default;
+}
+
+/* "actions" links for listing screens - unused
+ul.actionsWrapper {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul.actionsWrapper li.options {
+    float: left;
+    postion: relative;
+    width: 10em;
+}
+
+ul.actionsWrapper li.options ul.actionsList {
+    display: none;
+    position: absolute;
+    top: 1em;
+    left: 0;
+    z-index: 10000;
+}
+
+ul.actionsWrapper>li.options>ul.actionsList {
+    top: auto;
+    left: auto;
+    padding: 0px 0px;
+    border-top: solid 1px #ccc;
+}
+
+ul.actionsWrapper li.options:hover ul.actionsList {
+    display: block;
+}
+
+ul.actionsWrapper li.options ul.actionsList li.action {
+    background-color: #FBFBFB;
+    border: solid 1px #ccc;
+    border-top: none;
+}
+
+ul.actionsWrapper li.options ul.actionsList li.action:hover {
+    background: url('/images/right.gif') 6px 50% no-repeat;
+    background-color: #eee;
+}
+
+ul.actionsWrapper li.options ul.actionsList li.action a {
+    display: block;
+    padding: 2px 20px;
+}
+*/ /**** Selectors for buyer dashboard ****/
+#buyerHomeWrapper {
+    width: 100%;
+    margin: 0px;
+    overflow: hidden;
+    min-width: 900px;
+}
+
+#buyerHomeWrapper div.roundedBox,#buyerHomeWrapper div.roundedBox2 {
+    margin-right: 10px;
+    min-width: 350px;
+}
+
+#buyerHomeWrapper div.roundedBox div.inlineSideBar2,
+#buyerHomeWrapper div.roundedBox2 div.inlineSideBar2,
+#buyerHomeWrapper div.roundedBox3 div.inlineSideBar2 {
+    position: relative;
+    top: -5px;
+    margin-top: -10px;
+}
+
+#dashWrapper {
+    margin: 0px 10px 10px 10px;
+    width: 75%;
+    min-width: 645px;
+}
+
+.overview {
+    margin-bottom: 10px;
+    margin-right: 0px
+}
+
+.overview form {
+    margin: 0px;
+    padding: 0px
+}
+
+.tabWrapper1 {
+    margin: 10px 9px 10px 0px;
+    border: solid 1px #ccc;
+    padding: 1px;
+}
+
+.tabWrapper2 {
+    margin: 0px 9px 10px 0px;
+    border: solid 1px #ccc;
+    padding: 1px;
+}
+
+#dashTabs {
+    white-space: nowrap;
+    width: auto;
+    font-size: 95%;
+    margin: 0px;
+}
+
+#dashTabs ul#tabsList {
+    list-style: none;
+    /* margin-left: 10px; */
+    /* width: 100%; */
+    width: 679px;
+    padding: 0px;
+    position: relative;
+    left: -1px;
+    top: 10px;
+    margin-top: -10px;
+}
+
+#dashTabs ul#tabsList li {
+    float: left;
+    background: url('/images/common/right-widertab.gif') right top no-repeat;
+    text-align: center;
+    overflow: hidden;
+    margin: 0px;
+    margin-left: 1px;
+    position: relative;
+    width: 48.5%;
+    z-index: 0;
+}
+
+#dashTabs ul#tabsList li a {
+    display: block;
+    background: url('/images/common/left-ordertab-off.gif') left top no-repeat;
+    padding: 0.5em 2em;
+    position: relative;
+    top: 0px;
+    text-decoration: none;
+}
+
+#dashTabs ul#tabsList li a:hover {
+    text-decoration: underline;
+}
+
+#dashTabs ul#tabsList li.current {
+    color: #829427;
+    font-weight: bold;
+    cursor: default;
+    z-index: 10;
+}
+
+#dashTabs ul#tabsList li.current a:hover {
+    text-decoration: none;
+    cursor: default
+}
+
+#dashTabs ul#tabsList li#voice {
+    margin-left: -3px;
+}
+
+#voiceDiv {
+    margin-top: -1px;
+}
+
+#dataDiv,#voiceDiv {
+    /* width: 99.5%; */
+    /* border: solid 1px #ccc; */
+    /* padding: 1px; */
+}
+
+.callOutWrapper {
+    padding: 1px;
+    margin-bottom: 4px;
+    border: solid 1px #ccc
+}
+
+.callOut,.callOut2,.callOut3, .homepageMetricsTable {
+    width: 100%;
+    font-size: 85%;
+}
+
+.callOut2 {
+    margin-left: 0px
+}
+.callOut3, .homepageMetricsTable th { width: auto; margin: 0px auto }
+.callOut th,.callOut2 th,.callOut3 th, .homepageMetricsTable th {
+    text-align: left;
+    background-color: #EBEAEA;
+    border-bottom: solid 1px #ccc;
+    font-weight: bold;
+    padding: 4px;
+    font-size: 108%;
+}
+
+.callOut3 th, .homepageMetricsTable th {
+    text-align: right;
+    background: transparent;
+    padding-right: 10px;
+    font-size: 98%;
+    white-space: nowrap
+}
+
+.callOut td,.callOut2 td,.callOut3 td, .homepageMetricsTable td {
+    padding: 3px;
+    border-bottom: solid 1px #ccc
+}
+
+.callOut td.last,.callOut2 td.last {
+    border-bottom: 0px
+}
+
+#homeContainer {
+    width: 890px
+}
+
+#left {
+    width: 666px
+}
+
+#right {
+    width: 25%;
+    padding-left: 1px;
+}
+
+.chartDiv p.caption {
+    padding: 5px;
+    padding-right: 0px;
+    background-color: #eee;
+    border-bottom: solid 1px #ccc;
+    width: auto
+}
+
+.chartDiv div.chartContainer {
+    text-align: center;
+    padding: 20px;
+}
+
+td.right {
+    text-align: right
+}
+
+.outline {
+    border: solid 1px #ccc;
+    zoom: 1.0;
+}
+
+.outline div.outlineContent {
+    padding: 2px 10px;
+    width: auto
+}
+
+#dashWrapper #overview {
+    margin-right: 10px;
+    /* FIX THIS */
+    p\osition: relative;
+}
+
+/* Selectors for pagination */
+div.paginationContainer {
+    margin: 0px;
+    padding: 0px
+}
+
+.pagination {
+    clear: right;
+    text-align: right;
+}
+
+.pagination span {
+    padding: 0 0.5em 0 0;
+}
+
+.pagination ul {
+    float: right;
+    margin: 0 0 .25em 0;
+    list-style: none;
+}
+
+.pagination ul li {
+    float: left;
+    margin: 4px 0 0 4px;
+}
+
+.pagination ul li a {
+    color: #47545d;
+    float: left;
+    text-align: center;
+    border: 1px solid #EAEAEA;
+    padding: 0.3em 0.4em 0.3em 0.4em;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+.pagination ul li a:hover {
+    border: 1px solid #B65426;
+    background: #afc862;
+    color: #B65426;
+    text-decoration: none;
+}
+
+.pagination ul li.current a {
+    border: 1px solid #caccc2;
+    background: #afc862;
+    color: #FBFBFB;
+    cursor: text;
+}
+
+.pagination ul li.current a.disabled,
+.pagination ul li.current a.disabled:hover,
+.pagination ul li a.disabled,
+.pagination ul li a.disabled:hover {
+    background: #FFF;
+    border-color: #EEE;
+    color: #AAA;
+    cursor: text;
+}
+
+.pagination ul li.disabled a {
+    background: #FFF;
+    border-color: #EEE;
+    color: #AAA;
+}
+
+.pagination ul li.disabled a:hover {
+    background: #FFF;
+    cursor: text;
+}
+
+.pagination ul li.greeked a,.pagination ul li.greeked a:hover {
+    border-color: #FFF;
+    color: #caccc2;
+    background: none;
+}
+
+.pagination p {
+    clear: both;
+    text-align: right;
+    color: #999;
+    font-size: 0.95em;
+}
+
+.pagination br {
+    clear: both;
+}
+
+div.paginationContainer div.results {
+    float: left;
+    margin: 4px 0 0 0;
+    padding: 0.3em 0.4em 0.3em 0;
+}
+
+/* End section */ /* sortable table headers */
+.sortHeader {
+    white-space: nowrap
+}
+
+.sortable {
+    cursor: pointer;
+    padding: 0px 15px;
+}
+
+.sortable a {
+    text-decoration: none
+}
+
+.sortable a:hover {
+    text-decoration: underline
+}
+
+th.sortedAsc,.nestedListTable th.sortedAsc {
+    background: #eee url('/images/up.gif') no-repeat 97% 40%;
+}
+
+th.sortedDesc,.nestedListTable th.sortedDesc {
+    background: #eee url('/images/down.gif') no-repeat 97% 52%;
+}
+
+/* toggle styles */
+.parentRowClosed {
+    background: url('/images/controls/right_arrow.gif') scroll no-repeat 6px
+        50%;
+    cursor: pointer;
+}
+
+.parentRowOpen {
+    background: url('/images/controls/down_arrow.gif') scroll no-repeat 6px
+        50%;
+    cursor: pointer;
+}
+
+.parentRowClosed .firstChildCell,.parentRowOpen .firstChildCell {
+    padding-left: 20px;
+}
+
+.parentRowClosed .firstChildCell {
+    background: url('/images/controls/right_arrow.gif') no-repeat 6px 50%;
+}
+
+.parentRowOpen .firstChildCell {
+    background: url('/images/controls/down_arrow.gif') no-repeat 6px 50%;
+}
+.hidden {
+    display: none;
+}
+.childRowClosed {
+    display: none;
+    height: 0px
+}
+
+.childRowOpen {
+    visibility: visible
+}
+
+tr.childRowOpen td {
+    border: none;
+    font-size: smaller;
+    background-color: #eee;
+    line-height: .2em;
+    padding-left: 2em
+}
+
+/* info messages */
+div.infoMessage {
+    background: url('/images/icons/info.gif') no-repeat 2px 4px;
+    padding: 1.125em 2px 1.125em 20px;
+    color: #666;
+    font: normal 12px helvetica, sans-serif;
+}
+
+div.infoMessage2 {
+    background: url('/images/icons/info.gif') .25% 1.125em no-repeat;
+    font-weight: bolder;
+    padding: 1.125em;
+    padding-left: 1.66em;
+    margin: 0px;
+}
+
+#addattr h4 {
+    font-weight: bold;
+    background-color: transparent;
+    padding: 2px;
+}
+
+.note {
+    font-size: 85%
+}
+
+/* selector for numeric table values */
+table td.number {
+    text-align: right
+}
+
+input.number {
+    text-align: right;
+    cursor: text;
+    padding-right: 1px;
+}
+
+/* VeriSign logo */
+#vsLogoDiv {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#csLogoDiv, #adyenLogoDiv {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Lead Manager */
+div#managerContainer {
+    width: auto;
+    min-width: 900px
+}
+
+div #searchFieldsDiv {
+    width: 66%;
+    float: left;
+}
+
+div #leadManagerQuickLinksDiv {
+    width: 33%;
+    float: left;
+    clear: right;
+    margin-left: 10px
+}
+
+div #searchFieldsDiv p.information {
+    margin: 2px 0px 2px 10px;
+    padding: .7em;
+    padding-left: 2em
+}
+
+/********** rounded box selectors **********/ 
+/* main containers */
+/* Both IE6 & 7 need zoom or the side borders disappear */
+div.roundedBox,
+div.roundedBox2,
+div.roundedBox3,
+div.roundedBox4,
+div.roundedBox5,
+div.blueBox,
+div.greenBox,
+div.redBox {
+    min-width: 350px;
+    border: #ccc 1px solid;
+    margin: 10px 0px;
+    padding: 1px;
+    clear: both;
+    background: transparent;
+    background-color: #fff;
+    position: relative
+}
+div.sellerHomeContentBoxL div.roundedBox,
+div.sellerHomeContentBoxR div.roundedBox {
+    min-width: 100px;
+}
+div.roundedBox2 { /* min-width: 1100px; */
+    
+}
+
+div.roundedBox4 {
+    width: auto;
+    min-width: 100px
+}
+
+/* used for table containers */
+div.roundedBox5 {
+    min-width: 930px;
+}
+
+/* these are the corners; they all use the same background image */
+b.bt,b.bt b,b.bb,b.bb b {
+    display: block;
+    height: 12px;
+    font-size: 1px;
+    background: url('/images/common/corners.gif') no-repeat;
+    position: relative;
+    z-index: 0
+}
+
+/* blue variant */
+.blueBox b.bt,.blueBox b.bt b,.blueBox b.bb,.blueBox b.bb b {
+    background: url('/images/common/blue-corners.gif') no-repeat;
+}
+/* top left corner */
+b.bt,.blueBox b.bt {
+    top: -2px;
+    left: -2px
+}
+/* top right corner */
+b.bt b,.blueBox b.bt b {
+    background-position: 100% -12px;
+    left: 4px;
+}
+/* bottom left corner */
+b.bb,.blueBox b.bb {
+    background-position: 0 -24px;
+    top: 2px;
+    left: -2px
+}
+/* bottom right corner */
+b.bb b,.blueBox b.bb b {
+    background-position: 100% -36px;
+    left: 4px;
+}
+div.blueBox {
+    border: solid 1px #98E0F7;
+    background-color: #f3fbff;
+}
+
+/* red & green variants */
+.greenBox b.bt,.greenBox b.bt b,.greenBox b.bb,.greenBox b.bb b {
+    height: 10px;
+    background: url('/images/common/green_corners.gif') no-repeat;
+}
+/* red variant */
+.redBox b.bt,.redBox b.bt b,.redBox b.bb,.redBox b.bb b {
+    height: 10px;
+    background: url('/images/common/red_corners.gif') no-repeat;
+}
+/* top left corner */
+.redBox b.bt,.greenBox b.bt {
+    top: -2px;
+    left: -2px
+}
+/* top right corner */
+.redBox b.bt b,.greenBox b.bt b {
+    background-position: 100% -10px;
+    left: 4px;
+}
+/* bottom left corner */
+.redBox b.bb,.greenBox b.bb {
+    background-position: 0 -20px;
+    top: 2px;
+    left: -2px
+}
+/* bottom right corner */
+.redBox b.bb b,.greenBox b.bb b {
+    background-position: 100% -30px;
+    left: 4px;
+}
+div.greenBox {
+    border: solid 1px #77E177;
+    background-color: #CCFFCC;
+}
+
+div.redBox {
+    border: solid 1px #D96161;
+    background-color: #FBC0C0;
+}
+/* header for rounded boxes */
+.roundedBox div.sectionHeader,
+.roundedBox2 div.sectionHeader,
+.roundedBox3 div.sectionHeader,
+.roundedBox4 div.sectionHeader,
+div.confirmationSectionHeader {
+    padding: 0px;
+    background: transparent;
+    position: relative;
+    margin: 0px;
+    border: 0px;
+    width: auto;
+}
+
+div.confirmationSectionHeader {
+    width: 100%;
+}
+
+b.htop,b.htop b.right {
+    display: block;
+    height: 16px;
+    font-size: 1px;
+    background: url('/images/common/header-corners-e0e1e2.gif') no-repeat transparent;
+    position: relative;
+}
+
+b.htop {
+    top: -11px;
+    left: 1px;
+    overflow: hidden;
+}
+
+b.htop b.center {
+    width: 95.99%;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    height: 16px;
+    _height: 11px;
+    left: 10px;
+    /* background-color: #f0f0f1; */
+    background-color: #e0e1e2;
+}
+
+b.htop b.right {
+    background-position: 100% -12px;
+    left: -2px;
+    top: -16px;
+}
+/* New implementation; intended to replace the ensuing stuff */
+.roundedBox .hdr {
+    overflow: hidden;
+    margin-right: 1px;
+    margin-bottom: 0.8em }
+.roundedBox .hdr .tl, .roundedBox .hdr .tr {
+    position:absolute;
+    width:12px;
+    height:12px;
+    top:-1px; }
+.roundedBox .hdr .tl {
+    left:-1px;
+    background:url('/images/common/header-left.gif') no-repeat; }
+.roundedBox .hdr .tr {
+    right: -1px;
+    background:url('/images/common/header-right.gif') no-repeat; }
+.roundedBox .hdr h2 {
+    width: 100%;
+    margin: 1px;
+    padding: 0.33em;
+    background-color: #e0e1e2;
+    font-size: 110%;
+    font-weight: bold;
+    color: #2F466B; }
+.roundedBox .hdr h2 span {
+    padding: 0.5em; }
+.roundedBox .hdr h2 span.headerText {
+    padding: 1px;
+    padding-left: 0.5em;
+    display: block;
+    float: left; }
+.roundedBox .hdr h2 img.inlineHelpImg {
+    margin-top: -1px
+}
+.roundedBox .hdr h2 a.headerLink,
+.roundedBox .hdr h2 a.headerLink2 {
+    font-weight: normal;
+    font-size: 90%;
+    float: right;
+    clear: right;
+    position: absolute;
+    right: 10px;
+    top: 6px;
+}
+.roundedBox .hdr h2 a.headerLink2 {
+    top: 0px }
+/* End new implementation */
+.roundedBox div.sectionHeader h2,
+.roundedBox2 div.sectionHeader h2,
+.roundedBox3 div.sectionHeader h2,
+.roundedBox4 div.sectionHeader h2,
+div.confirmationSectionHeader h2,
+div.confirmationSectionHeader2 h2 {
+    position: relative;
+    top: -15px;
+    left: 1px;
+    line-height: 1.25em;
+    padding: 0px 10px 8px 10px;
+    margin: -5px 2px 0 0;
+    /* background-color: #f0f0f1; */
+    background-color: #e0e1e2;
+    font-size: 110%;
+    /* color: #47545d */
+    color: #2F466B;
+}
+.sectionHeaderFlat {
+    background-color: #e0e1e2;
+    border-left: solid 1px #fff;
+    border-right: solid 1px #fff;
+}
+.sectionHeaderFlat h2 {
+    line-height: 1.25em;
+    padding: 0.33em 10px;
+    margin: 10px 2px;
+    background-color: #e0e1e2;
+    font-size: 110%;
+    font-weight: bold;
+    color: #2F466B;
+}
+div.confirmationSectionHeader h2 {
+    font-weight: 600;
+    float: left;
+    top: -2px;
+}
+
+.ordersTable .orderActions {
+    text-align: center;
+    margin: 0px auto;
+    padding: 0px 0px;
+    white-space: nowrap
+}
+
+div.confirmationSectionHeader b.htop,
+div.confirmationSectionHeader b.htop b.center,
+div.confirmationSectionHeader b.htop b.right {
+    height: 31px;
+    margin-bottom: -30px;
+}
+
+div.confirmationSectionHeader b.htop b.right {
+    background-position: 100% -12px;
+    left: -2px;
+    top: -1px;
+}
+
+.roundedBox div.sectionHeader h3,
+.roundedBox2 div.sectionHeader h3,
+.roundedBox3 div.sectionHeader h3,
+.roundedBox4 div.sectionHeader h3 {
+    font-weight: bold;
+    position: relative;
+    top: -20px;
+    line-height: 1.125em;
+    padding: 0px 10px 4px 10px;
+    margin: -3px 1px 0px 1px;
+    background-color: #e0e1e2;
+    color: #2F466B;
+}
+
+.roundedBox2 div.sectionHeader b.htop b.center {
+    width: 97%;
+    overflow: hidden
+}
+
+.roundedBox3 div.sectionHeader b.htop b.center,
+.roundedBox4 div.sectionHeader b.htop b.center {
+    width: 91%;
+    overflow: hidden;
+}
+
+div#right div#overview div.roundedBox4 div.sectionHeader h3 {
+    
+}
+
+/* Opera */
+html:first-child div.roundedBox div.sectionHeader b.htop b.center {
+    width: 97%
+}
+
+html:first-child div.roundedBox4 div.sectionHeader b.htop b.center {
+    width: 91.5%
+}
+
+div.boxContent,div.boxContentTrim {
+    padding: 0px 10px
+}
+
+div.boxContent p {
+    font-size: 90%
+}
+
+/****************** Success messages/Validation errors *********************/
+#successMessage h3 {
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+#successMessage p {
+    font-size: 1.125em;
+    font-weight: bold;
+    margin-left: 2em;
+    padding: 0;
+    color: #829427;
+}
+
+#successMessage div.sectionHeader b.htop b.center {
+    width: 97.5%;
+    overflow: hidden
+}
+
+#successMessage b.htop,#successMessage b.htop b.right {
+    background: url('/images/common/green-corners.gif') no-repeat
+        transparent;
+}
+
+#successMessage b.htop b.center,#successMessage div.sectionHeader h2 {
+    background-color: #829427
+}
+
+#successMessage div.sectionHeader h2 {
+    color: #FBFBFB
+}
+
+#successMessage b.htop {
+    top: -10px;
+    left: 1px;
+    overflow: hidden;
+}
+
+#successMessage b.htop b.right {
+    background-position: 100% -12px;
+    left: -2px;
+    top: -16px;
+}
+
+#successMessage ul li {
+    margin-left: 2em;
+    padding: 5px 0 0px 0;
+    color: #829427
+}
+#successMessage div.sectionHeader .closebox {
+    position: absolute;
+    top: -2px;
+    right: 10px;
+    width: 25px;
+    height: 16px;
+    background: transparent url("/images/common/closebox.png") 0px 0px no-repeat;
+    cursor: pointer;
+}
+/***** error messages *****/
+#validationErrors,#buyerHomeAlerts,#accountAlert {
+    background-color: #FFFFCC;
+    border: solid 1px #CC3300;
+    margin-bottom: 0
+}
+
+#validationErrors ol,#buyerHomeAlerts ol,#accountAlert ol {
+    margin-top: -6px
+}
+
+#validationErrors ol li,#buyerHomeAlerts ol li,#accountAlert ol li {
+    margin-left: 2em;
+    padding: 5px 0 0px 0;
+    color: #CC3300
+}
+
+#validationErrors div.sectionHeader b.htop b.center,
+#buyerHomeAlerts div.sectionHeader b.htop b.center,
+#accountAlert div.sectionHeader b.htop b.center {
+    width: 97%;
+    overflow: hidden
+}
+
+#validationErrors b.bt,
+#validationErrors b.bt b,
+#validationErrors b.bb,
+#validationErrors b.bb b,
+#buyerHomeAlerts b.bt,
+#buyerHomeAlerts b.bt b,
+#buyerHomeAlerts b.bb,
+#buyerHomeAlerts b.bb b,
+#accountAlert b.bt,
+#accountAlert b.bt b,
+#accountAlert b.bb,
+#accountAlert b.bb b {
+    background: url('/images/common/corners-cc3300.gif') no-repeat;
+}
+
+/* top left corner */
+#validationErrors b.bt,#buyerHomeAlerts b.bt,#accountAlert b.bt {
+    top: -2px;
+    left: -2px
+}
+
+/* top right corner */
+#validationErrors b.bt b,#buyerHomeAlerts b.bt b,#accountAlert b.bt b {
+    background-position: 100% -12px;
+    left: 4px;
+}
+
+/* bottom left corner */
+#validationErrors b.bb,#buyerHomeAlerts b.bb,#accountAlert b.bb {
+    background-position: 0 -24px;
+    top: 2px;
+    left: -2px
+}
+
+/* bottom right corner */
+#validationErrors b.bb b,#buyerHomeAlerts b.bb b,#accountAlert b.bb b {
+    background-position: 100% -36px;
+    left: 4px;
+}
+
+#validationErrors b.htop,
+#validationErrors b.htop b.right,
+#buyerHomeAlerts b.htop,
+#buyerHomeAlerts b.htop b.right,
+#accountAlert b.htop,
+#accountAlert b.htop b.right {
+    background: url('/images/common/header-corners-cc3300.gif') no-repeat
+        transparent;
+}
+
+#validationErrors b.htop b.center,
+#validationErrors div.sectionHeader h2,
+#buyerHomeAlerts b.htop b.center,
+#buyerHomeAlerts div.sectionHeader h2,
+#accountAlert b.htop b.center,
+#accountAlert div.sectionHeader h2 {
+    background-color: #CC3300;
+    color: #FFFFCC
+}
+
+#validationErrors div.sectionHeader h2,
+#buyerHomeAlerts div.sectionHeader h2,
+#accountAlert div.sectionHeader h2 {
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    font-weight: 500;
+    letter-spacing: normal
+}
+
+#validationErrors b.htop,#buyerHomeAlerts b.htop,#accountAlert b.htop {
+    top: -10px;
+    left: 1px;
+    overflow: hidden;
+}
+
+#validationErrors b.htop b.right,
+#buyerHomeAlerts b.htop b.right,
+#accountAlert b.htop b.right {
+    background-position: 100% -12px;
+    left: -2px;
+    top: -16px;
+}
+
+/* variant for buyer homepage */
+#validationErrors div.inlineSideBar,
+#buyerHomeAlerts div.inlineSideBar,
+#accountAlert div.inlineSideBar {
+    font-weight: bold;
+    color: #CC3300
+}
+
+/* selectors for lpDrawLabelValuePair macro */
+div.labelValue {
+    clear: both;
+    overflow: visible;
+    padding: 0.25em 0;
+    margin: 0 0 0 0;
+    float: left;
+    width: 100%;
+    position: static;
+}
+
+div.labelValue div.label {
+    margin: 0;
+    padding: 0px 1em 0 0;
+    position: static;
+    text-align: right;
+    width: 39.5%;
+    float: left;
+    padding-right: 1em;
+    line-height: 1.125em;
+    font-weight: 590;
+}
+
+div.labelValue div.value {
+    float: left;
+    clear: right;
+    white-space: normal;
+    padding: 0 0 0 1.33em;
+    margin: 0;
+    /* WATCH THIS!! */
+    /*width: 55%;*/
+    position: static;
+    text-align: left;
+    line-height: 1.215em;
+}
+div.labelValue>div.value {
+    white-space: normal !important;
+    max-width: 410px
+}
+/* variant with help icon */
+div.labelValue div.valueContent {
+    float: left;
+    width: auto;
+    padding-top: 0;
+    padding-right: 0.25em;
+}
+img.helpImg, img.inlineHelpImg { cursor: help }
+div.labelValue img.helpImg,
+div.labelValue img.inlineHelpImg,
+div.optionsContent img.helpImg {
+    float: left;
+    clear: right;
+    padding: 0px;
+    margin: 0px;
+    margin-top: -2px;
+}
+
+div.inputGroup div.optionsContent img.helpImg {
+    margin-left: 4.5em; *
+    margin-left: 5.25em;
+    margin-top: -20px; *
+    margin-top: -22px;
+}
+div.inputGroup div.optionsContent img.inlineHelpImg {
+    position: relative; 
+    margin: 0px;
+    padding: 0px;
+    margin-top: -5px;
+    top: 5px
+}
+label.iconLabel {
+   position: relative;
+   top: -4px;
+   padding-top: 0px;
+}
+div.inputGroup div.mainLabelContent label.iconLabel img.inlineHelpImg {
+    margin-bottom: -4px
+}
+/* lpconnect link */
+#lpconnectlink {
+    padding: 6px;
+    padding-bottom: 0
+}
+
+#lpconnectlink :hover {
+    color: #FFFFA0
+}
+
+/* delivery settings screens */
+html:first-child div#sendTestLeadButtonDiv {
+    float: right;
+    clear: right
+}
+
+/* connections screens */
+table.nestedListTable thead tr.colheaders th div#convRateDiv,table.nestedListTable thead tr.colheaders th div.helpDiv
+    { /*margin-top: 0.7em;
+    float: left;*/
+    
+}
+
+table.nestedListTable thead tr.colheaders th div#helpDiv {
+    margin-top: 0.5em;
+    clear: right;
+}
+
+/* login screen - branded stuff hits buyer.vmd? */
+table.login {
+    padding: 10px;
+}
+
+table.login td.loginHeader {
+    font-size: 108%;
+    font-weight: bold;
+}
+
+table.login td.content {
+    text-align: right;
+    padding-right: 0.25em;
+}
+
+/* offloaded from bidmanager & orders list */
+div.smallGrey,span.smallGrey {
+    font-size: smaller;
+    color: #727272
+}
+
+/* payment history table in single_payment.vm */
+table#paymentHistory, table#dailyLeadLimits {
+    margin-top: -12px;
+}
+div.sectionHeader h2 a#paymentHistoryLink {
+    float: right; 
+    margin-top: -16px; 
+    font-weight: normal; 
+    font-size: 80%
+}
+
+/* LC-10191 */
+span.nowrap div.option {
+    white-space: nowrap;
+}
+
+/* lead store buttons */
+.leadStoreSearch span.first-child button {
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+}
+
+p.connectiondata {
+    color: #727272;
+    float: right;
+    margin-right: 0px;
+    font-size: 90%;
+    text-align: right;
+    padding: 6px;
+}
+
+div#notificationDiscountRateDiv {
+    width: 100%;
+    border: solid 1px #ccc;
+    background-color: #ffffe0;
+    font-size: 87%;
+    line-height: 1.5em;
+    margin-left: 19px;
+    margin-top: -8px;
+    padding: 10px
+}
+
+/* lead manager */
+table#leadManagerTable thead tr th {
+    padding: 0.4em 0.5em 0.4em 0.5em;
+    line-height: normal;
+}
+
+table#leadManagerTable tbody td {
+    vertical-align: top;
+    padding-top: 1.125em;
+    padding-bottom: 0px;
+}
+
+/* Hack for Gecko browsers & YUI link buttons */
+.yui-skin-sam .yui-button.gecko button {
+    border-bottom: 2px solid transparent;
+}
+
+/* buyer homepage metrics */
+.progress {
+	width: 38%; 
+	margin: 0px auto; 	
+	padding: 40px 10px;
+	white-space: nowrap
+}
+.progress-indicator {
+    float: left;
+    text-align: center;
+    width: 16px;
+    height: 16px;
+    background: url('/images/common/progress_fff.gif') no-repeat top left
+        transparent;
+    margin: 0px auto;
+    padding-right: 10px;
+}
+
+div#failureMsg {
+    display: none;
+}
+
+div#progressContainer {
+    text-align: center;
+    margin: 0px auto;
+}
+
+label.radioLabel {
+    position: relative;
+    top: -2px
+}
+
+/* signup */
+div#buyerSignupImg {
+    text-align: center;
+    margin-top: 8px;
+    margin-left: -3px;
+    padding: 0px;
+    position: relative;
+    left: -3px
+}
+
+div#buyerSignupImg img {
+    margin: 0px;
+    padding: 0px
+}
+
+img.helpImg {
+    cursor: help
+}
+
+div#helpContainer .ft {
+    height: 2em;
+    text-align: right
+}
+
+div#helpContainer .ft span.button-group {
+    float: right
+}
+
+div#helpContainer .ft span.button-group .yui-button .first-child button {
+    outline: none !important
+}
+
+div#helpContainer_h .helpImg, div#helpContainer_h .warningImg {
+    float: left;
+}
+
+div#helpContainer_h .helpTitle, div#helpContainer_h .warningTitle {
+    float: left;
+    clear: right;
+    margin: 0.25em 0 0 0.25em
+}
+div#helpContainer_h .warningTitle {
+    margin: 0.5em 0 0.33em 0.5em
+}
+div#helpContainer em {
+    font-style: italic;
+}
+img.helpImg, img.warningImg {
+    margin: 0px;
+    padding: 0px; 
+    float: left;
+    clear: right;
+    margin-top: 0em;
+    cursor: help;
+}
+img.warningImg { 
+    margin-left: 2px;
+    position: relative;
+    top: 2px;
+    cursor: pointer
+}
+div#helpContainer_h .warningImg {
+    top: 4px;
+}
+div.heading {
+    float: left;
+    padding: 0px;
+    margin-top: 0.133em;
+    margin-bottom: 0px
+}
+
+div.centerHeader {
+    width: auto;
+    margin: 0px auto;
+    position: static
+}
+
+div.centerHeader div.heading {
+    width: 60%;
+    float: left;
+    text-align: right;
+    margin-top: 0.175em;
+}
+
+div.centerHeader img.helpImg {
+    float: left;
+    clear: right
+}
+
+/* oli selector widget on order summary screen */
+div#oliContainer {
+    width: 786px;
+    padding: 0px;
+    margin: 0px auto;
+}
+
+div#oliContainer div.bd {
+    overflow: auto;
+    width: 766px;
+    margin: 0px auto;
+    position: relative;
+    left: -1px;
+    background-color: #fff;
+}
+
+div#oliContainer_c div.underlay { 
+    *width: auto;
+}
+
+div#oliContainer div.ft {
+    height: 2.75em;
+}
+
+div#oliContainer div.ft span.button-group {
+    margin: 10px
+}
+
+.yui-skin-sam .yui-dialog #oliContainer .ft .yui-resize-handle {
+    display: none;
+}
+
+div#oliContainer div.formPage {
+    width: 100%;
+    margin: 0px auto;
+}
+
+/** seller screens **/ 
+/** lead channels listing screen **/
+table#leadChannelsListTable th.last {
+    width: 20%
+}
+
+table#leadChannelsListTable td.status div {
+    background-position: top left;
+    background-repeat: no-repeat;
+    /* padding: 0px 0px 1px 20px; */
+    text-transform: uppercase;
+}
+
+table#leadChannelsListTable td.status div.active {
+    color: #829427;
+    /* background-image: url("/images/icons/channels/active.gif"); */
+}
+
+table#leadChannelsListTable td.status div.request_activation {
+    color: #CC3300;
+    /* background-image: url("/images/icons/channels/request_activation.gif"); */
+}
+
+table#leadChannelsListTable td.status div.submit_test_leads {
+    color: #CD9900;
+    /* background-image: url("/images/icons/channels/submit_test_leads.gif"); */
+}
+
+table#leadChannelsListTable td.status div.quality_verification {
+    color: #CC3300;
+    /* background-image: url("/images/icons/channels/quality_verification.gif"); */
+}
+
+table#leadChannelsListTable td.status div.inactive {
+    color: #666;
+    /* background-image: url("/images/icons/channels/inactive.gif"); */
+}
+
+table#leadChannelsListTable td.status div.new {
+    color: #CC3300;
+    /* background-image: url("/images/icons/channels/new.gif"); */
+}
+
+table#leadChannelsListTable td.status div.activation_requested {
+    color: #B4CD35;
+    /* background-image: url("/images/icons/channels/activation_requested.gif"); */
+}
+/* view.vm */
+div.labelValue div.active, div.inputGroup div.active {
+    color: #829427;
+}
+
+div.labelValue div.request_activation, div.inputGroup div.request_activation {
+    color: #CC3300;
+}
+
+div.labelValue div.submit_test_leads, div.inputGroup div.submit_test_leads {
+    color: #CD9900;
+}
+
+div.labelValue div.quality_verification, div.inputGroup div.quality_verification {
+    color: #CC3300;
+}
+
+div.labelValue div.inactive, div.inputGroup div.inactive {
+    color: #666;
+}
+
+div.labelValue div.new, div.inputGroup div.new {
+    color: #CC3300;
+}
+
+div.labelValue div.activation_requested, div.inputGroup div.activation_requested {
+    color: #CC3300;
+}
+
+/* sidebar.vm */
+#sidebar img.sidebar {
+    float: left;
+    padding: 7px 10px;
+    margin: 0;
+    border: none;
+}
+.blueBox #sidebar h2 {
+    line-height: 2em
+}
+.blueBox #sidebar h2.first { margin-top: -6px }
+.blueBox #sidebar p { margin-bottom: 0.33em }
+p.docPreview, p.getCode, .integration-support {
+    background: url('/images/icons/doc_preview.gif') top left no-repeat;
+    padding: 0.125em 0 0.25em 20px;
+    line-height: 24px;
+}
+p.getCode {
+    background: url('/images/icons/get_code.gif') top left no-repeat;
+}
+.integration-support {
+    background: url('/images/icons/support.gif') top left no-repeat;
+    float: right;
+}
+
+/* edit lead channel screen (marketing.vm) */
+h3.marketingMethodsHeader {
+    text-align: center; 
+    padding-bottom: 2px; 
+    background-color: #eee; 
+    margin-right: 10px;
+    margin-bottom: 4px
+}
+.button-group .yui-button button { font-weight: bold }
+div.sectionHeader h2 img.inlineHelpImg,
+div.sectionHeaderFlat h2 img.inlineHelpImg,
+div.titleDiv h3 img.inlineHelpImg {
+    margin-top: -6px;
+    position: relative;
+    top: 4px;
+    cursor: help;
+}
+/* ILI wizard stuff */
+#iliWizardSteps {
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    clear: both;
+    position: relative;
+    top: -10px;
+    margin-bottom: 10px
+}
+#iliWizardSteps ul { list-style: none }
+
+#iliWizardSteps li {
+    display: inline;
+    width: 23%;
+    float: left; 
+    padding: 0.5em 0.25em;
+    margin: 0px 2px;
+    background: #ccc;
+    /* margin-right: 2px; */
+    font-size: 90%;
+    font-weight: bold;
+    border: 1px solid #999;
+}
+#iliWizardSteps li.affiliate {
+    width: 31.33%;
+}
+#iliWizardSteps li.voice {
+    width: 48%
+}
+#iliWizardSteps .currentStep {
+    background: url('/images/common/orange_sprite.png');
+    background-position: 0 79px;
+    color: #fff;
+}
+div.wizard-summary {
+    margin-top: 0px;
+    margin-bottom: 10px
+}
+div.wizard-summary div.labelValue {
+    width: 100%;
+}
+div.wizard-summary div.labelValue div.label {
+}
+div.wizard-summary div.labelValue div.value {
+    padding-left: 0px;
+}
+div#dateTimeContainer div.ft,
+div#testLeadsContainer div.ft { padding-bottom: 38px }
+div#dateTimeContainer div.ft .button-group,
+div#testLeadsContainer div.ft .button-group { float: right }
+div#testLeadsContainer div.bd { background-color: #fff }
+div#testLeadsContainer div.ft { background-color: #fff; }
+/* seller lead channel details: view/edit */
+div.sectionHeader h2.headerLeft {
+    float: left 
+}
+div.sectionHeader h2.headerRight {
+    float: right
+}
+div.sectionHeader h2 div a,
+div.sectionHeader h2.headerLeft a,
+div.sectionHeader h2.headerRight a {
+    text-decoration: none
+}
+div.sectionHeader h2 div a:hover,
+div.sectionHeader h2.headerLeft a:hover,
+div.sectionHeader h2.headerRight a:hover {
+    color: #2F466B;
+    text-decoration: underline
+}
+div.wizard-summary .label {
+    font-weight: bold
+}
+div#checkList label, 
+div#checkList a { position: relative; top: -2px }
+/* seller_specified_floors.vm */
+div.bbLeft, div.bbRight {
+    margin: 8px 8px 12px 8px
+}
+div.bbLeft { margin-right: 4px }
+div.bbRight { margin-left: 4px }
+div.column h4 { 
+    font-weight: bold;
+    position: relative;
+    left: 10px;
+    top: -6px
+}
+table.sellerBidMinimum {
+    width: 100%;
+    margin: 0px auto;
+}
+
+table.sellerBidMinimum td {
+    padding: 2px;
+    border: none;
+}
+
+table.sellerBidMinimum thead tr th.mainHeader,
+table.sellerBidMinimum thead tr th.mainHeader2 {
+    white-space: normal;
+    text-align: center;
+    padding: 2px;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #fff;
+    font-weight: bold;
+    font-variant: small-caps;
+    background-color: #e0e1e2
+}
+
+table.sellerBidMinimum thead tr th.mainHeader2 {
+    border-right: none;
+    border-bottom: none;
+    background-color: #fff;
+}
+
+table.sellerBidMinimum thead tr th.bidGridTop {
+    padding: 0.125em;
+    padding-left: 12px;
+    font-size: 95%;
+    background-color: #e0e1e2
+}
+table.sellerBidMinimum td.price.hasValue input {
+    background-color: #D1E7A2
+}
+table.sellerBidMinimum tr.odd {
+    background-color: #F6F6F6;
+}
+table.sellerBidMinimum tr.even { background-color: #FBFBFB }
+table.sellerBidMinimum td.bidGridLeft {
+    padding-left: 6px;
+}
+/* connections invitation screen */
+.blueBox h1#MainTitle { text-align: center }
+.blueBox h1#MainTitle div.subTitle {
+    font-weight: normal;
+    font-size: 95%;
+    color: #000
+}
+.blueBox h2, .greenBox h2 { 
+    padding-left: .7em;
+    margin-bottom: 0.5em;
+    font-weight: bold
+}
+div.pageContent p {
+    margin-top: .75em;
+}
+div.pageContent h1 {
+    margin-top: 0px;
+    margin-bottom:  10px
+}
+div.pageContent img {
+    float: left;
+    margin: 0px 10px 0px 0px;
+}
+/* order creation for sellers */
+.bottomLine {
+    height: 0.75em;
+    margin: 0px auto;
+    margin-bottom: 0.8em;
+    width: 90%;
+    border-bottom: solid 1px #ccc
+}
+/* seller home page */
+div.sellerHomeContentBoxL,
+div.sellerHomeContentBoxR {
+    width: 95%;
+    margin: 0px 10px;
+    _margin: 0px 4px 0px 8px;
+}
+div.sellerHomeContentBoxR {
+    float: right;
+    clear: both;
+}
+
+div.grid_1_1#leftInnerGrid {
+    margin-top: 10px
+}
+div.grid_1_1#leftInnerGrid div.pageContent {
+    font-size: 110%
+}
+/* report list */
+div#reportListGrid {
+    margin: 0px auto
+}
+div#reportListGrid div.column {
+    margin: 0px;
+}
+div#reportListGrid div.rightPad {
+    margin-right: 10px
+}
+div#reportListGrid div.reportDescription {
+    font-size: 90%;
+    margin-top: 0.75em
+}
+div#sampleNotificationsDiv {
+    margin-left: 200px;
+}
+span.linkSpan {
+    font-weight: bold;
+    cursor: pointer;
+    color: #2F466B;
+}
+span.linkSpan:hover {
+    text-decoration: underline
+}
+p.space { margin: 0.25em 0px 0.75em 0px }
+.operatorOnly {
+    color: #CC3300 !important;
+}
+option.operatorOnly selected { color: #CC3300; }
+div#helpContainer div.bd iframe {
+    margin: 0px auto;
+    width: 100%;
+    padding-bottom: 0px;
+    border: 0px;
+}
+div.operatorOnly a {
+    color: #CC3300 !important;
+}
+div#helpContainer div.bd iframe table {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border: 0px;
+}
+div#helpContainer div.bd iframe table td.content {
+    padding-bottom: 0px;
+}
+/* new calendar widget */
+.calendarContainer .bd form {
+    clear:left;
+}
+.calendarContainer .yui-calendar td.calcell a.selector {
+    color: #47545d
+}
+.calendarContainer .bd table.yui-calendar td.selected a.selector {
+    background-color: #afc862;
+    color: #FBFBFB
+}
+/* Prevent border-collapse:collapse from bleeding through in IE6, IE7 */
+.calendarContainer .yui-overlay-hidden table {
+    *display:none;
+}
+img.calendarIcon { cursor: pointer }
+div.filter { min-width: 600px }
+span.bold button { font-weight: bold }
+
+/* Payment Form */
+
+div#backup{
+	margin-top: 25px;
+}
+div#backup .mainLabel{
+	margin-left:-25px;
+	width: 30%;
+} 
+div#autoccselection{
+	margin-top: 6px;
+}
+div#autoccselection #nobackupcards .content {
+	display: block;
+	text-align: center;
+	margin: 0px auto;
+}
+
+div#autoccselection .leadpoint {
+	margin-left: 20px; 
+}
+
+div#autoccselection .leadpoint .items { 
+	height: 87px; 
+}
+
+div#autoccselection .box .items { 
+	width: 98%;
+}
+
+div#autoccselection .leadpoint .items { 
+    width: 94%;
+}
+div#autoccselection #selectedAutopayCards {
+    float: left;
+    clear: right;
+	width:550px; 
+}
+
+div#autoccselection .leadpoint .items .content .text { 
+	width: 50%;
+}
+
+div#autoccselection .cNewName{
+  	float:left;
+	font-weight:bold;
+}
+
+div#autoccselection .obfNum{
+	float:right;
+}
+
+li#nobackupcards{
+	display:none;
+	margin:5px; 
+	height:75px;
+}
+
+li#nobackupcards .content {
+	margin: 0px auto;
+	text-align: center;
+}
+
+p.autopay {
+	margin-left:20px !important; 
+}
+/* formatting for the YUI popups */
+div.bd ol, div.bd ul { 
+    margin: 0.125em 1.125em 0.25em 1.125em; 
+    list-style: outside }
+div.bd ol { 
+    list-style: decimal outside }
+div.bd ul { 
+    list-style: disc }
+div.bd ol li, div.bd ul li { padding: 0.125em 0px; }
+div.bd ol li { 
+    margin-left: 0.25em;
+    *margin-left: 0.675em }
+div.bd p { padding: 0.33em 0px 0.125em 0px }
+div.bd p > strong { padding-top: 0.25em; }
+div.bd p:first-child { padding-top: 0px }
+
+/* LC-12693 */
+div.f5f5f5 { 
+    background-color: #F5F5F5;
+    margin-right: 0px }
+div.f5f5f5 b.bt,div.f5f5f5 b.bt b,
+div.f5f5f5 b.bb,div.f5f5f5 b.bb b {
+    height: 4px;
+    background: url('/images/common/corners-F5F5F5.gif') no-repeat;
+}
+/* top left corner */
+div.f5f5f5 b.bt {
+    top: -2px;
+    left: -2px
+}
+/* top right corner */
+div.f5f5f5 b.bt b {
+    background-position: 100% -4px;
+    left: 4px;
+}
+/* bottom left corner */
+div.f5f5f5 b.bb {
+    background-position: 0 -8px;
+    top: 2px;
+    left: -2px
+}
+/* bottom right corner */
+div.f5f5f5 b.bb b {
+    background-position: 100% -12px;
+    left: 4px;
+}
+/* "My Settings" */
+div.section { border-bottom: solid 1px #DBDBDB }
+div.section.first { 
+    margin-top: 0px; }
+div.section.last { 
+    margin-bottom: 0px;
+    border-bottom: none }
+div.section div.header,
+div.section div.header.current {
+    width: 178px;
+    padding: 0.66em;
+    font-size: 105%;
+    font-weight: bold;
+    color: #2F466B;
+}
+div.section div.header.current {
+    color: #fff;
+    background-color: #2F466B;
+    margin-left: -1px;
+    border-left: solid 1px #ccc;
+    border-right: solid 1px #ccc;
+}
+div.section div.header.first,
+div.section div.header.current.first {
+    margin-top: -6px; }
+div.section div.header.current a { color: #fff; text-decoration: none }
+div.section div.invisible { display: none }
+div.section div.subsection {
+    
+}
+div.section div.subsection div {
+    font-size: 90%;
+    padding: 0.5em 0px 0.5em 1.5em;
+}
+div.section div.subsection div.current a {
+    color: #839528;
+    text-decoration: none;
+    font-weight: bold;
+}
+div.section div.subsection div.current.last {
+    margin-bottom: 0px;
+}
+div#sideNavHeading { padding-left: 10px }
+.grid_580px_240px .column2 .blueBox { 
+    width: 240px; 
+    min-width: 240px }
+/* new report listing screen */
+.reportListWrapper { width: 960px }
+.reportLink, .reportLink2 { float: left; overflow: hidden }
+.reportContainer { padding-top: 10px !important }
+.reportContainer.first { padding-top: 0px !important }
+.topline { 
+    margin-top: 10px; 
+    padding-top: 10px; 
+    border-top: solid 1px #ccc }
+.nDash { 
+    float: left; 
+    clear: right; 
+    padding: 0px 4px 0px 4px;
+    color: #727272 }
+.reportDescription { 
+    float: left; 
+    clear: right;
+    max-width: 680px;
+    white-space: normal; 
+    font-size: 89.5%; 
+    padding-top: 0.2em; 
+    color: #727272 }
+.reportLink2 { 
+    float: right; 
+    margin-right: 10px }
+/* LC-11758 item 2 */
+#friendSearchContainer {
+    width:15em;
+    padding-bottom:2em; }
+#friendId {
+    width:250px; }
+#friendsAutoCompleteList {
+    width:228px !important;
+    padding-left:0px !important; }
+#productId {
+    float:right;
+    margin-left:260px;
+    width:200px; }
+#selectorDiv {
+    display:inline;
+    width:500px !important; }
+#friendSearchContainer .yui-ac-shadow {
+    width:244px !important; }
+#friendSearchContainer .yui-ac-content ul {
+    position: relative;
+    left: -8px;
+    top: 0px;
+    width: 250px !important;}
+#friendSearchContainer .yui-ac-content li.yui-ac-highlight {
+    background: #B2B942; }
+/* unsupported browser */
+#warningHeaderContainer {
+    width: 100%;
+    padding: 3px 4px 4px 4px;
+}
+#unsupportedBrowserIcon {
+    float: left;
+    padding-top: 0px
+}
+#unsupportedBrowserTitle {
+    float: left;
+    clear: right;
+    padding: 3px 0px 0px 6px;
+}
+table.reportResults td.rptDataRight b {
+    text-align: right;
+    padding-right: 0px;
+}
+
+/* =========================================================
+   lp-IE7.css
+   ========================================================= */
+/* $Id$ */
+.userInfo {
+    position: relative;
+    top: -18px
+}
+
+#Header {
+    padding-bottom: 8px;
+}
+
+.space {
+    margin: -6px;
+}
+p.information {
+    /*background: transparent;*/
+}
+#Navigation {
+    zoom: 1.0;
+}
+
+#Navigation b.tc {
+    width: 99%;
+}
+
+#Navigation b.bl {
+    background-position: 1px left;
+}
+
+#MainNavigation.tabs ul li a {
+    font-size: 117%;
+}
+
+div#SubNavigation {
+    zoom: 1.0;
+    margin-right: -20px;
+}
+table.nestedListTable, table#connectionsTable {
+	border-collapse: collapse;
+}
+table.nestedListTable tr.colheaders th.superheader,
+table.nestedListTable tr.colheaders th.subheader {
+    
+}
+
+table.nestedListTable td.actionRequired {
+    padding-left: 2.25em;
+}
+
+table#connectionsTable thead tr.actions td.paginationTop {
+    padding-bottom: 14px;
+}
+div#search { margin-bottom: -10px }
+table.ordersTable div#search {
+    margin-top: -6px;
+}
+div#search div#checkBoxDiv { top: -1px; }
+div#search div#selectorDiv {
+    padding-top: 4px;
+}
+
+div#search div#searchButtonDiv,div#search div#searchButtonDiv2 {
+    padding: 4px 0px;
+}
+div#search div#searchButtonDiv { margin-top: -1px }
+
+li.expando span,li.contracto span {
+    padding: 0px 80px 4px 20px;
+    top: -2px;
+    left: -15px;
+}
+
+#container ul.text li div.target div input {
+    margin-top: 1px;
+}
+
+#container ul.text li div.target div label {
+    margin-top: 4px;
+    position: static;
+}
+#bidTabs {
+    position: relative;
+    top: -2px;
+}
+#bidTabs ul#bidgridTabs li {
+    top: 1px
+}
+
+#bidTabs ul#bidgridTabs li a {
+    padding-bottom: 4px;
+}
+#bidTabs ul#bidgridTabs li a.current {
+    border-bottom: solid 1px #fff;
+}
+div#bidoptions {
+    margin-top: -1px;
+    position: static;
+}
+
+div#bidoptions div#infoDiv {
+    margin-top: -11px;
+}
+
+div#bidoptions div#filters,div#bidoptions div#bids,div#bidoptions div#settings {
+    margin-left: 0;
+}
+
+div#bidoptions div#pricingContainer,
+div#bidoptions div#filtersContainer,
+div#bidoptions div#settingsContainer {
+    width: auto;
+}
+
+div#filtersContainer {
+    left: -10px;
+    left: 0px;
+}
+
+div#bidoptions div#bids div#bidinfo {
+    margin-bottom: 0
+}
+
+div#filters input[type="radio"] {
+    top: 0px
+}
+
+div.titleDiv h3,div#filters div.filter h3,
+div#filters div.titleDiv h3,div#filters div.filter div.titleDiv h3,
+div#settings div.titleDiv h3,div#pricing div.titleDiv h3 {
+    width: auto;
+    min-width: 99.3%;
+}
+
+table.pricegrid th.mainHeader,table.pricegrid td.mainHeader {
+    padding: 1.25em 1em
+}
+
+div.content div.olidetails {
+    padding-bottom: 10px;
+}
+
+div.subtabHeading {
+    position: relative;
+    left: 10px;
+}
+
+#dashTabs ul#tabsList {
+    width: 102.05%;
+}
+#dashTabs ul#tabsList li {
+    top: -1px;
+}
+
+#dashTabs ul#tabsList li a {
+    padding-bottom: 4px;
+}
+
+#dataDiv,#voiceDiv {
+    margin-top: -2px;
+}
+
+.tabContainer .secondary {
+    width: auto
+}
+.chartDiv {
+    left: -1px;
+    width: 653px !important;
+}
+.parentRowClosed {
+    cursor: hand
+}
+
+tr.childRowOpen td {
+    font-size: 70%;
+}
+
+div.roundedBox,div.roundedBox2,div.roundedBox3,div.roundedBox4,div.roundedBox5 {
+    zoom: 1.0;
+}
+
+div.roundedBox5 {
+    min-width: 1180px;
+}
+
+/* connections screens */
+table.nestedListTable thead tr.colheaders th div#convRateDiv {
+    margin-top: 0.5em;
+}
+
+table.nestedListTable thead tr.colheaders th div#helpDiv {
+    margin-top: 0.25em;
+}
+
+div#notificationDiscountRateDiv {
+    margin-left: 25px;
+}
+ul.changeHolder li.expando span,
+ul.changeHolder li.contracto span {
+    padding-right: 28em;
+}
+ul.changeHolder li.details {
+    position: relative;
+    top: -4px }
+#bidgroupContent span#howtoLink { left: 49.0% }
+p.actionRequired { margin-top: 0em }
+/* leadstore */
+#leadStoreWrapper { width: 100%; }
+#infoDiv { margin-top: 0px; margin-bottom: 8px }
+#infoDiv .message { padding-top: 2px }
+#infoDiv .checkoutButton { 
+	margin-top: -2px;
+    padding-top: 0px;
+    position: relative;
+    top: -2px;
+}
+#managerContainer p.information span {
+    padding-left: 1.5em
+}
+#infoDiv .information { 
+	padding-top: 0px; padding-bottom: 6px;
+	background-position: top left; margin-top: -2px }
+#leadStoreSearch {
+	width: auto;
+    left: 0px;
+    margin: 0px auto;
+    padding-left:0px
+}
+#leadStoreSearchFields {
+    width:310px;
+    float: left;
+    margin: 0px;
+    margin-right:-300px;
+}
+#scheduleControls div#scheduleCaptionDiv { margin-top: 0px }
+#scheduleControls table.trafficDrivers td label { padding-left: 0px }
+#searchResultsContainer {
+    width: auto;
+}
+#Footer { clear: both; }
+/* order creation screen */
+div.clickable { width: 100%; padding-top: 2px; padding-bottom: 2px }
+div.clickable label { position: static; }
+.yui-skin-sam .yui-button button {
+    border-bottom: 0px;
+}
+/* order_series.vm */
+div#buttons, div.loopButtons {
+    zoom: 1.0;
+}
+#changesDiv ul.changeHolder li.details div.loopButtons {
+    margin-bottom: 14px;
+    margin-right: -4px
+}
+div#orderSeriesContainer div#primaryContainer div#buttons {
+    margin-right: 3px
+}
+/* seller UI */
+p.docPreview, p.getCode, .integration-support {
+    background-position: 0px 50%
+}
+#steps li.affiliate {
+    width: 31.29%
+}
+div#reportListGrid div.column {
+    width: 32%;
+}
+/* Add money screen */
+#paymentHistoryLink {
+    position: relative;
+    top: -8px;
+    padding-right: 0.5em;
+}
+/* New implementation; intended to replace the old roundedBox stuff */
+.roundedBox .hdr {
+    margin-top: 2px;
+    margin-bottom: 0.4em;
+    padding-bottom: 0px }
+.roundedBox .hdr h2 {
+    padding-bottom: 6px;
+    margin-bottom: 8px; }
+.roundedBox .hdr h2 span {
+    padding-bottom: 0px; }
+.roundedBox .hdr h2 a.headerLink,
+.roundedBox .hdr h2 a.headerLink2 {
+    font-weight: normal;
+    font-size: 90%;
+    float: right;
+    clear: right;
+    position: absolute;
+    right: 0px;
+    top: 6px;
+}
+/* End new implementation */
+#sellerSettingsContainer .titleDiv {
+    width: 98.5%
+}
+#iliWizardSteps li.affiliate {
+    width: 31.29%;
+}
+/* LC-11758 item 2 */
+#productDiv {
+    float: left;
+    clear: right;
+    margin-left: 80px;
+    width:200px; }
+#productId { 
+    float: none;
+    margin-left: 0px;
+    width: auto; }
+#friendSearchContainer {
+    float: left; }
+/* "My Settings" */
+div#sideNavHeading { position: relative; top: -5px }
+
+/* =========================================================
+   lp-IE6.css
+   ========================================================= */
+/* $Id$ */
+input { zoom: 1.0 }
+#logoDiv {
+    margin-left: 6px;
+}
+.userInfo {
+    margin-right: 8px; 
+}
+#Header {
+    padding-bottom: 0px;
+}
+#Navigation {
+    width: 1200px;
+}
+#Navigation b.tc {
+    width: 97.2%;
+    z-index: 1;
+}
+#Navigation b.tr {
+    float: left;
+    width: 28px;
+    margin-left: 0px;
+    z-index: -1;
+}
+#MainNavigation.tabs {
+    height: auto;
+}
+#MainNavigation.tabs ul {
+    z-index: 10;
+}
+div#SubNavigation {
+    width: 99.0%;
+    margin-top: -1px;
+}
+#Navigation b.br {
+    top: -1px;
+    left: -6px;
+    z-index: 12;
+}
+table.nestedListTable, table#connectionsTable {
+    border-collapse: collapse;
+}
+table.nestedListTable thead tr.actions td.paginationTop div#search,div#search {
+    width: 650px;
+}
+table#connectionsTable div#search {
+    padding: 10px 0px 0px 0px;
+    margin-bottom: 10px;
+}
+table#connectionsTable td.paginationTop div.buttonGroup {
+    position: relative;
+    top: -6px;
+}
+#container ul.text li div {
+    zoom: 1.0;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+#container ul.text li div.target div label {
+    margin-top: 3px;
+}
+#bidgroupContent {
+    width: 900px;
+}
+#bidTabs {
+}
+#bidTabs ul#bidgridTabs {
+    margin-left: 10px;
+}
+#bidTabs ul#bidgridTabs li {
+    margin-left: 6px;
+}
+ul#bidgridTabs li.current {
+    border-bottom: solid 1px #fff;
+}
+/* left-hand container for filters, etc. */
+div#bidoptions {
+    width: 100%;
+    position: static;
+    margin: 0px auto; 
+}
+div#bidoptions b#bottomRight { 
+    width: 900px; 
+    margin-right: -2px }
+div#bidoptions div.varWidth1 {
+    width: 95%;
+    margin: 0px auto;
+}
+div#bidoptions div.varWidth2 {
+    width: 72%;
+}
+div#bidoptions div#infoDiv {
+    width: 23%;
+    margin-left: 0;
+}
+div#bidoptions div#filters,
+div#bidoptions div#bids,
+div#bidoptions div#settings {
+    margin-left: 10px;
+}
+div#bidoptions div#settings div.titleDiv {
+    background-color: #F0F0F1;
+    border-top: solid 1px #CCC;
+}
+div#bidoptions div#filters div.filter#timeRange div.titleDiv {
+    padding-top: 10px;
+    border-top: none
+}
+div#bidoptions div#transparency {
+    margin-left: 2px;
+}
+div#bidoptions div#buttons { width: 100% }
+div#bidoptions div#buttons div.buttonGroup {
+    padding-right: 0px;
+}
+#buyerHomeWrapper {
+    width: 990px;
+}
+#buyerHomeWrapper div#left {
+    width: 674px;
+}
+
+#buyerHomeWrapper div#right {
+    width: 315px;
+    clear: right;
+}
+#dashTabs {
+    width: 610px;
+    margin-right: 0px;
+    padding-top: 6px;
+}
+#dashTabs ul#tabsList {
+    position: relative;
+    margin: 0px;
+    top: 0px;
+    left: -3px;
+}
+div.chartDiv { 
+    margin-top: 0px;
+    left: -2px;
+    width: 661px !important;
+}
+#dashTabs ul#tabsList li {
+    width: 332.5px;
+    float: left;
+    margin-left: 1px
+}
+#dashTabs ul#tabsList li#voice {
+    margin-left: 0px;
+    clear: right
+}
+#dataDiv,#voiceDiv {
+    margin-top: -2px;
+}
+#quickLinks { zoom: 1.0 }
+div #searchFieldsDiv {
+    width: 50%;
+}
+div #leadManagerQuickLinksDiv {
+    width: 20%;
+}
+div.roundedBox5 {
+    width: auto;
+}
+/* top right corner */
+b.bt b {
+    left: 4px
+}
+/* bottom right corner */
+b.bb b {
+    left: 4px
+}
+div.roundedBox2 b.bt b,div.roundedBox2 b.bb b {
+    left: 4px
+}
+div.roundedBox3 b.bt b,div.roundedBox3 b.bb b {
+    left: 4px
+}
+div.roundedBox4 b.bt b,div.roundedBox4 b.bb b {
+    left: 4px
+}
+b.htop {
+    height: 12px
+}
+b.htop b.right {
+    top: -11px
+}
+.roundedBox div.sectionHeader h2,
+.roundedBox2 div.sectionHeader h2,
+.roundedBox3 div.sectionHeader h2,
+.roundedBox4 div.sectionHeader h2,
+div.confirmationSectionHeader h2,
+div.confirmationSectionHeader2 h2 {
+    top: -12px;
+}
+.roundedBox div.sectionHeader h3,
+.roundedBox2 div.sectionHeader h3,
+.roundedBox3 div.sectionHeader h3,
+.roundedBox4 div.sectionHeader h3 {
+    top: -16px;
+}
+.roundedBox2 div.sectionHeader b.htop b.center {
+    width: 98%;
+}
+.roundedBox3 div.sectionHeader b.htop b.center,
+.roundedBox4 div.sectionHeader b.htop b.center {
+    width: 92.5%
+}
+/* blue variant */
+div.labelValue div.value div.blueBox {
+    zoom: 1.0;
+    padding: 10px;
+}
+div.labelValue div.value div.blueBox b.bt,
+div.labelValue div.value div.blueBox b.bt b,
+div.labelValue div.value div.blueBox b.bb,
+div.labelValue div.value div.blueBox b.bb b {
+    display: none;
+}
+#successMessage,#validationErrors {
+    width: 990px;
+}
+#buyerHomeAlerts,#accountAlert {
+    width: auto
+}
+#successMessage b.htop {
+    height: 13px
+}
+#successMessage b.htop b.right {
+    top: -11px
+}
+#validationErrors b.bt b,
+#buyerHomeAlerts b.bt b,
+#accountAlert b.bt b {
+    left: 4px
+}
+#validationErrors b.bb b,
+#buyerHomeAlerts b.bb b,
+#accountAlert b.bb b {
+    left: 4px
+}
+#validationErrors b.htop,
+#buyerHomeAlerts b.htop,
+#accountAlert b.htop {
+    height: 13px
+}
+#validationErrors b.htop b.right,
+#buyerHomeAlerts b.htop b.right,
+#accountAlert b.htop b.right {
+    top: -11px
+}
+div#container ul.text li.expando span,
+div#container ul.text li.contracto span,
+ul.changeHolder li.expando span,
+ul.changeHolder li.contracto span {
+   display: inline-block;
+   margin-left: 1.0em;
+   margin-bottom: 4px;
+   width: 90%;
+}
+ul.changeHolder li.expando span,
+ul.changeHolder li.contracto span {
+    margin-bottom: 0px
+}
+ul.changeHolder li.details {
+    position: relative;
+    top: -6px }
+ul.changeHolder li.details div.target div.titleDiv h3 {
+    margin: 0px auto;
+}
+/* leadstore */
+#infoDiv { padding-top: 4px }
+#submitButtonDiv { zoom: 1.0 }
+#infoDiv .checkoutButton { padding-top: 10px }
+#leadStoreSearch {
+    padding-left: 310px;
+    position: relative;
+    width: 100%;
+}
+#leadStoreSearchFields {
+    float:left;
+    position:relative;
+    left:0px;
+}
+/* right side */
+#searchResultsContainer {
+    width: auto;
+}
+/* "Search Options" */
+#leadStoreSearchForm .boxContent div { zoom: 1.0 }
+#Footer { clear: both }
+/* order_series.vm */
+div#orderSeriesContainer div.confirmationSectionHeader {
+}
+div#orderSeriesContainer div.confirmationSectionHeader b.htop b.center {
+   width: 98.2%;
+}
+div#orderSeriesContainer div.confirmationSectionHeader b.htop b.right {
+
+}
+div#orderSeriesContainer div.confirmationSectionHeader h2 {
+    margin-top: 5px;
+}
+div#orderSeriesContainer div.orderSummaryContainer .content,
+div#orderSeriesContainer div.tcContainer .content {
+    margin-right: 0px;
+}
+div#orderSeriesContainer div.tcContainer {
+}
+div#orderSeriesContainer div#buttons {
+}
+div#orderSeriesContainer div.roundedBox {
+    width: auto
+}
+div#orderSeriesContainer div.roundedBox b.bt b,
+div#orderSeriesContainer div.roundedBox b.bb b {
+}
+#changesDiv ul.changeHolder li.expando {
+    width: auto;
+}
+#changesDiv ul.changeHolder li.details {
+    width: 698px
+}
+#changesDiv ul.changeHolder li.details div.loopButtons {
+    margin-bottom: 14px
+}
+div#orderSeriesContainer div#primaryContainer div#buttons {
+    margin-right: -2px;
+    width: 99.9%;
+}
+div#orderSeriesContainer div#primaryContainer .filters,
+div#orderSeriesContainer div#primaryContainer .content {
+    width: auto;
+}
+div#orderSeriesContainer div#primaryContainer .tcContainer {
+    width: 98%
+}
+div#orderSeriesContainer div#primaryContainer div.confirmationSectionHeader .ordersActions {
+    margin-top: 0px;
+    margin-right: -0.267999em;
+}
+div#orderSeriesContainer div#primaryContainer div.confirmationSectionHeader h2 {
+}
+/* lead channel wizard */
+#steps li.affiliate {
+    width: 31.29%
+}
+div.roundedBox,
+div.roundedBox2,
+div.roundedBox3,
+div.roundedBox4,
+div.roundedBox5 {
+    background-color: #fff;
+    zoom: 1.0
+}
+div.roundedBox { background: transparent; margin-right: -1px }
+
+#helpContainer .roundedBox { background-color: #fff }
+div#orderSeriesContainer div#primaryContainer .roundedBox {
+    padding-right: 0;
+    width: 98.5%;
+}
+div#orderSeriesContainer div#primaryContainer div.roundedBox b.bt b,
+div#orderSeriesContainer div#primaryContainer div.roundedBox b.bb b {
+    left: 11px;
+}
+div#orderSeriesContainer div#primaryContainer div.confirmationSectionHeader b.htop b.center {
+    left: 6px;
+    width: 99.9%;
+}
+div#orderSeriesContainer div#primaryContainer div.roundedBox b.bt b {
+    background: url('/images/common/grey-header-corners.gif') no-repeat;
+    background-position: 100% -12px;
+}
+div#orderSeriesContainer div#primaryContainer div.roundedBox b.bt {
+    background: url('/images/common/grey-header-corners.gif') no-repeat;
+    top: -2px;
+    left: -2px
+}
+div#orderSeriesContainer div#primaryContainer div.confirmationSectionHeader b.htop, 
+div#orderSeriesContainer div#primaryContainer div.confirmationSectionHeader b.htop b.right {
+    background-image: none
+}
+#changesDiv { }
+#changesDiv ul.changeHolder { width: 726px }
+#changesDiv ul.changeHolder li.details { width: 690px }
+#changesDiv ul.changeHolder li.details div.loopButtons {
+    
+}
+p.docPreview, p.getCode, .integration-support {
+    background-position: 0px 50%;
+    margin-bottom: 0px
+}
+/* seller home page */
+div.sellerHomeContentBoxL,
+div.sellerHomeContentBoxR {
+    margin: 0px 4px 0px 8px;
+}
+div.sellerHomeContentBoxL div.boxContent img,
+div.sellerHomeContentBoxR div.boxContent img {
+    margin-top: 1px;
+}
+/* single_payment.vm */
+div.sectionHeader h2 a#paymentHistoryLink {
+    margin-top: 0px;
+}
+p.information {
+    background: transparent;
+}
+.roundedBox .hdr { margin-top: 2px }
+.roundedBox .hdr h2 {
+    padding-top: 6px; 
+}
+/* oli selector widget on order summary screen */
+div#oliContainer {
+    width: 786px !important;
+}
+
+/* =========================================================
+   lp-IE8.css
+   ========================================================= */
+/* lp-IE8.css,v 1.5 2009/12/09 22:58:05 curtis.taylor */
+img#securityCode_img {
+    position: relative;
+    top: 19px;
+}
+.roundedBox .hdr h2 a.headerLink,
+.roundedBox .hdr h2 a.headerLink2 {
+    top: 6px;
+}
+
+div#oliContainer div.hd,
+div#oliContainer div.bd,
+div#oliContainer div.ft {
+    border-left: solid 2px #AAA;
+    border-right: solid 2px #000;
+}
+div#oliContainer div.bd { padding-right: 8px }
+/* "My Settings" */
+div#sideNavHeading { position: relative; margin-top: 10px }
+
+/* =========================================================
+   grids.css
+   ========================================================= */
+.column, .column1, .column2, .column3 {
+	float:left;
+}
+
+.grid_1_1_1 .column{
+	width:33.33%;
+}
+
+.grid_1_1_1_1 .column{
+	width:24.999999%;
+}
+
+.grid_1_1 .column{
+	width:49.9999%;
+}
+.grid_1_1 .column1, .grid_1_1 .column2 { width: 49.4% }
+.grid_1_1 .column1 { margin-right: 6px }
+.grid_1_1 .column2 { margin-left: 6px }
+.grid_2_1 .primary{
+	width:66.6%;
+	float:left;
+}
+
+.grid_2_1 .secondary{
+	width:33.3%;
+	float:left;
+}
+
+.grid_3_1 .primary{
+	width:74.99999%;
+	float:left;
+}
+
+.grid_3_1 .secondary{
+	width:25%;
+	float:left;
+}
+
+.gridWrapper{
+	width:100%;
+}
+
+
+.grid_50px_n{
+	padding-left:50px;
+}
+
+.grid_50px_n .secondary{
+	width:50px;
+	margin-left:-100%;
+	float:left;
+	position:relative;
+	left:-50px;
+}
+
+.grid_50px_n .primary{
+	width:100%;
+	float:left;
+}
+
+
+.grid_185px_n{
+	padding-left:198px;
+}
+
+.grid_185px_n .secondary{
+	width:185px;
+	margin-left:-100%;
+	float:left;
+	position:relative;
+	left:-175px;
+}
+
+.grid_185px_n .primary{
+	width:100%;
+	float:left;
+}
+
+.grid_200px_n {
+	/* padding-left:200px; */
+	padding-left: 212px
+}
+
+.grid_200px_n .secondary {
+	width:200px;
+	margin-left:-100%;
+	float:left;
+	position:relative;
+	left:-190px;
+}
+
+.grid_200px_n .primary {
+	width:100%;
+	float:left;
+}
+
+
+.grid_220px_n {
+    padding-left:220px;
+}
+
+.grid_220px_n .secondary{
+    width:220px;
+    margin-left:-100%;
+    float:left;
+    position:relative;
+    left:-220px;
+}
+
+.grid_220px_n .primary{
+    width:100%;
+    float:left;
+}
+
+
+.grid_n_185px{
+	padding-right:185px;
+}
+
+.grid_n_185px .secondary{
+	width:185px;
+	margin-right:-185px;
+	margin-left:0;
+	float:left;
+	position:relative;
+	left:auto;
+}
+
+.grid_n_185px .primary{
+	width:100%;
+	float:left;
+}
+
+
+
+.grid_n_200px{
+	padding-right:200px;
+}
+
+.grid_n_200px .secondary {
+	width:200px;
+	margin-right:-200px;
+	float:left;
+	position:relative;
+}
+
+.grid_n_200px .primary {
+	width:100%;
+	float:left;
+}
+
+
+.grid_n_220px {
+    padding-right: 220px
+}
+.grid_n_220px .secondary {
+    width:220px;
+    margin-right:-220px;
+    float:left;
+    position:relative;
+}
+
+.grid_n_220px .primary {
+    width:100%;
+    float:left;
+}
+
+
+.grid_n_240px{
+	padding-right:240px;
+}
+
+.grid_n_240px .secondary{
+	width:240px;
+	margin-right:-240px;
+	float:left;
+	position:relative;
+}
+
+.grid_n_240px .primary{
+	width:100%;
+	float:left;
+}
+
+
+.grid_240px_n{
+	padding-left:240px;
+}
+
+.grid_240px_n .secondary{
+	width:240px;
+	margin-left:-100%;
+	float:left;
+	position:relative;
+	left:-240px;
+}
+
+.grid_240px_n .primary{
+	width:100%;
+	float:left;
+}
+
+/* signup screens */
+.grid_450px_350px {
+    width: 800px;
+}
+.grid_450px_350px .secondary {
+    width:350px;
+    margin-right:-350px;
+    float:left;
+    position:relative;
+}
+.grid_450px_350px .primary {
+    width: 450px;
+    float: left;
+}
+
+.grid_450px_450px {
+    width: 900px;
+}
+.grid_450px_450px .secondary {
+    width:450px;
+    margin-right:-450px;
+    float:left;
+    position:relative;
+}
+.grid_450px_450px .primary {
+    width: 450px;
+    float: left;
+}
+/* seller ili screens */
+.grid_600px_340px {
+}
+.grid_600px_340px .primary {
+    width: 600px;
+    float: left;
+}
+.grid_600px_340px .secondary {
+    float: left;
+    width: 300px;
+    margin-left: 10px;
+    margin-right: -300px;
+    position: relative;
+}
+/* seller settings screens */
+.grid_580px_350px {
+}
+.grid_580px_350px .column1 {
+    width: 580px;
+    float: left;
+}
+.grid_580px_350px .column2 {
+    float: left;
+    width: 350px;
+    margin-left: 10px;
+    margin-right: -350px;
+    position: relative;
+}
+
+/* buyer home redesign 11.2009 */
+.grid_340px_600px {
+    padding-left: 320px;
+}
+.grid_340px_600px .primary {
+    float: left;
+    width: 100%;
+    min-width: 600px;
+}
+.grid_340px_600px .secondary {
+    float: left;
+    width: 300px;
+    margin-left: -320px;
+}
+
+.grid_580px_240px .column1 {
+    width: 580px;
+    float: left;
+}
+.grid_580px_240px .column2 {
+    float: left;
+    width: 240px;
+    margin-left: 10px;
+    margin-right: -240px;
+    position: relative;
+}
+
+/* =========================================================
+   grids-ie.css
+   ========================================================= */
+.grid_50px_n .secondary,
+.grid_185px_n .secondary,
+.grid_200px_n .secondary,
+.grid_240px_n .secondary {
+	left:0px;
+}
+.grid_200px_n {
+    padding-left:220px;
+}
+.grid_200px_n .secondary {
+    left: 22px
+}
+
+/* =========================================================
+   yui-button.css
+   (js/yui/v2/assets/skins/sam/button.css)
+   ========================================================= */
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
+.yui-button{display:-moz-inline-box;display:inline-block;vertical-align:text-bottom;}.yui-button .first-child{display:block;*display:inline-block;}.yui-button button,.yui-button a{display:block;*display:inline-block;border:none;margin:0;}.yui-button button{background-color:transparent;*overflow:visible;cursor:pointer;}.yui-button a{text-decoration:none;}.yui-skin-sam .yui-button{border-width:1px 0;border-style:solid;border-color:#808080;background:url(sprite.png) repeat-x 0 0;margin:auto .25em;}.yui-skin-sam .yui-button .first-child{border-width:0 1px;border-style:solid;border-color:#808080;margin:0 -1px;_margin:0;}.yui-skin-sam .yui-button button,.yui-skin-sam .yui-button a,.yui-skin-sam .yui-button a:visited{padding:0 10px;font-size:93%;line-height:2;*line-height:1.7;min-height:2em;*min-height:auto;color:#000;}.yui-skin-sam .yui-button a{*line-height:1.875;*padding-bottom:1px;}.yui-skin-sam .yui-split-button button,.yui-skin-sam .yui-menu-button button{padding-right:20px;background-position:right center;background-repeat:no-repeat;}.yui-skin-sam .yui-menu-button button{background-image:url(menu-button-arrow.png);}.yui-skin-sam .yui-split-button button{background-image:url(split-button-arrow.png);}.yui-skin-sam .yui-button-focus{border-color:#7D98B8;background-position:0 -1300px;}.yui-skin-sam .yui-button-focus .first-child{border-color:#7D98B8;}.yui-skin-sam .yui-split-button-focus button{background-image:url(split-button-arrow-focus.png);}.yui-skin-sam .yui-button-hover{border-color:#7D98B8;background-position:0 -1300px;}.yui-skin-sam .yui-button-hover .first-child{border-color:#7D98B8;}.yui-skin-sam .yui-split-button-hover button{background-image:url(split-button-arrow-hover.png);}.yui-skin-sam .yui-button-active{border-color:#7D98B8;background-position:0 -1700px;}.yui-skin-sam .yui-button-active .first-child{border-color:#7D98B8;}.yui-skin-sam .yui-split-button-activeoption{border-color:#808080;background-position:0 0;}.yui-skin-sam .yui-split-button-activeoption .first-child{border-color:#808080;}.yui-skin-sam .yui-split-button-activeoption button{background-image:url(split-button-arrow-active.png);}.yui-skin-sam .yui-radio-button-checked,.yui-skin-sam .yui-checkbox-button-checked{border-color:#304369;background-position:0 -1400px;}.yui-skin-sam .yui-radio-button-checked .first-child,.yui-skin-sam .yui-checkbox-button-checked .first-child{border-color:#304369;}.yui-skin-sam .yui-radio-button-checked button,.yui-skin-sam .yui-checkbox-button-checked button{color:#fff;}.yui-skin-sam .yui-button-disabled{border-color:#ccc;background-position:0 -1500px;}.yui-skin-sam .yui-button-disabled .first-child{border-color:#ccc;}.yui-skin-sam .yui-button-disabled button,.yui-skin-sam .yui-button-disabled a,.yui-skin-sam .yui-button-disabled a:visited{color:#A6A6A6;cursor:default;}.yui-skin-sam .yui-menu-button-disabled button{background-image:url(menu-button-arrow-disabled.png);}.yui-skin-sam .yui-split-button-disabled button{background-image:url(split-button-arrow-disabled.png);}
+
+/* =========================================================
+   yui-container.css
+   (js/yui/v2/container/assets/skins/sam/container.css)
+   ========================================================= */
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
+.yui-overlay,.yui-panel-container{visibility:hidden;position:absolute;z-index:2}.yui-panel{position:relative}.yui-panel-container form{margin:0}.mask{z-index:1;display:none;position:absolute;top:0;left:0;right:0;bottom:0}.mask.block-scrollbars{overflow:auto}.masked select,.drag select,.hide-select select{_visibility:hidden}.yui-panel-container select{_visibility:inherit}.hide-scrollbars,.hide-scrollbars *{overflow:hidden}.hide-scrollbars select{display:none}.show-scrollbars{overflow:auto}.yui-panel-container.show-scrollbars,.yui-tt.show-scrollbars{overflow:visible}.yui-panel-container.show-scrollbars .underlay,.yui-tt.show-scrollbars .yui-tt-shadow{overflow:auto}.yui-panel-container.shadow .underlay.yui-force-redraw{padding-bottom:1px}.yui-effect-fade .underlay,.yui-effect-fade .yui-tt-shadow{display:none}.yui-tt-shadow{position:absolute}.yui-override-padding{padding:0!important}.yui-panel-container .container-close{overflow:hidden;text-indent:-10000em;text-decoration:none}.yui-overlay.yui-force-redraw,.yui-panel-container.yui-force-redraw{margin-bottom:1px}.yui-skin-sam .mask{background-color:#000;opacity:.25;filter:alpha(opacity=25)}.yui-skin-sam .yui-panel-container{padding:0 1px;*padding:2px}.yui-skin-sam .yui-panel{position:relative;left:0;top:0;border-style:solid;border-width:1px 0;border-color:#808080;z-index:1;*border-width:1px;*zoom:1;_zoom:normal}.yui-skin-sam .yui-panel .hd,.yui-skin-sam .yui-panel .bd,.yui-skin-sam .yui-panel .ft{border-style:solid;border-width:0 1px;border-color:#808080;margin:0 -1px;*margin:0;*border:0}.yui-skin-sam .yui-panel .hd{border-bottom:solid 1px #ccc}.yui-skin-sam .yui-panel .bd,.yui-skin-sam .yui-panel .ft{background-color:#f2f2f2}.yui-skin-sam .yui-panel .hd{padding:0 10px;font-size:93%;line-height:2;*line-height:1.9;font-weight:bold;color:#000;background:url(../../../../assets/skins/sam/sprite.png) repeat-x 0 -200px}.yui-skin-sam .yui-panel .bd{padding:10px}.yui-skin-sam .yui-panel .ft{border-top:solid 1px #808080;padding:5px 10px;font-size:77%}.yui-skin-sam .container-close{position:absolute;top:5px;right:6px;width:25px;height:15px;background:url(../../../../assets/skins/sam/sprite.png) no-repeat 0 -300px;cursor:pointer}.yui-skin-sam .yui-panel-container .underlay{right:-1px;left:-1px}.yui-skin-sam .yui-panel-container.matte{padding:9px 10px;background-color:#fff}.yui-skin-sam .yui-panel-container.shadow{_padding:2px 4px 0 2px}.yui-skin-sam .yui-panel-container.shadow .underlay{position:absolute;top:2px;left:-3px;right:-3px;bottom:-3px;*top:4px;*left:-1px;*right:-1px;*bottom:-1px;_top:0;_left:0;_right:0;_bottom:0;_margin-top:3px;_margin-left:-1px;background-color:#000;opacity:.12;filter:alpha(opacity=12)}.yui-skin-sam .yui-dialog .ft{border-top:0;padding:0 10px 10px 10px;font-size:100%}.yui-skin-sam .yui-dialog .ft .button-group{display:block;text-align:right}.yui-skin-sam .yui-dialog .ft button.default{font-weight:bold}.yui-skin-sam .yui-dialog .ft span.default{border-color:#304369;background-position:0 -1400px}.yui-skin-sam .yui-dialog .ft span.default .first-child{border-color:#304369}.yui-skin-sam .yui-dialog .ft span.default button{color:#fff}.yui-skin-sam .yui-dialog .ft span.yui-button-disabled{background-position:0 -1500px;border-color:#ccc}.yui-skin-sam .yui-dialog .ft span.yui-button-disabled .first-child{border-color:#ccc}.yui-skin-sam .yui-dialog .ft span.yui-button-disabled button{color:#a6a6a6}.yui-skin-sam .yui-simple-dialog .bd .yui-icon{background:url(../../../../assets/skins/sam/sprite.png) no-repeat 0 0;width:16px;height:16px;margin-right:10px;float:left}.yui-skin-sam .yui-simple-dialog .bd span.blckicon{background-position:0 -1100px}.yui-skin-sam .yui-simple-dialog .bd span.alrticon{background-position:0 -1050px}.yui-skin-sam .yui-simple-dialog .bd span.hlpicon{background-position:0 -1150px}.yui-skin-sam .yui-simple-dialog .bd span.infoicon{background-position:0 -1200px}.yui-skin-sam .yui-simple-dialog .bd span.warnicon{background-position:0 -1900px}.yui-skin-sam .yui-simple-dialog .bd span.tipicon{background-position:0 -1250px}.yui-skin-sam .yui-tt .bd{position:relative;top:0;left:0;z-index:1;color:#000;padding:2px 5px;border-color:#d4c237 #A6982b #a6982b #A6982B;border-width:1px;border-style:solid;background-color:#ffee69}.yui-skin-sam .yui-tt.show-scrollbars .bd{overflow:auto}.yui-skin-sam .yui-tt-shadow{top:2px;right:-3px;left:-3px;bottom:-3px;background-color:#000}.yui-skin-sam .yui-tt-shadow-visible{opacity:.12;filter:alpha(opacity=12)}
+
+/* =========================================================
+   yui-calendar.css
+   (js/yui/v2/calendar/assets/skins/sam/calendar.css)
+   ========================================================= */
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
+.yui-calcontainer{position:relative;float:left;_overflow:hidden}.yui-calcontainer iframe{position:absolute;border:0;margin:0;padding:0;z-index:0;width:100%;height:100%;left:0;top:0}.yui-calcontainer iframe.fixedsize{width:50em;height:50em;top:-1px;left:-1px}.yui-calcontainer.multi .groupcal{z-index:1;float:left;position:relative}.yui-calcontainer .title{position:relative;z-index:1}.yui-calcontainer .close-icon{position:absolute;z-index:1;text-indent:-10000em;overflow:hidden}.yui-calendar{position:relative}.yui-calendar .calnavleft{position:absolute;z-index:1;text-indent:-10000em;overflow:hidden}.yui-calendar .calnavright{position:absolute;z-index:1;text-indent:-10000em;overflow:hidden}.yui-calendar .calheader{position:relative;width:100%;text-align:center}.yui-calcontainer .yui-cal-nav-mask{position:absolute;z-index:2;margin:0;padding:0;width:100%;height:100%;_width:0;_height:0;left:0;top:0;display:none}.yui-calcontainer .yui-cal-nav{position:absolute;z-index:3;top:0;display:none}.yui-calcontainer .yui-cal-nav .yui-cal-nav-btn{display:-moz-inline-box;display:inline-block}.yui-calcontainer .yui-cal-nav .yui-cal-nav-btn button{display:block;*display:inline-block;*overflow:visible;border:0;background-color:transparent;cursor:pointer}.yui-calendar .calbody a:hover{background:inherit}p#clear{clear:left;padding-top:10px}.yui-skin-sam .yui-calcontainer{background-color:#f2f2f2;border:1px solid #808080;padding:10px}.yui-skin-sam .yui-calcontainer.multi{padding:0 5px 0 5px}.yui-skin-sam .yui-calcontainer.multi .groupcal{background-color:transparent;border:0;padding:10px 5px 10px 5px;margin:0}.yui-skin-sam .yui-calcontainer .title{background:url(../../../../assets/skins/sam/sprite.png) repeat-x 0 0;border-bottom:1px solid #ccc;font:100% sans-serif;color:#000;font-weight:bold;height:auto;padding:.4em;margin:0 -10px 10px -10px;top:0;left:0;text-align:left}.yui-skin-sam .yui-calcontainer.multi .title{margin:0 -5px 0 -5px}.yui-skin-sam .yui-calcontainer.withtitle{padding-top:0}.yui-skin-sam .yui-calcontainer .calclose{background:url(../../../../assets/skins/sam/sprite.png) no-repeat 0 -300px;width:25px;height:15px;top:.4em;right:.4em;cursor:pointer}.yui-skin-sam .yui-calendar{border-spacing:0;border-collapse:collapse;font:100% sans-serif;text-align:center;margin:0}.yui-skin-sam .yui-calendar .calhead{background:transparent;border:0;vertical-align:middle;padding:0}.yui-skin-sam .yui-calendar .calheader{background:transparent;font-weight:bold;padding:0 0 .6em 0;text-align:center}.yui-skin-sam .yui-calendar .calheader img{border:0}.yui-skin-sam .yui-calendar .calnavleft{background:url(../../../../assets/skins/sam/sprite.png) no-repeat 0 -450px;width:25px;height:15px;top:0;bottom:0;left:-10px;margin-left:.4em;cursor:pointer}.yui-skin-sam .yui-calendar .calnavright{background:url(../../../../assets/skins/sam/sprite.png) no-repeat 0 -500px;width:25px;height:15px;top:0;bottom:0;right:-10px;margin-right:.4em;cursor:pointer}.yui-skin-sam .yui-calendar .calweekdayrow{height:2em}.yui-skin-sam .yui-calendar .calweekdayrow th{padding:0;border:0}.yui-skin-sam .yui-calendar .calweekdaycell{color:#000;font-weight:bold;text-align:center;width:2em}.yui-skin-sam .yui-calendar .calfoot{background-color:#f2f2f2}.yui-skin-sam .yui-calendar .calrowhead,.yui-skin-sam .yui-calendar .calrowfoot{color:#a6a6a6;font-size:85%;font-style:normal;font-weight:normal;border:0}.yui-skin-sam .yui-calendar .calrowhead{text-align:right;padding:0 2px 0 0}.yui-skin-sam .yui-calendar .calrowfoot{text-align:left;padding:0 0 0 2px}.yui-skin-sam .yui-calendar td.calcell{border:1px solid #ccc;background:#fff;padding:1px;height:1.6em;line-height:1.6em;text-align:center;white-space:nowrap}.yui-skin-sam .yui-calendar td.calcell a{color:#06c;display:block;height:100%;text-decoration:none}.yui-skin-sam .yui-calendar td.calcell.today{background-color:#000}.yui-skin-sam .yui-calendar td.calcell.today a{background-color:#fff}.yui-skin-sam .yui-calendar td.calcell.oom{background-color:#ccc;color:#a6a6a6;cursor:default}.yui-skin-sam .yui-calendar td.calcell.oom a{color:#a6a6a6}.yui-skin-sam .yui-calendar td.calcell.selected{background-color:#fff;color:#000}.yui-skin-sam .yui-calendar td.calcell.selected a{background-color:#b3d4ff;color:#000}.yui-skin-sam .yui-calendar td.calcell.calcellhover{background-color:#426fd9;color:#fff;cursor:pointer}.yui-skin-sam .yui-calendar td.calcell.calcellhover a{background-color:#426fd9;color:#fff}.yui-skin-sam .yui-calendar td.calcell.previous{color:#e0e0e0}.yui-skin-sam .yui-calendar td.calcell.restricted{text-decoration:line-through}.yui-skin-sam .yui-calendar td.calcell.highlight1{background-color:#cf9}.yui-skin-sam .yui-calendar td.calcell.highlight2{background-color:#9cf}.yui-skin-sam .yui-calendar td.calcell.highlight3{background-color:#fcc}.yui-skin-sam .yui-calendar td.calcell.highlight4{background-color:#cf9}.yui-skin-sam .yui-calendar a.calnav{border:1px solid #f2f2f2;padding:0 4px;text-decoration:none;color:#000;zoom:1}.yui-skin-sam .yui-calendar a.calnav:hover{background:url(../../../../assets/skins/sam/sprite.png) repeat-x 0 0;border-color:#a0a0a0;cursor:pointer}.yui-skin-sam .yui-calcontainer .yui-cal-nav-mask{background-color:#000;opacity:.25;filter:alpha(opacity=25)}.yui-skin-sam .yui-calcontainer .yui-cal-nav{font-family:arial,helvetica,clean,sans-serif;font-size:93%;border:1px solid #808080;left:50%;margin-left:-7em;width:14em;padding:0;top:2.5em;background-color:#f2f2f2}.yui-skin-sam .yui-calcontainer.withtitle .yui-cal-nav{top:4.5em}.yui-skin-sam .yui-calcontainer.multi .yui-cal-nav{width:16em;margin-left:-8em}.yui-skin-sam .yui-calcontainer .yui-cal-nav-y,.yui-skin-sam .yui-calcontainer .yui-cal-nav-m,.yui-skin-sam .yui-calcontainer .yui-cal-nav-b{padding:5px 10px 5px 10px}.yui-skin-sam .yui-calcontainer .yui-cal-nav-b{text-align:center}.yui-skin-sam .yui-calcontainer .yui-cal-nav-e{margin-top:5px;padding:5px;background-color:#edf5ff;border-top:1px solid black;display:none}.yui-skin-sam .yui-calcontainer .yui-cal-nav label{display:block;font-weight:bold}
+.yui-skin-sam .yui-calcontainer .yui-cal-nav-mc{width:100%;_width:auto}.yui-skin-sam .yui-calcontainer .yui-cal-nav-y input.yui-invalid{background-color:#ffee69;border:1px solid #000}.yui-skin-sam .yui-calcontainer .yui-cal-nav-yc{width:4em}.yui-skin-sam .yui-calcontainer .yui-cal-nav .yui-cal-nav-btn{border:1px solid #808080;background:url(../../../../assets/skins/sam/sprite.png) repeat-x 0 0;background-color:#ccc;margin:auto .15em}.yui-skin-sam .yui-calcontainer .yui-cal-nav .yui-cal-nav-btn button{padding:0 8px;font-size:93%;line-height:2;*line-height:1.7;min-height:2em;*min-height:auto;color:#000}.yui-skin-sam .yui-calcontainer .yui-cal-nav .yui-cal-nav-btn.yui-default{border:1px solid #304369;background-color:#426fd9;background:url(../../../../assets/skins/sam/sprite.png) repeat-x 0 -1400px}.yui-skin-sam .yui-calcontainer .yui-cal-nav .yui-cal-nav-btn.yui-default button{color:#fff}
