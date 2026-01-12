@@ -587,7 +587,7 @@ body.login {
     content: '';
     width: 16px;
     height: 16px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M12 4C9.79086 4 8 5.79086 8 8C8 10.2091 9.79086 12 12 12C14.2091 12 16 10.2091 16 8C16 5.79086 14.2091 4 12 4ZM9.8 8C9.8 6.78497 10.785 5.8 12 5.8C13.215 5.8 14.2 6.78497 14.2 8C14.2 9.21503 13.215 10.2 12 10.2C10.785 10.2 9.8 9.21503 9.8 8ZM12 13C9.23858 13 4 14.3859 4 17V20H20V17C20 14.3859 14.7614 13 12 13ZM5.8 18.2V17C5.8 16.3 8.81 14.8 12 14.8C15.19 14.8 18.2 16.3 18.2 17V18.2H5.8Z' fill='%2309090B'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M8 2.66667C6.52724 2.66667 5.33333 3.86058 5.33333 5.33334C5.33333 6.8061 6.52724 8.00001 8 8.00001C9.47276 8.00001 10.6667 6.8061 10.6667 5.33334C10.6667 3.86058 9.47276 2.66667 8 2.66667ZM6.53333 5.33334C6.53333 4.52332 7.18998 3.86667 8 3.86667C8.81002 3.86667 9.46667 4.52332 9.46667 5.33334C9.46667 6.14336 8.81002 6.80001 8 6.80001C7.18998 6.80001 6.53333 6.14336 6.53333 5.33334ZM8 8.66667C6.15906 8.66667 2.66667 9.59067 2.66667 11.3333V13.3333H13.3333V11.3333C13.3333 9.59067 9.84094 8.66667 8 8.66667ZM3.86667 12.1333V11.3333C3.86667 10.8667 5.87333 9.86667 8 9.86667C10.1267 9.86667 12.1333 10.8667 12.1333 11.3333V12.1333H3.86667Z' fill='%2309090B'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -930,7 +930,7 @@ body.login {
     box-sizing: border-box;
 }
 
-/* ========== MAIN ========== */
+/* ========== LOGIN RESPONSIVE ========== */
 
 @media (max-width: 425px) {
 
@@ -955,4 +955,36 @@ body.login {
         width: 100%;
     }
 
+}
+
+/* ========== MAIN RESPONSIVE ========== */
+
+@media (max-width: 768px) {
+
+    .dashboard #Header {
+        width: 240px;
+    }
+
+    .dashboard #Main {
+        width: calc(100vw - 240px);
+        margin-left: 240px;
+        padding: 24px;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .dashboard #Header {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #E4E4E7;
+    }
+
+    .dashboard #Main {
+        width: 100%;
+        margin-left: 0;
+        padding: 16px;
+    }
 }
