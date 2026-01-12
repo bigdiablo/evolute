@@ -925,40 +925,29 @@ body.login {
 
 /* ========== MAIN ========== */
 
-@media (max-width: 768px) {
-
-    .login {
-        padding: 0 24px;
-    }
-
-    .login #Header {
-        width: 100%;
-    }
-
-    .login #Main {
-        width: 100%;
-    }
-}
-
 @media (max-width: 425px) {
 
-    .login {
+    body.login {
         padding: 0 24px;
     }
 
-    .login #Header {
+    body.login #Header {
         width: 100%;
     }
 
-    .login div.roundedBox {
+    body.login div.roundedBox {
         width: 100%;
     }
 
-    .login .grid_450px_350px {
+    body.login .grid_450px_350px {
         width: 100%;
     }
 
-    .login .grid_450px_350px .secondary {
+    body.login .grid_450px_350px .secondary {
         width: 100%;
+    }
+
+    .login #PrimaryContent {
+        width: 100vw;
     }
 }
