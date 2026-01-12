@@ -979,21 +979,19 @@ body.login {
         background: white;
         z-index: 999;
         flex-direction: column;
-        border-bottom: 1px solid #E4E4E7;
-        padding: 8px 0;
+        margin-top: 20px;
     }
 
     .dashboard #Navigation {
         display: none;
         position: absolute;
-        top: calc(100% + 200px);
+        top: calc(100% + 321px);
         left: 0;
         width: 100%;
         background: white;
         z-index: 999;
         flex-direction: column;
-        border-bottom: 1px solid #E4E4E7;
-        padding: 8px 0;
+        padding: 20px 0 0 0;
     }
 
     .dashboard #logoDiv:hover ~ #toolbar,
