@@ -897,7 +897,7 @@ body.login {
     display: none;
 }
 
-.dashboard #Main .roundedBox {
+.dashboard #Main {
     display: flex;
     margin-left: 300px;
 }
