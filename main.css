@@ -897,6 +897,11 @@ body.login {
     display: none;
 }
 
+.dashboard #Main .roundedBox {
+    display: flex;
+    margin-left: 300px;
+}
+
 /* ========== LOGIN RESPONSIVE ========== */
 
 @media (max-width: 425px) {
