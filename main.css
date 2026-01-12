@@ -263,6 +263,11 @@ body.login {
     padding: 0 !important;
 }
 
+.login .grid_450px_350px .primary {
+    display: flex;
+    width: 100% !important;
+}
+
 .login #NestedFormPage div.options {
     display: flex;
     width: 100% !important;
