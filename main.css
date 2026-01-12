@@ -551,11 +551,16 @@ body.login {
     background-color: #F4F4F5;
 }
 
-.dashboard .userInfo #accountName,
-.dashboard .userInfo #accountBalance {
+.dashboard .userInfo #accountName {
     font-size: 0 !important;
     padding: 0 !important;
     margin: 0 !important;
+}
+
+.dashboard .userInfo #accountBalance {
+    font-size: 0 !important;
+    padding: 0 !important;
+    margin-bottom: 16px !important;
 }
 
 .dashboard .userInfo::before {
@@ -881,22 +886,6 @@ body.login {
 
 /* ========== MAIN ========== */
 
-.dashboard #Main *,
-.dashboard #Main *::before,
-.dashboard #Main *::after {
-    box-sizing: border-box;
-}
-
-.dashboard b.bt,
-.dashboard .blueBox b.bt,
-.dashboard b.bt b,
-.dashboard b.bb,
-.dashboard b.bb b,
-.dashboard .clear,
-.dashboard .secondary {
-    display: none;
-}
-
 .dashboard #Main {
     display: flex;
     margin-left: 300px;
@@ -934,29 +923,45 @@ body.login {
 @media (max-width: 768px) {
 
     .dashboard #Header {
-        width: 240px;
-    }
-
-    .dashboard #Main {
-        width: calc(100vw - 240px);
-        margin-left: 240px;
-        padding: 24px;
-    }
-}
-
-@media (max-width: 425px) {
-
-    .dashboard #Header {
         position: relative;
         width: 100%;
         height: auto;
         border-right: none;
-        border-bottom: 1px solid #E4E4E7;
     }
 
-    .dashboard #Main {
-        width: 100%;
-        margin-left: 0;
-        padding: 16px;
+    .dashboard #logoDiv {
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .dashboard #logoDiv::after {
+        content: '';
+        width: 40px;
+        height: 40px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='%2309090B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='4' x2='20' y1='12' y2='12'/%3E%3Cline x1='4' x2='20' y1='6' y2='6'/%3E%3Cline x1='4' x2='20' y1='18' y2='18'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer;
+    }
+
+    .dashboard #logoLinksContainer {
+        padding-bottom: 0;
+    }
+
+    .dashboard #logoDiv #logo::before {
+        width: 140px;
+        height: auto;
+    }
+
+    .dashboard #toolbar,
+    .dashboard #Navigation {
+        display: none;
+    }
+
+    .dashboard #logoDiv:hover ~ #toolbar,
+    .dashboard #logoDiv:hover ~ #Navigation,
+    .dashboard #toolbar:hover,
+    .dashboard #Navigation:hover {
+        display: flex !important;
     }
 }
