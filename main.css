@@ -560,7 +560,7 @@ body.login {
 .dashboard .userInfo #accountBalance {
     font-size: 0 !important;
     padding: 0 !important;
-    margin-bottom: 0 0 16px !important;
+    margin: 0 0 16px !important;
 }
 
 .dashboard .userInfo::before {
@@ -963,9 +963,12 @@ body.login {
     }
 
     .dashboard #logoDiv:hover ~ #toolbar,
-    .dashboard #logoDiv:hover ~ #Navigation,
     .dashboard #toolbar:hover,
-    .dashboard #toolbar:focus-within,
+    .dashboard #toolbar:focus-within {
+        display: flex !important;
+    }
+
+    .dashboard #logoLinksContainer:has(#logoDiv:hover) ~ #Navigation,
     .dashboard #Navigation:hover,
     .dashboard #Navigation:focus-within {
         display: flex !important;
