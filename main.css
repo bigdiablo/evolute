@@ -1009,7 +1009,7 @@ body.login {
     align-items: stretch;
     flex-direction: column;
     width: 100%;
-    padding: 40px;
+    padding: 24px;
 }
 
 .dashboard #PrimaryContent {
@@ -1034,8 +1034,9 @@ body.login {
     background-color: var(--color-white);
     border: 1px solid #E5E7EB;
     border-radius: 12px;
+    margin-top: 0;
     margin-bottom: 0;
-    box-shadow: 0;
+    box-shadow: none;
 }
 
 .dashboard .roundedBox .hdr,
@@ -1916,11 +1917,6 @@ div.grid_1_1#leftInnerGrid {
     .dashboard #Main {
         margin-left: 0;
     }
-
-    .dashboard #MainContent {
-        padding: 20px;
-    }
-
 
     .dashboard .grid_200px_n {
         flex-direction: column;
