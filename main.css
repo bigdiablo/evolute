@@ -1327,8 +1327,9 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .grid_200px_n {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     gap: 32px;
+    padding: 0 !important;
     width: 100%;
 }
 
@@ -1340,7 +1341,13 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .grid_200px_n > .secondary {
     width: 280px;
     flex-shrink: 0;
+    left: 0;
+    margin: 0 !important;
     order: -1;
+}
+
+.dashboard #settingssubnav .section .header {
+    width: 100%;
 }
 
 .dashboard .roundedBox4.sideBar {
