@@ -2152,9 +2152,11 @@ div.grid_1_1#leftInnerGrid {
     }
 
     .dashboard .ordersTable {
-        display: flex;
-        flex-direction: column;
-        overflow-x: visible;
+        display: flex !important;
+        flex-direction: column !important;
+        overflow-x: visible !important;
+        min-width: 0 !important;
+        width: 100% !important;
     }
 
     .dashboard .ordersTable thead {
@@ -2210,8 +2212,8 @@ div.grid_1_1#leftInnerGrid {
     }
 
     .dashboard .ordersTable tbody tr {
-        display: flex;
-        flex-direction: column;
+        display: flex !important;
+        flex-wrap: wrap !important;
         background: var(--color-white);
         border: 1px solid var(--border-color);
         border-radius: 12px;
@@ -2220,12 +2222,14 @@ div.grid_1_1#leftInnerGrid {
     }
 
     .dashboard .ordersTable tbody tr td {
-        display: flex;
+        display: flex !important;
         justify-content: space-between;
         align-items: center;
         padding: 12px 16px;
         border-bottom: 1px solid var(--border-light);
         text-align: right;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .dashboard .ordersTable tbody tr:hover td {
@@ -2275,9 +2279,9 @@ div.grid_1_1#leftInnerGrid {
     .dashboard .ordersTable tbody tr td:nth-child(8),
     .dashboard .ordersTable tbody tr td:nth-child(9),
     .dashboard .ordersTable tbody tr td:nth-child(10) {
-        display: inline-flex;
-        width: auto;
-        flex: 1;
+        display: flex !important;
+        width: 25% !important;
+        flex: none !important;
         border-bottom: none;
         justify-content: center;
         flex-direction: column;
@@ -2307,9 +2311,6 @@ div.grid_1_1#leftInnerGrid {
         margin-right: 0;
     }
 
-    .dashboard .ordersTable tbody tr {
-        flex-wrap: wrap;
-    }
 
     .dashboard .ordersTable tbody tr td:nth-child(6) {
         border-bottom: none;
@@ -2350,6 +2351,7 @@ div.grid_1_1#leftInnerGrid {
     .dashboard .sellerHomeContentBoxL,
     .dashboard .sellerHomeContentBoxR {
         width: 100% !important;
+        grid-template-columns: 1fr !important;
     }
 
     .dashboard .grid_1_1 {
