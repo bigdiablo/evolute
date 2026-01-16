@@ -1624,6 +1624,7 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .reportListWrapper {
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 24px;
 }
 
@@ -1773,6 +1774,7 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .roundedBox2 {
     overflow: hidden;
+    min-width: 0 !important;
 }
 
 .dashboard .ordersTable {
@@ -1970,12 +1972,14 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .paginationContainer .results {
     font-size: 14px;
     color: var(--color-gray);
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 .dashboard .paginationContainer .pagination ul {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 8px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -2288,7 +2292,6 @@ div.grid_1_1#leftInnerGrid {
         align-items: center;
         gap: 4px;
         padding: 12px 8px;
-        background-color: var(--bg-light);
     }
 
     .dashboard .ordersTable tbody tr td:nth-child(7)::before {
@@ -2333,8 +2336,17 @@ div.grid_1_1#leftInnerGrid {
         width: 100% !important;
     }
 
+    .dashboard .paginationContainer:has(.results) {
+        flex-direction: row !important;
+        align-items: center !important;
+    }
+
     .dashboard .paginationContainer .pagination {
         width: 100% !important;
+    }
+
+    .dashboard .paginationContainer .pagination:has(ul) {
+        width: auto !important;
     }
 
     .dashboard .paginationContainer .pagination ul {
@@ -2369,6 +2381,16 @@ div.grid_1_1#leftInnerGrid {
     }
 
     .dashboard .grid_600px_340px .primary {
+        width: 100% !important;
+    }
+
+    .dashboard .ordersTable tfoot tr.actions,
+    .dashboard .ordersTable tfoot tr.actions td.paginationBottom {
+        display: flex;
+        width: 100% !important;
+    }
+
+    .dashboard #PrimaryContent div:has(.nestedListTable) {
         width: 100% !important;
     }
 }
