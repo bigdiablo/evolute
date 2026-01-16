@@ -1820,8 +1820,14 @@ div.grid_1_1#leftInnerGrid {
     font-weight: 600;
 }
 
+.dashboard .ordersTable thead tr.actions td.paginationTop .yui-button.login-button {
+    background: transparent !important;
+    background-image: none !important;
+}
+
 .dashboard .ordersTable thead tr.actions td.paginationTop .yui-button .first-child a:hover {
-    background-color: var(--color-blue);
+    background-color: var(--color-blue) !important;
+    color: var(--color-white) !important;
 }
 
 .dashboard .ordersTable thead tr.colheaders th {
@@ -2088,6 +2094,244 @@ div.grid_1_1#leftInnerGrid {
 .dashboard #formContainer select:focus {
     outline: none;
     border-color: var(--color-blue);
+}
+
+/* ========== LEAD CHANNEL DETAIL ========== */
+
+.dashboard .channelInfo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px !important;
+    background: var(--bg-light) !important;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dashboard .channelInfo .htop,
+.dashboard .channelInfo .center,
+.dashboard .channelInfo .right {
+    display: none;
+}
+
+.dashboard .channelInfo h2 {
+    margin: 0;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+.dashboard .channelInfo h2.headerLeft {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.dashboard .channelInfo h2.headerLeft a {
+    color: var(--color-dark-blue);
+    text-decoration: none;
+}
+
+.dashboard .channelInfo h2.headerLeft a:hover {
+    color: var(--color-blue);
+}
+
+.dashboard .channelInfo h2.headerRight {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px !important;
+    background-color: var(--color-dark-blue) !important;
+    color: var(--color-white);
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.dashboard .channelInfo h2.headerRight:hover {
+    background-color: var(--color-blue) !important;
+}
+
+.dashboard .labelValue {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.dashboard .labelValue:last-of-type {
+    border-bottom: none;
+}
+
+.dashboard .labelValue .label {
+    flex-shrink: 0;
+    width: 180px;
+    font-size: 14px;
+    color: var(--color-gray);
+}
+
+.dashboard .labelValue .label .bold,
+.dashboard .labelValue .label.bold {
+    font-weight: 500;
+    color: var(--color-black);
+}
+
+.dashboard .labelValue .value {
+    flex: 1;
+    font-size: 14px;
+    color: var(--color-black);
+}
+
+.dashboard .labelValue .value a {
+    color: var(--color-dark-blue);
+    text-decoration: none;
+}
+
+.dashboard .labelValue .value a:hover {
+    color: var(--color-blue);
+    text-decoration: underline;
+}
+
+.dashboard .labelValue .value.inactive {
+    color: var(--color-gray);
+}
+
+.dashboard .labelValue .value.active {
+    color: var(--color-success);
+}
+
+.dashboard .labelValue .value .yui-button {
+    float: none;
+    margin: 0;
+}
+
+.dashboard .labelValue .value .yui-button .first-child a {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    background-color: var(--bg-hover);
+    color: var(--color-dark-blue);
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    transition: all 0.15s ease;
+}
+
+.dashboard .labelValue .value .yui-button .first-child a:hover {
+    background-color: var(--color-dark-blue);
+    color: var(--color-white);
+    border-color: var(--color-dark-blue);
+}
+
+#dailyLeadLimits {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 0 !important;
+}
+
+#dailyLeadLimits thead th {
+    padding: 12px 16px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background-color: var(--bg-hover);
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+}
+
+#dailyLeadLimits thead th.center {
+    text-align: center;
+}
+
+#dailyLeadLimits tbody tr {
+    transition: background-color 0.15s ease;
+}
+
+#dailyLeadLimits tbody tr:hover {
+    background-color: var(--bg-light);
+}
+
+#dailyLeadLimits tbody td {
+    padding: 12px 16px;
+    font-size: 14px;
+    color: var(--color-black);
+    border-bottom: 1px solid var(--border-light);
+}
+
+#dailyLeadLimits tbody td.right {
+    text-align: right;
+}
+
+.dashboard .blueBox {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.dashboard .blueBox .bt,
+.dashboard .blueBox .bb {
+    display: none;
+}
+
+.dashboard .blueBox .boxContent {
+    padding: 20px;
+}
+
+.dashboard .blueBox h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-black);
+    margin: 0 0 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dashboard .blueBox h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-black);
+    margin: 16px 0 8px;
+}
+
+.dashboard .blueBox p {
+    font-size: 14px;
+    color: var(--color-gray);
+    line-height: 1.5;
+    margin: 0 0 12px;
+}
+
+.dashboard .blueBox a {
+    color: var(--color-dark-blue);
+    text-decoration: none;
+}
+
+.dashboard .blueBox a:hover {
+    color: var(--color-blue);
+    text-decoration: underline;
+}
+
+.dashboard .blueBox .docPreview {
+    margin: 4px 0;
+}
+
+.dashboard .blueBox .docPreview a {
+    font-weight: 500;
+}
+
+.dashboard .blueBox img.sidebar {
+    float: left;
+    margin: 0 16px 12px 0;
+    border-radius: 8px;
+}
+
+.dashboard .wizard-integration-details {
+    overflow: hidden;
 }
 
 /* ========== RESPONSIVE ========== */
@@ -2392,5 +2636,45 @@ div.grid_1_1#leftInnerGrid {
 
     .dashboard #PrimaryContent div:has(.nestedListTable) {
         width: 100% !important;
+    }
+
+    /* Lead Channel Detail responsive */
+    .dashboard .channelInfo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .dashboard .channelInfo h2.headerLeft {
+        width: 100%;
+    }
+
+    .dashboard .channelInfo h2.headerRight {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .dashboard .labelValue {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .dashboard .labelValue .label {
+        width: 100%;
+    }
+
+    #dailyLeadLimits thead th:first-child {
+        width: 50%;
+    }
+
+    .dashboard .grid_600px_340px .secondary {
+        width: 100% !important;
+        margin-top: 24px;
+    }
+
+    .dashboard .blueBox img.sidebar {
+        float: none;
+        display: block;
+        margin: 0 auto 16px;
     }
 }
