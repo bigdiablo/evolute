@@ -1287,6 +1287,14 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .sellerHomeContentBoxR .yui-button {
     float: none;
     margin: 0;
+    background: transparent !important;
+    border: none !important;
+}
+
+.dashboard .sellerHomeContentBoxL .yui-button .first-child,
+.dashboard .sellerHomeContentBoxR .yui-button .first-child {
+    background: transparent !important;
+    border: none !important;
 }
 
 .dashboard .sellerHomeContentBoxL .yui-button .first-child a,
@@ -1310,6 +1318,11 @@ div.grid_1_1#leftInnerGrid {
     content: "+";
     font-size: 16px;
     font-weight: 600;
+}
+
+.dashboard .sellerHomeContentBoxL .yui-button:hover,
+.dashboard .sellerHomeContentBoxR .yui-button:hover {
+    background: transparent !important;
 }
 
 .dashboard .sellerHomeContentBoxL .yui-button .first-child a:hover,
