@@ -452,8 +452,14 @@ body.login {
     height: 100vh;
     z-index: 666;
     overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     background-color: var(--color-white);
     border-right: 1px solid var(--border-sidebar);
+}
+
+.dashboard #Header::-webkit-scrollbar {
+    display: none;
 }
 
 .dashboard #logoLinksContainer {
@@ -1036,11 +1042,216 @@ body.login {
     padding: 24px;
 }
 
+.dashboard #MainTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-black);
+    margin: 0 0 24px;
+    padding: 0;
+}
+
 .dashboard #PrimaryContent {
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 1400px;
+    padding: 0;
+}
+
+/* Common Box Content - ensure white background */
+.dashboard .boxContent {
+    background-color: var(--color-white);
+    padding: 20px;
+}
+
+.dashboard .blueBox {
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+.dashboard .blueBox .boxContent {
+    background-color: var(--color-white) !important;
+    color: var(--color-black);
+}
+
+/* Common Grid Layouts */
+.dashboard .grid_580px_240px {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 24px;
+}
+
+.dashboard .grid_580px_240px .column1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard .grid_580px_240px .column2 {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Common Form Styles */
+.dashboard .inputGroup {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 12px 0;
+    clear: both;
+}
+
+.dashboard .mainLabel {
+    width: 160px;
+    text-align: right;
+    padding-right: 16px;
+    flex-shrink: 0;
+}
+
+.dashboard .mainLabel label,
+.dashboard .mainLabel .bold {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-black);
+    line-height: 1.5;
+}
+
+.dashboard .mainLabel .requiredMarker {
+    color: var(--color-error);
+    margin-left: 2px;
+}
+
+.dashboard .options {
+    flex: 1;
+    min-width: 0;
+}
+
+.dashboard .optionsContent {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Common Form Inputs */
+.dashboard input[type="text"],
+.dashboard input.textInput {
+    padding: 10px 14px;
+    font-size: 14px;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: border-color 0.15s ease;
+}
+
+.dashboard input[type="text"]:focus,
+.dashboard input.textInput:focus {
+    outline: none;
+    border-color: var(--color-blue);
+}
+
+.dashboard select {
+    padding: 10px 14px;
+    font-size: 14px;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+    cursor: pointer;
+    min-width: 280px;
+}
+
+.dashboard select:focus {
+    outline: none;
+    border-color: var(--color-blue);
+}
+
+/* Common Button Styles */
+.dashboard .buttonGroup {
+    display: flex;
+    gap: 12px;
+    padding: 20px 0;
+    margin: 0;
+    float: none;
+}
+
+.dashboard .buttonGroup .yui-button {
+    float: none;
+    margin: 0;
+}
+
+.dashboard .buttonGroup .yui-button button,
+.dashboard .buttonGroup .yui-button a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+}
+
+.dashboard .buttonGroup .yui-submit-button button {
+    background-color: var(--color-dark-blue);
+    color: var(--color-white);
+}
+
+.dashboard .buttonGroup .yui-submit-button button:hover {
+    background-color: var(--color-blue);
+}
+
+/* Integration Options Grid */
+.dashboard .integrationOptions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 20px;
+}
+
+.dashboard .blueBox.integration {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    min-height: auto;
+}
+
+.dashboard .blueBox.integration h1 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-black);
+    margin: 0 0 16px;
+}
+
+.dashboard .blueBox.integration ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 0 0 20px;
+}
+
+.dashboard .blueBox.integration ul li {
+    font-size: 14px;
+    color: var(--color-black);
+    line-height: 1.6;
+    margin-bottom: 6px;
+}
+
+.dashboard .blueBox.integration .buttonGroup {
+    margin-top: auto;
     padding: 0;
 }
 
@@ -1192,20 +1403,32 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .sellerHomeContentBoxL,
 .dashboard .sellerHomeContentBoxR {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    column-gap: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
     width: 100%;
     margin: 0 !important;
+}
+
+.dashboard #leftInnerGrid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 24px !important;
+    grid-template-columns: unset !important;
+}
+
+.dashboard #leftInnerGrid > .column {
+    display: contents !important;
 }
 
 .dashboard .sellerHomeContentBoxL .roundedBox,
 .dashboard .sellerHomeContentBoxR .roundedBox {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    min-width: 0;
+    width: calc(20% - 20px);
+    min-width: 180px;
+    max-width: 220px;
+    flex: 1 1 180px;
     padding: 0;
     margin: 0;
 }
@@ -1303,9 +1526,10 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .sellerHomeContentBoxL .buttonGroup,
 .dashboard .sellerHomeContentBoxR .buttonGroup {
     display: flex;
-    padding: 0 20px 20px;
+    padding: 12px 20px 20px;
     margin: 0;
     float: none;
+    margin-top: auto;
 }
 
 .dashboard .sellerHomeContentBoxL .yui-button,
@@ -2121,6 +2345,451 @@ div.grid_1_1#leftInnerGrid {
     border-color: var(--color-blue);
 }
 
+/* ========== LEAD CHANNELS WIZARD ========== */
+
+.dashboard #FormPage {
+    width: 100%;
+}
+
+.dashboard #FormPageContent {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dashboard .gridWrapper .grid_1_1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.dashboard .gridWrapper .grid_1_1 .column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.dashboard .gridWrapper .grid_1_1 .column .blueBox.integration {
+    flex: 1;
+}
+
+.dashboard .blueBox.integration {
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+}
+
+.dashboard .blueBox.integration .sideBarGroup {
+    flex: 1;
+}
+
+.dashboard .blueBox.integration h1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-black);
+    margin: 0 0 16px;
+}
+
+.dashboard .blueBox.integration ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 0 0 20px;
+}
+
+.dashboard .blueBox.integration ul li {
+    font-size: 14px;
+    color: var(--color-black);
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.dashboard .blueBox.integration .buttonGroup {
+    margin-top: auto;
+}
+
+.dashboard #iliWizardSteps {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background: var(--bg-light);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dashboard #iliWizardSteps ul {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dashboard #iliWizardSteps ul li {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-gray);
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: var(--color-white);
+    border: 1px solid var(--border-light);
+}
+
+.dashboard #iliWizardSteps ul li.currentStep {
+    background: var(--color-dark-blue);
+    color: var(--color-white);
+    border-color: var(--color-dark-blue);
+}
+
+.dashboard .wizard-summary h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-black);
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.dashboard .wizard-summary .boxContent {
+    padding: 0;
+}
+
+.dashboard .wizard-integration-details h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-black);
+    margin: 24px 0 16px;
+}
+
+.dashboard .wizard-integration-details h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-black);
+    margin: 20px 0 12px;
+}
+
+.dashboard .wizard-integration-details p {
+    font-size: 14px;
+    color: var(--color-black);
+    line-height: 1.6;
+    margin: 0 0 12px;
+}
+
+.dashboard .wizard-integration-details .docPreview {
+    margin: 8px 0;
+}
+
+.dashboard .wizard-integration-details .docPreview a {
+    color: var(--color-dark-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.dashboard .wizard-integration-details .docPreview a:hover {
+    color: var(--color-blue);
+    text-decoration: underline;
+}
+
+.dashboard .marketingMethodsHeader {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-black);
+    margin: 0 0 12px;
+}
+
+.dashboard .sectionHeaderFlat {
+    padding: 16px 20px;
+    background: var(--bg-light);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dashboard .sectionHeaderFlat h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-black);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ========== WIZARD FORM FIELDS ========== */
+
+.dashboard .formSectionContent .inputGroup {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 12px 20px;
+    clear: both;
+    float: none;
+}
+
+.dashboard .formSectionContent .mainLabel {
+    width: 180px;
+    text-align: right;
+    padding-right: 16px;
+    float: none;
+}
+
+.dashboard .formSectionContent .mainLabel label {
+    font-size: 14px;
+    color: var(--color-black);
+    line-height: 1.5;
+}
+
+.dashboard .formSectionContent .mainLabel label.required {
+    font-weight: 600;
+}
+
+.dashboard .formSectionContent .mainLabel .requiredMarker {
+    color: var(--color-error);
+    margin-left: 2px;
+}
+
+.dashboard .formSectionContent .options {
+    flex: 1;
+    width: auto;
+    float: none;
+}
+
+.dashboard .formSectionContent .optionsContent {
+    padding-left: 0;
+}
+
+.dashboard .formSectionContent .textInput {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px 14px;
+    font-size: 14px;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: border-color 0.15s ease;
+}
+
+.dashboard .formSectionContent .textInput:focus {
+    outline: none;
+    border-color: var(--color-blue);
+}
+
+.dashboard .formSectionContent select {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px 14px;
+    font-size: 14px;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    cursor: pointer;
+}
+
+.dashboard .formSectionContent textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 14px;
+    font-size: 14px;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.dashboard .formSectionContent .radio,
+.dashboard .formSectionContent input[type="radio"] {
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.dashboard .formSectionContent input[type="checkbox"] {
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.dashboard .formSectionContent .instructions {
+    font-size: 12px;
+    color: var(--color-gray);
+    margin-top: 4px;
+}
+
+/* Marketing Methods Grid */
+.dashboard .formSectionContent .optionsContent > div[style*="float: left"] {
+    float: none !important;
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+    min-width: 200px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
+/* Message Boxes */
+.dashboard .boxContent p.main {
+    font-size: 14px;
+    color: var(--color-black);
+    line-height: 1.6;
+    margin: 0 0 16px;
+}
+
+.dashboard .boxContent p.information {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--color-dark-blue);
+    background: var(--bg-light);
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin: 0 0 12px;
+    border-left: 3px solid var(--color-blue);
+}
+
+.dashboard .boxContent p.warning {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--color-warning);
+    background: #FEF3C7;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin: 0 0 12px;
+    border-left: 3px solid var(--color-warning);
+}
+
+.dashboard .boxContent span.warning {
+    display: block;
+    font-size: 14px;
+    color: var(--color-warning);
+    background: #FEF3C7;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border-left: 3px solid var(--color-warning);
+}
+
+/* Integration Support Link */
+.dashboard .integration-support {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--bg-light);
+    border-radius: 8px;
+    margin: 8px 0;
+}
+
+.dashboard .integration-support a {
+    color: var(--color-dark-blue);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.dashboard .integration-support a:hover {
+    color: var(--color-blue);
+    text-decoration: underline;
+}
+
+/* Wizard Button Group */
+.dashboard .formSectionContent .buttonGroup {
+    display: flex;
+    gap: 12px;
+    padding: 20px;
+    margin: 0;
+    float: none;
+}
+
+.dashboard .formSectionContent .buttonGroup .yui-button {
+    float: none;
+    margin: 0;
+}
+
+.dashboard .formSectionContent .buttonGroup .yui-button button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.dashboard .formSectionContent .buttonGroup .yui-submit-button button {
+    background-color: var(--border-color);
+    color: var(--color-black);
+}
+
+.dashboard .formSectionContent .buttonGroup .yui-submit-button button:hover {
+    background-color: var(--border-sidebar);
+}
+
+.dashboard .formSectionContent .buttonGroup .yui-submit-button.login-button button {
+    background-color: var(--color-dark-blue);
+    color: var(--color-white);
+}
+
+.dashboard .formSectionContent .buttonGroup .yui-submit-button.login-button button:hover {
+    background-color: var(--color-blue);
+}
+
+/* Status Badges */
+.dashboard .labelValue .value.new {
+    color: var(--color-success);
+    font-weight: 600;
+}
+
+.dashboard .labelValue .value.submit_test_leads {
+    color: var(--color-warning);
+    font-weight: 600;
+}
+
+.dashboard .labelValue .value.active {
+    color: var(--color-success);
+    font-weight: 600;
+}
+
+.dashboard .labelValue .value.inactive {
+    color: var(--color-gray);
+    font-weight: 600;
+}
+
+/* Test Leads Section */
+.dashboard .sectionHeader h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-black);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Bold field values in wizard */
+.dashboard .formSectionContent .bold,
+.dashboard .formSectionContent span.bold {
+    font-weight: 600;
+    color: var(--color-black);
+}
+
+/* Inline help images */
+.dashboard .inlineHelpImg {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.15s ease;
+}
+
+.dashboard .inlineHelpImg:hover {
+    opacity: 1;
+}
+
 /* ========== LEAD CHANNEL DETAIL ========== */
 
 .dashboard .channelInfo {
@@ -2359,6 +3028,335 @@ div.grid_1_1#leftInnerGrid {
     overflow: hidden;
 }
 
+/* ========== MY ORDERS ========== */
+
+.dashboard .ordersTable #search {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.dashboard .ordersTable #selectorDiv {
+    display: flex;
+    gap: 12px;
+    flex: 1;
+    min-width: 0;
+}
+
+.dashboard .ordersTable #friendSearchContainer {
+    flex: 1;
+    min-width: 200px;
+}
+
+.dashboard .ordersTable #friendId {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 14px;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: border-color 0.15s ease;
+}
+
+.dashboard .ordersTable #friendId:focus {
+    outline: none;
+    border-color: var(--color-blue);
+}
+
+.dashboard .ordersTable #productDiv {
+    min-width: 200px;
+}
+
+.dashboard .ordersTable #productDiv select {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 14px;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    cursor: pointer;
+    transition: border-color 0.15s ease;
+}
+
+.dashboard .ordersTable #productDiv select:focus {
+    outline: none;
+    border-color: var(--color-blue);
+}
+
+.dashboard .ordersTable #checkBoxDiv {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.dashboard .ordersTable #checkBoxDiv label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: var(--color-black);
+    cursor: pointer;
+}
+
+.dashboard .ordersTable #checkBoxDiv input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.dashboard .ordersTable #searchButtonDiv {
+    display: flex;
+    align-items: center;
+}
+
+.dashboard .ordersTable .searchOrders button {
+    padding: 10px 20px;
+    background-color: var(--color-dark-blue);
+    color: var(--color-white);
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.dashboard .ordersTable .searchOrders button:hover {
+    background-color: var(--color-blue);
+}
+
+.dashboard .ordersTable .orderActions {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard .ordersTable .orderActions a {
+    color: var(--color-dark-blue);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.dashboard .ordersTable .orderActions a:hover {
+    color: var(--color-blue);
+    text-decoration: underline;
+}
+
+.dashboard .ordersTable .smallGrey {
+    font-size: 12px;
+    color: var(--color-gray);
+    margin-top: 4px;
+}
+
+.dashboard .ordersTable tbody td.ACTIVE,
+.dashboard .ordersTable tbody td.PAUSED {
+    font-weight: 500;
+}
+
+.dashboard .ordersTable tbody td.ACTIVE {
+    color: var(--color-success);
+}
+
+.dashboard .ordersTable tbody td.PAUSED {
+    color: var(--color-warning);
+}
+
+/* ========== PROPOSALS ========== */
+
+.dashboard #validationErrors {
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.dashboard #validationErrors .sectionHeader {
+    padding: 16px 20px;
+    background: var(--bg-light);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dashboard #validationErrors .sectionHeader h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-black);
+}
+
+.dashboard #validationErrors ol {
+    padding: 20px 20px 20px 40px;
+    margin: 0;
+}
+
+.dashboard #validationErrors ol li {
+    font-size: 14px;
+    color: var(--color-black);
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.dashboard #validationErrors #linkItem {
+    padding: 0 20px 20px;
+    margin: 0;
+}
+
+.dashboard #validationErrors #linkItem a {
+    color: var(--color-dark-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.dashboard #validationErrors #linkItem a:hover {
+    color: var(--color-blue);
+    text-decoration: underline;
+}
+
+/* ========== WHOLESALE ORDERS ========== */
+
+.dashboard .ordersTable.empty tbody tr {
+    border-bottom: 1px solid var(--border-light);
+}
+
+.dashboard .ordersTable .oliDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.dashboard .ordersTable .oliDiv .left a {
+    color: var(--color-dark-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.dashboard .ordersTable .oliDiv .left a:hover {
+    color: var(--color-blue);
+    text-decoration: underline;
+}
+
+.dashboard .ordersTable .oliDiv .right a {
+    color: var(--color-error);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.dashboard .ordersTable .oliDiv .right a:hover {
+    text-decoration: underline;
+}
+
+.dashboard .ordersTable .addLink {
+    color: var(--color-dark-blue);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.dashboard .ordersTable .addLink:hover {
+    color: var(--color-blue);
+    text-decoration: underline;
+}
+
+.dashboard .ordersTable .nowrap {
+    white-space: nowrap;
+}
+
+/* ========== CONNECTIONS (BETA) ========== */
+
+.dashboard .ordersTable .parentRow {
+    transition: background-color 0.15s ease;
+}
+
+.dashboard .ordersTable .parentRow:hover {
+    background-color: var(--bg-light);
+}
+
+.dashboard .ordersTable .expando.control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dashboard .ordersTable .detailsLink {
+    color: var(--color-dark-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.dashboard .ordersTable .detailsLink:hover {
+    color: var(--color-blue);
+    text-decoration: underline;
+}
+
+.dashboard .ordersTable .details {
+    display: none;
+}
+
+.dashboard .ordersTable .details.visible {
+    display: table-row;
+}
+
+.dashboard .ordersTable .innerheader {
+    background-color: var(--bg-hover);
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--color-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.dashboard .ordersTable .productDetails {
+    font-size: 13px;
+    padding: 10px 16px;
+}
+
+.dashboard .ordersTable .date {
+    font-size: 13px;
+    color: var(--color-gray);
+}
+
+.dashboard .ordersTable .progressContainer {
+    display: flex;
+    align-items: center;
+}
+
+.dashboard .ordersTable .progress {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dashboard .ordersTable .progress-indicator {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--color-blue);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.dashboard .ordersTable .progress-copy {
+    font-size: 12px;
+    color: var(--color-gray);
+}
+
+.dashboard .ordersTable .failureMsg {
+    font-size: 13px;
+    color: var(--color-gray);
+}
+
 /* ========== RESPONSIVE ========== */
 
 @media (max-width: 1024px) {
@@ -2373,6 +3371,34 @@ div.grid_1_1#leftInnerGrid {
     .dashboard .grid_200px_n > .secondary {
         width: 100%;
         order: -1;
+    }
+
+    .dashboard .grid_580px_240px {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard .grid_580px_240px .column2 {
+        order: -1;
+    }
+
+    .dashboard .integrationOptions {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard .inputGroup {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard .mainLabel {
+        width: 100%;
+        text-align: left;
+        padding: 0 0 8px;
+    }
+
+    .dashboard select {
+        min-width: 100%;
+        max-width: 100%;
     }
 
     .dashboard .formSectionContent .inputGroup {
@@ -2627,22 +3653,32 @@ div.grid_1_1#leftInnerGrid {
     .dashboard .sellerHomeContentBoxR .roundedBox {
         width: 100% !important;
         max-width: 100% !important;
+        min-width: 0 !important;
+        flex: 1 1 100% !important;
     }
 
     .dashboard .sellerHomeContentBoxL,
     .dashboard .sellerHomeContentBoxR {
         width: 100% !important;
+        flex-direction: column !important;
+    }
+
+    .dashboard #leftInnerGrid {
+        flex-direction: column !important;
+    }
+
+    .dashboard #leftInnerGrid > .column {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+    }
+
+    .dashboard .gridWrapper .grid_1_1 {
         grid-template-columns: 1fr !important;
     }
 
-    .dashboard .grid_1_1 {
-        flex-direction: column !important;
-        display: flex !important;
-    }
-
-    .dashboard .grid_1_1 .column {
+    .dashboard .gridWrapper .grid_1_1 .column {
         width: 100% !important;
-        float: none !important;
     }
 
     .dashboard .grid_600px_340px {
@@ -2701,5 +3737,141 @@ div.grid_1_1#leftInnerGrid {
         float: none;
         display: block;
         margin: 0 auto 16px;
+    }
+
+    /* My Orders responsive */
+    .dashboard .ordersTable #search {
+        flex-direction: column;
+    }
+
+    .dashboard .ordersTable #selectorDiv {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .dashboard .ordersTable #friendSearchContainer,
+    .dashboard .ordersTable #productDiv {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .dashboard .ordersTable #checkBoxDiv {
+        flex-wrap: wrap;
+    }
+
+    .dashboard .ordersTable #searchButtonDiv {
+        width: 100%;
+    }
+
+    .dashboard .ordersTable .searchOrders {
+        width: 100%;
+    }
+
+    .dashboard .ordersTable .searchOrders button {
+        width: 100%;
+    }
+
+    /* Proposals responsive */
+    .dashboard #validationErrors {
+        margin: 20px 16px;
+    }
+
+    /* Wholesale Orders responsive */
+    .dashboard .ordersTable .oliDiv {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Connections responsive */
+    .dashboard .ordersTable .expando.control {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard .ordersTable .parentRow td {
+        display: block;
+        width: 100%;
+        padding: 8px 16px;
+    }
+
+    .dashboard .ordersTable .innerheader {
+        display: none;
+    }
+
+    .dashboard .ordersTable .productDetails {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 16px;
+    }
+
+    .dashboard .ordersTable .productDetails::before {
+        content: attr(data-label);
+        font-weight: 500;
+        color: var(--color-gray);
+    }
+
+    /* Lead Channels Wizard responsive */
+    .dashboard .grid_1_1 {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard #iliWizardSteps ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .dashboard #iliWizardSteps ul li {
+        width: 100%;
+    }
+
+    .dashboard .grid_600px_340px {
+        flex-direction: column;
+    }
+
+    .dashboard .grid_600px_340px .primary {
+        width: 100%;
+    }
+
+    .dashboard .grid_600px_340px .secondary {
+        width: 100%;
+    }
+
+    .dashboard .wizard-integration-details img.sidebar {
+        float: none;
+        display: block;
+        margin: 0 auto 16px;
+    }
+
+    /* Wizard form fields responsive */
+    .dashboard .formSectionContent .inputGroup {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard .formSectionContent .mainLabel {
+        width: 100%;
+        text-align: left;
+        padding-right: 0;
+        margin-bottom: 8px;
+    }
+
+    .dashboard .formSectionContent .options {
+        width: 100%;
+    }
+
+    .dashboard .formSectionContent .textInput,
+    .dashboard .formSectionContent select,
+    .dashboard .formSectionContent textarea {
+        max-width: 100%;
+    }
+
+    .dashboard .formSectionContent .optionsContent > div[style*="float: left"] {
+        width: 100% !important;
+        margin-right: 0;
+    }
+
+    .dashboard .formSectionContent .buttonGroup {
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 }
