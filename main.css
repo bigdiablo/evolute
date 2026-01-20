@@ -9,6 +9,9 @@
     --color-black: #09090B;
     --color-gray: #6b7280;
     --color-red: #DC2626;
+    --color-error: #DC2626;
+    --color-success: #16A34A;
+    --color-warning: #F59E0B;
     --border-color: #E5E7EB;
     --border-sidebar: #E4E4E7;
     --border-light: #F3F4F6;
@@ -16,6 +19,18 @@
     --bg-hover: #F9FAFB;
     --bg-light: #F4F4F5;
     --bg-muted: #D1D5DB;
+}
+
+/* Global Reset for Dashboard */
+.dashboard * {
+    box-sizing: border-box;
+}
+
+.dashboard .clear {
+    clear: both;
+    height: 0;
+    display: block;
+    overflow: hidden;
 }
 
 html,
@@ -1060,19 +1075,30 @@ body.login {
 
 /* Common Box Content - ensure white background */
 .dashboard .boxContent {
-    background-color: var(--color-white);
-    padding: 20px;
+    background-color: var(--color-white) !important;
+    padding: 20px !important;
+    color: var(--color-black) !important;
 }
 
-.dashboard .blueBox {
+.dashboard .blueBox,
+.dashboard div.blueBox,
+.dashboard .greenBox,
+.dashboard div.greenBox,
+.dashboard .redBox,
+.dashboard div.redBox {
     background-color: var(--color-white) !important;
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
+    background-image: none !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 12px !important;
+    min-width: auto !important;
 }
 
-.dashboard .blueBox .boxContent {
+.dashboard .blueBox .boxContent,
+.dashboard .greenBox .boxContent,
+.dashboard .redBox .boxContent {
     background-color: var(--color-white) !important;
-    color: var(--color-black);
+    background-image: none !important;
+    color: var(--color-black) !important;
 }
 
 /* Common Grid Layouts */
@@ -1095,36 +1121,52 @@ body.login {
 
 /* Common Form Styles */
 .dashboard .inputGroup {
-    display: flex;
+    display: flex !important;
     flex-wrap: wrap;
     align-items: flex-start;
-    padding: 12px 0;
+    padding: 16px 0 !important;
+    margin: 0 !important;
     clear: both;
+    float: none !important;
+    width: 100% !important;
+    overflow: visible !important;
 }
 
 .dashboard .mainLabel {
-    width: 160px;
-    text-align: right;
-    padding-right: 16px;
+    width: 180px !important;
+    min-width: 180px;
+    text-align: right !important;
+    padding-right: 20px !important;
+    padding-top: 10px;
     flex-shrink: 0;
+    float: none !important;
+    position: static !important;
 }
 
 .dashboard .mainLabel label,
-.dashboard .mainLabel .bold {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--color-black);
-    line-height: 1.5;
+.dashboard .mainLabel .bold,
+.dashboard .mainLabelContent label {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: var(--color-black) !important;
+    line-height: 1.5 !important;
 }
 
 .dashboard .mainLabel .requiredMarker {
-    color: var(--color-error);
+    color: var(--color-error) !important;
     margin-left: 2px;
 }
 
 .dashboard .options {
-    flex: 1;
+    flex: 1 !important;
     min-width: 0;
+    width: auto !important;
+    float: none !important;
+    position: static !important;
+    text-align: left !important;
+    clear: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 .dashboard .optionsContent {
@@ -1132,55 +1174,65 @@ body.login {
     flex-wrap: wrap;
     align-items: center;
     gap: 8px;
+    padding: 0 !important;
+    line-height: normal !important;
+    background: transparent !important;
 }
 
 /* Common Form Inputs */
 .dashboard input[type="text"],
 .dashboard input.textInput {
-    padding: 10px 14px;
-    font-size: 14px;
-    color: var(--color-black);
-    background-color: var(--color-white);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
+    padding: 10px 14px !important;
+    font-size: 14px !important;
+    color: var(--color-black) !important;
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
     transition: border-color 0.15s ease;
+    min-width: 280px;
+    max-width: 400px;
 }
 
 .dashboard input[type="text"]:focus,
 .dashboard input.textInput:focus {
-    outline: none;
-    border-color: var(--color-blue);
+    outline: none !important;
+    border-color: var(--color-blue) !important;
 }
 
 .dashboard select {
-    padding: 10px 14px;
-    font-size: 14px;
-    color: var(--color-black);
-    background-color: var(--color-white);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    background-size: 16px;
-    padding-right: 40px;
+    padding: 10px 14px !important;
+    font-size: 14px !important;
+    color: var(--color-black) !important;
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 12px center !important;
+    background-size: 16px !important;
+    padding-right: 40px !important;
     cursor: pointer;
     min-width: 280px;
+    max-width: 400px;
 }
 
 .dashboard select:focus {
-    outline: none;
-    border-color: var(--color-blue);
+    outline: none !important;
+    border-color: var(--color-blue) !important;
 }
 
 /* Common Button Styles */
 .dashboard .buttonGroup {
-    display: flex;
+    display: flex !important;
     gap: 12px;
-    padding: 20px 0;
-    margin: 0;
-    float: none;
+    padding: 20px !important;
+    margin: 0 !important;
+    float: none !important;
+    clear: none !important;
+    text-align: left !important;
+    white-space: normal !important;
 }
 
 .dashboard .buttonGroup .yui-button {
@@ -1189,27 +1241,37 @@ body.login {
 }
 
 .dashboard .buttonGroup .yui-button button,
-.dashboard .buttonGroup .yui-button a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: 500;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.15s ease;
+.dashboard .buttonGroup .yui-button a,
+.dashboard .formSectionContent .yui-button button,
+.dashboard .formSectionContent .yui-button a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 12px 24px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    border: none !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    white-space: nowrap !important;
+    text-decoration: none !important;
+    transition: all 0.15s ease !important;
+    background-color: var(--color-dark-blue) !important;
+    color: var(--color-white) !important;
 }
 
-.dashboard .buttonGroup .yui-submit-button button {
-    background-color: var(--color-dark-blue);
-    color: var(--color-white);
+.dashboard .buttonGroup .yui-submit-button button,
+.dashboard .formSectionContent .yui-submit-button button {
+    background-color: var(--color-dark-blue) !important;
+    color: var(--color-white) !important;
 }
 
-.dashboard .buttonGroup .yui-submit-button button:hover {
-    background-color: var(--color-blue);
+.dashboard .buttonGroup .yui-submit-button button:hover,
+.dashboard .formSectionContent .yui-submit-button button:hover,
+.dashboard .buttonGroup .yui-button button:hover,
+.dashboard .formSectionContent .yui-button button:hover {
+    background-color: var(--color-blue) !important;
+    transform: translateY(-1px);
 }
 
 /* Integration Options Grid */
@@ -1255,34 +1317,247 @@ body.login {
     padding: 0;
 }
 
+/* Search Filter Form */
+.dashboard #search {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+    min-width: auto !important;
+}
+
+.dashboard #search #selectorDiv {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dashboard #search #checkBoxDiv {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard #search #checkBoxDiv > div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.dashboard #search #searchButtonDiv {
+    margin-left: auto;
+}
+
+/* Checkbox Alignment Fix */
+.dashboard input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    cursor: pointer;
+    accent-color: var(--color-blue);
+    vertical-align: middle;
+}
+
+.dashboard input[type="checkbox"] + label,
+.dashboard label {
+    font-size: 14px;
+    color: var(--color-black);
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+/* Radio Button Styling */
+.dashboard input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    cursor: pointer;
+    accent-color: var(--color-blue);
+    vertical-align: middle;
+}
+
+/* System Error Page */
+.dashboard .systemError,
+.dashboard .errorBox {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: var(--color-white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.dashboard .systemError .hdr,
+.dashboard .errorBox .hdr {
+    background-color: var(--color-error);
+    color: var(--color-white);
+    padding: 16px 24px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.dashboard .systemError .boxContent,
+.dashboard .errorBox .boxContent {
+    padding: 24px;
+    background-color: #FEF3C7;
+    border-top: 3px solid var(--color-warning);
+}
+
+.dashboard .systemError .boxContent p,
+.dashboard .errorBox .boxContent p {
+    font-size: 14px;
+    color: var(--color-black);
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.dashboard .systemError .boxContent a,
+.dashboard .errorBox .boxContent a {
+    color: var(--color-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.dashboard .systemError .boxContent a:hover,
+.dashboard .errorBox .boxContent a:hover {
+    text-decoration: underline;
+}
+
+/* Disabled State */
+.dashboard .disabled {
+    color: var(--color-gray);
+    opacity: 0.7;
+}
+
+/* Error States */
+.dashboard .error .mainLabel label,
+.dashboard label.error {
+    color: var(--color-error);
+    font-weight: 600;
+}
+
+.dashboard div.error {
+    background-color: #FEF3C7;
+    border-left: 3px solid var(--color-error);
+    padding: 12px 16px;
+    border-radius: 8px;
+}
+
 .dashboard b.bt,
 .dashboard b.bt b,
 .dashboard b.bb,
-.dashboard b.bb b {
-    display: none;
+.dashboard b.bb b,
+.dashboard b.htop,
+.dashboard b.htop b {
+    display: none !important;
+}
+
+/* Section Header - Clean Modern Look */
+.dashboard .sectionHeader {
+    background: var(--color-white) !important;
+    margin: 0 !important;
+    padding: 20px 24px !important;
+    border: none !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    clear: none !important;
+}
+
+.dashboard .sectionHeader h2 {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: var(--color-black) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Form Section Content */
+.dashboard .formSectionContent {
+    background-color: var(--color-white) !important;
+    padding: 24px !important;
+}
+
+/* Label Value Pairs */
+.dashboard .labelValue {
+    display: flex !important;
+    align-items: flex-start;
+    padding: 12px 0 !important;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.dashboard .labelValue:last-child {
+    border-bottom: none;
+}
+
+.dashboard .labelValue .label {
+    width: 180px !important;
+    min-width: 180px;
+    flex-shrink: 0;
+    padding-right: 20px;
+    float: none !important;
+}
+
+.dashboard .labelValue .label .bold,
+.dashboard .labelValue .label span.bold {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: var(--color-black) !important;
+}
+
+.dashboard .labelValue .value {
+    flex: 1;
+    font-size: 14px !important;
+    color: var(--color-black) !important;
+    float: none !important;
+}
+
+.dashboard .labelValue .value.inactive {
+    color: var(--color-error) !important;
+    font-weight: 500;
+}
+
+.dashboard .labelValue .value.active {
+    color: var(--color-success) !important;
+    font-weight: 500;
 }
 
 .dashboard .roundedBox,
 .dashboard .roundedBox2,
 .dashboard .roundedBox3,
-.dashboard .roundedBox4 {
-    background-color: var(--color-white);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    margin-top: 0;
-    margin-bottom: 0;
-    box-shadow: none;
+.dashboard .roundedBox4,
+.dashboard div.roundedBox,
+.dashboard div.roundedBox2,
+.dashboard div.roundedBox3,
+.dashboard div.roundedBox4 {
+    background-color: var(--color-white) !important;
+    background-image: none !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 12px !important;
+    margin: 0 0 24px 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    overflow: hidden;
+    min-width: auto !important;
+    clear: none !important;
+    position: relative !important;
 }
 
 .dashboard .roundedBox .hdr,
 .dashboard .roundedBox2 .hdr,
-.dashboard .roundedBox3 .hdr {
-    display: flex;
-    align-items: center;
-    padding: 20px 24px;
-    border-bottom: 1px solid var(--border-color);
-    background-color: var(--color-white);
+.dashboard .roundedBox3 .hdr,
+.dashboard .roundedBox4 .hdr {
+    display: flex !important;
+    align-items: center !important;
+    padding: 20px 24px !important;
+    margin: 0 !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    background-color: var(--color-white) !important;
+    background-image: none !important;
     border-radius: 12px 12px 0 0;
+    overflow: visible !important;
 }
 
 .dashboard .roundedBox .hdr .tl,
@@ -1403,10 +1678,10 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .sellerHomeContentBoxL,
 .dashboard .sellerHomeContentBoxR {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    width: 100%;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    width: 100% !important;
     margin: 0 !important;
 }
 
@@ -1423,14 +1698,14 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .sellerHomeContentBoxL .roundedBox,
 .dashboard .sellerHomeContentBoxR .roundedBox {
-    display: flex;
-    flex-direction: column;
-    width: calc(20% - 20px);
-    min-width: 180px;
-    max-width: 220px;
-    flex: 1 1 180px;
-    padding: 0;
-    margin: 0;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    flex: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 .dashboard .sellerHomeContentBoxL .boxContent,
@@ -2001,9 +2276,12 @@ div.grid_1_1#leftInnerGrid {
 
 /* ========== MANAGE SUBSCRIPTIONS ========== */
 
-.dashboard .nestedListTable {
-    width: 100%;
-    border-collapse: collapse;
+.dashboard .nestedListTable,
+.dashboard table.nestedListTable {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    min-width: auto !important;
+    background-color: var(--color-white) !important;
 }
 
 .dashboard .nestedListTable thead tr.actions td,
@@ -2048,19 +2326,20 @@ div.grid_1_1#leftInnerGrid {
     padding: 0;
 }
 
-.dashboard .ordersTable thead tr.actions td.paginationTop .yui-button .first-child a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    padding: 10px 18px;
-    background-color: var(--color-dark-blue);
-    color: var(--color-white);
-    font-size: 14px;
-    font-weight: 500;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.15s ease;
+.dashboard .ordersTable thead tr.actions td.paginationTop .yui-button .first-child a,
+.dashboard .ordersTable thead tr.actions td.paginationTop .yui-link-button .first-child a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    padding: 10px 18px !important;
+    background-color: var(--color-dark-blue) !important;
+    color: var(--color-white) !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    border-radius: 8px !important;
+    transition: background-color 0.15s ease !important;
 }
 
 .dashboard .ordersTable thead tr.actions td.paginationTop .yui-button .first-child a::before {
@@ -2204,6 +2483,90 @@ div.grid_1_1#leftInnerGrid {
     height: 8px;
     background-color: var(--bg-muted);
     border-radius: 50%;
+}
+
+/* Activation Requested - Orange/Yellow */
+.dashboard .ordersTable tbody tr td.status .activation_requested,
+.dashboard td.status .activation_requested {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    color: #D97706 !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    text-transform: uppercase !important;
+}
+
+.dashboard .ordersTable tbody tr td.status .activation_requested::before,
+.dashboard td.status .activation_requested::before {
+    content: "" !important;
+    width: 8px !important;
+    height: 8px !important;
+    background-color: #D97706 !important;
+    border-radius: 50% !important;
+}
+
+/* Request Activation - Red */
+.dashboard .ordersTable tbody tr td.status .request_activation,
+.dashboard td.status .request_activation {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    color: #DC2626 !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    text-transform: uppercase !important;
+}
+
+.dashboard .ordersTable tbody tr td.status .request_activation::before,
+.dashboard td.status .request_activation::before {
+    content: "" !important;
+    width: 8px !important;
+    height: 8px !important;
+    background-color: #DC2626 !important;
+    border-radius: 50% !important;
+}
+
+/* Testing / Submit Test Leads - Blue */
+.dashboard .ordersTable tbody tr td.status .submit_test_leads,
+.dashboard td.status .submit_test_leads {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    color: var(--color-blue) !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    text-transform: uppercase !important;
+}
+
+.dashboard .ordersTable tbody tr td.status .submit_test_leads::before,
+.dashboard td.status .submit_test_leads::before {
+    content: "" !important;
+    width: 8px !important;
+    height: 8px !important;
+    background-color: var(--color-blue) !important;
+    border-radius: 50% !important;
+}
+
+/* Active status - uppercase to match others */
+.dashboard .ordersTable tbody tr td.status .active,
+.dashboard td.status .active {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    color: var(--color-green) !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    text-transform: uppercase !important;
+}
+
+.dashboard .ordersTable tbody tr td.status .active::before,
+.dashboard td.status .active::before {
+    content: "" !important;
+    width: 8px !important;
+    height: 8px !important;
+    background-color: var(--color-green) !important;
+    border-radius: 50% !important;
 }
 
 .dashboard .ordersTable tbody tr td.right {
@@ -2375,7 +2738,11 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .blueBox.integration {
     display: flex;
     flex-direction: column;
-    min-height: 300px;
+    min-height: 280px;
+    padding: 24px;
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
 }
 
 .dashboard .blueBox.integration .sideBarGroup {
@@ -3385,6 +3752,31 @@ div.grid_1_1#leftInnerGrid {
         grid-template-columns: 1fr;
     }
 
+    /* Search filter responsive */
+    .dashboard #search {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .dashboard #search #checkBoxDiv {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .dashboard #search #searchButtonDiv {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .dashboard #search #searchButtonDiv .yui-button {
+        width: 100%;
+    }
+
+    .dashboard #search #searchButtonDiv .yui-button button {
+        width: 100%;
+    }
+
     .dashboard .inputGroup {
         flex-direction: column;
         align-items: flex-start;
@@ -3654,13 +4046,13 @@ div.grid_1_1#leftInnerGrid {
         width: 100% !important;
         max-width: 100% !important;
         min-width: 0 !important;
-        flex: 1 1 100% !important;
     }
 
     .dashboard .sellerHomeContentBoxL,
     .dashboard .sellerHomeContentBoxR {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
         width: 100% !important;
-        flex-direction: column !important;
     }
 
     .dashboard #leftInnerGrid {

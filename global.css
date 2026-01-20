@@ -8,9 +8,10 @@
 .hidden{visibility:hidden;}
 
 /* =========================================================
-   formfields.css
+   formfields.css - COMMENTED OUT (now in main.css)
    ========================================================= */
 
+/*
    .inputGroup {
     clear: both;
     overflow: visible;
@@ -66,7 +67,9 @@ label.required {
     font-weight: bold;
     line-height: 1.5em;
 }
+*/
 
+/*
 div.error, div.biderror table td, div.biderror table th {
     background: #FFFFCC;
 }
@@ -84,7 +87,9 @@ label.checkbox {
     padding-left: 15px;
     display: block;
 }
+*/
 
+/*
 .options {
     padding: 0 0 0 0;
     margin: 0;
@@ -104,7 +109,9 @@ label.checkbox {
     line-height: 1.5em;
     background: transparent;
 }
+*/
 
+/*
 .options .option {
     padding-bottom: 5px;
 }
@@ -117,6 +124,7 @@ label.checkbox {
     display: inline;
     padding-right: 1em;
 }
+*/
 
 .formSection,.formSectionAlternate {
     clear: both;
@@ -212,6 +220,7 @@ label.checkbox {
     color: #A0C9F2;
 }
 
+/*
 #MainTitle {
     color: #2C4F68;
     margin: 0.5em 0 0 0.7em
@@ -236,6 +245,7 @@ label.checkbox {
     font-size: 93%;
     font-weight: bold;
 }
+*/
 
 .calendarWithSelects .showCalendarButton {
     border: none;
@@ -255,8 +265,9 @@ label.checkbox {
 }
 
 /***************************************************
- *  Buttons
+ *  Buttons - COMMENTED OUT (now in main.css)
  **************************************************/
+/*
 .yui-button {
     float: left;
 }
@@ -269,6 +280,7 @@ label.checkbox {
     white-space: nowrap;
     margin-right: .3em;
 }
+*/
 
 .buttonGroup span.first-child button,.buttonGroup span.first-child a {
     font-weight: bold;
@@ -1188,9 +1200,11 @@ table.nestedListTable tr.sectionStart th.tableSectionHeaderAlternate {
     background-color: #fefdfa;
 }
 
+/*
 table.ordersTable {
     min-width: 1100px
 }
+*/
 
 span.actionRequired {
     color: #B65426;
@@ -2924,9 +2938,10 @@ div #searchFieldsDiv p.information {
     padding-left: 2em
 }
 
-/********** rounded box selectors **********/ 
+/********** rounded box selectors - COMMENTED OUT (now in main.css) **********/ 
 /* main containers */
 /* Both IE6 & 7 need zoom or the side borders disappear */
+/*
 div.roundedBox,
 div.roundedBox2,
 div.roundedBox3,
@@ -2944,6 +2959,7 @@ div.redBox {
     background-color: #fff;
     position: relative
 }
+*/
 div.sellerHomeContentBoxL div.roundedBox,
 div.sellerHomeContentBoxR div.roundedBox {
     min-width: 100px;
@@ -2997,10 +3013,12 @@ b.bb b,.blueBox b.bb b {
     background-position: 100% -36px;
     left: 4px;
 }
+/*
 div.blueBox {
     border: solid 1px #98E0F7;
     background-color: #f3fbff;
 }
+*/
 
 /* red & green variants */
 .greenBox b.bt,.greenBox b.bt b,.greenBox b.bb,.greenBox b.bb b {
@@ -3091,7 +3109,8 @@ b.htop b.right {
     left: -2px;
     top: -16px;
 }
-/* New implementation; intended to replace the ensuing stuff */
+/* New implementation - COMMENTED OUT (now in main.css) */
+/*
 .roundedBox .hdr {
     overflow: hidden;
     margin-right: 1px;
@@ -3137,7 +3156,9 @@ b.htop b.right {
 }
 .roundedBox .hdr h2 a.headerLink2 {
     top: 0px }
+*/
 /* End new implementation */
+/*
 .roundedBox div.sectionHeader h2,
 .roundedBox2 div.sectionHeader h2,
 .roundedBox3 div.sectionHeader h2,
@@ -3150,12 +3171,11 @@ div.confirmationSectionHeader2 h2 {
     line-height: 1.25em;
     padding: 0px 10px 8px 10px;
     margin: -5px 2px 0 0;
-    /* background-color: #f0f0f1; */
     background-color: #e0e1e2;
     font-size: 110%;
-    /* color: #47545d */
     color: #2F466B;
 }
+*/
 .sectionHeaderFlat {
     background-color: #e0e1e2;
     border-left: solid 1px #fff;
@@ -3234,6 +3254,7 @@ html:first-child div.roundedBox4 div.sectionHeader b.htop b.center {
     width: 91.5%
 }
 
+/*
 div.boxContent,div.boxContentTrim {
     padding: 0px 10px
 }
@@ -3241,6 +3262,7 @@ div.boxContent,div.boxContentTrim {
 div.boxContent p {
     font-size: 90%
 }
+*/
 
 /****************** Success messages/Validation errors *********************/
 #successMessage h3 {
@@ -3772,41 +3794,36 @@ table#leadChannelsListTable td.status div {
     text-transform: uppercase;
 }
 
+/* COMMENTED OUT - Status styles moved to main.css */
+/*
 table#leadChannelsListTable td.status div.active {
     color: #829427;
-    /* background-image: url("/images/icons/channels/active.gif"); */
 }
 
 table#leadChannelsListTable td.status div.request_activation {
     color: #CC3300;
-    /* background-image: url("/images/icons/channels/request_activation.gif"); */
 }
 
 table#leadChannelsListTable td.status div.submit_test_leads {
     color: #CD9900;
-    /* background-image: url("/images/icons/channels/submit_test_leads.gif"); */
 }
 
 table#leadChannelsListTable td.status div.quality_verification {
     color: #CC3300;
-    /* background-image: url("/images/icons/channels/quality_verification.gif"); */
 }
 
 table#leadChannelsListTable td.status div.inactive {
     color: #666;
-    /* background-image: url("/images/icons/channels/inactive.gif"); */
 }
 
 table#leadChannelsListTable td.status div.new {
     color: #CC3300;
-    /* background-image: url("/images/icons/channels/new.gif"); */
 }
 
 table#leadChannelsListTable td.status div.activation_requested {
     color: #B4CD35;
-    /* background-image: url("/images/icons/channels/activation_requested.gif"); */
 }
-/* view.vm */
+
 div.labelValue div.active, div.inputGroup div.active {
     color: #829427;
 }
@@ -3834,6 +3851,7 @@ div.labelValue div.new, div.inputGroup div.new {
 div.labelValue div.activation_requested, div.inputGroup div.activation_requested {
     color: #CC3300;
 }
+*/
 
 /* sidebar.vm */
 #sidebar img.sidebar {
