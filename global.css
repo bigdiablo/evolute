@@ -10,146 +10,9 @@ ol, ul { list-style: none; }
 
 /* Legacy utility classes */
 .none { display: none; }
-.hidden { visibility: hidden; }
+.hidden { display: none; }
 
-/* =========================================================
-   formfields.css - COMMENTED OUT (now in main.css)
-   ========================================================= */
-
-/*
-   .inputGroup {
-    clear: both;
-    overflow: visible;
-    padding: 0.5em 0 0.5em 0;
-    margin: 0 0 0 0;
-    float: left;
-    width: 100%;
-}
-
-.option .inputGroup {
-    border: none;
-}
-
-.mainLabel {
-    margin: 0;
-    padding: 0px 0 0 0;
-    position: static;
-    text-align: right;
-    width: 25%;
-    float: left;
-}
-
-.disabled {
-    color: #888;
-}
-
-.mainLabel .requiredMarker {
-    margin-right: -0.59em;
-    padding-left: 0.2em;
-    color: #AD0036;
-}
-
-.disabled .mainLabel .requiredMarker {
-    color: #666;
-}
-
-.stackedForm .mainLabel {
-    width: 100%;
-    text-align: left;
-}
-
-.mainLabelContent {
-    padding-right: 1em;
-    line-height: 1.25em
-}
-
-.inputGroup label {
-    font-size: 93%;
-    line-height: 1.5em;
-}
-
-label.required {
-    font-weight: bold;
-    line-height: 1.5em;
-}
-*/
-
-/*
-div.error, div.biderror table td, div.biderror table th {
-    background: #FFFFCC;
-}
-
-.error .mainLabel label,
-label.error, 
-div.biderror table td,
-div.biderror table th {
-    color: #CC3300;
-    font-weight: bold;
-}
-
-label.checkbox {
-    text-indent: -15px;
-    padding-left: 15px;
-    display: block;
-}
-*/
-
-/*
-.options {
-    padding: 0 0 0 0;
-    margin: 0;
-    width: 75%;
-    float: left;
-    position: static;
-    text-align: left;
-    clear: right
-}
-
-.stackedForm .options {
-    width: 100%;
-}
-
-.optionsContent {
-    padding-left: 1em;
-    line-height: 1.5em;
-    background: transparent;
-}
-*/
-
-/*
-.options .option {
-    padding-bottom: 5px;
-}
-
-.options .subOption {
-    padding-left: 2em;
-}
-
-.inline .option,.inputGroup .inlineOption {
-    display: inline;
-    padding-right: 1em;
-}
-*/
-
-/* COMMENTED OUT - formSection styles moved to main.css */
-/*
-.formSection,.formSectionAlternate {
-    clear: both;
-    padding-bottom: 5px;
-    margin: 10px 0px 5px 0px;
-    border: 1px solid #CCC;
-    zoom: 1.0
-}
-
-.formSectionAlternate {
-    padding-bottom: 0px
-}
-
-.formSectionContent {
-    padding: 0 0 0 0;
-    width: auto
-}
-*/
+/* Form field utilities - kept for legacy support */
 
 .options .prefix {
     margin-left: -0.78em;
@@ -228,32 +91,6 @@ label.checkbox {
     color: #A0C9F2;
 }
 
-/*
-#MainTitle {
-    color: #2C4F68;
-    margin: 0.5em 0 0 0.7em
-}
-
-#MainTitle .inlinePhone {
-    white-space: nowrap;
-    color: #2176CB;
-    font-size: 85%;
-}
-
-.sectionHeader {
-    background: #EBEAEA;
-    margin-bottom: 0px;
-    padding: 5px 10px 5px 10px;
-    border: 1px solid #FFF;
-    border-bottom: 1px solid #CCC;
-    clear: both;
-}
-
-.sectionHeader h2 {
-    font-size: 93%;
-    font-weight: bold;
-}
-*/
 
 .calendarWithSelects .showCalendarButton {
     border: none;
@@ -272,48 +109,12 @@ label.checkbox {
     position: absolute;
 }
 
-/***************************************************
- *  Buttons - COMMENTED OUT (now in main.css)
- **************************************************/
-/*
-.yui-button {
-    float: left;
-}
-
-.buttonGroup {
-    float: right;
-    text-align: right;
-    clear: both;
-    padding: 0 3px 0 0;
-    white-space: nowrap;
-    margin-right: .3em;
-}
-*/
 
 .buttonGroup span.first-child button,.buttonGroup span.first-child a {
     font-weight: bold;
     font-size: 100%
 }
 
-.buttonGroup span.first-child button {
-    /* padding-bottom: 0.35em; */
-}
-
-.buttonGroup span.first-child a {
-    /* position: relative; */
-    /* top: -1px */
-}
-
-/*
-.buttonGroup span.yui-link-button span.first-child a {
-    padding: .3em 14px; }
-.buttonGroup span.yui-submit-button span.first-child { 
-    padding: .2em 0px .33em 1px }
-*/
-html:first-child .buttonGroup span.first-child button,html:first-child .buttonGroup span.first-child a
-    {
-    /* padding: 0px 4px 1px 4px; */
-}
 
 .buttonGroup input.firstAlternate {
     margin-right: 5em;
@@ -392,51 +193,10 @@ html:first-child .buttonGroup span.first-child button,html:first-child .buttonGr
 #StateSelectionContent {
     padding-right: 10px;
 }
-/* COMMENTED OUT - conflicts with main.css
-input[type='text'], input[type='password'] {
-    border-top: solid 1px #ccc;
-    border-right: solid 1px #ccc;
-    border-bottom: solid 1px #ddd;
-    border-left: solid 1px #ddd;
-}
-*/
-
-/* =========================================================
-   lp.css - PARTIALLY COMMENTED (conflicts with main.css)
-   ========================================================= */
-
-/* COMMENTED OUT - main.css handles body styles
-body {
-    color: #000;
-    background-color: #FFF;
-    margin: 0px auto;
-}
-
-html : *,* :focus,* :active {
-    outline: 0px;
-}
-a { cursor: pointer }
-a:link,a:visited,a:active {
-    color: #2F466B;
-}
-*/
 
 strong {
     font-weight: bold;
 }
-
-/* COMMENTED OUT - main.css handles headings
-h1,div.pageHeader {
-    font-size: 138.5%;
-    font-weight: bold;
-    margin: 6px 0px 0px 0px;
-    color: #003366;
-}
-
-h2 {
-    font-size: 116%;
-}
-*/
 
 #HeaderContent {
     min-width: 940px;   
@@ -519,7 +279,6 @@ h2 {
 .sideBar .sideBarGroup,.inlineSideBar .sideBarGroup {
     margin: 0 10px 10px 12px;
     font-size: 88%;
-    *font-size: 87%
 }
 
 .inlineSideBar,.inlineSideBar .sideBarGroup {
@@ -557,7 +316,6 @@ h2 {
 .sideBar .sideBarGroup ol li,
 .inlineSideBar .sideBarGroup ul li {
     font-size: 98.95%;
-    *font-size: 98%;
     padding-left: 0.25em;
     margin-bottom: 0.25em;
     list-style-position: outside;
@@ -832,7 +590,6 @@ div#SubNavigation.subtabs ul {
     margin: 0px;
 }
 
-}
 #NestedFormPage div.inputGroup {
     padding: 0.25em 0px 0.25em 0px;
 }
@@ -960,19 +717,6 @@ table.listTable,table.leadListTable {
     width: 100%
 }
 
-/* COMMENTED OUT - nestedListTable styles moved to main.css */
-/*
-table.nestedListTable {
-    margin: 0px;
-    margin-top: -0.5px;
-    border: none;
-    border-collapse: separate;
-    border-spacing: 0;
-    width: 100%;
-    z-index: 10;
-}
-*/
-
 table.leadListTable {
     margin: .5em 0px;
     border-bottom: 1px solid #ccc;
@@ -990,67 +734,6 @@ table.leadListTable th {
     font-size: 94%;
     text-align: center;
 }
-
-/* COMMENTED OUT - nestedListTable styles moved to main.css */
-/*
-table.nestedListTable th {
-    border: none;
-    background-color: #FAFAFA
-}
-
-table.nestedListTable thead tr th {
-    border: solid 1px #ccc !important;
-    border-right: none !important;
-    border-top: none;
-    background-color: #F6F6F6;
-    text-align: left;
-}
-
-table.nestedListTable tr.colheaders th {
-    padding: 0.1em 0.5em 0.1em 0.5em;
-    font-weight: bold;
-    border-top: solid 1px #ccc;
-}
-
-table.nestedListTable thead tr.actions td {
-    border-bottom: none;
-}
-
-table.nestedListTable thead tr th.center,
-table.nestedListTable td.center {
-    text-align: center;
-}
-
-table.nestedListTable thead tr th.first,
-table.nestedListTable thead tr:first-child {
-    border-left: none !important
-}
-
-table.nestedListTable thead tr th.last {
-    border-left: solid 1px #ccc !important;
-}
-
-table.nestedListTable tr.colheaders th.superheader,
-table.nestedListTable tr.colheaders th.subheader {
-    padding: 2px;
-    text-align: center;
-    width: auto
-}
-
-table.nestedListTable tr.colheaders th.subheader {
-    font-size: 90%;
-    border-top: none !important;
-}
-
-table.nestedListTable thead tr.colheaders th.empty {
-}
-
-table.nestedListTable thead tr.actions td.paginationTop div#search div {
-    float: left;
-    clear: right;
-    padding: 0px 4px
-}
-*/
 
 div.center,
 .center {
@@ -1078,35 +761,6 @@ table.leadListTable td {
     font-size: 90%;
     padding: 0.5em 0.6em 0.5em 0.6em;
 }
-
-/* COMMENTED OUT - nestedListTable td styles moved to main.css */
-/*
-table.nestedListTable td {
-    padding: .25em 0.5625em;
-}
-
-table.nestedListTable tbody tr.details td.innerheader {
-    background-color: #f6f6f6;
-}
-
-table.nestedListTable td.last {
-    border-bottom: none;
-}
-
-table.nestedListTable td div.nestedYuiButton {
-    clear: left;
-    float: right;
-    position: relative;
-    top: -20px;
-    margin: 0px;
-    line-height: 1.125em
-}
-table.nestedListTable tr.details,
-table.nestedListTable tr.details td {
-    cursor: default;
-    border: none;
-}
-*/
 
 table.leadListTable td {
     padding: 0.5em;
@@ -1371,57 +1025,6 @@ table.nestedListTable tbody tr td.date {
     text-align: ":"
 }
 
-ul.text {
-    
-}
-
-/* COMMENTED OUT - expando/contracto styles moved to main.css */
-/*
-table.nestedListTable td.expando,
-div.expando,
-li.expando,
-table.nestedListTable td.contracto,
-div.contracto,
-li.contracto {
-    padding-left: 1.5em;
-    background-color: #fff;
-    cursor: pointer
-}
-
-table.nestedListTable.expando:hover,
-table.nestedListTable.contracto:hover,
-div.expando:hover,
-div.contracto:hover,
-li.expando:hover,
-li.contracto:hover {
-    color: #B65426;
-    cursor: pointer
-}
-
-table.nestedListTable td.expando,div.expando {
-    background: url("/images/dealertrack/icon_plus.gif") 4px 50% no-repeat;
-}
-
-li.expando {
-    list-style-image: url("/images/dealertrack/icon_plus.gif");
-    list-style-position: inside;
-}
-
-table.nestedListTable td.contracto,div.contracto {
-    background: url("/images/dealertrack/icon_minus.gif") 4px 50% no-repeat
-}
-
-li.contracto {
-    list-style-image: url("/images/dealertrack/icon_minus.gif");
-    list-style-position: inside;
-}
-
-li.expando span,li.contracto span {
-    position: relative;
-    left: -6px;
-}
-*/
-
 table.nestedListTable tr.parentRow:hover {
     background-color: #E7EFBC
 }
@@ -1471,7 +1074,6 @@ table.cBoxes input {
 #container {
     padding: 10px 20px 20px 0px;
     width: 450px;
-    _width: 500px;
 }
 
 #container ul.text {
@@ -1479,10 +1081,6 @@ table.cBoxes input {
     list-style: none;
     padding: 0px;
     border: none;
-}
-
-#container ul.text li {
-    
 }
 
 #container ul.text li div {
@@ -1869,46 +1467,6 @@ div#bidgroupContent div.inputGroup div.mainLabel {
     background: transparent;
 }
 
-/* COMMENTED OUT - bidgridTabs styles moved to main.css */
-/*
-#bidTabs ul#bidgridTabs {
-    list-style: none;
-    margin: 0;
-    padding: 10px 10px 0;
-    max-width: 770px;
-    position: relative;
-    top: 1px;
-}
-
-#bidTabs ul#bidgridTabs li {
-    float: left;
-    background: url('/images/common/right-ordertab-off.gif') right top no-repeat;
-    text-align: center;
-    overflow: hidden;
-    margin-left: 0px;
-    position: relative;
-}
-
-html:first-child div#bidTabs ul#bidgridTabs li {
-    top: 1px
-}
-
-#bidTabs ul#bidgridTabs li a {
-    display: block;
-    background: url('/images/common/left-ordertab-off.gif') left top no-repeat;
-    padding: 6px 20px 2px 20px;
-    position: relative;
-    top: 0px;
-    border-bottom: solid 1px #ccc;
-    text-decoration: none;
-}
-
-#bidTabs ul#bidgridTabs li a.current {
-    border-bottom: solid 1px #fff;
-    z-index: 2;
-}
-*/
-
 /** Links at top right of bidgroup **/
 #bidgroupContent span#toggleViewSpan {
     position: relative;
@@ -1934,50 +1492,6 @@ html:first-child div#bidTabs ul#bidgridTabs li {
     white-space: nowrap;
     display: inline;
 }
-
-/* COMMENTED OUT - bidoptions styles moved to main.css */
-/*
-div#bidoptions {
-    width: 100%;
-    margin: auto 0px;
-}
-
-div#bidoptions div.narrow {
-    width: 75%;
-}
-
-div#bidoptions div#dataDiv,div#bidoptions div#infoDiv {
-}
-
-div#bidoptions div.varWidth1 {
-    width: 100%;
-}
-
-div#bidoptions div.varWidth2 {
-}
-
-div#bidoptions div#infoDiv {
-    display: none;
-    width: 24.3%;
-    clear: right;
-    margin: -9px 0px 0px 4px;
-}
-
-div#bidoptions div#filters,
-div#bidoptions div#bids,
-div#bidoptions div#settings {
-    position: relative;
-    float: left;
-    clear: left;
-    width: 100%;
-    margin: 0px auto;
-}
-
-div#bidoptions div#pricingContainer,
-div#bidoptions div#filtersContainer,
-div#bidoptions div#settingsContainer {
-}
-*/
 
 div#filtersContainer {
     position: relative;
@@ -2713,24 +2227,6 @@ td.right {
     text-align: right
 }
 
-/* COMMENTED OUT - outline styles with IE zoom hack */
-/*
-.outline {
-    border: solid 1px #ccc;
-    zoom: 1.0;
-}
-
-.outline div.outlineContent {
-    padding: 2px 10px;
-    width: auto
-}
-
-#dashWrapper #overview {
-    margin-right: 10px;
-    p\osition: relative;
-}
-*/
-
 /* Selectors for pagination */
 div.paginationContainer {
     margin: 0px;
@@ -2876,9 +2372,6 @@ th.sortedDesc,.nestedListTable th.sortedDesc {
 .parentRowOpen .firstChildCell {
     background: url('/images/controls/down_arrow.gif') no-repeat 6px 50%;
 }
-.hidden {
-    display: none;
-}
 .childRowClosed {
     display: none;
     height: 0px
@@ -2970,28 +2463,6 @@ div #searchFieldsDiv p.information {
     padding-left: 2em
 }
 
-/********** rounded box selectors - COMMENTED OUT (now in main.css) **********/ 
-/* main containers */
-/* Both IE6 & 7 need zoom or the side borders disappear */
-/*
-div.roundedBox,
-div.roundedBox2,
-div.roundedBox3,
-div.roundedBox4,
-div.roundedBox5,
-div.blueBox,
-div.greenBox,
-div.redBox {
-    min-width: 350px;
-    border: #ccc 1px solid;
-    margin: 10px 0px;
-    padding: 1px;
-    clear: both;
-    background: transparent;
-    background-color: #fff;
-    position: relative
-}
-*/
 div.sellerHomeContentBoxL div.roundedBox,
 div.sellerHomeContentBoxR div.roundedBox {
     min-width: 100px;
@@ -3045,12 +2516,6 @@ b.bb b,.blueBox b.bb b {
     background-position: 100% -36px;
     left: 4px;
 }
-/*
-div.blueBox {
-    border: solid 1px #98E0F7;
-    background-color: #f3fbff;
-}
-*/
 
 /* red & green variants */
 .greenBox b.bt,.greenBox b.bt b,.greenBox b.bb,.greenBox b.bb b {
@@ -3141,73 +2606,6 @@ b.htop b.right {
     left: -2px;
     top: -16px;
 }
-/* New implementation - COMMENTED OUT (now in main.css) */
-/*
-.roundedBox .hdr {
-    overflow: hidden;
-    margin-right: 1px;
-    margin-bottom: 0.8em }
-.roundedBox .hdr .tl, .roundedBox .hdr .tr {
-    position:absolute;
-    width:12px;
-    height:12px;
-    top:-1px; }
-.roundedBox .hdr .tl {
-    left:-1px;
-    background:url('/images/common/header-left.gif') no-repeat; }
-.roundedBox .hdr .tr {
-    right: -1px;
-    background:url('/images/common/header-right.gif') no-repeat; }
-.roundedBox .hdr h2 {
-    width: 100%;
-    margin: 1px;
-    padding: 0.33em;
-    background-color: #e0e1e2;
-    font-size: 110%;
-    font-weight: bold;
-    color: #2F466B; }
-.roundedBox .hdr h2 span {
-    padding: 0.5em; }
-.roundedBox .hdr h2 span.headerText {
-    padding: 1px;
-    padding-left: 0.5em;
-    display: block;
-    float: left; }
-.roundedBox .hdr h2 img.inlineHelpImg {
-    margin-top: -1px
-}
-.roundedBox .hdr h2 a.headerLink,
-.roundedBox .hdr h2 a.headerLink2 {
-    font-weight: normal;
-    font-size: 90%;
-    float: right;
-    clear: right;
-    position: absolute;
-    right: 10px;
-    top: 6px;
-}
-.roundedBox .hdr h2 a.headerLink2 {
-    top: 0px }
-*/
-/* End new implementation */
-/*
-.roundedBox div.sectionHeader h2,
-.roundedBox2 div.sectionHeader h2,
-.roundedBox3 div.sectionHeader h2,
-.roundedBox4 div.sectionHeader h2,
-div.confirmationSectionHeader h2,
-div.confirmationSectionHeader2 h2 {
-    position: relative;
-    top: -15px;
-    left: 1px;
-    line-height: 1.25em;
-    padding: 0px 10px 8px 10px;
-    margin: -5px 2px 0 0;
-    background-color: #e0e1e2;
-    font-size: 110%;
-    color: #2F466B;
-}
-*/
 .sectionHeaderFlat {
     background-color: #e0e1e2;
     border-left: solid 1px #fff;
@@ -3271,10 +2669,6 @@ div.confirmationSectionHeader b.htop b.right {
 .roundedBox4 div.sectionHeader b.htop b.center {
     width: 91%;
     overflow: hidden;
-}
-
-div#right div#overview div.roundedBox4 div.sectionHeader h3 {
-    
 }
 
 /* Opera */
@@ -3547,18 +2941,6 @@ label.iconLabel {
 div.inputGroup div.mainLabelContent label.iconLabel img.inlineHelpImg {
     margin-bottom: -4px
 }
-/* COMMENTED OUT - lpconnect link styles moved to main.css */
-/*
-#lpconnectlink {
-    padding: 6px;
-    padding-bottom: 0
-}
-
-#lpconnectlink :hover {
-    color: #FFFFA0
-}
-*/
-
 /* delivery settings screens */
 html:first-child div#sendTestLeadButtonDiv {
     float: right;
@@ -3828,65 +3210,6 @@ table#leadChannelsListTable td.status div {
     text-transform: uppercase;
 }
 
-/* COMMENTED OUT - Status styles moved to main.css */
-/*
-table#leadChannelsListTable td.status div.active {
-    color: #829427;
-}
-
-table#leadChannelsListTable td.status div.request_activation {
-    color: #CC3300;
-}
-
-table#leadChannelsListTable td.status div.submit_test_leads {
-    color: #CD9900;
-}
-
-table#leadChannelsListTable td.status div.quality_verification {
-    color: #CC3300;
-}
-
-table#leadChannelsListTable td.status div.inactive {
-    color: #666;
-}
-
-table#leadChannelsListTable td.status div.new {
-    color: #CC3300;
-}
-
-table#leadChannelsListTable td.status div.activation_requested {
-    color: #B4CD35;
-}
-
-div.labelValue div.active, div.inputGroup div.active {
-    color: #829427;
-}
-
-div.labelValue div.request_activation, div.inputGroup div.request_activation {
-    color: #CC3300;
-}
-
-div.labelValue div.submit_test_leads, div.inputGroup div.submit_test_leads {
-    color: #CD9900;
-}
-
-div.labelValue div.quality_verification, div.inputGroup div.quality_verification {
-    color: #CC3300;
-}
-
-div.labelValue div.inactive, div.inputGroup div.inactive {
-    color: #666;
-}
-
-div.labelValue div.new, div.inputGroup div.new {
-    color: #CC3300;
-}
-
-div.labelValue div.activation_requested, div.inputGroup div.activation_requested {
-    color: #CC3300;
-}
-*/
-
 /* sidebar.vm */
 #sidebar img.sidebar {
     float: left;
@@ -3970,8 +3293,6 @@ div.wizard-summary {
 }
 div.wizard-summary div.labelValue {
     width: 100%;
-}
-div.wizard-summary div.labelValue div.label {
 }
 div.wizard-summary div.labelValue div.value {
     padding-left: 0px;
@@ -4315,9 +3636,6 @@ div.section div.header.current.first {
     margin-top: -6px; }
 div.section div.header.current a { color: #fff; text-decoration: none }
 div.section div.invisible { display: none }
-div.section div.subsection {
-    
-}
 div.section div.subsection div {
     font-size: 90%;
     padding: 0.5em 0px 0.5em 1.5em;
@@ -4402,57 +3720,6 @@ table.reportResults td.rptDataRight b {
     text-align: right;
     padding-right: 0px;
 }
-
-/* =========================================================
-   lp-IE7.css - COMMENTED OUT (outdated IE styles)
-   ========================================================= */
-/*
-.userInfo {
-    position: relative;
-    top: -18px
-}
-
-#Header {
-    padding-bottom: 8px;
-}
-
-.space {
-    margin: -6px;
-}
-p.information {
-}
-#Navigation {
-    zoom: 1.0;
-}
-
-#Navigation b.tc {
-    width: 99%;
-}
-
-#Navigation b.bl {
-    background-position: 1px left;
-}
-
-#MainNavigation.tabs ul li a {
-    font-size: 117%;
-}
-
-div#SubNavigation {
-    zoom: 1.0;
-    margin-right: -20px;
-}
-table.nestedListTable, table#connectionsTable {
-	border-collapse: collapse;
-}
-table.nestedListTable tr.colheaders th.superheader,
-table.nestedListTable tr.colheaders th.subheader {
-    
-}
-
-table.nestedListTable td.actionRequired {
-    padding-left: 2.25em;
-}
-*/
 
 table#connectionsTable thead tr.actions td.paginationTop {
     padding-bottom: 14px;
@@ -4581,10 +3848,6 @@ tr.childRowOpen td {
     font-size: 70%;
 }
 
-div.roundedBox,div.roundedBox2,div.roundedBox3,div.roundedBox4,div.roundedBox5 {
-    zoom: 1.0;
-}
-
 div.roundedBox5 {
     min-width: 1180px;
 }
@@ -4650,10 +3913,6 @@ div.clickable label { position: static; }
 .yui-skin-sam .yui-button button {
     border-bottom: 0px;
 }
-/* order_series.vm */
-div#buttons, div.loopButtons {
-    zoom: 1.0;
-}
 #changesDiv ul.changeHolder li.details div.loopButtons {
     margin-bottom: 14px;
     margin-right: -4px
@@ -4677,28 +3936,6 @@ div#reportListGrid div.column {
     top: -8px;
     padding-right: 0.5em;
 }
-/* COMMENTED OUT - conflicts with main.css roundedBox styles
-.roundedBox .hdr {
-    margin-top: 2px;
-    margin-bottom: 0.4em;
-    padding-bottom: 0px }
-.roundedBox .hdr h2 {
-    padding-bottom: 6px;
-    margin-bottom: 8px; }
-.roundedBox .hdr h2 span {
-    padding-bottom: 0px; }
-.roundedBox .hdr h2 a.headerLink,
-.roundedBox .hdr h2 a.headerLink2 {
-    font-weight: normal;
-    font-size: 90%;
-    float: right;
-    clear: right;
-    position: absolute;
-    right: 0px;
-    top: 6px;
-}
-*/
-/* End new implementation */
 #sellerSettingsContainer .titleDiv {
     width: 98.5%
 }
@@ -4720,55 +3957,6 @@ div#reportListGrid div.column {
 /* "My Settings" */
 div#sideNavHeading { position: relative; top: -5px }
 
-/* =========================================================
-   lp-IE6.css - COMMENTED OUT (outdated IE styles)
-   ========================================================= */
-/*
-input { zoom: 1.0 }
-#logoDiv {
-    margin-left: 6px;
-}
-.userInfo {
-    margin-right: 8px; 
-}
-#Header {
-    padding-bottom: 0px;
-}
-#Navigation {
-    width: 1200px;
-}
-#Navigation b.tc {
-    width: 97.2%;
-    z-index: 1;
-}
-#Navigation b.tr {
-    float: left;
-    width: 28px;
-    margin-left: 0px;
-    z-index: -1;
-}
-#MainNavigation.tabs {
-    height: auto;
-}
-#MainNavigation.tabs ul {
-    z-index: 10;
-}
-div#SubNavigation {
-    width: 99.0%;
-    margin-top: -1px;
-}
-#Navigation b.br {
-    top: -1px;
-    left: -6px;
-    z-index: 12;
-}
-table.nestedListTable, table#connectionsTable {
-    border-collapse: collapse;
-}
-table.nestedListTable thead tr.actions td.paginationTop div#search,div#search {
-    width: 650px;
-}
-*/
 table#connectionsTable div#search {
     padding: 10px 0px 0px 0px;
     margin-bottom: 10px;
@@ -4778,7 +3966,6 @@ table#connectionsTable td.paginationTop div.buttonGroup {
     top: -6px;
 }
 #container ul.text li div {
-    zoom: 1.0;
     margin-top: 1px;
     margin-bottom: 1px;
 }
@@ -4787,8 +3974,6 @@ table#connectionsTable td.paginationTop div.buttonGroup {
 }
 #bidgroupContent {
     width: 900px;
-}
-#bidTabs {
 }
 #bidTabs ul#bidgridTabs {
     margin-left: 10px;
@@ -4878,7 +4063,6 @@ div.chartDiv {
 #dataDiv,#voiceDiv {
     margin-top: -2px;
 }
-#quickLinks { zoom: 1.0 }
 div #searchFieldsDiv {
     width: 50%;
 }
@@ -4934,7 +4118,6 @@ div.confirmationSectionHeader2 h2 {
 }
 /* blue variant */
 div.labelValue div.value div.blueBox {
-    zoom: 1.0;
     padding: 10px;
 }
 div.labelValue div.value div.blueBox b.bt,
@@ -4996,7 +4179,6 @@ ul.changeHolder li.details div.target div.titleDiv h3 {
 }
 /* leadstore */
 #infoDiv { padding-top: 4px }
-#submitButtonDiv { zoom: 1.0 }
 #infoDiv .checkoutButton { padding-top: 10px }
 #leadStoreSearch {
     padding-left: 310px;
@@ -5013,16 +4195,9 @@ ul.changeHolder li.details div.target div.titleDiv h3 {
     width: auto;
 }
 /* "Search Options" */
-#leadStoreSearchForm .boxContent div { zoom: 1.0 }
 #Footer { clear: both }
-/* order_series.vm */
-div#orderSeriesContainer div.confirmationSectionHeader {
-}
 div#orderSeriesContainer div.confirmationSectionHeader b.htop b.center {
    width: 98.2%;
-}
-div#orderSeriesContainer div.confirmationSectionHeader b.htop b.right {
-
 }
 div#orderSeriesContainer div.confirmationSectionHeader h2 {
     margin-top: 5px;
@@ -5031,15 +4206,8 @@ div#orderSeriesContainer div.orderSummaryContainer .content,
 div#orderSeriesContainer div.tcContainer .content {
     margin-right: 0px;
 }
-div#orderSeriesContainer div.tcContainer {
-}
-div#orderSeriesContainer div#buttons {
-}
 div#orderSeriesContainer div.roundedBox {
     width: auto
-}
-div#orderSeriesContainer div.roundedBox b.bt b,
-div#orderSeriesContainer div.roundedBox b.bb b {
 }
 #changesDiv ul.changeHolder li.expando {
     width: auto;
@@ -5065,8 +4233,6 @@ div#orderSeriesContainer div#primaryContainer div.confirmationSectionHeader .ord
     margin-top: 0px;
     margin-right: -0.267999em;
 }
-div#orderSeriesContainer div#primaryContainer div.confirmationSectionHeader h2 {
-}
 /* lead channel wizard */
 #steps li.affiliate {
     width: 31.29%
@@ -5077,7 +4243,6 @@ div.roundedBox3,
 div.roundedBox4,
 div.roundedBox5 {
     background-color: #fff;
-    zoom: 1.0
 }
 div.roundedBox { background: transparent; margin-right: -1px }
 
@@ -5107,12 +4272,8 @@ div#orderSeriesContainer div#primaryContainer div.confirmationSectionHeader b.ht
 div#orderSeriesContainer div#primaryContainer div.confirmationSectionHeader b.htop b.right {
     background-image: none
 }
-#changesDiv { }
 #changesDiv ul.changeHolder { width: 726px }
 #changesDiv ul.changeHolder li.details { width: 690px }
-#changesDiv ul.changeHolder li.details div.loopButtons {
-    
-}
 p.docPreview, p.getCode, .integration-support {
     background-position: 0px 50%;
     margin-bottom: 0px
@@ -5133,12 +4294,6 @@ div.sectionHeader h2 a#paymentHistoryLink {
 p.information {
     background: transparent;
 }
-/* COMMENTED OUT - conflicts with main.css
-.roundedBox .hdr { margin-top: 2px }
-.roundedBox .hdr h2 {
-    padding-top: 6px; 
-}
-*/
 /* oli selector widget on order summary screen */
 div#oliContainer {
     width: 786px !important;
@@ -5152,13 +4307,6 @@ img#securityCode_img {
     position: relative;
     top: 19px;
 }
-/* COMMENTED OUT - conflicts with main.css
-.roundedBox .hdr h2 a.headerLink,
-.roundedBox .hdr h2 a.headerLink2 {
-    top: 6px;
-}
-*/
-
 div#oliContainer div.hd,
 div#oliContainer div.bd,
 div#oliContainer div.ft {
@@ -5184,15 +4332,6 @@ div#sideNavHeading { position: relative; margin-top: 10px }
 	width:24.999999%;
 }
 
-/* COMMENTED OUT - grid_1_1 styles moved to main.css for 3-column layout */
-/*
-.grid_1_1 .column{
-	width:49.9999%;
-}
-.grid_1_1 .column1, .grid_1_1 .column2 { width: 49.4% }
-.grid_1_1 .column1 { margin-right: 6px }
-.grid_1_1 .column2 { margin-left: 6px }
-*/
 .grid_2_1 .primary{
 	width:66.6%;
 	float:left;
@@ -5406,8 +4545,6 @@ div#sideNavHeading { position: relative; margin-top: 10px }
     float: left;
 }
 /* seller ili screens */
-.grid_600px_340px {
-}
 .grid_600px_340px .primary {
     width: 600px;
     float: left;
@@ -5420,8 +4557,6 @@ div#sideNavHeading { position: relative; margin-top: 10px }
     position: relative;
 }
 /* seller settings screens */
-.grid_580px_350px {
-}
 .grid_580px_350px .column1 {
     width: 580px;
     float: left;
