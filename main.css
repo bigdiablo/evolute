@@ -458,18 +458,20 @@ body.login {
     display: flex !important;
     align-items: center;
     justify-content: center;
-    padding: 24px 20px 0 !important;
+    padding: 32px 24px 8px !important;
     background-color: var(--color-white) !important;
+    margin: 0 !important;
 }
 
 .login form[name="changePasswordForm"] .sectionHeader h2 {
-    font-size: 20px !important;
+    font-size: 22px !important;
     font-weight: 600 !important;
     color: var(--color-dark-blue) !important;
     margin: 0 !important;
     padding: 0 !important;
     background: none !important;
     text-align: center;
+    width: 100%;
 }
 
 .login form[name="changePasswordForm"] .sectionHeader b.htop,
@@ -481,27 +483,39 @@ body.login {
 .login form[name="changePasswordForm"] .formSectionContent {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 20px !important;
+    gap: 16px;
+    padding: 24px !important;
     width: 100%;
     box-sizing: border-box;
+}
+
+.login form[name="changePasswordForm"] .formSectionContent:last-of-type {
+    padding-top: 8px !important;
 }
 
 .login form[name="changePasswordForm"] .inputGroup {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
     width: 100%;
 }
 
 .login form[name="changePasswordForm"] .mainLabel {
     display: flex;
+    width: 100%;
+}
+
+.login form[name="changePasswordForm"] .mainLabelContent {
+    display: flex;
+    width: 100%;
 }
 
 .login form[name="changePasswordForm"] label.required {
     font-size: 14px;
     font-weight: 500;
     color: var(--color-blue) !important;
+    text-align: left;
+    white-space: nowrap;
 }
 
 .login form[name="changePasswordForm"] .requiredMarker {
@@ -521,18 +535,21 @@ body.login {
 
 .login form[name="changePasswordForm"] input.textInput.password {
     width: 100% !important;
-    height: 48px !important;
-    padding: 0 12px !important;
-    font-size: 14px !important;
+    height: 52px !important;
+    padding: 0 16px !important;
+    font-size: 15px !important;
     border: 1px solid var(--border-color) !important;
-    border-radius: 8px !important;
-    background-color: var(--color-white) !important;
+    border-radius: 10px !important;
+    background-color: #f8fafc !important;
     box-sizing: border-box !important;
+    transition: all 0.2s ease !important;
 }
 
 .login form[name="changePasswordForm"] input.textInput.password:focus {
     outline: none !important;
     border-color: var(--color-blue) !important;
+    background-color: var(--color-white) !important;
+    box-shadow: 0 0 0 3px rgba(0, 96, 167, 0.1) !important;
 }
 
 .login form[name="changePasswordForm"] .inlineHelpImg {
@@ -566,20 +583,23 @@ body.login {
     align-items: center;
     justify-content: center;
     width: 100% !important;
-    height: 48px !important;
+    height: 52px !important;
     padding: 0 24px !important;
-    font-size: 14px !important;
+    font-size: 15px !important;
     font-weight: 600 !important;
     color: var(--color-white) !important;
     background-color: var(--color-blue) !important;
     border: none !important;
-    border-radius: 8px !important;
+    border-radius: 10px !important;
     cursor: pointer;
-    transition: background-color 0.15s ease;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 96, 167, 0.25);
 }
 
 .login form[name="changePasswordForm"] .yui-button.yui-submit-button button:hover {
     background-color: var(--color-dark-blue) !important;
+    box-shadow: 0 4px 12px rgba(0, 66, 121, 0.35);
+    transform: translateY(-1px);
 }
 
 .login form[name="changePasswordForm"] b.bt,
@@ -1444,10 +1464,10 @@ body.login {
     transform: translateY(-1px);
 }
 
-/* Integration Options Grid */
+/* Integration Options Grid - 3 columns */
 .dashboard .integrationOptions {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 24px;
     padding: 20px;
 }
@@ -2892,7 +2912,7 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .gridWrapper .grid_1_1 {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 24px;
 }
 
@@ -3920,7 +3940,11 @@ div.grid_1_1#leftInnerGrid {
     }
 
     .dashboard .integrationOptions {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+    }
+
+    .dashboard .gridWrapper .grid_1_1 {
+        grid-template-columns: 1fr !important;
     }
 
     /* Search filter responsive */
@@ -4437,4 +4461,1987 @@ div.grid_1_1#leftInnerGrid {
         flex-direction: row;
         flex-wrap: wrap;
     }
+}
+
+/* ========== SETTINGS TABLES (nestedListTable) ========== */
+
+.dashboard .settings table.nestedListTable {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+    margin: 0 !important;
+    background-color: var(--color-white) !important;
+}
+
+.dashboard .settings table.nestedListTable thead tr.colheaders th {
+    padding: 12px 16px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    color: var(--color-gray) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    background-color: var(--bg-hover) !important;
+    border: none !important;
+    border-bottom: 1px solid var(--border-light) !important;
+    text-align: left !important;
+}
+
+.dashboard .settings table.nestedListTable thead tr.colheaders th.first {
+    border-left: none !important;
+}
+
+.dashboard .settings table.nestedListTable thead tr.colheaders th.last,
+.dashboard .settings table.nestedListTable thead tr.colheaders th.center {
+    text-align: center !important;
+}
+
+.dashboard .settings table.nestedListTable tbody tr td {
+    padding: 14px 16px !important;
+    font-size: 14px !important;
+    color: var(--color-dark) !important;
+    border: none !important;
+    border-bottom: 1px solid var(--border-light) !important;
+    background-color: var(--color-white) !important;
+    vertical-align: middle !important;
+}
+
+.dashboard .settings table.nestedListTable tbody tr.even td {
+    background-color: #fafbfc !important;
+}
+
+.dashboard .settings table.nestedListTable tbody tr:hover td {
+    background-color: var(--bg-hover) !important;
+}
+
+.dashboard .settings table.nestedListTable tbody tr td.center {
+    text-align: center !important;
+}
+
+.dashboard .settings table.nestedListTable tbody tr td a {
+    color: var(--color-blue) !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+}
+
+.dashboard .settings table.nestedListTable tbody tr td a:hover {
+    text-decoration: underline !important;
+}
+
+.dashboard .settings table.nestedListTable thead tr td.paginationTop {
+    padding: 16px !important;
+    background-color: var(--color-white) !important;
+    border: none !important;
+}
+
+.dashboard .settings table.nestedListTable thead tr td.paginationTop p.information {
+    margin: 0 !important;
+    padding: 12px 16px !important;
+    font-size: 13px !important;
+    color: var(--color-gray) !important;
+    background-color: #f0f9ff !important;
+    border: 1px solid #bae6fd !important;
+    border-radius: 8px !important;
+    line-height: 1.5 !important;
+}
+
+.dashboard .settings table.nestedListTable tfoot tr.actions td {
+    padding: 16px !important;
+    background-color: var(--color-white) !important;
+    border: none !important;
+    border-top: 1px solid var(--border-light) !important;
+}
+
+.dashboard .settings table.nestedListTable tfoot tr.actions td .buttonGroup {
+    display: flex !important;
+    justify-content: flex-start !important;
+}
+
+.dashboard .settings table.nestedListTable tfoot .yui-button.yui-link-button .first-child a,
+.dashboard .settings table.nestedListTable tfoot .yui-button .first-child a {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: var(--color-white) !important;
+    background-color: var(--color-dark-blue) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    transition: background-color 0.15s ease !important;
+}
+
+.dashboard .settings table.nestedListTable tfoot .yui-button.yui-link-button .first-child a:hover,
+.dashboard .settings table.nestedListTable tfoot .yui-button .first-child a:hover {
+    background-color: var(--color-blue) !important;
+    text-decoration: none !important;
+}
+
+.dashboard .settings table.nestedListTable tfoot .yui-button.yui-link-button,
+.dashboard .settings table.nestedListTable tfoot .yui-button {
+    background: none !important;
+    border: none !important;
+    margin: 0 !important;
+}
+
+/* Settings section header for tables */
+.dashboard .settings .roundedBox .sectionHeader {
+    display: flex !important;
+    align-items: center !important;
+    padding: 16px 20px !important;
+    background-color: var(--color-white) !important;
+    border-bottom: 1px solid var(--border-light) !important;
+    margin: 0 !important;
+}
+
+.dashboard .settings .roundedBox .sectionHeader h2 {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: var(--color-dark-blue) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: none !important;
+}
+
+.dashboard .settings .roundedBox .sectionHeader b.htop,
+.dashboard .settings .roundedBox .sectionHeader b.center,
+.dashboard .settings .roundedBox .sectionHeader b.right {
+    display: none !important;
+}
+
+/* ========== AUCTION SETTINGS CONTAINERS ========== */
+
+.dashboard .settings .sellerBidMinimum {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin: 0 !important;
+}
+
+.dashboard .settings .sellerBidMinimum thead th {
+    padding: 10px 12px !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    color: var(--color-white) !important;
+    background-color: var(--color-dark-blue) !important;
+    border: none !important;
+    text-align: center !important;
+}
+
+.dashboard .settings .sellerBidMinimum thead th.mainHeader,
+.dashboard .settings .sellerBidMinimum thead th.mainHeader2 {
+    background-color: var(--color-dark-blue) !important;
+}
+
+.dashboard .settings .sellerBidMinimum thead th.bidGridTop {
+    background-color: var(--color-blue) !important;
+    font-size: 12px !important;
+}
+
+.dashboard .settings .sellerBidMinimum tbody td {
+    padding: 12px !important;
+    font-size: 14px !important;
+    border: 1px solid var(--border-light) !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+.dashboard .settings .sellerBidMinimum tbody td.bidGridLeft {
+    background-color: #f8fafc !important;
+    font-weight: 500 !important;
+    text-align: left !important;
+    padding-left: 16px !important;
+}
+
+.dashboard .settings .sellerBidMinimum tbody td.price {
+    background-color: var(--color-white) !important;
+}
+
+.dashboard .settings .sellerBidMinimum tbody td.price input.textInput {
+    width: 60px !important;
+    padding: 8px !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 6px !important;
+    text-align: center !important;
+    font-size: 14px !important;
+}
+
+.dashboard .settings .sellerBidMinimum tbody .smallGrey {
+    font-size: 12px !important;
+    color: var(--color-gray) !important;
+}
+
+.dashboard .settings .roundedBox.bbLeft,
+.dashboard .settings .roundedBox.bbRight {
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+}
+
+.dashboard .settings .roundedBox.bbLeft h4,
+.dashboard .settings .roundedBox.bbRight h4 {
+    padding: 14px 16px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: var(--color-dark-blue) !important;
+    background-color: #f8fafc !important;
+    border-bottom: 1px solid var(--border-light) !important;
+    margin: 0 !important;
+}
+
+.dashboard .settings .roundedBox.bbLeft h4 span,
+.dashboard .settings .roundedBox.bbRight h4 span {
+    font-weight: 400 !important;
+    color: var(--color-gray) !important;
+}
+
+.dashboard .settings .roundedBox.noticePeriods,
+.dashboard .settings .roundedBox.returnPolicy {
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    margin-top: 16px !important;
+}
+
+.dashboard .settings .roundedBox.noticePeriods .hdr,
+.dashboard .settings .roundedBox.returnPolicy .hdr {
+    display: flex !important;
+    align-items: center !important;
+    padding: 14px 16px !important;
+    background-color: #f8fafc !important;
+    border-bottom: 1px solid var(--border-light) !important;
+}
+
+.dashboard .settings .roundedBox.noticePeriods .hdr h2,
+.dashboard .settings .roundedBox.returnPolicy .hdr h2 {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: var(--color-dark-blue) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: none !important;
+}
+
+.dashboard .settings .roundedBox.noticePeriods .hdr .tl,
+.dashboard .settings .roundedBox.noticePeriods .hdr .tr,
+.dashboard .settings .roundedBox.returnPolicy .hdr .tl,
+.dashboard .settings .roundedBox.returnPolicy .hdr .tr {
+    display: none !important;
+}
+
+.dashboard .settings .noticePeriodsContainer {
+    margin-top: 24px !important;
+}
+
+.dashboard .settings .grid_1_1 {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px !important;
+}
+
+.dashboard .settings .grid_1_1 .column {
+    width: 100% !important;
+}
+
+/* ========== PROMOTIONAL URL SETTINGS ========== */
+
+.dashboard .settings #linkContainer {
+    width: 100% !important;
+}
+
+.dashboard .settings #linkContainer .roundedBox {
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+}
+
+.dashboard .settings #linkContainer .roundedBox .hdr {
+    display: flex !important;
+    align-items: center !important;
+    padding: 16px 20px !important;
+    background-color: #f8fafc !important;
+    border-bottom: 1px solid var(--border-light) !important;
+}
+
+.dashboard .settings #linkContainer .roundedBox .hdr h2 {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: var(--color-dark-blue) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: none !important;
+}
+
+.dashboard .settings #linkContainer .roundedBox .hdr h2 span {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: var(--color-dark-blue) !important;
+}
+
+.dashboard .settings #linkContainer .roundedBox .hdr .tl,
+.dashboard .settings #linkContainer .roundedBox .hdr .tr {
+    display: none !important;
+}
+
+.dashboard .settings #linkContainer .roundedBox .formSectionContent {
+    padding: 24px !important;
+}
+
+.dashboard .settings #linkContainer .roundedBox .formSectionContent .boxContent {
+    padding: 0 !important;
+}
+
+.dashboard .settings #linkContainer .roundedBox .formSectionContent .boxContent p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: var(--color-gray) !important;
+    margin: 0 0 20px 0 !important;
+}
+
+.dashboard .settings #linkContainer .roundedBox .formSectionContent #lpconnectlink {
+    display: block !important;
+    padding: 16px 20px !important;
+    font-size: 14px !important;
+    font-family: 'SF Mono', Monaco, 'Courier New', monospace !important;
+    color: var(--color-dark-blue) !important;
+    background-color: #f0f9ff !important;
+    border: 1px solid #bae6fd !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: all 0.15s ease !important;
+    word-break: break-all !important;
+}
+
+.dashboard .settings #linkContainer .roundedBox .formSectionContent #lpconnectlink:hover {
+    background-color: #e0f2fe !important;
+    border-color: #7dd3fc !important;
+}
+
+.dashboard .settings #linkContainer .roundedBox b.bb {
+    display: none !important;
+}
+
+/* Promotional URL copy button enhancement */
+.dashboard .settings #linkContainer .roundedBox .formSectionContent #lpconnectlink::before {
+    content: "📋 " !important;
+    margin-right: 8px !important;
+}
+
+/* ========== GENERAL SETTINGS IMPROVEMENTS ========== */
+
+.dashboard .settings .formSectionContent {
+    padding: 20px !important;
+}
+
+.dashboard .settings .formSectionContent .boxContent {
+    padding: 0 !important;
+}
+
+.dashboard .settings .formSectionContent p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: var(--color-dark) !important;
+}
+
+.dashboard .settings .formSectionContent p.instructions {
+    padding: 12px 16px !important;
+    margin: 0 0 16px 0 !important;
+    font-size: 13px !important;
+    color: var(--color-gray) !important;
+    background-color: #f8fafc !important;
+    border-radius: 8px !important;
+    border-left: 3px solid var(--color-blue) !important;
+}
+
+/* ========== CONSUMER BRAND LIST TABLE ========== */
+
+.dashboard .settings .roundedBox5 {
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+}
+
+.dashboard .settings .roundedBox5 b.bt,
+.dashboard .settings .roundedBox5 b.bb {
+    display: none !important;
+}
+
+/* Action bar with buttons */
+.dashboard .settings table.nestedListTable thead tr td.paginationTop {
+    padding: 16px 20px !important;
+    background-color: var(--color-white) !important;
+    border: none !important;
+    border-bottom: 1px solid var(--border-light) !important;
+    vertical-align: middle !important;
+}
+
+.dashboard .settings table.nestedListTable thead tr td.paginationTop .buttonGroup {
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 12px !important;
+}
+
+/* Delete button styling */
+.dashboard .settings table.nestedListTable thead tr td.paginationTop .yui-button.yui-submit-button .first-child button {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #dc2626 !important;
+    background-color: #fef2f2 !important;
+    border: 1px solid #fecaca !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: all 0.15s ease !important;
+}
+
+.dashboard .settings table.nestedListTable thead tr td.paginationTop .yui-button.yui-submit-button .first-child button:hover {
+    background-color: #fee2e2 !important;
+    border-color: #f87171 !important;
+}
+
+.dashboard .settings table.nestedListTable thead tr td.paginationTop .yui-button.yui-submit-button {
+    background: none !important;
+    border: none !important;
+    margin: 0 !important;
+}
+
+/* Create button styling */
+.dashboard .settings table.nestedListTable thead tr td.paginationTop .yui-button.yui-link-button .first-child a {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: var(--color-white) !important;
+    background-color: var(--color-dark-blue) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    transition: background-color 0.15s ease !important;
+}
+
+.dashboard .settings table.nestedListTable thead tr td.paginationTop .yui-button.yui-link-button .first-child a:hover {
+    background-color: var(--color-blue) !important;
+}
+
+.dashboard .settings table.nestedListTable thead tr td.paginationTop .yui-button.yui-link-button {
+    background: none !important;
+    border: none !important;
+    margin: 0 !important;
+}
+
+/* Sortable column headers */
+.dashboard .settings table.nestedListTable thead tr.colheaders th.sortable {
+    cursor: pointer !important;
+    transition: background-color 0.15s ease !important;
+}
+
+.dashboard .settings table.nestedListTable thead tr.colheaders th.sortable:hover {
+    background-color: #e5e7eb !important;
+}
+
+.dashboard .settings table.nestedListTable thead tr.colheaders th.sortable a {
+    color: var(--color-gray) !important;
+    text-decoration: none !important;
+}
+
+.dashboard .settings table.nestedListTable thead tr.colheaders th.sortedAsc a,
+.dashboard .settings table.nestedListTable thead tr.colheaders th.sortedDesc a {
+    color: var(--color-dark-blue) !important;
+    font-weight: 600 !important;
+}
+
+.dashboard .settings table.nestedListTable thead tr.colheaders th.sortedAsc a::after {
+    content: " ↑" !important;
+}
+
+.dashboard .settings table.nestedListTable thead tr.colheaders th.sortedDesc a::after {
+    content: " ↓" !important;
+}
+
+/* Checkbox column */
+.dashboard .settings table.nestedListTable thead tr.colheaders th.checkbox,
+.dashboard .settings table.nestedListTable tbody tr td.checkbox {
+    width: 40px !important;
+    text-align: center !important;
+}
+
+.dashboard .settings table.nestedListTable input[type="checkbox"] {
+    width: 18px !important;
+    height: 18px !important;
+    cursor: pointer !important;
+    accent-color: var(--color-dark-blue) !important;
+}
+
+.dashboard .settings table.nestedListTable input[type="checkbox"]:disabled {
+    cursor: not-allowed !important;
+    opacity: 0.5 !important;
+}
+
+/* Pagination footer */
+.dashboard .settings table.nestedListTable tfoot tr.actions td.paginationBottom {
+    padding: 16px 20px !important;
+    background-color: #f8fafc !important;
+    border: none !important;
+    border-top: 1px solid var(--border-light) !important;
+}
+
+.dashboard .settings table.nestedListTable tfoot .paginationContainer {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 16px !important;
+}
+
+.dashboard .settings table.nestedListTable tfoot .paginationContainer .results {
+    font-size: 13px !important;
+    color: var(--color-gray) !important;
+}
+
+.dashboard .settings table.nestedListTable tfoot .paginationContainer .pagination {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.dashboard .settings table.nestedListTable tfoot .paginationContainer .pagination ul {
+    display: flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.dashboard .settings table.nestedListTable tfoot .paginationContainer .pagination ul li {
+    margin: 0 !important;
+}
+
+.dashboard .settings table.nestedListTable tfoot .paginationContainer .pagination ul li a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 36px !important;
+    height: 36px !important;
+    padding: 0 12px !important;
+    font-size: 14px !important;
+    color: var(--color-dark) !important;
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    transition: all 0.15s ease !important;
+}
+
+.dashboard .settings table.nestedListTable tfoot .paginationContainer .pagination ul li a:hover {
+    background-color: var(--bg-hover) !important;
+    border-color: var(--border-color) !important;
+}
+
+.dashboard .settings table.nestedListTable tfoot .paginationContainer .pagination ul li.current a {
+    color: var(--color-white) !important;
+    background-color: var(--color-dark-blue) !important;
+    border-color: var(--color-dark-blue) !important;
+}
+
+.dashboard .settings table.nestedListTable tfoot .paginationContainer .pagination ul li.disabled a {
+    color: #9ca3af !important;
+    background-color: #f3f4f6 !important;
+    border-color: #e5e7eb !important;
+    cursor: not-allowed !important;
+}
+
+/* ========== MY ORDERS - FIX CHECKBOX/BUTTON SPACING ========== */
+
+.dashboard .ordersTable tbody tr td.checkbox {
+    padding-right: 16px !important;
+}
+
+.dashboard .ordersTable tbody tr td .buttonGroup {
+    margin-left: 12px !important;
+}
+
+.dashboard .ordersTable thead tr.actions td.paginationTop {
+    padding: 16px 20px !important;
+}
+
+.dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup {
+    display: flex !important;
+    gap: 12px !important;
+    justify-content: flex-end !important;
+}
+
+/* ========== PROPOSALS - IMPROVED ERROR/WARNING LABELS ========== */
+
+.dashboard #validationErrors {
+    background-color: var(--color-white) !important;
+    border: 1px solid #fecaca !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+}
+
+.dashboard #validationErrors b.bt,
+.dashboard #validationErrors b.bb {
+    display: none !important;
+}
+
+.dashboard #validationErrors .sectionHeader {
+    background-color: #fef2f2 !important;
+    padding: 16px 20px !important;
+    margin: 0 !important;
+}
+
+.dashboard #validationErrors .sectionHeader b.htop {
+    display: none !important;
+}
+
+.dashboard #validationErrors .sectionHeader h2 {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    color: #dc2626 !important;
+    background: transparent !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.dashboard #validationErrors ol {
+    padding: 20px !important;
+    margin: 0 !important;
+    list-style: none !important;
+}
+
+.dashboard #validationErrors ol li {
+    padding: 12px 16px !important;
+    margin-bottom: 8px !important;
+    background-color: #fef2f2 !important;
+    border-radius: 8px !important;
+    color: #991b1b !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+}
+
+.dashboard #validationErrors #linkItem {
+    padding: 0 20px 20px !important;
+}
+
+.dashboard #validationErrors #linkItem a {
+    color: var(--color-dark-blue) !important;
+    font-weight: 500 !important;
+}
+
+/* ========== CONNECTIONS - IMPROVED TOP BAR ========== */
+
+.dashboard #connectionsTable thead tr.actions td.paginationTop {
+    padding: 20px !important;
+    background-color: var(--color-white) !important;
+    border-bottom: 1px solid var(--border-light) !important;
+}
+
+.dashboard #connectionsTable #search {
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+    flex-wrap: nowrap !important;
+}
+
+.dashboard #connectionsTable #search #selectorDiv {
+    flex: 0 0 auto !important;
+}
+
+.dashboard #connectionsTable #search #selectorDiv input.textInput {
+    width: 220px !important;
+    padding: 10px 14px !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+}
+
+.dashboard #connectionsTable #search #checkBoxDiv {
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+    flex: 0 0 auto !important;
+}
+
+.dashboard #connectionsTable #search #checkBoxDiv > div {
+    display: inline-flex !important;
+    align-items: center !important;
+}
+
+.dashboard #connectionsTable #search #checkBoxDiv label.checkbox {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    font-size: 14px !important;
+    color: var(--color-dark) !important;
+    white-space: nowrap !important;
+    cursor: pointer !important;
+}
+
+.dashboard #connectionsTable #search #checkBoxDiv label.checkbox input[type="checkbox"] {
+    width: 16px !important;
+    height: 16px !important;
+    accent-color: var(--color-dark-blue) !important;
+}
+
+.dashboard #connectionsTable #search #searchButtonDiv {
+    flex: 0 0 auto !important;
+}
+
+.dashboard #connectionsTable #search #searchButtonDiv .yui-button button {
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    background-color: var(--bg-hover) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+    color: var(--color-dark) !important;
+    cursor: pointer !important;
+}
+
+.dashboard #connectionsTable #search #searchButtonDiv .yui-button button:hover {
+    background-color: #e5e7eb !important;
+}
+
+.dashboard #connectionsTable thead tr.actions td.paginationTop .buttonGroup {
+    display: flex !important;
+    justify-content: flex-end !important;
+}
+
+/* ========== WHOLESALE ORDERS - COMPACT TABLE VIEW ========== */
+
+.dashboard .channels table.nestedListTable.ordersTable.empty {
+    font-size: 14px !important;
+}
+
+.dashboard .channels table.nestedListTable.ordersTable thead tr.actions td.paginationTop {
+    padding: 16px 20px !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    color: var(--color-gray) !important;
+    background-color: #f8fafc !important;
+    border-bottom: 1px solid var(--border-light) !important;
+}
+
+.dashboard .channels table.nestedListTable.ordersTable thead tr.colheaders th {
+    padding: 12px 16px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    color: var(--color-gray) !important;
+    background-color: #f1f5f9 !important;
+}
+
+.dashboard .channels table.nestedListTable.ordersTable tbody tr td {
+    padding: 12px 16px !important;
+    font-size: 14px !important;
+    vertical-align: middle !important;
+}
+
+.dashboard .channels table.nestedListTable.ordersTable tbody tr td[rowspan] {
+    vertical-align: top !important;
+    padding-top: 16px !important;
+}
+
+.dashboard .channels table.nestedListTable.ordersTable tbody tr td.first {
+    font-weight: 500 !important;
+    color: var(--color-dark) !important;
+}
+
+.dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 12px !important;
+}
+
+.dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv .left a {
+    color: var(--color-dark-blue) !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+}
+
+.dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv .left a:hover {
+    color: var(--color-blue) !important;
+    text-decoration: underline !important;
+}
+
+.dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv .right a {
+    color: #dc2626 !important;
+    font-size: 13px !important;
+    text-decoration: none !important;
+}
+
+.dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv .right a:hover {
+    text-decoration: underline !important;
+}
+
+.dashboard .channels table.nestedListTable.ordersTable tbody tr td.last .buttonGroup {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+}
+
+.dashboard .channels table.nestedListTable.ordersTable tbody tr td.last .buttonGroup a.addLink {
+    display: inline-block !important;
+    padding: 6px 12px !important;
+    font-size: 13px !important;
+    color: var(--color-dark-blue) !important;
+    background-color: #f0f9ff !important;
+    border: 1px solid #bae6fd !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    transition: all 0.15s ease !important;
+}
+
+.dashboard .channels table.nestedListTable.ordersTable tbody tr td.last .buttonGroup a.addLink:hover {
+    background-color: #e0f2fe !important;
+    border-color: #7dd3fc !important;
+}
+
+.dashboard .channels table.nestedListTable.ordersTable tfoot tr.actions td.paginationBottom {
+    padding: 16px 20px !important;
+    background-color: var(--color-white) !important;
+}
+
+/* ========== INTEGRATION OPTIONS - FORCE 3 COLUMNS ========== */
+
+.dashboard .gridWrapper .grid_1_1 .column {
+    width: auto !important;
+    float: none !important;
+    margin: 0 !important;
+}
+
+/* ========== CORPORATE BRAND - BUTTON SPACING ========== */
+
+.dashboard .settings .formSectionContent .buttonGroup {
+    display: flex !important;
+    gap: 12px !important;
+    justify-content: center !important;
+    padding: 20px 0 !important;
+}
+
+.dashboard .settings .formSectionContent .buttonGroup .yui-button {
+    float: none !important;
+    margin: 0 !important;
+}
+
+.dashboard .settings .formSectionContent .buttonGroup .yui-link-button .first-child a,
+.dashboard .settings .formSectionContent .buttonGroup .yui-submit-button .first-child button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 12px 24px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    border-radius: 8px !important;
+    min-width: 140px !important;
+}
+
+.dashboard .settings .formSectionContent .buttonGroup .yui-link-button .first-child a {
+    color: var(--color-dark) !important;
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border-color) !important;
+    text-decoration: none !important;
+}
+
+.dashboard .settings .formSectionContent .buttonGroup .yui-link-button .first-child a:hover {
+    background-color: var(--bg-hover) !important;
+}
+
+.dashboard .settings .formSectionContent .buttonGroup .yui-submit-button .first-child button {
+    color: var(--color-white) !important;
+    background-color: var(--color-dark-blue) !important;
+    border: none !important;
+}
+
+.dashboard .settings .formSectionContent .buttonGroup .yui-submit-button .first-child button:hover {
+    background-color: var(--color-blue) !important;
+}
+
+/* ========== CONSUMER BRAND LIST - CREATE BUTTON FIX ========== */
+
+.dashboard .settings table.nestedListTable thead tr td.paginationTop .yui-button.yui-link-button {
+    float: none !important;
+    background: none !important;
+    border: none !important;
+}
+
+.dashboard .settings table.nestedListTable thead tr td.paginationTop .yui-button.yui-link-button .first-child a {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: var(--color-white) !important;
+    background-color: var(--color-dark-blue) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+}
+
+.dashboard .settings table.nestedListTable thead tr td.paginationTop .yui-button.yui-link-button .first-child a:hover {
+    background-color: var(--color-blue) !important;
+}
+
+/* ========== LEAD CHANNEL DETAIL - HEADER/TABS ========== */
+
+.dashboard .roundedBox .hdr {
+    background: linear-gradient(135deg, var(--color-dark-blue), #1e40af) !important;
+    padding: 20px 24px !important;
+    margin: 0 !important;
+    border-radius: 12px 12px 0 0 !important;
+}
+
+.dashboard .roundedBox .hdr .tl,
+.dashboard .roundedBox .hdr .tr {
+    display: none !important;
+}
+
+.dashboard .roundedBox .hdr h2 {
+    color: var(--color-white) !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: static !important;
+    background: none !important;
+}
+
+.dashboard .roundedBox .hdr h2 span {
+    color: var(--color-white) !important;
+}
+
+.dashboard .roundedBox .hdr + .subTabs,
+.dashboard .roundedBox .subTabs {
+    display: flex !important;
+    gap: 0 !important;
+    background-color: var(--color-white) !important;
+    border-bottom: 1px solid var(--border-light) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.dashboard .roundedBox .subTabs ul {
+    display: flex !important;
+    gap: 0 !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.dashboard .roundedBox .subTabs ul li {
+    margin: 0 !important;
+}
+
+.dashboard .roundedBox .subTabs ul li a,
+.dashboard .roundedBox .subTabs ul li span {
+    display: inline-block !important;
+    padding: 14px 24px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: var(--color-gray) !important;
+    text-decoration: none !important;
+    border-bottom: 2px solid transparent !important;
+    transition: all 0.15s ease !important;
+}
+
+.dashboard .roundedBox .subTabs ul li a:hover {
+    color: var(--color-dark-blue) !important;
+    background-color: #f8fafc !important;
+}
+
+.dashboard .roundedBox .subTabs ul li.current a,
+.dashboard .roundedBox .subTabs ul li.current span {
+    color: var(--color-white) !important;
+    background-color: var(--color-dark-blue) !important;
+    border-bottom-color: var(--color-dark-blue) !important;
+    border-radius: 8px !important;
+    margin: 8px !important;
+}
+
+/* Lead Channel Detail content area */
+.dashboard .roundedBox .labelValue {
+    display: flex !important;
+    align-items: flex-start !important;
+    padding: 12px 0 !important;
+    border-bottom: 1px solid var(--border-light) !important;
+}
+
+.dashboard .roundedBox .labelValue .label {
+    flex: 0 0 200px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: var(--color-gray) !important;
+}
+
+.dashboard .roundedBox .labelValue .value {
+    flex: 1 !important;
+    font-size: 14px !important;
+    color: var(--color-dark) !important;
+}
+
+/* ========== CREATE PROPOSAL PAGE STYLING ========== */
+
+.dashboard #formContainer .roundedBox {
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+}
+
+.dashboard #formContainer .roundedBox b.bt,
+.dashboard #formContainer .roundedBox b.bb {
+    display: none !important;
+}
+
+.dashboard #formContainer .roundedBox .hdr {
+    background: #f8fafc !important;
+    padding: 16px 24px !important;
+    border-bottom: 1px solid var(--border-light) !important;
+    border-radius: 0 !important;
+}
+
+.dashboard #formContainer .roundedBox .hdr h2 {
+    color: var(--color-dark) !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+
+.dashboard #formContainer .roundedBox .hdr h2 span {
+    color: var(--color-dark) !important;
+}
+
+.dashboard #formContainer .formSectionContent {
+    padding: 24px !important;
+}
+
+/* Expandable list items */
+.dashboard #formContainer ul.text {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.dashboard #formContainer ul.text li.expando,
+.dashboard #formContainer ul.text li.expando1 {
+    padding: 14px 20px !important;
+    margin: 0 0 8px !important;
+    background-color: #f8fafc !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: all 0.15s ease !important;
+}
+
+.dashboard #formContainer ul.text li.expando:hover,
+.dashboard #formContainer ul.text li.expando1:hover {
+    background-color: #f1f5f9 !important;
+    border-color: var(--border-color) !important;
+}
+
+.dashboard #formContainer ul.text li.expando span,
+.dashboard #formContainer ul.text li.expando1 span {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: var(--color-dark) !important;
+}
+
+.dashboard #formContainer ul.text li.expando::before,
+.dashboard #formContainer ul.text li.expando1::before {
+    content: "+" !important;
+    display: inline-block !important;
+    width: 20px !important;
+    height: 20px !important;
+    margin-right: 12px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: var(--color-dark-blue) !important;
+    text-align: center !important;
+    line-height: 20px !important;
+}
+
+/* Product details rows */
+.dashboard #formContainer ul.text li.details {
+    padding: 0 !important;
+    margin: 0 0 16px !important;
+    list-style: none !important;
+}
+
+.dashboard #formContainer ul.text li.details .target {
+    padding: 0 !important;
+}
+
+.dashboard #formContainer ul.text li.details .target > div {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 12px 20px 12px 52px !important;
+    border-left: 3px solid var(--border-light) !important;
+    margin-left: 10px !important;
+}
+
+.dashboard #formContainer ul.text li.details .target > div.even {
+    background-color: var(--color-white) !important;
+}
+
+.dashboard #formContainer ul.text li.details .target > div.odd {
+    background-color: #fafafa !important;
+}
+
+.dashboard #formContainer ul.text li.details .target > div:hover {
+    background-color: #f0f9ff !important;
+    border-left-color: var(--color-dark-blue) !important;
+}
+
+.dashboard #formContainer ul.text li.details .left {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.dashboard #formContainer ul.text li.details .left input[type="radio"] {
+    width: 18px !important;
+    height: 18px !important;
+    accent-color: var(--color-dark-blue) !important;
+    cursor: pointer !important;
+}
+
+.dashboard #formContainer ul.text li.details .left label {
+    font-size: 14px !important;
+    color: var(--color-dark) !important;
+    cursor: pointer !important;
+}
+
+.dashboard #formContainer ul.text li.details .right a {
+    font-size: 13px !important;
+    color: var(--color-dark-blue) !important;
+    text-decoration: none !important;
+}
+
+.dashboard #formContainer ul.text li.details .right a:hover {
+    text-decoration: underline !important;
+}
+
+/* Lead type / Exclusivity section */
+.dashboard #formContainer #leadtypesection,
+.dashboard #formContainer #voiceprogramsection {
+    margin-top: 24px !important;
+    padding-top: 24px !important;
+    border-top: 1px solid var(--border-light) !important;
+}
+
+.dashboard #formContainer .leadtypecontainer {
+    padding: 16px 20px !important;
+}
+
+.dashboard #formContainer .leadtype {
+    padding: 12px 0 !important;
+}
+
+.dashboard #formContainer .leadtype label {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: var(--color-dark) !important;
+    cursor: pointer !important;
+}
+
+.dashboard #formContainer .leadtype label input[type="radio"] {
+    width: 18px !important;
+    height: 18px !important;
+    margin-top: 2px !important;
+    accent-color: var(--color-dark-blue) !important;
+}
+
+.dashboard #formContainer .leadtype label .normal {
+    font-weight: 400 !important;
+    color: var(--color-gray) !important;
+}
+
+/* Bottom button area */
+.dashboard #formContainer #bottomButton {
+    padding: 20px 24px !important;
+    background-color: #f8fafc !important;
+    border-top: 1px solid var(--border-light) !important;
+}
+
+.dashboard #formContainer #bottomButton .buttonGroup {
+    display: flex !important;
+    justify-content: flex-start !important;
+}
+
+.dashboard #formContainer #bottomButton .yui-button button {
+    padding: 12px 32px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: var(--color-white) !important;
+    background-color: var(--color-dark-blue) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+}
+
+.dashboard #formContainer #bottomButton .yui-button button:disabled {
+    background-color: #94a3b8 !important;
+    cursor: not-allowed !important;
+}
+
+.dashboard #formContainer #bottomButton .yui-button button:not(:disabled):hover {
+    background-color: var(--color-blue) !important;
+}
+
+/* ========== CREATE PROPOSAL - STEP 1 IMPROVEMENTS ========== */
+
+/* Main product list - 3 column grid layout */
+.dashboard #formContainer .formSectionContent > ul.text {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Each contractor group as a card */
+.dashboard #formContainer ul.text > li.contracto,
+.dashboard #formContainer ul.text > li.expando,
+.dashboard #formContainer ul.text > li.expando1 {
+    grid-column: span 1 !important;
+    padding: 16px 20px !important;
+    margin: 0 !important;
+    background-color: #f8fafc !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: 10px !important;
+    cursor: pointer !important;
+    transition: all 0.15s ease !important;
+}
+
+.dashboard #formContainer ul.text > li.contracto:hover,
+.dashboard #formContainer ul.text > li.expando:hover,
+.dashboard #formContainer ul.text > li.expando1:hover {
+    background-color: #f1f5f9 !important;
+    border-color: var(--color-dark-blue) !important;
+}
+
+.dashboard #formContainer ul.text > li.contracto span,
+.dashboard #formContainer ul.text > li.expando span,
+.dashboard #formContainer ul.text > li.expando1 span {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: var(--color-dark) !important;
+}
+
+/* Details list under each contractor */
+.dashboard #formContainer ul.text > li.details {
+    grid-column: span 1 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    margin-top: -12px !important;
+    background: transparent !important;
+    border: none !important;
+    list-style: none !important;
+}
+
+.dashboard #formContainer ul.text > li.details .target {
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border-light) !important;
+    border-top: none !important;
+    border-radius: 0 0 10px 10px !important;
+    padding: 8px 0 !important;
+    overflow: hidden !important;
+}
+
+.dashboard #formContainer ul.text li.details .target > div {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 10px 16px !important;
+    margin: 0 !important;
+    border-left: none !important;
+}
+
+.dashboard #formContainer ul.text li.details .target > div.even {
+    background-color: var(--color-white) !important;
+}
+
+.dashboard #formContainer ul.text li.details .target > div.odd {
+    background-color: #fafafa !important;
+}
+
+.dashboard #formContainer ul.text li.details .target > div:hover {
+    background-color: #f0f9ff !important;
+}
+
+.dashboard #formContainer ul.text li.details .left {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.dashboard #formContainer ul.text li.details .left input[type="radio"],
+.dashboard #formContainer ul.text li.details .left .productRadio {
+    width: 16px !important;
+    height: 16px !important;
+    accent-color: var(--color-dark-blue) !important;
+    cursor: pointer !important;
+    margin: 0 !important;
+}
+
+.dashboard #formContainer ul.text li.details .left label {
+    font-size: 13px !important;
+    color: var(--color-dark) !important;
+    cursor: pointer !important;
+    margin: 0 !important;
+}
+
+.dashboard #formContainer ul.text li.details .right {
+    flex-shrink: 0 !important;
+}
+
+.dashboard #formContainer ul.text li.details .right a {
+    font-size: 12px !important;
+    color: var(--color-dark-blue) !important;
+    text-decoration: none !important;
+}
+
+.dashboard #formContainer ul.text li.details .right a:hover {
+    text-decoration: underline !important;
+}
+
+/* Exclusivity section full width */
+.dashboard #formContainer #leadtypesection,
+.dashboard #formContainer #voiceprogramsection {
+    grid-column: 1 / -1 !important;
+    margin-top: 24px !important;
+    padding: 20px !important;
+    background-color: #f8fafc !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: 10px !important;
+}
+
+.dashboard #formContainer .leadtypecontainer {
+    padding: 16px 0 0 0 !important;
+}
+
+.dashboard #formContainer .leadtype {
+    padding: 10px 0 !important;
+}
+
+.dashboard #formContainer .leadtype label {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: var(--color-dark) !important;
+    cursor: pointer !important;
+}
+
+.dashboard #formContainer .leadtype label input[type="radio"] {
+    width: 16px !important;
+    height: 16px !important;
+    margin-top: 2px !important;
+    accent-color: var(--color-dark-blue) !important;
+}
+
+.dashboard #formContainer .leadtype label .normal {
+    font-weight: 400 !important;
+    color: var(--color-gray) !important;
+}
+
+/* Responsive for Step 1 grid */
+@media (max-width: 992px) {
+    .dashboard #formContainer .formSectionContent > ul.text {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .dashboard #formContainer .formSectionContent > ul.text {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ========== CREATE PROPOSAL - STEP 2 (FILTERS/PRICE/SETTINGS) ========== */
+
+/* Outer container */
+.dashboard #outerDiv {
+    margin-top: 20px !important;
+}
+
+/* Toggle view span */
+.dashboard #toggleViewSpan {
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 4px !important;
+    margin-bottom: 12px !important;
+    font-size: 13px !important;
+}
+
+.dashboard #toggleViewSpan a {
+    color: var(--color-dark-blue) !important;
+    text-decoration: none !important;
+}
+
+/* Tabs navigation */
+.dashboard #bidTabs {
+    margin-bottom: 0 !important;
+}
+
+.dashboard #bidgridTabs {
+    display: flex !important;
+    gap: 0 !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #f1f5f9 !important;
+    border-radius: 10px 10px 0 0 !important;
+    overflow: hidden !important;
+}
+
+.dashboard #bidgridTabs li {
+    margin: 0 !important;
+}
+
+.dashboard #bidgridTabs li a {
+    display: inline-block !important;
+    padding: 14px 32px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: var(--color-gray) !important;
+    text-decoration: none !important;
+    border-bottom: 3px solid transparent !important;
+    transition: all 0.15s ease !important;
+}
+
+.dashboard #bidgridTabs li a:hover {
+    color: var(--color-dark-blue) !important;
+    background-color: #e2e8f0 !important;
+}
+
+.dashboard #bidgridTabs li a.current {
+    color: var(--color-dark-blue) !important;
+    background-color: var(--color-white) !important;
+    border-bottom-color: var(--color-dark-blue) !important;
+}
+
+/* Bid options container */
+.dashboard #bidoptions.roundedBox {
+    border-radius: 0 0 10px 10px !important;
+    border: 1px solid var(--border-light) !important;
+    border-top: none !important;
+    background-color: var(--color-white) !important;
+}
+
+.dashboard #bidoptions.roundedBox b.bt,
+.dashboard #bidoptions.roundedBox b.bb {
+    display: none !important;
+}
+
+/* Section headers in tabs */
+.dashboard #bidoptions .subtabHeading {
+    background: transparent !important;
+    border: none !important;
+    margin: 0 !important;
+}
+
+.dashboard #bidoptions .subtabHeading .sectionHeader {
+    background-color: #f8fafc !important;
+    padding: 16px 24px !important;
+    border-bottom: 1px solid var(--border-light) !important;
+    margin: 0 !important;
+}
+
+.dashboard #bidoptions .subtabHeading .sectionHeader h2 {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: var(--color-dark) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: static !important;
+    background: none !important;
+}
+
+.dashboard #bidoptions .subtabHeading b.bt,
+.dashboard #bidoptions .subtabHeading b.htop {
+    display: none !important;
+}
+
+/* Filter/Pricing/Settings containers */
+.dashboard #filtersContainer,
+.dashboard #pricingContainer,
+.dashboard #settingsContainer {
+    padding: 24px !important;
+}
+
+.dashboard #filtersContainer .pricingMsg,
+.dashboard #pricingContainer .pricingMsg {
+    display: block !important;
+    font-size: 14px !important;
+    color: var(--color-gray) !important;
+    margin-bottom: 20px !important;
+}
+
+/* Dropdown filters */
+.dashboard .dropDown.filter {
+    margin-bottom: 20px !important;
+}
+
+.dashboard .dropDown.filter h3 {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: var(--color-dark) !important;
+    margin: 0 0 8px 0 !important;
+}
+
+.dashboard .dropDown.filter select,
+.dashboard .dropDownContainer select {
+    padding: 10px 14px !important;
+    font-size: 14px !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+    background-color: var(--color-white) !important;
+    min-width: 200px !important;
+}
+
+/* Settings sections */
+.dashboard #settingsContainer .content {
+    margin-bottom: 24px !important;
+    padding-bottom: 24px !important;
+    border-bottom: 1px solid var(--border-light) !important;
+}
+
+.dashboard #settingsContainer .content:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+}
+
+.dashboard #settingsContainer .titleDiv h3 {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: var(--color-dark) !important;
+    margin: 0 0 16px 0 !important;
+}
+
+/* Input groups in settings */
+.dashboard #settingsContainer .inputGroup {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+    margin-bottom: 16px !important;
+}
+
+.dashboard #settingsContainer .inputGroup .mainLabel {
+    flex: 0 0 100px !important;
+}
+
+.dashboard #settingsContainer .inputGroup .mainLabel label {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: var(--color-gray) !important;
+}
+
+.dashboard #settingsContainer .inputGroup .options {
+    flex: 1 !important;
+}
+
+.dashboard #settingsContainer .inputGroup .optionsContent {
+    font-size: 14px !important;
+    color: var(--color-dark) !important;
+}
+
+.dashboard #settingsContainer .inputGroup .option {
+    margin-bottom: 10px !important;
+}
+
+.dashboard #settingsContainer .inputGroup .option label {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    cursor: pointer !important;
+}
+
+.dashboard #settingsContainer .inputGroup .option input[type="radio"] {
+    width: 16px !important;
+    height: 16px !important;
+    margin-top: 2px !important;
+    accent-color: var(--color-dark-blue) !important;
+}
+
+/* Max amount and end date inputs */
+.dashboard #maxAmountDiv,
+.dashboard #endDateDiv {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin-left: 24px !important;
+    margin-top: 8px !important;
+}
+
+.dashboard #maxAmountDiv input,
+.dashboard #endDateDiv select {
+    padding: 8px 12px !important;
+    font-size: 14px !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 6px !important;
+    background-color: var(--color-white) !important;
+}
+
+.dashboard #maxAmountDiv.disabled input,
+.dashboard #endDateDiv.disabled select {
+    background-color: #f1f5f9 !important;
+    color: #94a3b8 !important;
+}
+
+/* Volume limits */
+.dashboard #volumeLimits .inputGroup {
+    margin-bottom: 16px !important;
+}
+
+.dashboard #volumeLimits .inputGroup .mainLabel label {
+    font-weight: 500 !important;
+}
+
+/* Buttons area */
+.dashboard #buttons {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 16px !important;
+    padding: 20px 24px !important;
+    background-color: #f8fafc !important;
+    border-top: 1px solid var(--border-light) !important;
+}
+
+.dashboard #buttons #backNextButtons {
+    display: flex !important;
+    gap: 12px !important;
+}
+
+.dashboard #buttons .buttonGroup {
+    display: flex !important;
+    gap: 12px !important;
+}
+
+/* Back/Next buttons */
+.dashboard #buttons .backbutton .first-child button,
+.dashboard #buttons .nextbutton .first-child button {
+    padding: 10px 24px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: all 0.15s ease !important;
+}
+
+.dashboard #buttons .backbutton .first-child button {
+    color: var(--color-dark) !important;
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.dashboard #buttons .backbutton .first-child button:hover {
+    background-color: var(--bg-hover) !important;
+}
+
+.dashboard #buttons .nextbutton .first-child button {
+    color: var(--color-white) !important;
+    background-color: var(--color-dark-blue) !important;
+    border: none !important;
+}
+
+.dashboard #buttons .nextbutton .first-child button:hover {
+    background-color: var(--color-blue) !important;
+}
+
+/* Save & Review / Cancel buttons */
+.dashboard #buttons .buttonGroup .yui-button .first-child button {
+    padding: 10px 24px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: all 0.15s ease !important;
+}
+
+.dashboard #buttons #save .first-child button {
+    color: var(--color-white) !important;
+    background-color: var(--color-dark-blue) !important;
+    border: none !important;
+}
+
+.dashboard #buttons #save .first-child button:hover:not(:disabled) {
+    background-color: var(--color-blue) !important;
+}
+
+.dashboard #buttons #save.yui-button-disabled .first-child button {
+    background-color: #94a3b8 !important;
+    cursor: not-allowed !important;
+}
+
+.dashboard #buttons #cancelButton .first-child button {
+    color: var(--color-dark) !important;
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.dashboard #buttons #cancelButton .first-child button:hover {
+    background-color: var(--bg-hover) !important;
+}
+
+/* ========== CREATE PROPOSAL - STEP 3 (SUMMARY/REVIEW) ========== */
+
+/* Summary sections */
+.dashboard .summarySection,
+.dashboard .content.summaryBox {
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: 10px !important;
+    margin-bottom: 20px !important;
+    overflow: hidden !important;
+}
+
+.dashboard .summarySection h3,
+.dashboard .content.summaryBox h3 {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: var(--color-dark) !important;
+    padding: 16px 20px !important;
+    margin: 0 !important;
+    background-color: #f8fafc !important;
+    border-bottom: 1px solid var(--border-light) !important;
+}
+
+.dashboard .summarySection .summaryContent,
+.dashboard .content.summaryBox .summaryContent {
+    padding: 20px !important;
+}
+
+/* Label-value pairs in summary */
+.dashboard .summarySection .labelValue,
+.dashboard .summaryRow {
+    display: flex !important;
+    align-items: flex-start !important;
+    padding: 10px 0 !important;
+    border-bottom: 1px solid var(--border-light) !important;
+}
+
+.dashboard .summarySection .labelValue:last-child,
+.dashboard .summaryRow:last-child {
+    border-bottom: none !important;
+}
+
+.dashboard .summarySection .labelValue .label,
+.dashboard .summaryRow .label {
+    flex: 0 0 180px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: var(--color-gray) !important;
+}
+
+.dashboard .summarySection .labelValue .value,
+.dashboard .summaryRow .value {
+    flex: 1 !important;
+    font-size: 14px !important;
+    color: var(--color-dark) !important;
+}
+
+/* Recipient list */
+.dashboard .recipientList {
+    padding: 20px !important;
+}
+
+.dashboard .recipientList select {
+    width: 100% !important;
+    max-width: 300px !important;
+    padding: 10px 14px !important;
+    font-size: 14px !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+}
+
+.dashboard .recipientList a {
+    font-size: 13px !important;
+    color: var(--color-dark-blue) !important;
+    text-decoration: none !important;
+    margin-right: 12px !important;
+}
+
+/* Summary action buttons */
+.dashboard .summaryActions,
+.dashboard .actionButtons {
+    display: flex !important;
+    gap: 12px !important;
+    padding: 20px !important;
+    background-color: #f8fafc !important;
+    border-top: 1px solid var(--border-light) !important;
+}
+
+.dashboard .summaryActions .yui-button .first-child button,
+.dashboard .summaryActions .yui-button .first-child a,
+.dashboard .actionButtons .yui-button .first-child button,
+.dashboard .actionButtons .yui-button .first-child a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 10px 24px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    transition: all 0.15s ease !important;
+}
+
+/* Primary action button (Send Proposal) */
+.dashboard .summaryActions .yui-button:first-child .first-child button,
+.dashboard .actionButtons .yui-button:first-child .first-child button {
+    color: var(--color-white) !important;
+    background-color: var(--color-dark-blue) !important;
+    border: none !important;
+}
+
+.dashboard .summaryActions .yui-button:first-child .first-child button:hover,
+.dashboard .actionButtons .yui-button:first-child .first-child button:hover {
+    background-color: var(--color-blue) !important;
+}
+
+/* Secondary action buttons (Close, Back to List) */
+.dashboard .summaryActions .yui-button:not(:first-child) .first-child button,
+.dashboard .actionButtons .yui-button:not(:first-child) .first-child button {
+    color: var(--color-dark) !important;
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.dashboard .summaryActions .yui-button:not(:first-child) .first-child button:hover,
+.dashboard .actionButtons .yui-button:not(:first-child) .first-child button:hover {
+    background-color: var(--bg-hover) !important;
+}
+
+/* Price grid table */
+.dashboard table.pricegrid {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin-top: 16px !important;
+}
+
+.dashboard table.pricegrid thead th {
+    padding: 12px 16px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: var(--color-gray) !important;
+    text-align: left !important;
+    background-color: #f8fafc !important;
+    border-bottom: 1px solid var(--border-light) !important;
+}
+
+.dashboard table.pricegrid tbody td {
+    padding: 12px 16px !important;
+    font-size: 14px !important;
+    color: var(--color-dark) !important;
+    border-bottom: 1px solid var(--border-light) !important;
+}
+
+.dashboard table.pricegrid tbody td.label {
+    font-weight: 500 !important;
+    color: var(--color-gray) !important;
+}
+
+.dashboard table.pricegrid tbody tr:hover {
+    background-color: #fafafa !important;
+}
+
+.dashboard table.pricegrid input.textInput {
+    padding: 8px 12px !important;
+    font-size: 14px !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 6px !important;
+    width: 80px !important;
+}
+
+.dashboard table.pricegrid input.textInput:focus {
+    border-color: var(--color-dark-blue) !important;
+    outline: none !important;
+}
+
+/* Checkbox grid (State filters) */
+.dashboard .checkboxGrid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 8px 20px !important;
+}
+
+.dashboard .checkboxGrid label {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-size: 14px !important;
+    color: var(--color-dark) !important;
+    cursor: pointer !important;
+}
+
+.dashboard .checkboxGrid input[type="checkbox"] {
+    width: 16px !important;
+    height: 16px !important;
+    accent-color: var(--color-dark-blue) !important;
+}
+
+/* Check All / Uncheck All links */
+.dashboard .checkActions {
+    margin-top: 12px !important;
+    padding-top: 12px !important;
+    border-top: 1px solid var(--border-light) !important;
+}
+
+.dashboard .checkActions a {
+    font-size: 13px !important;
+    color: var(--color-dark-blue) !important;
+    text-decoration: none !important;
+    margin-right: 16px !important;
+}
+
+.dashboard .checkActions a:hover {
+    text-decoration: underline !important;
+}
+
+/* Edit Copy link */
+.dashboard .editCopy {
+    padding: 16px 20px !important;
+    border-top: 1px solid var(--border-light) !important;
+}
+
+.dashboard .editCopy a {
+    font-size: 14px !important;
+    color: var(--color-dark-blue) !important;
+    text-decoration: none !important;
+}
+
+.dashboard .editCopy a:hover {
+    text-decoration: underline !important;
 }

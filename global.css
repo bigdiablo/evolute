@@ -126,11 +126,13 @@ label.checkbox {
 }
 */
 
+/* COMMENTED OUT - formSection styles moved to main.css */
+/*
 .formSection,.formSectionAlternate {
     clear: both;
     padding-bottom: 5px;
     margin: 10px 0px 5px 0px;
-    border: 1px solid #CCC; *
+    border: 1px solid #CCC;
     zoom: 1.0
 }
 
@@ -142,6 +144,7 @@ label.checkbox {
     padding: 0 0 0 0;
     width: auto
 }
+*/
 
 .options .prefix {
     margin-left: -0.78em;
@@ -947,6 +950,8 @@ table.listTable,table.leadListTable {
     width: 100%
 }
 
+/* COMMENTED OUT - nestedListTable styles moved to main.css */
+/*
 table.nestedListTable {
     margin: 0px;
     margin-top: -0.5px;
@@ -956,6 +961,7 @@ table.nestedListTable {
     width: 100%;
     z-index: 10;
 }
+*/
 
 table.leadListTable {
     margin: .5em 0px;
@@ -975,6 +981,8 @@ table.leadListTable th {
     text-align: center;
 }
 
+/* COMMENTED OUT - nestedListTable styles moved to main.css */
+/*
 table.nestedListTable th {
     border: none;
     background-color: #FAFAFA
@@ -999,12 +1007,10 @@ table.nestedListTable thead tr.actions td {
 }
 
 table.nestedListTable thead tr th.center,
-table.nestedListTable td.center,
-div.center,
-.center {
+table.nestedListTable td.center {
     text-align: center;
 }
-.nowrap { white-space: nowrap }
+
 table.nestedListTable thead tr th.first,
 table.nestedListTable thead tr:first-child {
     border-left: none !important
@@ -1027,21 +1033,26 @@ table.nestedListTable tr.colheaders th.subheader {
 }
 
 table.nestedListTable thead tr.colheaders th.empty {
-    /* border-right: solid 2px #fc3; */
-}
-
-table.nestedListTable thead tr.actions td.paginationTop div#search,
-div#search {
-    white-space: nowrap;
-    position: relative;
-    top: 0px;
-    min-width: 900px;
 }
 
 table.nestedListTable thead tr.actions td.paginationTop div#search div {
     float: left;
     clear: right;
     padding: 0px 4px
+}
+*/
+
+div.center,
+.center {
+    text-align: center;
+}
+.nowrap { white-space: nowrap }
+
+div#search {
+    white-space: nowrap;
+    position: relative;
+    top: 0px;
+    min-width: 900px;
 }
 
 table.leadListTable th {
@@ -1058,21 +1069,17 @@ table.leadListTable td {
     padding: 0.5em 0.6em 0.5em 0.6em;
 }
 
+/* COMMENTED OUT - nestedListTable td styles moved to main.css */
+/*
 table.nestedListTable td {
     padding: .25em 0.5625em;
-}
-
-table.leadListTable td {
-    padding: 0.5em;
 }
 
 table.nestedListTable tbody tr.details td.innerheader {
     background-color: #f6f6f6;
 }
 
-table.listTable td.last,
-table.nestedListTable td.last,
-table.leadListTable td.last {
+table.nestedListTable td.last {
     border-bottom: none;
 }
 
@@ -1087,7 +1094,18 @@ table.nestedListTable td div.nestedYuiButton {
 table.nestedListTable tr.details,
 table.nestedListTable tr.details td {
     cursor: default;
-    border: none; }
+    border: none;
+}
+*/
+
+table.leadListTable td {
+    padding: 0.5em;
+}
+
+table.listTable td.last,
+table.leadListTable td.last {
+    border-bottom: none;
+}
 
 p.actionRequired,
 span.actionRequired,
@@ -1106,8 +1124,7 @@ p.actionRequired {
 
 p.actionRequired2 {
     margin-top: 0.25em; 
-    *margin-top: 0;
-    padding-top: 0.25em;
+    /* *margin-top: 0; - IE hack removed */
     padding-top: 0.125em;
     background-position: 8px 2px;
 }
@@ -1300,7 +1317,7 @@ div.target {
     display: none;
     width: auto;
     margin: 10px; 
-    *margin: 0px !important;
+    /* *margin: 0px !important; - IE hack removed */
     border: none
 }
 
@@ -1348,6 +1365,8 @@ ul.text {
     
 }
 
+/* COMMENTED OUT - expando/contracto styles moved to main.css */
+/*
 table.nestedListTable td.expando,
 div.expando,
 li.expando,
@@ -1391,6 +1410,7 @@ li.expando span,li.contracto span {
     position: relative;
     left: -6px;
 }
+*/
 
 table.nestedListTable tr.parentRow:hover {
     background-color: #E7EFBC
@@ -1839,6 +1859,8 @@ div#bidgroupContent div.inputGroup div.mainLabel {
     background: transparent;
 }
 
+/* COMMENTED OUT - bidgridTabs styles moved to main.css */
+/*
 #bidTabs ul#bidgridTabs {
     list-style: none;
     margin: 0;
@@ -1875,6 +1897,7 @@ html:first-child div#bidTabs ul#bidgridTabs li {
     border-bottom: solid 1px #fff;
     z-index: 2;
 }
+*/
 
 /** Links at top right of bidgroup **/
 #bidgroupContent span#toggleViewSpan {
@@ -1902,7 +1925,8 @@ html:first-child div#bidTabs ul#bidgridTabs li {
     display: inline;
 }
 
-/* left-hand container for filters, etc. */
+/* COMMENTED OUT - bidoptions styles moved to main.css */
+/*
 div#bidoptions {
     width: 100%;
     margin: auto 0px;
@@ -1913,7 +1937,6 @@ div#bidoptions div.narrow {
 }
 
 div#bidoptions div#dataDiv,div#bidoptions div#infoDiv {
-    /* float: left; */
 }
 
 div#bidoptions div.varWidth1 {
@@ -1921,7 +1944,6 @@ div#bidoptions div.varWidth1 {
 }
 
 div#bidoptions div.varWidth2 {
-    /* width: 75%; */
 }
 
 div#bidoptions div#infoDiv {
@@ -1939,15 +1961,13 @@ div#bidoptions div#settings {
     clear: left;
     width: 100%;
     margin: 0px auto;
-    /* margin-left: 2px; */
 }
 
 div#bidoptions div#pricingContainer,
 div#bidoptions div#filtersContainer,
 div#bidoptions div#settingsContainer {
-    /* width: 97%; */
-    /* padding: 0px 10px */
 }
+*/
 
 div#filtersContainer {
     position: relative;
@@ -2683,6 +2703,8 @@ td.right {
     text-align: right
 }
 
+/* COMMENTED OUT - outline styles with IE zoom hack */
+/*
 .outline {
     border: solid 1px #ccc;
     zoom: 1.0;
@@ -2695,9 +2717,9 @@ td.right {
 
 #dashWrapper #overview {
     margin-right: 10px;
-    /* FIX THIS */
     p\osition: relative;
 }
+*/
 
 /* Selectors for pagination */
 div.paginationContainer {
@@ -3515,7 +3537,8 @@ label.iconLabel {
 div.inputGroup div.mainLabelContent label.iconLabel img.inlineHelpImg {
     margin-bottom: -4px
 }
-/* lpconnect link */
+/* COMMENTED OUT - lpconnect link styles moved to main.css */
+/*
 #lpconnectlink {
     padding: 6px;
     padding-bottom: 0
@@ -3524,6 +3547,7 @@ div.inputGroup div.mainLabelContent label.iconLabel img.inlineHelpImg {
 #lpconnectlink :hover {
     color: #FFFFA0
 }
+*/
 
 /* delivery settings screens */
 html:first-child div#sendTestLeadButtonDiv {
@@ -3761,7 +3785,7 @@ div#oliContainer div.bd {
 }
 
 div#oliContainer_c div.underlay { 
-    *width: auto;
+    /* *width: auto; - IE hack removed */
 }
 
 div#oliContainer div.ft {
@@ -4370,9 +4394,9 @@ table.reportResults td.rptDataRight b {
 }
 
 /* =========================================================
-   lp-IE7.css
+   lp-IE7.css - COMMENTED OUT (outdated IE styles)
    ========================================================= */
-/* $Id$ */
+/*
 .userInfo {
     position: relative;
     top: -18px
@@ -4386,7 +4410,6 @@ table.reportResults td.rptDataRight b {
     margin: -6px;
 }
 p.information {
-    /*background: transparent;*/
 }
 #Navigation {
     zoom: 1.0;
@@ -4419,6 +4442,7 @@ table.nestedListTable tr.colheaders th.subheader {
 table.nestedListTable td.actionRequired {
     padding-left: 2.25em;
 }
+*/
 
 table#connectionsTable thead tr.actions td.paginationTop {
     padding-bottom: 14px;
@@ -4686,9 +4710,9 @@ div#reportListGrid div.column {
 div#sideNavHeading { position: relative; top: -5px }
 
 /* =========================================================
-   lp-IE6.css
+   lp-IE6.css - COMMENTED OUT (outdated IE styles)
    ========================================================= */
-/* $Id$ */
+/*
 input { zoom: 1.0 }
 #logoDiv {
     margin-left: 6px;
@@ -4733,6 +4757,7 @@ table.nestedListTable, table#connectionsTable {
 table.nestedListTable thead tr.actions td.paginationTop div#search,div#search {
     width: 650px;
 }
+*/
 table#connectionsTable div#search {
     padding: 10px 0px 0px 0px;
     margin-bottom: 10px;
@@ -5144,12 +5169,15 @@ div#sideNavHeading { position: relative; margin-top: 10px }
 	width:24.999999%;
 }
 
+/* COMMENTED OUT - grid_1_1 styles moved to main.css for 3-column layout */
+/*
 .grid_1_1 .column{
 	width:49.9999%;
 }
 .grid_1_1 .column1, .grid_1_1 .column2 { width: 49.4% }
 .grid_1_1 .column1 { margin-right: 6px }
 .grid_1_1 .column2 { margin-left: 6px }
+*/
 .grid_2_1 .primary{
 	width:66.6%;
 	float:left;
