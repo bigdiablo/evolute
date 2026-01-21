@@ -1,11 +1,16 @@
 /* =========================================================
-   base.css
+   base.css (Legacy - simplified to avoid conflicts with main.css)
    ========================================================= */
-/*yui reset.css*/body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul {list-style:none;}caption,th {text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym {border:0;}
-/*yui fonts.css*/body{font:13px arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}table {font-size:inherit;font:100%;}select, input, textarea {font:99% arial,helvetica,clean,sans-serif;}pre, code {font:115% monospace;*font-size:100%;}body * {line-height:1.22em;}
-.clear{clear:both;background:transparent none repeat scroll 0%;height:0px;display:block;overflow:hidden;margin:0px;padding:0px;}
-.none{display:none;}
-.hidden{visibility:hidden;}
+
+/* Essential table resets */
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* Essential list resets */
+ol, ul { list-style: none; }
+
+/* Legacy utility classes */
+.none { display: none; }
+.hidden { visibility: hidden; }
 
 /* =========================================================
    formfields.css - COMMENTED OUT (now in main.css)
@@ -387,17 +392,20 @@ html:first-child .buttonGroup span.first-child button,html:first-child .buttonGr
 #StateSelectionContent {
     padding-right: 10px;
 }
+/* COMMENTED OUT - conflicts with main.css
 input[type='text'], input[type='password'] {
     border-top: solid 1px #ccc;
     border-right: solid 1px #ccc;
     border-bottom: solid 1px #ddd;
     border-left: solid 1px #ddd;
 }
+*/
 
 /* =========================================================
-   lp.css
+   lp.css - PARTIALLY COMMENTED (conflicts with main.css)
    ========================================================= */
 
+/* COMMENTED OUT - main.css handles body styles
 body {
     color: #000;
     background-color: #FFF;
@@ -411,15 +419,16 @@ a { cursor: pointer }
 a:link,a:visited,a:active {
     color: #2F466B;
 }
+*/
 
 strong {
     font-weight: bold;
 }
 
+/* COMMENTED OUT - main.css handles headings
 h1,div.pageHeader {
     font-size: 138.5%;
     font-weight: bold;
-    /* WATCH THIS */
     margin: 6px 0px 0px 0px;
     color: #003366;
 }
@@ -427,6 +436,7 @@ h1,div.pageHeader {
 h2 {
     font-size: 116%;
 }
+*/
 
 #HeaderContent {
     min-width: 940px;   
@@ -4667,7 +4677,7 @@ div#reportListGrid div.column {
     top: -8px;
     padding-right: 0.5em;
 }
-/* New implementation; intended to replace the old roundedBox stuff */
+/* COMMENTED OUT - conflicts with main.css roundedBox styles
 .roundedBox .hdr {
     margin-top: 2px;
     margin-bottom: 0.4em;
@@ -4687,6 +4697,7 @@ div#reportListGrid div.column {
     right: 0px;
     top: 6px;
 }
+*/
 /* End new implementation */
 #sellerSettingsContainer .titleDiv {
     width: 98.5%
@@ -5122,10 +5133,12 @@ div.sectionHeader h2 a#paymentHistoryLink {
 p.information {
     background: transparent;
 }
+/* COMMENTED OUT - conflicts with main.css
 .roundedBox .hdr { margin-top: 2px }
 .roundedBox .hdr h2 {
     padding-top: 6px; 
 }
+*/
 /* oli selector widget on order summary screen */
 div#oliContainer {
     width: 786px !important;
@@ -5139,10 +5152,12 @@ img#securityCode_img {
     position: relative;
     top: 19px;
 }
+/* COMMENTED OUT - conflicts with main.css
 .roundedBox .hdr h2 a.headerLink,
 .roundedBox .hdr h2 a.headerLink2 {
     top: 6px;
 }
+*/
 
 div#oliContainer div.hd,
 div#oliContainer div.bd,
