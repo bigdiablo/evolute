@@ -426,7 +426,175 @@ body.login {
     line-height: 1 !important;
 }
 
+/* ========== PASSWORD RESET PAGE ========== */
+
+.login form[name="changePasswordForm"] {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.login form[name="changePasswordForm"] #FormPage,
+.login form[name="changePasswordForm"] #FormPageContent,
+.login form[name="changePasswordForm"] #FormFields {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login form[name="changePasswordForm"] .roundedBox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--color-white) !important;
+    border: none !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.login form[name="changePasswordForm"] .sectionHeader {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 20px 0 !important;
+    background-color: var(--color-white) !important;
+}
+
+.login form[name="changePasswordForm"] .sectionHeader h2 {
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    color: var(--color-dark-blue) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: none !important;
+    text-align: center;
+}
+
+.login form[name="changePasswordForm"] .sectionHeader b.htop,
+.login form[name="changePasswordForm"] .sectionHeader b.center,
+.login form[name="changePasswordForm"] .sectionHeader b.right {
+    display: none !important;
+}
+
+.login form[name="changePasswordForm"] .formSectionContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px !important;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.login form[name="changePasswordForm"] .inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+.login form[name="changePasswordForm"] .mainLabel {
+    display: flex;
+}
+
+.login form[name="changePasswordForm"] label.required {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-blue) !important;
+}
+
+.login form[name="changePasswordForm"] .requiredMarker {
+    display: none;
+}
+
+.login form[name="changePasswordForm"] .options {
+    display: flex;
+    width: 100%;
+}
+
+.login form[name="changePasswordForm"] .optionsContent {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.login form[name="changePasswordForm"] input.textInput.password {
+    width: 100% !important;
+    height: 48px !important;
+    padding: 0 12px !important;
+    font-size: 14px !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+    background-color: var(--color-white) !important;
+    box-sizing: border-box !important;
+}
+
+.login form[name="changePasswordForm"] input.textInput.password:focus {
+    outline: none !important;
+    border-color: var(--color-blue) !important;
+}
+
+.login form[name="changePasswordForm"] .inlineHelpImg {
+    display: none;
+}
+
+.login form[name="changePasswordForm"] .buttonGroup {
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.login form[name="changePasswordForm"] .yui-button.yui-submit-button {
+    display: flex;
+    width: 100%;
+    background: none !important;
+    border: none !important;
+    margin: 0 !important;
+}
+
+.login form[name="changePasswordForm"] .yui-button.yui-submit-button .first-child {
+    display: flex;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+.login form[name="changePasswordForm"] .yui-button.yui-submit-button button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+    height: 48px !important;
+    padding: 0 24px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: var(--color-white) !important;
+    background-color: var(--color-blue) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.login form[name="changePasswordForm"] .yui-button.yui-submit-button button:hover {
+    background-color: var(--color-dark-blue) !important;
+}
+
+.login form[name="changePasswordForm"] b.bt,
+.login form[name="changePasswordForm"] b.bt b,
+.login form[name="changePasswordForm"] b.bb,
+.login form[name="changePasswordForm"] b.bb b,
+.login form[name="changePasswordForm"] .clear {
+    display: none !important;
+}
+
 @media (max-width: 425px) {
+
+    .login form[name="changePasswordForm"] {
+        width: 100%;
+    }
 
     body.login {
         padding: 0 24px;
@@ -1890,11 +2058,12 @@ div.grid_1_1#leftInnerGrid {
 }
 
 .dashboard .roundedBox4.sideBar {
-    position: sticky;
-    top: 24px;
-    background-color: var(--color-white);
-    border: 1px solid var(--border-color);
+    position: sticky !important;
+    top: 24px !important;
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border-color) !important;
     border-radius: 12px;
+    margin: 0 !important;
     overflow: hidden;
 }
 
