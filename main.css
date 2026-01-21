@@ -6445,3 +6445,601 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .editCopy a:hover {
     text-decoration: underline !important;
 }
+
+/* ========== CREATE PROPOSAL STEP 1 - ENHANCED PRODUCT CARDS ========== */
+
+/* Company header cards - the clickable expandable headers */
+.dashboard #formContainer ul.text > li.contracto {
+    display: flex !important;
+    align-items: center !important;
+    padding: 16px 20px !important;
+    margin: 0 !important;
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: 10px !important;
+    cursor: pointer !important;
+    transition: all 0.15s ease !important;
+    list-style: none !important;
+}
+
+.dashboard #formContainer ul.text > li.contracto:hover {
+    background-color: #f8fafc !important;
+    border-color: var(--color-dark-blue) !important;
+}
+
+.dashboard #formContainer ul.text > li.contracto > span {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: var(--color-dark) !important;
+    position: relative !important;
+    left: 0 !important;
+    padding-left: 24px !important;
+}
+
+.dashboard #formContainer ul.text > li.contracto > span::before {
+    content: "−" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 18px !important;
+    height: 18px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: var(--color-dark-blue) !important;
+    color: var(--color-white) !important;
+    border-radius: 4px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+}
+
+.dashboard #formContainer ul.text > li.expando > span::before {
+    content: "+" !important;
+}
+
+/* Product details container */
+.dashboard #formContainer ul.text > li.details {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 1px solid var(--border-light) !important;
+    border-top: none !important;
+    border-radius: 0 0 10px 10px !important;
+    margin-top: -10px !important;
+    margin-bottom: 16px !important;
+    overflow: hidden !important;
+    background-color: var(--color-white) !important;
+}
+
+.dashboard #formContainer ul.text > li.details .target {
+    padding: 12px 0 !important;
+}
+
+/* Product rows - even/odd styling */
+.dashboard #formContainer li.details .target > .even,
+.dashboard #formContainer li.details .target > .odd {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 12px 20px !important;
+    margin: 0 !important;
+    transition: background-color 0.15s ease !important;
+}
+
+.dashboard #formContainer li.details .target > .even {
+    background-color: var(--color-white) !important;
+}
+
+.dashboard #formContainer li.details .target > .odd {
+    background-color: #f8fafc !important;
+}
+
+.dashboard #formContainer li.details .target > .even:hover,
+.dashboard #formContainer li.details .target > .odd:hover {
+    background-color: #e8f4fd !important;
+}
+
+/* Left side - radio + label */
+.dashboard #formContainer li.details .target .left {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    flex: 1 !important;
+}
+
+.dashboard #formContainer li.details .target .left input.productRadio {
+    width: 18px !important;
+    height: 18px !important;
+    accent-color: var(--color-dark-blue) !important;
+    cursor: pointer !important;
+    margin: 0 !important;
+}
+
+.dashboard #formContainer li.details .target .left label {
+    font-size: 14px !important;
+    color: var(--color-dark) !important;
+    cursor: pointer !important;
+    margin: 0 !important;
+}
+
+/* Right side - Sample Lead link */
+.dashboard #formContainer li.details .target .right {
+    flex-shrink: 0 !important;
+}
+
+.dashboard #formContainer li.details .target .right a {
+    font-size: 13px !important;
+    color: var(--color-dark-blue) !important;
+    text-decoration: none !important;
+    padding: 6px 12px !important;
+    border: 1px solid var(--color-dark-blue) !important;
+    border-radius: 6px !important;
+    transition: all 0.15s ease !important;
+}
+
+.dashboard #formContainer li.details .target .right a:hover {
+    background-color: var(--color-dark-blue) !important;
+    color: var(--color-white) !important;
+}
+
+/* Exclusivity section */
+.dashboard #formContainer ul.text#leadtypesection {
+    display: block !important;
+    margin-top: 24px !important;
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+}
+
+.dashboard #formContainer ul.text#leadtypesection > li.expando1 {
+    display: flex !important;
+    align-items: center !important;
+    padding: 16px 20px !important;
+    background-color: #f8fafc !important;
+    border-bottom: 1px solid var(--border-light) !important;
+    cursor: pointer !important;
+    list-style: none !important;
+}
+
+.dashboard #formContainer ul.text#leadtypesection > li.expando1 > span {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: var(--color-dark) !important;
+    padding-left: 24px !important;
+    position: relative !important;
+}
+
+.dashboard #formContainer ul.text#leadtypesection > li.expando1 > span::before {
+    content: "+" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 18px !important;
+    height: 18px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: var(--color-dark-blue) !important;
+    color: var(--color-white) !important;
+    border-radius: 4px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+}
+
+.dashboard #formContainer ul.text#leadtypesection > li.leadtypecontainer {
+    padding: 20px !important;
+    list-style: none !important;
+}
+
+.dashboard #formContainer .leadtypecontainer .leadtype {
+    margin-bottom: 12px !important;
+}
+
+.dashboard #formContainer .leadtypecontainer .leadtype:last-child {
+    margin-bottom: 0 !important;
+}
+
+.dashboard #formContainer .leadtypecontainer .leadtype label {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    font-size: 14px !important;
+    color: var(--color-dark) !important;
+    cursor: pointer !important;
+}
+
+.dashboard #formContainer .leadtypecontainer .leadtype input.radio {
+    width: 18px !important;
+    height: 18px !important;
+    accent-color: var(--color-dark-blue) !important;
+    margin-top: 2px !important;
+    flex-shrink: 0 !important;
+}
+
+.dashboard #formContainer .leadtypecontainer .leadtype .normal {
+    color: var(--color-gray) !important;
+    font-weight: 400 !important;
+}
+
+/* Voice Program section - same as Exclusivity */
+.dashboard #formContainer ul.text#voiceprogramsection {
+    display: block !important;
+    margin-top: 16px !important;
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+}
+
+.dashboard #formContainer ul.text#voiceprogramsection > li.expando1 {
+    display: flex !important;
+    align-items: center !important;
+    padding: 16px 20px !important;
+    background-color: #f8fafc !important;
+    border-bottom: 1px solid var(--border-light) !important;
+    cursor: pointer !important;
+    list-style: none !important;
+}
+
+.dashboard #formContainer ul.text#voiceprogramsection > li.expando1 > span {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: var(--color-dark) !important;
+    padding-left: 24px !important;
+    position: relative !important;
+}
+
+.dashboard #formContainer ul.text#voiceprogramsection > li.expando1 > span::before {
+    content: "+" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 18px !important;
+    height: 18px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: var(--color-dark-blue) !important;
+    color: var(--color-white) !important;
+    border-radius: 4px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+}
+
+/* Bottom continue button */
+.dashboard #formContainer #bottomButton {
+    margin-top: 24px !important;
+    padding: 20px !important;
+    background-color: #f8fafc !important;
+    border-radius: 10px !important;
+}
+
+.dashboard #formContainer #bottomButton .buttonGroup .yui-button .first-child button {
+    padding: 12px 32px !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    color: var(--color-white) !important;
+    background-color: var(--color-dark-blue) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: all 0.15s ease !important;
+}
+
+.dashboard #formContainer #bottomButton .buttonGroup .yui-button .first-child button:hover:not(:disabled) {
+    background-color: var(--color-blue) !important;
+}
+
+.dashboard #formContainer #bottomButton .buttonGroup .yui-button-disabled .first-child button {
+    background-color: #94a3b8 !important;
+    cursor: not-allowed !important;
+}
+
+/* ========== AUTO WARRANTY STEP 2 - FILTERS TAB IMPROVEMENTS ========== */
+
+/* Page title */
+.dashboard #bidgroupContent h1#MainTitle {
+    font-size: 22px !important;
+    font-weight: 600 !important;
+    color: var(--color-dark) !important;
+    margin: 0 0 24px 0 !important;
+    padding: 0 !important;
+    border-bottom: 2px solid var(--color-dark-blue) !important;
+    padding-bottom: 16px !important;
+}
+
+/* Order Name input field */
+.dashboard #bidgroupContent #nameField {
+    margin-bottom: 24px !important;
+}
+
+.dashboard #bidgroupContent #nameField .inputGroup {
+    display: flex !important;
+    align-items: center !important;
+    gap: 16px !important;
+}
+
+.dashboard #bidgroupContent #nameField .mainLabel {
+    flex: 0 0 auto !important;
+}
+
+.dashboard #bidgroupContent #nameField .mainLabel label {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: var(--color-dark) !important;
+}
+
+.dashboard #bidgroupContent #nameField .options {
+    flex: 1 !important;
+    max-width: 400px !important;
+}
+
+.dashboard #bidgroupContent #nameField input.textInput {
+    width: 100% !important;
+    padding: 12px 16px !important;
+    font-size: 14px !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+    background-color: var(--color-white) !important;
+    transition: border-color 0.15s ease !important;
+}
+
+.dashboard #bidgroupContent #nameField input.textInput:focus {
+    border-color: var(--color-dark-blue) !important;
+    outline: none !important;
+}
+
+/* Checkbox filter sections (State, Language) */
+.dashboard #filtersContainer .checkboxes.filter {
+    margin-bottom: 24px !important;
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+}
+
+.dashboard #filtersContainer .checkboxes.filter > h3 {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: var(--color-dark) !important;
+    padding: 16px 20px !important;
+    margin: 0 !important;
+    background-color: #f8fafc !important;
+    border-bottom: 1px solid var(--border-light) !important;
+}
+
+.dashboard #filtersContainer .checkboxes.filter .tableContainer {
+    padding: 20px !important;
+}
+
+/* State checkbox table */
+.dashboard #filtersContainer table.cBoxes {
+    width: 100% !important;
+    border-collapse: collapse !important;
+}
+
+.dashboard #filtersContainer table.cBoxes tbody tr {
+    border: none !important;
+}
+
+.dashboard #filtersContainer table.cBoxes tbody tr.odd {
+    background-color: var(--color-white) !important;
+}
+
+.dashboard #filtersContainer table.cBoxes tbody tr.even {
+    background-color: #f8fafc !important;
+}
+
+.dashboard #filtersContainer table.cBoxes td {
+    padding: 8px 12px !important;
+    vertical-align: middle !important;
+    border: none !important;
+}
+
+.dashboard #filtersContainer table.cBoxes td.checkboxCell {
+    width: 24px !important;
+    padding-right: 4px !important;
+}
+
+.dashboard #filtersContainer table.cBoxes td.checkboxCell + td {
+    padding-left: 0 !important;
+}
+
+.dashboard #filtersContainer table.cBoxes input.filterCheckBox {
+    width: 16px !important;
+    height: 16px !important;
+    accent-color: var(--color-dark-blue) !important;
+    cursor: pointer !important;
+}
+
+.dashboard #filtersContainer table.cBoxes label {
+    font-size: 14px !important;
+    color: var(--color-dark) !important;
+    cursor: pointer !important;
+}
+
+/* Check All / Uncheck All links */
+.dashboard #filtersContainer .checkAll {
+    padding: 12px 20px !important;
+    border-top: 1px solid var(--border-light) !important;
+    background-color: #f8fafc !important;
+    text-align: center !important;
+}
+
+.dashboard #filtersContainer .checkAll a {
+    font-size: 13px !important;
+    color: var(--color-dark-blue) !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+}
+
+.dashboard #filtersContainer .checkAll a:hover {
+    text-decoration: underline !important;
+}
+
+/* Radio group filters (Manufacturer Warranty) */
+.dashboard #filtersContainer .radioGroup.filter {
+    margin-bottom: 24px !important;
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+}
+
+.dashboard #filtersContainer .radioGroup.filter > h3 {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: var(--color-dark) !important;
+    padding: 16px 20px !important;
+    margin: 0 !important;
+    background-color: #f8fafc !important;
+    border-bottom: 1px solid var(--border-light) !important;
+}
+
+.dashboard #filtersContainer .radioGroup.filter > div {
+    padding: 16px 20px !important;
+    display: flex !important;
+    gap: 24px !important;
+    flex-wrap: wrap !important;
+}
+
+.dashboard #filtersContainer .radioGroup.filter input.radio {
+    width: 18px !important;
+    height: 18px !important;
+    accent-color: var(--color-dark-blue) !important;
+    cursor: pointer !important;
+    margin-right: 8px !important;
+}
+
+.dashboard #filtersContainer .radioGroup.filter label {
+    font-size: 14px !important;
+    color: var(--color-dark) !important;
+    cursor: pointer !important;
+}
+
+/* Dropdown filters (Max Vehicle Age, Buyer Name) */
+.dashboard #filtersContainer .dropDown.filter {
+    margin-bottom: 24px !important;
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+}
+
+.dashboard #filtersContainer .dropDown.filter > h3 {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: var(--color-dark) !important;
+    padding: 16px 20px !important;
+    margin: 0 !important;
+    background-color: #f8fafc !important;
+    border-bottom: 1px solid var(--border-light) !important;
+}
+
+.dashboard #filtersContainer .dropDown.filter .dropDownContainer {
+    padding: 16px 20px !important;
+}
+
+.dashboard #filtersContainer .dropDown.filter select {
+    padding: 12px 16px !important;
+    font-size: 14px !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+    background-color: var(--color-white) !important;
+    min-width: 200px !important;
+    cursor: pointer !important;
+}
+
+.dashboard #filtersContainer .dropDown.filter select:focus {
+    border-color: var(--color-dark-blue) !important;
+    outline: none !important;
+}
+
+/* Pricing message */
+.dashboard #filtersContainer > span.pricingMsg {
+    display: block !important;
+    font-size: 14px !important;
+    color: var(--color-gray) !important;
+    margin-bottom: 24px !important;
+    padding: 16px 20px !important;
+    background-color: #e8f4fd !important;
+    border-radius: 8px !important;
+    border-left: 4px solid var(--color-dark-blue) !important;
+}
+
+/* Price grid improvements */
+.dashboard #pricingContainer table.pricegrid {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+}
+
+.dashboard #pricingContainer table.pricegrid thead tr.toplabel th {
+    padding: 16px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: var(--color-dark) !important;
+    background-color: #f8fafc !important;
+    border-bottom: 1px solid var(--border-light) !important;
+    text-align: center !important;
+}
+
+.dashboard #pricingContainer table.pricegrid thead tr.toplabel th.left {
+    text-align: left !important;
+}
+
+.dashboard #pricingContainer table.pricegrid thead tr th.colHeaders {
+    padding: 12px 16px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    color: var(--color-gray) !important;
+    background-color: #f8fafc !important;
+    border-bottom: 1px solid var(--border-light) !important;
+    text-align: center !important;
+}
+
+.dashboard #pricingContainer table.pricegrid tbody tr.odd {
+    background-color: var(--color-white) !important;
+}
+
+.dashboard #pricingContainer table.pricegrid tbody tr.even {
+    background-color: #f8fafc !important;
+}
+
+.dashboard #pricingContainer table.pricegrid tbody td {
+    padding: 12px 16px !important;
+    font-size: 14px !important;
+    color: var(--color-dark) !important;
+    border-bottom: 1px solid var(--border-light) !important;
+    text-align: center !important;
+}
+
+.dashboard #pricingContainer table.pricegrid tbody td.label {
+    text-align: left !important;
+    font-weight: 500 !important;
+    color: var(--color-gray) !important;
+}
+
+.dashboard #pricingContainer table.pricegrid input.textInput {
+    padding: 10px 12px !important;
+    font-size: 14px !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 6px !important;
+    width: 80px !important;
+    text-align: center !important;
+}
+
+.dashboard #pricingContainer table.pricegrid input.textInput:focus {
+    border-color: var(--color-dark-blue) !important;
+    outline: none !important;
+}
