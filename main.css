@@ -397,6 +397,7 @@ body.login {
 .login #validationErrors {
     background-color: var(--color-white);
     border: 0;
+    width: 100%;
     padding: 0 20px 10px !important;
     margin: 0 !important;
 }
