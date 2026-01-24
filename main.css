@@ -275,7 +275,7 @@ body.login {
 .login #NestedFormPage div.options {
     display: flex;
     width: 100% !important;
-    padding: 0px;
+    padding: 0;
 }
 
 .login .forgotPassword {
@@ -983,7 +983,7 @@ body.login {
     width: 100%;
     overflow: hidden;
     margin: 0;
-    padding: 0px;
+    padding: 0;
     padding-bottom: 0 !important;
     margin-right: 0 !important;
     z-index: 1;
@@ -1019,7 +1019,7 @@ body.login {
     float: left;
     text-align: left;
     overflow: hidden;
-    margin-left: 0px;
+    margin-left: 0;
     background: transparent;
     border: none;
     margin-top: 0;
@@ -2069,11 +2069,13 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .roundedBox4.sideBar {
     position: sticky !important;
     top: 24px !important;
+    max-height: calc(100vh - 48px) !important;
+    overflow-y: auto !important;
     background-color: var(--color-white) !important;
     border: 1px solid var(--border) !important;
     border-radius: 12px;
     margin: 0 !important;
-    overflow: hidden;
+    margin-bottom: 24px !important;
 }
 
 .dashboard #settingssubnav {
@@ -5137,6 +5139,16 @@ div.grid_1_1#leftInnerGrid {
 
 /* ========== CONNECTIONS - IMPROVED TOP BAR ========== */
 
+/* Connections table wrapper - enable horizontal scroll */
+.dashboard .channels:has(#connectionsTable) {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+
+.dashboard #connectionsTable {
+    min-width: 1200px !important;
+}
+
 .dashboard #connectionsTable thead tr.actions td.paginationTop {
     padding: 20px !important;
     background-color: var(--color-white) !important;
@@ -5212,6 +5224,29 @@ div.grid_1_1#leftInnerGrid {
 .dashboard #connectionsTable thead tr.actions td.paginationTop .buttonGroup {
     display: flex !important;
     justify-content: flex-end !important;
+}
+
+/* Connections table - ensure proper column sizing */
+.dashboard #connectionsTable thead tr.colheaders th {
+    white-space: nowrap !important;
+    padding: 12px 16px !important;
+}
+
+.dashboard #connectionsTable tbody tr td {
+    white-space: nowrap !important;
+    padding: 12px 16px !important;
+}
+
+/* Connections modal/dialog fix */
+.dashboard .yui-panel-container:has([id*="buyer"]) .yui-panel,
+.dashboard .yui-panel-container:has([id*="Buyer"]) .yui-panel {
+    min-width: 400px !important;
+    max-width: 600px !important;
+}
+
+.dashboard .yui-panel-container:has([id*="buyer"]) .yui-panel .bd,
+.dashboard .yui-panel-container:has([id*="Buyer"]) .yui-panel .bd {
+    min-height: 100px !important;
 }
 
 /* ========== WHOLESALE ORDERS - COMPACT TABLE VIEW ========== */
@@ -6373,11 +6408,11 @@ div.grid_1_1#leftInnerGrid {
 }
 
 .dashboard table.pricegrid input.textInput {
-    padding: 8px 12px !important;
-    font-size: 14px !important;
+    padding: 8px 10px !important;
+    font-size: 13px !important;
     border: 1px solid var(--border) !important;
     border-radius: 6px !important;
-    width: 80px !important;
+    width: 60px !important;
 }
 
 .dashboard table.pricegrid input.textInput:focus {
@@ -7026,15 +7061,252 @@ div.grid_1_1#leftInnerGrid {
 }
 
 .dashboard #pricingContainer table.pricegrid input.textInput {
-    padding: 10px 12px !important;
-    font-size: 14px !important;
+    padding: 8px 10px !important;
+    font-size: 13px !important;
     border: 1px solid var(--border) !important;
     border-radius: 6px !important;
-    width: 80px !important;
+    width: 60px !important;
     text-align: center !important;
 }
 
 .dashboard #pricingContainer table.pricegrid input.textInput:focus {
     border-color: var(--color-primary) !important;
     outline: none !important;
+}
+
+/* ========== YUI MODALS/DIALOGS/TOOLTIPS FIX ========== */
+
+/* Fix for YUI Panel/Dialog transparent background issue caused by universal reset */
+.yui-skin-sam .yui-panel-container {
+    padding: 0 1px !important;
+}
+
+.yui-skin-sam .yui-panel {
+    position: relative !important;
+    border-style: solid !important;
+    border-width: 1px 0 !important;
+    border-color: #808080 !important;
+    z-index: 9999 !important;
+}
+
+.yui-skin-sam .yui-panel .hd,
+.yui-skin-sam .yui-panel .bd,
+.yui-skin-sam .yui-panel .ft {
+    border-style: solid !important;
+    border-width: 0 1px !important;
+    border-color: #808080 !important;
+    margin: 0 -1px !important;
+}
+
+.yui-skin-sam .yui-panel .hd {
+    padding: 0 10px !important;
+    font-size: 93% !important;
+    line-height: 2 !important;
+    font-weight: bold !important;
+    color: #000 !important;
+    background-color: #e8e8e8 !important;
+    border-bottom: solid 1px #ccc !important;
+}
+
+.yui-skin-sam .yui-panel .bd,
+.yui-skin-sam .yui-panel .ft {
+    background-color: #f2f2f2 !important;
+}
+
+.yui-skin-sam .yui-panel .bd {
+    padding: 10px !important;
+}
+
+.yui-skin-sam .yui-panel .ft {
+    border-top: solid 1px #808080 !important;
+    padding: 5px 10px !important;
+    font-size: 77% !important;
+}
+
+.yui-skin-sam .container-close {
+    position: absolute !important;
+    top: 5px !important;
+    right: 6px !important;
+    width: 25px !important;
+    height: 15px !important;
+    cursor: pointer !important;
+}
+
+/* YUI Dialog specific styles */
+.yui-skin-sam .yui-dialog .ft {
+    border-top: 0 !important;
+    padding: 0 10px 10px 10px !important;
+    font-size: 100% !important;
+}
+
+.yui-skin-sam .yui-dialog .ft .button-group {
+    display: block !important;
+    text-align: right !important;
+}
+
+.yui-skin-sam .yui-dialog .ft button.default {
+    font-weight: bold !important;
+}
+
+/* YUI Simple Dialog icon styles */
+.yui-skin-sam .yui-simple-dialog .bd .yui-icon {
+    width: 16px !important;
+    height: 16px !important;
+    margin-right: 10px !important;
+    float: left !important;
+}
+
+/* Mask overlay */
+.yui-skin-sam .mask {
+    background-color: #000 !important;
+    opacity: 0.25 !important;
+    z-index: 9998 !important;
+}
+
+/* Panel container shadow */
+.yui-skin-sam .yui-panel-container.shadow .underlay {
+    position: absolute !important;
+    top: 2px !important;
+    left: -3px !important;
+    right: -3px !important;
+    bottom: -3px !important;
+    background-color: #000 !important;
+    opacity: 0.12 !important;
+}
+
+/* YUI Tooltip styles */
+.yui-skin-sam .yui-tt .bd {
+    position: relative !important;
+    z-index: 10000 !important;
+    color: #000 !important;
+    padding: 2px 5px !important;
+    border-color: #d4c237 #a6982b #a6982b #a6982b !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    background-color: #ffee69 !important;
+}
+
+.yui-overlay,
+.yui-panel-container {
+    visibility: hidden !important;
+    position: absolute !important;
+    z-index: 9999 !important;
+}
+
+.yui-panel {
+    position: relative !important;
+}
+
+/* ========== YUI CALENDAR DATE PICKER FIX ========== */
+
+/* Calendar container */
+.yui-skin-sam .yui-calcontainer {
+    background-color: #f2f2f2 !important;
+    border: 1px solid #808080 !important;
+    padding: 10px !important;
+    z-index: 10000 !important;
+}
+
+/* Calendar table */
+.yui-skin-sam .yui-calendar {
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    font-size: 93% !important;
+    text-align: center !important;
+    margin: 0 !important;
+    background-color: #fff !important;
+}
+
+/* Calendar header */
+.yui-skin-sam .yui-calendar .calheader {
+    background: transparent !important;
+    font-weight: bold !important;
+    padding: 0 0 0.6em 0 !important;
+    text-align: center !important;
+}
+
+/* Calendar weekday row */
+.yui-skin-sam .yui-calendar .calweekdayrow {
+    height: 2em !important;
+}
+
+.yui-skin-sam .yui-calendar .calweekdaycell {
+    color: #000 !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    width: 2em !important;
+    padding: 4px !important;
+}
+
+/* Calendar cells */
+.yui-skin-sam .yui-calendar td.calcell {
+    border: 1px solid #ccc !important;
+    background: #fff !important;
+    padding: 1px !important;
+    height: 1.6em !important;
+    line-height: 1.6em !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+}
+
+.yui-skin-sam .yui-calendar td.calcell a {
+    color: #06c !important;
+    display: block !important;
+    height: 100% !important;
+    text-decoration: none !important;
+    padding: 2px !important;
+}
+
+/* Today's date */
+.yui-skin-sam .yui-calendar td.calcell.today {
+    background-color: #000 !important;
+}
+
+.yui-skin-sam .yui-calendar td.calcell.today a {
+    background-color: #fff !important;
+}
+
+/* Selected date */
+.yui-skin-sam .yui-calendar td.calcell.selected a {
+    background-color: #b3d4ff !important;
+    color: #000 !important;
+}
+
+/* Hover state */
+.yui-skin-sam .yui-calendar td.calcell.calcellhover {
+    background-color: #426fd9 !important;
+    color: #fff !important;
+    cursor: pointer !important;
+}
+
+.yui-skin-sam .yui-calendar td.calcell.calcellhover a {
+    background-color: #426fd9 !important;
+    color: #fff !important;
+}
+
+/* Out of month dates */
+.yui-skin-sam .yui-calendar td.calcell.oom {
+    background-color: #ccc !important;
+    color: #a6a6a6 !important;
+}
+
+/* Navigation buttons */
+.yui-skin-sam .yui-calcontainer .yui-cal-nav {
+    background-color: #f2f2f2 !important;
+    border: 1px solid #808080 !important;
+    padding: 0 !important;
+}
+
+.yui-skin-sam .yui-calcontainer .yui-cal-nav-y,
+.yui-skin-sam .yui-calcontainer .yui-cal-nav-m,
+.yui-skin-sam .yui-calcontainer .yui-cal-nav-b {
+    padding: 5px 10px !important;
+}
+
+/* Close button */
+.yui-calcontainer .close-icon,
+.yui-skin-sam .yui-calcontainer .calclose {
+    cursor: pointer !important;
+    width: 25px !important;
+    height: 15px !important;
 }
