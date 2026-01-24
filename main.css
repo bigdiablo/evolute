@@ -702,7 +702,7 @@ body.login {
 .dashboard #logoDiv #logo::before {
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 792 195.87'%3E%3Cstyle%3E.cls-1%7Bfill:%237d878e%7D.cls-2%7Bfill:%23fff%7D.cls-3%7Bfill:%2300ade1%7D.cls-4%7Bfill:%23004279%7D.cls-5%7Bfill:%230060a7%7D.cls-6%7Bfill:%2356b45e%7D%3C/style%3E%3Cg%3E%3Cpath class='cls-1' d='M257.25,52.44c-26.17,0-47.45,21.29-47.45,47.45s21.29,47.45,47.45,47.45c13.68,0,26.69-5.91,35.71-16.2,2.93-3.35,2.6-8.44-.75-11.38-3.35-2.93-8.44-2.6-11.38.75-5.96,6.8-14.55,10.7-23.58,10.7-17.27,0-31.33-14.05-31.33-31.33s14.05-31.33,31.33-31.33c14.49,0,26.71,9.89,30.28,23.26h-41.02c-4.45,0-8.06,3.61-8.06,8.06s3.61,8.06,8.06,8.06h50.13c4.45,0,8.06-3.61,8.06-8.06,0-26.17-21.29-47.45-47.45-47.45Z'/%3E%3Cpath class='cls-1' d='M738.19,52.44c-26.16,0-47.45,21.29-47.45,47.45s21.29,47.45,47.45,47.45c13.68,0,26.69-5.91,35.71-16.2,2.93-3.35,2.6-8.44-.75-11.38-3.35-2.93-8.44-2.6-11.38.75-5.96,6.8-14.55,10.7-23.58,10.7-17.27,0-31.33-14.05-31.33-31.33s14.05-31.33,31.33-31.33c14.49,0,26.71,9.89,30.28,23.26h-41.02c-4.45,0-8.06,3.61-8.06,8.06s3.61,8.06,8.06,8.06h50.13c4.45,0,8.06-3.61,8.06-8.06,0-26.17-21.29-47.45-47.45-47.45Z'/%3E%3Cpath class='cls-1' d='M448.02,52.44c-26.17,0-47.45,21.29-47.45,47.45s21.29,47.45,47.45,47.45c13.68,0,26.69-5.91,35.71-16.2,7.57-8.65,11.74-19.75,11.74-31.25,0-26.17-21.29-47.45-47.45-47.45ZM471.6,120.53c-5.96,6.8-14.55,10.7-23.58,10.7-17.27,0-31.33-14.05-31.33-31.33s14.05-31.33,31.33-31.33,31.33,14.05,31.33,31.33c0,7.6-2.75,14.92-7.75,20.63Z'/%3E%3Cpath class='cls-1' d='M618.15,55.42c-4.45,0-8.06,3.61-8.06,8.06v40.36c0,6.64-2.41,13.04-6.77,18.03-5.21,5.95-12.72,9.36-20.61,9.36-15.1,0-27.39-12.29-27.39-27.39v-40.36c0-4.45-3.61-8.06-8.06-8.06s-8.06,3.61-8.06,8.06v40.36c0,23.99,19.52,43.51,43.51,43.51,12.54,0,24.48-5.42,32.75-14.86,6.94-7.93,10.77-18.11,10.77-28.66v-40.36c0-4.45-3.61-8.06-8.06-8.06Z'/%3E%3Cpath class='cls-1' d='M683.27,131.23c-15.1,0-27.39-12.29-27.39-27.39v-40.39h23.22c4.45,0,8.06-3.61,8.06-8.06s-3.61-8.06-8.06-8.06h-23.22v-27.77c0-4.45-3.61-8.06-8.06-8.06s-8.06,3.61-8.06,8.06v33.89c-.15.62-.25,1.27-.25,1.94s.09,1.32.25,1.94v46.51c0,23.99,19.52,43.51,43.51,43.51,4.45,0,8.06-3.61,8.06-8.06s-3.61-8.06-8.06-8.06Z'/%3E%3Cpath class='cls-1' d='M515.72,12.82c-4.45,0-8.06,3.61-8.06,8.06v117.28c0,4.45,3.61,8.06,8.06,8.06s8.06-3.61,8.06-8.06V20.89c0-4.45-3.61-8.06-8.06-8.06Z'/%3E%3Cpath class='cls-1' d='M360.86,146.95c.19-.28.36-.57.51-.87.02-.04.05-.07.07-.11l39.39-78.89c1.99-3.98.37-8.83-3.61-10.82-3.98-1.99-8.83-.37-10.82,3.61l-32.18,64.44-32.18-64.44c-1.99-3.98-6.83-5.6-10.82-3.61-3.98,1.99-5.6,6.83-3.61,10.82l39.39,78.89s.05.07.07.11c.16.3.32.59.52.87,0,0,.01.02.02.02.19.28.41.54.64.79.06.07.12.13.18.19.19.19.39.38.59.56.05.05.1.09.16.14.25.2.52.39.8.56.07.05.15.08.23.13.14.08.27.16.41.23.07.04.15.06.23.1.12.06.25.11.37.16.21.08.42.16.63.22.11.03.22.07.34.1.25.06.49.11.74.15.09.01.18.03.27.05.34.04.68.07,1.02.07,0,0,0,0,0,0s0,0,0,0c.34,0,.68-.03,1.02-.07.09-.01.18-.03.27-.05.25-.04.49-.09.74-.15.11-.03.22-.06.34-.1.21-.07.42-.14.63-.22.13-.05.25-.1.37-.16.07-.03.15-.06.23-.1.14-.07.28-.15.41-.23.08-.04.15-.08.23-.13.28-.17.55-.36.8-.56.06-.04.11-.09.16-.14.21-.18.4-.36.59-.55.06-.07.13-.13.19-.2.23-.25.44-.51.63-.79,0,0,.01-.02.02-.03Z'/%3E%3C/g%3E%3Cpath class='cls-4' d='M66.5,125.36c-16.06-15.64-37.2-24.31-59.6-24.47,1.53,46.57,39.08,84.02,85.7,85.36l-.03-1.5c-.63-22.54-9.89-43.63-26.07-59.39Z'/%3E%3Cpath class='cls-3' d='M92.58,9.63C46.3,10.98,8.94,47.92,6.94,94.03c46.66-.35,84.62-37.9,85.64-84.4Z'/%3E%3Cpath class='cls-6' d='M183.44,94c-2-45.54-38.48-82.13-83.98-84.3.5,22.03,9.23,42.74,24.72,58.5,15.78,16.06,36.8,25.2,59.26,25.8Z'/%3E%3Cpath class='cls-5' d='M99.48,184.74l-.04,1.44c45.83-2.17,82.52-39.26,84.04-85.26-45.87,1.19-82.71,37.89-84,83.83Z'/%3E%3Cpath class='cls-2' d='M183.44,94c-22.46-.6-43.48-9.74-59.26-25.8-15.49-15.77-24.22-36.47-24.72-58.5-1.42-.07-2.84-.1-4.28-.1-.87,0-1.74.02-2.61.04-1.03,46.5-38.99,84.04-85.64,84.4-.06,1.3-.09,2.6-.09,3.91,0,.99.02,1.97.05,2.94,22.4.16,43.54,8.83,59.6,24.47,16.18,15.76,25.43,36.85,26.07,59.39l.03,1.5c.86.02,1.73.04,2.59.04,1.42,0,2.84-.04,4.25-.1l.04-1.44c1.29-45.93,38.13-82.63,84-83.83.03-.99.06-1.98.06-2.98,0-1.32-.03-2.63-.09-3.94Z'/%3E%3C/svg%3E");
     display: block;
-    width: 180px;
+    width: 150px;
     height: auto;
 }
 
@@ -2068,14 +2068,14 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .roundedBox4.sideBar {
     position: sticky !important;
-    top: 24px !important;
-    max-height: calc(100vh - 48px) !important;
+    top: 20px !important;
+    max-height: calc(100vh - 80px) !important;
     overflow-y: auto !important;
     background-color: var(--color-white) !important;
     border: 1px solid var(--border) !important;
     border-radius: 12px;
     margin: 0 !important;
-    margin-bottom: 24px !important;
+    padding-bottom: 20px !important;
 }
 
 .dashboard #settingssubnav {
@@ -6564,8 +6564,8 @@ div.grid_1_1#leftInnerGrid {
     background-color: var(--color-white) !important;
     border: 1px solid var(--border) !important;
     border-radius: 12px !important;
-    padding: 24px !important;
-    margin-top: 20px !important;
+    padding: 16px !important;
+    margin-top: 16px !important;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
 }
 
@@ -6574,9 +6574,9 @@ div.grid_1_1#leftInnerGrid {
     width: 100% !important;
     border-collapse: separate !important;
     border-spacing: 0 !important;
-    margin-top: 20px !important;
+    margin-top: 12px !important;
     background-color: var(--color-white) !important;
-    border-radius: 10px !important;
+    border-radius: 8px !important;
     overflow: hidden !important;
     border: 1px solid var(--border) !important;
 }
@@ -6609,8 +6609,8 @@ div.grid_1_1#leftInnerGrid {
 /* Column headers (sub-headers) */
 .dashboard table.pricegrid thead th,
 .dashboard table.pricegrid thead th.colHeaders {
-    padding: 14px 16px !important;
-    font-size: 13px !important;
+    padding: 10px 12px !important;
+    font-size: 12px !important;
     font-weight: 600 !important;
     color: var(--color-gray) !important;
     text-align: center !important;
@@ -6644,8 +6644,8 @@ div.grid_1_1#leftInnerGrid {
 
 /* Table cells */
 .dashboard table.pricegrid tbody td {
-    padding: 16px 20px !important;
-    font-size: 14px !important;
+    padding: 10px 12px !important;
+    font-size: 13px !important;
     color: var(--color-dark) !important;
     border-bottom: 1px solid var(--border) !important;
     border-right: 1px solid var(--border) !important;
@@ -6681,13 +6681,13 @@ div.grid_1_1#leftInnerGrid {
 
 /* Input fields - modern, clean design */
 .dashboard table.pricegrid input.textInput {
-    width: 85px !important;
-    padding: 10px 14px !important;
-    font-size: 14px !important;
+    width: 70px !important;
+    padding: 8px 10px !important;
+    font-size: 13px !important;
     font-weight: 500 !important;
     color: var(--color-dark) !important;
-    border: 2px solid var(--border) !important;
-    border-radius: 8px !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 6px !important;
     background-color: var(--color-white) !important;
     text-align: center !important;
     transition: all 0.2s ease !important;
@@ -7557,21 +7557,23 @@ div.grid_1_1#leftInnerGrid {
     display: block !important;
 }
 
-/* ========== YUI CALENDAR DATE PICKER FIX ========== */
+/* ========== YUI CALENDAR DATE PICKER - CLEAN MINIMAL ========== */
 
 /* Calendar container */
 .yui-skin-sam .yui-calcontainer {
-    background-color: var(--border) !important;
+    background-color: var(--color-white) !important;
     border: 1px solid var(--border) !important;
-    padding: 10px !important;
+    border-radius: 12px !important;
+    padding: 16px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
     z-index: 10000 !important;
 }
 
 /* Calendar table */
 .yui-skin-sam .yui-calendar {
     border-spacing: 0 !important;
-    border-collapse: collapse !important;
-    font-size: 93% !important;
+    border-collapse: separate !important;
+    font-size: 14px !important;
     text-align: center !important;
     margin: 0 !important;
     background-color: var(--color-white) !important;
@@ -7580,74 +7582,82 @@ div.grid_1_1#leftInnerGrid {
 /* Calendar header */
 .yui-skin-sam .yui-calendar .calheader {
     background: transparent !important;
-    font-weight: bold !important;
-    padding: 0 0 0.6em 0 !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    padding: 0 0 16px 0 !important;
     text-align: center !important;
+    color: var(--color-dark) !important;
 }
 
 /* Calendar weekday row */
 .yui-skin-sam .yui-calendar .calweekdayrow {
-    height: 2em !important;
+    height: 36px !important;
 }
 
 .yui-skin-sam .yui-calendar .calweekdaycell {
-    color: var(--color-dark) !important;
-    font-weight: bold !important;
+    color: var(--color-gray) !important;
+    font-weight: 600 !important;
+    font-size: 12px !important;
     text-align: center !important;
-    width: 2em !important;
-    padding: 4px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    width: 40px !important;
+    padding: 8px 4px !important;
 }
 
 /* Calendar cells */
 .yui-skin-sam .yui-calendar td.calcell {
-    border: 1px solid var(--border) !important;
+    border: none !important;
     background: var(--color-white) !important;
-    padding: 1px !important;
-    height: 1.6em !important;
-    line-height: 1.6em !important;
+    padding: 4px !important;
+    height: 40px !important;
+    width: 40px !important;
     text-align: center !important;
     white-space: nowrap !important;
 }
 
 .yui-skin-sam .yui-calendar td.calcell a {
-    color: var(--color-primary) !important;
-    display: block !important;
-    height: 100% !important;
+    color: var(--color-dark) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 32px !important;
+    width: 32px !important;
+    margin: auto !important;
     text-decoration: none !important;
-    padding: 2px !important;
+    border-radius: 8px !important;
+    font-weight: 500 !important;
+    transition: all 0.2s ease !important;
 }
 
 /* Today's date */
-.yui-skin-sam .yui-calendar td.calcell.today {
-    background-color: var(--color-dark) !important;
-}
-
 .yui-skin-sam .yui-calendar td.calcell.today a {
-    background-color: var(--color-white) !important;
+    background-color: var(--bg-light) !important;
+    font-weight: 600 !important;
 }
 
 /* Selected date */
 .yui-skin-sam .yui-calendar td.calcell.selected a {
-    background-color: var(--color-primary-light) !important;
-    color: var(--color-dark) !important;
+    background-color: var(--color-primary) !important;
+    color: var(--color-white) !important;
+    font-weight: 600 !important;
 }
 
 /* Hover state */
-.yui-skin-sam .yui-calendar td.calcell.calcellhover {
-    background-color: var(--color-primary-light) !important;
-    color: var(--color-white) !important;
-    cursor: pointer !important;
-}
-
 .yui-skin-sam .yui-calendar td.calcell.calcellhover a {
     background-color: var(--color-primary-light) !important;
     color: var(--color-white) !important;
+    cursor: pointer !important;
+    transform: scale(1.05) !important;
 }
 
 /* Out of month dates */
 .yui-skin-sam .yui-calendar td.calcell.oom {
-    background-color: var(--border) !important;
-    color: var(--color-muted) !important;
+    opacity: 0.3 !important;
+}
+
+.yui-skin-sam .yui-calendar td.calcell.oom a {
+    color: var(--color-gray) !important;
 }
 
 /* Navigation buttons */
@@ -7739,16 +7749,18 @@ div[id*="panel"] {
 /* In case body doesn't have yui-skin-sam class */
 
 .yui-calcontainer {
-    background-color: var(--border) !important;
+    background-color: var(--color-white) !important;
     border: 1px solid var(--border) !important;
-    padding: 10px !important;
+    border-radius: 12px !important;
+    padding: 16px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
     z-index: 10000 !important;
 }
 
 .yui-calendar {
     border-spacing: 0 !important;
-    border-collapse: collapse !important;
-    font-size: 93% !important;
+    border-collapse: separate !important;
+    font-size: 14px !important;
     text-align: center !important;
     margin: 0 !important;
     background-color: var(--color-white) !important;
@@ -7756,68 +7768,76 @@ div[id*="panel"] {
 
 .yui-calendar .calheader {
     background: transparent !important;
-    font-weight: bold !important;
-    padding: 0 0 0.6em 0 !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    padding: 0 0 16px 0 !important;
     text-align: center !important;
+    color: var(--color-dark) !important;
 }
 
 .yui-calendar .calweekdayrow {
-    height: 2em !important;
+    height: 36px !important;
 }
 
 .yui-calendar .calweekdaycell {
-    color: var(--color-dark) !important;
-    font-weight: bold !important;
+    color: var(--color-gray) !important;
+    font-weight: 600 !important;
+    font-size: 12px !important;
     text-align: center !important;
-    width: 2em !important;
-    padding: 4px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    width: 40px !important;
+    padding: 8px 4px !important;
 }
 
 .yui-calendar td.calcell {
-    border: 1px solid var(--border) !important;
+    border: none !important;
     background: var(--color-white) !important;
-    padding: 1px !important;
-    height: 1.6em !important;
-    line-height: 1.6em !important;
+    padding: 4px !important;
+    height: 40px !important;
+    width: 40px !important;
     text-align: center !important;
     white-space: nowrap !important;
 }
 
 .yui-calendar td.calcell a {
-    color: var(--color-primary) !important;
-    display: block !important;
-    height: 100% !important;
+    color: var(--color-dark) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 32px !important;
+    width: 32px !important;
+    margin: auto !important;
     text-decoration: none !important;
-    padding: 2px !important;
-}
-
-.yui-calendar td.calcell.today {
-    background-color: var(--color-dark) !important;
+    border-radius: 8px !important;
+    font-weight: 500 !important;
+    transition: all 0.2s ease !important;
 }
 
 .yui-calendar td.calcell.today a {
-    background-color: var(--color-white) !important;
+    background-color: var(--bg-light) !important;
+    font-weight: 600 !important;
 }
 
 .yui-calendar td.calcell.selected a {
-    background-color: var(--color-primary-light) !important;
-    color: var(--color-dark) !important;
-}
-
-.yui-calendar td.calcell.calcellhover {
-    background-color: var(--color-primary-light) !important;
+    background-color: var(--color-primary) !important;
     color: var(--color-white) !important;
-    cursor: pointer !important;
+    font-weight: 600 !important;
 }
 
 .yui-calendar td.calcell.calcellhover a {
     background-color: var(--color-primary-light) !important;
     color: var(--color-white) !important;
+    cursor: pointer !important;
+    transform: scale(1.05) !important;
 }
 
 .yui-calendar td.calcell.oom {
-    background-color: var(--border) !important;
-    color: var(--color-muted) !important;
+    opacity: 0.3 !important;
+}
+
+.yui-calendar td.calcell.oom a {
+    color: var(--color-gray) !important;
 }
 
 .yui-calcontainer .yui-cal-nav {
