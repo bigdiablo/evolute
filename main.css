@@ -1430,6 +1430,11 @@ body.login {
         min-width: 32px !important;
     }
 
+    .dashboard .pagination ul li:first-child,
+    .dashboard .pagination ul li:last-child {
+        display: none !important;
+    }
+
     /* Boxes and Cards Mobile */
     .dashboard .roundedBox,
     .dashboard .blueBox,
@@ -2737,9 +2742,15 @@ div.grid_1_1#leftInnerGrid {
 }
 
 @media (max-width: 768px) {
-    .dashboard #leadChannelsListTable thead {
-        display: none;
+    .dashboard #leadChannelsListTable thead .actions .paginationTop:first-child,
+    .dashboard #leadChannelsListTable thead .colheaders {
+        display: none !important;
     }
+
+    .dashboard #leadChannelsListTable thead .actions .paginationTop {
+        padding: 0 !important;
+    }
+
 }
 
 /* Connections table wrapper - enable horizontal scroll */
@@ -4531,6 +4542,7 @@ div.grid_1_1#leftInnerGrid {
     .dashboard .paginationContainer:has(.results) {
         flex-direction: row !important;
         align-items: center !important;
+        justify-content: center !important;
     }
 
     .dashboard .paginationContainer .pagination {
