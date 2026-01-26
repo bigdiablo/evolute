@@ -8531,12 +8531,13 @@ div[id*="panel"] {
 .yui-panel .hd,
 .yui-dialog .hd {
     position: relative !important;
-    padding: 16px 20px !important;
+    padding: 12px 20px !important;
     background-color: var(--color-white) !important;
     border-bottom: 1px solid var(--border) !important;
     font-size: 16px !important;
     font-weight: 600 !important;
     color: var(--color-dark) !important;
+    line-height: 1.2 !important;
 }
 
 /* Modal footer with multiple buttons */
