@@ -2736,6 +2736,12 @@ div.grid_1_1#leftInnerGrid {
     border-collapse: collapse;
 }
 
+@media (max-width: 768px) {
+    .dashboard #leadChannelsListTable thead {
+        display: none;
+    }
+}
+
 /* Connections table wrapper - enable horizontal scroll */
 .dashboard .channels .roundedBox2 {
     overflow-x: auto !important;
@@ -4375,7 +4381,8 @@ div.grid_1_1#leftInnerGrid {
         bottom: 20px;
         right: 20px;
         z-index: 100;
-        float: none;
+        padding: 0 !important;
+        width: auto !important;
     }
 
     .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup .yui-button {
