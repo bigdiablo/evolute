@@ -234,9 +234,9 @@ strong {
 .userInfo #accountBalance,
 .userInfo #transferBalance,
 .userInfo #links {
+    display: flex;
     float: left; 
     clear: right;
-    margin: 6px 6px 0px;
 }
 .userInfo #transferBalance {
     position: relative;
@@ -419,7 +419,6 @@ div.roundedBox3 div.inlineSideBar2 {
 
 #MainNavigation.tabs {
     line-height: normal;
-    font-size: 85%;
     width: auto;
     margin: auto 0px;
     text-align: center;
