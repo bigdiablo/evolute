@@ -5131,12 +5131,12 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .settings {
     max-width: 100% !important;
-    overflow: hidden !important;
+    overflow: visible !important;
 }
 
 .dashboard .settings .grid_200px_n {
     max-width: 100% !important;
-    overflow: hidden !important;
+    overflow: visible !important;
 }
 
 .dashboard .settings .grid_200px_n .primary {
