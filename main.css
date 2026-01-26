@@ -1357,6 +1357,96 @@ body.login {
         width: 18px;
         height: 18px;
     }
+
+    /* Main Content Mobile */
+    .dashboard #Main {
+        margin-left: 0 !important;
+        padding-top: 108px;
+    }
+
+    .dashboard #MainContent {
+        padding: 16px !important;
+    }
+
+    .dashboard #MainTitle {
+        font-size: 18px;
+        margin: 0 0 16px;
+    }
+
+    /* Tables Mobile - Enable Horizontal Scroll */
+    .dashboard .ordersTable,
+    .dashboard #connectionsTable,
+    .dashboard table.nestedListTable {
+        display: block !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        white-space: nowrap !important;
+    }
+
+    .dashboard .ordersTable thead,
+    .dashboard .ordersTable tbody,
+    .dashboard .ordersTable tr {
+        display: table !important;
+        width: 100% !important;
+    }
+
+    /* Grid Layouts - Stack on Mobile */
+    .dashboard .grid_580px_240px,
+    .dashboard .grid_200px_n {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Forms Mobile */
+    .dashboard .inputGroup {
+        padding: 12px 0 !important;
+    }
+
+    .dashboard .mainLabel {
+        width: 100% !important;
+        margin-bottom: 8px !important;
+    }
+
+    .dashboard .options {
+        width: 100% !important;
+    }
+
+    /* Buttons Mobile */
+    .dashboard .buttonGroup {
+        flex-direction: column !important;
+        gap: 8px !important;
+        width: 100% !important;
+    }
+
+    .dashboard .yui-button {
+        width: 100% !important;
+    }
+
+    .dashboard .yui-button .first-child a {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    /* Pagination Mobile */
+    .dashboard .pagination ul {
+        flex-wrap: wrap !important;
+        gap: 4px !important;
+    }
+
+    .dashboard .pagination ul li {
+        min-width: 32px !important;
+    }
+
+    /* Boxes and Cards Mobile */
+    .dashboard .roundedBox,
+    .dashboard .blueBox,
+    .dashboard .greenBox,
+    .dashboard .redBox {
+        margin: 0 0 16px 0 !important;
+    }
+
+    .dashboard .boxContent {
+        padding: 16px !important;
+    }
 }
 
 /* ========== MAIN ========== */
@@ -5024,6 +5114,44 @@ div.grid_1_1#leftInnerGrid {
     .dashboard .settings .roundedBox.bbRight h4 {
         font-size: 13px !important;
         padding: 12px 14px !important;
+    }
+
+    /* Settings Forms Mobile */
+    .dashboard .settings .inputGroup {
+        flex-direction: column !important;
+        padding: 12px 0 !important;
+    }
+
+    .dashboard .settings .mainLabel {
+        width: 100% !important;
+        margin-bottom: 8px !important;
+    }
+
+    .dashboard .settings .options {
+        width: 100% !important;
+    }
+
+    .dashboard .settings select,
+    .dashboard .settings input[type="text"],
+    .dashboard .settings textarea {
+        width: 100% !important;
+        font-size: 16px !important;
+    }
+
+    /* Settings Page Title */
+    .dashboard .settings .roundedBox .hdr h2 {
+        font-size: 16px !important;
+    }
+
+    /* Settings Containers */
+    .dashboard .settings .formSectionContent {
+        padding: 16px !important;
+    }
+
+    /* Settings Grid Layouts */
+    .dashboard .settings .grid_1_1 {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
     }
 }
 
