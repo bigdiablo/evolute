@@ -418,10 +418,15 @@ body.login {
 
 /* ========== PASSWORD RESET PAGE ========== */
 
+.dashboard #FormFields iframe {
+    height: 700px !important;
+}
+
 .login form[name="changePasswordForm"] {
     display: flex;
     flex-direction: column;
     width: 400px;
+    margin: 40px 0;
 }
 
 .login form[name="changePasswordForm"] #FormPage,
@@ -2320,6 +2325,12 @@ div.grid_1_1#leftInnerGrid {
     border-radius: 12px;
     margin: 0 !important;
     padding-bottom: 20px !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+}
+
+.dashboard .roundedBox4.sideBar::-webkit-scrollbar {
+    display: none !important;
 }
 
 /* Ensure sidebar bottom is visible */
@@ -8386,6 +8397,11 @@ div.grid_1_1#leftInnerGrid {
     visibility: visible !important;
 }
 
+.yui-panel-container .yui-panel .hd {
+    display: flex;
+    align-items: center;
+}
+
 /* Fix for modals not showing due to universal reset */
 .yui-panel-container,
 .yui-panel,
@@ -8432,7 +8448,7 @@ div.grid_1_1#leftInnerGrid {
     background-color: var(--color-primary-light) !important;
     border-color: var(--color-primary-light) !important;
     transform: translateY(-1px) !important;
-    box-shadow: 0 2px 8px rgba(0, 66, 121, 0.2) !important;
+    box-shadow: none !important;
 }
 
 /* Secondary/Cancel buttons in modals */
@@ -8456,7 +8472,7 @@ div.grid_1_1#leftInnerGrid {
     background-color: var(--bg-light) !important;
     color: var(--color-dark) !important;
     border-color: var(--color-gray) !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+    box-shadow: none !important;
 }
 
 /* Ensure modal is on top of everything */

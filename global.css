@@ -3106,10 +3106,9 @@ div#helpContainer_h .helpImg, div#helpContainer_h .warningImg {
 div#helpContainer_h .helpTitle, div#helpContainer_h .warningTitle {
     float: left;
     clear: right;
-    margin: 0.25em 0 0 0.25em
 }
 div#helpContainer_h .warningTitle {
-    margin: 0.5em 0 0.33em 0.5em
+    margin: 0;
 }
 div#helpContainer em {
     font-style: italic;
