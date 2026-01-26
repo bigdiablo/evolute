@@ -3727,6 +3727,52 @@ div.grid_1_1#leftInnerGrid {
     transition: border-color 0.15s ease;
 }
 
+/* Small inputs - phone numbers, codes, extensions, etc */
+.dashboard .formSectionContent .textInput[size="3"],
+.dashboard .formSectionContent input.textInput[size="3"] {
+    width: 70px !important;
+    max-width: 70px !important;
+}
+
+.dashboard .formSectionContent .textInput[size="4"],
+.dashboard .formSectionContent input.textInput[size="4"] {
+    width: 80px !important;
+    max-width: 80px !important;
+}
+
+.dashboard .formSectionContent .textInput[size="5"],
+.dashboard .formSectionContent input.textInput[size="5"] {
+    width: 90px !important;
+    max-width: 90px !important;
+}
+
+.dashboard .formSectionContent .textInput[size="6"],
+.dashboard .formSectionContent input.textInput[size="6"] {
+    width: 100px !important;
+    max-width: 100px !important;
+}
+
+.dashboard .formSectionContent .textInput[size="7"],
+.dashboard .formSectionContent input.textInput[size="7"] {
+    width: 110px !important;
+    max-width: 110px !important;
+}
+
+.dashboard .formSectionContent .textInput[size="10"],
+.dashboard .formSectionContent input.textInput[size="10"] {
+    width: 130px !important;
+    max-width: 130px !important;
+}
+
+/* Extension input - typically no size attribute but should be small */
+.dashboard .formSectionContent input.textInput[name*="ext"],
+.dashboard .formSectionContent input.textInput[id*="ext"],
+.dashboard .formSectionContent input.textInput[name*="Ext"],
+.dashboard .formSectionContent input.textInput[id*="Ext"] {
+    width: 100px !important;
+    max-width: 100px !important;
+}
+
 .dashboard .formSectionContent .textInput:focus {
     outline: none;
     border-color: var(--color-primary-light);
@@ -5520,20 +5566,38 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .settings .noticePeriodsContainer .roundedBox.returnPolicy {
     padding: 0 !important;
     margin: 0 !important;
-    overflow: visible !important;
+    display: flex !important;
+    flex-direction: column !important;
 }
 
+/* Header row with title */
+.dashboard .settings .noticePeriodsContainer .roundedBox .hdr {
+    flex-shrink: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.dashboard .settings .noticePeriodsContainer .roundedBox .hdr h2 {
+    white-space: nowrap !important;
+}
+
+/* Content area */
 .dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent {
-    padding: 16px !important;
-    overflow: visible !important;
+    padding: 20px !important;
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
 }
 
 .dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .inputGroup {
     display: flex !important;
+    flex-direction: row !important;
     align-items: center !important;
-    gap: 16px !important;
+    gap: 12px !important;
     padding: 0 !important;
     margin: 0 !important;
+    width: 100% !important;
 }
 
 .dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .inputGroup .mainLabel {
@@ -5543,19 +5607,28 @@ div.grid_1_1#leftInnerGrid {
     margin: 0 !important;
 }
 
+.dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .inputGroup .mainLabel .mainLabelContent {
+    white-space: nowrap !important;
+}
+
 .dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .inputGroup .options {
-    flex: 0 0 auto !important;
+    flex: 1 !important;
+    min-width: 0 !important;
 }
 
 .dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .inputGroup .options .optionsContent {
-    display: inline-block !important;
-    width: auto !important;
+    width: 100% !important;
 }
 
 .dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .inputGroup .options select {
-    width: auto !important;
-    min-width: 180px !important;
-    max-width: 250px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+}
+
+/* Clear floats */
+.dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .clear {
+    display: none !important;
 }
 
 @media (max-width: 900px) {
