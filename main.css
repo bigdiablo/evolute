@@ -5557,7 +5557,7 @@ div.grid_1_1#leftInnerGrid {
 /* Notice Periods and Return Policy - side by side layout */
 .dashboard .settings .noticePeriodsContainer {
     display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
+    grid-template-columns: minmax(280px, 1fr) minmax(280px, 1fr) !important;
     gap: 20px !important;
     margin-top: 20px !important;
 }
@@ -5568,6 +5568,7 @@ div.grid_1_1#leftInnerGrid {
     margin: 0 !important;
     display: flex !important;
     flex-direction: column !important;
+    min-width: 280px !important;
 }
 
 /* Header row with title */
@@ -5575,45 +5576,41 @@ div.grid_1_1#leftInnerGrid {
     flex-shrink: 0 !important;
     width: 100% !important;
     box-sizing: border-box !important;
+    padding: 16px 20px !important;
 }
 
 .dashboard .settings .noticePeriodsContainer .roundedBox .hdr h2 {
-    white-space: nowrap !important;
+    white-space: normal !important;
+    font-size: 14px !important;
+    margin: 0 !important;
 }
 
 /* Content area */
 .dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent {
     padding: 20px !important;
     flex: 1 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
 }
 
 .dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .inputGroup {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    gap: 12px !important;
+    display: block !important;
     padding: 0 !important;
     margin: 0 !important;
     width: 100% !important;
 }
 
 .dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .inputGroup .mainLabel {
-    flex: 0 0 auto !important;
-    min-width: 0 !important;
-    width: auto !important;
-    margin: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 8px !important;
 }
 
 .dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .inputGroup .mainLabel .mainLabelContent {
-    white-space: nowrap !important;
+    white-space: normal !important;
 }
 
 .dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .inputGroup .options {
-    flex: 1 !important;
-    min-width: 0 !important;
+    display: block !important;
+    width: 100% !important;
 }
 
 .dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .inputGroup .options .optionsContent {
