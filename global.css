@@ -944,11 +944,6 @@ span#searchButton span.first-child button {
     font-weight: bold
 }
 
-table.ordersTable div#search {
-    padding: 0px;
-    margin-top: 4px;
-}
-
 td.ACTIVE {
     color: #829427;
 }
@@ -3673,8 +3668,7 @@ div#sideNavHeading { padding-left: 10px }
     margin-right: 10px }
 /* LC-11758 item 2 */
 #friendSearchContainer {
-    width:15em;
-    padding-bottom:2em; }
+    width:auto; }
 #friendId {
     width:250px; }
 #friendsAutoCompleteList {
@@ -3717,14 +3711,6 @@ table.reportResults td.rptDataRight b {
 
 table#connectionsTable thead tr.actions td.paginationTop {
     padding-bottom: 14px;
-}
-div#search { margin-bottom: -10px }
-table.ordersTable div#search {
-    margin-top: -6px;
-}
-div#search div#checkBoxDiv { top: -1px; }
-div#search div#selectorDiv {
-    padding-top: 4px;
 }
 
 div#search div#searchButtonDiv,div#search div#searchButtonDiv2 {
@@ -3940,8 +3926,7 @@ div#reportListGrid div.column {
 #productDiv {
     float: left;
     clear: right;
-    margin-left: 80px;
-    width:200px; }
+    width:auto; }
 #productId { 
     float: none;
     margin-left: 0px;

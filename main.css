@@ -2953,8 +2953,24 @@ div.grid_1_1#leftInnerGrid {
     vertical-align: middle;
 }
 
+/* Lead Channels List - keep table structure, use table-layout fixed */
+.dashboard #leadChannelsListTable {
+    width: 100% !important;
+    table-layout: fixed !important;
+}
+
+.dashboard #leadChannelsListTable thead tr.actions td.paginationTop:first-child {
+    width: 65% !important;
+}
+
+.dashboard #leadChannelsListTable thead tr.actions td.paginationTop:last-child {
+    width: 35% !important;
+    text-align: right !important;
+}
+
 .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup {
-    float: right;
+    display: inline-block !important;
+    float: none !important;
     margin: 0;
     padding: 0;
 }
@@ -4044,9 +4060,36 @@ div.grid_1_1#leftInnerGrid {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    align-items: center;
+    align-items: stretch;
     width: 100%;
     box-sizing: border-box;
+}
+
+/* Make all search elements same height */
+.dashboard .ordersTable #search > * {
+    display: flex;
+    align-items: center;
+}
+
+/* Buttons in search row - same height */
+.dashboard .ordersTable #search .yui-button button,
+.dashboard .ordersTable #search .yui-button a {
+    height: 42px !important;
+    padding: 0 20px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+}
+
+.dashboard .ordersTable #search .yui-button,
+.dashboard .ordersTable #search .yui-button .first-child {
+    height: 42px !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
 }
 
 .dashboard .ordersTable #selectorDiv {
@@ -4063,13 +4106,15 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .ordersTable #friendId {
     width: 100%;
-    padding: 10px 14px;
+    height: 42px !important;
+    padding: 0 14px !important;
     font-size: 14px;
     color: var(--color-dark);
     background-color: var(--color-white);
     border: 1px solid var(--border);
     border-radius: 8px;
     transition: border-color 0.15s ease;
+    box-sizing: border-box !important;
 }
 
 .dashboard .ordersTable #friendId:focus {
@@ -4083,7 +4128,8 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .ordersTable #productDiv select {
     width: 100%;
-    padding: 10px 14px;
+    height: 42px !important;
+    padding: 0 36px 0 14px !important;
     font-size: 14px;
     color: var(--color-dark);
     background-color: var(--color-white);
@@ -4096,6 +4142,7 @@ div.grid_1_1#leftInnerGrid {
     background-size: 16px;
     cursor: pointer;
     transition: border-color 0.15s ease;
+    box-sizing: border-box !important;
 }
 
 .dashboard .ordersTable #productDiv select:focus {
@@ -4130,7 +4177,8 @@ div.grid_1_1#leftInnerGrid {
 }
 
 .dashboard .ordersTable .searchOrders button {
-    padding: 10px 20px;
+    height: 42px !important;
+    padding: 0 20px !important;
     background-color: var(--color-primary);
     color: var(--color-white);
     font-size: 14px;
@@ -4139,6 +4187,7 @@ div.grid_1_1#leftInnerGrid {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.15s ease;
+    box-sizing: border-box !important;
 }
 
 .dashboard .ordersTable .searchOrders button:hover {
@@ -5300,19 +5349,61 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .settings .grid_1_1 .column .roundedBox {
     min-width: 0 !important;
+    overflow: hidden !important;
 }
 
-/* Prevent horizontal scroll - make tables scrollable within their containers */
+/* Price Minimums boxes - no horizontal scroll */
 .dashboard .settings .roundedBox.bbLeft,
 .dashboard .settings .roundedBox.bbRight {
-    overflow-x: auto !important;
+    overflow: hidden !important;
     max-width: 100% !important;
 }
 
 /* Ensure tables fit within containers */
 .dashboard .settings .sellerBidMinimum {
     table-layout: fixed !important;
+    width: 100% !important;
     max-width: 100% !important;
+}
+
+/* Notice Periods and Return Policy - compact layout */
+.dashboard .settings .noticePeriodsContainer {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    margin-top: 20px !important;
+}
+
+.dashboard .settings .noticePeriodsContainer .roundedBox.noticePeriods,
+.dashboard .settings .noticePeriodsContainer .roundedBox.returnPolicy {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent {
+    padding: 12px 16px !important;
+}
+
+.dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .inputGroup {
+    display: flex !important;
+    align-items: center !important;
+    gap: 16px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .inputGroup .mainLabel {
+    min-width: 80px !important;
+    margin: 0 !important;
+}
+
+.dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .inputGroup .options {
+    flex: 1 !important;
+}
+
+.dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .inputGroup .options select {
+    width: auto !important;
+    min-width: 150px !important;
 }
 
 /* Responsive: Stack columns on smaller screens */
@@ -6107,10 +6198,10 @@ div.grid_1_1#leftInnerGrid {
     color: var(--color-dark) !important;
 }
 
-/* ========== WHOLESALE ORDERS - COMPACT TABLE VIEW ========== */
+/* ========== WHOLESALE ORDERS - CLEAN COMPACT TABLE ========== */
 
-.dashboard .channels table.nestedListTable.ordersTable.empty {
-    font-size: 14px !important;
+.dashboard .channels table.nestedListTable.ordersTable {
+    border-collapse: collapse !important;
 }
 
 .dashboard .channels table.nestedListTable.ordersTable thead tr.actions td.paginationTop {
@@ -6119,28 +6210,36 @@ div.grid_1_1#leftInnerGrid {
     line-height: 1.5 !important;
     color: var(--color-gray) !important;
     background-color: var(--bg-light) !important;
-    border-bottom: 1px solid var(--border) !important;
 }
 
 .dashboard .channels table.nestedListTable.ordersTable thead tr.colheaders th {
-    padding: 12px 16px !important;
-    font-size: 12px !important;
+    padding: 10px 16px !important;
+    font-size: 11px !important;
     font-weight: 600 !important;
     text-transform: uppercase !important;
     letter-spacing: 0.5px !important;
     color: var(--color-gray) !important;
     background-color: var(--bg-light) !important;
+    border-bottom: 1px solid var(--border) !important;
+}
+
+.dashboard .channels table.nestedListTable.ordersTable tbody tr {
+    border-bottom: 1px solid var(--border) !important;
+}
+
+.dashboard .channels table.nestedListTable.ordersTable tbody tr:nth-child(odd) {
+    background-color: var(--bg-light) !important;
+}
+
+.dashboard .channels table.nestedListTable.ordersTable tbody tr:nth-child(even) {
+    background-color: var(--color-white) !important;
 }
 
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td {
-    padding: 12px 16px !important;
-    font-size: 14px !important;
-    vertical-align: middle !important;
-}
-
-.dashboard .channels table.nestedListTable.ordersTable tbody tr td[rowspan] {
+    padding: 8px 16px !important;
+    font-size: 13px !important;
     vertical-align: top !important;
-    padding-top: 16px !important;
+    border: none !important;
 }
 
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td.first {
@@ -6148,56 +6247,50 @@ div.grid_1_1#leftInnerGrid {
     color: var(--color-dark) !important;
 }
 
+/* Delivery links - simple inline */
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv {
-    display: flex !important;
-    justify-content: space-between !important;
+    display: inline-flex !important;
     align-items: center !important;
     gap: 12px !important;
+    padding: 2px 0 !important;
 }
 
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv .left a {
     color: var(--color-primary) !important;
     text-decoration: none !important;
-    font-weight: 500 !important;
+    font-size: 13px !important;
 }
 
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv .left a:hover {
-    color: var(--color-primary-light) !important;
-    text-decoration: underline !important;
+    text-decoration: none !important;
 }
 
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv .right a {
     color: var(--color-error) !important;
-    font-size: 13px !important;
+    font-size: 12px !important;
     text-decoration: none !important;
 }
 
-.dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv .right a:hover {
-    text-decoration: underline !important;
-}
-
+/* Action button - simple text link style */
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td.last .buttonGroup {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 4px !important;
+    display: block !important;
 }
 
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td.last .buttonGroup a.addLink {
     display: inline-block !important;
     padding: 6px 12px !important;
-    font-size: 13px !important;
+    font-size: 12px !important;
     color: var(--color-primary) !important;
     background-color: var(--bg-info) !important;
     border: 1px solid var(--bg-info) !important;
-    border-radius: 6px !important;
+    border-radius: 4px !important;
     text-decoration: none !important;
     white-space: nowrap !important;
-    transition: all 0.15s ease !important;
 }
 
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td.last .buttonGroup a.addLink:hover {
     background-color: var(--bg-info) !important;
-    border-color: var(--color-primary-light) !important;
+    border-color: var(--bg-info) !important;
 }
 
 .dashboard .channels table.nestedListTable.ordersTable tfoot tr.actions td.paginationBottom {
