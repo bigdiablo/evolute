@@ -1473,7 +1473,6 @@ body.login {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 1400px;
     padding: 0;
 }
 
@@ -3842,6 +3841,7 @@ div.grid_1_1#leftInnerGrid {
     font-weight: 600;
     color: var(--color-dark);
     margin: 0 0 12px;
+    padding-top: 16px;
     padding-bottom: 12px;
     border-bottom: 1px solid var(--border);
 }
@@ -5006,6 +5006,7 @@ div.grid_1_1#leftInnerGrid {
     border-radius: 12px !important;
     overflow: hidden !important;
     margin: 0 !important;
+    min-width: 0 !important;
 }
 
 .dashboard .settings .roundedBox.bbLeft h4,
@@ -5025,13 +5026,68 @@ div.grid_1_1#leftInnerGrid {
     color: var(--color-gray) !important;
 }
 
+/* Notice Periods and Return Policy boxes */
 .dashboard .settings .roundedBox.noticePeriods,
-.dashboard .settings .roundedBox.returnPolicy {
+.dashboard .settings .roundedBox.returnPolicy,
+.dashboard .settings .roundedBox[class*="notice"],
+.dashboard .settings .roundedBox[class*="return"] {
     background-color: var(--color-white) !important;
     border: 1px solid var(--border) !important;
     border-radius: 12px !important;
     overflow: hidden !important;
     margin-top: 16px !important;
+}
+
+/* Generic roundedBox in auction settings */
+.dashboard .settings .noticePeriodsContainer .roundedBox,
+.dashboard .settings .grid_1_1 + .roundedBox {
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    margin-top: 16px !important;
+}
+
+/* Headers for notice/return boxes */
+.dashboard .settings .noticePeriodsContainer .roundedBox .hdr,
+.dashboard .settings .noticePeriodsContainer .roundedBox h4 {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 14px 16px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: var(--color-primary) !important;
+    background-color: var(--bg-light) !important;
+    border-bottom: 1px solid var(--border) !important;
+    margin: 0 !important;
+}
+
+/* Content inside notice/return boxes */
+.dashboard .settings .noticePeriodsContainer .roundedBox .boxContent,
+.dashboard .settings .noticePeriodsContainer .roundedBox .content {
+    padding: 16px !important;
+    background-color: var(--color-white) !important;
+}
+
+/* Label-value pairs in notice/return boxes */
+.dashboard .settings .noticePeriodsContainer .labelValue {
+    display: flex !important;
+    align-items: center !important;
+    padding: 8px 0 !important;
+    border-bottom: none !important;
+}
+
+.dashboard .settings .noticePeriodsContainer .labelValue .label {
+    min-width: 80px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: var(--color-gray) !important;
+}
+
+.dashboard .settings .noticePeriodsContainer .labelValue .value {
+    font-size: 14px !important;
+    color: var(--color-dark) !important;
 }
 
 .dashboard .settings .roundedBox.noticePeriods .hdr,
@@ -5068,20 +5124,31 @@ div.grid_1_1#leftInnerGrid {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
     gap: 20px !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
 }
 
 .dashboard .settings .grid_1_1 .column {
     width: 100% !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
 }
 
 .dashboard .settings .grid_1_1 .column .roundedBox {
     min-width: 0 !important;
 }
 
-/* Prevent horizontal scroll - make tables scrollable */
+/* Prevent horizontal scroll - make tables scrollable within their containers */
 .dashboard .settings .roundedBox.bbLeft,
 .dashboard .settings .roundedBox.bbRight {
     overflow-x: auto !important;
+    max-width: 100% !important;
+}
+
+/* Ensure tables fit within containers */
+.dashboard .settings .sellerBidMinimum {
+    table-layout: fixed !important;
+    max-width: 100% !important;
 }
 
 /* Responsive: Stack columns on smaller screens */
@@ -6717,11 +6784,17 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard #settingsContainer .inputGroup .options {
     flex: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
 }
 
 .dashboard #settingsContainer .inputGroup .optionsContent {
     font-size: 14px !important;
     color: var(--color-dark) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
 }
 
 .dashboard #settingsContainer .inputGroup .option {
@@ -8242,6 +8315,129 @@ div[id*="panel"] {
 .yui-panel-container {
     position: fixed !important;
 }
+
+/* ========== INTEGRATION SUPPORT BUTTON & MODAL ========== */
+
+/* Integration Support button styling */
+.dashboard .blueBox.integration a[href*="integrationSupport"],
+.dashboard a.integrationSupport,
+.dashboard .sideBarGroup a[href*="integrationSupport"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: var(--color-white) !important;
+    background-color: var(--color-primary) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    margin-top: 12px !important;
+}
+
+.dashboard .blueBox.integration a[href*="integrationSupport"]:hover,
+.dashboard a.integrationSupport:hover,
+.dashboard .sideBarGroup a[href*="integrationSupport"]:hover {
+    background-color: var(--color-primary-light) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 8px rgba(0, 66, 121, 0.2) !important;
+}
+
+/* Modal header - Close link styling */
+.yui-panel .hd .container-close,
+.yui-dialog .hd .container-close,
+.yui-panel .hd a.container-close {
+    display: inline-block !important;
+    padding: 4px 12px !important;
+    font-size: 13px !important;
+    color: var(--color-primary) !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    position: absolute !important;
+    right: 16px !important;
+    top: 16px !important;
+}
+
+.yui-panel .hd .container-close:hover,
+.yui-dialog .hd .container-close:hover {
+    color: var(--color-primary-light) !important;
+    text-decoration: underline !important;
+}
+
+/* Modal header title styling */
+.yui-panel .hd,
+.yui-dialog .hd {
+    position: relative !important;
+    padding: 16px 20px !important;
+    background-color: var(--color-white) !important;
+    border-bottom: 1px solid var(--border) !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: var(--color-dark) !important;
+}
+
+/* Modal footer with multiple buttons */
+.yui-panel .ft,
+.yui-dialog .ft {
+    display: flex !important;
+    gap: 12px !important;
+    justify-content: flex-end !important;
+    padding: 16px 20px !important;
+    background-color: var(--bg-light) !important;
+    border-top: 1px solid var(--border) !important;
+}
+
+/* Style buttons that are direct children or in spans */
+.yui-panel .ft span.yui-button,
+.yui-dialog .ft span.yui-button {
+    margin: 0 !important;
+}
+
+.yui-panel .ft span.yui-button button,
+.yui-dialog .ft span.yui-button button {
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+/* Primary/Submit button */
+.yui-panel .ft span.yui-button.yui-submit-button button,
+.yui-dialog .ft span.yui-button.yui-submit-button button,
+.yui-panel .ft button.default,
+.yui-dialog .ft button.default {
+    background-color: var(--color-primary) !important;
+    color: var(--color-white) !important;
+    border: 1px solid var(--color-primary) !important;
+}
+
+.yui-panel .ft span.yui-button.yui-submit-button button:hover,
+.yui-dialog .ft span.yui-button.yui-submit-button button:hover,
+.yui-panel .ft button.default:hover,
+.yui-dialog .ft button.default:hover {
+    background-color: var(--color-primary-light) !important;
+    border-color: var(--color-primary-light) !important;
+}
+
+/* Cancel/Secondary button */
+.yui-panel .ft span.yui-button:not(.yui-submit-button) button,
+.yui-dialog .ft span.yui-button:not(.yui-submit-button) button {
+    background-color: var(--color-white) !important;
+    color: var(--color-dark) !important;
+    border: 1px solid var(--border) !important;
+}
+
+.yui-panel .ft span.yui-button:not(.yui-submit-button) button:hover,
+.yui-dialog .ft span.yui-button:not(.yui-submit-button) button:hover {
+    background-color: var(--bg-light) !important;
+    border-color: var(--color-gray) !important;
+}
+
 /* ========== YUI CALENDAR - WITHOUT yui-skin-sam PREFIX ========== */
 /* In case body doesn't have yui-skin-sam class */
 
