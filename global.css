@@ -3324,8 +3324,6 @@ div.bbRight { margin-left: 4px }
 div.column h4 { 
     font-weight: bold;
     position: relative;
-    left: 10px;
-    top: -6px
 }
 table.sellerBidMinimum {
     width: 100%;

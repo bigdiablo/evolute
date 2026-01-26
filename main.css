@@ -5366,11 +5366,11 @@ div.grid_1_1#leftInnerGrid {
     max-width: 100% !important;
 }
 
-/* Notice Periods and Return Policy - compact layout */
+/* Notice Periods and Return Policy - side by side layout */
 .dashboard .settings .noticePeriodsContainer {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 16px !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px !important;
     margin-top: 20px !important;
 }
 
@@ -5378,10 +5378,12 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .settings .noticePeriodsContainer .roundedBox.returnPolicy {
     padding: 0 !important;
     margin: 0 !important;
+    overflow: visible !important;
 }
 
 .dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent {
-    padding: 12px 16px !important;
+    padding: 16px !important;
+    overflow: visible !important;
 }
 
 .dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .inputGroup {
@@ -5393,17 +5395,31 @@ div.grid_1_1#leftInnerGrid {
 }
 
 .dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .inputGroup .mainLabel {
-    min-width: 80px !important;
+    flex: 0 0 auto !important;
+    min-width: 0 !important;
+    width: auto !important;
     margin: 0 !important;
 }
 
 .dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .inputGroup .options {
-    flex: 1 !important;
+    flex: 0 0 auto !important;
+}
+
+.dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .inputGroup .options .optionsContent {
+    display: inline-block !important;
+    width: auto !important;
 }
 
 .dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .inputGroup .options select {
     width: auto !important;
-    min-width: 150px !important;
+    min-width: 180px !important;
+    max-width: 250px !important;
+}
+
+@media (max-width: 900px) {
+    .dashboard .settings .noticePeriodsContainer {
+        grid-template-columns: 1fr !important;
+    }
 }
 
 /* Responsive: Stack columns on smaller screens */
