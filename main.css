@@ -2313,13 +2313,18 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .roundedBox4.sideBar {
     position: sticky !important;
     top: 20px !important;
-    max-height: calc(100vh - 80px) !important;
+    max-height: calc(100vh - 40px) !important;
     overflow-y: auto !important;
     background-color: var(--color-white) !important;
     border: 1px solid var(--border) !important;
     border-radius: 12px;
     margin: 0 !important;
     padding-bottom: 20px !important;
+}
+
+/* Ensure sidebar bottom is visible */
+.dashboard .grid_200px_n > .secondary {
+    align-self: flex-start !important;
 }
 
 .dashboard #settingssubnav {
@@ -2428,6 +2433,101 @@ div.grid_1_1#leftInnerGrid {
     padding: 0;
 }
 
+/* Help Form (ticketLogForm) Styling */
+.dashboard form[name="ticketLogForm"] {
+    max-width: 800px !important;
+    margin: 0 auto !important;
+}
+
+.dashboard form[name="ticketLogForm"] .roundedBox {
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+}
+
+.dashboard form[name="ticketLogForm"] .hdr {
+    display: flex !important;
+    align-items: center !important;
+    padding: 16px 24px !important;
+    background-color: var(--bg-light) !important;
+    border-bottom: 1px solid var(--border) !important;
+}
+
+.dashboard form[name="ticketLogForm"] .hdr h2 {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: var(--color-dark) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: none !important;
+}
+
+.dashboard form[name="ticketLogForm"] .hdr .tl,
+.dashboard form[name="ticketLogForm"] .hdr .tr {
+    display: none !important;
+}
+
+.dashboard form[name="ticketLogForm"] .formSectionContent {
+    padding: 24px !important;
+}
+
+.dashboard form[name="ticketLogForm"] .inputGroup {
+    display: flex !important;
+    align-items: center !important;
+    padding: 12px 0 !important;
+    margin: 0 !important;
+}
+
+.dashboard form[name="ticketLogForm"] .mainLabel {
+    width: 140px !important;
+    min-width: 140px !important;
+    flex-shrink: 0 !important;
+    text-align: right !important;
+    padding-right: 20px !important;
+}
+
+.dashboard form[name="ticketLogForm"] .mainLabel label {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: var(--color-gray) !important;
+}
+
+.dashboard form[name="ticketLogForm"] .options {
+    flex: 1 !important;
+}
+
+.dashboard form[name="ticketLogForm"] .optionsContent {
+    font-size: 14px !important;
+    color: var(--color-dark) !important;
+}
+
+.dashboard form[name="ticketLogForm"] input.textInput {
+    width: 100% !important;
+    max-width: 300px !important;
+    padding: 10px 14px !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+}
+
+.dashboard form[name="ticketLogForm"] textarea {
+    width: 100% !important;
+    max-width: 400px !important;
+    min-height: 120px !important;
+    padding: 12px 14px !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    resize: vertical !important;
+}
+
+.dashboard form[name="ticketLogForm"] .buttonGroup {
+    padding: 20px 0 0 !important;
+    border-top: 1px solid var(--border) !important;
+    margin-top: 16px !important;
+}
+
 .dashboard .formSectionContent {
     padding: 24px;
 }
@@ -2485,14 +2585,19 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .formSectionContent .textInput {
     width: 100%;
-    max-width: 280px;
-    height: 40px;
-    padding: 0 12px;
+    max-width: 200px;
+    padding: 10px 14px;
     font-size: 14px;
     border: 1px solid var(--border);
     border-radius: 8px;
     background-color: var(--color-white);
     transition: border-color 0.15s ease;
+}
+
+/* Narrower input boxes for order/leads creation */
+.dashboard #formContainer input.textInput,
+.dashboard #formContainer input[type="text"] {
+    max-width: 180px !important;
 }
 
 .dashboard .formSectionContent .textInput:focus {
@@ -2733,10 +2838,24 @@ div.grid_1_1#leftInnerGrid {
     min-width: 0 !important;
 }
 
+/* Proposals table - no horizontal scroll, fit content */
+.dashboard .roundedBox2:has(.ordersTable) {
+    overflow-x: visible !important;
+    overflow: visible !important;
+}
+
 .dashboard .ordersTable {
     width: 100%;
     min-width: auto;
     border-collapse: collapse;
+    table-layout: auto !important;
+}
+
+/* Make table columns flexible to fit content */
+.dashboard .ordersTable th,
+.dashboard .ordersTable td {
+    white-space: normal !important;
+    word-wrap: break-word !important;
 }
 
 @media (max-width: 768px) {
@@ -2746,9 +2865,15 @@ div.grid_1_1#leftInnerGrid {
     }
 
     .dashboard #leadChannelsListTable thead .actions .paginationTop {
-        padding: 0 !important;
+        padding: 16px !important;
+        display: flex !important;
+        justify-content: center !important;
     }
 
+    .dashboard #leadChannelsListTable thead .actions .paginationTop .buttonGroup {
+        justify-content: center !important;
+        width: 100% !important;
+    }
 }
 
 /* Connections table wrapper - enable horizontal scroll */
@@ -3669,9 +3794,9 @@ div.grid_1_1#leftInnerGrid {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 12px;
-    padding: 16px 20px !important;
-    background: var(--bg-light) !important;
+    gap: 16px;
+    padding: 20px 24px;
+    background-color: var(--bg-light);
     border-bottom: 1px solid var(--border);
 }
 
@@ -3707,8 +3832,8 @@ div.grid_1_1#leftInnerGrid {
     display: inline-flex;
     align-items: center;
     padding: 8px 16px !important;
-    background-color: var(--color-primary) !important;
-    color: var(--color-white);
+    background-color: var(--bg-light) !important;
+    color: var(--color-dark) !important;
     font-size: 13px;
     font-weight: 500;
     border-radius: 6px;
@@ -3717,7 +3842,7 @@ div.grid_1_1#leftInnerGrid {
 }
 
 .dashboard .channelInfo h2.headerRight:hover {
-    background-color: var(--color-primary-light) !important;
+    background-color: var(--border) !important;
 }
 
 .dashboard .labelValue {
@@ -3908,7 +4033,9 @@ div.grid_1_1#leftInnerGrid {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    align-items: flex-start;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .dashboard .ordersTable #selectorDiv {
