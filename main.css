@@ -5632,7 +5632,7 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .inputGroup .options select {
     width: auto !important;
-    min-width: 200px !important;
+    min-width: 100% !important;
     max-width: 100% !important;
 }
 
