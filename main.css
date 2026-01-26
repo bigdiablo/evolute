@@ -8398,8 +8398,9 @@ div.grid_1_1#leftInnerGrid {
 }
 
 .yui-panel-container .yui-panel .hd {
-    display: flex;
+    display: flex !important;
     align-items: center;
+    gap: 6px;
 }
 
 /* Fix for modals not showing due to universal reset */
