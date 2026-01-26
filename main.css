@@ -1358,12 +1358,6 @@ body.login {
         height: 18px;
     }
 
-    /* Main Content Mobile */
-    .dashboard #Main {
-        margin-left: 0 !important;
-        padding-top: 108px;
-    }
-
     .dashboard #MainContent {
         padding: 16px !important;
     }
@@ -1583,7 +1577,7 @@ body.login {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 8px;
+    gap: 16px 24px;
     padding: 0 !important;
     line-height: normal !important;
     background: transparent !important;
@@ -1784,10 +1778,28 @@ body.login {
 .dashboard input[type="radio"] {
     width: 18px;
     height: 18px;
-    margin: 0;
+    margin: 0 8px 0 0;
     cursor: pointer;
     accent-color: var(--color-primary-light);
     vertical-align: middle;
+}
+
+.dashboard label:has(input[type="radio"]) {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 24px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.dashboard .optionsContent label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 24px;
+    margin-bottom: 8px;
+    cursor: pointer;
 }
 
 /* System Error Page */
@@ -2465,6 +2477,9 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .formSectionContent .optionsContent {
     padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 24px;
 }
 
 .dashboard .formSectionContent .textInput {
@@ -3389,6 +3404,9 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .formSectionContent .optionsContent {
     padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 24px;
 }
 
 .dashboard .formSectionContent .textInput {
