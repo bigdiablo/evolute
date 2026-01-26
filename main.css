@@ -12,6 +12,7 @@
     --color-warning: #f59e0b;
     --bg-light: #f4f4f5;
     --bg-info: #e0f2fe;
+    --bg-success: #dcfce7;
     --bg-error: #fee2e2;
     --bg-warning: #fef3c7;
     --border: #e5e7eb;
@@ -5194,6 +5195,67 @@ div.grid_1_1#leftInnerGrid {
     font-weight: 500 !important;
 }
 
+/* Success Message Styling */
+.dashboard #successMessage {
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--color-success) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.dashboard #successMessage b.bt,
+.dashboard #successMessage b.bb {
+    display: none !important;
+}
+
+.dashboard #successMessage .sectionHeader {
+    background-color: var(--bg-success) !important;
+    padding: 16px 20px !important;
+    margin: 0 !important;
+}
+
+.dashboard #successMessage .sectionHeader b.htop {
+    display: none !important;
+}
+
+.dashboard #successMessage .sectionHeader h2 {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    color: var(--color-success) !important;
+    background: transparent !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.dashboard #successMessage .sectionHeader .closebox {
+    display: none !important;
+}
+
+.dashboard #successMessage p,
+.dashboard #successMessage ul li {
+    padding: 12px 16px !important;
+    margin: 20px !important;
+    background-color: var(--bg-success) !important;
+    border-radius: 8px !important;
+    color: var(--color-gray) !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    font-weight: normal !important;
+}
+
+.dashboard #successMessage h3 {
+    padding: 20px 20px 0 !important;
+    margin: 0 !important;
+    color: var(--color-success) !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+
 /* ========== CONNECTIONS - IMPROVED TOP BAR ========== */
 
 /* Connections table wrapper - enable horizontal scroll */
@@ -5392,14 +5454,9 @@ div.grid_1_1#leftInnerGrid {
 .dashboard #connectionsTable thead tr.colheaders th .helpImg {
     width: 14px !important;
     height: 14px !important;
-    opacity: 0.6 !important;
     cursor: help !important;
     vertical-align: middle !important;
-    margin-left: 4px !important;
-}
-
-.dashboard #connectionsTable thead tr.colheaders th .helpImg:hover {
-    opacity: 1 !important;
+    margin-left: 0 !important;
 }
 
 /* Buyer Information Modal Improvements */
@@ -7850,4 +7907,29 @@ div[id*="panel"] {
 .yui-calcontainer .yui-cal-nav-m,
 .yui-calcontainer .yui-cal-nav-b {
     padding: 5px 10px !important;
+}
+
+/* ========== HELP & WARNING ICONS ========== */
+
+/* Replace help images with SVG icons using content property */
+.dashboard img.helpImg,
+.dashboard img.inlineHelpImg {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23004279' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3'/%3E%3Cpath d='M12 17h.01'/%3E%3C/svg%3E") !important;
+    width: 16px !important;
+    height: 16px !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    cursor: help !important;
+    opacity: 1 !important;
+}
+
+/* Replace warning images with SVG icons */
+.dashboard img.warningImg,
+img[src*="warning.gif"] {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f59e0b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z'/%3E%3Cline x1='12' x2='12' y1='9' y2='13'/%3E%3Cline x1='12' x2='12.01' y1='17' y2='17'/%3E%3C/svg%3E") !important;
+    width: 16px !important;
+    height: 16px !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    cursor: pointer !important;
 }
