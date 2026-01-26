@@ -5560,6 +5560,7 @@ div.grid_1_1#leftInnerGrid {
     grid-template-columns: minmax(280px, 1fr) minmax(280px, 1fr) !important;
     gap: 20px !important;
     margin-top: 20px !important;
+    align-items: stretch !important;
 }
 
 .dashboard .settings .noticePeriodsContainer .roundedBox.noticePeriods,
@@ -5568,7 +5569,7 @@ div.grid_1_1#leftInnerGrid {
     margin: 0 !important;
     display: flex !important;
     flex-direction: column !important;
-    min-width: 280px !important;
+    min-width: 100% !important;
 }
 
 /* Header row with title */
@@ -5577,18 +5578,27 @@ div.grid_1_1#leftInnerGrid {
     width: 100% !important;
     box-sizing: border-box !important;
     padding: 16px 20px !important;
+    min-height: 70px !important;
+    display: flex !important;
+    align-items: center !important;
 }
 
 .dashboard .settings .noticePeriodsContainer .roundedBox .hdr h2 {
     white-space: normal !important;
     font-size: 14px !important;
     margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
 }
 
 /* Content area */
 .dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent {
     padding: 20px !important;
     flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
 }
 
 .dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .inputGroup {
@@ -5601,7 +5611,8 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .inputGroup .mainLabel {
     display: block !important;
     width: 100% !important;
-    margin-bottom: 8px !important;
+    margin-bottom: 6px !important;
+    text-align: left !important;
 }
 
 .dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .inputGroup .mainLabel .mainLabelContent {
@@ -5615,11 +5626,13 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .inputGroup .options .optionsContent {
     width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
 }
 
 .dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .inputGroup .options select {
-    width: 100% !important;
-    min-width: 0 !important;
+    width: auto !important;
+    min-width: 200px !important;
     max-width: 100% !important;
 }
 
