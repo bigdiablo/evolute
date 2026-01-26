@@ -1283,7 +1283,7 @@ body.login {
     }
 
     .dashboard #MainNavigation.tabs ul li a.selected {
-        background-color: var(--bg-light) !important;
+        background-color: transparent !important;
     }
 
     .dashboard #MainNavigation.tabs ul::before,
