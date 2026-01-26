@@ -917,21 +917,18 @@ div#search div#selectorDiv {
 
 div#search div#searchButtonDiv,
 div#search div#searchButtonDiv2 {
-    margin-top: 1px;
     float: left;
     clear: right;
 }
 
 div#search div#searchButtonDiv {
     position: relative;
-    top: -1px;
 }
 
 div#search div#checkBoxDiv div {
     white-space: nowrap;
     float: left;
     clear: right;
-    padding: 0.25em 0.5em 0.5em 0
 }
 
 div#search div#checkBoxDiv div input[type='checkbox'] {
@@ -3690,7 +3687,7 @@ div#sideNavHeading { padding-left: 10px }
     width:200px; }
 #selectorDiv {
     display:inline;
-    width:500px !important; }
+}
 #friendSearchContainer .yui-ac-shadow {
     width:244px !important; }
 #friendSearchContainer .yui-ac-content ul {
@@ -3732,9 +3729,9 @@ div#search div#selectorDiv {
 }
 
 div#search div#searchButtonDiv,div#search div#searchButtonDiv2 {
-    padding: 4px 0px;
+    padding: 0;
 }
-div#search div#searchButtonDiv { margin-top: -1px }
+div#search div#searchButtonDiv { margin-top: 0 }
 
 li.expando span,li.contracto span {
     padding: 0px 80px 4px 20px;

@@ -1596,8 +1596,6 @@ body.login {
     border: 1px solid var(--border) !important;
     border-radius: 8px !important;
     transition: border-color 0.15s ease;
-    min-width: 280px;
-    max-width: 400px;
 }
 
 .dashboard input[type="text"]:focus,
@@ -2760,7 +2758,6 @@ div.grid_1_1#leftInnerGrid {
     -webkit-overflow-scrolling: touch !important;
     margin-bottom: 20px !important;
     position: relative !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
     border-radius: 12px !important;
 }
 
@@ -4370,7 +4367,7 @@ div.grid_1_1#leftInnerGrid {
     }
 
     .dashboard .ordersTable thead tr.colheaders {
-        display: none;
+        display: none !important;
     }
 
     .dashboard .ordersTable thead tr.actions {
@@ -4662,6 +4659,16 @@ div.grid_1_1#leftInnerGrid {
     .dashboard .ordersTable #productDiv {
         width: 100%;
         min-width: 0;
+        margin: 0 !important;
+    }
+
+    .dashboard #search #selectorDiv {
+        width: 100%;
+    }
+
+    .dashboard .ordersTable #friendId {
+        min-width: 100%;
+        max-width: 100%;
     }
 
     .dashboard .ordersTable #checkBoxDiv {
@@ -5608,6 +5615,13 @@ div.grid_1_1#leftInnerGrid {
     border: 1px solid var(--color-error) !important;
     border-radius: 12px !important;
     overflow: hidden !important;
+}
+
+/* Override inline width on parent container of validation errors */
+.dashboard #PrimaryContent > div[style*="width: 600px"],
+.dashboard #PrimaryContent > div[style*="width:600px"] {
+    width: 100% !important;
+    max-width: 600px !important;
 }
 
 .dashboard #validationErrors b.bt,
