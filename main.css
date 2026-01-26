@@ -1167,53 +1167,85 @@ body.login {
 
     .dashboard #Navigation {
         width: 100%;
-        height: 40px;
+        height: auto;
+        min-height: 40px;
         background: white;
-        flex-direction: row;
-        gap: 0;
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 24px;
         padding: 0 24px;
-        white-space: nowrap;
         overflow-x: auto;
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
         -ms-overflow-style: none;
         border-bottom: 1px solid var(--border);
+        align-items: center;
     }
 
     .dashboard #Navigation::-webkit-scrollbar {
         display: none;
     }
 
-    .dashboard #SubNavigation.subtabs {
-        padding: 0;
-        flex-direction: row;
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
+    .dashboard #Navigation b.tc,
+    .dashboard #Navigation b.tl,
+    .dashboard #Navigation b.tr,
+    .dashboard #Navigation b.br {
+        display: none !important;
     }
 
-    .dashboard #SubNavigation.subtabs::-webkit-scrollbar {
-        display: none;
+    .dashboard #Navigation .clear {
+        display: none !important;
+    }
+
+    .dashboard #MainNavigation.tabs {
+        display: flex !important;
+        flex-shrink: 0;
+        padding: 0;
+    }
+
+    .dashboard #SubNavigation.subtabs {
+        padding: 0;
+        float: none !important;
+        display: flex !important;
+        flex-direction: row;
+        align-items: center;
+        overflow: visible !important;
+        width: auto !important;
+        height: auto !important;
+        flex-shrink: 0;
+    }
+
+    .dashboard #SubNavigation.subtabs b.bl,
+    .dashboard #SubNavigation.subtabs b.br {
+        display: none !important;
     }
 
     .dashboard div#SubNavigation.subtabs ul {
-        flex-direction: row;
-        gap: 12px;
+        flex-direction: row !important;
+        gap: 24px;
         flex-wrap: nowrap;
+        display: flex !important;
+        align-items: center !important;
+        height: auto !important;
+        min-height: 40px;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
     .dashboard #SubNavigation.subtabs ul li {
         flex-shrink: 0;
+        float: none !important;
+        overflow: visible !important;
+        width: auto !important;
+        display: flex !important;
     }
 
     .dashboard #SubNavigation.subtabs ul li a {
-        padding: 8px 12px !important;
-        border-radius: 6px !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
         white-space: nowrap;
-        transition: all 0.2s ease;
+        width: auto !important;
     }
 
     .dashboard #SubNavigation.subtabs ul li.current a {
@@ -1221,11 +1253,14 @@ body.login {
     }
 
     .dashboard #MainNavigation.tabs ul {
-        flex-direction: row;
+        display: flex !important;
+        flex-direction: row !important;
         padding: 0;
-        gap: 18px;
+        gap: 24px;
         width: auto;
         flex-wrap: nowrap;
+        align-items: center;
+        margin: 0 !important;
     }
 
     .dashboard #MainNavigation.tabs ul li {
@@ -1233,13 +1268,18 @@ body.login {
         align-items: center;
         justify-content: center;
         flex-shrink: 0;
+        float: none !important;
+        overflow: visible !important;
+        width: auto !important;
     }
 
     .dashboard #MainNavigation.tabs ul li a {
         padding: 0 !important;
         background-color: transparent !important;
         white-space: nowrap;
-        border-radius: 0;
+        border-radius: 6px !important;
+        transition: all 0.2s ease;
+        width: auto !important;
     }
 
     .dashboard #MainNavigation.tabs ul li a.selected {
@@ -1310,6 +1350,12 @@ body.login {
     .dashboard .userInfo #accountBalance strong {
         padding: 0;
         border-radius: 0;
+    }
+
+    .dashboard #MainNavigation.tabs ul li a::before,
+    .dashboard #SubNavigation.subtabs ul li a::before {
+        width: 18px;
+        height: 18px;
     }
 }
 
