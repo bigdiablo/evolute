@@ -2590,101 +2590,6 @@ div.grid_1_1#leftInnerGrid {
     padding: 0;
 }
 
-/* Help Form (ticketLogForm) Styling */
-.dashboard form[name="ticketLogForm"] {
-    max-width: 800px !important;
-    margin: 0 auto !important;
-}
-
-.dashboard form[name="ticketLogForm"] .roundedBox {
-    background-color: var(--color-white) !important;
-    border: 1px solid var(--border) !important;
-    border-radius: 12px !important;
-    overflow: hidden !important;
-}
-
-.dashboard form[name="ticketLogForm"] .hdr {
-    display: flex !important;
-    align-items: center !important;
-    padding: 16px 24px !important;
-    background-color: var(--bg-light) !important;
-    border-bottom: 1px solid var(--border) !important;
-}
-
-.dashboard form[name="ticketLogForm"] .hdr h2 {
-    font-size: 16px !important;
-    font-weight: 600 !important;
-    color: var(--color-dark) !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background: none !important;
-}
-
-.dashboard form[name="ticketLogForm"] .hdr .tl,
-.dashboard form[name="ticketLogForm"] .hdr .tr {
-    display: none !important;
-}
-
-.dashboard form[name="ticketLogForm"] .formSectionContent {
-    padding: 24px !important;
-}
-
-.dashboard form[name="ticketLogForm"] .inputGroup {
-    display: flex !important;
-    align-items: center !important;
-    padding: 12px 0 !important;
-    margin: 0 !important;
-}
-
-.dashboard form[name="ticketLogForm"] .mainLabel {
-    width: 140px !important;
-    min-width: 140px !important;
-    flex-shrink: 0 !important;
-    text-align: right !important;
-    padding-right: 20px !important;
-}
-
-.dashboard form[name="ticketLogForm"] .mainLabel label {
-    font-size: 14px !important;
-    font-weight: 500 !important;
-    color: var(--color-gray) !important;
-}
-
-.dashboard form[name="ticketLogForm"] .options {
-    flex: 1 !important;
-}
-
-.dashboard form[name="ticketLogForm"] .optionsContent {
-    font-size: 14px !important;
-    color: var(--color-dark) !important;
-}
-
-.dashboard form[name="ticketLogForm"] input.textInput {
-    width: 100% !important;
-    max-width: 300px !important;
-    padding: 10px 14px !important;
-    border: 1px solid var(--border) !important;
-    border-radius: 8px !important;
-    font-size: 14px !important;
-}
-
-.dashboard form[name="ticketLogForm"] textarea {
-    width: 100% !important;
-    max-width: 400px !important;
-    min-height: 120px !important;
-    padding: 12px 14px !important;
-    border: 1px solid var(--border) !important;
-    border-radius: 8px !important;
-    font-size: 14px !important;
-    resize: vertical !important;
-}
-
-.dashboard form[name="ticketLogForm"] .buttonGroup {
-    padding: 20px 0 0 !important;
-    border-top: 1px solid var(--border) !important;
-    margin-top: 16px !important;
-}
-
 .dashboard .formSectionContent {
     padding: 24px;
 }
@@ -9088,73 +8993,71 @@ img[src*="warning.gif"] {
 }
 
 /* ========== POPUP/TICKET FORM STYLES ========== */
+/* These styles target the help popup window which opens separately */
 
-/* Ticket form container */
 form[name="ticketLogForm"] {
     font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #09090b;
+}
+
+form[name="ticketLogForm"] #FormHeader,
+form[name="ticketLogForm"] .clear,
+form[name="ticketLogForm"] .roundedBox .hdr .tl,
+form[name="ticketLogForm"] .roundedBox .hdr .tr,
+form[name="ticketLogForm"] .roundedBox b.bt,
+form[name="ticketLogForm"] .roundedBox b.bb {
+    display: none !important;
 }
 
 form[name="ticketLogForm"] .roundedBox {
-    background-color: var(--color-white);
-    border: 1px solid var(--border);
-    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin: 16px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 form[name="ticketLogForm"] .roundedBox .hdr {
-    background-color: var(--bg-light);
-    border-bottom: 1px solid var(--border);
-    padding: 16px 20px;
+    background: #f4f4f5;
+    padding: 12px 16px;
+    border-bottom: 1px solid #e5e7eb;
 }
 
 form[name="ticketLogForm"] .roundedBox .hdr h2 {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
-    color: var(--color-dark);
+    color: #09090b;
     margin: 0;
 }
 
-form[name="ticketLogForm"] .roundedBox .hdr .tl,
-form[name="ticketLogForm"] .roundedBox .hdr .tr,
-form[name="ticketLogForm"] .roundedBox b.bb {
-    display: none;
-}
-
 form[name="ticketLogForm"] .formSectionContent {
-    padding: 24px;
+    padding: 20px;
 }
 
 form[name="ticketLogForm"] .inputGroup {
     display: flex;
-    flex-direction: row;
     align-items: flex-start;
-    gap: 16px;
-    margin-bottom: 20px;
-    padding: 0;
+    margin-bottom: 16px;
 }
 
 form[name="ticketLogForm"] .inputGroup .mainLabel {
-    flex: 0 0 140px;
+    width: 140px;
+    min-width: 140px;
+    flex-shrink: 0;
+    padding: 8px 16px 8px 0;
     text-align: right;
-    padding-top: 10px;
-}
-
-form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent {
-    display: block;
 }
 
 form[name="ticketLogForm"] .inputGroup .mainLabel label {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
-    color: var(--color-dark);
+    color: #6b7280;
 }
 
-form[name="ticketLogForm"] .inputGroup .mainLabel label.required .requiredMarker {
-    color: var(--color-error);
+form[name="ticketLogForm"] .inputGroup .mainLabel .requiredMarker {
+    color: #dc2626;
     margin-left: 2px;
 }
 
@@ -9164,60 +9067,57 @@ form[name="ticketLogForm"] .inputGroup .options {
 
 form[name="ticketLogForm"] .inputGroup .options .optionsContent {
     font-size: 14px;
-    color: var(--color-dark);
-    padding: 10px 0;
+    color: #09090b;
+    padding: 8px 0;
 }
 
 form[name="ticketLogForm"] .inputGroup .options input.textInput {
     width: 100%;
-    max-width: 100%;
-    padding: 10px 14px;
+    max-width: 300px;
+    padding: 8px 12px;
     font-size: 14px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background-color: var(--color-white);
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    font-family: inherit;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    background: #fff;
+    color: #09090b;
 }
 
 form[name="ticketLogForm"] .inputGroup .options input.textInput:focus {
     outline: none;
-    border-color: var(--color-primary-light);
-    box-shadow: 0 0 0 3px rgba(0, 96, 167, 0.1);
+    border-color: #0060a7;
+    box-shadow: 0 0 0 2px rgba(0, 96, 167, 0.15);
 }
 
 form[name="ticketLogForm"] .inputGroup .options textarea {
     width: 100%;
-    min-height: 120px;
-    padding: 10px 14px;
+    max-width: 300px;
+    min-height: 100px;
+    padding: 8px 12px;
     font-size: 14px;
     font-family: inherit;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background-color: var(--color-white);
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    background: #fff;
+    color: #09090b;
     resize: vertical;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 form[name="ticketLogForm"] .inputGroup .options textarea:focus {
     outline: none;
-    border-color: var(--color-primary-light);
-    box-shadow: 0 0 0 3px rgba(0, 96, 167, 0.1);
+    border-color: #0060a7;
+    box-shadow: 0 0 0 2px rgba(0, 96, 167, 0.15);
 }
 
 form[name="ticketLogForm"] .buttonGroup {
     display: flex;
     justify-content: flex-end;
     padding: 16px 0 0;
-    border-top: 1px solid var(--border);
     margin-top: 8px;
+    border-top: 1px solid #e5e7eb;
 }
 
-form[name="ticketLogForm"] .buttonGroup .yui-button {
-    background: none;
-    border: none;
-    margin: 0;
-}
-
+form[name="ticketLogForm"] .buttonGroup .yui-button,
 form[name="ticketLogForm"] .buttonGroup .yui-button .first-child {
     background: none;
     border: none;
@@ -9229,36 +9129,14 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
     padding: 10px 24px;
     font-size: 14px;
     font-weight: 600;
-    color: var(--color-white);
-    background-color: var(--color-primary);
+    font-family: inherit;
+    color: #fff;
+    background: #004279;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.2s ease;
 }
 
 form[name="ticketLogForm"] .buttonGroup .yui-button button:hover {
-    background-color: var(--color-primary-light);
-}
-
-form[name="ticketLogForm"] .clear {
-    display: none;
-}
-
-/* Responsive for smaller popup windows */
-@media (max-width: 500px) {
-    form[name="ticketLogForm"] .inputGroup {
-        flex-direction: column;
-        gap: 8px;
-    }
-    
-    form[name="ticketLogForm"] .inputGroup .mainLabel {
-        flex: none;
-        text-align: left;
-        padding-top: 0;
-    }
-    
-    form[name="ticketLogForm"] .inputGroup .options .optionsContent {
-        padding: 0;
-    }
+    background: #0060a7;
 }
