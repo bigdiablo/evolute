@@ -1606,7 +1606,7 @@ body.login {
 }
 
 .dashboard #Main:has(#Footer) #Footer {
-    margin-left: 0;
+    margin-left: 0 !important;
 }
 
 .dashboard #MainContent {
