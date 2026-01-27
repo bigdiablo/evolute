@@ -756,6 +756,22 @@ body.login {
     color: var(--color-gray) !important;
 }
 
+.dashboard #header {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 100% !important;
+    height: 60px;
+    padding: 0 24px;
+}
+
+.dashboard #header .smallnav {
+    position: relative !important;
+    top: 0;
+    right: 0;
+}
+
 .dashboard #footer {
     display: flex !important;
     flex-direction: column;
@@ -765,6 +781,7 @@ body.login {
     margin: 0 !important;
     padding: 24px !important;
     height: auto !important;
+    border-top: 0 !important;
     background-color: var(--color-white) !important;
     font-size: 13px !important;
     color: var(--color-gray) !important;
@@ -9215,7 +9232,7 @@ form[name="ticketLogForm"] .inputGroup .options textarea:focus {
 form[name="ticketLogForm"] .buttonGroup {
     padding: 16px 0 0 !important;
     margin-top: 8px !important;
-    border-top: 1px solid #e5e7eb !important;
+    border-top: 0 !important;
 }
 
 form[name="ticketLogForm"] .buttonGroup .yui-button,
