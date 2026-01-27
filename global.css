@@ -112,7 +112,7 @@ ol, ul { list-style: none; }
 
 .buttonGroup span.first-child button,.buttonGroup span.first-child a {
     font-weight: bold;
-    font-size: 100%
+    font-size: 100%;
 }
 
 
@@ -182,7 +182,7 @@ ol, ul { list-style: none; }
     border: 1px solid #EEE;
     background: #FBFBFB;
     padding: 2px 5px 2px 5px;
-    margin: 0 10px 10px 0
+    margin: 0 10px 10px 0;
 }
 
 #StateSelection {
@@ -206,10 +206,10 @@ strong {
     float: left;
     clear: right;
     margin-left: 12px;
-    margin-top: 2px
+    margin-top: 2px;
 }
 
-:focus,:active {
+:focus, :active {
     outline: none;
 }
 /* top container for logo & links */
@@ -298,7 +298,7 @@ strong {
     margin-left: 2em;
 }
 .sideBar .sideBarGroup ol {
-    margin-left: 22px
+    margin-left: 22px;
 }
 
 .sideBar .sideBarGroup ol li,
@@ -336,11 +336,11 @@ strong {
 }
 
 .sideBar div h2,.inlineSideBar div h2 {
-    height: 1.75 em
+    height: 1.75em;
 }
 
 .sideBar div p,.inlineSideBar div p {
-    margin-top: .5em
+    margin-top: .5em;
 }
 
 div.roundedBox div.inlineSideBar,
@@ -414,7 +414,7 @@ div.roundedBox3 div.inlineSideBar2 {
     width: 12px;
     float: left;
     background: url('/images/navigation/bottom-left.gif') 0px 1px no-repeat;
-    z-index: 3
+    z-index: 3;
 }
 
 #MainNavigation.tabs {
@@ -494,7 +494,7 @@ html:first-child div#MainNavigation.tabs ul li {
 
 #MainNavigation.tabs ul li a.selected:hover {
     text-decoration: none;
-    cursor: default
+    cursor: default;
 }
 
 /******************* subnavigation selectors *******************/
@@ -514,7 +514,7 @@ div#SubNavigation {
     float: left;
     font-size: 85%;
     line-height: normal;
-    text-align: center
+    text-align: center;
 }
 
 div#SubNavigation.subtabs ul {
@@ -543,7 +543,7 @@ div#SubNavigation.subtabs ul {
     color: #FFF;
     text-decoration: none;
     font-size: 100%;
-    font-weight: normal
+    font-weight: normal;
 }
 
 #SubNavigation.subtabs ul li.current a,
@@ -582,7 +582,7 @@ div#SubNavigation.subtabs ul {
 
 #NestedFormPage {
     width: 400px;
-    font-size: 97%
+    font-size: 97%;
 }
 
 #NestedFormPage h1#MainTitle {
@@ -606,11 +606,11 @@ div#SubNavigation.subtabs ul {
 
 #NestedFormPage div.formSectionContent p.center {
     margin-top: 8px;
-    text-align: center
+    text-align: center;
 }
 
 #NestedFormPage div.mainLabel {
-    width: 32%
+    width: 32%;
 }
 
 #NestedFormPage div.options {
@@ -619,11 +619,11 @@ div#SubNavigation.subtabs ul {
 }
 
 #NestedFormPage div.options input,#NestedFormPage div.options select {
-    font-size: 97%
+    font-size: 97%;
 }
 
 #NestedFormPage div.options input:focus {
-    background-color: #D1E7A2
+    background-color: #D1E7A2;
 }
 
 #NestedFormPage div#validationErrors div.sectionHeader b.htop b.center {
@@ -632,7 +632,7 @@ div#SubNavigation.subtabs ul {
 
 #NestedFormPage table.nestedListTable tfoot td.important {
     text-align: left;
-    font-size: 100%
+    font-size: 100%;
 }
 
 #Footer,#FooterWithoutBorderTop {
@@ -646,7 +646,7 @@ div#SubNavigation.subtabs ul {
 }
 
 #FooterWithoutBorderTop {
-    border-top: none
+    border-top: none;
 }
 
 #Footer p {
@@ -694,7 +694,7 @@ table.gridTable td {
 
 table.gridTable tr.even td {
     background: transparent;
-    background-color: #FBFBFB
+    background-color: #FBFBFB;
 }
 
 table.gridTable tbody th {
@@ -704,7 +704,7 @@ table.gridTable tbody th {
 
 table.gridTable tbody tr.even th {
     background: transparent;
-    background-color: #FBFBFB
+    background-color: #FBFBFB;
 }
 
 table.listTable,table.leadListTable {
@@ -713,7 +713,7 @@ table.listTable,table.leadListTable {
     border-collapse: separate;
     border: 1px solid #CCC;
     /* border-bottom:none; */
-    width: 100%
+    width: 100%;
 }
 
 table.leadListTable {
@@ -739,6 +739,7 @@ div.center,
     text-align: center;
 }
 .nowrap { white-space: nowrap }
+.nowrap { white-space: nowrap; }
 
 div#search {
     white-space: nowrap;
@@ -748,7 +749,7 @@ div#search {
 }
 
 table.leadListTable th {
-    padding: 0.5em
+    padding: 0.5em;
 }
 
 table.listTable td,
@@ -782,7 +783,7 @@ p.actionRequired2,
 }
 
 p.actionRequired {
-    margin-top: 0.5em
+    margin-top: 0.5em;
 }
 
 p.actionRequired2 {
@@ -811,7 +812,7 @@ p.info:first-letter {
     padding-left: 1.5em;
 }
 .bold,table.nestedListTable td.bold {
-    font-weight: bold
+    font-weight: bold;
 }
 
 table.listTable tr.even td,
@@ -819,7 +820,7 @@ table.nestedListTable tr.even td,
 table.nestedListTable tr.even th.tableSectionHeader,
 table.leadListTable tr.even td {
     background: transparent;
-    background-color: #FBFBFB
+    background-color: #FBFBFB;
 }
 
 table.nestedListTable tbody td.borderBottom,
@@ -846,7 +847,7 @@ table.leadListTable thead h2 {
 }
 
 table.leadListTable td.checkbox {
-    text-align: center
+    text-align: center;
 }
 
 table.nestedListTable td.paginationTop {
@@ -866,13 +867,13 @@ table.nestedListTable tfoot td.important {
     font-size: 105%;
     text-align: center;
     font-weight: bold;
-    padding-top: 1.5em
+    padding-top: 1.5em;
 }
 
 table.nestedListTable tr.sectionStart th.tableSectionHeader,
 table.nestedListTable tr.sectionStart th.tableSectionHeaderAlternate {
     border-bottom: solid 1px #ccc;
-    font-weight: 500
+    font-weight: 500;
 }
 
 table.nestedListTable tr.sectionStart th.tableSectionHeaderAlternate {
@@ -882,14 +883,14 @@ table.nestedListTable tr.sectionStart th.tableSectionHeaderAlternate {
 
 /*
 table.ordersTable {
-    min-width: 1100px
+    min-width: 1100px;
 }
 */
 
 span.actionRequired {
     color: #B65426;
     padding-bottom: 0px;
-    margin-top: 1.5em
+    margin-top: 1.5em;
 }
 
 /* search buttons; used in nestedListTable header rows */
@@ -933,15 +934,15 @@ div#search div#checkBoxDiv div {
 
 div#search div#checkBoxDiv div input[type='checkbox'] {
     position: relative;
-    top: 2px
+    top: 2px;
 }
 
 span#searchButton span.first-child {
-    padding: 0px 0px 0px 0px
+    padding: 0px 0px 0px 0px;
 }
 
 span#searchButton span.first-child button {
-    font-weight: bold
+    font-weight: bold;
 }
 
 td.ACTIVE {
@@ -973,7 +974,7 @@ div.target {
     width: auto;
     margin: 10px; 
     /* *margin: 0px !important; - IE hack removed */
-    border: none
+    border: none;
 }
 
 table.target {
@@ -982,17 +983,17 @@ table.target {
 }
 
 ul.target {
-    margin: 0px
+    margin: 0px;
 }
 
 div.target {
     cursor: default;
     padding: 0 2px 0 0.25em;
-    margin-top: 0px
+    margin-top: 0px;
 }
 
 div.target input[type="radio"] {
-    float: left
+    float: left;
 }
 
 div.target label {
@@ -1000,28 +1001,28 @@ div.target label {
     float: left;
     clear: right;
     margin-left: 0.3em;
-    cursor: pointer
+    cursor: pointer;
 }
 
 div.details {
-    cursor: default
+    cursor: default;
 }
 
 table.target thead tr th {
     background-color: #ddd;
-    border: none
+    border: none;
 }
 
 table.nestedListTable tbody tr td.date {
-    text-align: ":"
+    text-align: ":";
 }
 
 table.nestedListTable tr.parentRow:hover {
-    background-color: #E7EFBC
+    background-color: #E7EFBC;
 }
 
 .selectedRow {
-    background-color: #E7EFBC
+    background-color: #E7EFBC;
 }
 
 table.nestedListTable tr.details td.productDetails,
@@ -1107,7 +1108,7 @@ table.cBoxes input {
 
 #container ul.text li div img {
     vertical-align: middle;
-    border: none
+    border: none;
 }
 
 /* lead store results table */
@@ -1118,12 +1119,12 @@ div#searchResultsContainer {
 table.leadListTable {
     border: none;
     margin-top: 0px;
-    margin-bottom: 0px
+    margin-bottom: 0px;
 }
 
 table.leadListTable tr.actions td.first,
 table.leadListTable tr.actions td.last {
-    padding: 0px 4px
+    padding: 0px 4px;
 }
 
 table.leadListTable div.lsListingTop,
@@ -1133,23 +1134,23 @@ table.leadListTable div.lsListingBottom {
 }
 
 table.leadListTable div.lsListingBottom {
-    margin: 14px 4px 0px 0px
+    margin: 14px 4px 0px 0px;
 }
 
 table.leadListTable div.lsPaginationTop,
 table.leadListTable div.lsPaginationBottom {
     white-space: nowrap;
     float: left;
-    padding: 4px
+    padding: 4px;
 }
 
 div#topNote,div#bottomNote {
     float: left;
-    padding: 6px
+    padding: 6px;
 }
 
 div#topNote b,div#bottomNote b {
-    color: #00AA22
+    color: #00AA22;
 }
 
 div#topCartButton,div#bottomCartButton {
@@ -1175,7 +1176,7 @@ div#bottomCartButton div#bottomNumber {
 div#bottomCartButton div#bottomButton {
     float: left;
     position: relative;
-    top: -2px
+    top: -2px;
 }
 
 #leadStoreTopCart,#leadStoreBottomCart {
@@ -1184,19 +1185,19 @@ div#bottomCartButton div#bottomButton {
 }
 
 #leadStoreTopCart {
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 #leadStoreBottomCart {
     margin-top: 10px;
     position: relative;
-    top: 200px
+    top: 200px;
 }
 
 #leadStoreTopCart div,#leadStoreBottomCart div {
     clear: left;
     float: right;
-    margin: 2px
+    margin: 2px;
 }
 
 /* top div */
@@ -1207,11 +1208,11 @@ div#bottomCartButton div#bottomButton {
 
 #infoDiv .message {
     float: left;
-    margin-right: 10px
+    margin-right: 10px;
 }
 
 #infoDiv .actionRequired {
-    padding-top: 1px
+    padding-top: 1px;
 }
 
 #infoDiv .checkoutButton {
@@ -1227,12 +1228,12 @@ div#bottomCartButton div#bottomButton {
     clear: right;
     margin: 0px auto;
 	margin-top: 10px;
-	*margin-top: 0px;
+	margin-top: 0px;
 }
 
 #infoDiv #instructionsContainer p.instructions {
 	margin-top: 6px;
-	*margin-top: 0px;
+	margin-top: 0px;
 }
 
 /* main container */
@@ -1250,7 +1251,7 @@ div#bottomCartButton div#bottomButton {
     float: left;
     position: relative;
     left: -310px;
-    padding-left: 310px
+    padding-left: 310px;
 }
 
 /* saved/scheduled searches */
@@ -1258,30 +1259,30 @@ div#bottomCartButton div#bottomButton {
     float: left;
     text-align: right;
     padding-right: 0.5em;
-    padding-top: 0.125em
+    padding-top: 0.125em;
 }
 
 #searchNameDiv div.textBox {
     float: left;
     clear: right;
-    padding-right: 0.5em
+    padding-right: 0.5em;
 }
 
 #searchNameDiv div.submitButton {
     float: left;
     clear: right;
     position: relative;
-    top: -2px
+    top: -2px;
 }
 
 #scheduleSearchSubmitButton-button {
-    font-weight: bold
+    font-weight: bold;
 }
 
 #scheduleControls {
     margin: 6px 0px 2px 0px;
     width: 100%;
-    padding: 0px
+    padding: 0px;
 }
 
 #scheduleControls table.trafficDrivers td label {
@@ -1290,15 +1291,15 @@ div#bottomCartButton div#bottomButton {
 
 #scheduleControls div.captionDiv {
     padding-top: 8px;
-    clear: both
+    clear: both;
 }
 
 #scheduleControls div#scheduleCaptionDiv {
-    margin-top: 8px
+    margin-top: 8px;
 }
 
 #scheduleControls div.captionDiv span:after {
-    content: ":"
+    content: ":";
 }
 
 #scheduleControls div.searchDays {
@@ -1314,17 +1315,17 @@ div#bottomCartButton div#bottomButton {
 #scheduleControls div.leadLimits {
     float: left;
     width: 55%;
-    margin-left: 2px
+    margin-left: 2px;
 }
 
 #scheduleControls div.submitButton {
     float: right;
-    clear: right
+    clear: right;
 }
 
 div#additionalAttrs {
     float: left;
-    clear: right
+    clear: right;
 }
 
 /** auto trim groups **/
@@ -1334,7 +1335,7 @@ div.boxContentTrim {
 }
 
 div.boxContentTrim table.cBoxes td {
-    vertical-align: top
+    vertical-align: top;
 }
 
 div.boxContentTrim table.cBoxes td.checkboxCell {
@@ -1352,13 +1353,13 @@ div.checkAllNone {
     text-align: center;
     padding: 8px 4px 0px 0px;
     font-size: 90%;
-    font-weight: bold
+    font-weight: bold;
 }
 
 div.boxContentTrim div.checkAllNone {
-    font-size: 105%; *
+    font-size: 105%;
     font-size: 103%;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 div.boxContentTrim div.groupContainer {
@@ -1367,32 +1368,32 @@ div.boxContentTrim div.groupContainer {
 }
 
 div.boxContentTrim div.groupContainer .even {
-    background-color: #FAFBFB
+    background-color: #FAFBFB;
 }
 
 span.groupTitle {
     font-weight: bold;
-    font-size: 95%
+    font-size: 95%;
 }
 
 div.titleColumn {
-    width: 60%; *
+    width: 60%;
     width: 54%;
-    float: left
+    float: left;
 }
 
 div.buttonColumn {
-    width: 38%; *
+    width: 38%;
     width: 44%;
     float: right;
-    padding-top: 1px; *
-    padding-top: 0px
+    padding-top: 1px;
+    padding-top: 0px;
 }
 
 div.buttonColumn label {
     position: relative;
-    top: -3px; *
-    top: -1px
+    top: -3px;
+    top: -1px;
 }
 
 /* right side */
@@ -1417,7 +1418,7 @@ span#saveSuccess {
     clear: right;
     color: #E0E1E2;
     background-repeat: no-repeat;
-    background-position: 2px 0px
+    background-position: 2px 0px;
 }
 
 #storeSearchResults { /* margin: 0px;
@@ -1446,7 +1447,7 @@ div#bidgroupContent div.inputGroup div.mainLabel {
 }
 
 #bidgroupContent.narrow {
-    width: 620px
+    width: 620px;
 }
 
 #bidTabs {
@@ -1534,7 +1535,7 @@ div#bidoptions div#priceEstimatesDiv div.boxContent {
 }
 
 div#filters div.checkboxes div.tableContainer {
-    margin-left: 10px
+    margin-left: 10px;
 }
 
 div#filters table.cBoxes tbody td {
@@ -1544,12 +1545,12 @@ div#filters table.cBoxes tbody td {
 div#filters table.cBoxes tr.odd,
 div#filters div#loantovalue table tr.odd,
 div#bids table.pricegrid tr.odd {
-    background-color: #F6F6F6
+    background-color: #F6F6F6;
 }
 
 div#filters table.cBoxes td.checkboxCell {
     text-align: right;
-    width: 14px
+    width: 14px;
 }
 
 div#filters table.cBoxes td label {
@@ -1557,13 +1558,13 @@ div#filters table.cBoxes td label {
 }
 
 div#filters div.checkboxes,div#filters div.radioGroup {
-    width: 100%
+    width: 100%;
 }
 
 div#filters div.checkboxes div.radioGroup {
     margin: -4px 0px 10px 10px;
     clear: both;
-    padding: 4px
+    padding: 4px;
 }
 
 div#filters input[type="radio"] {
@@ -1587,12 +1588,12 @@ div#filters div#paydayfirstpos div label {
 
 div#filters div.checkboxes p.inputgroup label,
 div#filters div.radioGroup div label.radioLabel {
-    margin-left: .3em
+    margin-left: .3em;
 }
 
 div#filters div.checkboxes div.dependents {
     position: relative;
-    margin-left: 22px
+    margin-left: 22px;
 }
 
 div#filters div.checkboxes div.dependents table.cBoxes {
@@ -1602,16 +1603,16 @@ div#filters div.checkboxes div.dependents table.cBoxes {
 div#filters div.checkboxes div.checkAll {
     margin: 0px auto;
     text-align: center;
-    padding: 4px 0px 2px 0px
+    padding: 4px 0px 2px 0px;
 }
 
 div#filters div.radioGroup div {
     padding: 2px .5em 0px .5em;
-    margin-left: 4px
+    margin-left: 4px;
 }
 div.titleDiv {
     margin: 0px auto;
-    text-align: center
+    text-align: center;
 }
 div.titleDiv h3,
 div#filters div.filter h3,
@@ -1646,30 +1647,30 @@ div#filters div.filter {
 }
 
 div#filters div#loantovalue table td.title {
-    padding: 0px .5em 0px 10px
+    padding: 0px .5em 0px 10px;
 }
 
 div#filters div#marketattr div.checkbox {
     float: left;
     margin-left: 10px;
-    padding-top: 2px
+    padding-top: 2px;
 }
 
 div#filters div#marketattr div.checkboxLabel {
     float: left;
     clear: right;
-    padding-left: .5em
+    padding-left: .5em;
 }
 
 div#filters div#marketattr div#leadquality,
 div#filters div#marketattr div#sourceconnect {
     padding: 0 4px;
-    margin-left: 26px
+    margin-left: 26px;
 }
 
 div#filters div#exclusivity div {
     margin-left: 4px;
-    padding-top: 2px
+    padding-top: 2px;
 }
 
 div#filters div.checkboxes p.inputgroup,
@@ -1677,12 +1678,12 @@ div#filters div#zipradius p,
 div#filters div#ziplistDiv p,
 div#filters div.dropDown div.dropDownContainer {
     margin-left: 10px;
-    padding-top: 2px
+    padding-top: 2px;
 }
 
 div#filters div.dropDown div.dropDownContainer {
     width: 400px;
-    min-width: 175px
+    min-width: 175px;
 }
 
 div#filters div#timeRange div.dropDownContainer {
@@ -1704,7 +1705,7 @@ div#filters div#timeRange div.dropDownContainer div.label {
 
 div#bids table.pricegrid {
     width: 100%;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 div#bids table.pricegrid th,div#bids table.pricegrid td {
@@ -1714,7 +1715,7 @@ div#bids table.pricegrid th,div#bids table.pricegrid td {
 
 table.pricegrid th.colHeaders,table.pricegrid td.label {
     font-weight: bold;
-    font-size: 98%
+    font-size: 98%;
 }
 
 table.pricegrid thead th.colHeaders {
@@ -1728,14 +1729,14 @@ table.pricegrid thead tr.toplabel,table.pricegrid tfoot tr.bottomLabel {
 
 table.pricegrid thead tr.toplabel th,
 table.pricegrid tfoot tr.bottomLabel td {
-    padding: 0.75em
+    padding: 0.75em;
 }
 
 /* moved to transparency */
 table.pricegrid th.progress {
     display: block;
     width: 20px;
-    height: 16px
+    height: 16px;
 }
 
 table.pricegrid th.mainHeader,table.pricegrid td.mainHeader {
@@ -1745,11 +1746,11 @@ table.pricegrid th.mainHeader,table.pricegrid td.mainHeader {
 }
 
 table.pricegrid th.mainHeader {
-    text-align: center
+    text-align: center;
 }
 
 table.pricegrid th.left {
-    text-align: left
+    text-align: left;
 }
 
 table.pricegrid tbody tr.estimate {
@@ -1765,15 +1766,15 @@ table.pricegrid tbody td.estimate {
 }
 
 div#settings div.content {
-    margin-bottom: 8px
+    margin-bottom: 8px;
 }
 
 div#settings div.content div.formSectionContent div.mainLabel {
-    width: 40%
+    width: 40%;
 }
 
 div#settings div.content div.formSectionContent div.options {
-    width: 50%
+    width: 50%;
 }
 
 /* div#bidgroupContent form#bid */
@@ -1784,7 +1785,7 @@ div#settings div.content div.formSectionContent div.options div.optionsContent #
 
 div#bidoptions div#transparency p {
     margin-bottom: 0.33em;
-    margin-left: 0.33em
+    margin-left: 0.33em;
 }
 
 div#bidoptions div#priceEstimatesDiv div.buttonGroup div#progress-indicator {
@@ -1800,16 +1801,16 @@ div#bidoptions div#transparency h4 div.estimate {
     float: right;
     position: relative;
     top: -19px;
-    padding: 0.33em
+    padding: 0.33em;
 }
 
 /* Opera */
 html:first-child div#bidoptions div#transparency h2 span#progress-indicator {
-    top: 0px
+    top: 0px;
 }
 
 html:first-child div#bidoptions div#transparency h4 div.estimate {
-    top: -4px
+    top: -4px;
 }
 
 div.content div.olidetails, 
@@ -1834,7 +1835,7 @@ div.option div.oliDetailsOdd {
 
 div.content div.olidetails ul {
     float: left;
-    margin-right: 10px
+    margin-right: 10px;
 }
 
 div#buttons {
@@ -1862,17 +1863,17 @@ div.subtabHeading h2 {
 div.clickable {
     font-size: 93%;
     padding-top: 4px;
-    padding-left: 4px
+    padding-left: 4px;
 }
 
 div.clickable label {
     position: relative;
-    top: -2px
+    top: -2px;
 }
 
 div.clickable:hover {
     cursor: pointer;
-    background-color: #D1E7A2
+    background-color: #D1E7A2;
 }
 
 /* order edit/confirmation screens */
@@ -2057,12 +2058,12 @@ ul.actionsWrapper li.options ul.actionsList li.action a {
 
 .overview {
     margin-bottom: 10px;
-    margin-right: 0px
+    margin-right: 0px;
 }
 
 .overview form {
     margin: 0px;
-    padding: 0px
+    padding: 0px;
 }
 
 .tabWrapper1 {
@@ -2130,7 +2131,7 @@ ul.actionsWrapper li.options ul.actionsList li.action a {
 
 #dashTabs ul#tabsList li.current a:hover {
     text-decoration: none;
-    cursor: default
+    cursor: default;
 }
 
 #dashTabs ul#tabsList li#voice {
@@ -2150,7 +2151,7 @@ ul.actionsWrapper li.options ul.actionsList li.action a {
 .callOutWrapper {
     padding: 1px;
     margin-bottom: 4px;
-    border: solid 1px #ccc
+    border: solid 1px #ccc;
 }
 
 .callOut,.callOut2,.callOut3, .homepageMetricsTable {
@@ -2159,7 +2160,7 @@ ul.actionsWrapper li.options ul.actionsList li.action a {
 }
 
 .callOut2 {
-    margin-left: 0px
+    margin-left: 0px;
 }
 .callOut3, .homepageMetricsTable th { width: auto; margin: 0px auto }
 .callOut th,.callOut2 th,.callOut3 th, .homepageMetricsTable th {
@@ -2176,24 +2177,24 @@ ul.actionsWrapper li.options ul.actionsList li.action a {
     background: transparent;
     padding-right: 10px;
     font-size: 98%;
-    white-space: nowrap
+    white-space: nowrap;
 }
 
 .callOut td,.callOut2 td,.callOut3 td, .homepageMetricsTable td {
     padding: 3px;
-    border-bottom: solid 1px #ccc
+    border-bottom: solid 1px #ccc;
 }
 
 .callOut td.last,.callOut2 td.last {
-    border-bottom: 0px
+    border-bottom: 0px;
 }
 
 #homeContainer {
-    width: 890px
+    width: 890px;
 }
 
 #left {
-    width: 666px
+    width: 666px;
 }
 
 #right {
@@ -2206,7 +2207,7 @@ ul.actionsWrapper li.options ul.actionsList li.action a {
     padding-right: 0px;
     background-color: #eee;
     border-bottom: solid 1px #ccc;
-    width: auto
+    width: auto;
 }
 
 .chartDiv div.chartContainer {
@@ -2215,13 +2216,13 @@ ul.actionsWrapper li.options ul.actionsList li.action a {
 }
 
 td.right {
-    text-align: right
+    text-align: right;
 }
 
 /* Selectors for pagination */
 div.paginationContainer {
     margin: 0px;
-    padding: 0px
+    padding: 0px;
 }
 
 .pagination {
@@ -2315,7 +2316,7 @@ div.paginationContainer div.results {
 
 /* End section */ /* sortable table headers */
 .sortHeader {
-    white-space: nowrap
+    white-space: nowrap;
 }
 
 .sortable {
@@ -2324,11 +2325,11 @@ div.paginationContainer div.results {
 }
 
 .sortable a {
-    text-decoration: none
+    text-decoration: none;
 }
 
 .sortable a:hover {
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 th.sortedAsc,.nestedListTable th.sortedAsc {
@@ -2365,11 +2366,11 @@ th.sortedDesc,.nestedListTable th.sortedDesc {
 }
 .childRowClosed {
     display: none;
-    height: 0px
+    height: 0px;
 }
 
 .childRowOpen {
-    visibility: visible
+    visibility: visible;
 }
 
 tr.childRowOpen td {
@@ -2377,7 +2378,7 @@ tr.childRowOpen td {
     font-size: smaller;
     background-color: #eee;
     line-height: .2em;
-    padding-left: 2em
+    padding-left: 2em;
 }
 
 /* info messages */
@@ -2403,12 +2404,12 @@ div.infoMessage2 {
 }
 
 .note {
-    font-size: 85%
+    font-size: 85%;
 }
 
 /* selector for numeric table values */
 table td.number {
-    text-align: right
+    text-align: right;
 }
 
 input.number {
@@ -2433,7 +2434,7 @@ input.number {
 /* Lead Manager */
 div#managerContainer {
     width: auto;
-    min-width: 900px
+    min-width: 900px;
 }
 
 div #searchFieldsDiv {
@@ -2445,13 +2446,13 @@ div #leadManagerQuickLinksDiv {
     width: 33%;
     float: left;
     clear: right;
-    margin-left: 10px
+    margin-left: 10px;
 }
 
 div #searchFieldsDiv p.information {
     margin: 2px 0px 2px 10px;
     padding: .7em;
-    padding-left: 2em
+    padding-left: 2em;
 }
 
 div.sellerHomeContentBoxL div.roundedBox,
@@ -2464,7 +2465,7 @@ div.roundedBox2 { /* min-width: 1100px; */
 
 div.roundedBox4 {
     width: auto;
-    min-width: 100px
+    min-width: 100px;
 }
 
 /* used for table containers */
@@ -2479,7 +2480,7 @@ b.bt,b.bt b,b.bb,b.bb b {
     font-size: 1px;
     background: url('/images/common/corners.gif') no-repeat;
     position: relative;
-    z-index: 0
+    z-index: 0;
 }
 
 /* blue variant */
@@ -2489,7 +2490,7 @@ b.bt,b.bt b,b.bb,b.bb b {
 /* top left corner */
 b.bt,.blueBox b.bt {
     top: -2px;
-    left: -2px
+    left: -2px;
 }
 /* top right corner */
 b.bt b,.blueBox b.bt b {
@@ -2500,7 +2501,7 @@ b.bt b,.blueBox b.bt b {
 b.bb,.blueBox b.bb {
     background-position: 0 -24px;
     top: 2px;
-    left: -2px
+    left: -2px;
 }
 /* bottom right corner */
 b.bb b,.blueBox b.bb b {
@@ -2521,7 +2522,7 @@ b.bb b,.blueBox b.bb b {
 /* top left corner */
 .redBox b.bt,.greenBox b.bt {
     top: -2px;
-    left: -2px
+    left: -2px;
 }
 /* top right corner */
 .redBox b.bt b,.greenBox b.bt b {
@@ -2532,7 +2533,7 @@ b.bb b,.blueBox b.bb b {
 .redBox b.bb,.greenBox b.bb {
     background-position: 0 -20px;
     top: 2px;
-    left: -2px
+    left: -2px;
 }
 /* bottom right corner */
 .redBox b.bb b,.greenBox b.bb b {
@@ -2621,7 +2622,7 @@ div.confirmationSectionHeader h2 {
     text-align: center;
     margin: 0px auto;
     padding: 0px 0px;
-    white-space: nowrap
+    white-space: nowrap;
 }
 
 div.confirmationSectionHeader b.htop,
@@ -2653,7 +2654,7 @@ div.confirmationSectionHeader b.htop b.right {
 
 .roundedBox2 div.sectionHeader b.htop b.center {
     width: 97%;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .roundedBox3 div.sectionHeader b.htop b.center,
@@ -2664,20 +2665,20 @@ div.confirmationSectionHeader b.htop b.right {
 
 /* Opera */
 html:first-child div.roundedBox div.sectionHeader b.htop b.center {
-    width: 97%
+    width: 97%;
 }
 
 html:first-child div.roundedBox4 div.sectionHeader b.htop b.center {
-    width: 91.5%
+    width: 91.5%;
 }
 
 /*
 div.boxContent,div.boxContentTrim {
-    padding: 0px 10px
+    padding: 0px 10px;
 }
 
 div.boxContent p {
-    font-size: 90%
+    font-size: 90%;
 }
 */
 
@@ -2698,7 +2699,7 @@ div.boxContent p {
 
 #successMessage div.sectionHeader b.htop b.center {
     width: 97.5%;
-    overflow: hidden
+    overflow: hidden;
 }
 
 #successMessage b.htop,#successMessage b.htop b.right {
@@ -2707,11 +2708,11 @@ div.boxContent p {
 }
 
 #successMessage b.htop b.center,#successMessage div.sectionHeader h2 {
-    background-color: #829427
+    background-color: #829427;
 }
 
 #successMessage div.sectionHeader h2 {
-    color: #FBFBFB
+    color: #FBFBFB;
 }
 
 #successMessage b.htop {
@@ -2729,7 +2730,7 @@ div.boxContent p {
 #successMessage ul li {
     margin-left: 2em;
     padding: 5px 0 0px 0;
-    color: #829427
+    color: #829427;
 }
 #successMessage div.sectionHeader .closebox {
     position: absolute;
@@ -2744,24 +2745,24 @@ div.boxContent p {
 #validationErrors,#buyerHomeAlerts,#accountAlert {
     background-color: #FFFFCC;
     border: solid 1px #CC3300;
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 #validationErrors ol,#buyerHomeAlerts ol,#accountAlert ol {
-    margin-top: -6px
+    margin-top: -6px;
 }
 
 #validationErrors ol li,#buyerHomeAlerts ol li,#accountAlert ol li {
     margin-left: 2em;
     padding: 5px 0 0px 0;
-    color: #CC3300
+    color: #CC3300;
 }
 
 #validationErrors div.sectionHeader b.htop b.center,
 #buyerHomeAlerts div.sectionHeader b.htop b.center,
 #accountAlert div.sectionHeader b.htop b.center {
     width: 97%;
-    overflow: hidden
+    overflow: hidden;
 }
 
 #validationErrors b.bt,
@@ -2782,7 +2783,7 @@ div.boxContent p {
 /* top left corner */
 #validationErrors b.bt,#buyerHomeAlerts b.bt,#accountAlert b.bt {
     top: -2px;
-    left: -2px
+    left: -2px;
 }
 
 /* top right corner */
@@ -2795,7 +2796,7 @@ div.boxContent p {
 #validationErrors b.bb,#buyerHomeAlerts b.bb,#accountAlert b.bb {
     background-position: 0 -24px;
     top: 2px;
-    left: -2px
+    left: -2px;
 }
 
 /* bottom right corner */
@@ -2821,7 +2822,7 @@ div.boxContent p {
 #accountAlert b.htop b.center,
 #accountAlert div.sectionHeader h2 {
     background-color: #CC3300;
-    color: #FFFFCC
+    color: #FFFFCC;
 }
 
 #validationErrors div.sectionHeader h2,
@@ -2829,7 +2830,7 @@ div.boxContent p {
 #accountAlert div.sectionHeader h2 {
     font-family: Arial, Verdana, Helvetica, sans-serif;
     font-weight: 500;
-    letter-spacing: normal
+    letter-spacing: normal;
 }
 
 #validationErrors b.htop,#buyerHomeAlerts b.htop,#accountAlert b.htop {
@@ -2851,7 +2852,7 @@ div.boxContent p {
 #buyerHomeAlerts div.inlineSideBar,
 #accountAlert div.inlineSideBar {
     font-weight: bold;
-    color: #CC3300
+    color: #CC3300;
 }
 
 /* selectors for lpDrawLabelValuePair macro */
@@ -2891,7 +2892,7 @@ div.labelValue div.value {
 }
 div.labelValue>div.value {
     white-space: normal !important;
-    max-width: 410px
+    max-width: 410px;
 }
 /* variant with help icon */
 div.labelValue div.valueContent {
@@ -2901,6 +2902,7 @@ div.labelValue div.valueContent {
     padding-right: 0.25em;
 }
 img.helpImg, img.inlineHelpImg { cursor: help }
+img.helpImg, img.inlineHelpImg { cursor: help; }
 div.labelValue img.helpImg,
 div.labelValue img.inlineHelpImg,
 div.optionsContent img.helpImg {
@@ -2912,9 +2914,9 @@ div.optionsContent img.helpImg {
 }
 
 div.inputGroup div.optionsContent img.helpImg {
-    margin-left: 4.5em; *
+    margin-left: 4.5em;
     margin-left: 5.25em;
-    margin-top: -20px; *
+    margin-top: -20px;
     margin-top: -22px;
 }
 div.inputGroup div.optionsContent img.inlineHelpImg {
@@ -2922,7 +2924,7 @@ div.inputGroup div.optionsContent img.inlineHelpImg {
     margin: 0px;
     padding: 0px;
     margin-top: -5px;
-    top: 5px
+    top: 5px;
 }
 label.iconLabel {
    position: relative;
@@ -2930,12 +2932,12 @@ label.iconLabel {
    padding-top: 0px;
 }
 div.inputGroup div.mainLabelContent label.iconLabel img.inlineHelpImg {
-    margin-bottom: -4px
+    margin-bottom: -4px;
 }
 /* delivery settings screens */
 html:first-child div#sendTestLeadButtonDiv {
     float: right;
-    clear: right
+    clear: right;
 }
 
 /* connections screens */
@@ -2968,7 +2970,7 @@ table.login td.content {
 /* offloaded from bidmanager & orders list */
 div.smallGrey,span.smallGrey {
     font-size: smaller;
-    color: #727272
+    color: #727272;
 }
 
 /* payment history table in single_payment.vm */
@@ -2979,7 +2981,7 @@ div.sectionHeader h2 a#paymentHistoryLink {
     float: right; 
     margin-top: -16px; 
     font-weight: normal; 
-    font-size: 80%
+    font-size: 80%;
 }
 
 /* LC-10191 */
@@ -3010,7 +3012,7 @@ div#notificationDiscountRateDiv {
     line-height: 1.5em;
     margin-left: 19px;
     margin-top: -8px;
-    padding: 10px
+    padding: 10px;
 }
 
 /* lead manager */
@@ -3035,7 +3037,7 @@ table#leadManagerTable tbody td {
 	width: 38%; 
 	margin: 0px auto; 	
 	padding: 40px 10px;
-	white-space: nowrap
+	white-space: nowrap;
 }
 .progress-indicator {
     float: left;
@@ -3059,7 +3061,7 @@ div#progressContainer {
 
 label.radioLabel {
     position: relative;
-    top: -2px
+    top: -2px;
 }
 
 /* signup */
@@ -3069,29 +3071,29 @@ div#buyerSignupImg {
     margin-left: -3px;
     padding: 0px;
     position: relative;
-    left: -3px
+    left: -3px;
 }
 
 div#buyerSignupImg img {
     margin: 0px;
-    padding: 0px
+    padding: 0px;
 }
 
 img.helpImg {
-    cursor: help
+    cursor: help;
 }
 
 div#helpContainer .ft {
     height: 2em;
-    text-align: right
+    text-align: right;
 }
 
 div#helpContainer .ft span.button-group {
-    float: right
+    float: right;
 }
 
 div#helpContainer .ft span.button-group .yui-button .first-child button {
-    outline: none !important
+    outline: none !important;
 }
 
 div#helpContainer_h .helpImg, div#helpContainer_h .warningImg {
@@ -3120,7 +3122,7 @@ img.warningImg {
     margin-left: 2px;
     position: relative;
     top: 2px;
-    cursor: pointer
+    cursor: pointer;
 }
 div#helpContainer_h .warningImg {
     top: 4px;
@@ -3129,13 +3131,13 @@ div.heading {
     float: left;
     padding: 0px;
     margin-top: 0.133em;
-    margin-bottom: 0px
+    margin-bottom: 0px;
 }
 
 div.centerHeader {
     width: auto;
     margin: 0px auto;
-    position: static
+    position: static;
 }
 
 div.centerHeader div.heading {
@@ -3146,7 +3148,7 @@ div.centerHeader div.heading {
 
 div.centerHeader img.helpImg {
     float: left;
-    clear: right
+    clear: right;
 }
 
 /* oli selector widget on order summary screen */
@@ -3174,7 +3176,7 @@ div#oliContainer div.ft {
 }
 
 div#oliContainer div.ft span.button-group {
-    margin: 10px
+    margin: 10px;
 }
 
 .yui-skin-sam .yui-dialog #oliContainer .ft .yui-resize-handle {
@@ -3189,7 +3191,7 @@ div#oliContainer div.formPage {
 /** seller screens **/ 
 /** lead channels listing screen **/
 table#leadChannelsListTable th.last {
-    width: 20%
+    width: 20%;
 }
 
 table#leadChannelsListTable td.status div {
@@ -3207,10 +3209,12 @@ table#leadChannelsListTable td.status div {
     border: none;
 }
 .blueBox #sidebar h2 {
-    line-height: 2em
+    line-height: 2em;
 }
 .blueBox #sidebar h2.first { margin-top: -6px }
+.blueBox #sidebar h2.first { margin-top: -6px; }
 .blueBox #sidebar p { margin-bottom: 0.33em }
+.blueBox #sidebar p { margin-bottom: 0.33em; }
 p.docPreview, p.getCode, .integration-support {
     background: url('/images/icons/doc_preview.gif') top left no-repeat;
     padding: 0.125em 0 0.25em 20px;
@@ -3230,9 +3234,10 @@ h3.marketingMethodsHeader {
     padding-bottom: 2px; 
     background-color: #eee; 
     margin-right: 10px;
-    margin-bottom: 4px
+    margin-bottom: 4px;
 }
 .button-group .yui-button button { font-weight: bold }
+.button-group .yui-button button { font-weight: bold; }
 div.sectionHeader h2 img.inlineHelpImg,
 div.sectionHeaderFlat h2 img.inlineHelpImg,
 div.titleDiv h3 img.inlineHelpImg {
@@ -3249,9 +3254,10 @@ div.titleDiv h3 img.inlineHelpImg {
     clear: both;
     position: relative;
     top: -10px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 #iliWizardSteps ul { list-style: none }
+#iliWizardSteps ul { list-style: none; }
 
 #iliWizardSteps li {
     display: inline;
@@ -3269,7 +3275,7 @@ div.titleDiv h3 img.inlineHelpImg {
     width: 31.33%;
 }
 #iliWizardSteps li.voice {
-    width: 48%
+    width: 48%;
 }
 #iliWizardSteps .currentStep {
     background: url('/images/common/orange_sprite.png');
@@ -3278,7 +3284,7 @@ div.titleDiv h3 img.inlineHelpImg {
 }
 div.wizard-summary {
     margin-top: 0px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 div.wizard-summary div.labelValue {
     width: 100%;
@@ -3288,39 +3294,44 @@ div.wizard-summary div.labelValue div.value {
 }
 div#dateTimeContainer div.ft,
 div#testLeadsContainer div.ft { padding-bottom: 38px }
+div#testLeadsContainer div.ft { padding-bottom: 38px; }
 div#dateTimeContainer div.ft .button-group,
 div#testLeadsContainer div.ft .button-group { float: right }
+div#testLeadsContainer div.ft .button-group { float: right; }
 div#testLeadsContainer div.bd { background-color: #fff }
+div#testLeadsContainer div.bd { background-color: #fff; }
 div#testLeadsContainer div.ft { background-color: #fff; }
 /* seller lead channel details: view/edit */
 div.sectionHeader h2.headerLeft {
-    float: left 
+    float: left;
 }
 div.sectionHeader h2.headerRight {
-    float: right
+    float: right;
 }
 div.sectionHeader h2 div a,
 div.sectionHeader h2.headerLeft a,
 div.sectionHeader h2.headerRight a {
-    text-decoration: none
+    text-decoration: none;
 }
 div.sectionHeader h2 div a:hover,
 div.sectionHeader h2.headerLeft a:hover,
 div.sectionHeader h2.headerRight a:hover {
     color: #2F466B;
-    text-decoration: underline
+    text-decoration: underline;
 }
 div.wizard-summary .label {
-    font-weight: bold
+    font-weight: bold;
 }
 div#checkList label, 
 div#checkList a { position: relative; top: -2px }
 /* seller_specified_floors.vm */
 div.bbLeft, div.bbRight {
-    margin: 8px 8px 12px 8px
+    margin: 8px 8px 12px 8px;
 }
 div.bbLeft { margin-right: 4px }
+div.bbLeft { margin-right: 4px; }
 div.bbRight { margin-left: 4px }
+div.bbRight { margin-left: 4px; }
 div.column h4 { 
     font-weight: bold;
     position: relative;
@@ -3344,7 +3355,7 @@ table.sellerBidMinimum thead tr th.mainHeader2 {
     border-right: 1px solid #fff;
     font-weight: bold;
     font-variant: small-caps;
-    background-color: #e0e1e2
+    background-color: #e0e1e2;
 }
 
 table.sellerBidMinimum thead tr th.mainHeader2 {
@@ -3357,36 +3368,38 @@ table.sellerBidMinimum thead tr th.bidGridTop {
     padding: 0.125em;
     padding-left: 12px;
     font-size: 95%;
-    background-color: #e0e1e2
+    background-color: #e0e1e2;
 }
 table.sellerBidMinimum td.price.hasValue input {
-    background-color: #D1E7A2
+    background-color: #D1E7A2;
 }
 table.sellerBidMinimum tr.odd {
     background-color: #F6F6F6;
 }
 table.sellerBidMinimum tr.even { background-color: #FBFBFB }
+table.sellerBidMinimum tr.even { background-color: #FBFBFB; }
 table.sellerBidMinimum td.bidGridLeft {
     padding-left: 6px;
 }
 /* connections invitation screen */
 .blueBox h1#MainTitle { text-align: center }
+.blueBox h1#MainTitle { text-align: center; }
 .blueBox h1#MainTitle div.subTitle {
     font-weight: normal;
     font-size: 95%;
-    color: #000
+    color: #000;
 }
 .blueBox h2, .greenBox h2 { 
     padding-left: .7em;
     margin-bottom: 0.5em;
-    font-weight: bold
+    font-weight: bold;
 }
 div.pageContent p {
     margin-top: .75em;
 }
 div.pageContent h1 {
     margin-top: 0px;
-    margin-bottom:  10px
+    margin-bottom:  10px;
 }
 div.pageContent img {
     float: left;
@@ -3398,7 +3411,7 @@ div.pageContent img {
     margin: 0px auto;
     margin-bottom: 0.8em;
     width: 90%;
-    border-bottom: solid 1px #ccc
+    border-bottom: solid 1px #ccc;
 }
 /* seller home page */
 div.sellerHomeContentBoxL,
@@ -3413,24 +3426,24 @@ div.sellerHomeContentBoxR {
 }
 
 div.grid_1_1#leftInnerGrid {
-    margin-top: 10px
+    margin-top: 10px;
 }
 div.grid_1_1#leftInnerGrid div.pageContent {
-    font-size: 110%
+    font-size: 110%;
 }
 /* report list */
 div#reportListGrid {
-    margin: 0px auto
+    margin: 0px auto;
 }
 div#reportListGrid div.column {
     margin: 0px;
 }
 div#reportListGrid div.rightPad {
-    margin-right: 10px
+    margin-right: 10px;
 }
 div#reportListGrid div.reportDescription {
     font-size: 90%;
-    margin-top: 0.75em
+    margin-top: 0.75em;
 }
 div#sampleNotificationsDiv {
     margin-left: 200px;
@@ -3441,9 +3454,10 @@ span.linkSpan {
     color: #2F466B;
 }
 span.linkSpan:hover {
-    text-decoration: underline
+    text-decoration: underline;
 }
 p.space { margin: 0.25em 0px 0.75em 0px }
+p.space { margin: 0.25em 0px 0.75em 0px; }
 .operatorOnly {
     color: #CC3300 !important;
 }
@@ -3470,19 +3484,22 @@ div#helpContainer div.bd iframe table td.content {
     clear:left;
 }
 .calendarContainer .yui-calendar td.calcell a.selector {
-    color: #47545d
+    color: #47545d;
 }
 .calendarContainer .bd table.yui-calendar td.selected a.selector {
     background-color: #afc862;
-    color: #FBFBFB
+    color: #FBFBFB;
 }
 /* Prevent border-collapse:collapse from bleeding through in IE6, IE7 */
 .calendarContainer .yui-overlay-hidden table {
     *display:none;
 }
 img.calendarIcon { cursor: pointer }
+img.calendarIcon { cursor: pointer; }
 div.filter { min-width: 600px }
+div.filter { min-width: 600px; }
 span.bold button { font-weight: bold }
+span.bold button { font-weight: bold; }
 
 /* Payment Form */
 
@@ -3562,14 +3579,12 @@ div.bd ol li, div.bd ul li { padding: 0.125em 0px; }
 div.bd ol li { 
     margin-left: 0.25em;
     *margin-left: 0.675em }
-div.bd p { padding: 0.33em 0px 0.125em 0px }
 div.bd p > strong { padding-top: 0.25em; }
-div.bd p:first-child { padding-top: 0px }
 
 /* LC-12693 */
 div.f5f5f5 { 
     background-color: #F5F5F5;
-    margin-right: 0px }
+    margin-right: 0px; }
 div.f5f5f5 b.bt,div.f5f5f5 b.bt b,
 div.f5f5f5 b.bb,div.f5f5f5 b.bb b {
     height: 4px;
@@ -3578,7 +3593,7 @@ div.f5f5f5 b.bb,div.f5f5f5 b.bb b {
 /* top left corner */
 div.f5f5f5 b.bt {
     top: -2px;
-    left: -2px
+    left: -2px;
 }
 /* top right corner */
 div.f5f5f5 b.bt b {
@@ -3589,7 +3604,7 @@ div.f5f5f5 b.bt b {
 div.f5f5f5 b.bb {
     background-position: 0 -8px;
     top: 2px;
-    left: -2px
+    left: -2px;
 }
 /* bottom right corner */
 div.f5f5f5 b.bb b {
@@ -3598,11 +3613,12 @@ div.f5f5f5 b.bb b {
 }
 /* "My Settings" */
 div.section { border-bottom: solid 1px #DBDBDB }
+div.section { border-bottom: solid 1px #DBDBDB; }
 div.section.first { 
     margin-top: 0px; }
 div.section.last { 
     margin-bottom: 0px;
-    border-bottom: none }
+    border-bottom: none; }
 div.section div.header,
 div.section div.header.current {
     width: 178px;
@@ -3623,6 +3639,7 @@ div.section div.header.current.first {
     margin-top: -6px; }
 div.section div.header.current a { color: #fff; text-decoration: none }
 div.section div.invisible { display: none }
+div.section div.invisible { display: none; }
 div.section div.subsection div {
     font-size: 90%;
     padding: 0.5em 0px 0.5em 1.5em;
@@ -3636,23 +3653,30 @@ div.section div.subsection div.current.last {
     margin-bottom: 0px;
 }
 div#sideNavHeading { padding-left: 10px }
+div#sideNavHeading { padding-left: 10px; }
 .grid_580px_240px .column2 .blueBox { 
     width: 240px; 
     min-width: 240px }
+    min-width: 240px; }
 /* new report listing screen */
 .reportListWrapper { width: 960px }
+.reportListWrapper { width: 960px; }
 .reportLink, .reportLink2 { float: left; overflow: hidden }
 .reportContainer { padding-top: 10px !important }
+.reportContainer { padding-top: 10px !important; }
 .reportContainer.first { padding-top: 0px !important }
+.reportContainer.first { padding-top: 0px !important; }
 .topline { 
     margin-top: 10px; 
     padding-top: 10px; 
     border-top: solid 1px #ccc }
+    border-top: solid 1px #ccc; }
 .nDash { 
     float: left; 
     clear: right; 
     padding: 0px 4px 0px 4px;
     color: #727272 }
+    color: #727272; }
 .reportDescription { 
     float: left; 
     clear: right;
@@ -3661,9 +3685,11 @@ div#sideNavHeading { padding-left: 10px }
     font-size: 89.5%; 
     padding-top: 0.2em; 
     color: #727272 }
+    color: #727272; }
 .reportLink2 { 
     float: right; 
     margin-right: 10px }
+    margin-right: 10px; }
 /* LC-11758 item 2 */
 #friendSearchContainer {
     width:auto; }
@@ -3695,7 +3721,7 @@ div#sideNavHeading { padding-left: 10px }
 }
 #unsupportedBrowserIcon {
     float: left;
-    padding-top: 0px
+    padding-top: 0px;
 }
 #unsupportedBrowserTitle {
     float: left;
@@ -3715,6 +3741,7 @@ div#search div#searchButtonDiv,div#search div#searchButtonDiv2 {
     padding: 0;
 }
 div#search div#searchButtonDiv { margin-top: 0 }
+div#search div#searchButtonDiv { margin-top: 0; }
 
 li.expando span,li.contracto span {
     padding: 0px 80px 4px 20px;
@@ -3735,7 +3762,7 @@ li.expando span,li.contracto span {
     top: -2px;
 }
 #bidTabs ul#bidgridTabs li {
-    top: 1px
+    top: 1px;
 }
 
 #bidTabs ul#bidgridTabs li a {
@@ -3769,11 +3796,11 @@ div#filtersContainer {
 }
 
 div#bidoptions div#bids div#bidinfo {
-    margin-bottom: 0
+    margin-bottom: 0;
 }
 
 div#filters input[type="radio"] {
-    top: 0px
+    top: 0px;
 }
 
 div.titleDiv h3,div#filters div.filter h3,
@@ -3784,7 +3811,7 @@ div#settings div.titleDiv h3,div#pricing div.titleDiv h3 {
 }
 
 table.pricegrid th.mainHeader,table.pricegrid td.mainHeader {
-    padding: 1.25em 1em
+    padding: 1.25em 1em;
 }
 
 div.content div.olidetails {
@@ -3812,14 +3839,14 @@ div.subtabHeading {
 }
 
 .tabContainer .secondary {
-    width: auto
+    width: auto;
 }
 .chartDiv {
     left: -1px;
     width: 653px !important;
 }
 .parentRowClosed {
-    cursor: hand
+    cursor: hand;
 }
 
 tr.childRowOpen td {
@@ -3849,12 +3876,16 @@ ul.changeHolder li.contracto span {
 ul.changeHolder li.details {
     position: relative;
     top: -4px }
+    top: -4px; }
 #bidgroupContent span#howtoLink { left: 49.0% }
+#bidgroupContent span#howtoLink { left: 49.0%; }
 p.actionRequired { margin-top: 0em }
+p.actionRequired { margin-top: 0em; }
 /* leadstore */
 #leadStoreWrapper { width: 100%; }
 #infoDiv { margin-top: 0px; margin-bottom: 8px }
 #infoDiv .message { padding-top: 2px }
+#infoDiv .message { padding-top: 2px; }
 #infoDiv .checkoutButton { 
 	margin-top: -2px;
     padding-top: 0px;
@@ -3862,7 +3893,7 @@ p.actionRequired { margin-top: 0em }
     top: -2px;
 }
 #managerContainer p.information span {
-    padding-left: 1.5em
+    padding-left: 1.5em;
 }
 #infoDiv .information { 
 	padding-top: 0px; padding-bottom: 6px;
@@ -3871,7 +3902,7 @@ p.actionRequired { margin-top: 0em }
 	width: auto;
     left: 0px;
     margin: 0px auto;
-    padding-left:0px
+    padding-left:0px;
 }
 #leadStoreSearchFields {
     width:310px;
@@ -3880,7 +3911,9 @@ p.actionRequired { margin-top: 0em }
     margin-right:-300px;
 }
 #scheduleControls div#scheduleCaptionDiv { margin-top: 0px }
+#scheduleControls div#scheduleCaptionDiv { margin-top: 0px; }
 #scheduleControls table.trafficDrivers td label { padding-left: 0px }
+#scheduleControls table.trafficDrivers td label { padding-left: 0px; }
 #searchResultsContainer {
     width: auto;
 }
@@ -3893,17 +3926,17 @@ div.clickable label { position: static; }
 }
 #changesDiv ul.changeHolder li.details div.loopButtons {
     margin-bottom: 14px;
-    margin-right: -4px
+    margin-right: -4px;
 }
 div#orderSeriesContainer div#primaryContainer div#buttons {
-    margin-right: 3px
+    margin-right: 3px;
 }
 /* seller UI */
 p.docPreview, p.getCode, .integration-support {
-    background-position: 0px 50%
+    background-position: 0px 50%;
 }
 #steps li.affiliate {
-    width: 31.29%
+    width: 31.29%;
 }
 div#reportListGrid div.column {
     width: 32%;
@@ -3915,7 +3948,7 @@ div#reportListGrid div.column {
     padding-right: 0.5em;
 }
 #sellerSettingsContainer .titleDiv {
-    width: 98.5%
+    width: 98.5%;
 }
 #iliWizardSteps li.affiliate {
     width: 31.29%;
@@ -3970,6 +4003,7 @@ div#bidoptions {
 div#bidoptions b#bottomRight { 
     width: 900px; 
     margin-right: -2px }
+    margin-right: -2px; }
 div#bidoptions div.varWidth1 {
     width: 95%;
     margin: 0px auto;
@@ -3992,12 +4026,13 @@ div#bidoptions div#settings div.titleDiv {
 }
 div#bidoptions div#filters div.filter#timeRange div.titleDiv {
     padding-top: 10px;
-    border-top: none
+    border-top: none;
 }
 div#bidoptions div#transparency {
     margin-left: 2px;
 }
 div#bidoptions div#buttons { width: 100% }
+div#bidoptions div#buttons { width: 100%; }
 div#bidoptions div#buttons div.buttonGroup {
     padding-right: 0px;
 }
@@ -4031,11 +4066,11 @@ div.chartDiv {
 #dashTabs ul#tabsList li {
     width: 332.5px;
     float: left;
-    margin-left: 1px
+    margin-left: 1px;
 }
 #dashTabs ul#tabsList li#voice {
     margin-left: 0px;
-    clear: right
+    clear: right;
 }
 #dataDiv,#voiceDiv {
     margin-top: -2px;
@@ -4051,26 +4086,26 @@ div.roundedBox5 {
 }
 /* top right corner */
 b.bt b {
-    left: 4px
+    left: 4px;
 }
 /* bottom right corner */
 b.bb b {
-    left: 4px
+    left: 4px;
 }
 div.roundedBox2 b.bt b,div.roundedBox2 b.bb b {
-    left: 4px
+    left: 4px;
 }
 div.roundedBox3 b.bt b,div.roundedBox3 b.bb b {
-    left: 4px
+    left: 4px;
 }
 div.roundedBox4 b.bt b,div.roundedBox4 b.bb b {
-    left: 4px
+    left: 4px;
 }
 b.htop {
-    height: 12px
+    height: 12px;
 }
 b.htop b.right {
-    top: -11px
+    top: -11px;
 }
 .roundedBox div.sectionHeader h2,
 .roundedBox2 div.sectionHeader h2,
@@ -4091,7 +4126,7 @@ div.confirmationSectionHeader2 h2 {
 }
 .roundedBox3 div.sectionHeader b.htop b.center,
 .roundedBox4 div.sectionHeader b.htop b.center {
-    width: 92.5%
+    width: 92.5%;
 }
 /* blue variant */
 div.labelValue div.value div.blueBox {
@@ -4107,33 +4142,33 @@ div.labelValue div.value div.blueBox b.bb b {
     width: 990px;
 }
 #buyerHomeAlerts,#accountAlert {
-    width: auto
+    width: auto;
 }
 #successMessage b.htop {
-    height: 13px
+    height: 13px;
 }
 #successMessage b.htop b.right {
-    top: -11px
+    top: -11px;
 }
 #validationErrors b.bt b,
 #buyerHomeAlerts b.bt b,
 #accountAlert b.bt b {
-    left: 4px
+    left: 4px;
 }
 #validationErrors b.bb b,
 #buyerHomeAlerts b.bb b,
 #accountAlert b.bb b {
-    left: 4px
+    left: 4px;
 }
 #validationErrors b.htop,
 #buyerHomeAlerts b.htop,
 #accountAlert b.htop {
-    height: 13px
+    height: 13px;
 }
 #validationErrors b.htop b.right,
 #buyerHomeAlerts b.htop b.right,
 #accountAlert b.htop b.right {
-    top: -11px
+    top: -11px;
 }
 div#container ul.text li.expando span,
 div#container ul.text li.contracto span,
@@ -4146,17 +4181,20 @@ ul.changeHolder li.contracto span {
 }
 ul.changeHolder li.expando span,
 ul.changeHolder li.contracto span {
-    margin-bottom: 0px
+    margin-bottom: 0px;
 }
 ul.changeHolder li.details {
     position: relative;
     top: -6px }
+    top: -6px; }
 ul.changeHolder li.details div.target div.titleDiv h3 {
     margin: 0px auto;
 }
 /* leadstore */
 #infoDiv { padding-top: 4px }
+#infoDiv { padding-top: 4px; }
 #infoDiv .checkoutButton { padding-top: 10px }
+#infoDiv .checkoutButton { padding-top: 10px; }
 #leadStoreSearch {
     padding-left: 310px;
     position: relative;
@@ -4173,6 +4211,7 @@ ul.changeHolder li.details div.target div.titleDiv h3 {
 }
 /* "Search Options" */
 #Footer { clear: both }
+#Footer { clear: both; }
 div#orderSeriesContainer div.confirmationSectionHeader b.htop b.center {
    width: 98.2%;
 }
@@ -4184,16 +4223,16 @@ div#orderSeriesContainer div.tcContainer .content {
     margin-right: 0px;
 }
 div#orderSeriesContainer div.roundedBox {
-    width: auto
+    width: auto;
 }
 #changesDiv ul.changeHolder li.expando {
     width: auto;
 }
 #changesDiv ul.changeHolder li.details {
-    width: 698px
+    width: 698px;
 }
 #changesDiv ul.changeHolder li.details div.loopButtons {
-    margin-bottom: 14px
+    margin-bottom: 14px;
 }
 div#orderSeriesContainer div#primaryContainer div#buttons {
     margin-right: -2px;
@@ -4204,7 +4243,7 @@ div#orderSeriesContainer div#primaryContainer .content {
     width: auto;
 }
 div#orderSeriesContainer div#primaryContainer .tcContainer {
-    width: 98%
+    width: 98%;
 }
 div#orderSeriesContainer div#primaryContainer div.confirmationSectionHeader .ordersActions {
     margin-top: 0px;
@@ -4212,7 +4251,7 @@ div#orderSeriesContainer div#primaryContainer div.confirmationSectionHeader .ord
 }
 /* lead channel wizard */
 #steps li.affiliate {
-    width: 31.29%
+    width: 31.29%;
 }
 div.roundedBox,
 div.roundedBox2,
@@ -4224,6 +4263,7 @@ div.roundedBox5 {
 div.roundedBox { background: transparent; margin-right: -1px }
 
 #helpContainer .roundedBox { background-color: #fff }
+#helpContainer .roundedBox { background-color: #fff; }
 div#orderSeriesContainer div#primaryContainer .roundedBox {
     padding-right: 0;
     width: 98.5%;
@@ -4243,17 +4283,19 @@ div#orderSeriesContainer div#primaryContainer div.roundedBox b.bt b {
 div#orderSeriesContainer div#primaryContainer div.roundedBox b.bt {
     background: url('/images/common/grey-header-corners.gif') no-repeat;
     top: -2px;
-    left: -2px
+    left: -2px;
 }
 div#orderSeriesContainer div#primaryContainer div.confirmationSectionHeader b.htop, 
 div#orderSeriesContainer div#primaryContainer div.confirmationSectionHeader b.htop b.right {
-    background-image: none
+    background-image: none;
 }
 #changesDiv ul.changeHolder { width: 726px }
+#changesDiv ul.changeHolder { width: 726px; }
 #changesDiv ul.changeHolder li.details { width: 690px }
+#changesDiv ul.changeHolder li.details { width: 690px; }
 p.docPreview, p.getCode, .integration-support {
     background-position: 0px 50%;
-    margin-bottom: 0px
+    margin-bottom: 0px;
 }
 /* seller home page */
 div.sellerHomeContentBoxL,
@@ -4291,6 +4333,7 @@ div#oliContainer div.ft {
     border-right: solid 2px #000;
 }
 div#oliContainer div.bd { padding-right: 8px }
+div#oliContainer div.bd { padding-right: 8px; }
 /* "My Settings" */
 div#sideNavHeading { position: relative; margin-top: 10px }
 
@@ -4371,7 +4414,7 @@ div#sideNavHeading { position: relative; margin-top: 10px }
 
 .grid_200px_n {
 	/* padding-left:200px; */
-	padding-left: 212px
+	padding-left: 212px;
 }
 
 .grid_200px_n .secondary {
@@ -4444,7 +4487,7 @@ div#sideNavHeading { position: relative; margin-top: 10px }
 
 
 .grid_n_220px {
-    padding-right: 220px
+    padding-right: 220px;
 }
 .grid_n_220px .secondary {
     width:220px;
@@ -4586,7 +4629,7 @@ div#sideNavHeading { position: relative; margin-top: 10px }
     padding-left:220px;
 }
 .grid_200px_n .secondary {
-    left: 22px
+    left: 22px;
 }
 
 /* =========================================================
