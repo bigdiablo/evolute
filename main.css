@@ -1605,6 +1605,10 @@ body.login {
     background-color: var(--bg-light);
 }
 
+.dashboard #Main:has(#Footer) {
+    margin-left: 0;
+}
+
 .dashboard #MainContent {
     display: flex;
     align-items: stretch;
