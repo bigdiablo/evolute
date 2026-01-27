@@ -9033,110 +9033,123 @@ form[name="ticketLogForm"] .roundedBox .hdr h2 {
 }
 
 form[name="ticketLogForm"] .formSectionContent {
-    padding: 20px;
+    padding: 20px !important;
 }
 
 form[name="ticketLogForm"] .inputGroup {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 16px;
+    display: block !important;
+    margin-bottom: 16px !important;
+    padding: 0 !important;
+    float: none !important;
+    width: 100% !important;
 }
 
 form[name="ticketLogForm"] .inputGroup .mainLabel {
-    width: 140px;
-    min-width: 140px;
-    flex-shrink: 0;
-    padding: 8px 16px 8px 0;
-    text-align: right;
+    display: block !important;
+    width: 100% !important;
+    padding: 0 0 6px 0 !important;
+    text-align: left !important;
+    float: none !important;
+}
+
+form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent {
+    display: block !important;
 }
 
 form[name="ticketLogForm"] .inputGroup .mainLabel label {
-    font-size: 13px;
-    font-weight: 500;
-    color: #6b7280;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    color: #6b7280 !important;
 }
 
 form[name="ticketLogForm"] .inputGroup .mainLabel .requiredMarker {
-    color: #dc2626;
-    margin-left: 2px;
+    color: #dc2626 !important;
+    margin-left: 2px !important;
 }
 
 form[name="ticketLogForm"] .inputGroup .options {
-    flex: 1;
+    display: block !important;
+    width: 100% !important;
+    float: none !important;
+    padding: 0 !important;
 }
 
 form[name="ticketLogForm"] .inputGroup .options .optionsContent {
-    font-size: 14px;
-    color: #09090b;
-    padding: 8px 0;
+    display: block !important;
+    font-size: 14px !important;
+    color: #09090b !important;
 }
 
 form[name="ticketLogForm"] .inputGroup .options input.textInput {
-    width: 100%;
-    max-width: 300px;
-    padding: 8px 12px;
-    font-size: 14px;
-    font-family: inherit;
-    border: 1px solid #e5e7eb;
-    border-radius: 6px;
-    background: #fff;
-    color: #09090b;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 10px 12px !important;
+    font-size: 14px !important;
+    font-family: inherit !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 6px !important;
+    background: #fff !important;
+    color: #09090b !important;
+    box-sizing: border-box !important;
 }
 
 form[name="ticketLogForm"] .inputGroup .options input.textInput:focus {
-    outline: none;
-    border-color: #0060a7;
-    box-shadow: 0 0 0 2px rgba(0, 96, 167, 0.15);
+    outline: none !important;
+    border-color: #0060a7 !important;
+    box-shadow: 0 0 0 2px rgba(0, 96, 167, 0.15) !important;
 }
 
 form[name="ticketLogForm"] .inputGroup .options textarea {
-    width: 100%;
-    max-width: 300px;
-    min-height: 100px;
-    padding: 8px 12px;
-    font-size: 14px;
-    font-family: inherit;
-    border: 1px solid #e5e7eb;
-    border-radius: 6px;
-    background: #fff;
-    color: #09090b;
-    resize: vertical;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 120px !important;
+    padding: 10px 12px !important;
+    font-size: 14px !important;
+    font-family: inherit !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 6px !important;
+    background: #fff !important;
+    color: #09090b !important;
+    resize: vertical !important;
+    box-sizing: border-box !important;
 }
 
 form[name="ticketLogForm"] .inputGroup .options textarea:focus {
-    outline: none;
-    border-color: #0060a7;
-    box-shadow: 0 0 0 2px rgba(0, 96, 167, 0.15);
+    outline: none !important;
+    border-color: #0060a7 !important;
+    box-shadow: 0 0 0 2px rgba(0, 96, 167, 0.15) !important;
 }
 
 form[name="ticketLogForm"] .buttonGroup {
-    display: flex;
-    justify-content: flex-end;
-    padding: 16px 0 0;
-    margin-top: 8px;
-    border-top: 1px solid #e5e7eb;
+    padding: 16px 0 0 !important;
+    margin-top: 8px !important;
+    border-top: 1px solid #e5e7eb !important;
 }
 
 form[name="ticketLogForm"] .buttonGroup .yui-button,
 form[name="ticketLogForm"] .buttonGroup .yui-button .first-child {
-    background: none;
-    border: none;
-    margin: 0;
-    padding: 0;
+    display: block !important;
+    background: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
 }
 
 form[name="ticketLogForm"] .buttonGroup .yui-button button {
-    padding: 10px 24px;
-    font-size: 14px;
-    font-weight: 600;
-    font-family: inherit;
-    color: #fff;
-    background: #004279;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+    width: 100% !important;
+    padding: 12px 24px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    font-family: inherit !important;
+    color: #fff !important;
+    background: #004279 !important;
+    border: none !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
 }
 
 form[name="ticketLogForm"] .buttonGroup .yui-button button:hover {
-    background: #0060a7;
+    background: #0060a7 !important;
 }
+

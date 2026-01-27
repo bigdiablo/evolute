@@ -609,14 +609,6 @@ div#SubNavigation.subtabs ul {
     text-align: center;
 }
 
-#NestedFormPage div.mainLabel {
-    width: 32%;
-}
-
-#NestedFormPage div.options {
-    width: 68%;
-    padding: 0px;
-}
 
 #NestedFormPage div.options input,#NestedFormPage div.options select {
     font-size: 97%;
