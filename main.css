@@ -3181,6 +3181,28 @@ div.grid_1_1#leftInnerGrid {
     white-space: nowrap;
 }
 
+/* Wholesale orders table - column widths */
+.dashboard .ordersTable thead tr.colheaders th:nth-child(1) {
+    width: 70px !important;
+}
+.dashboard .ordersTable thead tr.colheaders th:nth-child(2) {
+    width: 150px !important;
+}
+.dashboard .ordersTable thead tr.colheaders th:nth-child(3) {
+    width: 140px !important;
+}
+.dashboard .ordersTable thead tr.colheaders th:nth-child(4) {
+    width: auto !important;
+    min-width: 250px !important;
+}
+.dashboard .ordersTable tbody td[style*="width:10px"] {
+    width: 140px !important;
+    min-width: 140px !important;
+}
+.dashboard .ordersTable tbody td .oliDiv .left a {
+    white-space: normal !important;
+}
+
 .dashboard .ordersTable thead tr.colheaders th a {
     color: var(--color-gray);
     text-decoration: none;
@@ -6519,6 +6541,7 @@ div.grid_1_1#leftInnerGrid {
     color: var(--color-primary) !important;
     text-decoration: none !important;
     font-size: 13px !important;
+    white-space: nowrap;
 }
 
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv .left a:hover {
