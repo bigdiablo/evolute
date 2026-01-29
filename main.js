@@ -5,8 +5,20 @@
         close: '<svg class="close" viewBox="0 0 24 24"><path d="M6 6l12 12M6 18L18 6"/></svg>'
     };
 
+    function cleanup() {
+        var selectors = ['.br', '.tr', '.tc', '#HeaderContent .clear', '#HeaderContent div[style*="clear"]'];
+        for (var s = 0; s < selectors.length; s++) {
+            var els = document.querySelectorAll(selectors[s]);
+            for (var i = els.length - 1; i >= 0; i--) {
+                els[i].parentNode.removeChild(els[i]);
+            }
+        }
+    }
+
     function init() {
         if (!document.body.classList.contains('dashboard')) return;
+
+        cleanup();
 
         var header = document.getElementById('HeaderContent');
         if (!header) return;

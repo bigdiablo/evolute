@@ -9226,19 +9226,24 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button:hover {
     .dashboard #toolbar *::before,
     .dashboard #Navigation *,
     .dashboard #Navigation *::after,
-    .dashboard #Navigation *::before {
+    .dashboard #Navigation *::before,
+    .dashboard #SubNavigation *,
+    .dashboard #SubNavigation *::after,
+    .dashboard #SubNavigation *::before {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
 
-    .dashboard #MainNavigation.tabs ul li a {
+    .dashboard #MainNavigation.tabs ul li a,
+    .dashboard #SubNavigation.subtabs ul li a {
         padding: 6px 0 !important;
     }
 
     .dashboard #MainNavigation.tabs ul li.selected a,
     .dashboard #MainNavigation.tabs ul li.current a,
     .dashboard #links a:hover,
-    .dashboard #MainNavigation.tabs ul li a:hover {
+    .dashboard #MainNavigation.tabs ul li a:hover,
+    .dashboard #SubNavigation.subtabs ul li a:hover {
         background-color: transparent !important;
     }
 
@@ -9248,7 +9253,8 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button:hover {
     }
 
     .dashboard #MainNavigation.tabs ul li.selected a::after,
-    .dashboard #MainNavigation.tabs ul li.current a::after {
+    .dashboard #MainNavigation.tabs ul li.current a::after,
+    .dashboard #SubNavigation.subtabs ul li.current a::after {
         content: '';
         display: flex;
         margin-left: auto;
@@ -9261,6 +9267,11 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button:hover {
         mask-repeat: no-repeat;
         -webkit-mask-size: contain;
         mask-size: contain;
+    }
+
+    .dashboard #SubNavigation.subtabs ul li.current a {
+        color: var(--color-primary) !important;
+        background-color: transparent !important;
     }
 }
 
