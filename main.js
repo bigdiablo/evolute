@@ -6,13 +6,18 @@
     };
 
     function init() {
+        if (!document.body.classList.contains('dashboard')) return;
+
         var header = document.getElementById('HeaderContent');
         if (!header) return;
+
+        var parent = header.parentNode;
+        if (!parent || parent.id !== 'Header') return;
 
         var el = document.createElement('div');
         el.id = 'mobilemenu';
         el.innerHTML = '<div class="logo">' + svg.logo + '</div><button id="mobilebutton">' + svg.menu + svg.close + '</button>';
-        header.parentNode.insertBefore(el, header.nextSibling);
+        parent.insertBefore(el, header);
 
         document.getElementById('mobilebutton').onclick = function() {
             this.classList.toggle('open');
