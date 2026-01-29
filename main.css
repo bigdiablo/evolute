@@ -9203,6 +9203,7 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button:hover {
         overflow-y: scroll;
         height: calc(100% - 60px);
         padding: 20px 0;
+        background-color: var(--color-white);
         transition: transform .3s ease;
         transform: translateX(100%);
     }
@@ -9235,12 +9236,19 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button:hover {
     }
 
     .dashboard #MainNavigation.tabs ul li.selected a,
+    .dashboard #MainNavigation.tabs ul li.current a,
     .dashboard #links a:hover,
     .dashboard #MainNavigation.tabs ul li a:hover {
         background-color: transparent !important;
     }
 
-    .dashboard #MainNavigation.tabs ul li.selected a::after {
+    .dashboard #MainNavigation.tabs ul li.selected a,
+    .dashboard #MainNavigation.tabs ul li.current a {
+        color: var(--color-primary) !important;
+    }
+
+    .dashboard #MainNavigation.tabs ul li.selected a::after,
+    .dashboard #MainNavigation.tabs ul li.current a::after {
         content: '';
         display: flex;
         margin-left: auto;
