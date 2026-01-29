@@ -125,6 +125,8 @@ body.login {
 .login #Main {
     display: flex;
     width: 400px;
+    overflow: hidden;
+    border-radius: 0 0 12px 12px;
     background: var(--color-white) !important;
 }
 
@@ -4485,7 +4487,7 @@ div.grid_1_1#leftInnerGrid {
 @media (max-width: 1024px) {
     .dashboard #Main {
         margin-left: 0;
-        margin-top: 100px;
+        margin-top: 60px;
     }
 
     .dashboard .grid_200px_n {
@@ -9273,5 +9275,83 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button:hover {
         color: var(--color-primary) !important;
         background-color: transparent !important;
     }
+}
+
+/* Datepicker / Calendar fixes */
+.yui-calcontainer {
+    position: absolute !important;
+    z-index: 9999 !important;
+    max-width: 300px !important;
+    background: #fff !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    padding: 12px !important;
+}
+
+.yui-calendar {
+    width: 100% !important;
+    font-size: 13px !important;
+}
+
+.yui-calendar td.calcell {
+    padding: 6px !important;
+    width: 36px !important;
+    height: 36px !important;
+}
+
+.yui-calcontainer .calclose,
+.container-close {
+    position: absolute !important;
+    top: 8px !important;
+    right: 8px !important;
+    width: 24px !important;
+    height: 24px !important;
+    cursor: pointer !important;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Cpath d='M18 6L6 18M6 6l12 12'/%3E%3C/svg%3E") center/16px no-repeat !important;
+    text-indent: -9999px !important;
+}
+
+/* Toggle view span fix */
+#toggleViewSpan {
+    display: flex !important;
+    gap: 4px !important;
+    white-space: nowrap !important;
+}
+
+#toggleShowTabs,
+#toggleSinglePage {
+    display: inline-block !important;
+}
+
+/* Select box width fixes */
+.dashboard .settings select,
+.dashboard #bidoptions select,
+.dashboard .channels select {
+    max-width: 200px !important;
+    width: auto !important;
+    min-width: 100px !important;
+}
+
+/* Input box fixes */
+.dashboard .settings input.textInput,
+.dashboard #bidoptions input.textInput {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Order form specific fixes */
+.dashboard #bidoptions .inputGroup .options {
+    overflow: visible !important;
+}
+
+.dashboard #bidoptions .optionsContent {
+    overflow: visible !important;
+}
+
+/* Calendar icon positioning */
+img.calendarIcon {
+    vertical-align: middle !important;
+    cursor: pointer !important;
 }
 
