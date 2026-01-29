@@ -15,10 +15,7 @@ ul {
 }
 
 /* Legacy utility classes */
-.none {
-    display: none;
-}
-
+.none,
 .hidden {
     display: none;
 }
@@ -81,16 +78,14 @@ ul {
 #TaskIndicators ul li {
     float: left;
     margin: 0px 0 0px 15px;
-    padding: 0 0px 0px 0px;
+    padding: 0;
     color: #AAA;
-    border-right: 0px solid #CCC;
     font-size: 123.1%;
 }
 
 #TaskIndicators ul li.current {
     color: #444;
     border-bottom: 2px solid #2176CB;
-    border-top: 0px solid #2176CB;
 }
 
 #TaskIndicators ul li.current span {
@@ -206,10 +201,6 @@ ul {
     padding-right: 10px;
 }
 
-strong {
-    font-weight: bold;
-}
-
 #HeaderContent {
     min-width: 940px;
 }
@@ -271,7 +262,6 @@ strong {
     vertical-align: middle;
     width: auto;
     padding: 10px 0px 14px 0px;
-    /*padding-bottom: 4px*/
 }
 
 .space {
@@ -304,7 +294,6 @@ strong {
 
 .inlineSideBar,
 .inlineSideBar .sideBarGroup {
-    font-size: 95% !important;
     font-size: 90% !important;
 }
 
@@ -454,12 +443,6 @@ div.roundedBox3 div.inlineSideBar2 {
     z-index: 6;
 }
 
-/* Opera only. */
-html:first-child div#MainNavigation.tabs ul li {
-    position: relative;
-    /* top: -35px; */
-}
-
 #MainNavigation.tabs ul li {
     position: relative;
     display: block;
@@ -502,7 +485,6 @@ html:first-child div#MainNavigation.tabs ul li {
 #MainNavigation.tabs ul li a:hover .selected,
 #MainNavigation.tabs ul li a:active .selected {
     position: relative;
-    top: -0px;
     background: url('/images/navigation/top-middle-on.gif') repeat-x -2px 0px;
     padding: 10px 16px;
     color: #9DC61F;
@@ -707,7 +689,6 @@ table.gridTable td {
 }
 
 table.gridTable tr.even td {
-    background: transparent;
     background-color: #FBFBFB;
 }
 
@@ -717,7 +698,6 @@ table.gridTable tbody th {
 }
 
 table.gridTable tbody tr.even th {
-    background: transparent;
     background-color: #FBFBFB;
 }
 
@@ -727,7 +707,6 @@ table.leadListTable {
     margin-bottom: 1em;
     border-collapse: separate;
     border: 1px solid #CCC;
-    /* border-bottom:none; */
     width: 100%;
 }
 
@@ -741,7 +720,6 @@ table.nestedListTable th,
 table.leadListTable th {
     padding: 0.2em 1em 0.2em 1em;
     background-color: #EEE;
-    /* border-color: #FFF #CCC #999 #FFF */
     border-color: #EEE #CCC #999 #EEE;
     border-style: solid;
     border-width: 1px;
@@ -752,10 +730,6 @@ table.leadListTable th {
 div.center,
 .center {
     text-align: center;
-}
-
-.nowrap {
-    white-space: nowrap
 }
 
 .nowrap {
@@ -846,7 +820,6 @@ table.listTable tr.even td,
 table.nestedListTable tr.even td,
 table.nestedListTable tr.even th.tableSectionHeader,
 table.leadListTable tr.even td {
-    background: transparent;
     background-color: #FBFBFB;
 }
 
@@ -904,15 +877,8 @@ table.nestedListTable tr.sectionStart th.tableSectionHeaderAlternate {
 }
 
 table.nestedListTable tr.sectionStart th.tableSectionHeaderAlternate {
-    /* background-color: #D1E7A2 */
     background-color: #fefdfa;
 }
-
-/*
-table.ordersTable {
-    min-width: 1100px;
-}
-*/
 
 span.actionRequired {
     color: #B65426;
@@ -1105,7 +1071,6 @@ table.cBoxes input {
 }
 
 #container ul.text li div {
-    /*border-bottom: 1px solid #CCC; */
     font-size: 94%;
     padding: 0.125em 0.25em;
     cursor: pointer;
@@ -1262,12 +1227,10 @@ div#bottomCartButton div#bottomButton {
     float: left;
     clear: right;
     margin: 0px auto;
-    margin-top: 10px;
     margin-top: 0px;
 }
 
 #infoDiv #instructionsContainer p.instructions {
-    margin-top: 6px;
     margin-top: 0px;
 }
 
@@ -1412,22 +1375,18 @@ span.groupTitle {
 }
 
 div.titleColumn {
-    width: 60%;
     width: 54%;
     float: left;
 }
 
 div.buttonColumn {
-    width: 38%;
     width: 44%;
     float: right;
-    padding-top: 1px;
     padding-top: 0px;
 }
 
 div.buttonColumn label {
     position: relative;
-    top: -3px;
     top: -1px;
 }
 
@@ -1454,14 +1413,6 @@ span#saveSuccess {
     color: #E0E1E2;
     background-repeat: no-repeat;
     background-position: 2px 0px;
-}
-
-#storeSearchResults {
-    /* margin: 0px;
-    width: 100%; */
-    /*padding: 2px;
-    border: 1px solid #ccc */
-
 }
 
 #filterSourceBidGroup {
@@ -1669,16 +1620,9 @@ div.summaryContainer div.titleDiv h3 {
     background-color: #F0F0F1;
     border-top: solid 1px #CCC;
     margin: 0 1px 4px 1px;
-    /* width: 99.7%; */
     font-size: 110%;
 }
 
-/* div#relationship.summaryContainer div.titleDiv h3,
-div#otherSettings.summaryContainer div.titleDiv h3 {
-    width: 97.9%;
-    margin: 0 3px 4px 12px;
-    position: static;
-}*/
 div#filters div#exclusivity div {
     float: left;
 }
@@ -1849,15 +1793,6 @@ div#bidoptions div#transparency h4 div.estimate {
     padding: 0.33em;
 }
 
-/* Opera */
-html:first-child div#bidoptions div#transparency h2 span#progress-indicator {
-    top: 0px;
-}
-
-html:first-child div#bidoptions div#transparency h4 div.estimate {
-    top: -4px;
-}
-
 div.content div.olidetails,
 div.option div.olidetails {
     float: left;
@@ -1973,12 +1908,10 @@ div.clickable:hover {
 .deactivate-button button,
 .login-button button {
     color: #fff !important;
-    text-outline: #ccc 1px 1px;
 }
 
 .login-button a {
     color: #fff !important;
-    text-outline: #ccc 1px 1px;
 }
 
 .deactivate-button:hover {
@@ -2033,54 +1966,6 @@ span.radioButtonExtra {
     cursor: default;
 }
 
-/* "actions" links for listing screens - unused
-ul.actionsWrapper {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-ul.actionsWrapper li.options {
-    float: left;
-    postion: relative;
-    width: 10em;
-}
-
-ul.actionsWrapper li.options ul.actionsList {
-    display: none;
-    position: absolute;
-    top: 1em;
-    left: 0;
-    z-index: 10000;
-}
-
-ul.actionsWrapper>li.options>ul.actionsList {
-    top: auto;
-    left: auto;
-    padding: 0px 0px;
-    border-top: solid 1px #ccc;
-}
-
-ul.actionsWrapper li.options:hover ul.actionsList {
-    display: block;
-}
-
-ul.actionsWrapper li.options ul.actionsList li.action {
-    background-color: #FBFBFB;
-    border: solid 1px #ccc;
-    border-top: none;
-}
-
-ul.actionsWrapper li.options ul.actionsList li.action:hover {
-    background: url('/images/right.gif') 6px 50% no-repeat;
-    background-color: #eee;
-}
-
-ul.actionsWrapper li.options ul.actionsList li.action a {
-    display: block;
-    padding: 2px 20px;
-}
-*/
 /**** Selectors for buyer dashboard ****/
 #buyerHomeWrapper {
     width: 100%;
@@ -2140,8 +2025,6 @@ ul.actionsWrapper li.options ul.actionsList li.action a {
 
 #dashTabs ul#tabsList {
     list-style: none;
-    /* margin-left: 10px; */
-    /* width: 100%; */
     width: 679px;
     padding: 0px;
     position: relative;
@@ -2193,13 +2076,6 @@ ul.actionsWrapper li.options ul.actionsList li.action a {
 
 #voiceDiv {
     margin-top: -1px;
-}
-
-#dataDiv,
-#voiceDiv {
-    /* width: 99.5%; */
-    /* border: solid 1px #ccc; */
-    /* padding: 1px; */
 }
 
 .callOutWrapper {
@@ -2536,11 +2412,6 @@ div.sellerHomeContentBoxR div.roundedBox {
     min-width: 100px;
 }
 
-div.roundedBox2 {
-    /* min-width: 1100px; */
-
-}
-
 div.roundedBox4 {
     width: auto;
     min-width: 100px;
@@ -2697,9 +2568,7 @@ b.htop b.center {
     position: relative;
     display: block;
     height: 16px;
-    _height: 11px;
     left: 10px;
-    /* background-color: #f0f0f1; */
     background-color: #e0e1e2;
 }
 
@@ -2775,25 +2644,6 @@ div.confirmationSectionHeader b.htop b.right {
     width: 91%;
     overflow: hidden;
 }
-
-/* Opera */
-html:first-child div.roundedBox div.sectionHeader b.htop b.center {
-    width: 97%;
-}
-
-html:first-child div.roundedBox4 div.sectionHeader b.htop b.center {
-    width: 91.5%;
-}
-
-/*
-div.boxContent,div.boxContentTrim {
-    padding: 0px 10px;
-}
-
-div.boxContent p {
-    font-size: 90%;
-}
-*/
 
 /****************** Success messages/Validation errors *********************/
 #successMessage h3 {
@@ -3015,8 +2865,6 @@ div.labelValue div.value {
     white-space: normal;
     padding: 0 0 0 1.33em;
     margin: 0;
-    /* WATCH THIS!! */
-    /*width: 55%;*/
     position: static;
     text-align: left;
     line-height: 1.215em;
@@ -3033,11 +2881,6 @@ div.labelValue div.valueContent {
     width: auto;
     padding-top: 0;
     padding-right: 0.25em;
-}
-
-img.helpImg,
-img.inlineHelpImg {
-    cursor: help
 }
 
 img.helpImg,
@@ -3078,20 +2921,6 @@ label.iconLabel {
 
 div.inputGroup div.mainLabelContent label.iconLabel img.inlineHelpImg {
     margin-bottom: -4px;
-}
-
-/* delivery settings screens */
-html:first-child div#sendTestLeadButtonDiv {
-    float: right;
-    clear: right;
-}
-
-/* connections screens */
-table.nestedListTable thead tr.colheaders th div#convRateDiv,
-table.nestedListTable thead tr.colheaders th div.helpDiv {
-    /*margin-top: 0.7em;
-    float: left;*/
-
 }
 
 table.nestedListTable thead tr.colheaders th div#helpDiv {
@@ -3326,10 +3155,6 @@ div#oliContainer div.bd {
     background-color: #fff;
 }
 
-div#oliContainer_c div.underlay {
-    /* *width: auto; - IE hack removed */
-}
-
 div#oliContainer div.ft {
     height: 2.75em;
 }
@@ -3370,10 +3195,6 @@ table#leadChannelsListTable td.status div {
 
 .blueBox #sidebar h2 {
     line-height: 2em;
-}
-
-.blueBox #sidebar h2.first {
-    margin-top: -6px
 }
 
 .blueBox #sidebar h2.first {
@@ -3457,7 +3278,6 @@ div.titleDiv h3 img.inlineHelpImg {
     padding: 0.5em 0.25em;
     margin: 0px 2px;
     background: #ccc;
-    /* margin-right: 2px; */
     font-size: 90%;
     font-weight: bold;
     border: 1px solid #999;
@@ -3784,9 +3604,6 @@ div#helpContainer div.bd iframe table td.content {
 }
 
 /* Prevent border-collapse:collapse from bleeding through in IE6, IE7 */
-.calendarContainer .yui-overlay-hidden table {
-    *display: none;
-}
 
 img.calendarIcon {
     cursor: pointer
@@ -3905,7 +3722,6 @@ div.bd ul li {
 
 div.bd ol li {
     margin-left: 0.25em;
-    *margin-left: 0.675em
 }
 
 div.bd p>strong {
@@ -4032,9 +3848,6 @@ div#sideNavHeading {
     min-width: 240px
 }
 
-min-width: 240px;
-}
-
 /* new report listing screen */
 .reportListWrapper {
     width: 960px
@@ -4072,17 +3885,11 @@ min-width: 240px;
     border-top: solid 1px #ccc
 }
 
-border-top: solid 1px #ccc;
-}
-
 .nDash {
     float: left;
     clear: right;
     padding: 0px 4px 0px 4px;
     color: #727272
-}
-
-color: #727272;
 }
 
 .reportDescription {
@@ -4095,15 +3902,9 @@ color: #727272;
     color: #727272
 }
 
-color: #727272;
-}
-
 .reportLink2 {
     float: right;
     margin-right: 10px
-}
-
-margin-right: 10px;
 }
 
 /* LC-11758 item 2 */
@@ -4336,9 +4137,6 @@ ul.changeHolder li.details {
     top: -4px
 }
 
-top: -4px;
-}
-
 #bidgroupContent span#howtoLink {
     left: 49.0%
 }
@@ -4551,9 +4349,6 @@ div#bidoptions {
 div#bidoptions b#bottomRight {
     width: 900px;
     margin-right: -2px
-}
-
-margin-right: -2px;
 }
 
 div#bidoptions div.varWidth1 {
@@ -4794,9 +4589,6 @@ ul.changeHolder li.details {
     top: -6px
 }
 
-top: -6px;
-}
-
 ul.changeHolder li.details div.target div.titleDiv h3 {
     margin: 0px auto;
 }
@@ -4998,36 +4790,6 @@ div#oliContainer {
 }
 
 /* =========================================================
-   lp-IE8.css
-   ========================================================= */
-/* lp-IE8.css,v 1.5 2009/12/09 22:58:05 curtis.taylor */
-img#securityCode_img {
-    position: relative;
-    top: 19px;
-}
-
-div#oliContainer div.hd,
-div#oliContainer div.bd,
-div#oliContainer div.ft {
-    border-left: solid 2px #AAA;
-    border-right: solid 2px #000;
-}
-
-div#oliContainer div.bd {
-    padding-right: 8px
-}
-
-div#oliContainer div.bd {
-    padding-right: 8px;
-}
-
-/* "My Settings" */
-div#sideNavHeading {
-    position: relative;
-    margin-top: 10px
-}
-
-/* =========================================================
    grids.css
    ========================================================= */
 .column,
@@ -5106,7 +4868,6 @@ div#sideNavHeading {
 }
 
 .grid_200px_n {
-    /* padding-left:200px; */
     padding-left: 212px;
 }
 
@@ -5322,24 +5083,6 @@ div#sideNavHeading {
 }
 
 /* =========================================================
-   grids-ie.css
-   ========================================================= */
-.grid_50px_n .secondary,
-.grid_185px_n .secondary,
-.grid_200px_n .secondary,
-.grid_240px_n .secondary {
-    left: 0px;
-}
-
-.grid_200px_n {
-    padding-left: 220px;
-}
-
-.grid_200px_n .secondary {
-    left: 22px;
-}
-
-/* =========================================================
    yui-button.css
    (js/yui/v2/assets/skins/sam/button.css)
    ========================================================= */
@@ -5350,27 +5093,23 @@ http://developer.yahoo.com/yui/license.html
 version: 2.9.0
 */
 .yui-button {
-    display: -moz-inline-box;
     display: inline-block;
     vertical-align: text-bottom;
 }
 
 .yui-button .first-child {
     display: block;
-    *display: inline-block;
 }
 
 .yui-button button,
 .yui-button a {
     display: block;
-    *display: inline-block;
     border: none;
     margin: 0;
 }
 
 .yui-button button {
     background-color: transparent;
-    *overflow: visible;
     cursor: pointer;
 }
 
@@ -5390,8 +5129,7 @@ version: 2.9.0
     border-width: 0 1px;
     border-style: solid;
     border-color: #808080;
-    margin: 0 -1px;
-    _margin: 0;
+    margin: 0;
 }
 
 .yui-skin-sam .yui-button button,
@@ -5400,15 +5138,8 @@ version: 2.9.0
     padding: 0 10px;
     font-size: 93%;
     line-height: 2;
-    *line-height: 1.7;
-    min-height: 2em;
-    *min-height: auto;
+    min-height: auto;
     color: #000;
-}
-
-.yui-skin-sam .yui-button a {
-    *line-height: 1.875;
-    *padding-bottom: 1px;
 }
 
 .yui-skin-sam .yui-split-button button,
@@ -5553,16 +5284,6 @@ version: 2.9.0
     overflow: auto
 }
 
-.masked select,
-.drag select,
-.hide-select select {
-    _visibility: hidden
-}
-
-.yui-panel-container select {
-    _visibility: inherit
-}
-
 .hide-scrollbars,
 .hide-scrollbars * {
     overflow: hidden
@@ -5616,13 +5337,11 @@ version: 2.9.0
 
 .yui-skin-sam .mask {
     background-color: #000;
-    opacity: .25;
-    filter: alpha(opacity=25)
+    opacity: .25
 }
 
 .yui-skin-sam .yui-panel-container {
-    padding: 0 1px;
-    *padding: 2px
+    padding: 0;
 }
 
 .yui-skin-sam .yui-panel {
@@ -5633,9 +5352,6 @@ version: 2.9.0
     border-width: 1px 0;
     border-color: #808080;
     z-index: 1;
-    *border-width: 1px;
-    *zoom: 1;
-    _zoom: normal
 }
 
 .yui-skin-sam .yui-panel .hd,
@@ -5645,8 +5361,6 @@ version: 2.9.0
     border-width: 0 1px;
     border-color: #808080;
     margin: 0 -1px;
-    *margin: 0;
-    *border: 0
 }
 
 .yui-skin-sam .yui-panel .hd {
@@ -5662,7 +5376,6 @@ version: 2.9.0
     padding: 0 10px;
     font-size: 93%;
     line-height: 2;
-    *line-height: 1.9;
     font-weight: bold;
     color: #000;
     background: url(../../../../assets/skins/sam/sprite.png) repeat-x 0 -200px
@@ -5698,10 +5411,6 @@ version: 2.9.0
     background-color: #fff
 }
 
-.yui-skin-sam .yui-panel-container.shadow {
-    _padding: 2px 4px 0 2px
-}
-
 .yui-skin-sam .yui-panel-container.shadow .underlay {
     position: absolute;
     top: 2px;
@@ -5715,8 +5424,7 @@ version: 2.9.0
     margin-top: 3px;
     margin-left: -1px;
     background-color: #000;
-    opacity: .12;
-    filter: alpha(opacity=12)
+    opacity: .12
 }
 
 .yui-skin-sam .yui-dialog .ft {
@@ -5818,8 +5526,7 @@ version: 2.9.0
 }
 
 .yui-skin-sam .yui-tt-shadow-visible {
-    opacity: .12;
-    filter: alpha(opacity=12)
+    opacity: .12
 }
 
 /* =========================================================
@@ -5918,14 +5625,11 @@ version: 2.9.0
 }
 
 .yui-calcontainer .yui-cal-nav .yui-cal-nav-btn {
-    display: -moz-inline-box;
     display: inline-block
 }
 
 .yui-calcontainer .yui-cal-nav .yui-cal-nav-btn button {
     display: block;
-    *display: inline-block;
-    *overflow: visible;
     border: 0;
     background-color: transparent;
     cursor: pointer
@@ -6171,8 +5875,7 @@ p#clear {
 
 .yui-skin-sam .yui-calcontainer .yui-cal-nav-mask {
     background-color: #000;
-    opacity: .25;
-    filter: alpha(opacity=25)
+    opacity: .25
 }
 
 .yui-skin-sam .yui-calcontainer .yui-cal-nav {
