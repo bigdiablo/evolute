@@ -986,20 +986,6 @@ body.login {
     line-height: 1.6 !important;
 }
 
-@media (max-width: 768px) {
-    .dashboard #Footer,
-    .dashboard #FooterWithoutBorderTop {
-        margin-left: 0 !important;
-        padding: 24px 16px !important;
-    }
-    
-    .dashboard #Footer p:first-of-type,
-    .dashboard #FooterWithoutBorderTop p:first-of-type {
-        flex-direction: column !important;
-        gap: 12px !important;
-    }
-}
-
 .dashboard #links {
     gap: 2px !important;
     font-size: 0 !important;
