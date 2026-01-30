@@ -3504,7 +3504,6 @@ div.sellerHomeContentBoxL,
 div.sellerHomeContentBoxR {
     width: 95%;
     margin: 0px 10px;
-    _margin: 0px 4px 0px 8px;
 }
 
 div.sellerHomeContentBoxR {
@@ -3514,10 +3513,6 @@ div.sellerHomeContentBoxR {
 
 div.grid_1_1#leftInnerGrid {
     margin-top: 10px;
-}
-
-div.grid_1_1#leftInnerGrid div.pageContent {
-    font-size: 110%;
 }
 
 /* report list */

@@ -718,6 +718,8 @@ body.login {
 .dashboard #Footer,
 .dashboard #FooterWithoutBorderTop {
     display: flex !important;
+    align-items: center;
+    justify-content: center;
     margin-left: 240px !important;
     margin-top: 0 !important;
     padding: 32px !important;
@@ -842,7 +844,8 @@ body.login {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    gap: 8px !important;
+    gap: 16px !important;
+    text-align: center;
 }
 
 /* Logo before footer content */
@@ -8358,52 +8361,6 @@ img.calendarIcon {
     cursor: pointer !important;
 }
 
-/* Wholesale Orders table column distribution */
-.dashboard .channels table.nestedListTable.ordersTable {
-    table-layout: fixed !important;
-    width: 100% !important;
-}
-
-.dashboard .channels table.nestedListTable.ordersTable th:nth-child(1),
-.dashboard .channels table.nestedListTable.ordersTable td:nth-child(1) {
-    width: 70px !important;
-}
-
-.dashboard .channels table.nestedListTable.ordersTable th:nth-child(2),
-.dashboard .channels table.nestedListTable.ordersTable td:nth-child(2) {
-    width: 150px !important;
-}
-
-.dashboard .channels table.nestedListTable.ordersTable th:nth-child(3),
-.dashboard .channels table.nestedListTable.ordersTable td:nth-child(3) {
-    width: 140px !important;
-}
-
-.dashboard .channels table.nestedListTable.ordersTable th:nth-child(4),
-.dashboard .channels table.nestedListTable.ordersTable td:nth-child(4) {
-    width: auto !important;
-    min-width: 200px !important;
-    white-space: normal !important;
-}
-
-.dashboard .channels table.nestedListTable.ordersTable th:nth-child(5),
-.dashboard .channels table.nestedListTable.ordersTable td:nth-child(5) {
-    width: 180px !important;
-}
-
-.dashboard .channels table.nestedListTable.ordersTable td .oliDiv {
-    white-space: normal !important;
-}
-
-.dashboard .channels table.nestedListTable.ordersTable td .oliDiv .left a {
-    white-space: normal !important;
-    word-wrap: break-word !important;
-}
-
-.dashboard .channels table.nestedListTable.ordersTable td[style*="width:10px"] {
-    width: 140px !important;
-}
-
 /* Create Proposal page layout fixes */
 .dashboard .formSectionContent ul.text {
     list-style: none !important;
@@ -8521,8 +8478,20 @@ img.calendarIcon {
 }
 
 /* Lead Channels list - make name links clickable/prominent */
-.dashboard .channels table.nestedListTable td a {
+.dashboard .channels table.nestedListTable td a:not(.pagination a) {
     text-decoration: underline !important;
+    color: var(--color-primary);
+}
+
+.dashboard .channels table.nestedListTable tbody tr td:nth-child(2) a::before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+    vertical-align: middle;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230060a7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71'/%3E%3Cpath d='M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71'/%3E%3C/svg%3E") no-repeat center;
+    background-size: contain;
 }
 
 @media (max-width: 1400px) {
@@ -9369,6 +9338,12 @@ img.calendarIcon {
         gap: 8px !important;
         padding: 12px 0 !important;
     }
+
+    .dashboard .sellerHomeContentBoxL .buttonGroup,
+    .dashboard .sellerHomeContentBoxR .buttonGroup {
+        padding: 0 16px 16px 16px !important;
+    }
+
     .dashboard .buttonGroup .yui-button {
         margin: 0 !important;
     }
@@ -9419,7 +9394,33 @@ img.calendarIcon {
         text-align: center !important;
     }
     #Footer #FooterContent p:first-child a {
-        white-space: nowrap !important;
+        font-size: 0 !important;
+        gap: 0 !important;
+    }
+
+    #Footer #FooterContent p:first-child a::after {
+        font-size: 12px !important;
+        margin-left: 6px;
+    }
+
+    .dashboard #Footer a[href*="tc"]::after,
+    .dashboard #FooterWithoutBorderTop a[href*="tc"]::after {
+        content: "terms";
+    }
+
+    .dashboard #Footer a[href*="privacy"]::after,
+    .dashboard #FooterWithoutBorderTop a[href*="privacy"]::after {
+        content: "privacy";
+    }
+
+    .dashboard #Footer a[href*="seller"]::after,
+    .dashboard #FooterWithoutBorderTop a[href*="seller"]::after {
+        content: "seller";
+    }
+
+    .dashboard #Footer a[href*="buyer"]::after,
+    .dashboard #FooterWithoutBorderTop a[href*="buyer"]::after {
+        content: "buyer";
     }
 
     /* --- LEAD CHANNELS LIST TABLE --- */
@@ -9474,13 +9475,7 @@ img.calendarIcon {
     .dashboard .channels table.nestedListTable tbody tr td:last-child {
         border-bottom: none !important;
     }
-    .dashboard .channels table.nestedListTable tbody tr td:nth-child(2) {
-        background: var(--color-primary) !important;
-        padding: 14px 12px !important;
-    }
     .dashboard .channels table.nestedListTable tbody tr td:nth-child(2) a {
-        color: #fff !important;
-        font-size: 15px !important;
         font-weight: 600 !important;
         background: none !important;
         padding: 0 !important;
@@ -9634,6 +9629,11 @@ img.calendarIcon {
     .dashboard #Footer, .dashboard #FooterWithoutBorderTop {
         margin-left: 0 !important;
         padding: 24px !important;
+    }
+
+    .dashboard .formSectionContent .mainLabelContent {
+        display: flex;
+        justify-content: flex-start;
     }
 }
 
