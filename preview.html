@@ -74,98 +74,289 @@
         </div>
     </div>
 
-<div class="yui-panel-container yui-dialog shadow" id="helpContainer_c" style="visibility: visible; z-index: 15; left: 10px; top: 10px;"><div id="helpContainer" class="yui-module yui-overlay yui-panel" style="visibility: inherit; width: 680px;"><a class="container-close" href="#">Close</a><div class="hd" id="helpContainer_h" style="cursor: move;">Submit Integration Support Case</div><div class="bd" style="padding-bottom: 0px;"><form method="post" action="/secure/popup/integration/help.est" id="integrationSupportCaseForm">
-        <input value="20916" type="hidden" id="iliId" name="iliId">        <input value="" type="hidden" id="ref" name="ref">        <div id="FormFields" style="padding-bottom: 0px;">
-            <div id="FormHeader">
-                                                                                          	<div class="clear"></div>
-</div>
-            <div class="roundedBox">
-    <b class="bt"><b></b></b>                <div class="sectionHeader">
-    <b class="htop"><b class="center"></b><b class="right"></b></b>
-                    <h2>Integration Support – Channel Information</h2>
-                </div>
-                <div class="formSectionContent">
-                            <div class="inputGroup">     	<div class="mainLabel">
-    <div class="mainLabelContent">  
-	<label class="required ">Lead Category<span class="requiredMarker">*</span></label>	</div>
-	</div>
-     <div class="options"><div class="optionsContent">    Mortgage
-    </div></div>    </div>                    <div class="inputGroup">                         	<div class="mainLabel">
-    <div class="mainLabelContent">  
-	<label class="required ">DeliveryMethod<span class="requiredMarker">*</span></label>	</div>
-	</div>
-                         <div class="options"><div class="optionsContent">                            <div class="option">                                Server Post to Marketplace                            </div>                        </div></div>                    </div>                            <div class="inputGroup">     	<div class="mainLabel">
-    <div class="mainLabelContent">  
-	<label class="required ">Account ID<span class="requiredMarker">*</span></label>	</div>
-	</div>
-     <div class="options"><div class="optionsContent">    967
-    </div></div>    </div>                            <div class="inputGroup">     	<div class="mainLabel">
-    <div class="mainLabelContent">  
-	<label class="required ">Channel ID<span class="requiredMarker">*</span></label>	</div>
-	</div>
-     <div class="options"><div class="optionsContent">     20916
-    </div></div>    </div>                    <div class="inputGroup">                         	<div class="mainLabel">
-    <div class="mainLabelContent">  
-	<label class="required ">Status<span class="requiredMarker">*</span></label>	</div>
-	</div>
-                         <div class="options"><div class="optionsContent">                            <div class="option">                                <div class="submit_test_leads">SUBMIT&nbsp;TEST&nbsp;LEADS</div>
-                            </div>                        </div></div>                    </div>                              <div class="inputGroup">     	<div class="mainLabel">
-    <div class="mainLabelContent">  
-	<label class="required " for="messageField">Problem<span class="requiredMarker">*</span></label>	</div>
-	</div>
-     <div class="options"><div class="optionsContent">    <textarea id="messageField" name="message" cols="60" rows="4"></textarea> 
-    </div></div>    </div>                	<div class="clear"></div>
-</div>
-                <b class="bb"><b></b></b>
-</div>
+<div id="Main">
+	<div id="MainContent">
     
-        	<div class="clear"></div>
+    
+    
+            <div class="channels">
+    
+            <div id="PrimaryContent">
+        				<div class="grid_600px_340px">
+
+	<h1>Lead Channel Setup: Server Post to Marketplace</h1>
+	<div class="primary">
+		<form method="POST" action="/secure/seller/channels/wizard.est">
+			<input type="hidden" name="_page" value="3"> 
+			<div id="FormFields">
+                                                                       <script type="text/javascript">
+    // <![CDATA[
+    YAHOO.util.Event.on(YAHOO.util.Dom.getElementsByClassName('closebox', 'span', 'successMessage')[0], 'click', function() { YAHOO.util.Dom.addClass('successMessage', 'hidden'); });
+    // ]]>
+    </script>
+                                                                                          
+                <div class="roundedBox">
+    <b class="bt"><b></b></b>                    	    <div id="iliWizardSteps">
+    <ul>
+			<li class="">STEP 1:<br>Set Channel Settings</li>
+			<li class="currentStep">STEP 2:<br>Configure Server Post</li>
+			<li class="">STEP 3:<br>Test Lead Channel</li>
+			<li class="">STEP 4:<br>Request Activation</li>
+		</ul>
 </div>
-    </form>
+<div class="clear"></div>
+					
+				    <div class="boxContent">
+						<p>	</p><div class="integration-support">
+        <a href="javascript:void(0)" onclick="submitIntegrationSupportCase()">Integration Support</a>
+	</div>
+    <div class="clear"></div>
+<p></p>
+					</div>
+                    <div class="sectionHeaderFlat">
+                        <h2>
+                            Form Posting Variables &amp; Sample Lead Forms
+                                                    </h2>
+                    </div>
+                    <div class="formSectionContent">
+                                                       	                                         <div class="inputGroup">                     	<div class="mainLabel">
+    <div class="mainLabelContent">  
+	<label><span class="bold" style="position: relative; top: 1px">Date/Time&nbsp;Format</span></label>	</div>
+	</div>
+                     <div class="options"><div class="optionsContent">M/d/yy HH:mm             <img class="inlineHelpImg" src="/images/help.gif" id="_iconImg" alt="Help" title="What's this?"><div class="clear"></div>
+</div></div>        </div>        		<script type="text/javascript">
+// <![CDATA[
+YAHOO.util.Event.addListener("_iconImg","click",showDialog,['This is the default server Date/Time format set for your account. Once you have set up your Lead Channel you can change it by clicking the Global Settings tab, then clicking the Server Post Date &amp; Time Settings link.</p>','Server Date &amp; Time Settings',])
+// ]]>
+</script>
+            		                                         <div class="inputGroup">                     	<div class="mainLabel">
+    <div class="mainLabelContent">  
+	<label for="postingURL"><span class="bold" style="position: relative; top: 4px">Posting URL</span></label>	</div>
+	</div>
+                     <div class="options"><div class="optionsContent"><span>https://www.leadpointdelivery.com/20916/direct.ilp</span>             <img class="inlineHelpImg" src="/images/help.gif" id="postingURL_iconImg" alt="Help" title="What's this?"><div class="clear"></div>
+</div></div>        </div>        		<script type="text/javascript">
+// <![CDATA[
+YAHOO.util.Event.addListener("postingURL_iconImg","click",showDialog,['This is your posting URL for lead delivery.<div class=&quot;air&quot;>&nbsp;</div><p class=&quot;actionRequired2&quot; style=&quot;margin-left: 0px&quot;>Channel ID (20916) <span style=&quot;font-weight: normal&quot;>must be in the URL and your </span>Account ID-AID (967) <span style=&quot;font-weight: normal&quot;> must be included in a Name/Value pair string.</span><p class=&quot;information&quot; style=&quot;margin-left: 6px&quot;>Send test leads and live leads to the same URL.</p>','Posting URL Specification',])
+// ]]>
+</script>
+    <div class="inputGroup">
+    <div class="mainLabel">
+        <div class="mainLabelContent">
+            <label class="required">Lead Form Code</label>
+        </div>
+    </div>
+    <div class="options">
+        <div class="optionsContent">
+			<h3 class="marketingMethodsHeader">
+                Sample Forms
+                <img class="inlineHelpImg" src="/images/help.gif" id="sampleForms_helpImg" alt="Help" title="What's this?">
+			</h3>
+						<div style="float: left; width: 50%">
+					1 Page, 1 Column Form			</div>
+			<p class="docPreview" style="float: left; clear: right; margin-right: 10px">
+				<a href="/secure/publisher/popup/formpreview/lphosted/previewForm.est?id=22&amp;d=newpopup" target="formpreview" onclick="openWindow('formpreview','');">Preview</a>			</p>
+			<p class="getCode" style="float: left; clear: right;">
+                <a href="javascript:void(0)" title="Get Form Code" onclick="showDialog(this,['/secure/publisher/popup/formcode/getFormCode.est?id=22&amp;ili=20916&amp;d=bodyonly','Get Form Code',false,'800px'])">Get Form Code</a>
+			</p>
+			<div class="clear"></div>
+						<div style="float: left; width: 50%">
+					2 Page, 1 Column Form			</div>
+			<p class="docPreview" style="float: left; clear: right; margin-right: 10px">
+				<a href="/secure/publisher/popup/formpreview/lphosted/previewForm.est?id=23&amp;d=newpopup" target="formpreview" onclick="openWindow('formpreview','');">Preview</a>			</p>
+			<p class="getCode" style="float: left; clear: right;">
+                <a href="javascript:void(1)" title="Get Form Code" onclick="showDialog(this,['/secure/publisher/popup/formcode/getFormCode.est?id=23&amp;ili=20916&amp;d=bodyonly','Get Form Code',false,'800px'])">Get Form Code</a>
+			</p>
+			<div class="clear"></div>
+					</div>
+	</div>
+</div>
+    <script type="text/javascript">
+// <![CDATA[
+YAHOO.util.Event.addListener('sampleForms_helpImg','click',showDialog,['These are sample forms containing all name/value pairs. Each form is integrated with SecureRights&trade; and is optimized with LeadPoint Javascript to decrease invalid leads. <br /><p class="information" style="font-weight: normal">You may change forms while your lead channel is active.</p>','Sample Forms with Lead Form Code']);
+// ]]>
+</script>
 
 
-<form name="frm_helpContainer"></form></div><div class="ft"><span class="button-group"><span id="yui-gen0" class="yui-button yui-push-button login-button"><span class="first-child"><button type="button" id="yui-gen0-button">Submit Support Request</button></span></span><span id="yui-gen1" class="yui-button yui-push-button"><span class="first-child"><button type="button" id="yui-gen1-button">Cancel</button></span></span></span></div></div><div class="underlay"></div></div>
-
-    <div id="Main">
-        <div id="MainContent">
-        
-        
-        
-                <div class="channels">
-        
-                <div id="PrimaryContent">
-                            <div style="width: 600px; margin: 0px auto; padding: 20px 0px">
-            <div class="roundedBox2" id="validationErrors">
+                    	<div class="clear"></div>
+</div>
+					
+				    <div class="formSectionContent">
+                        <div class="buttonGroup">
+                            	  	<span id="backButton" class="yui-button yui-submit-button bold">
+		<span class="first-child">
+			<button type="button" tabindex="0" id="backButton-button">&lt; Back</button>
+		</span>
+	</span>
+	<script type="text/javascript">
+    	//<![CDATA[
+    	try {
+            var oButton = new YAHOO.widget.Button("backButton", { hidefocus: true });
+        if (YAHOO.env.ua.gecko > 0) { oButton.addClass("gecko"); }
+		} catch (e) {}
+            	// ]]>
+	</script>
+                            	  	<span id="nextButton" class="yui-button yui-submit-button login-button">
+		<span class="first-child">
+			<button type="button" tabindex="0" id="nextButton-button">Next &gt;</button>
+		</span>
+	</span>
+	<script type="text/javascript">
+    	//<![CDATA[
+    	try {
+            var oButton = new YAHOO.widget.Button("nextButton", { hidefocus: true });
+        if (YAHOO.env.ua.gecko > 0) { oButton.addClass("gecko"); }
+		} catch (e) {}
+            	// ]]>
+	</script>
+                       </div>
+						<div class="clear"></div>
+</div>
+				    <b class="bb"><b></b></b>
+</div>
+				<div class="clear"></div>
+</div>
+		</form>
+	</div>
+	
+	    <div class="secondary" id="sellerSideBar">
+        <div class="blueBox">
             <b class="bt"><b></b></b>
-            <div class="sectionHeader">
-                <b class="htop"><b class="center"></b><b class="right"></b></b>
-                <h2>System Error</h2>
-            </div>
-            <ol>
-                <li>&nbsp;There was a problem performing the action you requested. This error has been logged and we will fix the problem as soon as possible.
-                                    If this problem continues, please contact customer care by clicking <a href="#" onclick="window.open('/secure/help/enter.est?p=true','help','')">Help</a>.
-                                </li>
-            </ol>
+            <div class="boxContent">
+                <script type="text/javascript">
+// <![CDATA[
+  function confirmDelete() {
+   if (confirm('Are you sure you want to delete this lead channel?')) {
+	 return true;
+   }
+   else {return false;}
+  }
+// ]]>
+</script>
+	<div id="sidebar">
+			
+						<div class="wizard-summary">
+    			<h2>General Channel Information</h2>	
+    			<div class="boxContent">
+					    <div class="labelValue">
+        <div class="label">Lead Category</div>
+        <div class="value">
+                         Mortgage                     </div>
+        <div class="clear"></div>
+    </div>
+    					    <div class="labelValue">
+        <div class="label">Delivery Method</div>
+        <div class="value">
+                         Server Post to Marketplace                     </div>
+        <div class="clear"></div>
+    </div>
+    					    <div class="labelValue">
+        <div class="label">Account ID (AID)</div>
+        <div class="value">
+                         967                     </div>
+        <div class="clear"></div>
+    </div>
+    					    <div class="labelValue">
+        <div class="label">Channel ID</div>
+        <div class="value">
+                         20916                     </div>
+        <div class="clear"></div>
+    </div>
+    					<div class="labelValue">
+                        <div class="label">Status</div>
+                        <div class="value new">NEW</div>
+                        <div class="clear"></div>
+                    </div>
+											    <div class="labelValue">
+        <div class="label">Action</div>
+        <div class="value">
+                         <a href="/secure/seller/channels/delete.est?id=20916" onclick="return confirmDelete()">Delete Lead Channel</a>                     </div>
+        <div class="clear"></div>
+    </div>
+    														</div>
+			</div>
+						
+			<div class="wizard-integration-details">
+	
+			<h2>Server Post to Marketplace</h2>
+			
 
-            <p id="linkItem"><a href="    /secure/seller/home/sellerView.est" title="Click here to go to your account's home page">Click here to go to your account's home page.</a></p>
+                        	
+            	<img src="/images/icons/channels/integrations/server_post_to_LP.gif" width="48" height="48" class="sidebar">
+            	
+            	<p>Get the source code for a Evolute form which you can customize and host, you can use your own form or create a form from scratch. The form will post to your server then your server will post to Evolute's servers.</p>
+            
+                        
+            	<p>Be sure to review marketplace guidelines in <a href="/secure/seller/Trading+Rules/supportSystem.est" onclick="newWin = window.open(this.href, 'popUpWindow', 'width=900,height=600,scrollbars,resizable,toolbar,status');  newWin.focus(); return false;" target="popUpWindow"> Trading Rules</a> along with marketing and conversion
+            		tips in <a href="/secure/seller/Best+Practices/supportSystem.est" onclick="newWin = window.open(this.href, 'popUpWindow', 'width=900,height=600,scrollbars,resizable,toolbar,status');  newWin.focus(); return false;" target="popUpWindow"> Best Practices</a>.</p>
+            
+            			
+                        	
+            	<h3>Integration Documentation</h3>
+            	
+            	<div>
+            	<p class="docPreview">
+					<a href="/secure/seller/Server+Post+Integration/supportSystem.est" onclick="newWin = window.open(this.href, 'popUpWindow', 'width=900,height=600,scrollbars,resizable,toolbar,status');  newWin.focus(); return false;" target="popUpWindow"> Lead Delivery</a>					
+            	</p>
+            	
+            	<p class="docPreview">
+            		<a href="/secure/seller/Lead+Validation+Process/supportSystem.est" onclick="newWin = window.open(this.href, 'popUpWindow', 'width=900,height=600,scrollbars,resizable,toolbar,status');  newWin.focus(); return false;" target="popUpWindow"> General Validations</a>
+            	</p>
+            	
+            	<p class="docPreview">
+					<a href="/secure/seller/SecureRights+Protection/supportSystem.est" onclick="newWin = window.open(this.href, 'popUpWindow', 'width=900,height=600,scrollbars,resizable,toolbar,status');  newWin.focus(); return false;" target="popUpWindow"> SecureRights</a>
+            	</p>
+            	
+            	<p class="docPreview">
+					<a href="/secure/seller/Server+Post+IntegrationABCDServerPostIntegration-ProcessingResponses/supportSystem.est" onclick="newWin = window.open(this.href, 'popUpWindow', 'width=900,height=600,scrollbars,resizable,toolbar,status');  newWin.focus(); return false;" target="popUpWindow">Processing Responses</a>
+            	</p>
+				<p class="docPreview">
+            		<a href="/secure/seller/report/runReport.report?reportid=1638">Field Specifications</a>
+            	</p>
+            	</div>
+            	
+                        		
+			<h2>Optional Advanced Features</h2>
 
+						  <p class="docPreview"><a href="/secure/seller/Lead+Tracking/supportSystem.est" onclick="newWin = window.open(this.href, 'popUpWindow', 'width=900,height=600,scrollbars,resizable,toolbar,status');  newWin.focus(); return false;" target="popUpWindow">Tracking</a></p>
+			  <p>Instructions on how to pass tracking variables with each lead to monitor your campaign. </p>
+						
+			<p class="docPreview"><a href="/secure/seller/Lead+Tracking/supportSystem.est" onclick="newWin = window.open(this.href, 'popUpWindow', 'width=900,height=600,scrollbars,resizable,toolbar,status');  newWin.focus(); return false;" target="popUpWindow">Notifications</a></p>
+			<p>Instructions on how to receive posts to your system to track the status of each lead you send to Evolute.</p>
+
+			<div class="clear"></div>
+			
+			</div>
+		
+	</div>            </div>
             <b class="bb"><b></b></b>
-    </div>
-    
-        </div>
+</div>
+    <div class="clear"></div>
+	
+</div>
+    		</div>
+	
+            </div>
+    		
+		<div class="clear"></div>
+	</div>
+</div>
+<div id="Footer">
+	<div id="FooterContent">
+	<p>
+        <a href="https://consumer.evoluteinc.com/tc/" target="_blank">terms of use</a> |
+        <a href="https://consumer.evoluteinc.com/privacy/" target="_blank">privacy policy</a> |
+                    <a href="/seller/legal/footer_agreement.est?d=popup" target="_blank">seller agreement</a> |
+            <a href="/buyer/legal/footer_agreement.est?d=popup" target="_blank">buyer agreement</a>
+        	</p>
+   
+	<p>Copyright Evolute Inc 2026. All Rights Reserved.		January 30, 2026 2:29:43 PM PST
+</p>
+    <p>Build version 1.0 (Thu Jan 29 23:29:15 UTC 2026)</p>		<div class="clear"></div>
+	</div>
+</div>
+<div id="helpContainer"></div><div id="termsContainer"></div>
 
-    <!-- 
-
-
-
-    -->
-                </div>
-        
-                </div>
-                
-            <div class="clear"></div>
-        </div>
-    </div>
+</div>
 
     <div id="Footer">
         <div id="FooterContent">
