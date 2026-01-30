@@ -9354,7 +9354,8 @@ img.calendarIcon {
         left: 0;
     }
 
-    .dashboard .formSectionContent .buttonGroup .yui-submit-button button#nextButton-button {
+    .dashboard .formSectionContent .buttonGroup .yui-submit-button button#nextButton-button,
+    .dashboard .formSectionContent .buttonGroup .yui-submit-button.login-button button#activateButton-button {
         position: absolute;
         top: 0;
         right: 0;
@@ -9533,6 +9534,7 @@ img.calendarIcon {
         padding: 16px !important;
     }
 
+    .dashboard .boxContent:has(#framedFormCbox),
     .dashboard .boxContent:has(.warning) {
         flex-direction: column;
     }
