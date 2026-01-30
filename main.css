@@ -3394,10 +3394,63 @@ div.grid_1_1#leftInnerGrid {
 }
 
 .dashboard .marketingMethodsHeader {
+    display: flex;
+    gap: 6px;
     font-size: 14px;
     font-weight: 600;
     color: var(--color-dark);
-    margin: 0 0 12px;
+}
+
+/* Form section links - docPreview and getCode */
+.dashboard .formSectionContent .optionsContent .docPreview,
+.dashboard .formSectionContent .optionsContent .getCode {
+    float: none !important;
+    clear: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: inline-block !important;
+}
+
+.dashboard .formSectionContent .optionsContent .docPreview a,
+.dashboard .formSectionContent .optionsContent .getCode a {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 6px 12px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    color: var(--color-primary) !important;
+    background: #f0f7ff !important;
+    border: 1px solid #d0e3f7 !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
+}
+
+.dashboard .formSectionContent .optionsContent .docPreview a:hover,
+.dashboard .formSectionContent .optionsContent .getCode a:hover {
+    background: #e0efff !important;
+    border-color: var(--color-primary) !important;
+    color: var(--color-primary-light) !important;
+}
+
+.dashboard .formSectionContent .optionsContent > div[style*="float"] {
+    float: none !important;
+    width: auto !important;
+    display: inline-block !important;
+    margin-right: 12px !important;
+    margin-bottom: 0 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: var(--color-dark) !important;
+    vertical-align: middle !important;
+}
+
+/* Clean row layout for form items */
+.dashboard .formSectionContent .optionsContent .clear {
+    display: block !important;
+    clear: both !important;
+    height: 12px !important;
 }
 
 .dashboard .sectionHeaderFlat {
@@ -3459,7 +3512,7 @@ div.grid_1_1#leftInnerGrid {
     padding-left: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 16px 24px;
+    gap: 16px;
 }
 
 .dashboard .formSectionContent .textInput {
@@ -3577,10 +3630,6 @@ div.grid_1_1#leftInnerGrid {
     float: none !important;
     display: inline-block;
     vertical-align: top;
-    width: 45%;
-    min-width: 200px;
-    margin-right: 20px;
-    margin-bottom: 16px;
 }
 
 /* Message Boxes */
@@ -9283,7 +9332,7 @@ img.calendarIcon {
 
     .dashboard .formSectionContent .optionsContent > div[style*="float: left"] {
         width: 100% !important;
-        margin-right: 0;
+        margin: 0 !important;
     }
 
     .dashboard .formSectionContent .buttonGroup {
@@ -9484,6 +9533,10 @@ img.calendarIcon {
         padding: 16px !important;
     }
 
+    .dashboard .boxContent:has(.warning) {
+        flex-direction: column;
+    }
+
     .dashboard .integration-support {
         margin: 0;
         padding: 0;
@@ -9501,6 +9554,10 @@ img.calendarIcon {
     .dashboard .formSectionContent {
         padding: 16px !important;
     }
+    .dashboard .formSectionContent:has(.warning) .boxContent {
+        padding: 0;
+    }
+
     .dashboard .formSectionContent .buttonGroup {
         margin: 0 !important;
         padding: 16px 0 0 0 !important;
