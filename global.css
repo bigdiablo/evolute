@@ -2561,16 +2561,6 @@ b.htop b.right {
     border-right: solid 1px #fff;
 }
 
-.sectionHeaderFlat h2 {
-    line-height: 1.25em;
-    padding: 0.33em 10px;
-    margin: 10px 2px;
-    background-color: #e0e1e2;
-    font-size: 110%;
-    font-weight: bold;
-    color: #2F466B;
-}
-
 div.confirmationSectionHeader h2 {
     font-weight: 600;
     float: left;
@@ -3214,14 +3204,10 @@ div.titleDiv h3 img.inlineHelpImg {
 
 #iliWizardSteps li {
     display: inline;
-    width: 23%;
     float: left;
-    padding: 0.5em 0.25em;
-    margin: 0px 2px;
     background: #ccc;
     font-size: 90%;
     font-weight: bold;
-    border: 1px solid #999;
 }
 
 #iliWizardSteps li.affiliate {
@@ -4007,16 +3993,8 @@ div.subtabHeading {
     width: 102.05%;
 }
 
-#dashTabs ul#tabsList li {
-}
-
 #dashTabs ul#tabsList li a {
     padding-bottom: 4px;
-}
-
-#dataDiv,
-#voiceDiv {
-    margin-top: -2px;
 }
 
 .tabContainer .secondary {
