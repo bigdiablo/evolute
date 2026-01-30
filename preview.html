@@ -9,70 +9,122 @@
     <script src="main.js"></script>
 </head>
 <body class="dashboard">
-<div id="Header">
-	<div id="mobilemenu"><div class="logo"><svg viewBox="0 0 792 195.87"><style>.a{fill:#7d878e}.b{fill:#00ade1}.c{fill:#004279}.d{fill:#0060a7}.e{fill:#56b45e}</style><path class="a" d="M257.25,52.44c-26.17,0-47.45,21.29-47.45,47.45s21.29,47.45,47.45,47.45c13.68,0,26.69-5.91,35.71-16.2,2.93-3.35,2.6-8.44-.75-11.38-3.35-2.93-8.44-2.6-11.38.75-5.96,6.8-14.55,10.7-23.58,10.7-17.27,0-31.33-14.05-31.33-31.33s14.05-31.33,31.33-31.33c14.49,0,26.71,9.89,30.28,23.26h-41.02c-4.45,0-8.06,3.61-8.06,8.06s3.61,8.06,8.06,8.06h50.13c4.45,0,8.06-3.61,8.06-8.06,0-26.17-21.29-47.45-47.45-47.45Z"></path><path class="a" d="M738.19,52.44c-26.16,0-47.45,21.29-47.45,47.45s21.29,47.45,47.45,47.45c13.68,0,26.69-5.91,35.71-16.2,2.93-3.35,2.6-8.44-.75-11.38-3.35-2.93-8.44-2.6-11.38.75-5.96,6.8-14.55,10.7-23.58,10.7-17.27,0-31.33-14.05-31.33-31.33s14.05-31.33,31.33-31.33c14.49,0,26.71,9.89,30.28,23.26h-41.02c-4.45,0-8.06,3.61-8.06,8.06s3.61,8.06,8.06,8.06h50.13c4.45,0,8.06-3.61,8.06-8.06,0-26.17-21.29-47.45-47.45-47.45Z"></path><path class="a" d="M448.02,52.44c-26.17,0-47.45,21.29-47.45,47.45s21.29,47.45,47.45,47.45c13.68,0,26.69-5.91,35.71-16.2,7.57-8.65,11.74-19.75,11.74-31.25,0-26.17-21.29-47.45-47.45-47.45ZM471.6,120.53c-5.96,6.8-14.55,10.7-23.58,10.7-17.27,0-31.33-14.05-31.33-31.33s14.05-31.33,31.33-31.33,31.33,14.05,31.33,31.33c0,7.6-2.75,14.92-7.75,20.63Z"></path><path class="a" d="M618.15,55.42c-4.45,0-8.06,3.61-8.06,8.06v40.36c0,6.64-2.41,13.04-6.77,18.03-5.21,5.95-12.72,9.36-20.61,9.36-15.1,0-27.39-12.29-27.39-27.39v-40.36c0-4.45-3.61-8.06-8.06-8.06s-8.06,3.61-8.06,8.06v40.36c0,23.99,19.52,43.51,43.51,43.51,12.54,0,24.48-5.42,32.75-14.86,6.94-7.93,10.77-18.11,10.77-28.66v-40.36c0-4.45-3.61-8.06-8.06-8.06Z"></path><path class="a" d="M683.27,131.23c-15.1,0-27.39-12.29-27.39-27.39v-40.39h23.22c4.45,0,8.06-3.61,8.06-8.06s-3.61-8.06-8.06-8.06h-23.22v-27.77c0-4.45-3.61-8.06-8.06-8.06s-8.06,3.61-8.06,8.06v33.89c-.15.62-.25,1.27-.25,1.94s.09,1.32.25,1.94v46.51c0,23.99,19.52,43.51,43.51,43.51,4.45,0,8.06-3.61,8.06-8.06s-3.61-8.06-8.06-8.06Z"></path><path class="a" d="M515.72,12.82c-4.45,0-8.06,3.61-8.06,8.06v117.28c0,4.45,3.61,8.06,8.06,8.06s8.06-3.61,8.06-8.06V20.89c0-4.45-3.61-8.06-8.06-8.06Z"></path><path class="a" d="M360.86,146.95c.19-.28.36-.57.51-.87.02-.04.05-.07.07-.11l39.39-78.89c1.99-3.98.37-8.83-3.61-10.82-3.98-1.99-8.83-.37-10.82,3.61l-32.18,64.44-32.18-64.44c-1.99-3.98-6.83-5.6-10.82-3.61-3.98,1.99-5.6,6.83-3.61,10.82l39.39,78.89s.05.07.07.11c.16.3.32.59.52.87,0,0,.01.02.02.02.19.28.41.54.64.79.06.07.12.13.18.19.19.19.39.38.59.56.05.05.1.09.16.14.25.2.52.39.8.56.07.05.15.08.23.13.14.08.27.16.41.23.07.04.15.06.23.1.12.06.25.11.37.16.21.08.42.16.63.22.11.03.22.07.34.1.25.06.49.11.74.15.09.01.18.03.27.05.34.04.68.07,1.02.07s.68-.03,1.02-.07c.09-.01.18-.03.27-.05.25-.04.49-.09.74-.15.11-.03.22-.06.34-.1.21-.07.42-.14.63-.22.13-.05.25-.1.37-.16.07-.03.15-.06.23-.1.14-.07.28-.15.41-.23.08-.04.15-.08.23-.13.28-.17.55-.36.8-.56.06-.04.11-.09.16-.14.21-.18.4-.36.59-.55.06-.07.13-.13.19-.2.23-.25.44-.51.63-.79,0,0,.01-.02.02-.03Z"></path><path class="c" d="M66.5,125.36c-16.06-15.64-37.2-24.31-59.6-24.47,1.53,46.57,39.08,84.02,85.7,85.36l-.03-1.5c-.63-22.54-9.89-43.63-26.07-59.39Z"></path><path class="b" d="M92.58,9.63C46.3,10.98,8.94,47.92,6.94,94.03c46.66-.35,84.62-37.9,85.64-84.4Z"></path><path class="e" d="M183.44,94c-2-45.54-38.48-82.13-83.98-84.3.5,22.03,9.23,42.74,24.72,58.5,15.78,16.06,36.8,25.2,59.26,25.8Z"></path><path class="d" d="M99.48,184.74l-.04,1.44c45.83-2.17,82.52-39.26,84.04-85.26-45.87,1.19-82.71,37.89-84,83.83Z"></path><path fill="#fff" d="M183.44,94c-22.46-.6-43.48-9.74-59.26-25.8-15.49-15.77-24.22-36.47-24.72-58.5-1.42-.07-2.84-.1-4.28-.1-.87,0-1.74.02-2.61.04-1.03,46.5-38.99,84.04-85.64,84.4-.06,1.3-.09,2.6-.09,3.91,0,.99.02,1.97.05,2.94,22.4.16,43.54,8.83,59.6,24.47,16.18,15.76,25.43,36.85,26.07,59.39l.03,1.5c.86.02,1.73.04,2.59.04,1.42,0,2.84-.04,4.25-.1l.04-1.44c1.29-45.93,38.13-82.63,84-83.83.03-.99.06-1.98.06-2.98,0-1.32-.03-2.63-.09-3.94Z"></path></svg></div><button id="mobilebutton"><svg class="menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"></path></svg><svg class="close" viewBox="0 0 24 24"><path d="M6 6l12 12M6 18L18 6"></path></svg></button></div><div id="HeaderContent">
-<div id="logoLinksContainer">
-	<div id="logoDiv">
-	               <a id="logo" href="/secure/buyer/home/buyerView.est"><img src="/images/evolute_logo.png" alt="Evolute Inc"></a>        	</div>
-	<div id="toolbar">
-    	<div class="userInfo">
-			<div id="accountName">Account: <strong>Lead Buyer (974)</strong></div>
-							<div id="accountBalance">Balance: <strong>($105.00)</strong></div>	
-                			             <div id="links">
-            	<a href="/secure/buyer/setting/account/view_modify.est">My Settings</a> | 
-                					<a href="#" onclick="window.open('/secure/resource/popup/hubSpotHelp.est?coreAccountId=974&amp;organizationName=Lead Buyer','help','width=580,height=400,resizable=yes,toolbar=yes,status=no,scrollbars=yes,menubar=yes,directories=no,location=no,dependant=no', false, false)">Help</a> | <a href="/secure/buyer/Home/supportSystem.est" onclick="newWin = window.open(this.href, 'popUpWindow', 'width=900,height=600,scrollbars,resizable,toolbar,status'); newWin.focus(); return false;" target="popUpWindow">User Guide</a> |
-                                <a href="/secure/logOut.user" target="_top">Logout</a>
+    <div id="Header">
+        <div id="mobilemenu"><div class="logo"><svg viewBox="0 0 792 195.87"><style>.a{fill:#7d878e}.b{fill:#00ade1}.c{fill:#004279}.d{fill:#0060a7}.e{fill:#56b45e}</style><path class="a" d="M257.25,52.44c-26.17,0-47.45,21.29-47.45,47.45s21.29,47.45,47.45,47.45c13.68,0,26.69-5.91,35.71-16.2,2.93-3.35,2.6-8.44-.75-11.38-3.35-2.93-8.44-2.6-11.38.75-5.96,6.8-14.55,10.7-23.58,10.7-17.27,0-31.33-14.05-31.33-31.33s14.05-31.33,31.33-31.33c14.49,0,26.71,9.89,30.28,23.26h-41.02c-4.45,0-8.06,3.61-8.06,8.06s3.61,8.06,8.06,8.06h50.13c4.45,0,8.06-3.61,8.06-8.06,0-26.17-21.29-47.45-47.45-47.45Z"></path><path class="a" d="M738.19,52.44c-26.16,0-47.45,21.29-47.45,47.45s21.29,47.45,47.45,47.45c13.68,0,26.69-5.91,35.71-16.2,2.93-3.35,2.6-8.44-.75-11.38-3.35-2.93-8.44-2.6-11.38.75-5.96,6.8-14.55,10.7-23.58,10.7-17.27,0-31.33-14.05-31.33-31.33s14.05-31.33,31.33-31.33c14.49,0,26.71,9.89,30.28,23.26h-41.02c-4.45,0-8.06,3.61-8.06,8.06s3.61,8.06,8.06,8.06h50.13c4.45,0,8.06-3.61,8.06-8.06,0-26.17-21.29-47.45-47.45-47.45Z"></path><path class="a" d="M448.02,52.44c-26.17,0-47.45,21.29-47.45,47.45s21.29,47.45,47.45,47.45c13.68,0,26.69-5.91,35.71-16.2,7.57-8.65,11.74-19.75,11.74-31.25,0-26.17-21.29-47.45-47.45-47.45ZM471.6,120.53c-5.96,6.8-14.55,10.7-23.58,10.7-17.27,0-31.33-14.05-31.33-31.33s14.05-31.33,31.33-31.33,31.33,14.05,31.33,31.33c0,7.6-2.75,14.92-7.75,20.63Z"></path><path class="a" d="M618.15,55.42c-4.45,0-8.06,3.61-8.06,8.06v40.36c0,6.64-2.41,13.04-6.77,18.03-5.21,5.95-12.72,9.36-20.61,9.36-15.1,0-27.39-12.29-27.39-27.39v-40.36c0-4.45-3.61-8.06-8.06-8.06s-8.06,3.61-8.06,8.06v40.36c0,23.99,19.52,43.51,43.51,43.51,12.54,0,24.48-5.42,32.75-14.86,6.94-7.93,10.77-18.11,10.77-28.66v-40.36c0-4.45-3.61-8.06-8.06-8.06Z"></path><path class="a" d="M683.27,131.23c-15.1,0-27.39-12.29-27.39-27.39v-40.39h23.22c4.45,0,8.06-3.61,8.06-8.06s-3.61-8.06-8.06-8.06h-23.22v-27.77c0-4.45-3.61-8.06-8.06-8.06s-8.06,3.61-8.06,8.06v33.89c-.15.62-.25,1.27-.25,1.94s.09,1.32.25,1.94v46.51c0,23.99,19.52,43.51,43.51,43.51,4.45,0,8.06-3.61,8.06-8.06s-3.61-8.06-8.06-8.06Z"></path><path class="a" d="M515.72,12.82c-4.45,0-8.06,3.61-8.06,8.06v117.28c0,4.45,3.61,8.06,8.06,8.06s8.06-3.61,8.06-8.06V20.89c0-4.45-3.61-8.06-8.06-8.06Z"></path><path class="a" d="M360.86,146.95c.19-.28.36-.57.51-.87.02-.04.05-.07.07-.11l39.39-78.89c1.99-3.98.37-8.83-3.61-10.82-3.98-1.99-8.83-.37-10.82,3.61l-32.18,64.44-32.18-64.44c-1.99-3.98-6.83-5.6-10.82-3.61-3.98,1.99-5.6,6.83-3.61,10.82l39.39,78.89s.05.07.07.11c.16.3.32.59.52.87,0,0,.01.02.02.02.19.28.41.54.64.79.06.07.12.13.18.19.19.19.39.38.59.56.05.05.1.09.16.14.25.2.52.39.8.56.07.05.15.08.23.13.14.08.27.16.41.23.07.04.15.06.23.1.12.06.25.11.37.16.21.08.42.16.63.22.11.03.22.07.34.1.25.06.49.11.74.15.09.01.18.03.27.05.34.04.68.07,1.02.07s.68-.03,1.02-.07c.09-.01.18-.03.27-.05.25-.04.49-.09.74-.15.11-.03.22-.06.34-.1.21-.07.42-.14.63-.22.13-.05.25-.1.37-.16.07-.03.15-.06.23-.1.14-.07.28-.15.41-.23.08-.04.15-.08.23-.13.28-.17.55-.36.8-.56.06-.04.11-.09.16-.14.21-.18.4-.36.59-.55.06-.07.13-.13.19-.2.23-.25.44-.51.63-.79,0,0,.01-.02.02-.03Z"></path><path class="c" d="M66.5,125.36c-16.06-15.64-37.2-24.31-59.6-24.47,1.53,46.57,39.08,84.02,85.7,85.36l-.03-1.5c-.63-22.54-9.89-43.63-26.07-59.39Z"></path><path class="b" d="M92.58,9.63C46.3,10.98,8.94,47.92,6.94,94.03c46.66-.35,84.62-37.9,85.64-84.4Z"></path><path class="e" d="M183.44,94c-2-45.54-38.48-82.13-83.98-84.3.5,22.03,9.23,42.74,24.72,58.5,15.78,16.06,36.8,25.2,59.26,25.8Z"></path><path class="d" d="M99.48,184.74l-.04,1.44c45.83-2.17,82.52-39.26,84.04-85.26-45.87,1.19-82.71,37.89-84,83.83Z"></path><path fill="#fff" d="M183.44,94c-22.46-.6-43.48-9.74-59.26-25.8-15.49-15.77-24.22-36.47-24.72-58.5-1.42-.07-2.84-.1-4.28-.1-.87,0-1.74.02-2.61.04-1.03,46.5-38.99,84.04-85.64,84.4-.06,1.3-.09,2.6-.09,3.91,0,.99.02,1.97.05,2.94,22.4.16,43.54,8.83,59.6,24.47,16.18,15.76,25.43,36.85,26.07,59.39l.03,1.5c.86.02,1.73.04,2.59.04,1.42,0,2.84-.04,4.25-.1l.04-1.44c1.29-45.93,38.13-82.63,84-83.83.03-.99.06-1.98.06-2.98,0-1.32-.03-2.63-.09-3.94Z"></path></svg></div><button id="mobilebutton"><svg class="menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"></path></svg><svg class="close" viewBox="0 0 24 24"><path d="M6 6l12 12M6 18L18 6"></path></svg></button></div><div id="HeaderContent">
+    <div id="logoLinksContainer">
+        <div id="logoDiv">
+                    <a id="logo" href="/secure/buyer/home/buyerView.est"><img src="/images/evolute_logo.png" alt="Evolute Inc"></a>        	</div>
+        <div id="toolbar">
+            <div class="userInfo">
+                <div id="accountName">Account: <strong>Lead Buyer (974)</strong></div>
+                                <div id="accountBalance">Balance: <strong>($105.00)</strong></div>	
+                                            <div id="links">
+                    <a href="/secure/buyer/setting/account/view_modify.est">My Settings</a> | 
+                                        <a href="#" onclick="window.open('/secure/resource/popup/hubSpotHelp.est?coreAccountId=974&amp;organizationName=Lead Buyer','help','width=580,height=400,resizable=yes,toolbar=yes,status=no,scrollbars=yes,menubar=yes,directories=no,location=no,dependant=no', false, false)">Help</a> | <a href="/secure/buyer/Home/supportSystem.est" onclick="newWin = window.open(this.href, 'popUpWindow', 'width=900,height=600,scrollbars,resizable,toolbar,status'); newWin.focus(); return false;" target="popUpWindow">User Guide</a> |
+                                    <a href="/secure/logOut.user" target="_top">Logout</a>
+                </div>
             </div>
+        </div>    
+        
+    </div>
+    <div id="Navigation">
+        
+        <div id="MainNavigation" class="tabs">
+
+            <ul>
+                                    <li class="m1"><a href="/secure/buyer/home/buyerView.est" class="m1">Home</a></li>
+                                                <li class="m2"><a href="/secure/buyer/lead/view.tp" class="m2">My Leads</a></li>
+                                                                <li class="m4 selected"><a href="/secure/buyer/order/ordersList.est" class="m4 selected">My Orders</a></li>
+                        <li class="m3"><a href="/secure/buyer/leadstore/leadStore.est" class="m3">Lead Store</a></li>
+                                                                            <li class="m7"><a href="/secure/buyer/payment/single/view_modify.est" class="m7">Money Manager</a></li>
+                                            <li class="m8"><a href="/secure/buyer/report/viewReportList.est" class="m8">Reports</a></li>
+                        </ul>
         </div>
-    </div>    
-    
-</div>
-<div id="Navigation">
-    
-	<div id="MainNavigation" class="tabs">
+        
+        <div id="SubNavigation" class="subtabs">
+            <b class="bl"></b>
+            <ul>
+            
+                    
+            
+                                <li class="current"><a href="/secure/buyer/order/ordersList.est"><span>Current Orders</span></a></li>
+                        <li class=""><a href="/secure/buyer/order/proposal/offersList.est"><span>Proposals</span></a></li>
+                                        <li class=""><a href="/secure/buyer/order/viewBuyerConnectionsList.est"><span>Connections (beta)</span></a></li>
+                                    <li class=""><a href="/secure/buyer/order/create/view.est"><span>Create Order</span></a></li>
+                                        <li class=""><a href="/secure/buyer/order/productallowance/view_modify.est"><span>Product Budgets</span></a></li>
+                                
+            
+                    
+            
+                    
+            
+                    
+            
+                    
+            
+                    
+            </ul>
+        </div>
+        
+        
+        
+    </div>
 
-		<ul>
-				                <li class="m1"><a href="/secure/buyer/home/buyerView.est" class="m1">Home</a></li>
-             	        	                <li class="m2"><a href="/secure/buyer/lead/view.tp" class="m2">My Leads</a></li>
-	        							                    <li class="m4 selected"><a href="/secure/buyer/order/ordersList.est" class="m4 selected">My Orders</a></li>
-				    <li class="m3"><a href="/secure/buyer/leadstore/leadStore.est" class="m3">Lead Store</a></li>
-														                <li class="m7"><a href="/secure/buyer/payment/single/view_modify.est" class="m7">Money Manager</a></li>
-	        	        			    <li class="m8"><a href="/secure/buyer/report/viewReportList.est" class="m8">Reports</a></li>
-					</ul>
-	</div>
-    
-	<div id="SubNavigation" class="subtabs">
-		<b class="bl"></b>
-		<ul>
-	    
-	    	    
-	    
-	    			        <li class="current"><a href="/secure/buyer/order/ordersList.est"><span>Current Orders</span></a></li>
-			        <li class=""><a href="/secure/buyer/order/proposal/offersList.est"><span>Proposals</span></a></li>
-			                        <li class=""><a href="/secure/buyer/order/viewBuyerConnectionsList.est"><span>Connections (beta)</span></a></li>
-            			        <li class=""><a href="/secure/buyer/order/create/view.est"><span>Create Order</span></a></li>
-							        <li class=""><a href="/secure/buyer/order/productallowance/view_modify.est"><span>Product Budgets</span></a></li>
-						    
-	    
-	    	    
-	    
-	    	    
-	    
-	    	    
-	    
-	    	    
-	    
-	    	    
-		</ul>
-	</div>
-    
-    
-    
-</div>
+            
+        </div>
+    </div>
 
-		
-	</div>
+<div class="yui-panel-container yui-dialog shadow" id="helpContainer_c" style="visibility: visible; z-index: 15; left: 10px; top: 10px;"><div id="helpContainer" class="yui-module yui-overlay yui-panel" style="visibility: inherit; width: 680px;"><a class="container-close" href="#">Close</a><div class="hd" id="helpContainer_h" style="cursor: move;">Submit Integration Support Case</div><div class="bd" style="padding-bottom: 0px;"><form method="post" action="/secure/popup/integration/help.est" id="integrationSupportCaseForm">
+        <input value="20916" type="hidden" id="iliId" name="iliId">        <input value="" type="hidden" id="ref" name="ref">        <div id="FormFields" style="padding-bottom: 0px;">
+            <div id="FormHeader">
+                                                                                          	<div class="clear"></div>
 </div>
+            <div class="roundedBox">
+    <b class="bt"><b></b></b>                <div class="sectionHeader">
+    <b class="htop"><b class="center"></b><b class="right"></b></b>
+                    <h2>Integration Support – Channel Information</h2>
+                </div>
+                <div class="formSectionContent">
+                            <div class="inputGroup">     	<div class="mainLabel">
+    <div class="mainLabelContent">  
+	<label class="required ">Lead Category<span class="requiredMarker">*</span></label>	</div>
+	</div>
+     <div class="options"><div class="optionsContent">    Mortgage
+    </div></div>    </div>                    <div class="inputGroup">                         	<div class="mainLabel">
+    <div class="mainLabelContent">  
+	<label class="required ">DeliveryMethod<span class="requiredMarker">*</span></label>	</div>
+	</div>
+                         <div class="options"><div class="optionsContent">                            <div class="option">                                Server Post to Marketplace                            </div>                        </div></div>                    </div>                            <div class="inputGroup">     	<div class="mainLabel">
+    <div class="mainLabelContent">  
+	<label class="required ">Account ID<span class="requiredMarker">*</span></label>	</div>
+	</div>
+     <div class="options"><div class="optionsContent">    967
+    </div></div>    </div>                            <div class="inputGroup">     	<div class="mainLabel">
+    <div class="mainLabelContent">  
+	<label class="required ">Channel ID<span class="requiredMarker">*</span></label>	</div>
+	</div>
+     <div class="options"><div class="optionsContent">     20916
+    </div></div>    </div>                    <div class="inputGroup">                         	<div class="mainLabel">
+    <div class="mainLabelContent">  
+	<label class="required ">Status<span class="requiredMarker">*</span></label>	</div>
+	</div>
+                         <div class="options"><div class="optionsContent">                            <div class="option">                                <div class="submit_test_leads">SUBMIT&nbsp;TEST&nbsp;LEADS</div>
+                            </div>                        </div></div>                    </div>                              <div class="inputGroup">     	<div class="mainLabel">
+    <div class="mainLabelContent">  
+	<label class="required " for="messageField">Problem<span class="requiredMarker">*</span></label>	</div>
+	</div>
+     <div class="options"><div class="optionsContent">    <textarea id="messageField" name="message" cols="60" rows="4"></textarea> 
+    </div></div>    </div>                	<div class="clear"></div>
+</div>
+                <b class="bb"><b></b></b>
+</div>
+    
+        	<div class="clear"></div>
+</div>
+    </form>
+
+
+<form name="frm_helpContainer"></form></div><div class="ft"><span class="button-group"><span id="yui-gen0" class="yui-button yui-push-button login-button"><span class="first-child"><button type="button" id="yui-gen0-button">Submit Support Request</button></span></span><span id="yui-gen1" class="yui-button yui-push-button"><span class="first-child"><button type="button" id="yui-gen1-button">Cancel</button></span></span></span></div></div><div class="underlay"></div></div>
 
     <div id="Main">
         <div id="MainContent">

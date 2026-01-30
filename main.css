@@ -7508,23 +7508,310 @@ div.grid_1_1#leftInnerGrid {
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E") !important;
 }
 
-/* YUI Dialog specific styles */
-.yui-skin-sam .yui-dialog .ft,
-.yui-dialog .ft {
-    border-top: 0 !important;
-    padding: 0 10px 10px 10px !important;
-    font-size: 100% !important;
-}
+/* YUI Dialog footer and buttons */
 
 .yui-skin-sam .yui-dialog .ft .button-group,
 .yui-dialog .ft .button-group {
-    display: block !important;
-    text-align: right !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 12px !important;
+    width: 100% !important;
 }
 
-.yui-skin-sam .yui-dialog .ft button.default,
-.yui-dialog .ft button.default {
-    font-weight: bold !important;
+.yui-dialog .ft .button-group .yui-button,
+.yui-dialog .ft span.yui-button {
+    float: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.yui-dialog .ft .button-group .yui-button .first-child,
+.yui-dialog .ft span.yui-button .first-child {
+    display: inline-flex !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+.yui-dialog .ft .button-group .yui-button button,
+.yui-dialog .ft span.yui-button button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    padding: 12px 24px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    border: 1px solid var(--border) !important;
+    background-color: #fff !important;
+    color: var(--color-dark) !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    white-space: nowrap !important;
+}
+
+.yui-dialog .ft .button-group .yui-button button:hover,
+.yui-dialog .ft span.yui-button button:hover {
+    background-color: var(--bg-light) !important;
+    border-color: var(--color-gray) !important;
+}
+
+/* Primary button (first button / login button) */
+.yui-dialog .ft .button-group .yui-button.login-button button,
+.yui-dialog .ft .button-group .yui-button:first-child button {
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    color: #fff !important;
+}
+
+.yui-dialog .ft .button-group .yui-button.login-button button:hover,
+.yui-dialog .ft .button-group .yui-button:first-child button:hover {
+    background-color: var(--color-primary-light) !important;
+    border-color: var(--color-primary-light) !important;
+}
+
+/* Button icons */
+.yui-dialog .ft .button-group .yui-button:first-child button::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: currentColor;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 2 11 13'/%3E%3Cpath d='m22 2-7 20-4-9-9-4 20-7z'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 2 11 13'/%3E%3Cpath d='m22 2-7 20-4-9-9-4 20-7z'/%3E%3C/svg%3E");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    flex-shrink: 0;
+}
+
+.yui-dialog .ft .button-group .yui-button:last-child button::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: currentColor;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 6 6 18'/%3E%3Cpath d='m6 6 12 12'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 6 6 18'/%3E%3Cpath d='m6 6 12 12'/%3E%3C/svg%3E");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    flex-shrink: 0;
+}
+
+/* Dialog container - use inset for full centering */
+.yui-panel-container.yui-dialog {
+    position: fixed !important;
+    inset: 0 !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+    background: rgba(0,0,0,0.4) !important;
+}
+
+.yui-panel-container.yui-dialog .underlay {
+    display: none !important;
+}
+
+.yui-panel-container.yui-dialog .yui-panel {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    max-width: 600px !important;
+    max-height: calc(100vh - 40px) !important;
+    margin: 0 !important;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    border-radius: 12px !important;
+    background: #fff !important;
+}
+
+.yui-panel-container .yui-panel .hd {
+    flex-shrink: 0 !important;
+    padding: 20px 24px !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    border-bottom: 1px solid #e5e7eb !important;
+    background: #fff !important;
+}
+
+.yui-panel-container .yui-panel .bd {
+    flex: 1 1 auto !important;
+    overflow-y: auto !important;
+    padding: 24px !important;
+    min-height: 0 !important;
+}
+
+.yui-panel-container .yui-panel .ft {
+    flex-shrink: 0 !important;
+    padding: 20px 24px 24px 24px !important;
+    background: #f9fafb !important;
+    border-top: 1px solid #e5e7eb !important;
+    border-radius: 0 0 12px 12px !important;
+}
+
+.yui-panel-container .yui-panel .bd form {
+    max-width: 100% !important;
+}
+
+.yui-panel-container .yui-panel .bd .roundedBox {
+    border: none !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+}
+
+.yui-panel-container .yui-panel .bd .sectionHeader {
+    background: none !important;
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.yui-panel-container .yui-panel .bd .sectionHeader h2 {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #374151 !important;
+    margin: 0 !important;
+}
+
+.yui-panel-container .yui-panel .bd .formSectionContent {
+    padding: 0 !important;
+}
+
+.yui-panel-container .yui-panel .bd .inputGroup {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+}
+
+.yui-panel-container .yui-panel .bd .mainLabel {
+    width: 100% !important;
+}
+
+.yui-panel-container .yui-panel .bd .mainLabel label {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    color: #374151 !important;
+    text-transform: none !important;
+}
+
+.yui-panel-container .yui-panel .bd .mainLabel .requiredMarker {
+    color: #dc2626 !important;
+    margin-left: 2px !important;
+}
+
+.yui-panel-container .yui-panel .bd .options {
+    width: 100% !important;
+}
+
+.yui-panel-container .yui-panel .bd .optionsContent {
+    font-size: 14px !important;
+    color: #111827 !important;
+    font-weight: 400 !important;
+    padding: 8px 12px !important;
+    background: #f3f4f6 !important;
+    border-radius: 6px !important;
+}
+
+.yui-panel-container .yui-panel .bd .optionsContent .option {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.yui-panel-container .yui-panel .bd textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 100px !important;
+    padding: 10px 12px !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    background: #fff !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 6px !important;
+    box-sizing: border-box !important;
+    resize: vertical !important;
+    font-family: inherit !important;
+}
+
+/* Remove background from optionsContent when it contains textarea */
+.yui-panel-container .yui-panel .bd .optionsContent:has(textarea) {
+    background: transparent !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+.yui-panel-container .yui-panel .bd textarea:focus {
+    outline: none !important;
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 0 0 3px rgba(0, 96, 167, 0.1) !important;
+}
+
+.yui-panel-container .yui-panel .bd textarea::placeholder {
+    color: #aaa !important;
+    font-style: italic !important;
+}
+
+.yui-panel-container .yui-panel .bd select {
+    width: 100% !important;
+    padding: 10px 14px !important;
+    font-size: 14px !important;
+    background: #fff !important;
+    border: 1px solid var(--border-light, #e0e0e0) !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: border-color 0.2s !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 12px center !important;
+    padding-right: 36px !important;
+}
+
+.yui-panel-container .yui-panel .bd select:focus {
+    outline: none !important;
+    border-color: var(--color-primary) !important;
+}
+
+.yui-panel-container .yui-panel .bd input[type="text"],
+.yui-panel-container .yui-panel .bd input[type="email"] {
+    width: 100% !important;
+    padding: 10px 14px !important;
+    font-size: 14px !important;
+    background: #fff !important;
+    border: 1px solid var(--border-light, #e0e0e0) !important;
+    border-radius: 8px !important;
+    box-sizing: border-box !important;
+    transition: border-color 0.2s, box-shadow 0.2s !important;
+}
+
+.yui-panel-container .yui-panel .bd input[type="text"]:focus,
+.yui-panel-container .yui-panel .bd input[type="email"]:focus {
+    outline: none !important;
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 0 0 3px rgba(0, 96, 167, 0.1) !important;
 }
 
 /* YUI Simple Dialog styles */
@@ -7797,69 +8084,6 @@ div.grid_1_1#leftInnerGrid {
     font-size: 13px !important;
 }
 
-/* Modal footer button styling */
-.yui-panel .ft .button-group,
-.yui-dialog .ft .button-group,
-.yui-simple-dialog .ft .button-group {
-    display: flex !important;
-    gap: 12px !important;
-    justify-content: flex-end !important;
-    width: 100% !important;
-}
-
-.yui-panel .ft .button-group button,
-.yui-dialog .ft .button-group button,
-.yui-simple-dialog .ft .button-group button,
-.yui-panel .ft button,
-.yui-dialog .ft button,
-.yui-simple-dialog .ft button {
-    padding: 10px 24px !important;
-    font-size: 14px !important;
-    font-weight: 600 !important;
-    background-color: var(--color-primary) !important;
-    color: var(--color-white) !important;
-    border: 1px solid var(--color-primary) !important;
-    border-radius: 6px !important;
-    cursor: pointer !important;
-    transition: all 0.2s ease !important;
-    min-width: 80px !important;
-}
-
-.yui-panel .ft .button-group button:hover,
-.yui-dialog .ft .button-group button:hover,
-.yui-simple-dialog .ft .button-group button:hover,
-.yui-panel .ft button:hover,
-.yui-dialog .ft button:hover,
-.yui-simple-dialog .ft button:hover {
-    background-color: var(--color-primary-light) !important;
-    border-color: var(--color-primary-light) !important;
-    transform: translateY(-1px) !important;
-    box-shadow: none !important;
-}
-
-/* Secondary/Cancel buttons in modals */
-.yui-panel .ft button.secondary,
-.yui-dialog .ft button.secondary,
-.yui-simple-dialog .ft button.secondary,
-.yui-panel .ft button[type="button"]:not(.default),
-.yui-dialog .ft button[type="button"]:not(.default),
-.yui-simple-dialog .ft button[type="button"]:not(.default) {
-    background-color: var(--color-white) !important;
-    color: var(--color-gray) !important;
-    border: 1px solid var(--border) !important;
-}
-
-.yui-panel .ft button.secondary:hover,
-.yui-dialog .ft button.secondary:hover,
-.yui-simple-dialog .ft button.secondary:hover,
-.yui-panel .ft button[type="button"]:not(.default):hover,
-.yui-dialog .ft button[type="button"]:not(.default):hover,
-.yui-simple-dialog .ft button[type="button"]:not(.default):hover {
-    background-color: var(--bg-light) !important;
-    color: var(--color-dark) !important;
-    border-color: var(--color-gray) !important;
-    box-shadow: none !important;
-}
 
 /* Ensure modal is on top of everything */
 body.yui-skin-sam .yui-panel-container {
@@ -7942,64 +8166,6 @@ div[id*="panel"] {
     line-height: 1.2 !important;
 }
 
-/* Modal footer with multiple buttons */
-.yui-panel .ft,
-.yui-dialog .ft {
-    display: flex !important;
-    gap: 12px !important;
-    justify-content: flex-end !important;
-    padding: 16px 20px !important;
-    background-color: var(--bg-light) !important;
-    border-top: 1px solid var(--border) !important;
-}
-
-/* Style buttons that are direct children or in spans */
-.yui-panel .ft span.yui-button,
-.yui-dialog .ft span.yui-button {
-    margin: 0 !important;
-}
-
-.yui-panel .ft span.yui-button button,
-.yui-dialog .ft span.yui-button button {
-    padding: 10px 20px !important;
-    font-size: 14px !important;
-    font-weight: 600 !important;
-    border-radius: 6px !important;
-    cursor: pointer !important;
-    transition: all 0.2s ease !important;
-}
-
-/* Primary/Submit button */
-.yui-panel .ft span.yui-button.yui-submit-button button,
-.yui-dialog .ft span.yui-button.yui-submit-button button,
-.yui-panel .ft button.default,
-.yui-dialog .ft button.default {
-    background-color: var(--color-primary) !important;
-    color: var(--color-white) !important;
-    border: 1px solid var(--color-primary) !important;
-}
-
-.yui-panel .ft span.yui-button.yui-submit-button button:hover,
-.yui-dialog .ft span.yui-button.yui-submit-button button:hover,
-.yui-panel .ft button.default:hover,
-.yui-dialog .ft button.default:hover {
-    background-color: var(--color-primary-light) !important;
-    border-color: var(--color-primary-light) !important;
-}
-
-/* Cancel/Secondary button */
-.yui-panel .ft span.yui-button:not(.yui-submit-button) button,
-.yui-dialog .ft span.yui-button:not(.yui-submit-button) button {
-    background-color: var(--color-white) !important;
-    color: var(--color-dark) !important;
-    border: 1px solid var(--border) !important;
-}
-
-.yui-panel .ft span.yui-button:not(.yui-submit-button) button:hover,
-.yui-dialog .ft span.yui-button:not(.yui-submit-button) button:hover {
-    background-color: var(--bg-light) !important;
-    border-color: var(--color-gray) !important;
-}
 
 /* ========== YUI CALENDAR - WITHOUT yui-skin-sam PREFIX ========== */
 /* In case body doesn't have yui-skin-sam class */
@@ -9653,6 +9819,75 @@ img.calendarIcon {
     .dashboard .formSectionContent .mainLabelContent {
         display: flex;
         justify-content: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .yui-panel-container.yui-dialog {
+        padding: 0 !important;
+        background: #fff !important;
+    }
+
+    .yui-panel-container.yui-dialog .yui-panel {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .yui-panel-container .yui-panel .hd {
+        padding: 16px !important;
+        padding-right: 48px !important;
+        font-size: 16px !important;
+    }
+
+    .yui-panel-container .yui-panel .bd {
+        padding: 16px !important;
+    }
+
+    .yui-panel-container .yui-panel .ft {
+        padding: 16px !important;
+    }
+
+    .yui-dialog .ft .button-group {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 12px !important;
+        width: 100% !important;
+    }
+
+    .yui-dialog .ft .button-group .yui-button,
+    .yui-dialog .ft span.yui-button {
+        flex: 1 !important;
+        display: flex !important;
+        float: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
+        border: none !important;
+    }
+
+    .yui-dialog .ft .button-group .yui-button .first-child,
+    .yui-dialog .ft span.yui-button .first-child {
+        display: flex !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
+        border: none !important;
+    }
+
+    .yui-dialog .ft .button-group .yui-button button,
+    .yui-dialog .ft span.yui-button button {
+        width: 100% !important;
+        padding: 14px 16px !important;
+        margin: 0 !important;
+    }
+
+    .yui-panel-container.yui-dialog .underlay {
+        display: none !important;
     }
 }
 
