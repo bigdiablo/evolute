@@ -8525,12 +8525,6 @@ img.calendarIcon {
 
 /* Lead Channels list - make name links clickable/prominent */
 .dashboard .channels table.nestedListTable td a {
-    color: var(--color-primary) !important;
-    font-weight: 600 !important;
-    text-decoration: none !important;
-}
-
-.dashboard .channels table.nestedListTable td a:hover {
     text-decoration: underline !important;
 }
 
