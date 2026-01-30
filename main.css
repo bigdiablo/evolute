@@ -8835,7 +8835,6 @@ img.calendarIcon {
     }
 
     .dashboard .paginationContainer:has(.results) {
-        flex-direction: row !important;
         align-items: center !important;
         justify-content: center !important;
     }
@@ -8987,7 +8986,12 @@ img.calendarIcon {
 
     /* Proposals responsive */
     .dashboard #validationErrors {
-        margin: 20px 16px;
+        max-width: 100% !important;
+    }
+
+    .dashboard #validationErrors ol li {
+        width: 100%;
+        margin: 0 !important;
     }
 
     /* Wholesale Orders responsive */
