@@ -607,35 +607,6 @@ body.login {
     display: none !important;
 }
 
-@media (max-width: 425px) {
-
-    .login form[name="changePasswordForm"] {
-        width: 100%;
-    }
-
-    body.login {
-        padding: 0 24px;
-    }
-
-    body.login #Header,
-    .login #Main {
-        width: 100%;
-    }
-
-    body.login div.roundedBox {
-        width: 100%;
-    }
-
-    body.login .grid_450px_350px {
-        width: 100%;
-    }
-
-    body.login .grid_450px_350px .secondary {
-        width: 100%;
-    }
-
-}
-
 /* ========== SIDEBAR ========== */
 
 .dashboard .clear {
@@ -1432,98 +1403,6 @@ body.login {
 .dashboard #SubNavigation.subtabs ul li a[href*="invoice/view"]::before {
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z'/%3E%3Cpath d='M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8'/%3E%3Cpath d='M12 17.5v-11'/%3E%3C/svg%3E");
     mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z'/%3E%3Cpath d='M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8'/%3E%3Cpath d='M12 17.5v-11'/%3E%3C/svg%3E");
-}
-
-@media (max-width: 768px) {
-
-    .dashboard #MainContent {
-        padding: 16px !important;
-    }
-
-    .dashboard #MainTitle {
-        font-size: 18px;
-        margin: 0 0 16px;
-    }
-
-    /* Tables Mobile - Enable Horizontal Scroll */
-    .dashboard .ordersTable,
-    .dashboard #connectionsTable,
-    .dashboard table.nestedListTable {
-        display: block !important;
-        overflow-x: auto !important;
-        -webkit-overflow-scrolling: touch !important;
-        white-space: nowrap !important;
-    }
-
-    .dashboard .ordersTable thead,
-    .dashboard .ordersTable tbody,
-    .dashboard .ordersTable tr {
-        display: table !important;
-        width: 100% !important;
-    }
-
-    /* Grid Layouts - Stack on Mobile */
-    .dashboard .grid_580px_240px,
-    .dashboard .grid_200px_n {
-        grid-template-columns: 1fr !important;
-    }
-
-    /* Forms Mobile */
-    .dashboard .inputGroup {
-        padding: 12px 0 !important;
-    }
-
-    .dashboard .mainLabel {
-        width: 100% !important;
-        margin-bottom: 8px !important;
-    }
-
-    .dashboard .options {
-        width: 100% !important;
-    }
-
-    /* Buttons Mobile */
-    .dashboard .buttonGroup {
-        flex-direction: column !important;
-        gap: 8px !important;
-        width: 100% !important;
-    }
-
-    .dashboard .yui-button {
-        width: 100% !important;
-    }
-
-    .dashboard .yui-button .first-child a {
-        width: 100% !important;
-        justify-content: center !important;
-    }
-
-    /* Pagination Mobile */
-    .dashboard .pagination ul {
-        flex-wrap: wrap !important;
-        gap: 4px !important;
-    }
-
-    .dashboard .pagination ul li {
-        min-width: 32px !important;
-    }
-
-    .dashboard .pagination ul li:first-child,
-    .dashboard .pagination ul li:last-child {
-        display: none !important;
-    }
-
-    /* Boxes and Cards Mobile */
-    .dashboard .roundedBox,
-    .dashboard .blueBox,
-    .dashboard .greenBox,
-    .dashboard .redBox {
-        margin: 0 0 16px 0 !important;
-    }
-
-    .dashboard .boxContent {
-        padding: 16px !important;
-    }
 }
 
 /* ========== MAIN ========== */
@@ -2849,24 +2728,6 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .ordersTable td {
     white-space: normal !important;
     word-wrap: break-word !important;
-}
-
-@media (max-width: 768px) {
-    .dashboard #leadChannelsListTable thead .actions .paginationTop:first-child,
-    .dashboard #leadChannelsListTable thead .colheaders {
-        display: none !important;
-    }
-
-    .dashboard #leadChannelsListTable thead .actions .paginationTop {
-        padding: 16px !important;
-        display: flex !important;
-        justify-content: center !important;
-    }
-
-    .dashboard #leadChannelsListTable thead .actions .paginationTop .buttonGroup {
-        justify-content: center !important;
-        width: 100% !important;
-    }
 }
 
 /* Connections table wrapper - enable horizontal scroll */
@@ -4468,567 +4329,6 @@ div.grid_1_1#leftInnerGrid {
     color: var(--color-gray);
 }
 
-/* ========== RESPONSIVE ========== */
-
-@media (max-width: 1024px) {
-    .dashboard #Main {
-        margin-left: 0;
-        margin-top: 60px;
-    }
-
-    .dashboard .grid_200px_n {
-        flex-direction: column;
-    }
-
-    .dashboard .grid_200px_n > .secondary {
-        width: 100%;
-        order: -1;
-    }
-
-    .dashboard .grid_580px_240px {
-        grid-template-columns: 1fr;
-    }
-
-    .dashboard .grid_580px_240px .column2 {
-        order: -1;
-    }
-
-    .dashboard .integrationOptions {
-        grid-template-columns: 1fr !important;
-    }
-
-    .dashboard .gridWrapper .grid_1_1 {
-        grid-template-columns: 1fr !important;
-    }
-
-    /* Search filter responsive */
-    .dashboard #search {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
-
-    .dashboard #search #checkBoxDiv {
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-
-    .dashboard #search #searchButtonDiv {
-        margin-left: 0;
-        width: 100%;
-    }
-
-    .dashboard #search #searchButtonDiv .yui-button {
-        width: 100%;
-    }
-
-    .dashboard #search #searchButtonDiv .yui-button button {
-        width: 100%;
-    }
-
-    .dashboard .inputGroup {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .dashboard .mainLabel {
-        width: 100%;
-        text-align: left;
-        padding: 0 0 8px;
-    }
-
-    .dashboard select {
-        min-width: 100%;
-        max-width: 100%;
-    }
-
-    .dashboard .formSectionContent .inputGroup {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .dashboard .formSectionContent .mainLabel {
-        width: 100%;
-        text-align: left;
-        padding: 0 0 4px;
-    }
-
-    .dashboard .formSectionContent .mainLabelContent {
-        padding-right: 0;
-    }
-
-    .dashboard .formSectionContent .textInput {
-        max-width: 100%;
-    }
-
-    .dashboard .reportContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
-
-    .dashboard .reportContainer .reportLink {
-        min-width: auto;
-    }
-
-    .dashboard .reportContainer .reportLink2 {
-        align-self: flex-start;
-    }
-
-    .dashboard #formContainer .inputGroup {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .dashboard #formContainer .mainLabel {
-        width: 100%;
-        text-align: left;
-        padding: 0 0 4px;
-    }
-
-    .dashboard #formContainer select {
-        max-width: 100%;
-    }
-
-    .dashboard .ordersTable {
-        display: flex !important;
-        flex-direction: column !important;
-        overflow-x: visible !important;
-        min-width: 0 !important;
-        width: 100% !important;
-    }
-
-    .dashboard .ordersTable thead {
-        order: 1;
-    }
-
-    .dashboard .ordersTable thead tr.colheaders {
-        display: none !important;
-    }
-
-    .dashboard .ordersTable thead tr.actions {
-        display: block;
-    }
-
-    .dashboard .ordersTable thead tr.actions td.paginationTop:first-child {
-        display: block;
-        padding: 24px 16px;
-    }
-
-    .dashboard .ordersTable thead tr.actions td.paginationTop:last-child {
-        display: block;
-        padding: 0;
-    }
-
-    .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 100;
-        padding: 0 !important;
-        width: auto !important;
-    }
-
-    .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup .yui-button {
-        background: transparent !important;
-        border: none !important;
-    }
-
-    .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup .yui-button .first-child {
-        background: transparent !important;
-        border: none !important;
-    }
-
-    .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup .yui-button .first-child a {
-        box-shadow: 0 4px 12px rgba(0, 96, 167, 0.3);
-    }
-
-    .dashboard .ordersTable tbody {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        order: 2;
-        padding: 16px;
-    }
-
-    .dashboard .ordersTable tbody tr {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        background: var(--color-white);
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    }
-
-    .dashboard .ordersTable tbody tr td {
-        display: flex !important;
-        justify-content: space-between;
-        align-items: center;
-        padding: 12px 16px;
-        border-bottom: 1px solid var(--border);
-        text-align: right;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .dashboard .ordersTable tbody tr:hover td {
-        background-color: transparent !important;
-    }
-
-    .dashboard .ordersTable tbody tr td:last-child {
-        border-bottom: none;
-    }
-
-    .dashboard .ordersTable tbody tr td::before {
-        font-size: 12px;
-        font-weight: 500;
-        color: var(--color-gray);
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        flex-shrink: 0;
-        margin-right: 16px;
-        text-align: left;
-    }
-
-    .dashboard .ordersTable tbody tr td.first::before {
-        content: "ID";
-    }
-
-    .dashboard .ordersTable tbody tr td:nth-child(2)::before {
-        content: "Name";
-    }
-
-    .dashboard .ordersTable tbody tr td:nth-child(3)::before {
-        content: "Consumer Brand";
-    }
-
-    .dashboard .ordersTable tbody tr td.status::before {
-        content: "Status";
-    }
-
-    .dashboard .ordersTable tbody tr td:nth-child(5)::before {
-        content: "Lead Category";
-    }
-
-    .dashboard .ordersTable tbody tr td:nth-child(6)::before {
-        content: "Delivery Method";
-    }
-
-    .dashboard .ordersTable tbody tr td:nth-child(7),
-    .dashboard .ordersTable tbody tr td:nth-child(8),
-    .dashboard .ordersTable tbody tr td:nth-child(9),
-    .dashboard .ordersTable tbody tr td:nth-child(10) {
-        display: flex !important;
-        width: 25% !important;
-        flex: none !important;
-        border-bottom: none;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        gap: 4px;
-        padding: 12px 8px;
-    }
-
-    .dashboard .ordersTable tbody tr td:nth-child(7)::before {
-        content: "P";
-        margin-right: 0;
-    }
-
-    .dashboard .ordersTable tbody tr td:nth-child(8)::before {
-        content: "C";
-        margin-right: 0;
-    }
-
-    .dashboard .ordersTable tbody tr td:nth-child(9)::before {
-        content: "V";
-        margin-right: 0;
-    }
-
-    .dashboard .ordersTable tbody tr td:nth-child(10)::before {
-        content: "NR";
-        margin-right: 0;
-    }
-
-
-    .dashboard .ordersTable tbody tr td:nth-child(6) {
-        border-bottom: none;
-    }
-
-    .dashboard .ordersTable tbody tr td.right {
-        text-align: right;
-    }
-
-    .dashboard .ordersTable tfoot {
-        display: block;
-        order: 3;
-        background: var(--color-white);
-        border-top: 1px solid var(--border);
-    }
-
-    .dashboard .paginationContainer {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        width: 100% !important;
-    }
-
-    .dashboard .paginationContainer:has(.results) {
-        flex-direction: row !important;
-        align-items: center !important;
-        justify-content: center !important;
-    }
-
-    .dashboard .paginationContainer .pagination {
-        width: 100% !important;
-    }
-
-    .dashboard .paginationContainer .pagination:has(ul) {
-        width: auto !important;
-    }
-
-    .dashboard .paginationContainer .pagination ul {
-        width: 100% !important;
-        justify-content: center !important;
-    }
-
-    .dashboard .sellerHomeContentBoxL .roundedBox,
-    .dashboard .sellerHomeContentBoxR .roundedBox {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-    }
-
-    .dashboard .sellerHomeContentBoxL,
-    .dashboard .sellerHomeContentBoxR {
-        display: grid !important;
-        grid-template-columns: 1fr !important;
-        width: 100% !important;
-    }
-
-    .dashboard #leftInnerGrid {
-        flex-direction: column !important;
-    }
-
-    .dashboard #leftInnerGrid > .column {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 16px !important;
-    }
-
-    .dashboard .gridWrapper .grid_1_1 {
-        grid-template-columns: 1fr !important;
-    }
-
-    .dashboard .gridWrapper .grid_1_1 .column {
-        width: 100% !important;
-    }
-
-    .dashboard .grid_600px_340px {
-        flex-direction: column !important;
-    }
-
-    .dashboard .grid_600px_340px .primary {
-        width: 100% !important;
-    }
-
-    .dashboard .ordersTable tfoot tr.actions,
-    .dashboard .ordersTable tfoot tr.actions td.paginationBottom {
-        display: flex;
-        width: 100% !important;
-    }
-
-    .dashboard #PrimaryContent div:has(.nestedListTable) {
-        width: 100% !important;
-    }
-
-    /* Lead Channel Detail responsive */
-    .dashboard .channelInfo {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-    }
-
-    .dashboard .channelInfo h2.headerLeft {
-        width: 100%;
-    }
-
-    .dashboard .channelInfo h2.headerRight {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .dashboard .labelValue {
-        flex-direction: column;
-        gap: 4px;
-    }
-
-    .dashboard .labelValue .label {
-        width: 100%;
-    }
-
-    #dailyLeadLimits thead th:first-child {
-        width: 50%;
-    }
-
-    .dashboard .grid_600px_340px .secondary {
-        width: 100% !important;
-        margin-top: 24px;
-    }
-
-    .dashboard .blueBox img.sidebar {
-        float: none;
-        display: block;
-        margin: 0 auto 16px;
-    }
-
-    /* My Orders responsive */
-    .dashboard .ordersTable #search {
-        flex-direction: column;
-    }
-
-    .dashboard .ordersTable #selectorDiv {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .dashboard .ordersTable #friendSearchContainer,
-    .dashboard .ordersTable #productDiv {
-        width: 100%;
-        min-width: 0;
-        margin: 0 !important;
-    }
-
-    .dashboard #search #selectorDiv {
-        width: 100%;
-    }
-
-    .dashboard .ordersTable #friendId {
-        min-width: 100%;
-        max-width: 100%;
-    }
-
-    .dashboard .ordersTable #checkBoxDiv {
-        flex-wrap: wrap;
-    }
-
-    .dashboard .ordersTable #searchButtonDiv {
-        width: 100%;
-    }
-
-    .dashboard .ordersTable .searchOrders {
-        width: 100%;
-    }
-
-    .dashboard .ordersTable .searchOrders button {
-        width: 100%;
-    }
-
-    /* Proposals responsive */
-    .dashboard #validationErrors {
-        margin: 20px 16px;
-    }
-
-    /* Wholesale Orders responsive */
-    .dashboard .ordersTable .oliDiv {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    /* Connections responsive */
-    .dashboard .ordersTable .expando.control {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .dashboard .ordersTable .parentRow td {
-        display: block;
-        width: 100%;
-        padding: 8px 16px;
-    }
-
-    .dashboard .ordersTable .innerheader {
-        display: none;
-    }
-
-    .dashboard .ordersTable .productDetails {
-        display: flex;
-        justify-content: space-between;
-        padding: 8px 16px;
-    }
-
-    .dashboard .ordersTable .productDetails::before {
-        content: attr(data-label);
-        font-weight: 500;
-        color: var(--color-gray);
-    }
-
-    /* Lead Channels Wizard responsive */
-    .dashboard .grid_1_1 {
-        grid-template-columns: 1fr;
-    }
-
-    .dashboard #iliWizardSteps ul {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .dashboard #iliWizardSteps ul li {
-        width: 100%;
-    }
-
-    .dashboard .grid_600px_340px {
-        flex-direction: column;
-    }
-
-    .dashboard .grid_600px_340px .primary {
-        width: 100%;
-    }
-
-    .dashboard .grid_600px_340px .secondary {
-        width: 100%;
-    }
-
-    .dashboard .wizard-integration-details img.sidebar {
-        float: none;
-        display: block;
-        margin: 0 auto 16px;
-    }
-
-    /* Wizard form fields responsive */
-    .dashboard .formSectionContent .inputGroup {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .dashboard .formSectionContent .mainLabel {
-        width: 100%;
-        text-align: left;
-        padding-right: 0;
-        margin-bottom: 8px;
-    }
-
-    .dashboard .formSectionContent .options {
-        width: 100%;
-    }
-
-    .dashboard .formSectionContent .textInput,
-    .dashboard .formSectionContent select,
-    .dashboard .formSectionContent textarea {
-        max-width: 100%;
-    }
-
-    .dashboard .formSectionContent .optionsContent > div[style*="float: left"] {
-        width: 100% !important;
-        margin-right: 0;
-    }
-
-    .dashboard .formSectionContent .buttonGroup {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-}
-
 /* ========== SETTINGS TABLES (nestedListTable) ========== */
 
 .dashboard .settings table.nestedListTable {
@@ -5502,106 +4802,6 @@ div.grid_1_1#leftInnerGrid {
 /* Clear floats */
 .dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .clear {
     display: none !important;
-}
-
-@media (max-width: 900px) {
-    .dashboard .settings .noticePeriodsContainer {
-        grid-template-columns: 1fr !important;
-    }
-}
-
-/* Responsive: Stack columns on smaller screens */
-@media (max-width: 1400px) {
-    .dashboard .settings .grid_1_1 {
-        grid-template-columns: 1fr !important;
-    }
-}
-
-/* Additional responsive adjustments for auction tables */
-@media (max-width: 1200px) {
-    .dashboard .settings .sellerBidMinimum thead th {
-        font-size: 10px !important;
-        padding: 8px 6px !important;
-    }
-
-    .dashboard .settings .sellerBidMinimum tbody td {
-        padding: 8px 6px !important;
-        font-size: 13px !important;
-    }
-
-    .dashboard .settings .sellerBidMinimum tbody td.price input.textInput {
-        max-width: 80px !important;
-        min-width: 50px !important;
-        padding: 6px !important;
-        font-size: 13px !important;
-    }
-}
-
-@media (max-width: 768px) {
-    .dashboard .settings .sellerBidMinimum {
-        font-size: 12px !important;
-    }
-
-    .dashboard .settings .sellerBidMinimum thead th {
-        font-size: 9px !important;
-        padding: 6px 4px !important;
-    }
-
-    .dashboard .settings .sellerBidMinimum tbody td {
-        padding: 6px 4px !important;
-        font-size: 12px !important;
-    }
-
-    .dashboard .settings .sellerBidMinimum tbody td.price input.textInput {
-        max-width: 60px !important;
-        min-width: 45px !important;
-        padding: 4px !important;
-        font-size: 12px !important;
-    }
-
-    .dashboard .settings .roundedBox.bbLeft h4,
-    .dashboard .settings .roundedBox.bbRight h4 {
-        font-size: 13px !important;
-        padding: 12px 14px !important;
-    }
-
-    /* Settings Forms Mobile */
-    .dashboard .settings .inputGroup {
-        flex-direction: column !important;
-        padding: 12px 0 !important;
-    }
-
-    .dashboard .settings .mainLabel {
-        width: 100% !important;
-        margin-bottom: 8px !important;
-    }
-
-    .dashboard .settings .options {
-        width: 100% !important;
-    }
-
-    .dashboard .settings select,
-    .dashboard .settings input[type="text"],
-    .dashboard .settings textarea {
-        width: 100% !important;
-        font-size: 16px !important;
-    }
-
-    /* Settings Page Title */
-    .dashboard .settings .roundedBox .hdr h2 {
-        font-size: 16px !important;
-    }
-
-    /* Settings Containers */
-    .dashboard .settings .formSectionContent {
-        padding: 16px !important;
-    }
-
-    /* Settings Grid Layouts */
-    .dashboard .settings .grid_1_1 {
-        grid-template-columns: 1fr !important;
-        gap: 16px !important;
-    }
 }
 
 /* ========== PROMOTIONAL URL SETTINGS ========== */
@@ -6958,19 +6158,6 @@ div.grid_1_1#leftInnerGrid {
     color: var(--color-gray) !important;
 }
 
-/* Responsive for Step 1 grid */
-@media (max-width: 992px) {
-    .dashboard #formContainer .formSectionContent > ul.text {
-        grid-template-columns: repeat(2, 1fr) !important;
-    }
-}
-
-@media (max-width: 640px) {
-    .dashboard #formContainer .formSectionContent > ul.text {
-        grid-template-columns: 1fr !important;
-    }
-}
-
 /* ========== CREATE PROPOSAL - STEP 2 (FILTERS/PRICE/SETTINGS) ========== */
 
 /* Outer container */
@@ -7611,21 +6798,6 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard table.pricegrid tbody tr.estimate td.estimate {
     text-align: center !important;
-}
-
-/* Responsive price grid */
-@media (max-width: 1200px) {
-    .dashboard table.pricegrid {
-        display: block !important;
-        overflow-x: auto !important;
-        -webkit-overflow-scrolling: touch !important;
-    }
-
-    .dashboard table.pricegrid input.textInput {
-        width: 70px !important;
-        padding: 8px 10px !important;
-        font-size: 13px !important;
-    }
 }
 
 /* Checkbox grid (State filters) */
@@ -9111,158 +8283,6 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button:hover {
     display: none;
 }
 
-@media (max-width: 768px) {
-    #mobilemenu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        height: 60px;
-        padding: 0 24px;
-        z-index: 666;
-        background: var(--color-white);
-        border-bottom: 1px solid var(--border);
-    }
-
-    #mobilemenu .logo {
-        display: flex;
-    }
-
-    #mobilemenu .logo svg {
-        height: 30px;
-        width: auto;
-    }
-
-    #mobilebutton {
-        position: relative;
-        width: 30px;
-        height: 30px;
-        padding: 0;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-    }
-
-    #mobilebutton svg {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 24px;
-        height: 24px;
-        fill: none;
-        stroke: var(--color-dark, #333);
-        stroke-width: 2;
-        stroke-linecap: round;
-        transition: opacity 0.25s, transform 0.25s;
-    }
-
-    #mobilebutton .close {
-        opacity: 0;
-        transform: translate(-50%, -50%) rotate(-90deg) scale(0.8);
-    }
-
-    #mobilebutton.open .menu {
-        opacity: 0;
-        transform: translate(-50%, -50%) rotate(90deg) scale(0.8);
-    }
-
-    #mobilebutton.open .close {
-        opacity: 1;
-        transform: translate(-50%, -50%) rotate(0) scale(1);
-    }
-
-    .dashboard #Header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-        border-right: none;
-    }
-
-    .dashboard #HeaderContent {
-        position: fixed;
-        top: 60px;
-        left: 0;
-        overflow-y: scroll;
-        height: calc(100% - 60px);
-        padding: 20px 0;
-        background-color: var(--color-white);
-        transition: transform .3s ease;
-        transform: translateX(100%);
-    }
-
-    .dashboard #HeaderContent.open {
-        transform: translateX(0);
-    }
-
-    .dashboard #logoDiv {
-        display: none;
-    }
-
-    .dashboard #toolbar,
-    .dashboard #Navigation {
-        padding: 0 24px;
-    }
-
-    .dashboard #toolbar *,
-    .dashboard #toolbar *::after,
-    .dashboard #toolbar *::before,
-    .dashboard #Navigation *,
-    .dashboard #Navigation *::after,
-    .dashboard #Navigation *::before,
-    .dashboard #SubNavigation *,
-    .dashboard #SubNavigation *::after,
-    .dashboard #SubNavigation *::before {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-
-    .dashboard #MainNavigation.tabs ul li a,
-    .dashboard #SubNavigation.subtabs ul li a {
-        padding: 6px 0 !important;
-    }
-
-    .dashboard #MainNavigation.tabs ul li.selected a,
-    .dashboard #MainNavigation.tabs ul li.current a,
-    .dashboard #links a:hover,
-    .dashboard #MainNavigation.tabs ul li a:hover,
-    .dashboard #SubNavigation.subtabs ul li a:hover {
-        background-color: transparent !important;
-    }
-
-    .dashboard #MainNavigation.tabs ul li.selected a,
-    .dashboard #MainNavigation.tabs ul li.current a {
-        color: var(--color-primary) !important;
-    }
-
-    .dashboard #MainNavigation.tabs ul li.selected a::after,
-    .dashboard #MainNavigation.tabs ul li.current a::after,
-    .dashboard #SubNavigation.subtabs ul li.current a::after {
-        content: '';
-        display: flex;
-        margin-left: auto;
-        width: 16px;
-        height: 16px;
-        background-color: var(--color-primary);
-        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
-        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-size: contain;
-        mask-size: contain;
-    }
-
-    .dashboard #SubNavigation.subtabs ul li.current a {
-        color: var(--color-primary) !important;
-        background-color: transparent !important;
-    }
-}
-
 /* Datepicker / Calendar fixes */
 .yui-calcontainer {
     position: absolute !important;
@@ -9514,75 +8534,771 @@ img.calendarIcon {
     text-decoration: underline !important;
 }
 
-/* ============================================
-   TABLET BREAKPOINT (max-width: 992px)
-   ============================================ */
+@media (max-width: 1400px) {
+    .dashboard .settings .grid_1_1 {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .dashboard .settings .sellerBidMinimum thead th {
+        font-size: 10px !important;
+        padding: 8px 6px !important;
+    }
+
+    .dashboard .settings .sellerBidMinimum tbody td {
+        padding: 8px 6px !important;
+        font-size: 13px !important;
+    }
+
+    .dashboard .settings .sellerBidMinimum tbody td.price input.textInput {
+        max-width: 80px !important;
+        min-width: 50px !important;
+        padding: 6px !important;
+        font-size: 13px !important;
+    }
+
+    .dashboard table.pricegrid {
+        display: block !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+
+    .dashboard table.pricegrid input.textInput {
+        width: 70px !important;
+        padding: 8px 10px !important;
+        font-size: 13px !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .dashboard #Main {
+        margin-left: 0;
+        margin-top: 60px;
+    }
+
+    .dashboard .grid_200px_n {
+        flex-direction: column;
+    }
+
+    .dashboard .grid_200px_n > .secondary {
+        width: 100%;
+        order: -1;
+    }
+
+    .dashboard .grid_580px_240px {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard .grid_580px_240px .column2 {
+        order: -1;
+    }
+
+    .dashboard .integrationOptions {
+        grid-template-columns: 1fr !important;
+    }
+
+    .dashboard .gridWrapper .grid_1_1 {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Search filter responsive */
+    .dashboard #search {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .dashboard #search #checkBoxDiv {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .dashboard #search #searchButtonDiv {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .dashboard #search #searchButtonDiv .yui-button {
+        width: 100%;
+    }
+
+    .dashboard #search #searchButtonDiv .yui-button button {
+        width: 100%;
+    }
+
+    .dashboard .inputGroup {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard .mainLabel {
+        width: 100%;
+        text-align: left;
+        padding: 0 0 8px;
+    }
+
+    .dashboard select {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .dashboard .formSectionContent .inputGroup {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard .formSectionContent .mainLabel {
+        width: 100%;
+        text-align: left;
+        padding: 0 0 4px;
+    }
+
+    .dashboard .formSectionContent .mainLabelContent {
+        padding-right: 0;
+    }
+
+    .dashboard .formSectionContent .textInput {
+        max-width: 100%;
+    }
+
+    .dashboard .reportContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .dashboard .reportContainer .reportLink {
+        min-width: auto;
+    }
+
+    .dashboard .reportContainer .reportLink2 {
+        align-self: flex-start;
+    }
+
+    .dashboard #formContainer .inputGroup {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard #formContainer .mainLabel {
+        width: 100%;
+        text-align: left;
+        padding: 0 0 4px;
+    }
+
+    .dashboard #formContainer select {
+        max-width: 100%;
+    }
+
+    .dashboard .ordersTable {
+        display: flex !important;
+        flex-direction: column !important;
+        overflow-x: visible !important;
+        min-width: 0 !important;
+        width: 100% !important;
+    }
+
+    .dashboard .ordersTable thead {
+        order: 1;
+    }
+
+    .dashboard .ordersTable thead tr.colheaders {
+        display: none !important;
+    }
+
+    .dashboard .ordersTable thead tr.actions {
+        display: block;
+    }
+
+    .dashboard .ordersTable thead tr.actions td.paginationTop:first-child {
+        display: block;
+        padding: 24px 16px;
+    }
+
+    .dashboard .ordersTable thead tr.actions td.paginationTop:last-child {
+        display: block;
+        padding: 0;
+    }
+
+    .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 100;
+        padding: 0 !important;
+        width: auto !important;
+    }
+
+    .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup .yui-button {
+        background: transparent !important;
+        border: none !important;
+    }
+
+    .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup .yui-button .first-child {
+        background: transparent !important;
+        border: none !important;
+    }
+
+    .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup .yui-button .first-child a {
+        box-shadow: 0 4px 12px rgba(0, 96, 167, 0.3);
+    }
+
+    .dashboard .ordersTable tbody {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        order: 2;
+        padding: 16px;
+    }
+
+    .dashboard .ordersTable tbody tr {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        background: var(--color-white);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .dashboard .ordersTable tbody tr td {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--border);
+        text-align: right;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .dashboard .ordersTable tbody tr:hover td {
+        background-color: transparent !important;
+    }
+
+    .dashboard .ordersTable tbody tr td:last-child {
+        border-bottom: none;
+    }
+
+    .dashboard .ordersTable tbody tr td::before {
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--color-gray);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        flex-shrink: 0;
+        margin-right: 16px;
+        text-align: left;
+    }
+
+    .dashboard .ordersTable tbody tr td.first::before {
+        content: "ID";
+    }
+
+    .dashboard .ordersTable tbody tr td:nth-child(2)::before {
+        content: "Name";
+    }
+
+    .dashboard .ordersTable tbody tr td:nth-child(3)::before {
+        content: "Consumer Brand";
+    }
+
+    .dashboard .ordersTable tbody tr td.status::before {
+        content: "Status";
+    }
+
+    .dashboard .ordersTable tbody tr td:nth-child(5)::before {
+        content: "Lead Category";
+    }
+
+    .dashboard .ordersTable tbody tr td:nth-child(6)::before {
+        content: "Delivery Method";
+    }
+
+    .dashboard .ordersTable tbody tr td:nth-child(7),
+    .dashboard .ordersTable tbody tr td:nth-child(8),
+    .dashboard .ordersTable tbody tr td:nth-child(9),
+    .dashboard .ordersTable tbody tr td:nth-child(10) {
+        display: flex !important;
+        width: 25% !important;
+        flex: none !important;
+        border-bottom: none;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        padding: 12px 8px;
+    }
+
+    .dashboard .ordersTable tbody tr td:nth-child(7)::before {
+        content: "P";
+        margin-right: 0;
+    }
+
+    .dashboard .ordersTable tbody tr td:nth-child(8)::before {
+        content: "C";
+        margin-right: 0;
+    }
+
+    .dashboard .ordersTable tbody tr td:nth-child(9)::before {
+        content: "V";
+        margin-right: 0;
+    }
+
+    .dashboard .ordersTable tbody tr td:nth-child(10)::before {
+        content: "NR";
+        margin-right: 0;
+    }
+
+
+    .dashboard .ordersTable tbody tr td:nth-child(6) {
+        border-bottom: none;
+    }
+
+    .dashboard .ordersTable tbody tr td.right {
+        text-align: right;
+    }
+
+    .dashboard .ordersTable tfoot {
+        display: block;
+        order: 3;
+        background: var(--color-white);
+        border-top: 1px solid var(--border);
+    }
+
+    .dashboard .paginationContainer {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        width: 100% !important;
+    }
+
+    .dashboard .paginationContainer:has(.results) {
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .dashboard .paginationContainer .pagination {
+        width: 100% !important;
+    }
+
+    .dashboard .paginationContainer .pagination:has(ul) {
+        width: auto !important;
+    }
+
+    .dashboard .paginationContainer .pagination ul {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    .dashboard .sellerHomeContentBoxL .roundedBox,
+    .dashboard .sellerHomeContentBoxR .roundedBox {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .dashboard .sellerHomeContentBoxL,
+    .dashboard .sellerHomeContentBoxR {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+    }
+
+    .dashboard #leftInnerGrid {
+        flex-direction: column !important;
+    }
+
+    .dashboard #leftInnerGrid > .column {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+    }
+
+    .dashboard .gridWrapper .grid_1_1 {
+        grid-template-columns: 1fr !important;
+    }
+
+    .dashboard .gridWrapper .grid_1_1 .column {
+        width: 100% !important;
+    }
+
+    .dashboard .grid_600px_340px {
+        flex-direction: column !important;
+    }
+
+    .dashboard .grid_600px_340px .primary {
+        width: 100% !important;
+    }
+
+    .dashboard .ordersTable tfoot tr.actions,
+    .dashboard .ordersTable tfoot tr.actions td.paginationBottom {
+        display: flex;
+        width: 100% !important;
+    }
+
+    .dashboard #PrimaryContent div:has(.nestedListTable) {
+        width: 100% !important;
+    }
+
+    /* Lead Channel Detail responsive */
+    .dashboard .channelInfo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .dashboard .channelInfo h2.headerLeft {
+        width: 100%;
+    }
+
+    .dashboard .channelInfo h2.headerRight {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .dashboard .labelValue {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .dashboard .labelValue .label {
+        width: 100%;
+    }
+
+    #dailyLeadLimits thead th:first-child {
+        width: 50%;
+    }
+
+    .dashboard .grid_600px_340px .secondary {
+        width: 100% !important;
+        margin-top: 24px;
+    }
+
+    .dashboard .blueBox img.sidebar {
+        float: none;
+        display: block;
+        margin: 0 auto 16px;
+    }
+
+    /* My Orders responsive */
+    .dashboard .ordersTable #search {
+        flex-direction: column;
+    }
+
+    .dashboard .ordersTable #selectorDiv {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .dashboard .ordersTable #friendSearchContainer,
+    .dashboard .ordersTable #productDiv {
+        width: 100%;
+        min-width: 0;
+        margin: 0 !important;
+    }
+
+    .dashboard #search #selectorDiv {
+        width: 100%;
+    }
+
+    .dashboard .ordersTable #friendId {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .dashboard .ordersTable #checkBoxDiv {
+        flex-wrap: wrap;
+    }
+
+    .dashboard .ordersTable #searchButtonDiv {
+        width: 100%;
+    }
+
+    .dashboard .ordersTable .searchOrders {
+        width: 100%;
+    }
+
+    .dashboard .ordersTable .searchOrders button {
+        width: 100%;
+    }
+
+    /* Proposals responsive */
+    .dashboard #validationErrors {
+        margin: 20px 16px;
+    }
+
+    /* Wholesale Orders responsive */
+    .dashboard .ordersTable .oliDiv {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Connections responsive */
+    .dashboard .ordersTable .expando.control {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard .ordersTable .parentRow td {
+        display: block;
+        width: 100%;
+        padding: 8px 16px;
+    }
+
+    .dashboard .ordersTable .innerheader {
+        display: none;
+    }
+
+    .dashboard .ordersTable .productDetails {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 16px;
+    }
+
+    .dashboard .ordersTable .productDetails::before {
+        content: attr(data-label);
+        font-weight: 500;
+        color: var(--color-gray);
+    }
+
+    /* Lead Channels Wizard responsive */
+    .dashboard .grid_1_1 {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard #iliWizardSteps ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .dashboard #iliWizardSteps ul li {
+        width: 100%;
+    }
+
+    .dashboard .grid_600px_340px {
+        flex-direction: column;
+    }
+
+    .dashboard .grid_600px_340px .primary {
+        width: 100%;
+    }
+
+    .dashboard .grid_600px_340px .secondary {
+        width: 100%;
+    }
+
+    .dashboard .wizard-integration-details img.sidebar {
+        float: none;
+        display: block;
+        margin: 0 auto 16px;
+    }
+
+    /* Wizard form fields responsive */
+    .dashboard .formSectionContent .inputGroup {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard .formSectionContent .mainLabel {
+        width: 100%;
+        text-align: left;
+        padding-right: 0;
+        margin-bottom: 8px;
+    }
+
+    .dashboard .formSectionContent .options {
+        width: 100%;
+    }
+
+    .dashboard .formSectionContent .textInput,
+    .dashboard .formSectionContent select,
+    .dashboard .formSectionContent textarea {
+        max-width: 100%;
+    }
+
+    .dashboard .formSectionContent .optionsContent > div[style*="float: left"] {
+        width: 100% !important;
+        margin-right: 0;
+    }
+
+    .dashboard .formSectionContent .buttonGroup {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
 @media (max-width: 992px) {
     .dashboard .gridWrapper .grid_1_1 {
         grid-template-columns: repeat(2, 1fr) !important;
     }
 }
 
-/* ============================================
-   MOBILE BREAKPOINT (max-width: 768px)
-   ALL MOBILE STYLES CONSOLIDATED HERE
-   ============================================ */
+@media (max-width: 900px) {
+    .dashboard .settings .noticePeriodsContainer {
+        grid-template-columns: 1fr !important;
+    }
+}
+
 @media (max-width: 768px) {
 
-    /* --- FOOTER --- */
-    #Footer #FooterContent p:first-child {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        gap: 4px 8px !important;
-        text-align: center !important;
+    /* --- MOBILE MENU --- */
+    #mobilemenu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 60px;
+        padding: 0 24px;
+        z-index: 666;
+        background: var(--color-white);
+        border-bottom: 1px solid var(--border);
     }
-    #Footer #FooterContent p:first-child a {
-        white-space: nowrap !important;
+    #mobilemenu .logo {
+        display: flex;
+    }
+    #mobilemenu .logo svg {
+        height: 30px;
+        width: auto;
+    }
+    #mobilebutton {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    #mobilebutton svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 24px;
+        height: 24px;
+        fill: none;
+        stroke: var(--color-dark, #333);
+        stroke-width: 2;
+        stroke-linecap: round;
+        transition: opacity 0.25s, transform 0.25s;
+    }
+    #mobilebutton .close {
+        opacity: 0;
+        transform: translate(-50%, -50%) rotate(-90deg) scale(0.8);
+    }
+    #mobilebutton.open .menu {
+        opacity: 0;
+        transform: translate(-50%, -50%) rotate(90deg) scale(0.8);
+    }
+    #mobilebutton.open .close {
+        opacity: 1;
+        transform: translate(-50%, -50%) rotate(0) scale(1);
     }
 
-    /* --- PAGINATION --- */
-    .paginationContainer .pagination ul {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        gap: 6px !important;
-        justify-content: center !important;
-        padding: 0 !important;
-        margin: 0 !important;
+    /* --- HEADER / NAVIGATION --- */
+    .dashboard #Header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        border-right: none;
     }
-    .paginationContainer .pagination ul li {
-        display: inline-flex !important;
-        margin: 0 !important;
+    .dashboard #HeaderContent {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        overflow-y: scroll;
+        height: calc(100% - 60px);
+        padding: 20px 0;
+        background-color: var(--color-white);
+        transition: transform .3s ease;
+        transform: translateX(100%);
     }
-    .paginationContainer .pagination ul li a {
-        min-width: 36px !important;
-        height: 36px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        padding: 0 8px !important;
+    .dashboard #HeaderContent.open {
+        transform: translateX(0);
     }
-    .paginationContainer .results {
-        text-align: center !important;
-        margin-bottom: 12px !important;
+    .dashboard #logoDiv {
+        display: none;
+    }
+    .dashboard #toolbar,
+    .dashboard #Navigation {
+        padding: 0 24px;
+    }
+    .dashboard #toolbar *,
+    .dashboard #toolbar *::after,
+    .dashboard #toolbar *::before,
+    .dashboard #Navigation *,
+    .dashboard #Navigation *::after,
+    .dashboard #Navigation *::before,
+    .dashboard #SubNavigation *,
+    .dashboard #SubNavigation *::after,
+    .dashboard #SubNavigation *::before {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .dashboard #MainNavigation.tabs ul li a,
+    .dashboard #SubNavigation.subtabs ul li a {
+        padding: 6px 0 !important;
+    }
+    .dashboard #MainNavigation.tabs ul li.selected a,
+    .dashboard #MainNavigation.tabs ul li.current a,
+    .dashboard #links a:hover,
+    .dashboard #MainNavigation.tabs ul li a:hover,
+    .dashboard #SubNavigation.subtabs ul li a:hover {
+        background-color: transparent !important;
+    }
+    .dashboard #MainNavigation.tabs ul li.selected a,
+    .dashboard #MainNavigation.tabs ul li.current a {
+        color: var(--color-primary) !important;
+    }
+    .dashboard #MainNavigation.tabs ul li.selected a::after,
+    .dashboard #MainNavigation.tabs ul li.current a::after,
+    .dashboard #SubNavigation.subtabs ul li.current a::after {
+        content: '';
+        display: flex;
+        margin-left: auto;
+        width: 16px;
+        height: 16px;
+        background-color: var(--color-primary);
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+    }
+    .dashboard #SubNavigation.subtabs ul li.current a {
+        color: var(--color-primary) !important;
+        background-color: transparent !important;
     }
 
-    /* --- BUTTONS --- */
-    .dashboard .buttonGroup {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        gap: 8px !important;
-        padding: 12px 0 !important;
+    /* --- MAIN CONTENT --- */
+    .dashboard #MainContent {
+        padding: 16px !important;
     }
-    .dashboard .buttonGroup .yui-button {
-        margin: 0 !important;
+    .dashboard #MainTitle {
+        font-size: 18px !important;
+        margin: 0 0 16px !important;
     }
 
     /* --- GENERAL LAYOUT --- */
     .dashboard .roundedBox,
-    .dashboard .roundedBox2 {
+    .dashboard .roundedBox2,
+    .dashboard .blueBox,
+    .dashboard .greenBox,
+    .dashboard .redBox {
         padding: 12px !important;
         margin-bottom: 16px !important;
+    }
+    .dashboard .boxContent {
+        padding: 16px !important;
     }
     .dashboard .paginationTop,
     .dashboard .paginationBottom {
@@ -9596,9 +9312,141 @@ img.calendarIcon {
         padding: 16px 0 0 0 !important;
     }
 
-    /* --- INTEGRATION GRID --- */
+    /* --- GRID LAYOUTS --- */
+    .dashboard .grid_580px_240px,
+    .dashboard .grid_200px_n {
+        grid-template-columns: 1fr !important;
+    }
     .dashboard .gridWrapper .grid_1_1 {
         grid-template-columns: 1fr !important;
+    }
+    .dashboard .grid_600px_340px {
+        display: block !important;
+    }
+    .dashboard .grid_600px_340px .primary,
+    .dashboard .grid_600px_340px .secondary {
+        width: 100% !important;
+        float: none !important;
+    }
+    .dashboard .secondary {
+        margin-top: 20px !important;
+    }
+
+    /* --- TABLES (Horizontal Scroll) --- */
+    .dashboard .ordersTable,
+    .dashboard #connectionsTable {
+        display: block !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        white-space: nowrap !important;
+    }
+    .dashboard .ordersTable thead,
+    .dashboard .ordersTable tbody,
+    .dashboard .ordersTable tr {
+        display: table !important;
+        width: 100% !important;
+    }
+
+    /* --- FORM INPUTS --- */
+    .dashboard .inputGroup {
+        display: block !important;
+        padding: 12px 0 !important;
+    }
+    .dashboard .inputGroup .mainLabel,
+    .dashboard .mainLabel {
+        float: none !important;
+        width: 100% !important;
+        margin-bottom: 8px !important;
+    }
+    .dashboard .inputGroup .options,
+    .dashboard .options {
+        float: none !important;
+        width: 100% !important;
+    }
+    .dashboard select,
+    .dashboard input.textInput,
+    .dashboard textarea {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* --- BUTTONS --- */
+    .dashboard .buttonGroup {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+        padding: 12px 0 !important;
+    }
+    .dashboard .buttonGroup .yui-button {
+        margin: 0 !important;
+    }
+    .dashboard .yui-button {
+        width: 100% !important;
+    }
+    .dashboard .yui-button .first-child a {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    /* --- PAGINATION --- */
+    .paginationContainer .pagination ul,
+    .dashboard .pagination ul {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 6px !important;
+        justify-content: center !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .paginationContainer .pagination ul li,
+    .dashboard .pagination ul li {
+        display: inline-flex !important;
+        margin: 0 !important;
+        min-width: 32px !important;
+    }
+    .paginationContainer .pagination ul li a {
+        min-width: 36px !important;
+        height: 36px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 8px !important;
+    }
+    .paginationContainer .results {
+        text-align: center !important;
+        margin-bottom: 12px !important;
+    }
+    .dashboard .pagination ul li:first-child,
+    .dashboard .pagination ul li:last-child {
+        display: none !important;
+    }
+
+    /* --- FOOTER --- */
+    #Footer #FooterContent p:first-child {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 4px 8px !important;
+        text-align: center !important;
+    }
+    #Footer #FooterContent p:first-child a {
+        white-space: nowrap !important;
+    }
+
+    /* --- LEAD CHANNELS LIST TABLE --- */
+    .dashboard #leadChannelsListTable thead .actions .paginationTop:first-child,
+    .dashboard #leadChannelsListTable thead .colheaders {
+        display: none !important;
+    }
+    .dashboard #leadChannelsListTable thead .actions .paginationTop {
+        padding: 16px !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+    .dashboard #leadChannelsListTable thead .actions .paginationTop .buttonGroup {
+        justify-content: center !important;
+        width: 100% !important;
     }
 
     /* --- LEAD CHANNELS TABLE (Card Layout) --- */
@@ -9638,7 +9486,6 @@ img.calendarIcon {
     .dashboard .channels table.nestedListTable tbody tr td:last-child {
         border-bottom: none !important;
     }
-    /* Channel name - prominent header */
     .dashboard .channels table.nestedListTable tbody tr td:nth-child(2) {
         background: var(--color-primary) !important;
         padding: 14px 12px !important;
@@ -9656,14 +9503,12 @@ img.calendarIcon {
         text-decoration: none !important;
         opacity: 0.9 !important;
     }
-    /* Hide P, C, V, NR columns on mobile */
     .dashboard .channels table.nestedListTable tbody tr td:nth-child(7),
     .dashboard .channels table.nestedListTable tbody tr td:nth-child(8),
     .dashboard .channels table.nestedListTable tbody tr td:nth-child(9),
     .dashboard .channels table.nestedListTable tbody tr td:nth-child(10) {
         display: none !important;
     }
-    /* Actions row */
     .dashboard .channels table.nestedListTable tfoot,
     .dashboard .channels table.nestedListTable tr.actions {
         display: block !important;
@@ -9742,38 +9587,88 @@ img.calendarIcon {
         margin-top: 0 !important;
     }
 
-    /* --- FORM INPUTS --- */
-    .dashboard .inputGroup {
-        display: block !important;
+    /* --- SETTINGS PAGE --- */
+    .dashboard .settings .sellerBidMinimum {
+        font-size: 12px !important;
     }
-    .dashboard .inputGroup .mainLabel {
-        float: none !important;
-        width: 100% !important;
-        margin-bottom: 6px !important;
+    .dashboard .settings .sellerBidMinimum thead th {
+        font-size: 9px !important;
+        padding: 6px 4px !important;
     }
-    .dashboard .inputGroup .options {
-        float: none !important;
+    .dashboard .settings .sellerBidMinimum tbody td {
+        padding: 6px 4px !important;
+        font-size: 12px !important;
+    }
+    .dashboard .settings .sellerBidMinimum tbody td.price input.textInput {
+        max-width: 60px !important;
+        min-width: 45px !important;
+        padding: 4px !important;
+        font-size: 12px !important;
+    }
+    .dashboard .settings .roundedBox.bbLeft h4,
+    .dashboard .settings .roundedBox.bbRight h4 {
+        font-size: 13px !important;
+        padding: 12px 14px !important;
+    }
+    .dashboard .settings .inputGroup {
+        flex-direction: column !important;
+        padding: 12px 0 !important;
+    }
+    .dashboard .settings .mainLabel {
+        width: 100% !important;
+        margin-bottom: 8px !important;
+    }
+    .dashboard .settings .options {
         width: 100% !important;
     }
-    .dashboard select,
-    .dashboard input.textInput,
-    .dashboard textarea {
+    .dashboard .settings select,
+    .dashboard .settings input[type="text"],
+    .dashboard .settings textarea {
         width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
+        font-size: 16px !important;
+    }
+    .dashboard .settings .roundedBox .hdr h2 {
+        font-size: 16px !important;
+    }
+    .dashboard .settings .formSectionContent {
+        padding: 16px !important;
+    }
+    .dashboard .settings .grid_1_1 {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
     }
 
-    /* --- SECONDARY/SIDEBAR COLUMN --- */
-    .dashboard .grid_600px_340px {
-        display: block !important;
+    /* --- STEP 1 GRID --- */
+    .dashboard #formContainer .formSectionContent > ul.text {
+        grid-template-columns: 1fr !important;
     }
-    .dashboard .grid_600px_340px .primary,
-    .dashboard .grid_600px_340px .secondary {
-        width: 100% !important;
-        float: none !important;
+}
+
+@media (max-width: 640px) {
+    .dashboard #formContainer .formSectionContent > ul.text {
+        grid-template-columns: 1fr !important;
     }
-    .dashboard .secondary {
-        margin-top: 20px !important;
+}
+
+@media (max-width: 425px) {
+    .login form[name="changePasswordForm"] {
+        width: 100%;
+    }
+    body.login {
+        padding: 0 24px;
+    }
+    body.login #Header,
+    .login #Main {
+        width: 100%;
+    }
+    body.login div.roundedBox {
+        width: 100%;
+    }
+    body.login .grid_450px_350px {
+        width: 100%;
+    }
+    body.login .grid_450px_350px .secondary {
+        width: 100%;
     }
 }
 
