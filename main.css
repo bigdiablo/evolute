@@ -717,15 +717,14 @@ body.login {
 
 .dashboard #Footer,
 .dashboard #FooterWithoutBorderTop {
-    display: block !important;
-    clear: both !important;
+    display: flex !important;
     margin-left: 240px !important;
     margin-top: 0 !important;
     padding: 32px !important;
     height: auto !important;
     background-color: var(--color-white) !important;
     border-top: 1px solid var(--border) !important;
-    font-size: 13px !important;
+    font-size: 12px !important;
     color: var(--color-gray) !important;
 }
 
@@ -756,7 +755,7 @@ body.login {
     height: auto !important;
     border-top: 0 !important;
     background-color: var(--color-white) !important;
-    font-size: 13px !important;
+    font-size: 12px !important;
     color: var(--color-gray) !important;
     text-align: center !important;
 }
@@ -791,7 +790,7 @@ body.login {
     gap: 6px !important;
     color: var(--color-gray) !important;
     text-decoration: none !important;
-    font-size: 13px !important;
+    font-size: 12px !important;
     transition: color 0.15s ease !important;
 }
 
@@ -840,12 +839,10 @@ body.login {
 
 .dashboard #Footer #FooterContent,
 .dashboard #FooterWithoutBorderTop #FooterContent {
-    max-width: 900px !important;
-    margin: 0 auto !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    gap: 16px !important;
+    gap: 8px !important;
 }
 
 /* Logo before footer content */
@@ -882,7 +879,7 @@ body.login {
     color: var(--color-gray) !important;
     text-decoration: none !important;
     font-size: 13px !important;
-    transition: color 0.15s ease !important;
+    transition: color 0.3s ease !important;
 }
 
 .dashboard #Footer a:hover,
@@ -943,7 +940,7 @@ body.login {
 
 .dashboard #Footer p:first-of-type a,
 .dashboard #FooterWithoutBorderTop p:first-of-type a {
-    font-size: 13px !important;
+    font-size: 12px !important;
 }
 
 /* Copyright and build info */
@@ -951,10 +948,10 @@ body.login {
 .dashboard #FooterWithoutBorderTop p:not(:first-of-type) {
     margin: 0 !important;
     padding: 0 !important;
-    font-size: 11px !important;
+    font-size: 12px !important;
     color: var(--color-gray) !important;
     opacity: 0.8 !important;
-    line-height: 1.6 !important;
+    line-height: 1.5 !important;
 }
 
 .dashboard #links {
@@ -9418,9 +9415,6 @@ img.calendarIcon {
 
     /* --- FOOTER --- */
     #Footer #FooterContent p:first-child {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
         gap: 4px 8px !important;
         text-align: center !important;
     }
@@ -9635,6 +9629,11 @@ img.calendarIcon {
     /* --- STEP 1 GRID --- */
     .dashboard #formContainer .formSectionContent > ul.text {
         grid-template-columns: 1fr !important;
+    }
+
+    .dashboard #Footer, .dashboard #FooterWithoutBorderTop {
+        margin-left: 0 !important;
+        padding: 24px !important;
     }
 }
 
