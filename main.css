@@ -43,7 +43,8 @@ html:has(body.login) {
     -webkit-box-sizing: border-box;
 }
 
-.dashboard .clear {
+.dashboard .clear,
+.dashboard .air {
     display: none;
 }
 
@@ -608,10 +609,6 @@ body.login {
 }
 
 /* ========== SIDEBAR ========== */
-
-.dashboard .clear {
-    display: none;
-}
 
 .dashboard #Header {
     position: fixed;
@@ -1673,7 +1670,8 @@ body.login {
     min-height: auto;
 }
 
-.dashboard .blueBox.integration h1 {
+.dashboard .blueBox.integration h1,
+.dashboard #FormFields h1 {
     font-size: 16px;
     font-weight: 600;
     color: var(--color-dark);
@@ -5847,7 +5845,6 @@ div.grid_1_1#leftInnerGrid {
 }
 
 .dashboard .roundedBox .labelValue .label {
-    flex: 0 0 200px !important;
     font-size: 14px !important;
     font-weight: 500 !important;
     color: var(--color-gray) !important;
@@ -5856,6 +5853,7 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .roundedBox .labelValue .value {
     flex: 1 !important;
     font-size: 14px !important;
+    line-height: 1.5;
     color: var(--color-dark) !important;
 }
 
@@ -9531,6 +9529,8 @@ img.calendarIcon {
     }
     .dashboard .boxContent {
         display: flex;
+        gap: 4px;
+        flex-direction: column;
         padding: 16px !important;
     }
 
@@ -9807,29 +9807,30 @@ img.calendarIcon {
     /* --- LEAD CHANNEL DETAILS (Label/Value) --- */
     .dashboard .labelValue {
         display: flex !important;
-        justify-content: space-between !important;
+        flex-direction: column !important;
         align-items: flex-start !important;
-        padding: 10px 0 !important;
+        padding: 12px 0 !important;
         border-bottom: 1px solid var(--border) !important;
-        gap: 12px !important;
+        gap: 4px !important;
     }
     .dashboard .labelValue:last-child {
         border-bottom: none !important;
     }
     .dashboard .labelValue .label {
-        flex-shrink: 0 !important;
-        font-weight: 600 !important;
-        color: var(--text-secondary) !important;
-        font-size: 13px !important;
+        font-weight: 500 !important;
+        color: var(--color-gray) !important;
+        font-size: 12px !important;
         float: none !important;
-        width: auto !important;
+        width: 100% !important;
+        min-width: unset !important;
     }
     .dashboard .labelValue .value {
-        flex: 1 !important;
-        text-align: right !important;
+        font-size: 14px !important;
+        text-align: left !important;
         float: none !important;
-        width: auto !important;
+        width: 100% !important;
         font-weight: 500 !important;
+        color: var(--color-dark) !important;
     }
     .dashboard .labelValue .clear {
         display: none !important;

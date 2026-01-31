@@ -2769,45 +2769,6 @@ div.confirmationSectionHeader b.htop b.right {
     color: #CC3300;
 }
 
-/* selectors for lpDrawLabelValuePair macro */
-div.labelValue {
-    clear: both;
-    overflow: visible;
-    padding: 0.25em 0;
-    margin: 0 0 0 0;
-    float: left;
-    width: 100%;
-    position: static;
-}
-
-div.labelValue div.label {
-    margin: 0;
-    padding: 0px 1em 0 0;
-    position: static;
-    text-align: right;
-    width: 39.5%;
-    float: left;
-    padding-right: 1em;
-    line-height: 1.125em;
-    font-weight: 590;
-}
-
-div.labelValue div.value {
-    float: left;
-    clear: right;
-    white-space: normal;
-    padding: 0 0 0 1.33em;
-    margin: 0;
-    position: static;
-    text-align: left;
-    line-height: 1.215em;
-}
-
-div.labelValue>div.value {
-    white-space: normal !important;
-    max-width: 410px;
-}
-
 /* variant with help icon */
 div.labelValue div.valueContent {
     float: left;
@@ -2836,14 +2797,6 @@ div.inputGroup div.optionsContent img.helpImg {
     margin-left: 5.25em;
     margin-top: -20px;
     margin-top: -22px;
-}
-
-div.inputGroup div.optionsContent img.inlineHelpImg {
-    position: relative;
-    margin: 0px;
-    padding: 0px;
-    margin-top: -5px;
-    top: 5px;
 }
 
 label.iconLabel {
