@@ -2740,9 +2740,9 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .ordersTable {
     width: 100%;
-    min-width: auto;
+    min-width: 100%;
     border-collapse: collapse;
-    table-layout: auto !important;
+    table-layout: fixed !important;
 }
 
 /* Make table columns flexible to fit content */
@@ -2750,6 +2750,8 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .ordersTable td {
     white-space: normal !important;
     word-wrap: break-word !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
 }
 
 /* Connections table wrapper - enable horizontal scroll */
@@ -2885,25 +2887,56 @@ div.grid_1_1#leftInnerGrid {
     white-space: nowrap;
 }
 
-/* Wholesale orders table - column widths */
+/* Wholesale orders table - column widths (percentage-based for fixed layout) */
 .dashboard .ordersTable thead tr.colheaders th:nth-child(1) {
-    width: 70px !important;
+    width: 8% !important;
 }
 .dashboard .ordersTable thead tr.colheaders th:nth-child(2) {
-    width: 150px !important;
+    width: 15% !important;
 }
 .dashboard .ordersTable thead tr.colheaders th:nth-child(3) {
-    width: 140px !important;
+    width: 15% !important;
 }
 .dashboard .ordersTable thead tr.colheaders th:nth-child(4) {
-    width: auto !important;
+    width: 30% !important;
 }
-.dashboard .ordersTable tbody td[style*="width:10px"] {
-    width: 140px !important;
-    min-width: 140px !important;
+.dashboard .ordersTable thead tr.colheaders th:nth-child(5) {
+    width: 32% !important;
 }
-.dashboard .ordersTable tbody td .oliDiv .left a {
+
+/* Override inline 10px width on Product column */
+.dashboard .ordersTable tbody td[style*="width:10px"],
+.dashboard .ordersTable tbody td[style*="width: 10px"] {
+    width: 15% !important;
+}
+
+/* Delivery column - prevent text breaking */
+.dashboard .ordersTable tbody td.nowrap {
     white-space: normal !important;
+    overflow: visible !important;
+}
+
+.dashboard .ordersTable tbody td .oliDiv {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px 16px !important;
+    align-items: center !important;
+}
+
+.dashboard .ordersTable tbody td .oliDiv .left {
+    white-space: nowrap !important;
+}
+
+.dashboard .ordersTable tbody td .oliDiv .left a {
+    white-space: nowrap !important;
+}
+
+.dashboard .ordersTable tbody td .oliDiv .right {
+    white-space: nowrap !important;
+}
+
+.dashboard .ordersTable tbody td .oliDiv .right a {
+    color: var(--color-error, #dc3545) !important;
 }
 
 .dashboard .ordersTable thead tr.colheaders th a {
@@ -2956,15 +2989,15 @@ div.grid_1_1#leftInnerGrid {
 }
 
 .dashboard .ordersTable tbody tr {
-    transition: background-color 0.15s ease;
+    transition: none;
 }
 
 .dashboard .ordersTable tbody tr:hover td {
-    background-color: var(--bg-light);
+    background-color: transparent;
 }
 
 .dashboard .ordersTable tbody tr td {
-    padding: 16px 20px;
+    padding: 10px 16px;
     font-size: 14px;
     color: var(--color-dark);
     background-color: var(--color-white);
@@ -5612,10 +5645,6 @@ div.grid_1_1#leftInnerGrid {
     border-bottom: 1px solid var(--border) !important;
 }
 
-.dashboard .channels table.nestedListTable.ordersTable tbody tr:nth-child(odd) {
-    background-color: var(--bg-light) !important;
-}
-
 .dashboard .channels table.nestedListTable.ordersTable tbody tr:nth-child(even) {
     background-color: var(--color-white) !important;
 }
@@ -5623,7 +5652,7 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td {
     padding: 8px 16px !important;
     font-size: 13px !important;
-    vertical-align: top !important;
+    vertical-align: middle !important;
     border: none !important;
 }
 
@@ -9654,17 +9683,147 @@ img.calendarIcon {
         margin-top: 20px !important;
     }
 
-    /* --- TABLES (Horizontal Scroll) --- */
-    .dashboard .ordersTable,
+    /* --- TABLES (Card Layout for Mobile) --- */
+    .dashboard .ordersTable {
+        display: block !important;
+        overflow-x: visible !important;
+        white-space: normal !important;
+    }
+    
+    .dashboard .ordersTable thead tr.colheaders {
+        display: none !important;
+    }
+    
+    .dashboard .ordersTable thead tr.actions {
+        display: block !important;
+    }
+    
+    .dashboard .ordersTable thead tr.actions td {
+        display: block !important;
+        padding: 16px !important;
+        white-space: normal !important;
+    }
+    
+    .dashboard .ordersTable tbody {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+    }
+    
+    .dashboard .ordersTable tbody tr {
+        display: flex !important;
+        flex-direction: column !important;
+        background: #fff !important;
+        border: 1px solid var(--border) !important;
+        border-radius: 8px !important;
+        padding: 0 !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+    }
+    
+    .dashboard .ordersTable tbody tr td {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: flex-start !important;
+        padding: 12px 16px !important;
+        border: none !important;
+        border-bottom: 1px solid var(--border) !important;
+        white-space: normal !important;
+    }
+    
+    .dashboard .ordersTable tbody tr td:last-child {
+        border-bottom: none !important;
+    }
+    
+    .dashboard .ordersTable tbody tr td::before {
+        content: attr(data-label);
+        font-weight: 600 !important;
+        font-size: 12px !important;
+        color: var(--color-gray) !important;
+        text-transform: uppercase !important;
+        min-width: 100px !important;
+        flex-shrink: 0 !important;
+    }
+    
+    /* Mobile labels for wholesale orders table */
+    .dashboard .ordersTable tbody tr td:nth-child(1)::before { content: "ID"; }
+    .dashboard .ordersTable tbody tr td:nth-child(2)::before { content: "NAME"; }
+    .dashboard .ordersTable tbody tr td:nth-child(3)::before { content: "PRODUCT"; }
+    .dashboard .ordersTable tbody tr td:nth-child(4)::before { content: "DELIVERY"; }
+    .dashboard .ordersTable tbody tr td:nth-child(5)::before { content: "ACTIONS"; }
+    
+    /* Delivery column on mobile */
+    .dashboard .ordersTable tbody tr td.nowrap {
+        white-space: normal !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+    }
+    
+    .dashboard .ordersTable tbody tr td.nowrap::before {
+        margin-bottom: 4px !important;
+    }
+    
+    .dashboard .ordersTable tbody tr td .oliDiv {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 6px !important;
+    }
+    
+    .dashboard .ordersTable tbody tr td .oliDiv .left,
+    .dashboard .ordersTable tbody tr td .oliDiv .right {
+        white-space: normal !important;
+    }
+    
+    /* Actions column on mobile */
+    .dashboard .ordersTable tbody tr td.last {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        width: 100% !important;
+    }
+    
+    .dashboard .ordersTable tbody tr td.last::before {
+        display: none !important;
+    }
+    
+    .dashboard .ordersTable tbody tr td.last .buttonGroup {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+    
+    .dashboard .ordersTable tbody tr td.last .buttonGroup a {
+        display: inline-block !important;
+        padding: 10px 20px !important;
+        background: var(--color-primary) !important;
+        color: #fff !important;
+        border-radius: 6px !important;
+        text-decoration: none !important;
+        font-size: 14px !important;
+        text-align: center !important;
+    }
+    
+    .dashboard .ordersTable tfoot {
+        display: block !important;
+    }
+    
+    .dashboard .ordersTable tfoot tr.actions td {
+        display: block !important;
+        padding: 16px !important;
+    }
+    
     .dashboard #connectionsTable {
         display: block !important;
         overflow-x: auto !important;
         -webkit-overflow-scrolling: touch !important;
         white-space: nowrap !important;
     }
-    .dashboard .ordersTable thead,
-    .dashboard .ordersTable tbody,
-    .dashboard .ordersTable tr {
+    
+    .dashboard #connectionsTable thead,
+    .dashboard #connectionsTable tbody,
+    .dashboard #connectionsTable tr {
         display: table !important;
         width: 100% !important;
     }
