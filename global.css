@@ -275,21 +275,6 @@ ul {
 .inlineSideBar,
 .inlineSideBar2 {
     margin-right: 0px;
-    padding: 6px 10px 10px 10px;
-}
-
-.sideBar h4,
-.inlineSideBar h4 {
-    font-weight: bold;
-    font-size: 108%;
-    border-bottom: 1px solid transparent;
-    margin: 0px 5px 5px 12px;
-}
-
-.sideBar .sideBarGroup,
-.inlineSideBar .sideBarGroup {
-    margin: 0 10px 10px 12px;
-    font-size: 88%;
 }
 
 .inlineSideBar,
@@ -297,21 +282,9 @@ ul {
     font-size: 90% !important;
 }
 
-.sideBar .sideBarGroup ol,
-.sideBar .sideBarGroup ul {
-    margin: 1.0em 0px;
-    margin-left: 18px;
-}
-
 .pageContent ol,
 .pageContent ul {
     font-size: 95%;
-    margin: 0.75em 0px;
-    margin-left: 2em;
-}
-
-.sideBar .sideBarGroup ol {
-    margin-left: 22px;
 }
 
 .sideBar .sideBarGroup ol li,

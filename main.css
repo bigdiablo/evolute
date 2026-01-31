@@ -1678,19 +1678,6 @@ body.login {
     margin: 0 0 16px;
 }
 
-.dashboard .blueBox.integration ul {
-    list-style: disc;
-    padding-left: 20px;
-    margin: 0 0 20px;
-}
-
-.dashboard .blueBox.integration ul li {
-    font-size: 14px;
-    color: var(--color-dark);
-    line-height: 1.6;
-    margin-bottom: 6px;
-}
-
 .dashboard .blueBox.integration .buttonGroup {
     margin-top: auto;
     padding: 0;
@@ -2066,7 +2053,6 @@ body.login {
     flex-direction: column;
     gap: 24px;
     margin-top: 0;
-    padding: 0 24px 24px;
 }
 
 div.grid_1_1#leftInnerGrid {
@@ -3326,14 +3312,13 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .blueBox.integration ul {
     list-style: disc;
     padding-left: 20px;
-    margin: 0 0 20px;
 }
 
 .dashboard .blueBox.integration ul li {
     font-size: 14px;
     color: var(--color-dark);
     line-height: 1.6;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .dashboard .blueBox.integration .buttonGroup {
@@ -8749,6 +8734,11 @@ img.calendarIcon {
 }
 
 /* Integration method grid - 3 columns */
+
+.dashboard .gridWrapper {
+    padding: 0 !important;
+}
+
 .dashboard .gridWrapper .grid_1_1 {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
