@@ -5965,7 +5965,6 @@ div.grid_1_1#leftInnerGrid {
     display: inline-block !important;
     width: 20px !important;
     height: 20px !important;
-    margin-right: 12px !important;
     font-size: 16px !important;
     font-weight: 600 !important;
     color: var(--color-primary) !important;
@@ -6107,36 +6106,41 @@ div.grid_1_1#leftInnerGrid {
 
 /* ========== CREATE PROPOSAL - STEP 1 IMPROVEMENTS ========== */
 
-/* Main product list - 3 column layout using CSS columns */
+/* Main product list - full width accordion layout */
 .dashboard #formContainer .formSectionContent > ul.text {
-    display: block !important;
-    column-count: 3 !important;
-    column-gap: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
     padding: 0 !important;
     margin: 0 !important;
+    width: 100% !important;
 }
 
-/* Each contractor group as a card - keep with following details */
+/* Accordion header - full width tabs */
 .dashboard #formContainer ul.text > li.contracto,
 .dashboard #formContainer ul.text > li.expando,
 .dashboard #formContainer ul.text > li.expando1 {
-    display: block !important;
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
     padding: 16px 20px !important;
-    margin: 0 0 0 0 !important;
+    margin: 0 !important;
     background-color: var(--bg-light) !important;
     border: 1px solid var(--border) !important;
-    border-radius: 10px 10px 0 0 !important;
+    border-bottom: none !important;
     cursor: pointer !important;
-    transition: all 0.15s ease !important;
-    break-after: avoid !important;
-    page-break-after: avoid !important;
+    transition: background-color 0.2s ease, border-color 0.2s ease !important;
+    list-style: none !important;
+}
+
+.dashboard #formContainer ul.text > li.expando:first-child {
+    border-radius: 10px 10px 0 0 !important;
 }
 
 .dashboard #formContainer ul.text > li.contracto:hover,
 .dashboard #formContainer ul.text > li.expando:hover,
 .dashboard #formContainer ul.text > li.expando1:hover {
-    background-color: var(--bg-light) !important;
-    border-color: var(--color-primary) !important;
+    background-color: #e8eef3 !important;
 }
 
 .dashboard #formContainer ul.text > li.contracto span,
@@ -6145,29 +6149,57 @@ div.grid_1_1#leftInnerGrid {
     font-size: 14px !important;
     font-weight: 600 !important;
     color: var(--color-dark) !important;
+    flex: 1 !important;
 }
 
-/* Details list under each contractor - keep with previous title */
+/* Accordion content - expandable details with animation */
 .dashboard #formContainer ul.text > li.details {
     display: block !important;
+    width: 100% !important;
     padding: 0 !important;
-    margin: 0 0 20px 0 !important;
+    margin: 0 !important;
     background: transparent !important;
     border: none !important;
     list-style: none !important;
-    break-before: avoid !important;
-    page-break-before: avoid !important;
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
+    overflow: hidden !important;
+    max-height: 0 !important;
+    opacity: 0 !important;
+    transition: max-height 0.3s ease-out, opacity 0.2s ease-out !important;
+}
+
+/* When details are visible (has content showing) */
+.dashboard #formContainer ul.text > li.details[style*="display: block"],
+.dashboard #formContainer ul.text > li.details:not([style*="display: none"]) {
+    max-height: 1000px !important;
+    opacity: 1 !important;
+}
+
+.dashboard #connectionsForm br {
+    display: none;
 }
 
 .dashboard #formContainer ul.text > li.details .target {
     background-color: var(--color-white) !important;
     border: 1px solid var(--border) !important;
     border-top: none !important;
-    border-radius: 0 0 10px 10px !important;
     padding: 8px 0 !important;
-    overflow: hidden !important;
+    border-radius: 0 0 10px 10px !important;
+}
+
+/* Add expand/collapse indicator */
+.dashboard #formContainer ul.text > li.expando::after {
+    content: "" !important;
+    width: 10px !important;
+    height: 10px !important;
+    border-right: 2px solid var(--color-gray) !important;
+    border-bottom: 2px solid var(--color-gray) !important;
+    transform: rotate(45deg) !important;
+    transition: transform 0.2s ease !important;
+    margin-left: auto !important;
+}
+
+.dashboard #formContainer ul.text > li.expando.open::after {
+    transform: rotate(-135deg) !important;
 }
 
 .dashboard #formContainer ul.text li.details .target > div {
@@ -7015,10 +7047,6 @@ div.grid_1_1#leftInnerGrid {
     line-height: 1 !important;
 }
 
-.dashboard #formContainer ul.text > li.expando > span::before {
-    content: "+" !important;
-}
-
 /* Product details container */
 .dashboard #formContainer ul.text > li.details {
     display: block !important;
@@ -7027,7 +7055,6 @@ div.grid_1_1#leftInnerGrid {
     border: 1px solid var(--border) !important;
     border-top: none !important;
     border-radius: 0 0 10px 10px !important;
-    margin-top: -10px !important;
     margin-bottom: 16px !important;
     overflow: hidden !important;
     background-color: var(--color-white) !important;
@@ -7104,15 +7131,17 @@ div.grid_1_1#leftInnerGrid {
     color: var(--color-white) !important;
 }
 
-/* Exclusivity section */
+/* Exclusivity section - break out of columns */
 .dashboard #formContainer ul.text#leadtypesection {
     display: block !important;
-    margin-top: 24px !important;
+    margin-top: 0 !important;
     background-color: var(--color-white) !important;
     border: 1px solid var(--border) !important;
     border-radius: 10px !important;
     overflow: hidden !important;
     padding: 0 !important;
+    column-span: all !important;
+    break-inside: avoid !important;
 }
 
 .dashboard #formContainer ul.text#leadtypesection > li.expando1 {
@@ -7129,35 +7158,26 @@ div.grid_1_1#leftInnerGrid {
     font-size: 15px !important;
     font-weight: 600 !important;
     color: var(--color-dark) !important;
-    padding-left: 24px !important;
     position: relative !important;
-}
-
-.dashboard #formContainer ul.text#leadtypesection > li.expando1 > span::before {
-    content: "+" !important;
-    position: absolute !important;
-    left: 0 !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    width: 18px !important;
-    height: 18px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background-color: var(--color-primary) !important;
-    color: var(--color-white) !important;
-    border-radius: 4px !important;
-    font-size: 14px !important;
-    font-weight: 600 !important;
 }
 
 .dashboard #formContainer ul.text#leadtypesection > li.leadtypecontainer {
     padding: 20px !important;
     list-style: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    width: 100% !important;
 }
 
 .dashboard #formContainer .leadtypecontainer .leadtype {
-    margin-bottom: 12px !important;
+    margin-bottom: 0 !important;
+    padding: 14px 20px !important;
+    background: var(--bg-light) !important;
+    border-radius: 8px !important;
+    border: 1px solid var(--border) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
 }
 
 .dashboard #formContainer .leadtypecontainer .leadtype:last-child {
@@ -7186,7 +7206,7 @@ div.grid_1_1#leftInnerGrid {
     font-weight: 400 !important;
 }
 
-/* Voice Program section - same as Exclusivity */
+/* Voice Program section - same as Exclusivity, break out of columns */
 .dashboard #formContainer ul.text#voiceprogramsection {
     display: block !important;
     margin-top: 16px !important;
@@ -7195,6 +7215,26 @@ div.grid_1_1#leftInnerGrid {
     border-radius: 10px !important;
     overflow: hidden !important;
     padding: 0 !important;
+    column-span: all !important;
+    break-inside: avoid !important;
+}
+
+.dashboard #formContainer ul.text#voiceprogramsection > li.leadtypecontainer {
+    padding: 20px !important;
+    list-style: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    width: 100% !important;
+}
+
+.dashboard #formContainer ul.text#voiceprogramsection .leadtypecontainer > div {
+    padding: 14px 20px !important;
+    background: var(--bg-light) !important;
+    border-radius: 8px !important;
+    border: 1px solid var(--border) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
 }
 
 .dashboard #formContainer ul.text#voiceprogramsection > li.expando1 {
@@ -7211,26 +7251,7 @@ div.grid_1_1#leftInnerGrid {
     font-size: 15px !important;
     font-weight: 600 !important;
     color: var(--color-dark) !important;
-    padding-left: 24px !important;
     position: relative !important;
-}
-
-.dashboard #formContainer ul.text#voiceprogramsection > li.expando1 > span::before {
-    content: "+" !important;
-    position: absolute !important;
-    left: 0 !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    width: 18px !important;
-    height: 18px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background-color: var(--color-primary) !important;
-    color: var(--color-white) !important;
-    border-radius: 4px !important;
-    font-size: 14px !important;
-    font-weight: 600 !important;
 }
 
 /* Bottom continue button */
@@ -10144,9 +10165,59 @@ img.calendarIcon {
         gap: 16px !important;
     }
 
-    /* --- STEP 1 GRID --- */
+    /* --- CREATE PROPOSAL STEP 1 - MOBILE --- */
     .dashboard #formContainer .formSectionContent > ul.text {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+    
+    .dashboard #formContainer ul.text > li.expando,
+    .dashboard #formContainer ul.text > li.expando1 {
+        width: 100% !important;
+        padding: 14px 16px !important;
+    }
+    
+    .dashboard #formContainer ul.text > li.details .target {
+        margin-bottom: 8px !important;
+    }
+    
+    /* Exclusivity section mobile */
+    .dashboard #formContainer ul.text#leadtypesection {
+        margin-top: 0 !important;
+    }
+    
+    .dashboard #formContainer ul.text#leadtypesection > li.leadtypecontainer,
+    .dashboard #formContainer ul.text#voiceprogramsection > li.leadtypecontainer {
         grid-template-columns: 1fr !important;
+        padding: 16px !important;
+        gap: 12px !important;
+    }
+    
+    .dashboard #formContainer .leadtypecontainer .leadtype {
+        padding: 14px 16px !important;
+    }
+    
+    .dashboard #formContainer .leadtypecontainer .leadtype label {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+    }
+    
+    .dashboard #formContainer .leadtypecontainer .leadtype label .normal {
+        display: block !important;
+        width: 100% !important;
+        padding-left: 28px !important;
+        margin-top: 4px !important;
+        font-size: 12px !important;
+    }
+    
+    /* Voice Program mobile */
+    .dashboard #formContainer ul.text#voiceprogramsection {
+        margin-top: 16px !important;
+    }
+    
+    .dashboard #formContainer ul.text#voiceprogramsection .leadtypecontainer > div {
+        padding: 14px 16px !important;
     }
 
     .dashboard #Footer, .dashboard #FooterWithoutBorderTop {

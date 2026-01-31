@@ -3798,17 +3798,7 @@ div#search div#searchButtonDiv {
     margin-top: 0;
 }
 
-li.expando span,
-li.contracto span {
-    padding: 0px 80px 4px 20px;
-}
-
-#container ul.text li div.target div input {
-    margin-top: 1px;
-}
-
 #container ul.text li div.target div label {
-    margin-top: 4px;
     position: static;
 }
 
@@ -3816,25 +3806,8 @@ li.contracto span {
     position: relative;
 }
 
-#bidTabs ul#bidgridTabs li {
-    top: 1px;
-}
-
-#bidTabs ul#bidgridTabs li a {
-    padding-bottom: 4px;
-}
-
-#bidTabs ul#bidgridTabs li a.current {
-    border-bottom: solid 1px #fff;
-}
-
 div#bidoptions {
-    margin-top: -1px;
     position: static;
-}
-
-div#bidoptions div#infoDiv {
-    margin-top: -11px;
 }
 
 div#bidoptions div#filters,
@@ -3868,12 +3841,6 @@ div#filters div.filter div.titleDiv h3,
 div#settings div.titleDiv h3,
 div#pricing div.titleDiv h3 {
     width: auto;
-    min-width: 99.3%;
-}
-
-table.pricegrid th.mainHeader,
-table.pricegrid td.mainHeader {
-    padding: 1.25em 1em;
 }
 
 div.content div.olidetails {
