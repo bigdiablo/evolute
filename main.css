@@ -2784,7 +2784,6 @@ div.grid_1_1#leftInnerGrid {
 
 /* Ensure connections table has minimum width to show all columns */
 .dashboard #connectionsTable {
-    min-width: 1400px !important;
     table-layout: auto !important;
     border-radius: 12px !important;
     overflow: hidden !important;
@@ -2898,7 +2897,6 @@ div.grid_1_1#leftInnerGrid {
 }
 .dashboard .ordersTable thead tr.colheaders th:nth-child(4) {
     width: auto !important;
-    min-width: 250px !important;
 }
 .dashboard .ordersTable tbody td[style*="width:10px"] {
     width: 140px !important;
@@ -5353,7 +5351,16 @@ div.grid_1_1#leftInnerGrid {
 }
 
 .dashboard #connectionsTable {
-    min-width: 1200px !important;
+    min-width: 100% !important;
+    width: 100%;
+}
+
+.dashboard p.connectiondata {
+    color: #727272;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
 }
 
 .dashboard #connectionsTable thead tr.actions td.paginationTop {
@@ -8622,7 +8629,6 @@ img.calendarIcon {
 
 .dashboard .expando {
     width: 100% !important;
-    margin-bottom: 16px !important;
 }
 
 .dashboard .expando .target {
@@ -8900,6 +8906,10 @@ img.calendarIcon {
         width: 100% !important;
     }
 
+    .dashboard .ordersTable .expando div {
+        display: flex;
+    }
+
     .dashboard .ordersTable thead {
         order: 1;
     }
@@ -8982,7 +8992,8 @@ img.calendarIcon {
         border-bottom: none;
     }
 
-    .dashboard .ordersTable tbody tr td::before {
+    .dashboard .ordersTable tbody tr td::before,
+    .dashboard #connectionsTable tbody tr td::before {
         font-size: 12px;
         font-weight: 500;
         color: var(--color-gray);
@@ -8993,68 +9004,126 @@ img.calendarIcon {
         text-align: left;
     }
 
-    .dashboard .ordersTable tbody tr td.first::before {
-        content: "ID";
+    .dashboard #connectionsTable tbody tr.parentRow td:nth-child(2) {
+        display: none !important;
     }
 
-    .dashboard .ordersTable tbody tr td:nth-child(2)::before {
+    .dashboard #connectionsTable tbody tr.parentRow td:nth-child(1)::before {
         content: "Name";
     }
 
-    .dashboard .ordersTable tbody tr td:nth-child(3)::before {
-        content: "Consumer Brand";
-    }
-
-    .dashboard .ordersTable tbody tr td.status::before {
+    .dashboard #connectionsTable tbody tr.parentRow td:nth-child(3)::before {
         content: "Status";
     }
 
-    .dashboard .ordersTable tbody tr td:nth-child(5)::before {
-        content: "Lead Category";
+    .dashboard #connectionsTable tbody tr.parentRow td:nth-child(4)::before {
+        content: "Active";
     }
 
-    .dashboard .ordersTable tbody tr td:nth-child(6)::before {
-        content: "Delivery Method";
+    .dashboard #connectionsTable tbody tr.parentRow td:nth-child(5)::before {
+        content: "Paused";
     }
 
-    .dashboard .ordersTable tbody tr td:nth-child(7),
-    .dashboard .ordersTable tbody tr td:nth-child(8),
-    .dashboard .ordersTable tbody tr td:nth-child(9),
-    .dashboard .ordersTable tbody tr td:nth-child(10) {
+    .dashboard #connectionsTable tbody tr.parentRow td:nth-child(6)::before {
+        content: "Proposed";
+    }
+
+    .dashboard #connectionsTable tbody tr.parentRow td:nth-child(7)::before {
+        content: "Positive";
+    }
+
+    .dashboard #connectionsTable tbody tr.parentRow td:nth-child(8)::before {
+        content: "Neutral";
+    }
+
+    .dashboard #connectionsTable tbody tr.parentRow td:nth-child(9)::before {
+        content: "Negative";
+    }
+
+    .dashboard #connectionsTable tbody tr.parentRow td:nth-child(10)::before {
+        content: "Conversion";
+    }
+
+    .dashboard #connectionsTable tbody tr.details td:nth-child(1)::before {
+        content: "Product";
+    }
+
+    .dashboard #connectionsTable tbody tr.details td:nth-child(2)::before {
+        content: "Active";
+    }
+
+    .dashboard #connectionsTable tbody tr.details td:nth-child(3)::before {
+        content: "Paused";
+    }
+
+    .dashboard #connectionsTable tbody tr.details td:nth-child(4)::before {
+        content: "Proposed";
+    }
+
+    .dashboard #connectionsTable tbody tr.details td:nth-child(5)::before {
+        content: "Positive";
+    }
+
+    .dashboard #connectionsTable tbody tr.details td:nth-child(6)::before {
+        content: "Neutral";
+    }
+
+    .dashboard #connectionsTable tbody tr.details td:nth-child(7)::before {
+        content: "Negative";
+    }
+
+    .dashboard #connectionsTable tbody tr.details td:nth-child(8)::before {
+        content: "Conversion";
+    }
+
+    .dashboard #connectionsTable tbody tr.details:has(.innerheader) {
+        display: none !important;
+    }
+
+    .dashboard #connectionsTable tbody tr.details td {
         display: flex !important;
-        width: 25% !important;
-        flex: none !important;
-        border-bottom: none;
-        justify-content: center;
-        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-        gap: 4px;
-        padding: 12px 8px;
+        padding: 10px 16px;
+        border-bottom: 1px solid var(--border);
+        width: 100%;
+        box-sizing: border-box;
     }
 
-    .dashboard .ordersTable tbody tr td:nth-child(7)::before {
-        content: "P";
-        margin-right: 0;
-    }
-
-    .dashboard .ordersTable tbody tr td:nth-child(8)::before {
-        content: "C";
-        margin-right: 0;
-    }
-
-    .dashboard .ordersTable tbody tr td:nth-child(9)::before {
-        content: "V";
-        margin-right: 0;
-    }
-
-    .dashboard .ordersTable tbody tr td:nth-child(10)::before {
-        content: "NR";
-        margin-right: 0;
-    }
-
-
-    .dashboard .ordersTable tbody tr td:nth-child(6) {
+    .dashboard #connectionsTable tbody tr.details td:last-child {
         border-bottom: none;
+    }
+
+    .dashboard #connectionsTable tbody {
+        gap: 0 !important;
+    }
+
+    .dashboard #connectionsTable tbody tr.parentRow {
+        margin-bottom: 0 !important;
+        margin-top: 24px !important;
+        border-radius: 12px 12px 0 0 !important;
+    }
+
+    .dashboard #connectionsTable tbody tr.parentRow:first-child {
+        margin-top: 0 !important;
+    }
+
+    .dashboard #connectionsTable tbody tr.details {
+        margin-top: 0 !important;
+        border-radius: 0 !important;
+        border-top: none !important;
+        background: var(--bg-light) !important;
+        box-shadow: none !important;
+    }
+
+    .dashboard #connectionsTable tbody tr.details td:first-child {
+        font-weight: 600;
+        color: var(--color-dark);
+    }
+
+    .dashboard #connectionsTable tbody tr[class*="child_"]:not(:has(.innerheader)):last-of-type {
+        border-radius: 0 0 12px 12px !important;
+        margin-bottom: 0 !important;
     }
 
     .dashboard .ordersTable tbody tr td.right {
@@ -9739,6 +9808,7 @@ img.calendarIcon {
     .dashboard .channels table.nestedListTable {
         display: block !important;
         border: none !important;
+        min-width: 100% !important;
     }
     .dashboard .channels table.nestedListTable thead {
         display: none !important;

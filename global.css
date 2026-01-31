@@ -999,19 +999,6 @@ table.nestedListTable tr.parentRow:hover {
     background-color: #E7EFBC;
 }
 
-table.nestedListTable tr.details td.productDetails,
-table.nestedListTable tr.details th {
-    padding-left: 20px;
-}
-
-table.nestedListTable tr.actions td span#lpConnectLinkTop {
-    margin-bottom: 10px;
-}
-
-table.nestedListTable tr.actions td span#lpConnectLinkBottom {
-    margin-top: 10px;
-}
-
 /****************** Bid grid/ lead store Styles *********************/
 table.cBoxes {
     width: 100%;
@@ -2857,15 +2844,6 @@ span.nowrap div.option {
 .leadStoreSearch span.first-child button {
     padding-left: 0.25em;
     padding-right: 0.25em;
-}
-
-p.connectiondata {
-    color: #727272;
-    float: right;
-    margin-right: 0px;
-    font-size: 90%;
-    text-align: right;
-    padding: 6px;
 }
 
 div#notificationDiscountRateDiv {
