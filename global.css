@@ -2369,32 +2369,6 @@ b.bb b {
     background: url('/images/common/blue-corners.gif') no-repeat;
 }
 
-/* top left corner */
-b.bt,
-.blueBox b.bt {
-}
-
-/* top right corner */
-b.bt b,
-.blueBox b.bt b {
-    background-position: 100% -12px;
-    left: 4px;
-}
-
-/* bottom left corner */
-b.bb,
-.blueBox b.bb {
-    background-position: 0 -24px;
-    top: 2px;
-}
-
-/* bottom right corner */
-b.bb b,
-.blueBox b.bb b {
-    background-position: 100% -36px;
-    left: 4px;
-}
-
 /* red & green variants */
 .greenBox b.bt,
 .greenBox b.bt b,
@@ -2411,32 +2385,6 @@ b.bb b,
 .redBox b.bb b {
     height: 10px;
     background: url('/images/common/red_corners.gif') no-repeat;
-}
-
-/* top left corner */
-.redBox b.bt,
-.greenBox b.bt {
-}
-
-/* top right corner */
-.redBox b.bt b,
-.greenBox b.bt b {
-    background-position: 100% -10px;
-    left: 4px;
-}
-
-/* bottom left corner */
-.redBox b.bb,
-.greenBox b.bb {
-    background-position: 0 -20px;
-    top: 2px;
-}
-
-/* bottom right corner */
-.redBox b.bb b,
-.greenBox b.bb b {
-    background-position: 100% -30px;
-    left: 4px;
 }
 
 div.greenBox {
@@ -2649,12 +2597,6 @@ div.confirmationSectionHeader b.htop b.right {
 #accountAlert b.bb,
 #accountAlert b.bb b {
     background: url('/images/common/corners-cc3300.gif') no-repeat;
-}
-
-/* top left corner */
-#validationErrors b.bt,
-#buyerHomeAlerts b.bt,
-#accountAlert b.bt {
 }
 
 /* top right corner */
@@ -3403,6 +3345,7 @@ img.calendarIcon {
     cursor: pointer;
 }
 
+/* Commented out - conflicting with modern responsive design
 div.filter {
     min-width: 600px
 }
@@ -3410,6 +3353,7 @@ div.filter {
 div.filter {
     min-width: 600px;
 }
+*/
 
 span.bold button {
     font-weight: bold
@@ -3516,42 +3460,6 @@ div.bd ol li {
 
 div.bd p>strong {
     padding-top: 0.25em;
-}
-
-/* LC-12693 */
-div.f5f5f5 {
-    background-color: #F5F5F5;
-    margin-right: 0px;
-}
-
-div.f5f5f5 b.bt,
-div.f5f5f5 b.bt b,
-div.f5f5f5 b.bb,
-div.f5f5f5 b.bb b {
-    height: 4px;
-    background: url('/images/common/corners-F5F5F5.gif') no-repeat;
-}
-
-/* top left corner */
-div.f5f5f5 b.bt {
-}
-
-/* top right corner */
-div.f5f5f5 b.bt b {
-    background-position: 100% -4px;
-    left: 4px;
-}
-
-/* bottom left corner */
-div.f5f5f5 b.bb {
-    background-position: 0 -8px;
-    top: 2px;
-}
-
-/* bottom right corner */
-div.f5f5f5 b.bb b {
-    background-position: 100% -12px;
-    left: 4px;
 }
 
 /* "My Settings" */
@@ -4184,61 +4092,6 @@ div.roundedBox5 {
     width: auto;
 }
 
-/* top right corner */
-b.bt b {
-    left: 4px;
-}
-
-/* bottom right corner */
-b.bb b {
-    left: 4px;
-}
-
-div.roundedBox2 b.bt b,
-div.roundedBox2 b.bb b {
-    left: 4px;
-}
-
-div.roundedBox3 b.bt b,
-div.roundedBox3 b.bb b {
-    left: 4px;
-}
-
-div.roundedBox4 b.bt b,
-div.roundedBox4 b.bb b {
-    left: 4px;
-}
-
-b.htop {
-    height: 12px;
-}
-
-b.htop b.right {
-}
-
-.roundedBox div.sectionHeader h2,
-.roundedBox2 div.sectionHeader h2,
-.roundedBox3 div.sectionHeader h2,
-.roundedBox4 div.sectionHeader h2,
-div.confirmationSectionHeader h2,
-div.confirmationSectionHeader2 h2 {
-}
-
-.roundedBox div.sectionHeader h3,
-.roundedBox2 div.sectionHeader h3,
-.roundedBox3 div.sectionHeader h3,
-.roundedBox4 div.sectionHeader h3 {
-}
-
-.roundedBox2 div.sectionHeader b.htop b.center {
-    width: 98%;
-}
-
-.roundedBox3 div.sectionHeader b.htop b.center,
-.roundedBox4 div.sectionHeader b.htop b.center {
-    width: 92.5%;
-}
-
 /* blue variant */
 div.labelValue div.value div.blueBox {
     padding: 10px;
@@ -4265,9 +4118,6 @@ div.labelValue div.value div.blueBox b.bb b {
     height: 13px;
 }
 
-#successMessage b.htop b.right {
-}
-
 #validationErrors b.bt b,
 #buyerHomeAlerts b.bt b,
 #accountAlert b.bt b {
@@ -4284,11 +4134,6 @@ div.labelValue div.value div.blueBox b.bb b {
 #buyerHomeAlerts b.htop,
 #accountAlert b.htop {
     height: 13px;
-}
-
-#validationErrors b.htop b.right,
-#buyerHomeAlerts b.htop b.right,
-#accountAlert b.htop b.right {
 }
 
 div#container ul.text li.expando span,
@@ -5088,14 +4933,9 @@ version: 2.9.0
     background: url(../../../../assets/skins/sam/sprite.png) repeat-x 0 -200px
 }
 
-.yui-skin-sam .yui-panel .bd {
-    padding: 10px
-}
-
 .yui-skin-sam .yui-panel .ft {
     border-top: solid 1px #808080;
     padding: 5px 10px;
-    font-size: 77%
 }
 
 .yui-skin-sam .container-close {
@@ -5106,9 +4946,6 @@ version: 2.9.0
     height: 15px;
     background: url(../../../../assets/skins/sam/sprite.png) no-repeat 0 -300px;
     cursor: pointer
-}
-
-.yui-skin-sam .yui-panel-container .underlay {
 }
 
 .yui-skin-sam .yui-panel-container.matte {
@@ -5176,30 +5013,6 @@ version: 2.9.0
     height: 16px;
     margin-right: 10px;
     float: left
-}
-
-.yui-skin-sam .yui-simple-dialog .bd span.blckicon {
-    background-position: 0 -1100px
-}
-
-.yui-skin-sam .yui-simple-dialog .bd span.alrticon {
-    background-position: 0 -1050px
-}
-
-.yui-skin-sam .yui-simple-dialog .bd span.hlpicon {
-    background-position: 0 -1150px
-}
-
-.yui-skin-sam .yui-simple-dialog .bd span.infoicon {
-    background-position: 0 -1200px
-}
-
-.yui-skin-sam .yui-simple-dialog .bd span.warnicon {
-    background-position: 0 -1900px
-}
-
-.yui-skin-sam .yui-simple-dialog .bd span.tipicon {
-    background-position: 0 -1250px
 }
 
 .yui-skin-sam .yui-tt .bd {

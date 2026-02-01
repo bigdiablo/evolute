@@ -8780,6 +8780,535 @@ img.calendarIcon {
     background-size: contain;
 }
 
+/* ========== REPORT DISPLAY PAGE STYLES ========== */
+
+/* Reports wrapper container */
+.dashboard .reports {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+}
+
+.dashboard .reports #PrimaryContent {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0;
+    width: 100%;
+}
+
+/* Hide legacy elements */
+.dashboard .reports .clear,
+.dashboard .reports br + br {
+    display: none;
+}
+
+/* Report page title */
+.dashboard .reports h1 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin: 0 0 12px 0;
+    padding: 0;
+}
+
+.dashboard .reports h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-dark);
+    margin: 16px 0 8px 0;
+    padding: 0;
+}
+
+/* Filter section */
+.dashboard .reports .filter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 12px;
+    padding: 16px;
+    background-color: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.dashboard .reports .filter .inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 200px;
+    flex: 1;
+    max-width: 350px;
+}
+
+.dashboard .reports .filter .mainLabel {
+    display: block;
+}
+
+.dashboard .reports .filter .mainLabelContent {
+    display: block;
+}
+
+.dashboard .reports .filter .mainLabelContent label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-gray);
+}
+
+.dashboard .reports .filter .options {
+    display: block;
+}
+
+.dashboard .reports .filter .optionsContent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+/* Report filter select dropdown */
+.dashboard .reports .filter select,
+.dashboard .reports .filter .rptFilterSelect {
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px 36px 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--color-white);
+    color: var(--color-dark);
+    cursor: pointer;
+    min-width: 250px;
+    max-width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    transition: border-color 0.2s ease;
+}
+
+.dashboard .reports .filter select:hover,
+.dashboard .reports .filter .rptFilterSelect:hover {
+    border-color: var(--color-primary-light);
+}
+
+.dashboard .reports .filter select:focus,
+.dashboard .reports .filter .rptFilterSelect:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+/* Report filter date inputs */
+.dashboard .reports .filter input[type="text"],
+.dashboard .reports .filter .textInput {
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--color-white);
+    color: var(--color-dark);
+    min-width: 120px;
+    transition: border-color 0.2s ease;
+}
+
+.dashboard .reports .filter input[type="text"]:hover,
+.dashboard .reports .filter .textInput:hover {
+    border-color: var(--color-primary-light);
+}
+
+.dashboard .reports .filter input[type="text"]:focus,
+.dashboard .reports .filter .textInput:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+/* Report buttons */
+.dashboard .reports .yui-button {
+    display: inline-flex !important;
+    border: none !important;
+    background: none !important;
+    padding: 0 !important;
+    margin: 0 6px 0 0 !important;
+}
+
+.dashboard .reports .yui-button .first-child {
+    display: flex !important;
+    border: none !important;
+    background: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.dashboard .reports .yui-button button,
+.dashboard .reports .yui-submit-button button {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+}
+
+.dashboard .reports #submitHtmlButton button,
+.dashboard .reports #submitHtmlButton-button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.dashboard .reports #submitHtmlButton button:hover,
+.dashboard .reports #submitHtmlButton-button:hover {
+    background-color: var(--color-primary-light);
+}
+
+.dashboard .reports #submitExcelButton button,
+.dashboard .reports #submitExcelButton-button {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+.dashboard .reports #submitExcelButton button:hover,
+.dashboard .reports #submitExcelButton-button:hover {
+    background-color: var(--bg-light);
+}
+
+.dashboard .reports .filter .clear {
+    display: none;
+}
+
+/* Report tables container */
+.dashboard .reports table#report,
+.dashboard .reports table.reportResults {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: var(--color-white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Report table headers */
+.dashboard .reports .rptHeaderLeft,
+.dashboard .reports .rptHeaderCenter,
+.dashboard .reports .rptHeaderRight {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 12px 16px;
+    text-align: left;
+    border: none;
+    white-space: nowrap;
+}
+
+.dashboard .reports .rptHeaderCenter {
+    text-align: center;
+}
+
+.dashboard .reports .rptHeaderRight {
+    text-align: right;
+}
+
+/* Sort arrows in headers */
+.dashboard .reports .rptHeaderCenter a,
+.dashboard .reports .rptHeaderLeft a,
+.dashboard .reports .rptHeaderRight a {
+    display: inline-flex;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+}
+
+.dashboard .reports .rptHeaderCenter a img,
+.dashboard .reports .rptHeaderLeft a img,
+.dashboard .reports .rptHeaderRight a img {
+    opacity: 0.7;
+    filter: brightness(0) invert(1);
+    vertical-align: middle;
+    margin: 0 2px;
+    width: 12px;
+    height: 12px;
+}
+
+.dashboard .reports .rptHeaderCenter a:hover img,
+.dashboard .reports .rptHeaderLeft a:hover img,
+.dashboard .reports .rptHeaderRight a:hover img {
+    opacity: 1;
+}
+
+/* Report table data cells */
+.dashboard .reports .rptDataLeft,
+.dashboard .reports .rptDataCenter,
+.dashboard .reports .rptDataRight {
+    font-size: 14px;
+    color: var(--color-dark);
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    vertical-align: middle;
+}
+
+.dashboard .reports .rptDataCenter {
+    text-align: center;
+}
+
+.dashboard .reports .rptDataRight {
+    text-align: right;
+}
+
+/* Row hover states */
+.dashboard .reports tr.rollOut {
+    background-color: var(--color-white);
+}
+
+.dashboard .reports tr.rollOut2 {
+    background-color: var(--bg-light);
+}
+
+.dashboard .reports tr.rollOver,
+.dashboard .reports table#report tbody tr:hover,
+.dashboard .reports table.reportResults tbody tr:hover {
+    background-color: #e8f4fd !important;
+}
+
+/* Last row - no border */
+.dashboard .reports table#report tr:last-child td,
+.dashboard .reports table.reportResults tr:last-child td {
+    border-bottom: none;
+}
+
+/* Notes sections */
+.dashboard .reports table#report tr td[colspan] {
+    padding: 12px 16px;
+    font-size: 13px;
+    color: var(--color-gray);
+    line-height: 1.6;
+    background-color: var(--bg-light);
+}
+
+.dashboard .reports table#report tr td[colspan] br {
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Schedule report link section */
+.dashboard .reports table:not(#report):not(.reportResults) {
+    width: auto;
+    margin: 12px 0;
+    border: none !important;
+    background: transparent !important;
+}
+
+.dashboard .reports table:not(#report):not(.reportResults) td {
+    padding: 6px 12px 6px 0;
+    vertical-align: middle;
+    border: none !important;
+}
+
+/* Action links */
+.dashboard .reports .reportExportLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.dashboard .reports .reportExportLink:hover {
+    text-decoration: underline;
+}
+
+.dashboard .reports .reportExportImg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Sample HTTP POST string section */
+.dashboard .reports table.reportResults td.rptDataLeft {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 12px;
+    word-break: break-all;
+    white-space: normal;
+    background-color: #1e293b;
+    color: #e2e8f0;
+    padding: 14px 16px;
+    line-height: 1.6;
+}
+
+/* Calendar/Schedule icon styling */
+.dashboard .reports img[alt="Schedule report"] {
+    vertical-align: middle;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.dashboard .reports img[alt="Schedule report"]:hover {
+    opacity: 0.7;
+}
+
+/* Print link styling */
+.dashboard .reports a[title="Print this report"] {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.dashboard .reports a[title="Print this report"]:hover {
+    text-decoration: underline;
+}
+
+/* Date picker calendar icon in filter */
+.dashboard .reports .filter .calendarIcon,
+.dashboard .reports .filter img[src*="calendar"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-left: 6px;
+}
+
+.dashboard .reports .filter .calendarIcon:hover,
+.dashboard .reports .filter img[src*="calendar"]:hover {
+    opacity: 0.7;
+}
+
+/* Responsive table wrapper for reports */
+.dashboard .reports #PrimaryContent > table#report {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Calendar container for date picker in reports */
+.dashboard .reports .yui-calcontainer,
+.dashboard .reports .yui-skin-sam .yui-calcontainer {
+    position: absolute !important;
+    z-index: 10000 !important;
+    background-color: var(--color-white) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12) !important;
+    padding: 12px !important;
+}
+
+/* Date picker with selects styling */
+.dashboard .reports .calendarWithSelects {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dashboard .reports .calendarWithSelects select {
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px 30px 10px 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--color-white);
+    color: var(--color-dark);
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    min-width: 70px;
+}
+
+.dashboard .reports .calendarWithSelects select:hover {
+    border-color: var(--color-primary-light);
+}
+
+.dashboard .reports .calendarWithSelects select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.dashboard .reports .calendarWithSelects .showCalendarButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--color-white);
+    cursor: pointer;
+}
+
+.dashboard .reports .calendarWithSelects .showCalendarButton:hover {
+    border-color: var(--color-primary-light);
+    background-color: var(--bg-light);
+}
+
+/* Ensure hidden calendar container shows when activated */
+.dashboard .reports .hiddenCalendarContainer {
+    position: absolute !important;
+    z-index: 10000 !important;
+    background-color: var(--color-white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    padding: 12px;
+}
+
+.dashboard .reports .hiddenCalendarContainer[style*="block"],
+.dashboard .reports .hiddenCalendarContainer.show {
+    display: block !important;
+}
+
+/* Replace broken image icons with CSS SVGs */
+.dashboard .reports img[src*="print_16.gif"],
+.dashboard .reports img[src*="calendar.gif"],
+.dashboard .reports img[src*="new_ltg_up.gif"],
+.dashboard .reports img[src*="new_ltg_down.gif"] {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+}
+
+.dashboard .reports img[src*="print_16.gif"] {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23004279' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9V2h12v7'/%3E%3Cpath d='M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2'/%3E%3Crect x='6' y='14' width='12' height='8'/%3E%3C/svg%3E");
+}
+
+.dashboard .reports img[src*="calendar.gif"] {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23004279' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3C/svg%3E");
+    width: 18px;
+    height: 18px;
+}
+
+.dashboard .reports img[src*="new_ltg_up.gif"] {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M12 8l-6 6h12z'/%3E%3C/svg%3E");
+    width: 12px;
+    height: 12px;
+}
+
+.dashboard .reports img[src*="new_ltg_down.gif"] {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M12 16l-6-6h12z'/%3E%3C/svg%3E");
+    width: 12px;
+    height: 12px;
+}
+
 @media (max-width: 1400px) {
     .dashboard .settings .grid_1_1 {
         grid-template-columns: 1fr !important;
@@ -8921,6 +9450,83 @@ img.calendarIcon {
 
     .dashboard .reportContainer .reportLink2 {
         align-self: flex-start;
+    }
+
+    /* Report display page responsive - Tablet */
+    .dashboard .reports .filter {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        padding: 14px;
+    }
+
+    .dashboard .reports .filter .inputGroup {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .dashboard .reports .filter select,
+    .dashboard .reports .filter .rptFilterSelect {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .dashboard .reports .filter .optionsContent {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .dashboard .reports .yui-button {
+        width: 100%;
+        margin: 0 !important;
+    }
+
+    .dashboard .reports .yui-button button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .dashboard .reports table#report,
+    .dashboard .reports table.reportResults {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .dashboard .reports table#report tbody,
+    .dashboard .reports table.reportResults tbody {
+        display: table;
+        width: 100%;
+        min-width: 500px;
+    }
+
+    .dashboard .reports h1 {
+        font-size: 18px;
+    }
+
+    .dashboard .reports .rptHeaderLeft,
+    .dashboard .reports .rptHeaderCenter,
+    .dashboard .reports .rptHeaderRight {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .dashboard .reports .rptDataLeft,
+    .dashboard .reports .rptDataCenter,
+    .dashboard .reports .rptDataRight {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .dashboard .reports .calendarWithSelects {
+        width: 100%;
+    }
+
+    .dashboard .reports .calendarWithSelects select {
+        flex: 1;
     }
 
     .dashboard #formContainer .inputGroup {
@@ -10219,6 +10825,76 @@ img.calendarIcon {
         display: flex;
         justify-content: flex-start;
     }
+
+    /* --- REPORT DISPLAY MOBILE --- */
+    .dashboard .reports #PrimaryContent {
+        gap: 12px !important;
+    }
+
+    .dashboard .reports .filter {
+        padding: 12px !important;
+        gap: 10px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .dashboard .reports h1 {
+        font-size: 18px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .dashboard .reports h2 {
+        font-size: 14px !important;
+        margin: 14px 0 8px 0 !important;
+    }
+
+    .dashboard .reports .rptHeaderLeft,
+    .dashboard .reports .rptHeaderCenter,
+    .dashboard .reports .rptHeaderRight {
+        font-size: 11px !important;
+        padding: 10px 8px !important;
+    }
+
+    .dashboard .reports .rptDataLeft,
+    .dashboard .reports .rptDataCenter,
+    .dashboard .reports .rptDataRight {
+        font-size: 12px !important;
+        padding: 8px !important;
+    }
+
+    .dashboard .reports table#report,
+    .dashboard .reports table.reportResults {
+        margin-bottom: 12px !important;
+    }
+
+    .dashboard .reports table.reportResults td.rptDataLeft {
+        font-size: 11px !important;
+        padding: 12px !important;
+    }
+
+    .dashboard .reports table#report tr td[colspan] {
+        padding: 10px 12px !important;
+        font-size: 12px !important;
+    }
+
+    .dashboard .reports .yui-button button {
+        padding: 10px 16px !important;
+        font-size: 13px !important;
+    }
+
+    .dashboard .reports .calendarWithSelects select {
+        padding: 8px 26px 8px 10px !important;
+        font-size: 13px !important;
+    }
+
+    .dashboard .reports .calendarWithSelects .showCalendarButton {
+        width: 34px !important;
+        height: 34px !important;
+    }
+
+    /* Action links on mobile */
+    .dashboard .reports table:not(#report):not(.reportResults) td {
+        padding: 4px 8px 4px 0 !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -10293,6 +10969,40 @@ img.calendarIcon {
 @media (max-width: 640px) {
     .dashboard #formContainer .formSectionContent > ul.text {
         grid-template-columns: 1fr !important;
+    }
+
+    /* --- REPORT DISPLAY SMALL MOBILE --- */
+    .dashboard .reports h1 {
+        font-size: 16px !important;
+    }
+
+    .dashboard .reports .filter {
+        padding: 10px !important;
+    }
+
+    .dashboard .reports .filter select,
+    .dashboard .reports .filter .rptFilterSelect {
+        padding: 8px 28px 8px 10px !important;
+        font-size: 13px !important;
+    }
+
+    .dashboard .reports .rptHeaderLeft,
+    .dashboard .reports .rptHeaderCenter,
+    .dashboard .reports .rptHeaderRight {
+        font-size: 10px !important;
+        padding: 8px 6px !important;
+    }
+
+    .dashboard .reports .rptDataLeft,
+    .dashboard .reports .rptDataCenter,
+    .dashboard .reports .rptDataRight {
+        font-size: 11px !important;
+        padding: 6px !important;
+    }
+
+    .dashboard .reports .yui-button button {
+        padding: 8px 14px !important;
+        font-size: 12px !important;
     }
 }
 

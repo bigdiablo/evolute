@@ -15,10 +15,22 @@
         }
     }
 
+    function remove() {
+        var els = document.querySelectorAll('#PrimaryContent br');
+        for (var i = els.length - 1; i >= 0; i--) {
+            els[i].parentNode.removeChild(els[i]);
+        }
+        var h2s = document.querySelectorAll('#PrimaryContent h2');
+        for (var j = h2s.length - 1; j >= 0; j--) {
+            if (!h2s[j].textContent.trim()) h2s[j].parentNode.removeChild(h2s[j]);
+        }
+    }
+
     function init() {
         if (!document.body.classList.contains('dashboard')) return;
 
         cleanup();
+        remove();
 
         var header = document.getElementById('HeaderContent');
         if (!header) return;
