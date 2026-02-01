@@ -9136,12 +9136,12 @@ img.calendarIcon {
 /* Sample HTTP POST string section */
 .dashboard .reports table.reportResults td.rptDataLeft {
     font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
-    font-size: 12px;
+    font-size: 12px !important;
     word-break: break-all;
-    white-space: normal;
-    background-color: #1e293b;
+    white-space: normal !important;
+    background-color: #1e293b !important;
     color: #e2e8f0;
-    padding: 14px 16px;
+    padding: 14px 16px !important;
     line-height: 1.6;
 }
 

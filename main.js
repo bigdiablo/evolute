@@ -26,11 +26,17 @@
         }
     }
 
+    function member() {
+        var link = document.head.querySelector('link[href*="member-reporting.css"]');
+        if (link) link.remove();
+    }
+
     function init() {
         if (!document.body.classList.contains('dashboard')) return;
 
         cleanup();
         remove();
+        member();
 
         var header = document.getElementById('HeaderContent');
         if (!header) return;
