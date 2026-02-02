@@ -22,20 +22,9 @@ ul {
 
 /* Form field utilities - kept for legacy support */
 
-.options .prefix {
-    margin-left: -0.78em;
-    padding-right: 0.2em;
-}
-
-.stackedForm .options .prefix {
-    position: static;
-    margin-right: 0;
-}
-
 .instructions {
     font-size: 93%;
     color: #666;
-    margin: 0 10% 0 10%;
     font-family: helvetica, sans-serif;
 }
 
@@ -712,7 +701,6 @@ div#search {
     white-space: nowrap;
     position: relative;
     top: 0px;
-    min-width: 900px;
 }
 
 table.leadListTable th {
@@ -1047,7 +1035,7 @@ div.even {
 
 /* lead store results table */
 div#searchResultsContainer {
-    min-width: 740px;
+    width: 100%;
 }
 
 table.leadListTable {
@@ -1899,13 +1887,11 @@ span.radioButtonExtra {
     width: 100%;
     margin: 0px;
     overflow: hidden;
-    min-width: 900px;
 }
 
 #buyerHomeWrapper div.roundedBox,
 #buyerHomeWrapper div.roundedBox2 {
     margin-right: 10px;
-    min-width: 350px;
 }
 
 #buyerHomeWrapper div.roundedBox div.inlineSideBar2,
@@ -1918,7 +1904,6 @@ span.radioButtonExtra {
 #dashWrapper {
     margin: 0px 10px 10px 10px;
     width: 75%;
-    min-width: 645px;
 }
 
 .overview {
@@ -2312,7 +2297,6 @@ input.number {
 /* Lead Manager */
 div#managerContainer {
     width: auto;
-    min-width: 900px;
 }
 
 div #searchFieldsDiv {
@@ -2345,7 +2329,7 @@ div.roundedBox4 {
 
 /* used for table containers */
 div.roundedBox5 {
-    min-width: 930px;
+    width: 100%;
 }
 
 /* these are the corners; they all use the same background image */
@@ -3758,7 +3742,7 @@ tr.childRowOpen td {
 }
 
 div.roundedBox5 {
-    min-width: 1180px;
+    width: 100%;
 }
 
 /* connections screens */
