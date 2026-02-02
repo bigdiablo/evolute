@@ -9087,28 +9087,27 @@ img.calendarIcon {
 
 /* Notes sections */
 .dashboard .reports table#report tr td[colspan] {
-    padding: 12px 16px;
-    font-size: 13px;
+    padding: 8px 12px;
+    font-size: 12px;
     color: var(--color-gray);
-    line-height: 1.6;
+    line-height: 1.4;
     background-color: var(--bg-light);
 }
 
 .dashboard .reports table#report tr td[colspan] br {
-    display: block;
-    margin-bottom: 4px;
+    display: none;
 }
 
 /* Schedule report link section */
 .dashboard .reports table:not(#report):not(.reportResults) {
     width: auto;
-    margin: 12px 0;
+    margin: 8px 0;
     border: none !important;
     background: transparent !important;
 }
 
 .dashboard .reports table:not(#report):not(.reportResults) td {
-    padding: 6px 12px 6px 0;
+    padding: 4px 8px 4px 0;
     vertical-align: middle;
     border: none !important;
 }
