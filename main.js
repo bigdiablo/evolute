@@ -5,49 +5,32 @@
         close: '<svg class="close" viewBox="0 0 24 24"><path d="M6 6l12 12M6 18L18 6"/></svg>'
     };
 
-    function cleanup() {
-        var selectors = ['.br', '.tr', '.tc', '#HeaderContent .clear', '#HeaderContent div[style*="clear"]'];
-        for (var s = 0; s < selectors.length; s++) {
-            var els = document.querySelectorAll(selectors[s]);
-            for (var i = els.length - 1; i >= 0; i--) {
-                els[i].parentNode.removeChild(els[i]);
-            }
-        }
-    }
-
-    function remove() {
-        var els = document.querySelectorAll('#PrimaryContent br');
-        for (var i = els.length - 1; i >= 0; i--) {
-            els[i].parentNode.removeChild(els[i]);
-        }
-        var h2s = document.querySelectorAll('#PrimaryContent h2');
-        for (var j = h2s.length - 1; j >= 0; j--) {
-            if (!h2s[j].textContent.trim()) h2s[j].parentNode.removeChild(h2s[j]);
-        }
-    }
-
-    function member() {
-        var link = document.head.querySelector('link[href*="member-reporting.css"]');
-        if (link) link.remove();
+    function clean(selectors) {
+        selectors.forEach(function(sel) {
+            document.querySelectorAll(sel).forEach(function(el) { el.remove(); });
+        });
     }
 
     function init() {
         if (!document.body.classList.contains('dashboard')) return;
 
-        cleanup();
-        remove();
-        member();
+        clean(['.br', '.tr', '.tc', '.clear', 'link[href*="member-reporting.css"]']);
+
+        document.querySelectorAll('#PrimaryContent br, #PrimaryContent h2:empty').forEach(function(el) {
+            if (el.tagName === 'BR' || !el.textContent.trim()) el.remove();
+        });
+
+        document.querySelectorAll('[style*="width: 1100px"]').forEach(function(el) {
+            el.style.width = '';
+        });
 
         var header = document.getElementById('HeaderContent');
-        if (!header) return;
-
-        var parent = header.parentNode;
-        if (!parent || parent.id !== 'Header') return;
+        if (!header || !header.parentNode || header.parentNode.id !== 'Header') return;
 
         var el = document.createElement('div');
         el.id = 'mobilemenu';
         el.innerHTML = '<div class="logo">' + svg.logo + '</div><button id="mobilebutton">' + svg.menu + svg.close + '</button>';
-        parent.insertBefore(el, header);
+        header.parentNode.insertBefore(el, header);
 
         document.getElementById('mobilebutton').onclick = function() {
             this.classList.toggle('open');

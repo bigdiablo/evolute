@@ -9308,6 +9308,1080 @@ img.calendarIcon {
     height: 12px;
 }
 
+/* ========== DASHBOARD HOME PAGE STYLES ========== */
+
+/* Hide legacy decorative elements */
+.dashboard b.bt,
+.dashboard b.bb,
+.dashboard b.bt b,
+.dashboard b.bb b,
+.dashboard .hdr .tl,
+.dashboard .hdr .tr,
+.dashboard .sectionHeader b.htop,
+.dashboard .air,
+.dashboard #dluContainer,
+.dashboard #dluDisplayContainer {
+    display: none !important;
+}
+
+/* Alert boxes */
+.dashboard .redBox {
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+}
+
+.dashboard .redBox .boxContent,
+.dashboard .redBox .pageContent {
+    padding: 0;
+}
+
+.dashboard .redBox .alertTitle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: #dc2626;
+    font-size: 14px;
+}
+
+.dashboard .redBox .alertTitle::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23dc2626' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cline x1='12' y1='8' x2='12' y2='12'/%3E%3Cline x1='12' y1='16' x2='12.01' y2='16'/%3E%3C/svg%3E");
+}
+
+.dashboard .redBox a {
+    color: #dc2626;
+}
+
+/* Grid layouts */
+.dashboard .grid_340px_600px {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+.dashboard .grid_340px_600px .secondary {
+    flex: 0 0 300px;
+    width: 300px;
+    float: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.dashboard .grid_340px_600px .primary {
+    flex: 1;
+    float: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dashboard .grid_340px_600px .primary > div {
+    margin: 0;
+}
+
+/* Rounded boxes */
+.dashboard .roundedBox,
+.dashboard .roundedBox2,
+.dashboard .roundedBox3 {
+    background-color: var(--color-white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Box headers */
+.dashboard .roundedBox .hdr,
+.dashboard .roundedBox2 .hdr,
+.dashboard .roundedBox3 .hdr {
+    padding: 14px 16px 12px;
+    border-bottom: 1px solid var(--border);
+    background-color: var(--color-white);
+}
+
+.dashboard .roundedBox .hdr h2,
+.dashboard .roundedBox2 .hdr h2,
+.dashboard .roundedBox3 .hdr h2,
+.dashboard .sectionHeader h2 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-dark);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.dashboard .roundedBox .hdr h2 span:first-child,
+.dashboard .sectionHeader h2 {
+    font-size: 15px;
+}
+
+.dashboard .hdr h2 .headerLink,
+.dashboard .sectionHeader h2 .headerLink {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.dashboard .hdr h2 .headerLink:hover {
+    text-decoration: underline;
+}
+
+/* Section headers inside boxes */
+.dashboard .sectionHeader {
+    padding: 14px 16px 12px;
+    border-bottom: 1px solid var(--border);
+    background-color: var(--color-white);
+}
+
+/* Blue box (Lead Store) */
+.dashboard .blueBox {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #0060a7 100%);
+    border: none;
+    border-radius: 12px;
+    color: var(--color-white);
+    overflow: hidden;
+}
+
+.dashboard .blueBox h2 {
+    color: var(--color-white);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 14px 16px 0;
+    margin: 0;
+}
+
+.dashboard .blueBox .boxContent,
+.dashboard .blueBox .pageContent {
+    padding: 12px 16px 16px;
+}
+
+.dashboard .blueBox .smallGrey {
+    color: rgba(255,255,255,0.85);
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.dashboard .blueBox ul {
+    margin: 0 0 12px 0;
+    padding-left: 20px;
+}
+
+.dashboard .blueBox ul li {
+    color: var(--color-white);
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.dashboard .blueBox .bold {
+    font-weight: 600;
+}
+
+.dashboard .blueBox .yui-button a,
+.dashboard .blueBox .yui-link-button a {
+    background-color: var(--color-white) !important;
+    color: var(--color-primary) !important;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: opacity 0.15s ease;
+}
+
+.dashboard .blueBox .yui-button a:hover {
+    opacity: 0.9;
+}
+
+/* Nested list tables (Account Overview, Active Orders) */
+.dashboard .nestedListTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.dashboard .nestedListTable td {
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    color: var(--color-dark);
+}
+
+.dashboard .nestedListTable tr:last-child td {
+    border-bottom: none;
+}
+
+.dashboard .nestedListTable td.right {
+    text-align: right;
+    font-weight: 600;
+    width: 80px;
+}
+
+.dashboard .nestedListTable td.right a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.dashboard .nestedListTable td.right a:hover {
+    text-decoration: underline;
+}
+
+.dashboard .nestedListTable td.copy {
+    color: var(--color-gray);
+}
+
+.dashboard .nestedListTable td.last {
+    border-bottom: none;
+}
+
+.dashboard .nestedListTable thead tr.colheaders th {
+    padding: 12px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-gray);
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.dashboard .nestedListTable tfoot td {
+    padding: 12px 16px;
+    border-bottom: none;
+}
+
+.dashboard .nestedListTable tfoot .createOrderButtonPad {
+    text-align: center;
+}
+
+/* Form section content */
+.dashboard .formSectionContent {
+    padding: 16px;
+}
+
+.dashboard .boxContent {
+    padding: 16px;
+}
+
+.dashboard .pageContent {
+    padding: 16px;
+}
+
+/* Lead search box */
+.dashboard #leadSearchFormContainer {
+    padding: 16px;
+}
+
+.dashboard #leadSearchFormWidgets {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.dashboard #leadSearchFormWidgets .textInput {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--color-dark);
+}
+
+.dashboard #leadSearchFormWidgets .textInput:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.dashboard #leadSearchBox ul,
+.dashboard #salesForceLinks,
+.dashboard #userGuideLinks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dashboard #leadSearchBox ul li,
+.dashboard #salesForceLinks li,
+.dashboard #userGuideLinks li {
+    padding: 6px 0;
+}
+
+.dashboard #leadSearchBox ul li a,
+.dashboard #salesForceLinks li a,
+.dashboard #userGuideLinks li a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.dashboard #leadSearchBox ul li a:hover,
+.dashboard #salesForceLinks li a:hover,
+.dashboard #userGuideLinks li a:hover {
+    text-decoration: underline;
+}
+
+/* Support links with icons */
+.dashboard #salesForceLinks li a::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23004279' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3'/%3E%3Cline x1='12' y1='17' x2='12.01' y2='17'/%3E%3C/svg%3E");
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.dashboard #userGuideLinks li a::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23004279' stroke-width='2'%3E%3Cpath d='M4 19.5A2.5 2.5 0 0 1 6.5 17H20'/%3E%3Cpath d='M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z'/%3E%3C/svg%3E");
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Charts container */
+.dashboard #chartsContainer {
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.dashboard #chartsContainer .roundedBox {
+    margin: 0;
+}
+
+.dashboard #chartSelectorContainer {
+    padding: 0 16px 16px;
+}
+
+.dashboard #chartSelectorContainer select {
+    padding: 10px 36px 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: var(--color-white);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    cursor: pointer;
+    min-width: 280px;
+}
+
+.dashboard #fusionChartContainer {
+    padding: 0 16px 16px;
+}
+
+.dashboard .noChartData {
+    padding: 24px;
+    text-align: center;
+    color: var(--color-gray);
+    font-size: 14px;
+    background-color: var(--bg-light);
+    border-radius: 8px;
+}
+
+.dashboard .noChartData a {
+    color: var(--color-primary);
+}
+
+/* Orders container */
+.dashboard #ordersContainer .roundedBox {
+    margin: 0;
+}
+
+.dashboard .activeOrders {
+    width: 100%;
+}
+
+/* Manager container (Search Leads) */
+.dashboard #managerContainer {
+    display: flex;
+    gap: 20px;
+}
+
+.dashboard #searchFieldsDiv {
+    flex: 1;
+}
+
+.dashboard #leadManagerQuickLinksDiv {
+    flex: 0 0 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.dashboard #managerContainer .roundedBox,
+.dashboard #managerContainer .roundedBox3 {
+    margin: 0;
+}
+
+/* Search form - My Leads page */
+.dashboard form#search,
+.dashboard #search {
+    display: block;
+    padding: 0;
+}
+
+.dashboard #search .formSectionContent {
+    padding: 20px;
+}
+
+.dashboard #search .inputGroup {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.dashboard #search .inputGroup .mainLabel {
+    flex: 0 0 120px;
+    text-align: right;
+}
+
+.dashboard #search .inputGroup .mainLabelContent label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+.dashboard #search .inputGroup .options {
+    flex: 1;
+}
+
+.dashboard #search .inputGroup .optionsContent {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.dashboard #search select {
+    padding: 10px 36px 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: var(--color-white);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    cursor: pointer;
+    min-width: 140px;
+}
+
+.dashboard #search .textInput {
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    min-width: 200px;
+}
+
+.dashboard #search .instructions {
+    font-size: 12px;
+    color: var(--color-gray);
+}
+
+.dashboard #search p.information {
+    font-size: 13px;
+    color: var(--color-gray);
+    margin: 0 0 16px 132px;
+    padding: 0;
+}
+
+.dashboard .buttonGroup {
+    display: flex;
+    gap: 8px;
+    margin-left: 132px;
+    padding-top: 8px;
+}
+
+/* Quick Links */
+.dashboard #leadManagerQuickLinksDiv .boxContent ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dashboard #leadManagerQuickLinksDiv .boxContent ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.dashboard #leadManagerQuickLinksDiv .boxContent ul li:last-child {
+    border-bottom: none;
+}
+
+.dashboard #leadManagerQuickLinksDiv .boxContent ul li a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dashboard #leadManagerQuickLinksDiv .boxContent ul li a::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23004279' stroke-width='2'%3E%3Cpolyline points='9 18 15 12 9 6'/%3E%3C/svg%3E");
+}
+
+.dashboard #leadManagerQuickLinksDiv .boxContent ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Inline sidebar (info text) */
+.dashboard .inlineSideBar {
+    padding: 14px 16px;
+    font-size: 13px;
+    color: var(--color-gray);
+    line-height: 1.5;
+}
+
+.dashboard .inlineSideBar em,
+.dashboard .inlineSideBar strong {
+    color: var(--color-dark);
+}
+
+/* Data tables with checkboxes */
+.dashboard table.listTable,
+.dashboard table.leadListTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-white);
+}
+
+.dashboard table.listTable thead th,
+.dashboard table.leadListTable thead th {
+    padding: 12px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    text-align: left;
+    border: none;
+}
+
+.dashboard table.listTable thead th:first-child,
+.dashboard table.leadListTable thead th:first-child {
+    width: 40px;
+    text-align: center;
+}
+
+.dashboard table.listTable tbody td,
+.dashboard table.leadListTable tbody td {
+    padding: 12px 16px;
+    font-size: 14px;
+    color: var(--color-dark);
+    border-bottom: 1px solid var(--border);
+}
+
+.dashboard table.listTable tbody td:first-child,
+.dashboard table.leadListTable tbody td:first-child {
+    width: 40px;
+    text-align: center;
+}
+
+.dashboard table.listTable tbody tr:hover td,
+.dashboard table.leadListTable tbody tr:hover td {
+    background-color: #e8f4fd;
+}
+
+.dashboard table.listTable input[type="checkbox"],
+.dashboard table.leadListTable input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--color-primary);
+}
+
+/* Info boxes / Help boxes */
+.dashboard .infoBox,
+.dashboard .helpBox,
+.dashboard #sidebar,
+.dashboard .sidebar,
+.dashboard div[class*="SideBar"],
+.dashboard .column2 .roundedBox,
+.dashboard .secondary > div:not(.roundedBox):not(.blueBox) {
+    background-color: var(--color-white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.dashboard .infoBox h3,
+.dashboard .helpBox h3,
+.dashboard #sidebar h3,
+.dashboard .sidebar h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-dark);
+    margin: 0 0 8px 0;
+}
+
+.dashboard .infoBox p,
+.dashboard .helpBox p,
+.dashboard #sidebar p,
+.dashboard .sidebar p {
+    font-size: 13px;
+    color: var(--color-gray);
+    margin: 0 0 8px 0;
+    line-height: 1.5;
+}
+
+.dashboard .infoBox a,
+.dashboard .helpBox a,
+.dashboard #sidebar a,
+.dashboard .sidebar a {
+    color: var(--color-primary);
+}
+
+/* Payment/Invoice boxes */
+.dashboard .grid_580px_240px .column2 > div,
+.dashboard .grid_n_240px .secondary > div {
+    background-color: var(--color-white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.dashboard .grid_580px_240px .column2 h3,
+.dashboard .grid_n_240px .secondary h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-dark);
+    margin: 0 0 8px 0;
+}
+
+.dashboard .grid_580px_240px .column2 p,
+.dashboard .grid_n_240px .secondary p {
+    font-size: 13px;
+    color: var(--color-gray);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Create Order page */
+.dashboard .channels h1#MainTitle {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--color-dark);
+    margin: 0 0 8px 0;
+}
+
+.dashboard .channels .instructions {
+    font-size: 14px;
+    color: var(--color-gray);
+    margin-bottom: 20px;
+}
+
+.dashboard .channels .roundedBox {
+    margin-bottom: 16px;
+}
+
+.dashboard .categoryContainer {
+    padding: 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.dashboard .categoryContainer select {
+    padding: 10px 36px 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: var(--color-white);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    cursor: pointer;
+    min-width: 250px;
+}
+
+.dashboard .channels .hdr {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+    background-color: var(--bg-light);
+}
+
+.dashboard .channels .hdr h2 {
+    font-size: 14px;
+    margin: 0;
+}
+
+.dashboard .productsContainer {
+    padding: 16px;
+}
+
+.dashboard .productsByCategory {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+}
+
+.dashboard .radioContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    background-color: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: border-color 0.15s ease;
+}
+
+.dashboard .radioContainer:hover {
+    border-color: var(--color-primary-light);
+}
+
+.dashboard .radioContainer label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--color-dark);
+    cursor: pointer;
+    flex: 1;
+}
+
+.dashboard .radioContainer input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--color-primary);
+}
+
+.dashboard .radioContainer .popLink {
+    font-size: 12px;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.dashboard .radioContainer .popLink:hover {
+    text-decoration: underline;
+}
+
+/* Calendar icon replacement */
+.dashboard img.calendarIcon,
+.dashboard img[src*="calbtn.gif"] {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23004279' stroke-width='2'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3C/svg%3E");
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+/* YUI button overrides */
+.dashboard .yui-button,
+.dashboard .yui-link-button,
+.dashboard .yui-submit-button {
+    display: inline-flex !important;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.dashboard .yui-button .first-child,
+.dashboard .yui-link-button .first-child,
+.dashboard .yui-submit-button .first-child {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.dashboard .yui-button button,
+.dashboard .yui-submit-button button,
+.dashboard .yui-link-button a {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+}
+
+.dashboard .yui-button button:hover,
+.dashboard .yui-submit-button button:hover,
+.dashboard .yui-link-button a:hover {
+    background-color: var(--color-primary-light);
+}
+
+/* Leads info hidden */
+.dashboard .leadsInfo span#hasZeroDataLeads,
+.dashboard .leadsInfo span#hasZeroVoiceLeads {
+    display: none;
+}
+
+/* Overview section */
+.dashboard #overview {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.dashboard #secondaryMetrics,
+.dashboard #secondaryMetricsContent {
+    display: contents;
+}
+
+/* Fixed width override */
+.dashboard #PrimaryContent > div[style*="width: 1100px"] {
+    width: 100% !important;
+    max-width: 100%;
+}
+
+/* Top padding adjustment */
+.dashboard .topPad {
+    padding-top: 0 !important;
+}
+
+/* Chart header adjustments */
+.dashboard .chartHeader {
+    margin-bottom: 0 !important;
+}
+
+.dashboard .chartHeader h2 {
+    flex-wrap: wrap;
+}
+
+.dashboard .chartHeader .smallGrey {
+    font-size: 11px;
+    color: var(--color-gray);
+    font-weight: 400;
+}
+
+/* Alerts announcements */
+.dashboard #alertsAnnouncements {
+    margin-bottom: 16px;
+}
+
+/* Lead Type and Source containers (Create Order) */
+.dashboard #buttonsContainer {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dashboard #leadTypeContainer,
+.dashboard #sourceContainer {
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.dashboard #leadTypeContainer .hdr,
+.dashboard #sourceContainer .hdr {
+    padding: 12px 16px;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--border);
+}
+
+.dashboard #leadTypeContainer .hdr h2,
+.dashboard #sourceContainer .hdr h2 {
+    font-size: 14px;
+    margin: 0;
+}
+
+.dashboard .optionsContainer {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dashboard .optionsContainer .radioContainer {
+    background-color: var(--color-white);
+}
+
+.dashboard .radioContainer .normal {
+    font-weight: 400;
+    color: var(--color-gray);
+    font-size: 13px;
+}
+
+.dashboard #submitButtonContainer {
+    padding: 16px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.dashboard #submitButtonContainer .yui-button button {
+    padding: 12px 32px;
+    font-size: 15px;
+}
+
+/* Hidden info divs */
+.dashboard #leadClassAvailability,
+.dashboard #buyerBrandType,
+.dashboard #leadClassText,
+.dashboard #noLeadClassText,
+.dashboard #isBrandedExclusiveFilterAvailable,
+.dashboard #noLeadClassLabel,
+.dashboard #leadClassLabel,
+.dashboard #totalConnections {
+    display: none;
+}
+
+/* Lead Store page */
+.dashboard #FormPage {
+    width: 100% !important;
+}
+
+.dashboard #FormPageContent {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.dashboard #FormFields {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.dashboard .roundedBox2 {
+    background-color: var(--color-white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.dashboard .roundedBox2 .sectionHeader {
+    padding: 14px 16px 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+.dashboard .roundedBox2 .sectionHeader h2 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-dark);
+    margin: 0;
+}
+
+.dashboard .roundedBox2 .formSectionContent {
+    padding: 16px;
+}
+
+/* Lead Store inline form */
+.dashboard .roundedBox2 .mainLabelContent {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-dark);
+    padding-right: 12px;
+}
+
+.dashboard .roundedBox2 .optionsContent {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Nested list table improvements */
+.dashboard .nestedListTable thead th {
+    padding: 12px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-dark);
+    text-align: left;
+    background-color: var(--bg-light);
+    border-bottom: 1px solid var(--border);
+}
+
+.dashboard .nestedListTable thead th.first {
+    border-radius: 0;
+}
+
+.dashboard .nestedListTable tbody tr.sectionStart th.producttitle {
+    padding: 12px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-primary);
+    background-color: var(--bg-light);
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+}
+
+.dashboard .nestedListTable tbody tr.odd td,
+.dashboard .nestedListTable tbody tr.even td {
+    padding: 10px 16px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--border);
+}
+
+.dashboard .nestedListTable tbody tr.odd {
+    background-color: var(--color-white);
+}
+
+.dashboard .nestedListTable tbody tr.even {
+    background-color: var(--bg-light);
+}
+
+.dashboard .nestedListTable tbody tr:hover td {
+    background-color: #e8f4fd;
+}
+
+.dashboard .nestedListTable tbody td a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.dashboard .nestedListTable tbody td a:hover {
+    text-decoration: underline;
+}
+
+/* Form inline layout fix */
+.dashboard .formSectionContent > div[style*="float"] {
+    float: none !important;
+    display: inline-flex;
+    align-items: center;
+}
+
+.dashboard .formSectionContent > div[style*="margin-top"] {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin: 0 !important;
+}
+
+/* Hide leftover inline styles width */
+.dashboard .formSectionContent > div[style*="width: 30%"] {
+    width: auto !important;
+    text-align: left !important;
+    float: none !important;
+}
+
+.dashboard .formSectionContent > div[style*="clear: right"] {
+    clear: none !important;
+    float: none !important;
+}
+
+/* Connections container */
+.dashboard #connectionsContainer {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+}
+
+/* Voice/Data buttons container */
+.dashboard #dataButtonsContainer,
+.dashboard #voiceButtonsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 @media (max-width: 1400px) {
     .dashboard .settings .grid_1_1 {
         grid-template-columns: 1fr !important;
@@ -9349,6 +10423,43 @@ img.calendarIcon {
     .dashboard #Main {
         margin-left: 0;
         margin-top: 60px;
+    }
+
+    /* Home page grid responsive */
+    .dashboard .grid_340px_600px {
+        flex-direction: column;
+    }
+
+    .dashboard .grid_340px_600px .secondary {
+        flex: none;
+        width: 100%;
+        order: -1;
+    }
+
+    .dashboard .grid_340px_600px .primary {
+        width: 100%;
+    }
+
+    /* Manager container responsive */
+    .dashboard #managerContainer {
+        flex-direction: column;
+    }
+
+    .dashboard #leadManagerQuickLinksDiv {
+        flex: none;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .dashboard #leadManagerQuickLinksDiv > .roundedBox3 {
+        flex: 1;
+        min-width: 280px;
+    }
+
+    /* Products grid responsive */
+    .dashboard .productsByCategory {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     }
 
     .dashboard .grid_200px_n {
@@ -9401,20 +10512,33 @@ img.calendarIcon {
         width: 100%;
     }
 
-    .dashboard .inputGroup {
+    .dashboard .inputGroup,
+    .dashboard #search .inputGroup {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .dashboard .mainLabel {
+    .dashboard .mainLabel,
+    .dashboard #search .inputGroup .mainLabel {
+        flex: none;
         width: 100%;
         text-align: left;
-        padding: 0 0 8px;
+        padding: 0 0 6px;
     }
 
     .dashboard select {
         min-width: 100%;
         max-width: 100%;
+    }
+
+    .dashboard #search select {
+        min-width: auto;
+        width: auto;
+    }
+
+    .dashboard #search p.information,
+    .dashboard .buttonGroup {
+        margin-left: 0;
     }
 
     .dashboard .formSectionContent .inputGroup {
@@ -9434,6 +10558,13 @@ img.calendarIcon {
 
     .dashboard .formSectionContent .textInput {
         max-width: 100%;
+    }
+
+    /* Tables responsive */
+    .dashboard table.listTable,
+    .dashboard table.leadListTable {
+        display: block;
+        overflow-x: auto;
     }
 
     .dashboard .reportContainer {
@@ -10970,6 +12101,107 @@ img.calendarIcon {
         grid-template-columns: 1fr !important;
     }
 
+    /* --- HOME PAGE SMALL MOBILE --- */
+    .dashboard .grid_340px_600px .secondary,
+    .dashboard .grid_340px_600px .primary {
+        gap: 12px;
+    }
+
+    .dashboard .roundedBox .hdr,
+    .dashboard .sectionHeader {
+        padding: 12px 14px 10px;
+    }
+
+    .dashboard .formSectionContent,
+    .dashboard .boxContent,
+    .dashboard .pageContent {
+        padding: 12px 14px;
+    }
+
+    .dashboard #search {
+        gap: 12px;
+        padding: 12px 14px;
+    }
+
+    .dashboard #search .inputGroup {
+        width: 100%;
+    }
+
+    .dashboard .productsByCategory {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard .radioContainer {
+        padding: 8px 10px;
+    }
+
+    .dashboard .yui-button button,
+    .dashboard .yui-link-button a {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    .dashboard #leadManagerQuickLinksDiv {
+        flex-direction: column;
+    }
+
+    .dashboard #leadManagerQuickLinksDiv > .roundedBox3 {
+        min-width: auto;
+    }
+
+    .dashboard .nestedListTable td {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .dashboard .blueBox h2 {
+        font-size: 14px;
+        padding: 12px 14px 0;
+    }
+
+    .dashboard .blueBox .boxContent {
+        padding: 10px 14px 14px;
+    }
+
+    .dashboard .channels h1#MainTitle {
+        font-size: 18px;
+    }
+
+    /* Create Order page mobile */
+    .dashboard #buttonsContainer {
+        padding: 12px;
+        gap: 16px;
+    }
+
+    .dashboard .optionsContainer {
+        padding: 12px;
+        gap: 8px;
+    }
+
+    .dashboard #submitButtonContainer {
+        padding: 12px;
+    }
+
+    .dashboard .categoryContainer {
+        padding: 12px;
+    }
+
+    .dashboard .categoryContainer select {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .dashboard .productsContainer {
+        padding: 12px;
+    }
+
+    /* Lead Store mobile */
+    .dashboard .nestedListTable thead th,
+    .dashboard .nestedListTable tbody th.producttitle {
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+
     /* --- REPORT DISPLAY SMALL MOBILE --- */
     .dashboard .reports h1 {
         font-size: 16px !important;
@@ -11027,3 +12259,1351 @@ img.calendarIcon {
     }
 }
 
+/* ========== ADDITIONAL FIXES & IMPROVEMENTS ========== */
+
+/* Home page sidebar improvements */
+.dashboard .secondary {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.dashboard .secondary > div {
+    margin-bottom: 0;
+}
+
+/* Fix empty b.bt and b.bb elements (legacy rounded corners) */
+.dashboard b.bt,
+.dashboard b.bb,
+.dashboard .roundedBox > b,
+.dashboard .roundedBox2 > b,
+.dashboard .roundedBox3 > b,
+.dashboard .blueBox > b,
+.dashboard .redBox > b {
+    display: none;
+}
+
+/* Ensure roundedBox has proper background */
+.dashboard .roundedBox,
+.dashboard .roundedBox3 {
+    background-color: var(--color-white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Account Management Support box styling */
+.dashboard .secondary > .roundedBox:last-child .formSectionContent {
+    padding: 16px;
+}
+
+.dashboard #salesForceLinks,
+.dashboard #userGuideLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.dashboard #userGuideLinks {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+}
+
+/* Hide duplicate clears */
+.dashboard .formSectionContent .clear:not(:last-child),
+.dashboard .boxContent .clear {
+    display: none;
+}
+
+/* Search form improvements - better alignment */
+.dashboard #search .formSectionContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.dashboard #search .formSectionContent > div[style*="margin-left"] {
+    margin-left: 0 !important;
+    padding: 0 0 16px;
+}
+
+.dashboard #search .inputGroup {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: start;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.dashboard #search .inputGroup .mainLabel {
+    flex: none;
+    width: auto;
+    text-align: right;
+    padding-top: 10px;
+}
+
+.dashboard #search .inputGroup .options {
+    flex: none;
+    width: 100%;
+}
+
+.dashboard #search .inputGroup .optionsContent {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Select dropdowns consistent sizing */
+.dashboard #search select[name*="date"],
+.dashboard #search select[id*="Date"] {
+    min-width: auto;
+    width: auto;
+}
+
+.dashboard #search select#categoryList,
+.dashboard #search select#productList,
+.dashboard #search select#feedback,
+.dashboard #search select#state {
+    min-width: 160px;
+}
+
+/* Button group alignment with form fields */
+.dashboard #search .buttonGroup,
+.dashboard #search + .formSectionContent .buttonGroup {
+    margin-left: 132px;
+    padding-top: 4px;
+}
+
+/* Lead Manager Quick Links improvements */
+.dashboard #leadManagerQuickLinksDiv .roundedBox3 {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard #leadManagerQuickLinksDiv .roundedBox3 .sectionHeader {
+    flex-shrink: 0;
+}
+
+.dashboard #leadManagerQuickLinksDiv .inlineSideBar {
+    flex: 1;
+    display: block;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--color-gray);
+    padding: 16px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.dashboard #leadManagerQuickLinksDiv .inlineSideBar em {
+    font-style: normal;
+}
+
+.dashboard #leadManagerQuickLinksDiv .inlineSideBar strong {
+    color: var(--color-dark);
+}
+
+/* Section header consistent spacing */
+.dashboard .sectionHeader + .formSectionContent {
+    padding: 20px;
+}
+
+/* Primary content wrapper fixes */
+.dashboard #PrimaryContent > div[style*="width"] {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+/* Last updated text styling */
+.dashboard .leadsInfo #dluContainer {
+    font-size: 11px;
+    color: var(--color-gray);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.dashboard .leadsInfo {
+    display: block;
+}
+
+/* Charts area no data state */
+.dashboard .noChartData {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 100px;
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--color-gray);
+}
+
+.dashboard .noChartData a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.dashboard .noChartData a:hover {
+    text-decoration: underline;
+}
+
+/* Active orders empty state */
+.dashboard .activeOrders thead th.center[colspan] {
+    text-align: center;
+    font-weight: 400;
+    color: var(--color-gray);
+    padding: 24px 16px;
+    background-color: transparent;
+}
+
+/* Calendar icon next to date fields */
+.dashboard img[id*="CalendarIcon"],
+.dashboard .calendarIcon {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23004279' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'/%3E%3Cline x1='16' y1='2' x2='16' y2='6'/%3E%3Cline x1='8' y1='2' x2='8' y2='6'/%3E%3Cline x1='3' y1='10' x2='21' y2='10'/%3E%3C/svg%3E");
+    width: 20px !important;
+    height: 20px !important;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-left: 8px;
+    transition: opacity 0.15s ease;
+}
+
+.dashboard img[id*="CalendarIcon"]:hover,
+.dashboard .calendarIcon:hover {
+    opacity: 0.7;
+}
+
+/* Form section header separator */
+.dashboard .sectionHeader {
+    background-color: var(--bg-light);
+}
+
+.dashboard .sectionHeader h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+/* Alert title styling */
+.dashboard .alertTitle {
+    font-weight: 600;
+    color: var(--color-error, #dc2626);
+}
+
+/* Instructions text */
+.dashboard p.information,
+.dashboard .information {
+    font-size: 13px;
+    color: var(--color-gray);
+    margin: 0 0 16px 0;
+}
+
+.dashboard .instructions:not(span) {
+    font-size: 12px;
+    color: var(--color-gray);
+    white-space: nowrap;
+}
+
+/* Input focus states */
+.dashboard select:focus,
+.dashboard .textInput:focus,
+.dashboard input[type="text"]:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(0, 66, 121, 0.1);
+}
+
+/* Button group inside formSectionContent */
+.dashboard .formSectionContent > .buttonGroup {
+    margin-top: 8px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+}
+
+/* Fix h2 inside sectionHeader */
+.dashboard .sectionHeader b.htop,
+.dashboard .sectionHeader b.center,
+.dashboard .sectionHeader b.right {
+    display: none;
+}
+
+/* Responsive improvements for search */
+@media (max-width: 1024px) {
+    .dashboard #search .inputGroup {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard #search .inputGroup .mainLabel {
+        text-align: left;
+        padding-top: 0;
+        padding-bottom: 4px;
+    }
+
+    .dashboard #search .buttonGroup,
+    .dashboard #search + .formSectionContent .buttonGroup {
+        margin-left: 0;
+    }
+
+    .dashboard #search .formSectionContent > div[style*="margin-left"] {
+        padding: 0 0 12px;
+    }
+
+    .dashboard #search p.information {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard .secondary {
+        order: 2;
+    }
+
+    .dashboard .primary {
+        order: 1;
+    }
+
+    .dashboard #overview {
+        gap: 12px;
+    }
+
+    .dashboard #leadManagerQuickLinksDiv {
+        flex-direction: column;
+    }
+
+    .dashboard #leadManagerQuickLinksDiv > .roundedBox3 {
+        min-width: 100%;
+    }
+
+    .dashboard .leadsInfo #dluContainer {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 640px) {
+    .dashboard #search .inputGroup .optionsContent {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .dashboard #search select {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .dashboard #search .textInput {
+        width: 100%;
+    }
+}
+
+/* Sidebar boxes (Lead Store, Create Invoice, etc.) */
+.dashboard .roundedBox4,
+.dashboard .sideBar {
+    background-color: var(--color-white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.dashboard .roundedBox4 > b,
+.dashboard .sideBar > b {
+    display: none;
+}
+
+.dashboard .roundedBox4 h4,
+.dashboard .sideBar h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-dark);
+    margin: 0;
+    padding: 14px 16px;
+    background-color: var(--bg-light);
+    border-bottom: 1px solid var(--border);
+}
+
+.dashboard .roundedBox4 .sideBarGroup,
+.dashboard .sideBar .sideBarGroup {
+    padding: 16px;
+    font-size: 13px;
+    color: var(--color-gray);
+    line-height: 1.5;
+}
+
+.dashboard .roundedBox4 a,
+.dashboard .sideBar a {
+    color: var(--color-primary);
+}
+
+/* Secondary left column on Lead Store */
+.dashboard .secondary.left {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.dashboard .secondary.left > .clear {
+    display: none;
+}
+
+.dashboard .secondary.left > div {
+    margin-bottom: 0;
+}
+
+/* Footer styling */
+.dashboard #Footer {
+    margin-top: 32px;
+    padding: 24px 0;
+    border-top: 1px solid var(--border);
+    background-color: var(--bg-light);
+}
+
+.dashboard #FooterContent {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+    text-align: center;
+}
+
+.dashboard #FooterContent p {
+    margin: 0 0 8px 0;
+    font-size: 12px;
+    color: var(--color-gray);
+}
+
+.dashboard #FooterContent p:last-child {
+    margin-bottom: 0;
+}
+
+.dashboard #FooterContent a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.dashboard #FooterContent a:hover {
+    text-decoration: underline;
+}
+
+/* Hide air divs */
+.dashboard .air:empty,
+.dashboard div.air {
+    display: none;
+}
+
+/* ========== MOBILE FIXES ========== */
+
+/* Global mobile container fix */
+@media (max-width: 768px) {
+    /* Prevent horizontal overflow */
+    .dashboard,
+    .dashboard #Main,
+    .dashboard #MainContent,
+    .dashboard #PrimaryContent {
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+
+    /* All boxes should be full width */
+    .dashboard .roundedBox,
+    .dashboard .roundedBox2,
+    .dashboard .roundedBox3,
+    .dashboard .roundedBox4,
+    .dashboard .blueBox,
+    .dashboard .redBox,
+    .dashboard .sideBar {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    /* Manager container - stack vertically */
+    .dashboard #managerContainer {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    .dashboard #searchFieldsDiv,
+    .dashboard #leadManagerQuickLinksDiv {
+        width: 100% !important;
+        flex: none !important;
+    }
+
+    .dashboard #leadManagerQuickLinksDiv {
+        flex-direction: column !important;
+    }
+
+    .dashboard #leadManagerQuickLinksDiv > .roundedBox3 {
+        width: 100% !important;
+        min-width: 0 !important;
+        flex: none !important;
+    }
+
+    /* Inline sidebar text fix */
+    .dashboard .inlineSideBar {
+        display: block !important;
+        width: 100% !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        hyphens: auto;
+    }
+
+    /* Form sections full width */
+    .dashboard .formSectionContent,
+    .dashboard .boxContent,
+    .dashboard .pageContent {
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    /* Tables should scroll horizontally */
+    .dashboard table {
+        display: block;
+        width: 100% !important;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .dashboard table tbody,
+    .dashboard table thead {
+        display: table;
+        width: 100%;
+    }
+
+    /* Nested list tables */
+    .dashboard .nestedListTable {
+        min-width: 100%;
+    }
+
+    /* Search form mobile */
+    .dashboard #search .formSectionContent {
+        padding: 16px !important;
+    }
+
+    .dashboard #search .inputGroup {
+        display: block !important;
+        margin-bottom: 16px;
+    }
+
+    .dashboard #search .inputGroup .mainLabel {
+        display: block !important;
+        width: 100% !important;
+        text-align: left !important;
+        margin-bottom: 6px;
+        padding: 0 !important;
+    }
+
+    .dashboard #search .inputGroup .options {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .dashboard #search .inputGroup .optionsContent {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+        width: 100% !important;
+    }
+
+    .dashboard #search select,
+    .dashboard #search .textInput,
+    .dashboard #search input[type="text"] {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .dashboard #search .buttonGroup {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+
+    .dashboard #search .buttonGroup .yui-button,
+    .dashboard #search .buttonGroup .yui-link-button {
+        width: 100% !important;
+    }
+
+    .dashboard #search .buttonGroup .yui-button a,
+    .dashboard #search .buttonGroup .yui-link-button a {
+        width: 100% !important;
+        text-align: center !important;
+        display: block !important;
+    }
+
+    /* Quick links mobile */
+    .dashboard #leadManagerQuickLinksDiv .boxContent ul li a {
+        word-break: break-word;
+    }
+
+    /* Info text */
+    .dashboard p.information,
+    .dashboard .information {
+        margin-left: 0 !important;
+    }
+
+    /* Calendar with selects - stack on mobile */
+    .dashboard .calendarWithSelects {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+    }
+
+    .dashboard .calendarWithSelects select {
+        flex: 1 1 auto !important;
+        min-width: 80px !important;
+    }
+
+    /* Create order page mobile */
+    .dashboard .categoryContainer,
+    .dashboard .productsContainer {
+        padding: 12px !important;
+    }
+
+    .dashboard .categoryContainer select {
+        width: 100% !important;
+    }
+
+    .dashboard .productsByCategory {
+        grid-template-columns: 1fr !important;
+    }
+
+    .dashboard .radioContainer {
+        width: 100% !important;
+    }
+
+    /* Lead Store mobile */
+    .dashboard #FormPage,
+    .dashboard #FormPageContent,
+    .dashboard #FormFields {
+        width: 100% !important;
+    }
+
+    .dashboard .roundedBox2 .formSectionContent > div[style] {
+        display: block !important;
+        width: 100% !important;
+        float: none !important;
+        margin: 0 0 12px 0 !important;
+        text-align: left !important;
+    }
+
+    .dashboard .roundedBox2 .optionsContent {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+        width: 100% !important;
+    }
+
+    .dashboard .roundedBox2 select {
+        width: 100% !important;
+    }
+
+    /* Home page grids mobile */
+    .dashboard .grid_340px_600px,
+    .dashboard .grid_600px_340px,
+    .dashboard .grid_580px_240px,
+    .dashboard .grid_200px_n,
+    .dashboard .grid_n_240px {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    .dashboard .grid_340px_600px > .secondary,
+    .dashboard .grid_340px_600px > .primary,
+    .dashboard .grid_600px_340px > .secondary,
+    .dashboard .grid_600px_340px > .primary,
+    .dashboard .grid_580px_240px > .column1,
+    .dashboard .grid_580px_240px > .column2 {
+        width: 100% !important;
+        flex: none !important;
+    }
+
+    /* Buttons full width on mobile */
+    .dashboard .yui-button,
+    .dashboard .yui-link-button,
+    .dashboard .yui-submit-button {
+        width: 100%;
+    }
+
+    .dashboard .yui-button button,
+    .dashboard .yui-link-button a,
+    .dashboard .yui-submit-button button {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Section headers */
+    .dashboard .sectionHeader h2,
+    .dashboard .roundedBox .hdr h2 {
+        font-size: 14px;
+    }
+
+    /* Footer mobile */
+    .dashboard #Footer {
+        margin-top: 24px;
+        padding: 16px 0;
+    }
+
+    .dashboard #FooterContent {
+        padding: 0 16px;
+    }
+
+    .dashboard #FooterContent p {
+        font-size: 11px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .dashboard #MainContent {
+        padding: 12px !important;
+    }
+
+    .dashboard .roundedBox .hdr,
+    .dashboard .sectionHeader {
+        padding: 12px !important;
+    }
+
+    .dashboard .formSectionContent,
+    .dashboard .boxContent,
+    .dashboard .pageContent {
+        padding: 12px !important;
+    }
+
+    .dashboard #search .formSectionContent {
+        padding: 12px !important;
+    }
+
+    .dashboard .inlineSideBar {
+        padding: 12px !important;
+        font-size: 12px !important;
+    }
+
+    /* Stack date selects vertically on very small screens */
+    .dashboard #search .inputGroup .optionsContent {
+        gap: 6px !important;
+    }
+
+    .dashboard #search select[name*="date"],
+    .dashboard #search select[id*="Date"] {
+        width: 100% !important;
+    }
+}
+
+/* ========== ENHANCED MOBILE IMPROVEMENTS ========== */
+
+@media (max-width: 768px) {
+    /* Home page sidebar - Lead Search Widget */
+    .dashboard #leadSearchFormWidgets {
+        flex-direction: column !important;
+        gap: 10px !important;
+        width: 100% !important;
+    }
+
+    .dashboard #leadSearchFormWidgets .textInput {
+        width: 100% !important;
+        min-width: 0 !important;
+        flex: none !important;
+    }
+
+    .dashboard #leadSearchFormWidgets .yui-button,
+    .dashboard #leadSearchFormWidgets .yui-submit-button {
+        width: 100% !important;
+    }
+
+    .dashboard #leadSearchFormWidgets .yui-button button,
+    .dashboard #leadSearchFormWidgets .yui-submit-button button {
+        width: 100% !important;
+    }
+
+    /* Lead search box links */
+    .dashboard #leadSearchBox ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .dashboard #leadSearchBox ul li {
+        padding: 10px 0 !important;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .dashboard #leadSearchBox ul li:last-child {
+        border-bottom: none;
+    }
+
+    /* Account overview table - Card Layout */
+    .dashboard #accountOverview {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+        padding: 0 16px 16px !important;
+    }
+
+    .dashboard #accountOverview tbody {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+    }
+
+    .dashboard #accountOverview tr {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 14px 0 !important;
+        border-bottom: 1px solid var(--border) !important;
+    }
+
+    .dashboard #accountOverview tr:last-child {
+        border-bottom: none !important;
+    }
+
+    .dashboard #accountOverview td {
+        display: block !important;
+        padding: 0 !important;
+        border: none !important;
+    }
+
+    .dashboard #accountOverview td.right {
+        order: 2;
+        width: auto !important;
+        font-size: 15px !important;
+        font-weight: 600 !important;
+    }
+
+    .dashboard #accountOverview td.right a {
+        font-size: 15px !important;
+    }
+
+    .dashboard #accountOverview td.copy {
+        order: 1;
+        flex: 1;
+        font-size: 13px !important;
+        color: var(--color-gray) !important;
+    }
+
+    /* Chart selector full width */
+    .dashboard #chartSelectorContainer {
+        padding: 12px 16px 16px !important;
+    }
+
+    .dashboard #chartSelectorContainer select {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    /* Chart header layout */
+    .dashboard .chartHeader h2 {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 6px !important;
+    }
+
+    .dashboard .chartHeader h2 span {
+        display: block !important;
+        float: none !important;
+    }
+
+    .dashboard .chartHeader .smallGrey {
+        font-size: 10px !important;
+    }
+
+    /* Blue box (Lead Store) mobile */
+    .dashboard .blueBox {
+        width: 100% !important;
+    }
+
+    .dashboard .blueBox h2 {
+        font-size: 14px !important;
+        padding: 12px 14px 0 !important;
+    }
+
+    .dashboard .blueBox .boxContent,
+    .dashboard .blueBox .pageContent {
+        padding: 10px 14px 14px !important;
+    }
+
+    .dashboard .blueBox ul {
+        margin: 0 0 10px 0 !important;
+        padding-left: 18px !important;
+    }
+
+    .dashboard .blueBox ul li {
+        font-size: 12px !important;
+        margin-bottom: 3px !important;
+    }
+
+    /* Red box (Alert) mobile */
+    .dashboard .redBox {
+        width: 100% !important;
+    }
+
+    .dashboard .redBox .pageContent {
+        padding: 12px 14px !important;
+        font-size: 13px !important;
+    }
+
+    .dashboard .alertTitle {
+        display: block !important;
+        margin-bottom: 4px !important;
+    }
+
+    /* Support links mobile - better touch targets */
+    .dashboard #salesForceLinks li,
+    .dashboard #userGuideLinks li {
+        padding: 10px 0 !important;
+    }
+
+    .dashboard #salesForceLinks li a,
+    .dashboard #userGuideLinks li a {
+        display: flex !important;
+        align-items: center !important;
+        min-height: 24px !important;
+    }
+
+    /* Nested list table mobile - Card Layout with Labels */
+    .dashboard .nestedListTable {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 0 !important;
+    }
+
+    .dashboard .nestedListTable thead {
+        display: none !important;
+    }
+
+    .dashboard .nestedListTable tbody {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+
+    .dashboard .nestedListTable tbody tr {
+        display: flex !important;
+        flex-direction: column !important;
+        background: var(--color-white) !important;
+        border: 1px solid var(--border) !important;
+        border-radius: 10px !important;
+        overflow: hidden !important;
+        padding: 0 !important;
+    }
+
+    .dashboard .nestedListTable tbody tr.odd,
+    .dashboard .nestedListTable tbody tr.even {
+        background: var(--color-white) !important;
+    }
+
+    .dashboard .nestedListTable tbody td {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 12px 16px !important;
+        border: none !important;
+        border-bottom: 1px solid var(--border) !important;
+        text-align: right !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .dashboard .nestedListTable tbody tr td:last-child {
+        border-bottom: none !important;
+    }
+
+    .dashboard .nestedListTable tbody td::before {
+        content: attr(data-label);
+        font-size: 12px !important;
+        font-weight: 600 !important;
+        color: var(--color-gray) !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.03em !important;
+        text-align: left !important;
+        flex-shrink: 0 !important;
+        margin-right: 16px !important;
+    }
+
+    .dashboard .nestedListTable tbody td.right {
+        text-align: right !important;
+        width: 100% !important;
+    }
+
+    /* Lead Store table - Product section headers */
+    .dashboard .nestedListTable tbody tr.sectionStart {
+        background: var(--bg-light) !important;
+        border: none !important;
+        border-radius: 0 !important;
+        margin-top: 16px !important;
+    }
+
+    .dashboard .nestedListTable tbody tr.sectionStart:first-child {
+        margin-top: 0 !important;
+    }
+
+    .dashboard .nestedListTable tbody th.producttitle {
+        display: block !important;
+        padding: 12px 16px !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        color: var(--color-primary) !important;
+        background: transparent !important;
+        border: none !important;
+        text-align: left !important;
+    }
+
+    /* Lead Store table specific labels */
+    .dashboard .nestedListTable tbody tr.odd td:nth-child(1)::before,
+    .dashboard .nestedListTable tbody tr.even td:nth-child(1)::before {
+        content: "Order ID";
+    }
+
+    .dashboard .nestedListTable tbody tr.odd td:nth-child(2)::before,
+    .dashboard .nestedListTable tbody tr.even td:nth-child(2)::before {
+        content: "Name";
+    }
+
+    /* Section start rows */
+    .dashboard .nestedListTable tbody tr.sectionStart {
+        padding: 0 !important;
+        border-bottom: none !important;
+    }
+
+    /* Overview section mobile */
+    .dashboard #overview {
+        width: 100% !important;
+    }
+
+    .dashboard #secondaryMetrics,
+    .dashboard #secondaryMetricsContent {
+        width: 100% !important;
+    }
+
+    /* Primary column spacing */
+    .dashboard .grid_340px_600px .primary {
+        gap: 16px !important;
+    }
+
+    /* Performance / Orders containers */
+    .dashboard #chartsContainer,
+    .dashboard #ordersContainer {
+        width: 100% !important;
+    }
+
+    /* Active orders mobile - Card Layout */
+    .dashboard .activeOrders {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .dashboard .activeOrders thead {
+        order: 1 !important;
+    }
+
+    .dashboard .activeOrders thead tr.colheaders {
+        display: none !important;
+    }
+
+    .dashboard .activeOrders thead tr.actions {
+        display: block !important;
+    }
+
+    .dashboard .activeOrders thead th {
+        display: block !important;
+        text-align: center !important;
+        padding: 20px 16px !important;
+        background: transparent !important;
+        color: var(--color-gray) !important;
+        font-weight: 400 !important;
+    }
+
+    .dashboard .activeOrders tbody {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        order: 2 !important;
+        padding: 16px !important;
+    }
+
+    .dashboard .activeOrders tbody tr {
+        display: flex !important;
+        flex-direction: column !important;
+        background: var(--color-white) !important;
+        border: 1px solid var(--border) !important;
+        border-radius: 10px !important;
+        overflow: hidden !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    .dashboard .activeOrders tbody td {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 12px 16px !important;
+        border: none !important;
+        border-bottom: 1px solid var(--border) !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .dashboard .activeOrders tbody tr td:last-child {
+        border-bottom: none !important;
+    }
+
+    .dashboard .activeOrders tbody td::before {
+        content: attr(data-label);
+        font-size: 12px !important;
+        font-weight: 600 !important;
+        color: var(--color-gray) !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.03em !important;
+        flex-shrink: 0 !important;
+        margin-right: 16px !important;
+    }
+
+    .dashboard .activeOrders tfoot {
+        order: 3 !important;
+    }
+
+    .dashboard .activeOrders tfoot td {
+        display: block !important;
+        text-align: center !important;
+        padding: 16px !important;
+        border-top: 1px solid var(--border) !important;
+    }
+
+    /* Create order button container */
+    .dashboard .createOrderButtonPad {
+        padding: 0 !important;
+    }
+
+    /* Data/List tables - Card Layout */
+    .dashboard table.listTable,
+    .dashboard table.leadListTable {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .dashboard table.listTable thead,
+    .dashboard table.leadListTable thead {
+        display: none !important;
+    }
+
+    .dashboard table.listTable tbody,
+    .dashboard table.leadListTable tbody {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        padding: 16px !important;
+    }
+
+    .dashboard table.listTable tbody tr,
+    .dashboard table.leadListTable tbody tr {
+        display: flex !important;
+        flex-direction: column !important;
+        background: var(--color-white) !important;
+        border: 1px solid var(--border) !important;
+        border-radius: 10px !important;
+        overflow: hidden !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    .dashboard table.listTable tbody td,
+    .dashboard table.leadListTable tbody td {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 12px 16px !important;
+        border: none !important;
+        border-bottom: 1px solid var(--border) !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .dashboard table.listTable tbody tr td:last-child,
+    .dashboard table.leadListTable tbody tr td:last-child {
+        border-bottom: none !important;
+    }
+
+    .dashboard table.listTable tbody td::before,
+    .dashboard table.leadListTable tbody td::before {
+        content: attr(data-label);
+        font-size: 12px !important;
+        font-weight: 600 !important;
+        color: var(--color-gray) !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.03em !important;
+        flex-shrink: 0 !important;
+        margin-right: 16px !important;
+    }
+
+    /* Checkbox column on mobile */
+    .dashboard table.listTable tbody td:first-child,
+    .dashboard table.leadListTable tbody td:first-child {
+        justify-content: flex-start !important;
+    }
+
+    .dashboard table.listTable tbody td:first-child::before,
+    .dashboard table.leadListTable tbody td:first-child::before {
+        content: "Select" !important;
+    }
+
+    /* Report tables - Card Layout */
+    .dashboard .reports table#report,
+    .dashboard .reports table.reportResults {
+        display: flex !important;
+        flex-direction: column !important;
+        border: none !important;
+        border-radius: 0 !important;
+        overflow: visible !important;
+    }
+
+    .dashboard .reports table#report thead,
+    .dashboard .reports table.reportResults thead {
+        display: none !important;
+    }
+
+    .dashboard .reports table#report tbody,
+    .dashboard .reports table.reportResults tbody {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+
+    .dashboard .reports table#report tbody tr,
+    .dashboard .reports table.reportResults tbody tr {
+        display: flex !important;
+        flex-direction: column !important;
+        background: var(--color-white) !important;
+        border: 1px solid var(--border) !important;
+        border-radius: 10px !important;
+        overflow: hidden !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    .dashboard .reports table#report tbody tr.rollOut,
+    .dashboard .reports table#report tbody tr.rollOut2,
+    .dashboard .reports table.reportResults tbody tr.rollOut,
+    .dashboard .reports table.reportResults tbody tr.rollOut2 {
+        background: var(--color-white) !important;
+    }
+
+    .dashboard .reports table#report tbody td,
+    .dashboard .reports table.reportResults tbody td {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 12px 16px !important;
+        border: none !important;
+        border-bottom: 1px solid var(--border) !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        text-align: right !important;
+    }
+
+    .dashboard .reports table#report tbody tr td:last-child,
+    .dashboard .reports table.reportResults tbody tr td:last-child {
+        border-bottom: none !important;
+    }
+
+    .dashboard .reports .rptDataLeft,
+    .dashboard .reports .rptDataCenter,
+    .dashboard .reports .rptDataRight {
+        text-align: right !important;
+    }
+
+    .dashboard .reports .rptDataLeft::before,
+    .dashboard .reports .rptDataCenter::before,
+    .dashboard .reports .rptDataRight::before {
+        content: attr(data-label);
+        font-size: 11px !important;
+        font-weight: 600 !important;
+        color: var(--color-gray) !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.03em !important;
+        text-align: left !important;
+        flex-shrink: 0 !important;
+        margin-right: 12px !important;
+    }
+
+    /* Instructions text mobile */
+    .dashboard .instructions span {
+        white-space: normal !important;
+        word-wrap: break-word !important;
+    }
+}
+
+/* Tablet adjustments */
+@media (min-width: 481px) and (max-width: 768px) {
+    /* Two column for date selects on tablet */
+    .dashboard #search .inputGroup .optionsContent {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 8px !important;
+    }
+
+    .dashboard #search .inputGroup .optionsContent .calendarIcon,
+    .dashboard #search .inputGroup .optionsContent img[id*="CalendarIcon"] {
+        grid-column: span 3;
+        justify-self: start;
+    }
+
+    /* Quick links side by side on tablet */
+    .dashboard #leadManagerQuickLinksDiv {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+    }
+
+    .dashboard #leadManagerQuickLinksDiv > .roundedBox3 {
+        flex: 1 1 calc(50% - 8px) !important;
+        min-width: 280px !important;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 380px) {
+    .dashboard #MainContent {
+        padding: 10px !important;
+    }
+
+    .dashboard .roundedBox .hdr,
+    .dashboard .sectionHeader {
+        padding: 10px !important;
+    }
+
+    .dashboard .roundedBox .hdr h2,
+    .dashboard .sectionHeader h2 {
+        font-size: 13px !important;
+    }
+
+    .dashboard .formSectionContent,
+    .dashboard .boxContent,
+    .dashboard .pageContent {
+        padding: 10px !important;
+    }
+
+    .dashboard .yui-button button,
+    .dashboard .yui-link-button a,
+    .dashboard .yui-submit-button button {
+        padding: 10px 16px !important;
+        font-size: 13px !important;
+    }
+
+    .dashboard .nestedListTable td,
+    .dashboard .nestedListTable th {
+        font-size: 12px !important;
+    }
+
+    .dashboard select {
+        font-size: 13px !important;
+        padding: 8px 30px 8px 10px !important;
+    }
+
+    .dashboard .textInput,
+    .dashboard input[type="text"] {
+        font-size: 13px !important;
+        padding: 8px 10px !important;
+    }
+}

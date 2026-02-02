@@ -4604,7 +4604,7 @@ div#oliContainer {
     position: relative;
 }
 
-/* buyer home redesign 11.2009 */
+/* buyer home redesign 11.2009 - Updated with flexbox in main.css
 .grid_340px_600px {
     padding-left: 320px;
 }
@@ -4620,6 +4620,7 @@ div#oliContainer {
     width: 300px;
     margin-left: -320px;
 }
+*/
 
 .grid_580px_240px .column1 {
     width: 580px;
