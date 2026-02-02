@@ -3280,10 +3280,6 @@ p.space {
     color: #CC3300 !important;
 }
 
-option.operatorOnly selected {
-    color: #CC3300;
-}
-
 div#helpContainer div.bd iframe {
     margin: 0px auto;
     width: 100%;
@@ -3348,15 +3344,6 @@ span.bold button {
 }
 
 /* Payment Form */
-
-div#backup {
-    margin-top: 25px;
-}
-
-div#backup .mainLabel {
-    margin-left: -25px;
-    width: 30%;
-}
 
 div#autoccselection {
     margin-top: 6px;

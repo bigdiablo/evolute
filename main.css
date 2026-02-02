@@ -13147,11 +13147,6 @@ img.calendarIcon {
         font-size: 13px !important;
     }
 
-    .dashboard .alertTitle {
-        display: block !important;
-        margin-bottom: 4px !important;
-    }
-
     /* Support links mobile - better touch targets */
     .dashboard #salesForceLinks li,
     .dashboard #userGuideLinks li {
@@ -13630,8 +13625,8 @@ img.calendarIcon {
     }
 
     .dashboard .inputGroup .optionsContent {
-        flex-direction: column !important;
         gap: 10px !important;
+        flex-wrap: wrap;
     }
 
     /* Date selects grid layout */
@@ -13657,21 +13652,13 @@ img.calendarIcon {
         grid-column: 1 / -1 !important;
     }
 
-    .dashboard .inputGroup .optionsContent .calendarIcon,
-    .dashboard .inputGroup .optionsContent img[id*="CalendarIcon"] {
-        grid-column: 1 / -1 !important;
-        width: 32px !important;
-        height: 32px !important;
-        margin-top: 4px !important;
-    }
-
     /* All selects full width on mobile */
     .dashboard .formSectionContent select,
     .dashboard .inputGroup select,
     .dashboard .optionsContent select {
-        width: 100% !important;
+        width: auto !important;
         min-width: 0 !important;
-        max-width: 100% !important;
+        max-width: auto !important;
     }
 
     /* --- PAYMENT METHODS CARDS --- */
@@ -13969,7 +13956,7 @@ img.calendarIcon {
         font-size: 12px !important;
         color: var(--color-gray) !important;
         line-height: 1.4 !important;
-        margin-top: 6px !important;
+        margin: 0 !important;
     }
 
     /* --- CHART/PERFORMANCE SECTION --- */
