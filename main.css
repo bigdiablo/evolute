@@ -14082,3 +14082,116 @@ img.calendarIcon {
         padding: 12px 14px !important;
     }
 }
+
+/* ========== DATEPICKER FIXES ========== */
+
+/* Hide Tabs | Single Page toggle */
+#toggleViewSpan { display: none !important; }
+
+/* Datepicker container */
+.yui-calcontainer {
+    position: absolute !important;
+    z-index: 99999 !important;
+    background: #fff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+    padding: 12px !important;
+    width: 280px !important;
+}
+
+/* Calendar table */
+.yui-calendar {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    background: #fff !important;
+}
+
+/* Month/year header */
+.yui-calendar .calheader {
+    text-align: center !important;
+    padding: 8px 0 !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+}
+
+/* Weekday headers */
+.yui-calendar .calweekdaycell {
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    color: #6b7280 !important;
+    text-align: center !important;
+    padding: 6px !important;
+}
+
+/* Day cells */
+.yui-calendar td.calcell {
+    text-align: center !important;
+    padding: 2px !important;
+    border: none !important;
+}
+
+.yui-calendar td.calcell a {
+    display: block !important;
+    width: 32px !important;
+    height: 32px !important;
+    line-height: 32px !important;
+    text-align: center !important;
+    border-radius: 4px !important;
+    text-decoration: none !important;
+    color: #374151 !important;
+    font-size: 13px !important;
+}
+
+.yui-calendar td.calcell a:hover {
+    background: #e5e7eb !important;
+}
+
+.yui-calendar td.calcell.selected a {
+    background: var(--color-primary, #0060a7) !important;
+    color: #fff !important;
+}
+
+.yui-calendar td.calcell.today a {
+    font-weight: 700 !important;
+    border: 1px solid var(--color-primary, #0060a7) !important;
+}
+
+/* Close button */
+.yui-calcontainer .calclose,
+.container-close {
+    position: absolute !important;
+    top: 8px !important;
+    right: 8px !important;
+    width: 24px !important;
+    height: 24px !important;
+    cursor: pointer !important;
+    background: #f3f4f6 !important;
+    border-radius: 4px !important;
+    text-align: center !important;
+    line-height: 24px !important;
+    font-size: 14px !important;
+}
+
+/* Date selects */
+.dashboard select[id*="_month"] { width: 120px !important; }
+.dashboard select[id*="_date"] { width: 70px !important; }
+.dashboard select[id*="_year"] { width: 90px !important; }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .yui-calcontainer {
+        position: fixed !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 300px !important;
+        max-width: 90vw !important;
+    }
+    
+    .dashboard select[id*="_month"],
+    .dashboard select[id*="_date"],
+    .dashboard select[id*="_year"] {
+        width: 100% !important;
+    }
+}
