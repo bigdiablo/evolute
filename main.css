@@ -253,6 +253,72 @@ html:has(body.login) {
     border: 1px solid #1e3a5f;
 }
 
+.modal .form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.modal .field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.modal .field .label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #18181b;
+    text-transform: none;
+    letter-spacing: 0;
+}
+.modal .field .input,
+.modal .field .select,
+.modal .field .textarea {
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #18181b;
+    background: #fff;
+    border: 1px solid #e4e4e7;
+    border-radius: 6px;
+    transition: all 0.15s;
+    outline: none;
+}
+.modal .field .input:hover,
+.modal .field .select:hover,
+.modal .field .textarea:hover {
+    border-color: #a1a1aa;
+}
+.modal .field .input:focus,
+.modal .field .select:focus,
+.modal .field .textarea:focus {
+    border-color: #1e3a5f;
+    box-shadow: 0 0 0 3px rgba(30,58,95,0.1);
+}
+.modal .field .input::placeholder,
+.modal .field .textarea::placeholder {
+    color: #a1a1aa;
+}
+.modal .field .select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2371717a' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 36px;
+    cursor: pointer;
+}
+.modal .field .textarea {
+    resize: vertical;
+    min-height: 100px;
+    font-family: inherit;
+    line-height: 1.5;
+}
+.modal .row {
+    display: flex;
+    gap: 12px;
+}
+.modal .row .field {
+    flex: 1;
+}
+
 @media (max-width: 600px) {
     .test {
         flex-direction: column;
@@ -281,6 +347,9 @@ html:has(body.login) {
     }
     .modal .btn {
         width: 100%;
+    }
+    .modal .row {
+        flex-direction: column;
     }
     .datepicker {
         width: 100%;
