@@ -2191,6 +2191,9 @@ body.login {
 
 /* Form Section Content */
 .dashboard .formSectionContent {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
     background-color: var(--color-white) !important;
     padding: 24px !important;
 }
@@ -9971,6 +9974,7 @@ img.calendarIcon {
 
 /* Lead search box */
 .dashboard #leadSearchFormContainer {
+    width: 100%;
     padding: 16px;
 }
 
@@ -9983,6 +9987,7 @@ img.calendarIcon {
 
 .dashboard #leadSearchFormWidgets .textInput {
     flex: 1;
+    width: 100% !important;
     padding: 10px 12px;
     border: 1px solid var(--border);
     border-radius: 8px;
@@ -9999,9 +10004,17 @@ img.calendarIcon {
 .dashboard #salesForceLinks,
 .dashboard #userGuideLinks {
     list-style: none;
-    padding: 12px 0 0;
+    padding: 0;
     margin: 0;
-    border-top: 1px solid var(--border);
+    left: 0;
+}
+
+.dashboard #userGuideLinks {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 4px;
 }
 
 .dashboard #leadSearchBox ul li,
@@ -10496,7 +10509,7 @@ img.calendarIcon {
     font-family: inherit;
     font-size: 14px;
     font-weight: 600;
-    padding: 10px 20px;
+    padding: 10px 20px !important;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -12700,12 +12713,6 @@ img.calendarIcon {
     display: flex;
     flex-direction: column;
     gap: 4px;
-}
-
-.dashboard #userGuideLinks {
-    margin-top: 8px;
-    padding-top: 8px;
-    border-top: 1px solid var(--border);
 }
 
 /* Hide duplicate clears */
