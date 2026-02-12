@@ -7,147 +7,440 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="test">
-        <div class="modal">
-            <div class="header">
-                <span class="label">Integration Support</span>
-                <button class="close">
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                </button>
+    <div class="wrapper">
+
+        <div class="section">
+            <div class="info">
+                <h2 class="name">Modal</h2>
+                <p class="about">Clase <b>.modal</b> con estructura interna <b>.header</b>, <b>.body</b> y <b>.footer</b>. Incluye botones <b>.btn.cancel</b> y <b>.btn.primary</b>. Ancho controlado por max-width.</p>
             </div>
-            <div class="body">
-                <h2 class="title">Need help with your integration?</h2>
-                <p class="description">Our integration team is here to assist you with setup, configuration, and troubleshooting. Get personalized support to ensure your integration runs smoothly.</p>
-            </div>
-            <div class="footer">
-                <button class="btn cancel">Cancel</button>
-                <button class="btn primary">Contact Support</button>
+            <div class="modal">
+                <div class="header">
+                    <span class="label">Lead Channel</span>
+                    <button class="close">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                    </button>
+                </div>
+                <div class="body">
+                    <h2 class="title">Remove this lead channel?</h2>
+                    <p class="description">This action will permanently delete the channel and all associated lead data, bids, and connection settings. This cannot be undone.</p>
+                </div>
+                <div class="footer">
+                    <button class="btn cancel">Cancel</button>
+                    <button class="btn primary">Remove Channel</button>
+                </div>
             </div>
         </div>
 
-        <div class="modal">
-            <div class="header">
-                <span class="label">Integration Support</span>
-                <button class="close">
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                </button>
+        <div class="section">
+            <div class="info">
+                <h2 class="name">Modal with Form</h2>
+                <p class="about">Variante del modal que contiene un <b>.form</b> con campos <b>.field</b> dentro del <b>.body</b>. Cada field soporta <b>.input</b>, <b>.select</b> y <b>.textarea</b> con sus estados hover y focus.</p>
             </div>
-            <div class="body">
-                <h2 class="title">Request Integration Support</h2>
-                <div class="form">
-                    <div class="field">
-                        <label class="label">First Name</label>
-                        <input class="input" type="text" placeholder="John">
+            <div class="modal">
+                <div class="header">
+                    <span class="label">New Connection</span>
+                    <button class="close">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                    </button>
+                </div>
+                <div class="body">
+                    <h2 class="title">Create Publisher Connection</h2>
+                    <div class="form">
+                        <div class="field">
+                            <label class="label">Account Name</label>
+                            <input class="input" type="text" placeholder="Acme Leads Inc.">
+                        </div>
+                        <div class="field">
+                            <label class="label">Contact Email</label>
+                            <input class="input" type="email" placeholder="contact@acmeleads.com">
+                        </div>
+                        <div class="field">
+                            <label class="label">Connection Type</label>
+                            <select class="select">
+                                <option value="" disabled selected>Select a type</option>
+                                <option>Publisher</option>
+                                <option>Buyer</option>
+                                <option>Wholesale</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label class="label">Daily Lead Limit</label>
+                            <input class="input" type="number" placeholder="500">
+                        </div>
+                        <div class="field">
+                            <label class="label">Notes</label>
+                            <textarea class="textarea" placeholder="Describe the connection requirements, return policy, or special bid settings..."></textarea>
+                        </div>
                     </div>
-                    <div class="field">
-                        <label class="label">Last Name</label>
-                        <input class="input" type="text" placeholder="Doe">
-                    </div>
-                    <div class="field">
-                        <label class="label">Email</label>
-                        <input class="input" type="email" placeholder="john@example.com">
-                    </div>
-                    <div class="field">
-                        <label class="label">Integration Type</label>
+                </div>
+                <div class="footer">
+                    <button class="btn cancel">Cancel</button>
+                    <button class="btn primary">Create Connection</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="info">
+                <h2 class="name">Datepicker</h2>
+                <p class="about">Clase <b>.datepicker</b> con grid de 7 columnas para los dias. Usa <b>.day</b>, <b>.day.selected</b>, <b>.day.muted</b> y <b>.day.today</b>. Navegacion con <b>.nav</b> y selectores de mes/ano con <b>.select</b>.</p>
+            </div>
+            <div class="datepicker">
+                <div class="header">
+                    <button class="nav">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                    </button>
+                    <div class="selects">
                         <select class="select">
-                            <option value="" disabled selected>Select an option</option>
-                            <option>API Integration</option>
-                            <option>Webhook Setup</option>
-                            <option>Data Import</option>
-                            <option>Custom Integration</option>
+                            <option>Jan</option>
+                            <option>Feb</option>
+                            <option>Mar</option>
+                            <option>Apr</option>
+                            <option>May</option>
+                            <option selected>Jun</option>
+                            <option>Jul</option>
+                            <option>Aug</option>
+                            <option>Sep</option>
+                            <option>Oct</option>
+                            <option>Nov</option>
+                            <option>Dec</option>
+                        </select>
+                        <select class="select">
+                            <option>2023</option>
+                            <option>2024</option>
+                            <option selected>2025</option>
+                            <option>2026</option>
+                            <option>2027</option>
                         </select>
                     </div>
-                    <div class="field">
-                        <label class="label">Description</label>
-                        <textarea class="textarea" placeholder="Describe your integration needs..."></textarea>
-                    </div>
+                    <button class="nav">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
                 </div>
-            </div>
-            <div class="footer">
-                <button class="btn cancel">Cancel</button>
-                <button class="btn primary">Submit Request</button>
+                <div class="weekdays">
+                    <span class="weekday">Su</span>
+                    <span class="weekday">Mo</span>
+                    <span class="weekday">Tu</span>
+                    <span class="weekday">We</span>
+                    <span class="weekday">Th</span>
+                    <span class="weekday">Fr</span>
+                    <span class="weekday">Sa</span>
+                </div>
+                <div class="days">
+                    <button class="day">1</button>
+                    <button class="day">2</button>
+                    <button class="day">3</button>
+                    <button class="day">4</button>
+                    <button class="day">5</button>
+                    <button class="day">6</button>
+                    <button class="day">7</button>
+                    <button class="day">8</button>
+                    <button class="day">9</button>
+                    <button class="day">10</button>
+                    <button class="day">11</button>
+                    <button class="day">12</button>
+                    <button class="day">13</button>
+                    <button class="day">14</button>
+                    <button class="day">15</button>
+                    <button class="day">16</button>
+                    <button class="day">17</button>
+                    <button class="day">18</button>
+                    <button class="day">19</button>
+                    <button class="day">20</button>
+                    <button class="day">21</button>
+                    <button class="day">22</button>
+                    <button class="day">23</button>
+                    <button class="day">24</button>
+                    <button class="day selected">25</button>
+                    <button class="day">26</button>
+                    <button class="day">27</button>
+                    <button class="day">28</button>
+                    <button class="day">29</button>
+                    <button class="day">30</button>
+                    <button class="day muted">1</button>
+                    <button class="day muted">2</button>
+                    <button class="day muted">3</button>
+                    <button class="day muted">4</button>
+                    <button class="day muted">5</button>
+                </div>
             </div>
         </div>
 
-        <div class="datepicker">
-            <div class="header">
-                <button class="nav">
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
-                </button>
-                <div class="selects">
+        <div class="section">
+            <div class="info">
+                <h2 class="name">Input Types</h2>
+                <p class="about">Campos de formulario usando <b>.field</b> con <b>.label</b> + <b>.input</b>, <b>.select</b> o <b>.textarea</b>. Todos comparten estilos de borde, hover y focus con box-shadow. Se envuelven dentro de un <b>.card</b>.</p>
+            </div>
+            <div class="card">
+                <div class="field">
+                    <label class="label">Account Name</label>
+                    <input class="input" type="text" placeholder="Acme Leads Inc.">
+                </div>
+                <div class="field">
+                    <label class="label">Contact Email</label>
+                    <input class="input" type="email" placeholder="contact@acmeleads.com">
+                </div>
+                <div class="field">
+                    <label class="label">Password</label>
+                    <input class="input" type="password" placeholder="Enter password">
+                </div>
+                <div class="field">
+                    <label class="label">Daily Lead Limit</label>
+                    <input class="input" type="number" placeholder="500">
+                </div>
+                <div class="field">
+                    <label class="label">Phone</label>
+                    <input class="input" type="tel" placeholder="+1 (555) 000-0000">
+                </div>
+                <div class="field">
+                    <label class="label">Order Date</label>
+                    <input class="input" type="date">
+                </div>
+                <div class="field">
+                    <label class="label">Search Leads</label>
+                    <input class="input" type="search" placeholder="Search by name or channel...">
+                </div>
+                <div class="field">
+                    <label class="label">Webhook URL</label>
+                    <input class="input" type="url" placeholder="https://api.example.com/webhook">
+                </div>
+                <div class="field">
+                    <label class="label">Connection Type</label>
                     <select class="select">
-                        <option>Jan</option>
-                        <option>Feb</option>
-                        <option>Mar</option>
-                        <option>Apr</option>
-                        <option>May</option>
-                        <option selected>Jun</option>
-                        <option>Jul</option>
-                        <option>Aug</option>
-                        <option>Sep</option>
-                        <option>Oct</option>
-                        <option>Nov</option>
-                        <option>Dec</option>
-                    </select>
-                    <select class="select">
-                        <option>2023</option>
-                        <option>2024</option>
-                        <option selected>2025</option>
-                        <option>2026</option>
-                        <option>2027</option>
+                        <option value="" disabled selected>Select a type</option>
+                        <option>Publisher</option>
+                        <option>Buyer</option>
+                        <option>Wholesale</option>
                     </select>
                 </div>
-                <button class="nav">
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-                </button>
-            </div>
-            <div class="weekdays">
-                <span class="weekday">Su</span>
-                <span class="weekday">Mo</span>
-                <span class="weekday">Tu</span>
-                <span class="weekday">We</span>
-                <span class="weekday">Th</span>
-                <span class="weekday">Fr</span>
-                <span class="weekday">Sa</span>
-            </div>
-            <div class="days">
-                <button class="day">1</button>
-                <button class="day">2</button>
-                <button class="day">3</button>
-                <button class="day">4</button>
-                <button class="day">5</button>
-                <button class="day">6</button>
-                <button class="day">7</button>
-                <button class="day">8</button>
-                <button class="day">9</button>
-                <button class="day">10</button>
-                <button class="day">11</button>
-                <button class="day">12</button>
-                <button class="day">13</button>
-                <button class="day">14</button>
-                <button class="day">15</button>
-                <button class="day">16</button>
-                <button class="day">17</button>
-                <button class="day">18</button>
-                <button class="day">19</button>
-                <button class="day">20</button>
-                <button class="day">21</button>
-                <button class="day">22</button>
-                <button class="day">23</button>
-                <button class="day">24</button>
-                <button class="day selected">25</button>
-                <button class="day">26</button>
-                <button class="day">27</button>
-                <button class="day">28</button>
-                <button class="day">29</button>
-                <button class="day">30</button>
-                <button class="day muted">1</button>
-                <button class="day muted">2</button>
-                <button class="day muted">3</button>
-                <button class="day muted">4</button>
-                <button class="day muted">5</button>
+                <div class="field">
+                    <label class="label">Return Policy</label>
+                    <textarea class="textarea" placeholder="Describe the return policy terms and notice period requirements..."></textarea>
+                </div>
             </div>
         </div>
+
+        <div class="section">
+            <div class="info">
+                <h2 class="name">Checkbox Group</h2>
+                <p class="about">Clase <b>.checkboxes</b> con <b>.option</b> que envuelve cada input. Variantes de layout: default (columna), <b>.inline</b> (fila), <b>.grid</b> (3 columnas con CSS grid) y <b>.pills</b> (input oculto, estilo pill con :has).</p>
+            </div>
+            <div class="card">
+                <div class="checkboxes">
+                    <span class="label">Stacked (default)</span>
+                    <label class="option"><input type="checkbox" checked> API Integration</label>
+                    <label class="option"><input type="checkbox"> Webhook Delivery</label>
+                    <label class="option"><input type="checkbox" checked> Data Import</label>
+                    <label class="option"><input type="checkbox"> Voice Program</label>
+                </div>
+                <div class="checkboxes inline">
+                    <span class="label">Inline</span>
+                    <label class="option"><input type="checkbox" checked> Email</label>
+                    <label class="option"><input type="checkbox"> SMS</label>
+                    <label class="option"><input type="checkbox" checked> Push</label>
+                    <label class="option"><input type="checkbox"> Voice</label>
+                    <label class="option"><input type="checkbox"> Webhook</label>
+                </div>
+                <div class="checkboxes grid">
+                    <span class="label">Grid (3 columns)</span>
+                    <label class="option"><input type="checkbox" checked> Orders</label>
+                    <label class="option"><input type="checkbox"> Leads</label>
+                    <label class="option"><input type="checkbox" checked> Channels</label>
+                    <label class="option"><input type="checkbox"> Connections</label>
+                    <label class="option"><input type="checkbox"> Reports</label>
+                    <label class="option"><input type="checkbox" checked> Subscriptions</label>
+                </div>
+                <div class="checkboxes pills">
+                    <span class="label">Pills</span>
+                    <label class="option"><input type="checkbox" checked> Publisher</label>
+                    <label class="option"><input type="checkbox"> Buyer</label>
+                    <label class="option"><input type="checkbox" checked> Seller</label>
+                    <label class="option"><input type="checkbox"> Wholesale</label>
+                    <label class="option"><input type="checkbox"> Admin</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="info">
+                <h2 class="name">Radio Group</h2>
+                <p class="about">Clase <b>.radios</b> con la misma estructura que checkboxes. Solo permite una seleccion por grupo usando el atributo name. Mismas variantes: default, <b>.inline</b>, <b>.grid</b> y <b>.pills</b>.</p>
+            </div>
+            <div class="card">
+                <div class="radios">
+                    <span class="label">Stacked (default)</span>
+                    <label class="option"><input type="radio" name="plan" checked> Basic Plan</label>
+                    <label class="option"><input type="radio" name="plan"> Professional</label>
+                    <label class="option"><input type="radio" name="plan"> Enterprise</label>
+                </div>
+                <div class="radios inline">
+                    <span class="label">Inline</span>
+                    <label class="option"><input type="radio" name="freq" checked> Daily</label>
+                    <label class="option"><input type="radio" name="freq"> Weekly</label>
+                    <label class="option"><input type="radio" name="freq"> Monthly</label>
+                    <label class="option"><input type="radio" name="freq"> Yearly</label>
+                </div>
+                <div class="radios grid">
+                    <span class="label">Grid (3 columns)</span>
+                    <label class="option"><input type="radio" name="bid" checked> Fixed Price</label>
+                    <label class="option"><input type="radio" name="bid"> Auction</label>
+                    <label class="option"><input type="radio" name="bid"> Bid Group</label>
+                    <label class="option"><input type="radio" name="bid"> Wholesale</label>
+                    <label class="option"><input type="radio" name="bid"> Custom</label>
+                    <label class="option"><input type="radio" name="bid"> Voice</label>
+                </div>
+                <div class="radios pills">
+                    <span class="label">Pills</span>
+                    <label class="option"><input type="radio" name="status" checked> Active</label>
+                    <label class="option"><input type="radio" name="status"> Paused</label>
+                    <label class="option"><input type="radio" name="status"> Closed</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="info">
+                <h2 class="name">Table</h2>
+                <p class="about">Clase <b>.table</b> con thead fijo y hover en filas. Columna de acciones con <b>.actions</b> y links <b>.action.view</b>, <b>.action.edit</b>, <b>.action.delete</b>. En mobile oculta thead y usa <b>::before</b> con <b>data-label</b> para mostrar las cabeceras.</p>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Channel</th>
+                        <th>Publisher</th>
+                        <th>Lead Type</th>
+                        <th>Bid</th>
+                        <th>Connection</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Channel">Auto Insurance</td>
+                        <td data-label="Publisher">Acme Leads Inc.</td>
+                        <td data-label="Lead Type"><span class="badge info">Exclusive</span></td>
+                        <td data-label="Bid">$12.50</td>
+                        <td data-label="Connection"><a href="#">acme-api</a></td>
+                        <td data-label="Status"><span class="badge success">Active</span></td>
+                        <td data-label="Actions">
+                            <div class="actions">
+                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View</a>
+                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> Edit</a>
+                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Channel">Home Insurance</td>
+                        <td data-label="Publisher">QuoteStream LLC</td>
+                        <td data-label="Lead Type"><span class="badge neutral">Shared</span></td>
+                        <td data-label="Bid">$8.75</td>
+                        <td data-label="Connection"><a href="#">quotestream-webhook</a></td>
+                        <td data-label="Status"><span class="badge success">Active</span></td>
+                        <td data-label="Actions">
+                            <div class="actions">
+                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View</a>
+                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> Edit</a>
+                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Channel">Health Insurance</td>
+                        <td data-label="Publisher">MedLeads Pro</td>
+                        <td data-label="Lead Type"><span class="badge info">Exclusive</span></td>
+                        <td data-label="Bid">$18.00</td>
+                        <td data-label="Connection"><a href="#">medleads-api</a></td>
+                        <td data-label="Status"><span class="badge danger">Inactive</span></td>
+                        <td data-label="Actions">
+                            <div class="actions">
+                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View</a>
+                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> Edit</a>
+                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Channel">Life Insurance</td>
+                        <td data-label="Publisher">LeadVault Co.</td>
+                        <td data-label="Lead Type"><span class="badge neutral">Shared</span></td>
+                        <td data-label="Bid">$6.25</td>
+                        <td data-label="Connection"><a href="#">leadvault-import</a></td>
+                        <td data-label="Status"><span class="badge warning">Pending</span></td>
+                        <td data-label="Actions">
+                            <div class="actions">
+                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View</a>
+                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> Edit</a>
+                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Channel">Solar Energy</td>
+                        <td data-label="Publisher">BrightPath Leads</td>
+                        <td data-label="Lead Type"><span class="badge info">Exclusive</span></td>
+                        <td data-label="Bid">$22.00</td>
+                        <td data-label="Connection"><a href="#">brightpath-api</a></td>
+                        <td data-label="Status"><span class="badge success">Active</span></td>
+                        <td data-label="Actions">
+                            <div class="actions">
+                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View</a>
+                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> Edit</a>
+                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Channel">Mortgage</td>
+                        <td data-label="Publisher">PrimeRate Leads</td>
+                        <td data-label="Lead Type"><span class="badge neutral">Shared</span></td>
+                        <td data-label="Bid">$15.00</td>
+                        <td data-label="Connection"><a href="#">primerate-webhook</a></td>
+                        <td data-label="Status"><span class="badge success">Active</span></td>
+                        <td data-label="Actions">
+                            <div class="actions">
+                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View</a>
+                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> Edit</a>
+                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Channel">Legal Services</td>
+                        <td data-label="Publisher">JusticeLeads</td>
+                        <td data-label="Lead Type"><span class="badge info">Exclusive</span></td>
+                        <td data-label="Bid">$35.00</td>
+                        <td data-label="Connection"><a href="#">justice-api</a></td>
+                        <td data-label="Status"><span class="badge warning">Pending</span></td>
+                        <td data-label="Actions">
+                            <div class="actions">
+                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View</a>
+                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> Edit</a>
+                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Channel">Debt Relief</td>
+                        <td data-label="Publisher">ClearPath Financial</td>
+                        <td data-label="Lead Type"><span class="badge neutral">Shared</span></td>
+                        <td data-label="Bid">$9.50</td>
+                        <td data-label="Connection"><a href="#">clearpath-import</a></td>
+                        <td data-label="Status"><span class="badge danger">Inactive</span></td>
+                        <td data-label="Actions">
+                            <div class="actions">
+                                <a href="#" class="action view"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> View</a>
+                                <a href="#" class="action edit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> Edit</a>
+                                <a href="#" class="action delete"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
     </div>
 </body>
 </html>
