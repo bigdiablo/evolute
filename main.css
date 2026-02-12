@@ -13800,13 +13800,6 @@ img.calendarIcon {
         width: 100%;
     }
 
-    .dashboard .yui-button button,
-    .dashboard .yui-link-button a,
-    .dashboard .yui-submit-button button {
-        width: 100%;
-        text-align: center;
-    }
-
     /* Section headers */
     .dashboard .sectionHeader h2,
     .dashboard .roundedBox .hdr h2 {
