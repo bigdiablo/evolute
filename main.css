@@ -76,6 +76,8 @@ textarea {
     justify-content: center;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100vw;
     height: 100vh;
     z-index: 666;
@@ -196,36 +198,60 @@ textarea {
     border-top: 1px solid #e4e4e7;
     background: #fafafa;
 }
+
 .btn {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 16px;
+    gap: 8px;
+    height: 40px;
+    min-height: 40px;
+    padding: 0 24px;
     font-size: 14px;
     font-weight: 500;
+    line-height: 1;
     border-radius: 8px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: transparent;
+    outline: 0;
     cursor: pointer;
-    transition: all 0.15s;
-    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    transition: all 0.2s ease;
 }
-.btn.cancel {
-    background: #f4f4f5;
+.btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+.btn-secondary {
+    background-color: #e4e4e7;
     color: #18181b;
 }
-.btn.cancel:hover {
-    background: #e4e4e7;
-}
-.btn.primary {
-    background: #1e3a5f;
+.btn-primary {
+    background-color: #1e3a5f;
     color: #fff;
 }
-.btn.primary:hover {
-    background: #2d4a6f;
-}
-.btn.accent {
-    background: var(--color-primary-light);
+.btn-accent {
+    background-color: var(--color-primary-light);
     color: #fff;
+}
+.btn-outline {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    background-color: transparent;
+}
+.btn-danger {
+    color: white;
+    background-color: #fb2c36;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 .datepicker {
@@ -403,8 +429,6 @@ textarea {
     width: 100%;
     gap: 24px;
 }
-
-
 
 .card {
     background: #fff;
