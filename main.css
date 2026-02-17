@@ -2173,6 +2173,10 @@ body.login {
     width: auto;
 }
 
+.dashboard #Main:has(#buyerSignupFormv22) #FormHeader {
+    display: none !important;
+}
+
 .dashboard #Main:has(#buyerSignupFormv22) #signup {
     display: flex;
     flex-direction: column;
@@ -2212,6 +2216,7 @@ body.login {
     font-size: 14px;
     font-weight: 500;
     color: #a1a1aa;
+    margin: 0 !important;
     counter-increment: step;
     white-space: nowrap;
 }
@@ -12063,8 +12068,7 @@ img.calendarIcon {
 
 @media (max-width: 768px) {
 
-    .dashboard #Main:has(#buyerSignupFormv22) #MainContent #NestedFormPage,
-    .dashboard #Main:has(#buyerSignupFormv22) .inputGroup {
+    .dashboard #Main:has(#buyerSignupFormv22) #MainContent #NestedFormPage {
         width: 100% !important;
     }
 
@@ -13087,6 +13091,11 @@ img.calendarIcon {
 }
 
 @media (max-width: 425px) {
+
+    .dashboard #Main:has(#buyerSignupFormv22) .inputGroup {
+        width: 100% !important;
+    }
+
     .login form[name="changePasswordForm"] {
         width: 100%;
     }
