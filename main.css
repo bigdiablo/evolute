@@ -2728,12 +2728,17 @@ body.login {
 }
 
 .dashboard .grid_600px_340px > .primary > .roundedBox > .boxContent {
-    margin: 24px;
     padding: 24px;
     font-size: 14px;
     line-height: 1.5;
     border-radius: 12px;
     border: 1px solid var(--border);
+}
+
+.dashboard .roundedBox:has(#leftInnerGrid) {
+    display: flex !important;
+    padding: 24px !important;
+    gap: 24px !important;
 }
 
 .dashboard .grid_600px_340px > .primary > .roundedBox > .boxContent h1 {
@@ -2743,7 +2748,6 @@ body.login {
     font-size: 18px;
     font-weight: 600;
     color: var(--color-dark);
-    margin-bottom: 8px;
     letter-spacing: -0;
 }
 
@@ -2819,7 +2823,7 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .sellerHomeContentBoxR .boxContent {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     gap: 12px;
     padding: 20px;
