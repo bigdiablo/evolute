@@ -79,28 +79,28 @@ textarea {
     background: #f8f9fa;
 }
 
-.section {
+.component {
     width: 800px;
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
 }
-.section:last-child {
+.component:last-child {
     width: 100%;
 }
-.section > .info {
+.component > .info {
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
-.section > .info .name {
+.component > .info .name {
     font-size: 20px;
     font-weight: 600;
     color: #18181b;
     margin: 0;
 }
-.section > .info .about {
+.component > .info .about {
     font-size: 14px;
     color: #71717a;
     line-height: 1.5;
@@ -684,7 +684,7 @@ textarea {
         padding: 24px;
         gap: 40px;
     }
-    .section {
+    .component {
         width: 100%;
     }
     .modal {
