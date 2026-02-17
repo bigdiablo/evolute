@@ -4211,21 +4211,25 @@ div.grid_1_1#leftInnerGrid {
 }
 
 .dashboard .sectionHeaderFlat {
-    padding: 16px 20px;
-    background: var(--bg-light);
+    padding: 16px 24px;
+    background: transparent;
+    border-top: 1px solid var(--border);
+    border-left: 0 !important;
+    border-right: 0 !important;
     border-bottom: 1px solid var(--border);
 }
 
 .dashboard .sectionHeaderFlat h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     margin: 0;
     font-size: 16px;
     font-weight: 600;
     line-height: 1.5 !important;
     padding: 0 !important;
     color: var(--color-dark);
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    background-color: transparent !important;
 }
 
 /* ========== WIZARD FORM FIELDS ========== */
@@ -8427,9 +8431,16 @@ div.grid_1_1#leftInnerGrid {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    padding: 20px !important;
+    padding: 0 !important;
     box-sizing: border-box !important;
-    background: rgba(0,0,0,0.4) !important;
+    background: rgba(0,0,0,0.5) !important;
+}
+
+.agreement {
+    padding: 24px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
 }
 
 .yui-panel-container.yui-dialog .underlay {
@@ -8708,7 +8719,7 @@ div.grid_1_1#leftInnerGrid {
 .yui-panel-container.visible,
 .yui-overlay.visible {
     visibility: visible !important;
-    display: block !important;
+    display: flex !important;
 }
 
 .yui-panel {

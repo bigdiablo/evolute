@@ -1824,11 +1824,6 @@ b.htop b.right {
     background-position: 100% -12px;
 }
 
-.sectionHeaderFlat {
-    background-color: #e0e1e2;
-    
-}
-
 div.confirmationSectionHeader h2 {
     font-weight: 600;
     float: left;
