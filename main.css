@@ -10727,8 +10727,14 @@ img.calendarIcon {
 
 .dashboard .channels .instructions {
     font-size: 14px;
+    margin-left: 0 !important;
     color: var(--color-gray);
     margin-bottom: 20px;
+}
+
+.dashboard div#bidinfo {
+    margin: 0 !important;
+    padding: 0 12px !important;
 }
 
 .dashboard .channels .roundedBox {
