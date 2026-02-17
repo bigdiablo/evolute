@@ -2173,6 +2173,10 @@ body.login {
     width: auto;
 }
 
+.dashboard #Main:has(#buyerSignupFormv22) #MainContent .disclaimer2 {
+    display: none;
+}
+
 .dashboard #Main:has(#buyerSignupFormv22) #MainContent #NestedFormPage {
     width: 600px;
 }
@@ -4216,6 +4220,8 @@ div.grid_1_1#leftInnerGrid {
     margin: 0;
     font-size: 16px;
     font-weight: 600;
+    line-height: 1.5 !important;
+    padding: 0 !important;
     color: var(--color-dark);
     display: flex;
     align-items: center;
