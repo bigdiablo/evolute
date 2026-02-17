@@ -10767,8 +10767,26 @@ img.calendarIcon {
 }
 
 .dashboard .channels .hdr h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 1.5;
+    padding: 0 24px !important;
+    margin: 0 !important;
+    background-color: #fafafa !important;
+    border: 0 !important;
+    color: var(--color-primary) !important;
+}
+
+.dashboard .channels .hdr h2 a {
+    color: inherit;
     font-size: 14px;
-    margin: 0;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: lowercase;
+    text-decoration: underline;
 }
 
 .dashboard .productsContainer {
