@@ -410,36 +410,6 @@ div#SubNavigation.subtabs ul {
     width: 750px;
 }
 
-#NestedFormPage div.formSectionContent p,
-#NestedFormPage div.formSectionContent p.instructions {
-
-    font-size: 97%;
-    font-weight: normal;
-}
-
-#NestedFormPage div.formSectionContent p.center {
-
-    text-align: center;
-}
-
-#NestedFormPage div.options input,
-#NestedFormPage div.options select {
-    font-size: 97%;
-}
-
-#NestedFormPage div.options input:focus {
-    background-color: #D1E7A2;
-}
-
-#NestedFormPage div#validationErrors div.sectionHeader b.htop b.center {
-    width: 95%;
-}
-
-#NestedFormPage table.nestedListTable tfoot td.important {
-    text-align: left;
-    font-size: 100%;
-}
-
 #Footer,
 #FooterWithoutBorderTop {
 
