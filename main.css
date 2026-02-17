@@ -58,8 +58,6 @@ button,
 textarea {
     font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
     outline: 0;
-    appearance: none;
-    -webkit-appearance: none;
 }
 
 .none,
@@ -6721,13 +6719,6 @@ div.grid_1_1#leftInnerGrid {
     gap: 10px !important;
 }
 
-.dashboard #formContainer ul.text li.details .left input[type="radio"] {
-    width: 18px !important;
-    height: 18px !important;
-    accent-color: var(--color-primary) !important;
-    cursor: pointer !important;
-}
-
 .dashboard #formContainer ul.text li.details .left label {
     font-size: 14px !important;
     color: var(--color-dark) !important;
@@ -7804,14 +7795,6 @@ div.grid_1_1#leftInnerGrid {
     align-items: center !important;
     gap: 10px !important;
     flex: 1 !important;
-}
-
-.dashboard #formContainer li.details .target .left input.productRadio {
-    width: 18px !important;
-    height: 18px !important;
-    accent-color: var(--color-primary) !important;
-    cursor: pointer !important;
-    margin: 0 !important;
 }
 
 .dashboard #formContainer li.details .target .left label {
