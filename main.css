@@ -2180,18 +2180,19 @@ body.login {
 .dashboard #Main:has(#buyerSignupFormv22) .inputGroup {
     flex-direction: column;
     align-items: flex-start;
-    padding: 16px 24px;
+    gap: 8px;
+    padding: 16px 24px !important;
 }
 
 .dashboard #Main:has(#buyerSignupFormv22) .inputGroup * {
-    padding: 0 !important;
+    width: 100% !important;
 }
 
 .dashboard #Main:has(#buyerSignupFormv22) .inputGroup .mainLabel {
-    width: 180px !important;
-    min-width: 180px;
-    text-align: right !important;
-    padding-right: 20px !important;
+    width: auto !important;
+    min-width: auto !important;
+    text-align: left !important;
+    padding-right: 0 !important;
     flex-shrink: 0;
     float: none !important;
     position: static !important;
