@@ -2,30 +2,11 @@
    base.css (Legacy - simplified to avoid conflicts with main.css)
    ========================================================= */
 
-/* Essential table resets */
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-/* Essential list resets */
-ol,
-ul {
-    list-style: none;
-}
-
-/* Legacy utility classes */
-.none,
-.hidden {
-    display: none;
-}
-
 /* Form field utilities - kept for legacy support */
 
 .instructions {
     font-size: 93%;
     color: #666;
-    font-family: helvetica, sans-serif;
 }
 
 .mainLabel .instructions,
@@ -42,8 +23,6 @@ ul {
 }
 
 #TaskIndicators {
-    background: transparent url('/images/amerivalue/action-arrow.gif') no-repeat 30px bottom;
-
     font-weight: normal;
     text-align: left;
     float: left;
@@ -83,7 +62,6 @@ ul {
     width: 16px;
     cursor: pointer;
     vertical-align: middle;
-    background: transparent url('/images/controls/calendar/calendar.gif') no-repeat top left;
 }
 
 .calendarWithSelects .hiddenCalendarContainer {
@@ -292,44 +270,6 @@ div.roundedBox3 div.inlineSideBar2 {
     display: none;
 }
 
-#Navigation b.bl,
-#Navigation b.bc,
-#Navigation b.br {
-    height: 24px;
-    background: transparent;
-
-}
-
-#Navigation b.tl {
-    background: url('/images/navigation/top-left-off.gif') top left no-repeat;
-}
-
-#Navigation b.tl.current {
-    background: url('/images/navigation/top-left-on.gif') top left no-repeat;
-}
-
-#Navigation b.tc {
-
-    float: left;
-    clear: left;
-    background: url('/images/navigation/top-middle-off.gif') top left repeat-x;
-    width: 99.9%;
-    z-index: 0;
-    overflow: hidden;
-}
-
-#Navigation b.tr {
-    background: url('/images/navigation/top-right-off.gif') top right no-repeat;
-    z-index: 4;
-}
-
-#Navigation b.bl {
-    width: 12px;
-    float: left;
-    background: url('/images/navigation/bottom-left.gif') 0px 1px no-repeat;
-    z-index: 3;
-}
-
 #MainNavigation.tabs {
     line-height: normal;
     width: auto;
@@ -390,8 +330,6 @@ div.roundedBox3 div.inlineSideBar2 {
 #MainNavigation.tabs ul li a:hover .selected,
 #MainNavigation.tabs ul li a:active .selected {
     position: relative;
-    background: url('/images/navigation/top-middle-on.gif') repeat-x -2px 0px;
-
     color: #9DC61F;
     cursor: pointer;
 }
@@ -403,7 +341,6 @@ div.roundedBox3 div.inlineSideBar2 {
 
 /******************* subnavigation selectors *******************/
 div#SubNavigation {
-    background: url('/images/navigation/bottom-middle.gif') repeat-x;
     height: 24px;
     width: 99.5%;
     overflow: hidden;
@@ -465,7 +402,6 @@ div#SubNavigation.subtabs ul {
 #Navigation b.br {
     width: 12px;
     float: right;
-    background: url('/images/navigation/bottom-right.gif') top left no-repeat;
     z-index: 1;
 }
 
@@ -522,10 +458,6 @@ p.information,
 p.information1 {
     font-weight: bolder;
 
-}
-
-p.information {
-    background: url('/images/icons/info.gif') .25% 49% no-repeat;
 }
 
 p.information1 {
@@ -608,11 +540,6 @@ p.actionRequired2 {
     /* * - IE hack removed */
 
     background-position: 8px 2px;
-}
-
-.info {
-    font-weight: normal;
-    background: url('../images/icons/info.gif') no-repeat left 2px;
 }
 
 .bold,
@@ -1368,8 +1295,6 @@ div#bidoptions div#priceEstimatesDiv div.buttonGroup div#progress-indicator {
     float: left;
     width: 16px;
     height: 16px;
-    background: url('/images/common/progress_fff.gif') no-repeat top left;
-
     visibility: hidden;
 }
 
@@ -1455,10 +1380,6 @@ div.clickable:hover {
 }
 
 /* confirmation screen */
-.activate-button {
-    background: url('/images/orders/green_sprite.png') !important;
-    background-position: 0 79px !important;
-}
 
 .activate-button button {
     color: #003300 !important;
@@ -1472,16 +1393,6 @@ div.clickable:hover {
 
 .activate-button button:hover {
     color: #000 !important;
-}
-
-.deactivate-button {
-    background: url('/images/orders/red_sprite.png') !important;
-    background-position: 0 79px !important;
-}
-
-.login-button {
-    background: url('/images/common/orange_sprite.png') !important;
-    background-position: 0 79px !important;
 }
 
 .deactivate-button button,
@@ -1592,10 +1503,8 @@ span.radioButtonExtra {
 
 #dashTabs ul#tabsList li {
     float: left;
-    background: url('/images/common/right-widertab.gif') right top no-repeat;
     text-align: center;
     overflow: hidden;
-
     position: relative;
     width: 48.5%;
     z-index: 0;
@@ -1603,10 +1512,7 @@ span.radioButtonExtra {
 
 #dashTabs ul#tabsList li a {
     display: block;
-    background: url('/images/common/left-ordertab-off.gif') left top no-repeat;
-
     position: relative;
-
     text-decoration: none;
 }
 
@@ -1791,35 +1697,6 @@ div.paginationContainer div.results {
     text-decoration: underline;
 }
 
-th.sortedAsc,
-.nestedListTable th.sortedAsc {
-    background: #eee url('/images/up.gif') no-repeat 97% 40%;
-}
-
-th.sortedDesc,
-.nestedListTable th.sortedDesc {
-    background: #eee url('/images/down.gif') no-repeat 97% 52%;
-}
-
-/* toggle styles */
-.parentRowClosed {
-    background: url('/images/controls/right_arrow.gif') scroll no-repeat 6px 50%;
-    cursor: pointer;
-}
-
-.parentRowOpen {
-    background: url('/images/controls/down_arrow.gif') scroll no-repeat 6px 50%;
-    cursor: pointer;
-}
-
-.parentRowClosed .firstChildCell {
-    background: url('/images/controls/right_arrow.gif') no-repeat 6px 50%;
-}
-
-.parentRowOpen .firstChildCell {
-    background: url('/images/controls/down_arrow.gif') no-repeat 6px 50%;
-}
-
 .childRowClosed {
     display: none;
     height: 0px;
@@ -1834,20 +1711,6 @@ tr.childRowOpen td {
     font-size: smaller;
     background-color: #eee;
     line-height: .2em;
-
-}
-
-/* info messages */
-div.infoMessage {
-    background: url('/images/icons/info.gif') no-repeat 2px 4px;
-
-    color: #666;
-    font: normal 12px helvetica, sans-serif;
-}
-
-div.infoMessage2 {
-    background: url('/images/icons/info.gif') .25% 1.125em no-repeat;
-    font-weight: bolder;
 
 }
 
@@ -1918,45 +1781,6 @@ div.roundedBox5 {
     width: 100%;
 }
 
-/* these are the corners; they all use the same background image */
-b.bt,
-b.bt b,
-b.bb,
-b.bb b {
-    display: block;
-    height: 12px;
-    font-size: 1px;
-    background: url('/images/common/corners.gif') no-repeat;
-    position: relative;
-    z-index: 0;
-}
-
-/* blue variant */
-.blueBox b.bt,
-.blueBox b.bt b,
-.blueBox b.bb,
-.blueBox b.bb b {
-    background: url('/images/common/blue-corners.gif') no-repeat;
-}
-
-/* red & green variants */
-.greenBox b.bt,
-.greenBox b.bt b,
-.greenBox b.bb,
-.greenBox b.bb b {
-    height: 10px;
-    background: url('/images/common/green_corners.gif') no-repeat;
-}
-
-/* red variant */
-.redBox b.bt,
-.redBox b.bt b,
-.redBox b.bb,
-.redBox b.bb b {
-    height: 10px;
-    background: url('/images/common/red_corners.gif') no-repeat;
-}
-
 div.greenBox {
     border: solid 1px #77E177;
     background-color: #CCFFCC;
@@ -1990,7 +1814,6 @@ b.htop b.right {
     display: block;
     height: 16px;
     font-size: 1px;
-    background: url('/images/common/header-corners-e0e1e2.gif') no-repeat transparent;
     position: relative;
 }
 
@@ -2065,7 +1888,6 @@ div.confirmationSectionHeader b.htop b.right {
 
 /****************** Success messages/Validation errors *********************/
 #successMessage h3 {
-    font-family: Arial, Verdana, Helvetica, sans-serif;
     font-weight: bold;
 
 }
@@ -2080,11 +1902,6 @@ div.confirmationSectionHeader b.htop b.right {
 #successMessage div.sectionHeader b.htop b.center {
     width: 97.5%;
     overflow: hidden;
-}
-
-#successMessage b.htop,
-#successMessage b.htop b.right {
-    background: url('/images/common/green-corners.gif') no-repeat transparent;
 }
 
 #successMessage b.htop b.center,
@@ -2114,7 +1931,6 @@ div.confirmationSectionHeader b.htop b.right {
 
     width: 25px;
     height: 16px;
-    background: transparent url("/images/common/closebox.png") 0px 0px no-repeat;
     cursor: pointer;
 }
 
@@ -2141,21 +1957,6 @@ div.confirmationSectionHeader b.htop b.right {
     overflow: hidden;
 }
 
-#validationErrors b.bt,
-#validationErrors b.bt b,
-#validationErrors b.bb,
-#validationErrors b.bb b,
-#buyerHomeAlerts b.bt,
-#buyerHomeAlerts b.bt b,
-#buyerHomeAlerts b.bb,
-#buyerHomeAlerts b.bb b,
-#accountAlert b.bt,
-#accountAlert b.bt b,
-#accountAlert b.bb,
-#accountAlert b.bb b {
-    background: url('/images/common/corners-cc3300.gif') no-repeat;
-}
-
 /* top right corner */
 #validationErrors b.bt b,
 #buyerHomeAlerts b.bt b,
@@ -2180,15 +1981,6 @@ div.confirmationSectionHeader b.htop b.right {
 
 }
 
-#validationErrors b.htop,
-#validationErrors b.htop b.right,
-#buyerHomeAlerts b.htop,
-#buyerHomeAlerts b.htop b.right,
-#accountAlert b.htop,
-#accountAlert b.htop b.right {
-    background: url('/images/common/header-corners-cc3300.gif') no-repeat transparent;
-}
-
 #validationErrors b.htop b.center,
 #validationErrors div.sectionHeader h2,
 #buyerHomeAlerts b.htop b.center,
@@ -2202,7 +1994,6 @@ div.confirmationSectionHeader b.htop b.right {
 #validationErrors div.sectionHeader h2,
 #buyerHomeAlerts div.sectionHeader h2,
 #accountAlert div.sectionHeader h2 {
-    font-family: Arial, Verdana, Helvetica, sans-serif;
     font-weight: 500;
     letter-spacing: normal;
 }
@@ -2319,7 +2110,6 @@ table#leadManagerTable tbody td {
     text-align: center;
     width: 16px;
     height: 16px;
-    background: url('/images/common/progress_fff.gif') no-repeat top left transparent;
 
 }
 
@@ -2464,7 +2254,6 @@ table#leadChannelsListTable td.status div {
 }
 
 .integration-support {
-    background: url('/images/icons/support.gif') top left no-repeat;
     float: right;
 }
 
@@ -2503,12 +2292,6 @@ div.titleDiv h3 img.inlineHelpImg {
 
 #iliWizardSteps li.voice {
     width: 48%;
-}
-
-#iliWizardSteps .currentStep {
-    background: url('/images/common/orange_sprite.png');
-    background-position: 0 79px;
-    color: #fff;
 }
 
 div.wizard-summary div.labelValue {
@@ -3249,15 +3032,6 @@ div#orderSeriesContainer div#primaryContainer div.confirmationSectionHeader b.ht
     width: 99.9%;
 }
 
-div#orderSeriesContainer div#primaryContainer div.roundedBox b.bt b {
-    background: url('/images/common/grey-header-corners.gif') no-repeat;
-    background-position: 100% -12px;
-}
-
-div#orderSeriesContainer div#primaryContainer div.roundedBox b.bt {
-    background: url('/images/common/grey-header-corners.gif') no-repeat;
-}
-
 div#orderSeriesContainer div#primaryContainer div.confirmationSectionHeader b.htop,
 div#orderSeriesContainer div#primaryContainer div.confirmationSectionHeader b.htop b.right {
     background-image: none;
@@ -3518,6 +3292,5 @@ div#oliContainer {
 .grid_580px_240px .column2 {
     float: left;
     width: 240px;
-
     position: relative;
 }
