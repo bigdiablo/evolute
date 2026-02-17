@@ -2159,11 +2159,36 @@ body.login {
 
 .dashboard #Main:has(#buyerSignupFormv22) {
     position: fixed;
+    align-items: center;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     margin: 0 !important;
+}
+
+.dashboard #Main:has(#buyerSignupFormv22) #MainContent {
+    width: auto;
+}
+
+.dashboard #Main:has(#buyerSignupFormv22) #MainContent #NestedFormPage {
+    width: 600px;
+}
+
+.dashboard #Main:has(#buyerSignupFormv22) .inputGroup {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 24px;
+}
+
+.dashboard #Main:has(#buyerSignupFormv22) .inputGroup .mainLabel {
+    width: 180px !important;
+    min-width: 180px;
+    text-align: right !important;
+    padding-right: 20px !important;
+    flex-shrink: 0;
+    float: none !important;
+    position: static !important;
 }
 
 .dashboard #Main:has(#Footer) #Footer {
@@ -3135,24 +3160,6 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard #FormFields {
     padding: 0;
-}
-
-.dashboard .formSectionContent .inputGroup {
-    display: flex;
-    align-items: center;
-    padding: 10px 0;
-    margin: 0;
-    width: 100%;
-    float: none;
-    clear: none;
-}
-
-.dashboard .formSectionContent .mainLabel {
-    width: 160px;
-    flex-shrink: 0;
-    padding: 8px 0;
-    text-align: right;
-    float: none;
 }
 
 .dashboard .formSectionContent .mainLabelContent {
@@ -4209,22 +4216,6 @@ div.grid_1_1#leftInnerGrid {
 }
 
 /* ========== WIZARD FORM FIELDS ========== */
-
-.dashboard .formSectionContent .inputGroup {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 12px 20px;
-    clear: both;
-    float: none;
-}
-
-.dashboard .formSectionContent .mainLabel {
-    width: 180px;
-    text-align: right;
-    padding-right: 16px;
-    float: none;
-}
 
 .dashboard .formSectionContent .mainLabel label {
     font-size: 14px;

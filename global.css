@@ -410,11 +410,6 @@ div#SubNavigation.subtabs ul {
     width: 750px;
 }
 
-#NestedFormPage {
-    width: 400px;
-    font-size: 97%;
-}
-
 #NestedFormPage div.formSectionContent p,
 #NestedFormPage div.formSectionContent p.instructions {
 
