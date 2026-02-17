@@ -153,6 +153,12 @@ textarea {
     height: 18px;
 }
 .modal .body {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    text-align: left;
+    height: 380px;
+    overflow-y: auto;
     padding: 24px 20px;
 }
 .modal .title {
@@ -2614,8 +2620,8 @@ div#termsContainer {
 }
 
 .dashboard .mainLabel {
-    width: 180px !important;
-    min-width: 180px;
+    width: 220px !important;
+    min-width: 220px;
     text-align: right !important;
     padding-right: 20px !important;
     flex-shrink: 0;
