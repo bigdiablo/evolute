@@ -12094,6 +12094,7 @@ img.calendarIcon {
     .dashboard .formSectionContent .buttonGroup:has(#backButton-button) {
         position: relative;
         display: flex !important;
+        width: 100% !important;
         height: 40px !important;
         padding: 0 !important;
         gap: 0 !important;
