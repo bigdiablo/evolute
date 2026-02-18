@@ -2295,7 +2295,8 @@ body.login {
     background-color: var(--bg-light);
 }
 
-.dashboard #Main:has(#buyerSignupFormv22) {
+.dashboard #Main:has(#buyerSignupFormv22),
+.dashboard #Main:has([name="publisher_signup_v2_1"]) {
     position: fixed;
     align-items: center;
     top: 0;
@@ -13524,7 +13525,6 @@ img.calendarIcon {
 .dashboard input[type="text"]:focus {
     outline: none;
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(0, 66, 121, 0.1);
 }
 
 /* Button group inside formSectionContent */
