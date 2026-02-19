@@ -1,13 +1,11 @@
 .instructions {
     font-size: 93%;
-    color: #666
 }
 
 .mainLabel .instructions,
 .options .instructions,
 .options .inlineHelp {
     font-size: 93%;
-    color: #666
 }
 
 #TaskIndicators {
@@ -17,21 +15,7 @@
 }
 
 #TaskIndicators ul li {
-    color: #AAA;
     font-size: 123.1%
-}
-
-#TaskIndicators ul li.current {
-    color: #444
-}
-
-#TaskIndicators ul li.current span {
-    color: #2176CB
-}
-
-#TaskIndicators ul li span {
-    font-size: 138.5%;
-    color: #A0C9F2
 }
 
 .calendarWithSelects .showCalendarButton {
@@ -63,11 +47,9 @@
 
 .widgets .mainLabel {
     display: block;
-    border: 1px solid #DDD;
     width: auto;
     text-align: left;
     font-weight: 700;
-    background: #FBFBFB
 }
 
 .widgets .options {
@@ -75,31 +57,12 @@
     display: block
 }
 
-.widgets .options .optionsContent {
-    font-size: 93%;
-    border: 1px solid #DDD
-}
-
-#BidGrid {
-    width: 74.99999%
-}
-
-#BidGridContent {
-    border: 1px solid #EEE;
-    background: #FBFBFB
-}
-
 #StateSelection {
-    width: 25%
+    width: 25%;
 }
 
 #HeaderContent {
-    min-width: 940px
-}
-
-:focus,
-:active {
-    outline: none
+    min-width: 940px;
 }
 
 #logoLinksContainer {
@@ -123,7 +86,7 @@
 }
 
 .userInfo #transferBalance {
-    position: relative;
+    
     font-size: 115%;
     font-weight: 700
 }
@@ -219,13 +182,13 @@ div.roundedBox3 div.inlineSideBar2 {
 #MainNavigation.tabs ul {
     width: 100%;
     list-style: none;
-    position: relative;
+    
     text-align: center;
     z-index: 6
 }
 
 #MainNavigation.tabs ul li {
-    position: relative;
+    
     display: block;
     height: 37px;
     text-align: center;
@@ -236,8 +199,7 @@ div.roundedBox3 div.inlineSideBar2 {
     display: block;
     font-size: 110%;
     text-decoration: none;
-    position: relative;
-    color: #FFF;
+    
     font-weight: 400
 }
 
@@ -261,8 +223,7 @@ div.roundedBox3 div.inlineSideBar2 {
 #MainNavigation.tabs ul li a.selected,
 #MainNavigation.tabs ul li a:hover .selected,
 #MainNavigation.tabs ul li a:active .selected {
-    position: relative;
-    color: #9DC61F;
+    
     cursor: pointer
 }
 
@@ -293,14 +254,12 @@ div#SubNavigation.subtabs ul {
     width: auto;
     text-align: center;
     overflow: hidden;
-    background: #fff0;
     border: none
 }
 
 #SubNavigation.subtabs ul li a {
     display: block;
     white-space: nowrap;
-    color: #FFF;
     text-decoration: none;
     font-size: 100%;
     font-weight: 400
@@ -308,14 +267,7 @@ div#SubNavigation.subtabs ul {
 
 #SubNavigation.subtabs ul li.current a,
 #SubNavigation.subtabs ul li a:hover {
-    color: #9DC61F;
     text-decoration: none
-}
-
-#SubNavigation.subtabs ul li a:active,
-#SubNavigation.subtabs ul li a:focus,
-#SubNavigation.subtabs ul li a:hover {
-    color: #9DC61F
 }
 
 #SubNavigation.subtabs ul li.current a {
@@ -345,7 +297,6 @@ p.information1 {
 }
 
 p.information1 {
-    color: #B65426;
     font-size: 105%
 }
 
@@ -356,11 +307,6 @@ table.gridTable th {
 
 table.gridTable td {
     font-size: 90%;
-    background: #FFF
-}
-
-table.gridTable tbody th {
-    background: #FFF
 }
 
 div.center,
@@ -374,14 +320,13 @@ div.center,
 
 div#search {
     white-space: nowrap;
-    position: relative
+    
 }
 
 table.listTable td,
 table.nestedListTable td,
 table.leadListTable td {
     border-collapse: separate;
-    background: #fff0;
     font-size: 90%
 }
 
@@ -395,7 +340,6 @@ table.nestedListTable td.bold {
 }
 
 table.listTable th {
-    background: #FAFAFA;
     border: none;
     text-align: left
 }
@@ -420,12 +364,8 @@ table.nestedListTable tr.sectionStart th.tableSectionHeaderAlternate {
     font-weight: 500
 }
 
-span.actionRequired {
-    color: #B65426
-}
-
 div#search div#checkBoxDiv {
-    position: relative
+    
 }
 
 div#search div#selectorDiv {
@@ -433,7 +373,7 @@ div#search div#selectorDiv {
 }
 
 div#search div#searchButtonDiv {
-    position: relative
+    
 }
 
 div#search div#checkBoxDiv div {
@@ -441,38 +381,15 @@ div#search div#checkBoxDiv div {
 }
 
 div#search div#checkBoxDiv div input[type='checkbox'] {
-    position: relative
+    
 }
 
 span#searchButton span.first-child button {
     font-weight: 700
 }
 
-td.ACTIVE {
-    color: #829427
-}
-
-td.CLOSED {
-    color: #666
-}
-
-td.PAUSED {
-    color: #C30
-}
-
-td.ACCEPTED {
-    color: #829427
-}
-
-td.DECLINED,
-td.EXPIRED,
-td.WITHDRAWN {
-    color: #C30
-}
-
 table.target,
 div.target {
-    border-collapse: separate;
     line-height: 0;
     font-size: 108%;
     display: none;
@@ -524,7 +441,7 @@ table.cBoxes td label {
 }
 
 #container ul.text {
-    position: relative;
+    
     list-style: none;
     border: none
 }
@@ -563,17 +480,12 @@ table.leadListTable div.lsPaginationBottom {
     white-space: nowrap
 }
 
-div#topNote b,
-div#bottomNote b {
-    color: #0A2
-}
-
 div#topCartButton div#topButton {
-    position: relative
+    
 }
 
 div#bottomCartButton div#bottomButton {
-    position: relative
+    
 }
 
 #leadStoreTopCart,
@@ -582,7 +494,7 @@ div#bottomCartButton div#bottomButton {
 }
 
 #leadStoreBottomCart {
-    position: relative
+    
 }
 
 #leadStoreTopCart div,
@@ -603,7 +515,7 @@ div#bottomCartButton div#bottomButton {
 }
 
 #searchNameDiv div.submitButton {
-    position: relative
+    
 }
 
 #scheduleSearchSubmitButton-button {
@@ -669,7 +581,7 @@ div.buttonColumn {
 }
 
 div.buttonColumn label {
-    position: relative
+    
 }
 
 #searchResultsContainer {
@@ -681,8 +593,7 @@ span#saveSuccess {
     z-index: 9;
     font-size: 12px;
     line-height: 1.125em;
-    position: relative;
-    color: #E0E1E2;
+    
     background-repeat: no-repeat;
     background-position: 2px 0
 }
@@ -707,19 +618,18 @@ div#bidgroupContent div.inputGroup div.mainLabel {
 }
 
 #bidTabs {
-    position: relative;
+    
     width: auto;
-    background: #fff0
 }
 
 #bidgroupContent span#howtoLink {
-    position: relative;
+    
     white-space: nowrap;
     display: inline
 }
 
 div#filtersContainer {
-    position: relative
+    
 }
 
 div#pricingContainer span.pricingMsg,
@@ -758,10 +668,6 @@ div#filters div.radioGroup {
     width: 100%
 }
 
-div#filters input[type="radio"] {
-    position: relative
-}
-
 div#filters div.filter label.radioLabel,
 div#filters div.checkboxes div.radioGroup div label,
 div#filters div.filter div label,
@@ -769,10 +675,6 @@ div#filters div.filter div p label,
 div#filters div#exclusivity div label,
 div#filters div#paydayfirstpos div label {
     line-height: 1.5em
-}
-
-div#filters div.checkboxes div.dependents {
-    position: relative
 }
 
 div#filters div.checkboxes div.dependents table.cBoxes {
@@ -843,7 +745,6 @@ table.pricegrid tbody tr.estimate {
 
 table.pricegrid tbody td.estimate {
     font-size: smaller;
-    color: #B65426;
     text-align: center
 }
 
@@ -861,15 +762,10 @@ div#bidoptions div#priceEstimatesDiv div.buttonGroup div#progress-indicator {
     visibility: hidden
 }
 
-div#bidoptions div#transparency h4 div.estimate {
-    position: relative
-}
-
 div.content div.olidetails,
 div.option div.olidetails {
     width: auto;
     display: none;
-    outline: solid 1px #ccc
 }
 
 div.subtabHeading {
@@ -883,7 +779,7 @@ div.clickable {
 }
 
 div.clickable label {
-    position: relative
+    
 }
 
 div.clickable:hover {
@@ -891,25 +787,7 @@ div.clickable:hover {
 }
 
 .state-change-button {
-    border-color: #7D98B8 !important;
     background-position: 0 -1300px !important
-}
-
-.state-change-button .first-child {
-    border-color: #7D98B8 !important
-}
-
-.state-change-button:hover {
-    border-color: #808080 !important;
-    background-position: 0 0 !important
-}
-
-.state-change-button .first-child:hover {
-    border-color: #808080 !important
-}
-
-.activate-button button {
-    color: #003300 !important
 }
 
 .activate-button:hover,
@@ -918,42 +796,15 @@ div.clickable:hover {
     background-position: 0 0 !important
 }
 
-.activate-button button:hover {
-    color: #000 !important
-}
-
-.deactivate-button button,
-.login-button button {
-    color: #fff !important
-}
-
-.login-button a {
-    color: #fff !important
-}
-
 .deactivate-button:hover {
     background-position: 0 0 !important
-}
-
-.deactivate-button button:hover,
-.login-button button:hover {
-    color: #000 !important
-}
-
-.login-button a:hover {
-    color: #000 !important
 }
 
 .buttonGroup .disabled-button {
     background-position: 0 0 !important
 }
 
-div.buttonGroup span.disabled-button span.first-child button {
-    color: #ccc !important
-}
-
 span.radioButtonExtra {
-    color: #666;
     font-size: 97%;
     white-space: nowrap
 }
@@ -961,7 +812,7 @@ span.radioButtonExtra {
 .orders-active-icon,
 .orders-inactive-icon,
 .orders-action-icon {
-    position: relative;
+    
     width: 16px;
     height: 16px
 }
@@ -975,22 +826,8 @@ span.radioButtonExtra {
     overflow: hidden
 }
 
-#buyerHomeWrapper div.roundedBox div.inlineSideBar2,
-#buyerHomeWrapper div.roundedBox2 div.inlineSideBar2,
-#buyerHomeWrapper div.roundedBox3 div.inlineSideBar2 {
-    position: relative
-}
-
 #dashWrapper {
     width: 75%
-}
-
-.tabWrapper1 {
-    border: solid 1px #ccc
-}
-
-.tabWrapper2 {
-    border: solid 1px #ccc
 }
 
 #dashTabs {
@@ -1002,20 +839,20 @@ span.radioButtonExtra {
 #dashTabs ul#tabsList {
     list-style: none;
     width: 679px;
-    position: relative
+    
 }
 
 #dashTabs ul#tabsList li {
     text-align: center;
     overflow: hidden;
-    position: relative;
+    
     width: 48.5%;
     z-index: 0
 }
 
 #dashTabs ul#tabsList li a {
     display: block;
-    position: relative;
+    
     text-decoration: none
 }
 
@@ -1024,7 +861,6 @@ span.radioButtonExtra {
 }
 
 #dashTabs ul#tabsList li.current {
-    color: #829427;
     font-weight: 700;
     cursor: default;
     z-index: 10
@@ -1033,10 +869,6 @@ span.radioButtonExtra {
 #dashTabs ul#tabsList li.current a:hover {
     text-decoration: none;
     cursor: default
-}
-
-.callOutWrapper {
-    border: solid 1px #ccc
 }
 
 .callOut,
@@ -1057,7 +889,6 @@ span.radioButtonExtra {
 .callOut3 th,
 .homepageMetricsTable th {
     text-align: right;
-    background: #fff0;
     font-size: 98%;
     white-space: nowrap
 }
@@ -1095,25 +926,17 @@ td.right {
 }
 
 .pagination ul li a {
-    color: #47545d;
     text-align: center;
-    border: 1px solid #EAEAEA;
     text-decoration: none;
     font-weight: 600;
     letter-spacing: .1em
 }
 
 .pagination ul li a:hover {
-    border: 1px solid #B65426;
-    background: #afc862;
-    color: #B65426;
     text-decoration: none
 }
 
 .pagination ul li.current a {
-    border: 1px solid #caccc2;
-    background: #afc862;
-    color: #FBFBFB;
     cursor: text
 }
 
@@ -1121,33 +944,20 @@ td.right {
 .pagination ul li.current a.disabled:hover,
 .pagination ul li a.disabled,
 .pagination ul li a.disabled:hover {
-    background: #FFF;
-    border-color: #EEE;
-    color: #AAA;
     cursor: text
 }
 
-.pagination ul li.disabled a {
-    background: #FFF;
-    border-color: #EEE;
-    color: #AAA
-}
-
 .pagination ul li.disabled a:hover {
-    background: #FFF;
     cursor: text
 }
 
 .pagination ul li.greeked a,
 .pagination ul li.greeked a:hover {
-    border-color: #FFF;
-    color: #caccc2;
     background: none
 }
 
 .pagination p {
     text-align: right;
-    color: #999;
     font-size: .95em
 }
 
@@ -1236,21 +1046,12 @@ div.roundedBox5 {
     width: 100%
 }
 
-div.greenBox {
-    border: solid 1px #77E177
-}
-
-div.redBox {
-    border: solid 1px #D96161
-}
-
 .roundedBox div.sectionHeader,
 .roundedBox2 div.sectionHeader,
 .roundedBox3 div.sectionHeader,
 .roundedBox4 div.sectionHeader,
 div.confirmationSectionHeader {
-    background: #fff0;
-    position: relative;
+    
     border: 0;
     width: auto
 }
@@ -1264,7 +1065,7 @@ b.htop b.right {
     display: block;
     height: 16px;
     font-size: 1px;
-    position: relative
+    
 }
 
 b.htop {
@@ -1274,7 +1075,7 @@ b.htop {
 b.htop b.center {
     width: 95.99%;
     overflow: hidden;
-    position: relative;
+    
     display: block;
     height: 16px
 }
@@ -1320,16 +1121,11 @@ div.confirmationSectionHeader b.htop b.right {
 #successMessage p {
     font-size: 1.125em;
     font-weight: 700;
-    color: #829427
 }
 
 #successMessage div.sectionHeader b.htop b.center {
     width: 97.5%;
     overflow: hidden
-}
-
-#successMessage div.sectionHeader h2 {
-    color: #FBFBFB
 }
 
 #successMessage b.htop {
@@ -1340,26 +1136,10 @@ div.confirmationSectionHeader b.htop b.right {
     background-position: 100% -12px
 }
 
-#successMessage ul li {
-    color: #829427
-}
-
 #successMessage div.sectionHeader .closebox {
     width: 25px;
     height: 16px;
     cursor: pointer
-}
-
-#validationErrors,
-#buyerHomeAlerts,
-#accountAlert {
-    border: solid 1px #C30
-}
-
-#validationErrors ol li,
-#buyerHomeAlerts ol li,
-#accountAlert ol li {
-    color: #C30
 }
 
 #validationErrors div.sectionHeader b.htop b.center,
@@ -1387,15 +1167,6 @@ div.confirmationSectionHeader b.htop b.right {
     background-position: 100% -36px
 }
 
-#validationErrors b.htop b.center,
-#validationErrors div.sectionHeader h2,
-#buyerHomeAlerts b.htop b.center,
-#buyerHomeAlerts div.sectionHeader h2,
-#accountAlert b.htop b.center,
-#accountAlert div.sectionHeader h2 {
-    color: #FFC
-}
-
 #validationErrors div.sectionHeader h2,
 #buyerHomeAlerts div.sectionHeader h2,
 #accountAlert div.sectionHeader h2 {
@@ -1419,7 +1190,6 @@ div.confirmationSectionHeader b.htop b.right {
 #buyerHomeAlerts div.inlineSideBar,
 #accountAlert div.inlineSideBar {
     font-weight: 700;
-    color: #C30
 }
 
 div.labelValue div.valueContent {
@@ -1429,10 +1199,6 @@ div.labelValue div.valueContent {
 img.helpImg,
 img.inlineHelpImg {
     cursor: help
-}
-
-label.iconLabel {
-    position: relative
 }
 
 table.login td.loginHeader {
@@ -1447,7 +1213,6 @@ table.login td.content {
 div.smallGrey,
 span.smallGrey {
     font-size: smaller;
-    color: #727272
 }
 
 div.sectionHeader h2 a#paymentHistoryLink {
@@ -1461,7 +1226,6 @@ span.nowrap div.option {
 
 div#notificationDiscountRateDiv {
     width: 100%;
-    border: solid 1px #ccc;
     font-size: 87%;
     line-height: 1.5em
 }
@@ -1493,13 +1257,9 @@ div#progressContainer {
     text-align: center
 }
 
-label.radioLabel {
-    position: relative
-}
-
 div#buyerSignupImg {
     text-align: center;
-    position: relative
+    
 }
 
 img.helpImg {
@@ -1524,7 +1284,7 @@ img.warningImg {
 }
 
 img.warningImg {
-    position: relative;
+    
     cursor: pointer
 }
 
@@ -1545,7 +1305,7 @@ div#oliContainer {
 div#oliContainer div.bd {
     overflow: auto;
     width: 766px;
-    position: relative
+    
 }
 
 div#oliContainer div.ft {
@@ -1589,13 +1349,12 @@ table#leadChannelsListTable td.status div {
 div.sectionHeader h2 img.inlineHelpImg,
 div.sectionHeaderFlat h2 img.inlineHelpImg,
 div.titleDiv h3 img.inlineHelpImg {
-    position: relative;
+    
     cursor: help
 }
 
 #iliWizardSteps li {
     display: inline;
-    background: #ccc;
     font-size: 90%;
     font-weight: 700
 }
@@ -1621,21 +1380,11 @@ div.sectionHeader h2.headerRight a {
 div.sectionHeader h2 div a:hover,
 div.sectionHeader h2.headerLeft a:hover,
 div.sectionHeader h2.headerRight a:hover {
-    color: #2F466B;
     text-decoration: underline
 }
 
 div.wizard-summary .label {
     font-weight: 700
-}
-
-div#checkList label,
-div#checkList a {
-    position: relative
-}
-
-div.bbLeft {
-    position: relative
 }
 
 table.sellerBidMinimum {
@@ -1669,7 +1418,6 @@ table.sellerBidMinimum thead tr th.bidGridTop {
 .blueBox h1#MainTitle div.subTitle {
     font-weight: 400;
     font-size: 95%;
-    color: #000
 }
 
 .blueBox h2,
@@ -1694,7 +1442,6 @@ div#reportListGrid div.reportDescription {
 span.linkSpan {
     font-weight: 700;
     cursor: pointer;
-    color: #2F466B
 }
 
 span.linkSpan:hover {
@@ -1706,24 +1453,12 @@ div#helpContainer div.bd iframe {
     border: 0
 }
 
-div.operatorOnly a {
-    color: #CC3300 !important
-}
-
 div#helpContainer div.bd iframe table {
     border: 0
 }
 
 .calendarContainer .bd form {
     clear: left
-}
-
-.calendarContainer .yui-calendar td.calcell a.selector {
-    color: #47545d
-}
-
-.calendarContainer .bd table.yui-calendar td.selected a.selector {
-    color: #FBFBFB
 }
 
 img.calendarIcon {
@@ -1796,16 +1531,6 @@ div.bd ul {
 div.section {
     font-size: 105%;
     font-weight: 700;
-    color: #2F466B
-}
-
-div.section div.header.current {
-    color: #fff
-}
-
-div.section div.header.current a {
-    color: #fff;
-    text-decoration: none
 }
 
 div.section div.invisible {
@@ -1821,7 +1546,6 @@ div.section div.subsection div {
 }
 
 div.section div.subsection div.current a {
-    color: #839528;
     text-decoration: none;
     font-weight: 700
 }
@@ -1843,15 +1567,10 @@ div#sideNavHeading {
     overflow: hidden
 }
 
-.reportContainer {
-    color: #727272
-}
-
 .reportDescription {
     max-width: 680px;
     white-space: normal;
     font-size: 89.5%;
-    color: #727272
 }
 
 #friendId {
@@ -1875,12 +1594,8 @@ div#sideNavHeading {
 }
 
 #friendSearchContainer .yui-ac-content ul {
-    position: relative;
+    
     width: 250px !important
-}
-
-#friendSearchContainer .yui-ac-content li.yui-ac-highlight {
-    background: #B2B942
 }
 
 #warningHeaderContainer {
@@ -1892,7 +1607,7 @@ table.reportResults td.rptDataRight b {
 }
 
 #bidTabs {
-    position: relative
+    
 }
 
 div#bidoptions {
@@ -1915,7 +1630,7 @@ div#pricing div.titleDiv h3 {
 }
 
 div.subtabHeading {
-    position: relative
+    
 }
 
 #dashTabs ul#tabsList {
@@ -1942,10 +1657,6 @@ div.roundedBox5 {
     width: 100%
 }
 
-ul.changeHolder li.details {
-    position: relative
-}
-
 div.clickable {
     width: 100%
 }
@@ -1959,7 +1670,7 @@ div#reportListGrid div.column {
 }
 
 #paymentHistoryLink {
-    position: relative
+    
 }
 
 #iliWizardSteps li.affiliate {
@@ -1975,11 +1686,11 @@ div#reportListGrid div.column {
 }
 
 div#sideNavHeading {
-    position: relative
+    
 }
 
 table#connectionsTable td.paginationTop div.buttonGroup {
-    position: relative
+    
 }
 
 #bidgroupContent {
@@ -2028,7 +1739,7 @@ div#bidoptions div#buttons {
 }
 
 #dashTabs ul#tabsList {
-    position: relative
+    
 }
 
 div.chartDiv {
@@ -2087,7 +1798,7 @@ ul.changeHolder li.contracto span {
 }
 
 ul.changeHolder li.details {
-    position: relative
+    
 }
 
 #searchResultsContainer {
@@ -2127,10 +1838,6 @@ div#orderSeriesContainer div#primaryContainer .tcContainer {
     width: 31.29%
 }
 
-div.roundedBox {
-    background: #fff0
-}
-
 div#orderSeriesContainer div#primaryContainer .roundedBox {
     width: 98.5%
 }
@@ -2158,10 +1865,6 @@ div#orderSeriesContainer div#primaryContainer div.confirmationSectionHeader b.ht
 
 #changesDiv ul.changeHolder li.details {
     width: 690px
-}
-
-p.information {
-    background: #fff0
 }
 
 div#oliContainer {
@@ -2198,7 +1901,7 @@ div#oliContainer {
 
 .grid_50px_n .secondary {
     width: 50px;
-    position: relative
+    
 }
 
 .grid_50px_n .primary {
@@ -2207,7 +1910,7 @@ div#oliContainer {
 
 .grid_185px_n .secondary {
     width: 185px;
-    position: relative
+    
 }
 
 .grid_185px_n .primary {
@@ -2216,7 +1919,7 @@ div#oliContainer {
 
 .grid_200px_n .secondary {
     width: 200px;
-    position: relative
+    
 }
 
 .grid_200px_n .primary {
@@ -2225,7 +1928,7 @@ div#oliContainer {
 
 .grid_220px_n .secondary {
     width: 220px;
-    position: relative
+    
 }
 
 .grid_220px_n .primary {
@@ -2234,7 +1937,7 @@ div#oliContainer {
 
 .grid_n_185px .secondary {
     width: 185px;
-    position: relative
+    
 }
 
 .grid_n_185px .primary {
@@ -2243,7 +1946,7 @@ div#oliContainer {
 
 .grid_n_200px .secondary {
     width: 200px;
-    position: relative
+    
 }
 
 .grid_n_200px .primary {
@@ -2252,7 +1955,7 @@ div#oliContainer {
 
 .grid_n_220px .secondary {
     width: 220px;
-    position: relative
+    
 }
 
 .grid_n_220px .primary {
@@ -2261,7 +1964,7 @@ div#oliContainer {
 
 .grid_n_240px .secondary {
     width: 240px;
-    position: relative
+    
 }
 
 .grid_n_240px .primary {
@@ -2270,7 +1973,7 @@ div#oliContainer {
 
 .grid_240px_n .secondary {
     width: 240px;
-    position: relative
+    
 }
 
 .grid_240px_n .primary {
@@ -2283,7 +1986,7 @@ div#oliContainer {
 
 .grid_450px_350px .secondary {
     width: 350px;
-    position: relative
+    
 }
 
 .grid_450px_350px .primary {
@@ -2296,7 +1999,7 @@ div#oliContainer {
 
 .grid_450px_450px .secondary {
     width: 450px;
-    position: relative
+    
 }
 
 .grid_450px_450px .primary {
@@ -2309,7 +2012,7 @@ div#oliContainer {
 
 .grid_600px_340px .secondary {
     width: 300px;
-    position: relative
+    
 }
 
 .grid_580px_350px .column1 {
@@ -2318,7 +2021,7 @@ div#oliContainer {
 
 .grid_580px_350px .column2 {
     width: 350px;
-    position: relative
+    
 }
 
 .grid_340px_600px .primary {
@@ -2336,5 +2039,5 @@ div#oliContainer {
 
 .grid_580px_240px .column2 {
     width: 240px;
-    position: relative
+    
 }

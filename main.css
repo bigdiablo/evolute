@@ -39,6 +39,7 @@ html:has(body.login) {
 *::before {
     padding: 0;
     margin: 0;
+    outline: 0;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
@@ -57,7 +58,6 @@ input,
 button,
 textarea {
     font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
-    outline: 0;
 }
 
 .none,
