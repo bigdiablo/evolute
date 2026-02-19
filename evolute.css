@@ -25,7 +25,7 @@
 }
 
 .dashboard .grid_600px_340px{
-    display: grid;
+    display: grid !important;
     grid-template-columns: fit-content(80%) fit-content(20%);
     gap: 10px;
 }
