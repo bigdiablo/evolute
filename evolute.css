@@ -63,6 +63,20 @@
     padding: 5px;
 }
 
+.proposal-products{
+    margin-top: 24px;
+    padding: 20px;
+    background-color: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    width: 100%;
+}
+
+.proposal-product{
+    flex-grow: 1;
+    margin-left: 1em;
+}
+
 .sample-form-link:hover{
     background: #e0efff;
     border-color: var(--color-primary);
