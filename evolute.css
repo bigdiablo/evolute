@@ -98,7 +98,7 @@ div.confirmationSectionHeader,
     tr.actions
     td.paginationTop {
     background: #00ade1 !important;
-    color: #f0f7ff;
+    color: #f0f7ff !important;
 }
 
 .dashboard .roundedBox .hdr h2 span:first-child,
