@@ -146,6 +146,8 @@ div.confirmationSectionHeader,
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
     background-color: #f8ffff !important;
+    position: relative !important;
+    box-shadow: 0 25px 40px -20px rgba(0, 0, 0, 0.15) !important;
 }
 /**********************************/
 
