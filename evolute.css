@@ -129,62 +129,12 @@ div.confirmationSectionHeader,
 
 /****testing a better background****/
 .dashboard #Main {
-    background-image: url("data:image/svg+xml;utf8,
-  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'>
-    <defs>
-      <linearGradient id='bg' x1='0' y1='0' x2='1' y2='0'>
-        <stop offset='0%' stop-color='%2300A6D6'/>
-        <stop offset='45%' stop-color='%237FE3E8'/>
-        <stop offset='100%' stop-color='%234FB85E'/>
-      </linearGradient>
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIwIDEwODAiPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZ2ciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIwIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDBBNkQ2Ii8+PHN0b3Agb2Zmc2V0PSI0NSUiIHN0b3AtY29sb3I9IiM3RkUzRTgiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0RkI4NUUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iMTkyMCIgaGVpZ2h0PSIxMDgwIiBmaWxsPSJ1cmwoI2dnKSIvPjwvc3ZnPg==") !important;
 
-      <radialGradient id='glow' cx='52%' cy='30%' r='70%'>
-        <stop offset='0%' stop-color='%23FFFFFF' stop-opacity='0.85'/>
-        <stop offset='55%' stop-color='%23FFFFFF' stop-opacity='0.25'/>
-        <stop offset='100%' stop-color='%23FFFFFF' stop-opacity='0'/>
-      </radialGradient>
-
-      <radialGradient id='haze' cx='18%' cy='85%' r='60%'>
-        <stop offset='0%' stop-color='%230066A5' stop-opacity='0.22'/>
-        <stop offset='100%' stop-color='%230066A5' stop-opacity='0'/>
-      </radialGradient>
-
-      <filter id='softBlur'>
-        <feGaussianBlur stdDeviation='10'/>
-      </filter>
-
-      <filter id='softerBlur'>
-        <feGaussianBlur stdDeviation='18'/>
-      </filter>
-    </defs>
-
-    <rect width='1920' height='1080' fill='url(%23bg)'/>
-    <rect width='1920' height='1080' fill='url(%23glow)'/>
-    <rect width='1920' height='1080' fill='url(%23haze)'/>
-
-    <path d='M-50,560 C380,360 740,420 1120,560 C1460,690 1720,670 1970,520 L1970,780 L-50,780 Z'
-          fill='%23FFFFFF' opacity='0.16'/>
-    <path d='M-60,640 C320,470 720,520 1100,650 C1450,800 1750,790 1980,640 L1980,880 L-60,880 Z'
-          fill='%23FFFFFF' opacity='0.10'/>
-    <path d='M-40,720 C260,600 660,640 1040,760 C1400,875 1710,885 1980,760 L1980,1020 L-40,1020 Z'
-          fill='%230066A5' opacity='0.08'/>
-
-    <g filter='url(%23softerBlur)' opacity='0.25'>
-      <circle cx='230' cy='610' r='34' fill='%23FFFFFF'/>
-      <circle cx='1560' cy='610' r='28' fill='%23FFFFFF'/>
-    </g>
-
-    <g filter='url(%23softBlur)' opacity='0.20'>
-      <circle cx='320' cy='880' r='16' fill='%23FFFFFF'/>
-      <circle cx='1400' cy='860' r='14' fill='%23FFFFFF'/>
-    </g>
-  </svg>");
-
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-color: #7fe3e8; /* fallback */
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
 }
 /**********************************/
 
