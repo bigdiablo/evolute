@@ -121,6 +121,10 @@ div.confirmationSectionHeader,
     color: #f0f7ff !important;
 }
 
+.dashboard #bidgridTabs li a.current {
+    border-bottom-color: #fff !important;
+}
+
 /*********************************/
 
 /****testing a better background****/
