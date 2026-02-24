@@ -111,10 +111,17 @@ div.confirmationSectionHeader,
 }
 /********************************/
 
+/* tabs colors */
 .dashboard #bidgridTabs {
     background: #00ade1 !important;
     color: #f0f7ff !important;
 }
+
+.dashboard #bidgridTabs li a {
+    color: #f0f7ff !important;
+}
+
+/*********************************/
 
 .dashboard #bidgridTabs h2 span:first-child,
 .dashboard #bidgridTabs h2 {
