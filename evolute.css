@@ -77,6 +77,10 @@
     margin-left: 1em;
 }
 
+details > summary {
+    cursor: pointer;
+}
+
 .sample-form-link:hover{
     background: #e0efff;
     border-color: var(--color-primary);
