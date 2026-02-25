@@ -200,3 +200,21 @@ div.confirmationSectionHeader,
         width: 100%;
     }
 }
+
+.row-card-hidden {
+	display: none;
+}
+.dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv {
+	align-items: flex-start !important;
+}
+.dashboard .ordersTable tbody td .oliDiv {
+	flex-wrap: nowrap !important;
+}
+@media (max-width: 768px) {
+	.dashboard .ordersTable tbody tr td.nowrap {
+		flex-direction: row !important;
+	}
+	.dashboard .ordersTable tbody tr td .oliDiv {
+		flex-direction: row !important;
+	}
+}
