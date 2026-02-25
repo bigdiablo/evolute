@@ -81,6 +81,12 @@ details > summary {
     cursor: pointer;
 }
 
+#bidGroupVo.maxLeadsPerWeekDayField:disabled, 
+#bidGroupVo.maxLeadsPerWeekendDayField:disabled{
+    background-color: var(--bg-light) !important;
+    color: var(--color-muted) !important;
+}
+
 /*Header colors for cards*/
 .dashboard .roundedBox .hdr,
 .roundedBox div.sectionHeader,
