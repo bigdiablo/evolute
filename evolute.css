@@ -219,9 +219,10 @@ div.confirmationSectionHeader,
 	}
 }
 
-/*test*/
 .dashboard .formSectionContent .optionsContent {
-    display: inherit !important;
+    display: flex !important;
+    flex-direction: column;
+    align-items: start !important;
 }
 
 .dashboard .options {
