@@ -94,6 +94,11 @@ details > summary {
     width: unset
 }
 
+.dashboard #Main:has(#buyerSignupFormv22) #FormHeader, 
+.dashboard #Main:has([name="publisher_signup_v2_1"]) #FormHeader{
+    display: block !important;
+}
+
 /*Header colors for cards*/
 .dashboard .roundedBox .hdr,
 .roundedBox div.sectionHeader,
