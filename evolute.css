@@ -218,3 +218,12 @@ div.confirmationSectionHeader,
 		flex-direction: row !important;
 	}
 }
+
+/*test*/
+.dashboard .formSectionContent .optionsContent {
+    display: inherit !important;
+}
+
+.dashboard .options {
+    flex: 0 1 auto !important;
+}
