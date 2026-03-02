@@ -99,7 +99,7 @@ details > summary {
     display: block !important;
 }
 
-div.operatorOnly, span.operatorOnly{
+div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
     background: #f59e0b !important;
     color: white !important;
 }
