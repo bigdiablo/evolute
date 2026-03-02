@@ -99,6 +99,19 @@ details > summary {
     display: block !important;
 }
 
+.operatorOnly{
+    background: #f59e0b !important;
+}
+
+a.btn-primary{
+    text-decoration: none;
+    background: var(--color-primary);
+}
+
+a.btn-primary:hover{
+    background: var(--color-primary-light);
+}
+
 /*Header colors for cards*/
 .dashboard .roundedBox .hdr,
 .roundedBox div.sectionHeader,
