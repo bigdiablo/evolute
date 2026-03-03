@@ -2075,7 +2075,7 @@ body.login {
     background-size: contain;
 }
 
-.dashboard #links a[href*="sellerGuide"]::before {
+.dashboard #links a[onclick*="sellerGuide"]::before {
     content: '';
     width: 16px;
     height: 16px;
