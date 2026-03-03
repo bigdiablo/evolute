@@ -2543,6 +2543,9 @@ body.login {
 .dashboard #Main:has(#buyerSignupFormv22) .inputGroup:nth-of-type(1) {
     width: 100% !important;
 }
+.dashboard #Main:has([name="publisher_signup_v2_1"]) .inputGroup {
+    padding: 16px 24px !important;
+}
 
 .dashboard #Main:has(#buyerSignupFormv22) .inputGroup {
     flex-direction: column;
@@ -12248,6 +12251,10 @@ img.calendarIcon {
 /* ========== TABLET ========== */
 
 @media (max-width: 768px) {
+
+    .dashboard #Main:has([name="publisher_signup_v2_1"]) #MainContent {
+        padding: 24px 16px !important;
+    }
 
     .dashboard #Main:has(#buyerSignupFormv22) #MainContent #NestedFormPage {
         width: 100% !important;
