@@ -2545,6 +2545,9 @@ body.login {
 }
 .dashboard #Main:has([name="publisher_signup_v2_1"]) .inputGroup {
     padding: 16px 24px !important;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .dashboard #Main:has(#buyerSignupFormv22) .inputGroup {
@@ -12674,7 +12677,7 @@ img.calendarIcon {
     .dashboard textarea {
         width: 100% !important;
         max-width: 100% !important;
-        box-sizing: border-box !important;
+        min-width: 0 !important;
     }
 
     .dashboard .buttonGroup {
@@ -14077,14 +14080,6 @@ img.calendarIcon {
     .dashboard .inputGroup .optionsContent select[id*="_year"],
     .dashboard .inputGroup .optionsContent select[name*="_year"] {
         grid-column: 1 / -1 !important;
-    }
-
-    .dashboard .formSectionContent select,
-    .dashboard .inputGroup select,
-    .dashboard .optionsContent select {
-        width: auto !important;
-        min-width: 0 !important;
-        max-width: auto !important;
     }
 
     .dashboard table[class*="payment"],
