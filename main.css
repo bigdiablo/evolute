@@ -2570,6 +2570,12 @@ body.login {
     position: static !important;
 }
 
+.dashboard #Main:has([name="publisher_signup_v2_1"]) .formSectionContent .mainLabel {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 .dashboard #Main:has(#Footer) #Footer {
     margin-left: 0 !important;
 }
