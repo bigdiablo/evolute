@@ -91,16 +91,6 @@
     font-weight: 700
 }
 
-#Header {
-    min-width: 800px;
-    max-width: 1800px
-}
-
-#air {
-    vertical-align: middle;
-    width: auto
-}
-
 .space {
     width: 100%
 }

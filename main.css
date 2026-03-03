@@ -2414,14 +2414,13 @@ body.login {
     align-items: center;
     flex-direction: column;
     margin: 0;
-    padding: 0;
+    padding: 40px 0 0;
 }
 
 .dashboard #Main:has([name="publisher_signup_v2_1"]) #MainTitle div.title {
     font-size: 24px;
     font-weight: 600;
     color: var(--color-dark);
-    line-height: 1.5;
     text-align: center;
     padding-top: 0;
 }
@@ -2431,6 +2430,7 @@ body.login {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
+    margin-top: 8px;
 }
 
 .dashboard #Main:has([name="publisher_signup_v2_1"]) #MainTitle::before {
@@ -2545,7 +2545,7 @@ body.login {
 }
 .dashboard #Main:has([name="publisher_signup_v2_1"]) .inputGroup {
     padding: 16px 24px !important;
-    align-items: flex-start;
+    align-items: stretch;
     flex-direction: column;
     gap: 8px;
 }
@@ -11610,14 +11610,6 @@ img.calendarIcon {
         align-items: stretch;
     }
 
-    .dashboard .formSectionContent .mainLabel {
-        width: 100%;
-        text-align: left;
-        padding: 0 0 4px;
-        padding-right: 0;
-        margin-bottom: 8px;
-    }
-
     .dashboard .formSectionContent .mainLabelContent {
         padding-right: 0;
     }
@@ -12660,13 +12652,6 @@ img.calendarIcon {
         flex-direction: column !important;
         align-items: stretch !important;
         gap: 8px !important;
-    }
-
-    .dashboard .inputGroup .mainLabel,
-    .dashboard .mainLabel {
-        float: none !important;
-        width: 100% !important;
-        margin-bottom: 8px !important;
     }
 
     .dashboard .inputGroup .options,
