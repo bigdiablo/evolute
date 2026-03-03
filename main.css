@@ -60,11 +60,139 @@ textarea {
     font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
-.none,
 .hidden,
+.none,
+.login #logoDiv img,
+.login .clear,
+.login .mainLabel .requiredMarker,
+.login .sectionHeader,
+.login .sideBar h4,
+.login b.bb,
+.login b.bb b,
+.login b.bt,
+.login b.bt b,
+.login form[name="changePasswordForm"] .inlineHelpImg,
+.login form[name="changePasswordForm"] .requiredMarker,
+.dashboard #Header::-webkit-scrollbar,
+.dashboard #Main:has(#buyerSignupFormv22) #MainContent .disclaimer2,
+.dashboard #Navigation b.bl,
+.dashboard #Navigation b.br,
+.dashboard #Navigation b.tc,
+.dashboard #Navigation b.tr,
+.dashboard #buyerBrandType,
+.dashboard #connectionsForm br,
+.dashboard #isBrandedExclusiveFilterAvailable,
+.dashboard #leadClassAvailability,
+.dashboard #leadClassLabel,
+.dashboard #leadClassText,
+.dashboard #logoDiv img,
+.dashboard #noLeadClassLabel,
+.dashboard #noLeadClassText,
+.dashboard #settingssubnav .subsection.invisible,
+.dashboard #totalConnections,
+.dashboard .air,
+.dashboard .air:empty,
+.dashboard .blueBox .bb,
+.dashboard .blueBox .bt,
+.dashboard .blueBox > b,
+.dashboard .boxContent .clear,
+.dashboard .channelInfo .center,
+.dashboard .channelInfo .htop,
+.dashboard .channelInfo .right,
 .dashboard .clear,
-.dashboard .air {
+.dashboard .formSectionContent .clear:not(:last-child),
+.dashboard .grid_600px_340px .secondary,
+.dashboard .leadsInfo span#hasZeroDataLeads,
+.dashboard .leadsInfo span#hasZeroVoiceLeads,
+.dashboard .ordersTable .details,
+.dashboard .redBox > b,
+.dashboard .reportContainer .nDash,
+.dashboard .reports .clear,
+.dashboard .reports .filter .clear,
+.dashboard .reports br + br,
+.dashboard .reports table#report tr td[colspan] br,
+.dashboard .roundedBox > b,
+.dashboard .roundedBox2 .hdr .tl,
+.dashboard .roundedBox2 .hdr .tr,
+.dashboard .roundedBox2 > b,
+.dashboard .roundedBox3 > b,
+.dashboard .roundedBox4 > b,
+.dashboard .secondary.left > .clear,
+.dashboard .sectionHeader b.center,
+.dashboard .sectionHeader b.right,
+.dashboard .sellerHomeContentBoxL .boxContent img,
+.dashboard .sellerHomeContentBoxR .boxContent img,
+.dashboard .sideBar > b,
+.dashboard div.air,
+#mobilemenu {
     display: none;
+}
+
+.login .roundedBox .hdr,
+.login form[name="changePasswordForm"] .clear,
+.login form[name="changePasswordForm"] .sectionHeader b.center,
+.login form[name="changePasswordForm"] .sectionHeader b.htop,
+.login form[name="changePasswordForm"] .sectionHeader b.right,
+.login form[name="changePasswordForm"] b.bb,
+.login form[name="changePasswordForm"] b.bb b,
+.login form[name="changePasswordForm"] b.bt,
+.login form[name="changePasswordForm"] b.bt b,
+.dashboard #Main:has(#buyerSignupFormv22) #FormHeader,
+.dashboard #Main:has([name="publisher_signup_v2_1"]) #FormHeader,
+.dashboard #bidoptions .subtabHeading b.bt,
+.dashboard #bidoptions .subtabHeading b.htop,
+.dashboard #bidoptions.roundedBox b.bb,
+.dashboard #bidoptions.roundedBox b.bt,
+.dashboard #dluContainer,
+.dashboard #dluDisplayContainer,
+.dashboard #formContainer .roundedBox b.bb,
+.dashboard #formContainer .roundedBox b.bt,
+.dashboard #successMessage .sectionHeader .closebox,
+.dashboard #successMessage .sectionHeader b.htop,
+.dashboard #successMessage b.bb,
+.dashboard #successMessage b.bt,
+.dashboard #validationErrors .sectionHeader b.htop,
+.dashboard #validationErrors b.bb,
+.dashboard #validationErrors b.bt,
+.dashboard .air,
+.dashboard .hdr .tl,
+.dashboard .hdr .tr,
+.dashboard .reportListWrapper .roundedBox .hdr .tl,
+.dashboard .reportListWrapper .roundedBox .hdr .tr,
+.dashboard .reportListWrapper .roundedBox b.bb,
+.dashboard .reportListWrapper .roundedBox b.bt,
+.dashboard .roundedBox .hdr .tl,
+.dashboard .roundedBox .hdr .tr,
+.dashboard .roundedBox4.sideBar::-webkit-scrollbar,
+.dashboard .sectionHeader b.htop,
+.dashboard .settings #linkContainer .roundedBox .hdr .tl,
+.dashboard .settings #linkContainer .roundedBox .hdr .tr,
+.dashboard .settings #linkContainer .roundedBox b.bb,
+.dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .clear,
+.dashboard .settings .roundedBox .sectionHeader b.center,
+.dashboard .settings .roundedBox .sectionHeader b.htop,
+.dashboard .settings .roundedBox .sectionHeader b.right,
+.dashboard .settings .roundedBox.noticePeriods .hdr .tl,
+.dashboard .settings .roundedBox.noticePeriods .hdr .tr,
+.dashboard .settings .roundedBox.returnPolicy .hdr .tl,
+.dashboard .settings .roundedBox.returnPolicy .hdr .tr,
+.dashboard .settings .roundedBox5 b.bb,
+.dashboard .settings .roundedBox5 b.bt,
+.dashboard b.bb,
+.dashboard b.bb b,
+.dashboard b.bt,
+.dashboard b.bt b,
+.dashboard b.htop,
+.dashboard b.htop b,
+div#termsContainer,
+.yui-panel-container.yui-dialog .underlay,
+form[name="ticketLogForm"] #FormHeader,
+form[name="ticketLogForm"] .clear,
+form[name="ticketLogForm"] .roundedBox .hdr .tl,
+form[name="ticketLogForm"] .roundedBox .hdr .tr,
+form[name="ticketLogForm"] .roundedBox b.bb,
+form[name="ticketLogForm"] .roundedBox b.bt {
+    display: none !important;
 }
 
 /* clean classes */
@@ -997,10 +1125,6 @@ body.login {
     margin-top: 0;
 }
 
-.login #logoDiv img {
-    display: none;
-}
-
 .login #logoDiv::before {
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 792 195.87'%3E%3Cstyle%3E.cls-1%7Bfill:%237d878e%7D.cls-2%7Bfill:%23fff%7D.cls-3%7Bfill:%2300ade1%7D.cls-4%7Bfill:%23004279%7D.cls-5%7Bfill:%230060a7%7D.cls-6%7Bfill:%2356b45e%7D%3C/style%3E%3Cg%3E%3Cpath class='cls-1' d='M257.25,52.44c-26.17,0-47.45,21.29-47.45,47.45s21.29,47.45,47.45,47.45c13.68,0,26.69-5.91,35.71-16.2,2.93-3.35,2.6-8.44-.75-11.38-3.35-2.93-8.44-2.6-11.38.75-5.96,6.8-14.55,10.7-23.58,10.7-17.27,0-31.33-14.05-31.33-31.33s14.05-31.33,31.33-31.33c14.49,0,26.71,9.89,30.28,23.26h-41.02c-4.45,0-8.06,3.61-8.06,8.06s3.61,8.06,8.06,8.06h50.13c4.45,0,8.06-3.61,8.06-8.06,0-26.17-21.29-47.45-47.45-47.45Z'/%3E%3Cpath class='cls-1' d='M738.19,52.44c-26.16,0-47.45,21.29-47.45,47.45s21.29,47.45,47.45,47.45c13.68,0,26.69-5.91,35.71-16.2,2.93-3.35,2.6-8.44-.75-11.38-3.35-2.93-8.44-2.6-11.38.75-5.96,6.8-14.55,10.7-23.58,10.7-17.27,0-31.33-14.05-31.33-31.33s14.05-31.33,31.33-31.33c14.49,0,26.71,9.89,30.28,23.26h-41.02c-4.45,0-8.06,3.61-8.06,8.06s3.61,8.06,8.06,8.06h50.13c4.45,0,8.06-3.61,8.06-8.06,0-26.17-21.29-47.45-47.45-47.45Z'/%3E%3Cpath class='cls-1' d='M448.02,52.44c-26.17,0-47.45,21.29-47.45,47.45s21.29,47.45,47.45,47.45c13.68,0,26.69-5.91,35.71-16.2,7.57-8.65,11.74-19.75,11.74-31.25,0-26.17-21.29-47.45-47.45-47.45ZM471.6,120.53c-5.96,6.8-14.55,10.7-23.58,10.7-17.27,0-31.33-14.05-31.33-31.33s14.05-31.33,31.33-31.33,31.33,14.05,31.33,31.33c0,7.6-2.75,14.92-7.75,20.63Z'/%3E%3Cpath class='cls-1' d='M618.15,55.42c-4.45,0-8.06,3.61-8.06,8.06v40.36c0,6.64-2.41,13.04-6.77,18.03-5.21,5.95-12.72,9.36-20.61,9.36-15.1,0-27.39-12.29-27.39-27.39v-40.36c0-4.45-3.61-8.06-8.06-8.06s-8.06,3.61-8.06,8.06v40.36c0,23.99,19.52,43.51,43.51,43.51,12.54,0,24.48-5.42,32.75-14.86,6.94-7.93,10.77-18.11,10.77-28.66v-40.36c0-4.45-3.61-8.06-8.06-8.06Z'/%3E%3Cpath class='cls-1' d='M683.27,131.23c-15.1,0-27.39-12.29-27.39-27.39v-40.39h23.22c4.45,0,8.06-3.61,8.06-8.06s-3.61-8.06-8.06-8.06h-23.22v-27.77c0-4.45-3.61-8.06-8.06-8.06s-8.06,3.61-8.06,8.06v33.89c-.15.62-.25,1.27-.25,1.94s.09,1.32.25,1.94v46.51c0,23.99,19.52,43.51,43.51,43.51,4.45,0,8.06-3.61,8.06-8.06s-3.61-8.06-8.06-8.06Z'/%3E%3Cpath class='cls-1' d='M515.72,12.82c-4.45,0-8.06,3.61-8.06,8.06v117.28c0,4.45,3.61,8.06,8.06,8.06s8.06-3.61,8.06-8.06V20.89c0-4.45-3.61-8.06-8.06-8.06Z'/%3E%3Cpath class='cls-1' d='M360.86,146.95c.19-.28.36-.57.51-.87.02-.04.05-.07.07-.11l39.39-78.89c1.99-3.98.37-8.83-3.61-10.82-3.98-1.99-8.83-.37-10.82,3.61l-32.18,64.44-32.18-64.44c-1.99-3.98-6.83-5.6-10.82-3.61-3.98,1.99-5.6,6.83-3.61,10.82l39.39,78.89s.05.07.07.11c.16.3.32.59.52.87,0,0,.01.02.02.02.19.28.41.54.64.79.06.07.12.13.18.19.19.19.39.38.59.56.05.05.1.09.16.14.25.2.52.39.8.56.07.05.15.08.23.13.14.08.27.16.41.23.07.04.15.06.23.1.12.06.25.11.37.16.21.08.42.16.63.22.11.03.22.07.34.1.25.06.49.11.74.15.09.01.18.03.27.05.34.04.68.07,1.02.07,0,0,0,0,0,0s0,0,0,0c.34,0,.68-.03,1.02-.07.09-.01.18-.03.27-.05.25-.04.49-.09.74-.15.11-.03.22-.06.34-.1.21-.07.42-.14.63-.22.13-.05.25-.1.37-.16.07-.03.15-.06.23-.1.14-.07.28-.15.41-.23.08-.04.15-.08.23-.13.28-.17.55-.36.8-.56.06-.04.11-.09.16-.14.21-.18.4-.36.59-.55.06-.07.13-.13.19-.2.23-.25.44-.51.63-.79,0,0,.01-.02.02-.03Z'/%3E%3C/g%3E%3Cpath class='cls-4' d='M66.5,125.36c-16.06-15.64-37.2-24.31-59.6-24.47,1.53,46.57,39.08,84.02,85.7,85.36l-.03-1.5c-.63-22.54-9.89-43.63-26.07-59.39Z'/%3E%3Cpath class='cls-3' d='M92.58,9.63C46.3,10.98,8.94,47.92,6.94,94.03c46.66-.35,84.62-37.9,85.64-84.4Z'/%3E%3Cpath class='cls-6' d='M183.44,94c-2-45.54-38.48-82.13-83.98-84.3.5,22.03,9.23,42.74,24.72,58.5,15.78,16.06,36.8,25.2,59.26,25.8Z'/%3E%3Cpath class='cls-5' d='M99.48,184.74l-.04,1.44c45.83-2.17,82.52-39.26,84.04-85.26-45.87,1.19-82.71,37.89-84,83.83Z'/%3E%3Cpath class='cls-2' d='M183.44,94c-22.46-.6-43.48-9.74-59.26-25.8-15.49-15.77-24.22-36.47-24.72-58.5-1.42-.07-2.84-.1-4.28-.1-.87,0-1.74.02-2.61.04-1.03,46.5-38.99,84.04-85.64,84.4-.06,1.3-.09,2.6-.09,3.91,0,.99.02,1.97.05,2.94,22.4.16,43.54,8.83,59.6,24.47,16.18,15.76,25.43,36.85,26.07,59.39l.03,1.5c.86.02,1.73.04,2.59.04,1.42,0,2.84-.04,4.25-.1l.04-1.44c1.29-45.93,38.13-82.63,84-83.83.03-.99.06-1.98.06-2.98,0-1.32-.03-2.63-.09-3.94Z'/%3E%3C/svg%3E");
     display: block;
@@ -1016,10 +1140,6 @@ body.login {
     background: var(--color-white) !important;
 }
 
-.login .roundedBox .hdr {
-    display: none !important;
-}
-
 .login div.roundedBox {
     display: flex;
     flex-direction: column;
@@ -1031,15 +1151,6 @@ body.login {
     padding: 0 20px 20px;
     border-radius: 0 0 12px 12px;
     background-color: var(--color-white) !important;
-}
-
-.login .sectionHeader,
-.login .clear,
-.login b.bt,
-.login b.bt b,
-.login b.bb,
-.login b.bb b {
-    display: none;
 }
 
 .login .buttonGroup {
@@ -1104,10 +1215,6 @@ body.login {
     color: var(--color-gray) !important;
     font-size: 14px;
     font-weight: 500;
-}
-
-.login .mainLabel .requiredMarker {
-    display: none;
 }
 
 .login .optionsContent {
@@ -1267,10 +1374,6 @@ body.login {
     width: 100%;
 }
 
-.login .sideBar h4 {
-    display: none;
-}
-
 .login .sideBar .sideBarGroup {
     color: var(--color-primary-light) !important;
     font-size: 14px;
@@ -1357,12 +1460,6 @@ body.login {
     width: 100%;
 }
 
-.login form[name="changePasswordForm"] .sectionHeader b.htop,
-.login form[name="changePasswordForm"] .sectionHeader b.center,
-.login form[name="changePasswordForm"] .sectionHeader b.right {
-    display: none !important;
-}
-
 .login form[name="changePasswordForm"] .formSectionContent {
     display: flex;
     flex-direction: column;
@@ -1401,10 +1498,6 @@ body.login {
     white-space: nowrap;
 }
 
-.login form[name="changePasswordForm"] .requiredMarker {
-    display: none;
-}
-
 .login form[name="changePasswordForm"] .options {
     display: flex;
     width: 100%;
@@ -1433,10 +1526,6 @@ body.login {
     border-color: var(--color-primary-light) !important;
     background-color: var(--color-white) !important;
     box-shadow: 0 0 0 3px rgba(0, 96, 167, 0.1) !important;
-}
-
-.login form[name="changePasswordForm"] .inlineHelpImg {
-    display: none;
 }
 
 .login form[name="changePasswordForm"] .buttonGroup {
@@ -1485,14 +1574,6 @@ body.login {
     transform: translateY(-1px);
 }
 
-.login form[name="changePasswordForm"] b.bt,
-.login form[name="changePasswordForm"] b.bt b,
-.login form[name="changePasswordForm"] b.bb,
-.login form[name="changePasswordForm"] b.bb b,
-.login form[name="changePasswordForm"] .clear {
-    display: none !important;
-}
-
 /* ========== SIDEBAR ========== */
 
 .dashboard #Header {
@@ -1511,10 +1592,6 @@ body.login {
     -ms-overflow-style: none;
     background-color: var(--color-white);
     border-right: 1px solid var(--border);
-}
-
-.dashboard #Header::-webkit-scrollbar {
-    display: none;
 }
 
 .dashboard #logoLinksContainer {
@@ -1554,10 +1631,6 @@ body.login {
     margin-top: 0;
     padding: 16px 14px;
     border-bottom: 1px solid var(--border);
-}
-
-.dashboard #logoDiv img {
-    display: none;
 }
 
 .dashboard #logoDiv #logo::before {
@@ -1974,12 +2047,6 @@ body.login {
     mask-size: contain;
 }
 
-.dashboard #Navigation b.tc,
-.dashboard #Navigation b.tr,
-.dashboard #Navigation b.br {
-    display: none;
-}
-
 .dashboard #MainNavigation.tabs {
     display: flex;
     line-height: normal;
@@ -2060,10 +2127,6 @@ body.login {
     cursor: pointer;
     text-decoration: none !important;
     background-color: var(--bg-light);
-}
-
-.dashboard #Navigation b.bl {
-    display: none;
 }
 
 .dashboard #SubNavigation.subtabs {
@@ -2348,9 +2411,24 @@ body.login {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 24px;
     margin: 0;
     padding: 0;
+}
+
+.dashboard #Main:has([name="publisher_signup_v2_1"]) #MainTitle div.title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-dark);
+    line-height: 1.5;
+    text-align: center;
+    padding-top: 0;
+}
+
+.dashboard #Main:has([name="publisher_signup_v2_1"]) #MainTitle div.subTitle {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
 }
 
 .dashboard #Main:has([name="publisher_signup_v2_1"]) #MainTitle::before {
@@ -2359,11 +2437,6 @@ body.login {
     width: 180px;
     height: auto;
     margin-bottom: 24px;
-}
-
-.dashboard #Main:has(#buyerSignupFormv22) #FormHeader,
-.dashboard #Main:has([name="publisher_signup_v2_1"]) #FormHeader {
-    display: none !important;
 }
 
 .dashboard #Main:has(#buyerSignupFormv22) #signup {
@@ -2454,10 +2527,6 @@ body.login {
     border-color: var(--color-primary);
     color: var(--color-primary);
     background: #eff6ff;
-}
-
-.dashboard #Main:has(#buyerSignupFormv22) #MainContent .disclaimer2 {
-    display: none;
 }
 
 .dashboard #Main:has(#buyerSignupFormv22) #MainContent #NestedFormPage {
@@ -2608,13 +2677,6 @@ body.login {
     overflow: visible !important;
 }
 
-.dashboard .roundedBox .hdr .tl,
-.dashboard .roundedBox .hdr .tr,
-.dashboard .roundedBox2 .hdr .tl,
-.dashboard .roundedBox2 .hdr .tr {
-    display: none;
-}
-
 .dashboard .roundedBox .hdr h2,
 .dashboard .roundedBox2 .hdr h2,
 .dashboard .roundedBox3 .hdr h2 {
@@ -2631,15 +2693,6 @@ body.login {
     font-size: 16px;
     font-weight: 600;
     line-height: inherit;
-}
-
-.dashboard b.bt,
-.dashboard b.bt b,
-.dashboard b.bb,
-.dashboard b.bb b,
-.dashboard b.htop,
-.dashboard b.htop b {
-    display: none !important;
 }
 
 /* Section Headers */
@@ -2698,10 +2751,6 @@ div.titleDiv {
     display: flex;
     background-color: #F0F0F1;
     margin-bottom: 0;
-}
-
-div#termsContainer {
-    display: none !important;
 }
 
 .titleDiv h3 {
@@ -3199,11 +3248,6 @@ div.grid_1_1#leftInnerGrid {
     padding: 20px;
 }
 
-.dashboard .sellerHomeContentBoxL .boxContent img,
-.dashboard .sellerHomeContentBoxR .boxContent img {
-    display: none;
-}
-
 .dashboard .sellerHomeContentBoxL .boxContent > a,
 .dashboard .sellerHomeContentBoxR .boxContent > a {
     display: flex;
@@ -3337,10 +3381,6 @@ div.grid_1_1#leftInnerGrid {
     text-decoration: none !important;
 }
 
-.dashboard .grid_600px_340px .secondary {
-    display: none;
-}
-
 /* ========== SETTINGS ========== */
 
 .dashboard .grid_200px_n {
@@ -3380,10 +3420,6 @@ div.grid_1_1#leftInnerGrid {
     padding-bottom: 0 !important;
     scrollbar-width: none !important;
     -ms-overflow-style: none !important;
-}
-
-.dashboard .roundedBox4.sideBar::-webkit-scrollbar {
-    display: none !important;
 }
 
 /* Ensure sidebar bottom is visible */
@@ -3479,10 +3515,6 @@ div.grid_1_1#leftInnerGrid {
 .dashboard #settingssubnav .subsection .link.current a {
     color: var(--color-primary-light);
     font-weight: 600;
-}
-
-.dashboard #settingssubnav .subsection.invisible {
-    display: none;
 }
 
 .dashboard #FormPage {
@@ -3610,13 +3642,6 @@ div.grid_1_1#leftInnerGrid {
     width: 100% !important;
 }
 
-.dashboard .reportListWrapper .roundedBox b.bt,
-.dashboard .reportListWrapper .roundedBox b.bb,
-.dashboard .reportListWrapper .roundedBox .hdr .tl,
-.dashboard .reportListWrapper .roundedBox .hdr .tr {
-    display: none !important;
-}
-
 .dashboard .reportListWrapper .roundedBox .hdr {
     background: var(--bg-light) !important;
     border-bottom: 1px solid var(--border) !important;
@@ -3690,10 +3715,6 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .reportContainer .reportLink:hover {
     color: var(--color-primary-light);
-}
-
-.dashboard .reportContainer .nDash {
-    display: none;
 }
 
 .dashboard .reportContainer .reportDescription {
@@ -4820,12 +4841,6 @@ div.grid_1_1#leftInnerGrid {
     border-bottom: 1px solid var(--border);
 }
 
-.dashboard .channelInfo .htop,
-.dashboard .channelInfo .center,
-.dashboard .channelInfo .right {
-    display: none;
-}
-
 .dashboard .channelInfo h2 {
     margin: 0;
     padding: 0 !important;
@@ -4977,11 +4992,6 @@ div.grid_1_1#leftInnerGrid {
     border: 1px solid var(--border);
     border-radius: 12px;
     overflow: hidden;
-}
-
-.dashboard .blueBox .bt,
-.dashboard .blueBox .bb {
-    display: none;
 }
 
 .dashboard .blueBox .boxContent {
@@ -5343,10 +5353,6 @@ div.grid_1_1#leftInnerGrid {
     text-decoration: underline;
 }
 
-.dashboard .ordersTable .details {
-    display: none;
-}
-
 .dashboard .ordersTable .details.visible {
     display: table-row;
 }
@@ -5546,12 +5552,6 @@ div.grid_1_1#leftInnerGrid {
     background: none !important;
 }
 
-.dashboard .settings .roundedBox .sectionHeader b.htop,
-.dashboard .settings .roundedBox .sectionHeader b.center,
-.dashboard .settings .roundedBox .sectionHeader b.right {
-    display: none !important;
-}
-
 /* ========== AUCTION SETTINGS CONTAINERS ========== */
 
 .dashboard .settings {
@@ -5747,13 +5747,6 @@ div.grid_1_1#leftInnerGrid {
     background: none !important;
 }
 
-.dashboard .settings .roundedBox.noticePeriods .hdr .tl,
-.dashboard .settings .roundedBox.noticePeriods .hdr .tr,
-.dashboard .settings .roundedBox.returnPolicy .hdr .tl,
-.dashboard .settings .roundedBox.returnPolicy .hdr .tr {
-    display: none !important;
-}
-
 .dashboard .settings .noticePeriodsContainer {
     margin-top: 24px !important;
 }
@@ -5874,11 +5867,6 @@ div.grid_1_1#leftInnerGrid {
     max-width: 100% !important;
 }
 
-/* Clear floats */
-.dashboard .settings .noticePeriodsContainer .roundedBox .formSectionContent .clear {
-    display: none !important;
-}
-
 /* ========== PROMOTIONAL URL SETTINGS ========== */
 
 .dashboard .settings #linkContainer {
@@ -5916,11 +5904,6 @@ div.grid_1_1#leftInnerGrid {
     color: var(--color-primary) !important;
 }
 
-.dashboard .settings #linkContainer .roundedBox .hdr .tl,
-.dashboard .settings #linkContainer .roundedBox .hdr .tr {
-    display: none !important;
-}
-
 .dashboard .settings #linkContainer .roundedBox .formSectionContent {
     padding: 24px !important;
 }
@@ -5953,10 +5936,6 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .settings #linkContainer .roundedBox .formSectionContent #lpconnectlink:hover {
     background-color: var(--bg-info) !important;
     border-color: var(--color-primary-light) !important;
-}
-
-.dashboard .settings #linkContainer .roundedBox b.bb {
-    display: none !important;
 }
 
 /* Promotional URL copy button enhancement */
@@ -5998,11 +5977,6 @@ div.grid_1_1#leftInnerGrid {
     border: 1px solid var(--border) !important;
     border-radius: 12px !important;
     overflow: hidden !important;
-}
-
-.dashboard .settings .roundedBox5 b.bt,
-.dashboard .settings .roundedBox5 b.bb {
-    display: none !important;
 }
 
 /* Action bar with buttons */
@@ -6232,19 +6206,10 @@ div.grid_1_1#leftInnerGrid {
     max-width: 600px !important;
 }
 
-.dashboard #validationErrors b.bt,
-.dashboard #validationErrors b.bb {
-    display: none !important;
-}
-
 .dashboard #validationErrors .sectionHeader {
     background-color: var(--bg-error) !important;
     padding: 16px 20px !important;
     margin: 0 !important;
-}
-
-.dashboard #validationErrors .sectionHeader b.htop {
-    display: none !important;
 }
 
 .dashboard #validationErrors .sectionHeader h2 {
@@ -6294,19 +6259,10 @@ div.grid_1_1#leftInnerGrid {
     margin: 40px auto;
 }
 
-.dashboard #successMessage b.bt,
-.dashboard #successMessage b.bb {
-    display: none !important;
-}
-
 .dashboard #successMessage .sectionHeader {
     background-color: var(--bg-success) !important;
     padding: 16px 20px !important;
     margin: 0 !important;
-}
-
-.dashboard #successMessage .sectionHeader b.htop {
-    display: none !important;
 }
 
 .dashboard #successMessage .sectionHeader h2 {
@@ -6319,10 +6275,6 @@ div.grid_1_1#leftInnerGrid {
     font-weight: 600 !important;
     margin: 0 !important;
     padding: 0 !important;
-}
-
-.dashboard #successMessage .sectionHeader .closebox {
-    display: none !important;
 }
 
 .dashboard #successMessage p,
@@ -6775,11 +6727,6 @@ div.grid_1_1#leftInnerGrid {
     border-bottom: 1px solid var(--border) !important;
 }
 
-.dashboard .roundedBox .hdr .tl,
-.dashboard .roundedBox .hdr .tr {
-    display: none !important;
-}
-
 .dashboard .roundedBox .hdr h2 {
     color: var(--color-dark) !important;
     font-size: 18px !important;
@@ -6870,11 +6817,6 @@ div.grid_1_1#leftInnerGrid {
     border: 1px solid var(--border) !important;
     border-radius: 12px !important;
     overflow: hidden !important;
-}
-
-.dashboard #formContainer .roundedBox b.bt,
-.dashboard #formContainer .roundedBox b.bb {
-    display: none !important;
 }
 
 .dashboard #formContainer .roundedBox .hdr {
@@ -7137,10 +7079,6 @@ div.grid_1_1#leftInnerGrid {
     opacity: 1 !important;
 }
 
-.dashboard #connectionsForm br {
-    display: none;
-}
-
 .dashboard #formContainer ul.text > li.details .target {
     background-color: var(--color-white) !important;
     border: 1px solid var(--border) !important;
@@ -7319,11 +7257,6 @@ div.grid_1_1#leftInnerGrid {
     background-color: var(--color-white) !important;
 }
 
-.dashboard #bidoptions.roundedBox b.bt,
-.dashboard #bidoptions.roundedBox b.bb {
-    display: none !important;
-}
-
 /* Section headers in tabs */
 .dashboard #bidoptions .subtabHeading {
     background: transparent !important;
@@ -7346,11 +7279,6 @@ div.grid_1_1#leftInnerGrid {
     padding: 0 !important;
     position: static !important;
     background: none !important;
-}
-
-.dashboard #bidoptions .subtabHeading b.bt,
-.dashboard #bidoptions .subtabHeading b.htop {
-    display: none !important;
 }
 
 /* Filter/Pricing/Settings containers */
@@ -8693,10 +8621,6 @@ div.grid_1_1#leftInnerGrid {
     line-height: 1.5;
 }
 
-.yui-panel-container.yui-dialog .underlay {
-    display: none !important;
-}
-
 .yui-panel-container.yui-dialog .yui-panel {
     position: relative !important;
     top: auto !important;
@@ -9372,15 +9296,6 @@ form[name="ticketLogForm"] {
     color: #09090b;
 }
 
-form[name="ticketLogForm"] #FormHeader,
-form[name="ticketLogForm"] .clear,
-form[name="ticketLogForm"] .roundedBox .hdr .tl,
-form[name="ticketLogForm"] .roundedBox .hdr .tr,
-form[name="ticketLogForm"] .roundedBox b.bt,
-form[name="ticketLogForm"] .roundedBox b.bb {
-    display: none !important;
-}
-
 form[name="ticketLogForm"] .roundedBox {
     background: #fff;
     border: 1px solid #e5e7eb;
@@ -9521,10 +9436,6 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
 
 form[name="ticketLogForm"] .buttonGroup .yui-button button:hover {
     background: #0060a7 !important;
-}
-
-#mobilemenu {
-    display: none;
 }
 
 /* Datepicker / Calendar fixes */
@@ -9755,12 +9666,6 @@ img.calendarIcon {
     width: 100%;
 }
 
-/* Hide legacy elements */
-.dashboard .reports .clear,
-.dashboard .reports br + br {
-    display: none;
-}
-
 /* Report page title */
 .dashboard .reports h1 {
     font-size: 20px;
@@ -9936,10 +9841,6 @@ img.calendarIcon {
     background-color: var(--bg-light);
 }
 
-.dashboard .reports .filter .clear {
-    display: none;
-}
-
 /* Report tables container */
 .dashboard .reports table#report,
 .dashboard .reports table.reportResults {
@@ -10049,10 +9950,6 @@ img.calendarIcon {
     color: var(--color-gray);
     line-height: 1.4;
     background-color: var(--bg-light);
-}
-
-.dashboard .reports table#report tr td[colspan] br {
-    display: none;
 }
 
 /* Schedule report link section */
@@ -10322,20 +10219,6 @@ img.calendarIcon {
 }
 
 /* ========== DASHBOARD HOME PAGE STYLES ========== */
-
-/* Hide legacy decorative elements */
-.dashboard b.bt,
-.dashboard b.bb,
-.dashboard b.bt b,
-.dashboard b.bb b,
-.dashboard .hdr .tl,
-.dashboard .hdr .tr,
-.dashboard .sectionHeader b.htop,
-.dashboard .air,
-.dashboard #dluContainer,
-.dashboard #dluDisplayContainer {
-    display: none !important;
-}
 
 /* Alert boxes */
 .dashboard .redBox {
@@ -11166,12 +11049,6 @@ img.calendarIcon {
     background-color: var(--color-primary-light);
 }
 
-/* Leads info hidden */
-.dashboard .leadsInfo span#hasZeroDataLeads,
-.dashboard .leadsInfo span#hasZeroVoiceLeads {
-    display: none;
-}
-
 /* Overview section */
 .dashboard #overview {
     display: flex;
@@ -11283,18 +11160,6 @@ img.calendarIcon {
 .dashboard #submitButtonContainer .yui-button button {
     padding: 12px 32px;
     font-size: 15px;
-}
-
-/* Hidden info divs */
-.dashboard #leadClassAvailability,
-.dashboard #buyerBrandType,
-.dashboard #leadClassText,
-.dashboard #noLeadClassText,
-.dashboard #isBrandedExclusiveFilterAvailable,
-.dashboard #noLeadClassLabel,
-.dashboard #leadClassLabel,
-.dashboard #totalConnections {
-    display: none;
 }
 
 /* Lead Store page */
@@ -13338,17 +13203,6 @@ img.calendarIcon {
     margin-bottom: 0;
 }
 
-/* Fix empty b.bt and b.bb elements (legacy rounded corners) */
-.dashboard b.bt,
-.dashboard b.bb,
-.dashboard .roundedBox > b,
-.dashboard .roundedBox2 > b,
-.dashboard .roundedBox3 > b,
-.dashboard .blueBox > b,
-.dashboard .redBox > b {
-    display: none;
-}
-
 /* Ensure roundedBox has proper background */
 .dashboard .roundedBox,
 .dashboard .roundedBox3 {
@@ -13368,12 +13222,6 @@ img.calendarIcon {
     display: flex;
     flex-direction: column;
     gap: 4px;
-}
-
-/* Hide duplicate clears */
-.dashboard .formSectionContent .clear:not(:last-child),
-.dashboard .boxContent .clear {
-    display: none;
 }
 
 /* Search form improvements - better alignment */
@@ -13584,13 +13432,6 @@ img.calendarIcon {
     border-top: 1px solid var(--border);
 }
 
-/* Fix h2 inside sectionHeader */
-.dashboard .sectionHeader b.htop,
-.dashboard .sectionHeader b.center,
-.dashboard .sectionHeader b.right {
-    display: none;
-}
-
 /* Responsive improvements for search */
 @media (max-width: 1024px) {
     .dashboard #search .inputGroup {
@@ -13669,11 +13510,6 @@ img.calendarIcon {
     margin-bottom: 16px;
 }
 
-.dashboard .roundedBox4 > b,
-.dashboard .sideBar > b {
-    display: none;
-}
-
 .dashboard .roundedBox4 h4,
 .dashboard .sideBar h4 {
     font-size: 14px;
@@ -13703,10 +13539,6 @@ img.calendarIcon {
     display: flex;
     flex-direction: column;
     gap: 16px;
-}
-
-.dashboard .secondary.left > .clear {
-    display: none;
 }
 
 .dashboard .secondary.left > div {
@@ -13745,12 +13577,6 @@ img.calendarIcon {
 
 .dashboard #FooterContent a:hover {
     text-decoration: underline;
-}
-
-/* Hide air divs */
-.dashboard .air:empty,
-.dashboard div.air {
-    display: none;
 }
 
 /* ========== MOBILE FIXES ========== */
