@@ -152,14 +152,14 @@ div.confirmationSectionHeader,
 .dashboard #formContainer .roundedBox .hdr,
 .dashboard .reportListWrapper .roundedBox .hdr,
 .dashboard .settings .roundedBox .sectionHeader,
-.dashboard
-    .channels
-    table.nestedListTable.ordersTable
-    thead
-    tr.actions
-    td.paginationTop {
-    background: #4eb156 !important;
-    color: #f0f7ff !important;
+.dashboard,
+.channels,
+table.nestedListTable.ordersTable,
+thead,
+tr.actions,
+td.paginationTop {
+    background: var(--bg-info) !important;
+    color: var(--color-primary) !important;
 }
 
 .dashboard .roundedBox .hdr h2 span:first-child,
@@ -180,8 +180,8 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
 
 /* tabs colors */
 .dashboard #bidgridTabs {
-    background: #4eb156 !important;
-    color: #f0f7ff !important;
+    background: var(--bg-info) !important;
+    color: var(--color-primary) !important;
 }
 
 .dashboard #bidgridTabs li a {

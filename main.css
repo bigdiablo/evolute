@@ -1572,7 +1572,6 @@ body.login {
 .login form[name="changePasswordForm"] label.required {
     font-size: 14px;
     font-weight: 500;
-    color: var(--color-primary-light) !important;
     text-align: left;
     white-space: nowrap;
 }
@@ -1618,18 +1617,15 @@ body.login {
     font-size: 15px !important;
     font-weight: 600 !important;
     color: var(--color-white) !important;
-    background-color: var(--color-primary-light) !important;
+    background-color: var(--color-primary) !important;
     border: none !important;
     border-radius: 10px !important;
     cursor: pointer;
     transition: all 0.2s ease;
-    box-shadow: 0 2px 8px rgba(0, 96, 167, 0.25);
 }
 
 .login form[name="changePasswordForm"] .yui-button.yui-submit-button button:hover {
-    background-color: var(--color-primary) !important;
-    box-shadow: 0 4px 12px rgba(0, 66, 121, 0.35);
-    transform: translateY(-1px);
+    background-color: var(--color-primary-light) !important;
 }
 
 /* ========== SIDEBAR ========== */
@@ -2811,17 +2807,15 @@ body.login {
 .dashboard div.roundedBox2,
 .dashboard div.roundedBox3,
 .dashboard div.roundedBox4 {
+    position: relative !important;
     background-color: var(--color-white) !important;
     background-image: none !important;
     border: 1px solid var(--border) !important;
     border-radius: 12px !important;
-    margin: 0 0 24px 0 !important;
+    margin: 0 !important;
     padding: 0 !important;
-    box-shadow: none !important;
     overflow: hidden;
     min-width: auto !important;
-    clear: none !important;
-    position: relative !important;
 }
 
 .dashboard .roundedBox .hdr,
@@ -9083,19 +9077,6 @@ img.calendarIcon {
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-
-/* Rounded boxes */
-.dashboard .roundedBox,
-.dashboard .roundedBox2,
-.dashboard .roundedBox3,
-.dashboard .roundedBox2,
-.dashboard .roundedBox,
-.dashboard .roundedBox3 {
-    background-color: var(--color-white);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
 }
 
 /* Box headers */
