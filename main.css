@@ -5126,12 +5126,9 @@ div.grid_1_1#leftInnerGrid {
     color: var(--color-dark) !important;
     border: none !important;
     border-bottom: 1px solid var(--border) !important;
-    background-color: var(--color-white) !important;
     vertical-align: middle !important;
 }
 
-.dashboard .settings table.nestedListTable tbody tr.even td,
-.dashboard .settings table.nestedListTable tbody tr:hover td,
 .dashboard .settings .formSectionContent .buttonGroup .yui-link-button .first-child a:hover,
 .dashboard #formContainer ul.text li.details .target > div.odd,
 .dashboard #buttons .backbutton .first-child button:hover,
@@ -5297,6 +5294,7 @@ div.grid_1_1#leftInnerGrid {
 }
 
 .dashboard .settings .sellerBidMinimum tbody td.price,
+.dashboard .settings table.nestedListTable.dynamicTable tbody tr:nth-child(even),
 .dashboard .channels table.nestedListTable.ordersTable tbody tr:nth-child(even),
 .dashboard #formContainer ul.text li.details .target > div.even,
 .dashboard table.pricegrid tbody tr.odd,
@@ -6138,6 +6136,7 @@ form[name="ticketLogForm"] .formSectionContent {
 }
 
 .yui-panel-container .yui-panel .bd table tr,
+.dashboard .settings table.nestedListTable.dynamicTable tbody tr,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr {
     border-bottom: 1px solid var(--border) !important;
 }
