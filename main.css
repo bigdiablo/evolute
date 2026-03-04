@@ -6168,19 +6168,19 @@ form[name="ticketLogForm"] .formSectionContent {
 
 /* ========== WHOLESALE ORDERS - CLEAN COMPACT TABLE ========== */
 
-.dashboard .settings table.nestedListTable.dinamicTable,
+.dashboard .settings table.nestedListTable.dynamicTable,
 .dashboard .channels table.nestedListTable.ordersTable {
     border-collapse: collapse !important;
 }
 
-.dashboard .settings table.nestedListTable.dinamicTable thead tr.actions td.paginationTop,
+.dashboard .settings table.nestedListTable.dynamicTable thead tr.actions td.paginationTop,
 .dashboard .channels table.nestedListTable.ordersTable thead tr.actions td.paginationTop {
     padding: 16px 20px !important;
     font-size: 13px !important;
     line-height: 1.5 !important;
 }
 
-.dashboard .settings table.nestedListTable.dinamicTable thead tr.colheaders th,
+.dashboard .settings table.nestedListTable.dynamicTable thead tr.colheaders th,
 .dashboard .channels table.nestedListTable.ordersTable thead tr.colheaders th {
     padding: 10px 16px !important;
     font-size: 11px !important;
@@ -6192,7 +6192,7 @@ form[name="ticketLogForm"] .formSectionContent {
     border-bottom: 1px solid var(--border) !important;
 }
 
-.dashboard .settings table.nestedListTable.dinamicTable tbody tr td,
+.dashboard .settings table.nestedListTable.dynamicTable tbody tr td,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td {
     padding: 8px 16px !important;
     font-size: 13px !important;
@@ -6200,14 +6200,14 @@ form[name="ticketLogForm"] .formSectionContent {
     border: none !important;
 }
 
-.dashboard .settings table.nestedListTable.dinamicTable tbody tr td.first,
+.dashboard .settings table.nestedListTable.dynamicTable tbody tr td.first,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td.first {
     font-weight: 500 !important;
     color: var(--color-dark) !important;
 }
 
 /* Delivery links - simple inline */
-.dashboard .settings table.nestedListTable.dinamicTable tbody tr td .oliDiv,
+.dashboard .settings table.nestedListTable.dynamicTable tbody tr td .oliDiv,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv {
     display: inline-flex !important;
     align-items: center !important;
@@ -6215,7 +6215,7 @@ form[name="ticketLogForm"] .formSectionContent {
     padding: 2px 0 !important;
 }
 
-.dashboard .settings table.nestedListTable.dinamicTable tbody tr td .oliDiv .left a,
+.dashboard .settings table.nestedListTable.dynamicTable tbody tr td .oliDiv .left a,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv .left a {
     color: var(--color-primary) !important;
     text-decoration: none !important;
@@ -6223,12 +6223,12 @@ form[name="ticketLogForm"] .formSectionContent {
     white-space: nowrap;
 }
 
-.dashboard .settings table.nestedListTable.dinamicTable tbody tr td .oliDiv .left a:hover,
+.dashboard .settings table.nestedListTable.dynamicTable tbody tr td .oliDiv .left a:hover,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv .left a:hover {
     text-decoration: none !important;
 }
 
-.dashboard .settings table.nestedListTable.dinamicTable tbody tr td .oliDiv .right a,
+.dashboard .settings table.nestedListTable.dynamicTable tbody tr td .oliDiv .right a,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv .right a {
     color: var(--color-error) !important;
     font-size: 12px !important;
@@ -6236,7 +6236,7 @@ form[name="ticketLogForm"] .formSectionContent {
 }
 
 /* Action button - simple text link style */
-.dashboard .settings table.nestedListTable.dinamicTable tbody tr td.last .buttonGroup,
+.dashboard .settings table.nestedListTable.dynamicTable tbody tr td.last .buttonGroup,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td.last .buttonGroup,
 .mask.show,
 .mask[style*="display: block"],
@@ -6247,7 +6247,7 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     display: block !important;
 }
 
-.dashboard .settings table.nestedListTable.dinamicTable tbody tr td.last .buttonGroup a.addLink,
+.dashboard .settings table.nestedListTable.dynamicTable tbody tr td.last .buttonGroup a.addLink,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td.last .buttonGroup a.addLink {
     display: inline-block !important;
     padding: 6px 12px !important;
@@ -6260,13 +6260,13 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     white-space: nowrap !important;
 }
 
-.dashboard .settings table.nestedListTable.dinamicTable tbody tr td.last .buttonGroup a.addLink:hover,
+.dashboard .settings table.nestedListTable.dynamicTable tbody tr td.last .buttonGroup a.addLink:hover,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td.last .buttonGroup a.addLink:hover {
     background-color: var(--bg-info) !important;
     border-color: var(--bg-info) !important;
 }
 
-.dashboard .settings table.nestedListTable.dinamicTable tfoot tr.actions td.paginationBottom,
+.dashboard .settings table.nestedListTable.dynamicTable tfoot tr.actions td.paginationBottom,
 .dashboard .channels table.nestedListTable.ordersTable tfoot tr.actions td.paginationBottom {
     padding: 16px 20px !important;
     background-color: var(--color-white) !important;
@@ -10338,7 +10338,7 @@ img.calendarIcon {
         max-width: 100%;
     }
 
-	.dashboard .dinamicTable,
+	.dashboard .dynamicTable,
     .dashboard .ordersTable {
         display: flex !important;
         flex-direction: column !important;
@@ -10347,34 +10347,34 @@ img.calendarIcon {
         width: 100% !important;
     }
 
-	.dashboard .dinamicTable .expando div,
+	.dashboard .dynamicTable .expando div,
     .dashboard .ordersTable .expando div {
         display: flex;
     }
 
-	.dashboard .dinamicTable thead,
+	.dashboard .dynamicTable thead,
     .dashboard .ordersTable thead {
         order: 1;
     }
 
-	.dashboard .dinamicTable thead tr.actions,
+	.dashboard .dynamicTable thead tr.actions,
     .dashboard .ordersTable thead tr.actions {
         display: block;
     }
 
-	.dashboard .dinamicTable thead tr.actions td.paginationTop:first-child,
+	.dashboard .dynamicTable thead tr.actions td.paginationTop:first-child,
     .dashboard .ordersTable thead tr.actions td.paginationTop:first-child {
         display: block;
         padding: 24px 16px;
     }
 
-	.dashboard .dinamicTable thead tr.actions td.paginationTop:last-child,
+	.dashboard .dynamicTable thead tr.actions td.paginationTop:last-child,
     .dashboard .ordersTable thead tr.actions td.paginationTop:last-child {
         display: block;
         padding: 0;
     }
 
-	.dashboard .dinamicTable thead tr.actions td.paginationTop .buttonGroup,
+	.dashboard .dynamicTable thead tr.actions td.paginationTop .buttonGroup,
     .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup {
         position: fixed;
         bottom: 20px;
@@ -10384,20 +10384,20 @@ img.calendarIcon {
         width: auto !important;
     }
 
-    .dashboard .dinamicTable thead tr.actions td.paginationTop .buttonGroup .yui-button,
-    .dashboard .dinamicTable thead tr.actions td.paginationTop .buttonGroup .yui-button .first-child,
+    .dashboard .dynamicTable thead tr.actions td.paginationTop .buttonGroup .yui-button,
+    .dashboard .dynamicTable thead tr.actions td.paginationTop .buttonGroup .yui-button .first-child,
     .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup .yui-button,
     .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup .yui-button .first-child {
         background: transparent !important;
         border: none !important;
     }
 
-	.dashboard .dinamicTable thead tr.actions td.paginationTop .buttonGroup .yui-button .first-child a,
+	.dashboard .dynamicTable thead tr.actions td.paginationTop .buttonGroup .yui-button .first-child a,
     .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup .yui-button .first-child a {
         box-shadow: 0 4px 12px rgba(0, 96, 167, 0.3);
     }
 
-	.dashboard .dinamicTable tbody,
+	.dashboard .dynamicTable tbody,
     .dashboard .ordersTable tbody {
         display: flex;
         flex-direction: column;
@@ -10406,7 +10406,7 @@ img.calendarIcon {
         padding: 16px;
     }
 
-	.dashboard .dinamicTable tbody tr,
+	.dashboard .dynamicTable tbody tr,
     .dashboard .ordersTable tbody tr {
         display: flex !important;
         flex-wrap: wrap !important;
@@ -10417,7 +10417,7 @@ img.calendarIcon {
         box-shadow: var(--shadow);
     }
 
-	.dashboard .dinamicTable tbody tr td,
+	.dashboard .dynamicTable tbody tr td,
     .dashboard .ordersTable tbody tr td {
         display: flex !important;
         justify-content: space-between;
@@ -10428,18 +10428,18 @@ img.calendarIcon {
         width: 100%;
     }
 
-	.dashboard .dinamicTable tbody tr:hover td,
+	.dashboard .dynamicTable tbody tr:hover td,
     .dashboard .ordersTable tbody tr:hover td {
         background-color: transparent !important;
     }
 
-	.dashboard .dinamicTable tbody tr td:last-child,
+	.dashboard .dynamicTable tbody tr td:last-child,
     .dashboard .ordersTable tbody tr td:last-child,
     .dashboard #connectionsTable tbody tr.details td:last-child {
         border-bottom: none;
     }
 
-	.dashboard .dinamicTable tbody tr td::before,
+	.dashboard .dynamicTable tbody tr td::before,
     .dashboard .ordersTable tbody tr td::before,
     .dashboard #connectionsTable tbody tr td::before {
         font-size: 12px;
