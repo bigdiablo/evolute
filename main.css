@@ -10325,6 +10325,7 @@ img.calendarIcon {
         max-width: 100%;
     }
 
+	.dashboard .dinamicTable,
     .dashboard .ordersTable {
         display: flex !important;
         flex-direction: column !important;
@@ -10333,28 +10334,34 @@ img.calendarIcon {
         width: 100% !important;
     }
 
+	.dashboard .dinamicTable .expando div,
     .dashboard .ordersTable .expando div {
         display: flex;
     }
 
+	.dashboard .dinamicTable thead,
     .dashboard .ordersTable thead {
         order: 1;
     }
 
+	.dashboard .dinamicTable thead tr.actions,
     .dashboard .ordersTable thead tr.actions {
         display: block;
     }
 
+	.dashboard .dinamicTable thead tr.actions td.paginationTop:first-child,
     .dashboard .ordersTable thead tr.actions td.paginationTop:first-child {
         display: block;
         padding: 24px 16px;
     }
 
+	.dashboard .dinamicTable thead tr.actions td.paginationTop:last-child,
     .dashboard .ordersTable thead tr.actions td.paginationTop:last-child {
         display: block;
         padding: 0;
     }
 
+	.dashboard .dinamicTable thead tr.actions td.paginationTop .buttonGroup,
     .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup {
         position: fixed;
         bottom: 20px;
@@ -10364,16 +10371,20 @@ img.calendarIcon {
         width: auto !important;
     }
 
+    .dashboard .dinamicTable thead tr.actions td.paginationTop .buttonGroup .yui-button,
+    .dashboard .dinamicTable thead tr.actions td.paginationTop .buttonGroup .yui-button .first-child,
     .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup .yui-button,
     .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup .yui-button .first-child {
         background: transparent !important;
         border: none !important;
     }
 
+	.dashboard .dinamicTable thead tr.actions td.paginationTop .buttonGroup .yui-button .first-child a,
     .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup .yui-button .first-child a {
         box-shadow: 0 4px 12px rgba(0, 96, 167, 0.3);
     }
 
+	.dashboard .dinamicTable tbody,
     .dashboard .ordersTable tbody {
         display: flex;
         flex-direction: column;
@@ -10382,6 +10393,7 @@ img.calendarIcon {
         padding: 16px;
     }
 
+	.dashboard .dinamicTable tbody tr,
     .dashboard .ordersTable tbody tr {
         display: flex !important;
         flex-wrap: wrap !important;
@@ -10392,6 +10404,7 @@ img.calendarIcon {
         box-shadow: var(--shadow);
     }
 
+	.dashboard .dinamicTable tbody tr td,
     .dashboard .ordersTable tbody tr td {
         display: flex !important;
         justify-content: space-between;
@@ -10402,15 +10415,18 @@ img.calendarIcon {
         width: 100%;
     }
 
+	.dashboard .dinamicTable tbody tr:hover td,
     .dashboard .ordersTable tbody tr:hover td {
         background-color: transparent !important;
     }
 
+	.dashboard .dinamicTable tbody tr td:last-child,
     .dashboard .ordersTable tbody tr td:last-child,
     .dashboard #connectionsTable tbody tr.details td:last-child {
         border-bottom: none;
     }
 
+	.dashboard .dinamicTable tbody tr td::before,
     .dashboard .ordersTable tbody tr td::before,
     .dashboard #connectionsTable tbody tr td::before {
         font-size: 12px;
@@ -11288,12 +11304,14 @@ img.calendarIcon {
         justify-content: center !important;
     }
 
+	.dashboard .settings table.nestedListTable,
     .dashboard .channels table.nestedListTable {
         display: block !important;
         border: none !important;
         min-width: 100% !important;
     }
 
+	.dashboard .settings table.nestedListTable tbody,
     .dashboard .channels table.nestedListTable tbody,
     .dashboard .nestedListTable tbody,
     .dashboard .reports table#report tbody,
@@ -11307,6 +11325,7 @@ img.calendarIcon {
         gap: 12px !important;
     }
 
+    .dashboard .settings table.nestedListTable tbody tr,
     .dashboard .channels table.nestedListTable tbody tr {
         display: block !important;
         background: var(--color-white) !important;
@@ -11317,6 +11336,7 @@ img.calendarIcon {
         overflow: hidden !important;
     }
 
+    .dashboard .settings table.nestedListTable tbody tr td,
     .dashboard .channels table.nestedListTable tbody tr td {
         display: flex !important;
         justify-content: space-between !important;
@@ -11326,6 +11346,7 @@ img.calendarIcon {
         border-bottom: 1px solid var(--border) !important;
     }
 
+    .dashboard .settings table.nestedListTable tbody tr td:nth-child(2) a,
     .dashboard .channels table.nestedListTable tbody tr td:nth-child(2) a {
         font-weight: 600 !important;
         background: none !important;
@@ -11334,11 +11355,14 @@ img.calendarIcon {
         width: 100% !important;
     }
 
+    .dashboard .settings table.nestedListTable tbody tr td:nth-child(2) a:hover,
     .dashboard .channels table.nestedListTable tbody tr td:nth-child(2) a:hover {
         text-decoration: none !important;
         opacity: 0.9 !important;
     }
 
+    .dashboard .settings table.nestedListTable tfoot,
+    .dashboard .settings table.nestedListTable tr.actions,
     .dashboard .channels table.nestedListTable tfoot,
     .dashboard .channels table.nestedListTable tr.actions,
     .dashboard #search .inputGroup .options {
@@ -11346,12 +11370,15 @@ img.calendarIcon {
         width: 100% !important;
     }
 
+	.dashboard .settings table.nestedListTable tr.actions td,
     .dashboard .channels table.nestedListTable tr.actions td {
         display: block !important;
         padding: 12px 0 !important;
         border: none !important;
     }
 
+	.dashboard .settings .paginationTop .yui-button a,
+    .dashboard .settings .paginationTop .yui-button button,
     .dashboard .channels .paginationTop .yui-button a,
     .dashboard .channels .paginationTop .yui-button button {
         width: 100% !important;
