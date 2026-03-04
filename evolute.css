@@ -148,6 +148,11 @@ a.btn-primary:hover{
     color: white !important;
 }
 
+/*order creation product option radio container*/
+.dashboard .radioContainer{
+    flex-direction: column;
+}
+
 /*Header colors for cards*/
 .dashboard .roundedBox .hdr,
 .roundedBox div.sectionHeader,
