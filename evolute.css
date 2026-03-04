@@ -243,3 +243,18 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
 	display:flex;
 	align-items: center;
 }
+
+.checkboxes.grid3,
+.radios.grid3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.checkboxes.grid4,
+.radios.grid4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
