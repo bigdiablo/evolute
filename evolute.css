@@ -144,7 +144,7 @@ a.btn-primary:hover{
     background: #009da1 !important;
 }
 
-.advanced > h2, p{
+.advanced :is(h2, p){
     color: white !important;
 }
 
