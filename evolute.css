@@ -238,27 +238,27 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
 		flex-direction: row !important;
 	}
 	
-	 .dashboard .deliveriesTable tbody tr td:nth-child(1)::before {
+	 .dashboard .deliveriesTable.dinamicTable tbody tr td:nth-child(1)::before {
         content: "PRODUCT";
     }
 
-    .dashboard .deliveriesTable tbody tr td:nth-child(2)::before {
+    .dashboard .deliveriesTable.dinamicTable tbody tr td:nth-child(2)::before {
         content: "ID";
     }
 
-    .dashboard .deliveriesTable tbody tr td:nth-child(3)::before {
+    .dashboard .deliveriesTable.dinamicTable tbody tr td:nth-child(3)::before {
         content: "NAME";
     }
 
-    .dashboard .deliveriesTable tbody tr td:nth-child(4)::before {
+    .dashboard .deliveriesTable.dinamicTable tbody tr td:nth-child(4)::before {
         content: "REAL TIME/BATCH";
     }
 
-    .dashboard .deliveriesTable tbody tr td:nth-child(5)::before {
+    .dashboard .deliveriesTable.dinamicTable tbody tr td:nth-child(5)::before {
         content: "METHOD";
     }
 	
-	.dashboard .deliveriesTable tbody tr td:nth-child(6)::before {
+	.dashboard .deliveriesTable.dinamicTable tbody tr td:nth-child(6)::before {
         content: "BRAND";
     }
 }
