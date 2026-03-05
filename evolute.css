@@ -183,10 +183,6 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
     color: var(--color-primary) !important;
 }
 
-.dashboard #bidgridTabs li a {
-    color: #f0f7ff !important;
-}
-
 .dashboard #bidgridTabs li a.current {
     border-bottom-color: #fff !important;
 }
