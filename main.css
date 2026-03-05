@@ -6673,12 +6673,18 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 }
 
 .dashboard a#showTabsLink,
-.dashboard a#singlePageLink {
+.dashboard a#singlePageLink,
+.dashboard span#howtoLink a {
     color: var(--color-primary);
     font-size: 14px;
     font-weight: 500;
     line-height: 1.5;
     text-decoration: none;
+}
+
+.dashboard span#toggleViewSpan {
+    display: block;
+    margin-bottom: 20px;
 }
 
 /* Tabs navigation */
