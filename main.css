@@ -193,7 +193,7 @@ form[name="ticketLogForm"] .roundedBox .hdr .tl,
 form[name="ticketLogForm"] .roundedBox .hdr .tr,
 form[name="ticketLogForm"] .roundedBox b.bb,
 form[name="ticketLogForm"] .roundedBox b.bt {
-    display: none !important;
+    display: none;
 }
 
 /* Inputs */
@@ -326,6 +326,7 @@ form[name="ticketLogForm"] .buttonGroup .yui-button {
 }
 
 /* Buttons */
+.dashboard input[type="button"],
 .login #submitButton-button,
 .dashboard .yui-button button,
 .dashboard .yui-submit-button button,
@@ -3837,24 +3838,6 @@ div.grid_1_1#leftInnerGrid {
     overflow: hidden !important;
 }
 
-/* Scroll hint indicator - subtle shadow on right edge */
-.dashboard .channels .roundedBox2::after {
-    content: '' !important;
-    position: absolute !important;
-    top: 0 !important;
-    right: 0 !important;
-    bottom: 10px !important;
-    width: 40px !important;
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.08), transparent) !important;
-    pointer-events: none !important;
-    opacity: 0 !important;
-    transition: opacity 0.3s ease !important;
-}
-
-.dashboard .channels .roundedBox2:not(:hover)::after {
-    opacity: 1 !important;
-}
-
 .dashboard .ordersTable thead tr.actions td.paginationTop {
     padding: 20px 24px;
     font-size: 14px;
@@ -6669,10 +6652,41 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 
 /* ========== CREATE PROPOSAL - STEP 2 (FILTERS/PRICE/SETTINGS) ========== */
 
+.dashboard #loantovalue {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.dashboard #loantovalue h3,
+.dashboard #loantovalue table {
+    width: 100%;
+}
+
+.dashboard #loantovalue td.title {
+    width: 100px;
+}
+
 /* Outer container */
 .dashboard #outerDiv {
     margin-top: 20px !important;
 }
+
+.dashboard a#showTabsLink,
+.dashboard a#singlePageLink,
+.dashboard span#howtoLink a {
+    color: var(--color-primary);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.dashboard span#toggleViewSpan {
+    display: block;
+    margin-bottom: 20px;
+}
+
 /* Tabs navigation */
 .dashboard #bidTabs,
 .dashboard #formContainer .leadtypecontainer .leadtype:last-child,
@@ -7636,22 +7650,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     gap: 12px !important;
 }
 
-.yui-skin-sam .container-close,
-.container-close {
-    position: absolute !important;
-    top: 12px !important;
-    right: 16px !important;
-    width: 24px !important;
-    height: 24px !important;
-    cursor: pointer !important;
-    display: block !important;
-    text-indent: -9999px !important;
-    background: none !important;
-    border-radius: 4px !important;
-    transition: all 0.2s ease !important;
-    z-index: 10 !important;
-}
-
 .yui-skin-sam .container-close::before,
 .container-close::before {
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E") !important;
@@ -7678,65 +7676,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     align-items: center !important;
     gap: 12px !important;
     width: 100% !important;
-}
-
-.yui-dialog .ft .button-group .yui-button,
-.yui-dialog .ft span.yui-button {
-    float: none !important;
-    box-shadow: none !important;
-}
-
-.yui-dialog .ft .button-group .yui-button button,
-.yui-dialog .ft span.yui-button button {
-    padding: 12px 24px !important;
-    border: 1px solid var(--border) !important;
-    background-color: var(--color-white) !important;
-    color: var(--color-dark) !important;
-}
-
-.yui-dialog .ft .button-group .yui-button button:hover,
-.yui-dialog .ft span.yui-button button:hover {
-    background-color: var(--bg-light) !important;
-    border-color: var(--color-gray) !important;
-}
-
-/* Primary button (first button / login button) */
-
-.yui-dialog .ft .button-group .yui-button.login-button button:hover,
-.yui-dialog .ft .button-group .yui-button:first-child button:hover {
-    background-color: var(--color-primary-light) !important;
-    border-color: var(--color-primary-light) !important;
-}
-
-/* Button icons */
-.yui-dialog .ft .button-group .yui-button:first-child button::before {
-    content: '';
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background-color: currentColor;
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 2 11 13'/%3E%3Cpath d='m22 2-7 20-4-9-9-4 20-7z'/%3E%3C/svg%3E");
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 2 11 13'/%3E%3Cpath d='m22 2-7 20-4-9-9-4 20-7z'/%3E%3C/svg%3E");
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    flex-shrink: 0;
-}
-
-.yui-dialog .ft .button-group .yui-button:last-child button::before {
-    content: '';
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background-color: currentColor;
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 6 6 18'/%3E%3Cpath d='m6 6 12 12'/%3E%3C/svg%3E");
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 6 6 18'/%3E%3Cpath d='m6 6 12 12'/%3E%3C/svg%3E");
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    flex-shrink: 0;
 }
 
 /* Dialog container - use inset for full centering */
@@ -8438,8 +8377,8 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button:hover {
 .yui-calcontainer .calclose,
 .container-close {
     position: absolute !important;
-    top: 8px !important;
-    right: 8px !important;
+    top: 20px !important;
+    right: 24px !important;
     width: 24px !important;
     height: 24px !important;
     cursor: pointer !important;
@@ -8533,7 +8472,20 @@ img.calendarIcon {
 .dashboard .formSectionContent label {
     display: inline-flex !important;
     align-items: center !important;
+    gap: 8px;
     cursor: pointer !important;
+}
+
+.dashboard #deliveryMethodIdRealTime_SMTP_fields .mainLabel {
+    width: auto !important;
+    min-width: 180px;
+    text-align: left !important;
+}
+
+.dashboard #emailDataAsAttachmentContainer .optionsContent label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 /* Sample Lead button styling */
@@ -10004,6 +9956,7 @@ img.calendarIcon {
     display: flex;
     align-items: stretch;
     flex-direction: column;
+    width: 100%;
     gap: 8px;
 }
 
@@ -11692,13 +11645,6 @@ img.calendarIcon {
         padding: 0 !important;
         background: transparent !important;
         border: none !important;
-    }
-
-    .yui-dialog .ft .button-group .yui-button button,
-    .yui-dialog .ft span.yui-button button {
-        width: 100% !important;
-        padding: 14px 16px !important;
-        margin: 0 !important;
     }
 
     .dashboard .grid_340px_600px .secondary,
