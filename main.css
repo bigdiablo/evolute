@@ -326,6 +326,7 @@ form[name="ticketLogForm"] .buttonGroup .yui-button {
 }
 
 /* Buttons */
+.dashboard input[type="button"],
 .login #submitButton-button,
 .dashboard .yui-button button,
 .dashboard .yui-submit-button button,
@@ -3837,24 +3838,6 @@ div.grid_1_1#leftInnerGrid {
     overflow: hidden !important;
 }
 
-/* Scroll hint indicator - subtle shadow on right edge */
-.dashboard .channels .roundedBox2::after {
-    content: '' !important;
-    position: absolute !important;
-    top: 0 !important;
-    right: 0 !important;
-    bottom: 10px !important;
-    width: 40px !important;
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.08), transparent) !important;
-    pointer-events: none !important;
-    opacity: 0 !important;
-    transition: opacity 0.3s ease !important;
-}
-
-.dashboard .channels .roundedBox2:not(:hover)::after {
-    opacity: 1 !important;
-}
-
 .dashboard .ordersTable thead tr.actions td.paginationTop {
     padding: 20px 24px;
     font-size: 14px;
@@ -6669,10 +6652,31 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 
 /* ========== CREATE PROPOSAL - STEP 2 (FILTERS/PRICE/SETTINGS) ========== */
 
+.dashboard #loantovalue {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.dashboard #loantovalue h3,
+.dashboard #loantovalue table {
+    width: 100%;
+}
+
 /* Outer container */
 .dashboard #outerDiv {
     margin-top: 20px !important;
 }
+
+.dashboard a#showTabsLink,
+.dashboard a#singlePageLink {
+    color: var(--color-primary);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
 /* Tabs navigation */
 .dashboard #bidTabs,
 .dashboard #formContainer .leadtypecontainer .leadtype:last-child,
@@ -10004,6 +10008,7 @@ img.calendarIcon {
     display: flex;
     align-items: stretch;
     flex-direction: column;
+    width: 100%;
     gap: 8px;
 }
 
