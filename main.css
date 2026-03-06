@@ -665,9 +665,11 @@ dialog.modal {
     color: var(--color-primary);
     background-color: transparent;
 }
+
+#deleteInteractionSequenceButtonId-button,
 .btn-danger {
     color: white;
-    background-color: var(--color-error);
+    background-color: var(--color-error) !important;
 }
 
 button:hover {
