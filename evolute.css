@@ -152,6 +152,21 @@ a.btn-primary:hover{
 .dashboard .radioContainer{
     flex-direction: column;
 }
+#bidRelatedDiv{
+    display:grid;
+    grid-template-columns: 1fr;
+}
+
+#bidTabs {
+    display: grid;
+    grid-template-columns: 1fr fit-content(20%);
+    gap: 20px;
+}
+
+#howtoLink{
+    align-self: center;
+    padding-left: 20px;
+}
 
 /*Header colors for cards*/
 .dashboard .roundedBox .hdr,
@@ -181,10 +196,26 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
 .dashboard #bidgridTabs {
     background: var(--bg-info) !important;
     color: var(--color-primary) !important;
+    border-radius: 0 !important;
 }
 
-.dashboard #bidgridTabs li a.current {
-    border-bottom-color: #fff !important;
+.dashboard #bidgridTabs li a {
+    color: var(--color-muted)
+}
+
+.dashboard #bidgridTabs li a.current{
+    padding: 0 !important;
+    margin: 14px 32px !important;
+    background: unset !important;
+    text-decoration: none !important;
+    border-bottom: unset !important;
+    color: var(--color-white) !important;
+}
+
+.dashboard #bidgridTabs li{
+    border: solid 1px;
+    background: var(--color-primary);
+    border-radius: 1em 1em 0 0;
 }
 
 /*********************************/

@@ -8049,7 +8049,7 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .requiredMarker {
 div[id*="Dialog"],
 div[id*="Panel"],
 div[id*="panel"] {
-    box-sizing: content-box !important;
+    box-sizing: border-box !important;
 }
 
 /* Force display of modal content */
