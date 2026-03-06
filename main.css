@@ -6813,9 +6813,9 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 .dashboard #endDateDiv {
     display: inline-flex !important;
     align-items: center !important;
+    width: auto !important;
     gap: 8px !important;
-    margin-left: 24px !important;
-    margin-top: 8px !important;
+    margin: 0 !important;
 }
 
 .dashboard #maxAmountDiv input,
