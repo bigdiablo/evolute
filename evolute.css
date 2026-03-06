@@ -200,9 +200,20 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
 }
 
 .dashboard #bidgridTabs li a {
-    color: var(--color-muted)
+    color: var(--color-white) !important;
+    background: unset !important;
 }
-
+.dashboard #bidgridTabs li:has(a.current){
+    background: var(--color-orange) !important;
+}
+.dashboard #bidgridTabs li:hover{
+    background: var(--bg-light) !important;
+    color: var(--color-primary) !important;
+}
+.dashboard #bidgridTabs li a:hover {
+    color: unset !important;
+    background-color: unset !important;
+ }
 .dashboard #bidgridTabs li a.current{
     padding: 0 !important;
     margin: 14px 32px !important;
