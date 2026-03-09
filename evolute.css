@@ -161,11 +161,25 @@ a.btn-primary:hover{
     display: grid;
     grid-template-columns: 1fr fit-content(20%);
     gap: 20px;
+    width: 80%;
 }
 
 #howtoLink{
     align-self: center;
     padding-left: 20px;
+}
+
+#toggleViewSpan{
+    margin: 10px !important;
+    align-self: center;
+}
+
+.dashboard #outerDiv{
+    margin: unset !important;
+}
+
+.dashboard #filtersContainer .radioGroup.filter > div {
+    display: block !important;
 }
 
 /*Header colors for cards*/
@@ -194,7 +208,6 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
 
 /* tabs colors */
 .dashboard #bidgridTabs {
-    background: var(--bg-info) !important;
     color: var(--color-primary) !important;
     border-radius: 0 !important;
 }
