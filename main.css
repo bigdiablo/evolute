@@ -3553,16 +3553,6 @@ div.grid_1_1#leftInnerGrid {
     text-decoration: none;
 }
 
-.dashboard #settingssubnav .section .header.current,
-.dashboard .formSectionContent .yui-button button:hover,
-.dashboard .formSectionContent .yui-submit-button button:hover,
-.dashboard .reportContainer .reportLink2:hover,
-
-
-.dashboard #settingssubnav .subsection {
-    padding-left: 8px;
-}
-
 .dashboard #settingssubnav .subsection .link {
     padding: 8px 12px;
 }
