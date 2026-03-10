@@ -7611,7 +7611,7 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
 }
 
 /* YUI Dialog footer and buttons */
-
+.dashboard .contentInline,
 .yui-skin-sam .yui-dialog .ft .button-group,
 .yui-dialog .ft .button-group {
     display: flex !important;
