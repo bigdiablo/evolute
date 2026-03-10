@@ -4808,16 +4808,6 @@ div.grid_1_1#leftInnerGrid {
     padding: 20px;
 }
 
-.dashboard .blueBox h2 {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--color-dark);
-    margin: 0 0 12px;
-    padding-top: 16px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--border);
-}
-
 .dashboard .blueBox h3 {
     font-size: 14px;
     font-weight: 600;
@@ -8502,14 +8492,6 @@ img.calendarIcon {
     padding: 0;
 }
 
-.dashboard .reports h2 {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--color-dark);
-    margin: 16px 0 8px 0;
-    padding: 0;
-}
-
 /* Filter section */
 .dashboard .reports .filter {
     display: flex;
@@ -9016,21 +8998,13 @@ img.calendarIcon {
 
 /* Section headers inside boxes */
 
-/* Blue box (Lead Store) */
-.dashboard .blueBox {
-    background-color: var(--bg-light) !important;
-    border: 1px solid var(--border) !important;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
 .dashboard .blueBox h2 {
     color: var(--color-dark);
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
+    line-height: 1;
     padding: 14px 16px;
     margin: 0;
-    border-bottom: 1px solid var(--border);
 }
 
 .dashboard .blueBox .boxContent,
@@ -9510,6 +9484,11 @@ img.calendarIcon {
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+
+.dashboard #FormFields form {
+    width: 100%;
+    margin-bottom: 24px;
 }
 
 .dashboard #secondaryMetrics,
