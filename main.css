@@ -292,7 +292,6 @@ form[name="ticketLogForm"] .roundedBox b.bt {
     accent-color: var(--color-primary);
     cursor: pointer;
     margin: 0;
-    vertical-align: middle;
 }
 
 .dashboard input[type="checkbox"] + label,
@@ -3051,7 +3050,7 @@ div.titleDiv {
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
-    row-gap: 12px;
+    gap: 12px;
 }
 
 /* Buttons */
@@ -8341,14 +8340,13 @@ img.calendarIcon {
 }
 
 /* Radio buttons and labels alignment */
-.dashboard .formSectionContent input[type="radio"] {
-    margin-right: 8px !important;
-    vertical-align: middle !important;
-}
-
 .dashboard .formSectionContent label {
     display: inline-flex !important;
     align-items: center !important;
+    color: var(--color-muted);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
     gap: 8px;
     cursor: pointer !important;
 }
