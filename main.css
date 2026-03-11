@@ -2759,8 +2759,8 @@ body.login {
 
 .dashboard .boxContent {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
-    background-color: var(--color-white) !important;
     padding: 20px !important;
     color: var(--color-dark) !important;
 }
@@ -2885,6 +2885,10 @@ body.login {
     align-items: stretch;
     flex-direction: column;
     gap: 20px;
+}
+
+.dashboard .formSectionContent:has(#salesForceLinks) {
+    gap: 0;
 }
 
 /* Label Value Pairs */
@@ -3984,6 +3988,7 @@ div.grid_1_1#leftInnerGrid {
 .dashboard .reports .rptDataCenter,
 .dashboard .nestedListTable tfoot .createOrderButtonPad {
     text-align: center;
+    margin: 0;
 }
 
 .dashboard .ordersTable tfoot tr.actions td.paginationBottom {
@@ -9075,15 +9080,14 @@ img.calendarIcon {
 /* ========== ADDITIONAL FIXES & IMPROVEMENTS ========== */
 
 /* Home page sidebar improvements */
-
 /* Ensure roundedBox has proper background */
-
 /* Account Management Support box styling */
 
 .dashboard #salesForceLinks,
 .dashboard #userGuideLinks {
     display: flex;
     flex-direction: column;
+    padding: 12px;
     gap: 4px;
 }
 
@@ -9188,9 +9192,9 @@ img.calendarIcon {
     justify-content: center;
     gap: 8px;
     min-height: 100px;
-    background-color: var(--bg-light);
     border-radius: 8px;
     font-size: 14px;
+    padding: 0;
     color: var(--color-gray);
 }
 
