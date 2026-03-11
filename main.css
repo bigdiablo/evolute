@@ -498,6 +498,9 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
 .dashboard .labelValue .value,
 .dashboard .summarySection .labelValue .value,
 .dashboard .summaryRow .value {
+    display: flex;
+    align-items: center;
+    gap: 4px;
     font-size: 14px !important;
     color: var(--color-dark) !important;
 }
