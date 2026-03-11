@@ -196,70 +196,19 @@ form[name="ticketLogForm"] .roundedBox b.bt {
     display: none;
 }
 
-/* File Upload Input */
-.dashboard input[type="file"] {
-    width: 100% !important;
-    height: 40px !important;
-    padding: 4px !important;
-    font-size: 14px !important;
-    font-weight: 500 !important;
-    color: var(--color-dark) !important;
-    background: var(--color-white) !important;
-    border: 1px solid var(--border) !important;
-    border-radius: 6px !important;
-    cursor: pointer !important;
-}
-
-/* Upload Button */
-.dashboard input[type="file"]::file-selector-button {
-    height: 32px !important;
-    margin-right: 10px !important;
-    padding: 0 14px !important;
-    border-radius: 6px !important;
-    border: none !important;
-    font-size: 13px !important;
-    font-weight: 500 !important;
-    cursor: pointer !important;
-    background: var(--color-primary) !important;
-    color: var(--color-white) !important;
-    transition: all 0.2s ease !important;
-}
-
-/* Hover */
-.dashboard input[type="file"]::file-selector-button:hover {
-    opacity: 0.9 !important;
-}
-
-/* Active */
-.dashboard input[type="file"]::file-selector-button:active {
-    transform: scale(0.97);
-}
-
-/* Safari / Old Chrome */
-.dashboard input[type="file"]::-webkit-file-upload-button {
-    height: 32px !important;
-    margin-right: 10px !important;
-    padding: 0 14px !important;
-    border-radius: 6px !important;
-    border: none !important;
-    font-size: 13px !important;
-    font-weight: 500 !important;
-    cursor: pointer !important;
-    background: var(--color-primary) !important;
-    color: var(--color-white) !important;
-}
-
 /* Inputs */
 .dashboard input[type="text"],
 .dashboard input[type="date"],
 .dashboard input[type="number"],
+.dashboard input[type="file"],
 .dashboard input.textInput {
     width: 100% !important;
+    max-width: 100%;
     height: 40px !important;
     padding: 0 12px !important;
     font-size: 14px !important;
     font-weight: 500 !important;
-    line-height: 1.5 !important;
+    line-height: 40px !important;
     color: var(--color-dark) !important;
     background: var(--color-white) !important;
     border-width: 1px !important;
@@ -267,6 +216,30 @@ form[name="ticketLogForm"] .roundedBox b.bt {
     border-color: var(--border) !important;
     border-radius: 6px !important;
     transition: all 0.2s !important;
+}
+
+.dashboard input[type="file"] {
+    padding: 0 !important;
+    border: 0 !important;
+}
+
+.dashboard input[type="file"]::file-selector-button {
+    height: 40px !important;
+    margin-right: 12px !important;
+    padding: 0 14px !important;
+    border-radius: 6px !important;
+    border: none !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 1 !important;
+    cursor: pointer !important;
+    background: var(--color-primary) !important;
+    color: var(--color-white) !important;
+    transition: all 0.2s ease !important;
+}
+
+.dashboard input[type="file"]::file-selector-button:hover {
+    opacity: 0.9 !important;
 }
 
 /* Login inputs */
@@ -8329,12 +8302,6 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button:hover {
     max-width: 200px !important;
     width: auto !important;
     min-width: 100px !important;
-}
-
-/* Input box fixes */
-.dashboard .settings input.textInput,
-.dashboard #bidoptions input.textInput {
-    max-width: 100% !important;
 }
 
 /* Order form specific fixes */
