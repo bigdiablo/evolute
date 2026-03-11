@@ -2841,19 +2841,9 @@ body.login {
     overflow: visible !important;
 }
 
-.dashboard .roundedBox .hdr h2,
-.dashboard .roundedBox2 .hdr h2,
-.dashboard .roundedBox3 .hdr h2 {
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.3;
-    color: var(--color-dark);
-    margin: 0;
-    letter-spacing: 0;
-}
-
 .dashboard .roundedBox .hdr h2 span,
 .dashboard .roundedBox2 .hdr h2 span {
+    top: 0 !important;
     font-size: 16px;
     font-weight: 600;
     line-height: inherit;
@@ -5774,12 +5764,6 @@ form[name="ticketLogForm"] .formSectionContent {
     width: 40% !important;
 }
 
-.yui-panel-container .yui-panel .bd table td:last-child,
-.dashboard .roundedBox .hdr h2 span,
-.dashboard #formContainer .roundedBox .hdr h2 span {
-    color: var(--color-dark) !important;
-}
-
 /* ========== WHOLESALE ORDERS - CLEAN COMPACT TABLE ========== */
 
 .dashboard table.nestedListTable.dynamicTable thead tr.actions td.paginationTop,
@@ -5916,16 +5900,6 @@ form[name="ticketLogForm"] .inputGroup .mainLabel .mainLabelContent,
     margin: 0 !important;
     border-radius: 12px 12px 0 0 !important;
     border-bottom: 1px solid var(--border) !important;
-}
-
-.dashboard .roundedBox .hdr h2 {
-    color: var(--color-dark) !important;
-    font-size: 18px !important;
-    font-weight: 600 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    position: static !important;
-    background: none !important;
 }
 
 .dashboard .roundedBox .hdr + .subTabs,
@@ -8448,15 +8422,13 @@ img.calendarIcon {
 .dashboard .roundedBox2 .hdr h2,
 .dashboard .roundedBox3 .hdr h2,
 .dashboard .sectionHeader h2 {
-    font-size: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
     font-weight: 600;
     color: var(--color-dark);
     margin: 0;
     padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
     gap: 8px;
 }
 
@@ -8929,12 +8901,6 @@ img.calendarIcon {
 /* Top padding adjustment */
 .dashboard .topPad {
     padding-top: 0 !important;
-}
-
-/* Chart header adjustments */
-
-.dashboard .chartHeader h2 {
-    flex-wrap: wrap;
 }
 
 .dashboard .chartHeader .smallGrey {
@@ -11197,11 +11163,6 @@ img.calendarIcon {
         width: 100% !important;
     }
 
-    .dashboard .sectionHeader h2,
-    .dashboard .roundedBox .hdr h2 {
-        font-size: 14px;
-    }
-
     .dashboard #Footer {
         margin-top: 24px;
         padding: 16px 0;
@@ -11886,12 +11847,6 @@ img.calendarIcon {
 
     .dashboard #search .inputGroup .optionsContent {
         gap: 6px !important;
-    }
-
-    .dashboard .roundedBox .hdr h2,
-    .dashboard .sectionHeader h2,
-    .dashboard .radioContainer label {
-        font-size: 13px !important;
     }
 
     .dashboard .yui-button button,
