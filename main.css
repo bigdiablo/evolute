@@ -2835,6 +2835,7 @@ body.login {
     border-width: 1px;
     border-color: var(--border);
     border-radius: 12px;
+    padding: 12px;
     min-width: auto;
 }
 
@@ -2850,6 +2851,13 @@ body.login {
     color: var(--color-success);
     background-color: var(--bg-success);
     border-color: var(--color-success);
+}
+
+.dashboard .redBox,
+.dashboard div.redBox {
+    color: var(--color-error);
+    background-color: var(--bg-error);
+    border-color: var(--color-error);
 }
 
 .dashboard .blueBox .boxContent,
