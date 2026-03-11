@@ -2934,9 +2934,8 @@ div.titleDiv {
 
 .dashboard .inputGroup {
     display: flex !important;
-    flex-wrap: wrap;
     align-items: flex-start;
-    padding: 16px 0 !important;
+    padding: 16px !important;
     margin: 0 !important;
     width: 100% !important;
     overflow: visible !important;
@@ -2945,7 +2944,7 @@ div.titleDiv {
 .dashboard .mainLabel {
     width: 220px !important;
     min-width: 220px;
-    text-align: right !important;
+    text-align: left !important;
     padding-right: 20px !important;
     flex-shrink: 0;
     position: static !important;
