@@ -4520,12 +4520,6 @@ div.grid_1_1#leftInnerGrid {
     max-width: 130px !important;
 }
 
-.dashboard .formSectionContent .instructions,
-.dashboard .ordersTable .smallGrey {
-    font-size: 14px;
-    color: var(--color-gray);
-}
-
 /* Marketing Methods Grid */
 .dashboard .formSectionContent .optionsContent > div[style*="float: left"] {
     float: none !important;
@@ -5514,16 +5508,11 @@ form[name="ticketLogForm"] .formSectionContent {
     padding: 20px !important;
 }
 
-.dashboard .settings .formSectionContent p {
-    font-size: 14px !important;
-    line-height: 1.6 !important;
-    color: var(--color-dark) !important;
-}
-
 .dashboard .settings .formSectionContent p.instructions {
     padding: 12px 16px !important;
     margin: 0 0 16px 0 !important;
-    font-size: 13px !important;
+    font-size: 14px !important;
+    line-height: 1.5;
     color: var(--color-gray) !important;
     background-color: var(--bg-light) !important;
     border-radius: 8px !important;
@@ -9438,6 +9427,10 @@ img.calendarIcon {
 }
 
 .dashboard #FormFields form {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 24px;
     width: 100%;
     margin-bottom: 24px;
 }
@@ -9788,7 +9781,10 @@ img.calendarIcon {
 .dashboard .instructions:not(span) {
     font-size: 12px;
     color: var(--color-gray);
-    white-space: nowrap;
+}
+
+.dashboard .instructions a {
+    color: var(--color-primary-light);
 }
 
 /* Input focus states */
