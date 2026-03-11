@@ -5821,7 +5821,6 @@ form[name="ticketLogForm"] .formSectionContent {
     white-space: nowrap;
 }
 
-.dashboard table.nestedListTable.dynamicTable tbody tr td .oliDiv .left a:hover,
 .dashboard table.nestedListTable.dynamicTable tbody tr td .oliDiv .right a,
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv .right a {
     color: var(--color-error) !important;
