@@ -382,3 +382,13 @@ table.leadListTable div.lsPaginationBottom {
     gap: 12px;
     white-space: nowrap;
 }
+
+select[disabled],
+select[disabled]:hover,
+input[disabled],
+input[disabled]:hover{
+    opacity: 0.4 !important;
+    cursor: not-allowed !important;
+    border-color: var(--color-muted) !important;
+    background: var(--lt-color-gray-300) !important;
+}
