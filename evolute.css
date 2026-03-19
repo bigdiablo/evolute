@@ -392,3 +392,24 @@ input[disabled]:hover{
     border-color: var(--color-muted) !important;
     background: var(--lt-color-gray-300) !important;
 }
+
+.assigned-lead{
+    padding: 10px;
+    border: 1px solid;
+    border-color: var(--border);
+    border-radius: 6px;
+    width: 150px;
+    background: var(--bg-light);
+}
+
+.dashboard .channels table.nestedListTable tbody tr td:nth-child(2) a.edit-link::before{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M15.728 9.686l-1.414-1.414L5 17.586V19h1.414l9.314-9.314zm1.414-1.414l1.414-1.414-1.414-1.414-1.414 1.414 1.414 1.414zM7.242 21H3v-4.243L16.435 3.322a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414L7.243 21z'/%3E%3C/g%3E%3C/svg%3E") no-repeat center !important;
+}
+
+.dashboard .channels table.nestedListTable tbody tr td:nth-child(2) a.copy-link::before{
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230060a7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71'/%3E%3Cpath d='M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71'/%3E%3C/svg%3E") no-repeat center !important;
+}
+
+.xsmallGrey{
+    font-size: xx-small;
+}
