@@ -1,5 +1,6 @@
 :root {
-	--color-orange: #f59e0b
+	--color-orange: #f59e0b;
+    --color-red-balance: #CC3300;
 }
 
 .flex-row-20 {
@@ -360,10 +361,14 @@ div.checkAllNone{
     font-weight: bold;
 }
 
+table div.lsPaginationTop,
+table div.lsPaginationBottom
 table.leadListTable div.lsPaginationTop,
 table.leadListTable div.lsPaginationBottom {
     white-space: nowrap;
-    padding: 4px
+    padding: 4px;
+    display: flex;
+    align-items: center;
 }
 
 .dashboard .lsListingTop,
@@ -412,6 +417,76 @@ input[disabled]:hover{
 
 .xsmallGrey{
     font-size: xx-small;
+}
+
+#leadStoreWrapper #infoDiv {
+    justify-content: end;
+    gap: 12px;
+    padding: 10px;
+}
+
+.grid_1_1 > div {
+    flex: 1;
+}
+
+.mainContent{
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+}
+
+.infoMessage2 {
+    padding: 20px;
+    margin: unset !important;
+    padding-bottom: 20px !important;
+}
+
+.dashboard .boxContent2 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 16px 20px !important;
+    color: var(--color-dark) !important;
+}
+
+.boxContent2 label { 
+    display: block;
+	float: left;
+	font-weight: bold
+}
+
+.tableActions .first,
+.tableActions .last {
+    padding: 16px;
+}
+
+.lowerContainer {
+    display: flex  !important;       
+}
+
+#ccContainer {
+    display: flex;
+    gap: 12px;
+}
+
+.outlineContent {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.balanceDefault {
+    color: var(--color-red-balance);
+}
+
+#balanceContainer {
+    display: flex;
+}
+
+.balanceContainer {
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 /* delivery default mapping styles */

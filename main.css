@@ -2808,10 +2808,12 @@ body.login {
 .dashboard .roundedBox2,
 .dashboard .roundedBox3,
 .dashboard .roundedBox4,
+.dashboard .roundedBox5,
 .dashboard div.roundedBox,
 .dashboard div.roundedBox2,
 .dashboard div.roundedBox3,
-.dashboard div.roundedBox4 {
+.dashboard div.roundedBox4,
+.dashboard div.roundedBox5 {
     position: relative !important;
     background-color: var(--color-white) !important;
     background-image: none !important;
@@ -3149,7 +3151,6 @@ div.titleDiv {
 
 .dashboard .grid_1_1 {
     display: flex;
-    flex-direction: column;
     gap: 24px;
     margin-top: 0;
 }
