@@ -550,3 +550,8 @@ details.mapping>table {
     font-size: smaller;
     margin: 10px;
 }
+
+.actionRequired2-pa {
+    font-weight: 600;
+    text-align: center;
+}
