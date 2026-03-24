@@ -483,6 +483,8 @@ input[disabled]:hover{
     display: flex;
 }
 
+#topNumber,
+#bottomNumber,
 .balanceContainer {
     display: flex;
     align-items: center;
