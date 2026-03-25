@@ -9092,7 +9092,7 @@ img.calendarIcon {
 .dashboard .information {
     font-size: 13px;
     color: var(--color-gray);
-    margin: 0 0 16px 0;
+    margin: 0 0 16px 6px;
 }
 
 .dashboard .instructions:not(span) {

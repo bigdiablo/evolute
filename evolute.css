@@ -469,6 +469,14 @@ input[disabled]:hover{
     padding: 16px;
 }
 
+.tableAcctionsBottom .buttonGroup {
+    justify-content: end;
+}
+
+.table#activeOrdersList{
+    border-radius: unset !important;
+}
+
 .lowerContainer {
     display: flex  !important;       
 }
@@ -571,4 +579,9 @@ details.mapping>table {
 
 #orderSearchBar{
     display: block !important
+}
+
+table#accountOverview{
+    width: 90% !important;
+    margin: 0 auto !important
 }
