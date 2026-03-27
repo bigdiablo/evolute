@@ -203,6 +203,7 @@ td.paginationTop {
     color: var(--color-primary) !important;
 }
 
+div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly .operatorOnly,
 div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
     background: var(--color-orange) !important;
     color: white !important;

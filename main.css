@@ -3079,6 +3079,7 @@ div.titleDiv {
 .dashboard .disabled {
     cursor: not-allowed;
     opacity: 0.5;
+    color: var(--color-muted);
 }
 
 .dashboard .error .mainLabel label,
