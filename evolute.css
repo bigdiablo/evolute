@@ -450,17 +450,18 @@ input[disabled]:hover{
     flex-direction: column;
 }
 
-.infoMessage2 {
+.dashboard .infoMessage2 {
     padding: 20px;
     margin: unset !important;
     padding-bottom: 20px !important;
+    font-weight: bold;
 }
 
 .dashboard .boxContent2 {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    padding: 16px 20px !important;
+    padding: 12px 20px !important;
     color: var(--color-dark) !important;
 }
 
