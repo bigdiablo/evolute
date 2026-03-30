@@ -599,6 +599,18 @@ table#accountOverview{
 
 .options:has(.width-50pct){
     width: 50% !important;
+}
+
+.padding-10{
+    padding: 10px;
+}
+
+.pcBody{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 /************Menu item selected*************/
 
 .dashboard #MainNavigation ul li.selected a,
@@ -612,4 +624,9 @@ table#accountOverview{
 
 a#agreementLink {
     color: #00ade1 !important;
+}
+
+/*     home/leadstore bullets     */
+ul.leadstore_bullets{
+    list-style: inside;
 }
