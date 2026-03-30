@@ -507,9 +507,7 @@ input[disabled]:hover{
     display: flex;
 }
 
-.dashboard #topNumber,
-.dashboard #bottomNumber,
-.dashboard .balanceContainer {
+.dashboard :is(#topNumber, #bottomNumber, .balanceContainer) {
     display: flex;
     align-items: center;
     gap: 6px;
@@ -613,8 +611,8 @@ table#accountOverview{
 
 /************Menu item selected*************/
 
-.dashboard #MainNavigation ul li.selected a,
-.dashboard #SubNavigation.subtabs ul li.current a {
+.dashboard #MainNavigation li.selected a,
+.dashboard #SubNavigation.subtabs li.current a {
         color: var(--color-primary-light) !important;
         background-color: var(--bg-light) !important;
         font-weight: 600 !important;
@@ -642,3 +640,14 @@ ul.leadstore_bullets{
 .dashboard #accountMgmtContainer label{
     width: 100%;
 }
+
+.dashboard .grid_75_25 {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+}
+
+.dashboard .submitButton{
+    display: flex;
+}
+
