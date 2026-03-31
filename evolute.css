@@ -326,6 +326,10 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
         display:block;
         width: 100%;
     }
+
+    #orderSearchBar{
+        display: flex !important;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -471,13 +475,17 @@ input[disabled]:hover{
 	font-weight: bold
 }
 
-.dashboard .tableActions .first,
-.dashboard .tableActions .last {
+
+.dashboard .tableAcctions :is(.first, .last, .paginationTop){
     padding: 16px;
 }
 
-.tableAcctionsBottom .buttonGroup {
+.dashboard .tableAcctionsBottom .buttonGroup {
     justify-content: end;
+}
+
+.dashboard .tableAcctionsBottom .buttonGroup .yui-button.yui-submit-button{
+    flex: unset;
 }
 
 .table#activeOrdersList{
@@ -580,10 +588,6 @@ details.mapping>table {
 
 .ai-center {
     align-items: center;
-}
-
-#orderSearchBar{
-    display: block !important
 }
 
 table#accountOverview{
