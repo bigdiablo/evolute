@@ -671,6 +671,16 @@ ul.leadstore_bullets{
     margin: 5px;
 }
 
+/* volume guidance*/
+#volumeGuidanceBar{
+    width: 100% !important;
+    float: unset;
+    margin-right: 0px;
+}
+
+#volumeGuidanceDiv{
+    width: 100% !important;
+}
 /**** Links underline in tables ****/
 .dashboard table.table tbody tr td a:hover {
   text-decoration: underline;
