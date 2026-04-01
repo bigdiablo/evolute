@@ -159,6 +159,7 @@ a.btn-primary:hover{
 #bidRelatedDiv{
     display:grid;
     grid-template-columns: 1fr;
+    min-width: auto !important
 }
 
 #bidTabs {
@@ -325,6 +326,10 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
     #bidTabs{
         display:block;
         width: 100%;
+    }
+
+    .dashboard #settingsContainer .inputGroup .mainLabel{
+        flex: unset !important;
     }
 }
 
@@ -669,4 +674,8 @@ ul.leadstore_bullets{
     width: auto !important;
     min-width: 250px !important;
     max-width: unset !important;
+}
+
+#filterByState, #filterByZip{
+    margin: 5px;
 }
