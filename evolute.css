@@ -660,19 +660,6 @@ ul.leadstore_bullets{
     display: flex;
 }
 
-/* order creation seller vertical spacing*/
-.dashboard #settingsContainer .inputGroup {
-    margin: 10px 0 !important;
-}
-
-.dashboard .inputGroup{
-    padding: 0 !important;
-}
-
-.dashboard .formSectionContent{
-    gap: 10px;
-}
-
 /*     order creation date dropdown width     */
 .dashboard .proposal-settings-amt-dt:is(#endDateDiv, #startDateDiv) > select{
     width: auto !important;
