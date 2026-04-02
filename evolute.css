@@ -33,10 +33,16 @@
 }
 
 .dashboard .grid_600px_340px {
-    display: grid !important;
+    display: grid;
     grid-template-columns: fit-content(80%) fit-content(20%);
     gap: 10px;
 }
+
+.dashboard #outerDiv.grid_600px_340px {
+    grid-template-columns: fit-content(65%) fit-content(35%);
+
+}
+
 
 .dashboard .grid_600px_340px > #sellerSideBar {
     display: flex !important;
@@ -157,9 +163,9 @@ a.btn-primary:hover{
     flex-direction: column;
 }
 #bidRelatedDiv{
-    display:grid;
+    /*display:grid;
     grid-template-columns: 1fr;
-    min-width: auto !important
+    min-width: auto !important*/
 }
 
 #bidTabs {
@@ -334,6 +340,11 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
   
     #orderSearchBar{
         display: flex !important;
+    }
+
+    .dashboard table tbody, .dashboard table thead#price-grid-head {
+        display: contents;
+        width: 100%;
     }
 }
 
@@ -675,12 +686,13 @@ ul.leadstore_bullets{
 #volumeGuidanceBar{
     width: 100% !important;
     float: unset;
-    margin-right: 0px;
+    margin-right: 0px !important;
 }
 
 #volumeGuidanceDiv{
     width: 100% !important;
 }
+
 /**** Links underline in tables ****/
 .dashboard table.table tbody tr td a:hover {
   text-decoration: underline;
@@ -696,3 +708,11 @@ ul.leadstore_bullets{
         display: block;
         margin: 0 auto 16px;
     }
+
+.volumeGuidanceDiv{
+    position: relative !important;
+}
+
+#price-grid-head th{
+    border: none !important;
+}
