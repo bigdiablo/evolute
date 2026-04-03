@@ -10151,14 +10151,14 @@ img.calendarIcon {
     .dashboard #leadChannelsListTable thead .colheaders,
     .dashboard .channels .roundedBox2 > b.bt,
     .dashboard .channels .roundedBox2 > b.bb,
-    .dashboard .channels table.nestedListTable thead,
+    .dashboard .channels table.nestedListTable:not(#leadChannelsListTable) thead,
     .dashboard .channels table.nestedListTable tbody tr td:nth-child(7),
     .dashboard .channels table.nestedListTable tbody tr td:nth-child(8),
     .dashboard .channels table.nestedListTable tbody tr td:nth-child(9),
     .dashboard .channels table.nestedListTable tbody tr td:nth-child(10),
     .dashboard .labelValue .clear,
     .yui-panel-container.yui-dialog .underlay,
-    .dashboard .nestedListTable thead,
+    .dashboard .nestedListTable:not(#leadChannelsListTable) thead,
     .dashboard .activeOrders thead tr.colheaders,
     .dashboard table.listTable thead,
     .dashboard table.leadListTable thead,
@@ -10348,7 +10348,7 @@ img.calendarIcon {
 
     .dashboard .yui-button .first-child a,
     .dashboard #leadChannelsListTable thead .actions .paginationTop .buttonGroup {
-        width: 100% !important;
+        /* width: 100% !important; */
         justify-content: center !important;
     }
 
@@ -11672,6 +11672,20 @@ img.calendarIcon {
     .dashboard #userGuideLinks li a::before {
         -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20'/%3E%3C/svg%3E") !important;
         mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20'/%3E%3C/svg%3E") !important;
+    }
+
+    .dashboard .dynamicTable thead tr.actions td.paginationTop .buttonGroup,
+    .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 100;
+        padding: 0 !important;
+        width: auto !important;
+    }
+
+    .dashboard #formContainer{
+        padding: 5px;
     }
 
 }

@@ -325,6 +325,34 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
         content: "BRAND";
     }
 
+	.dashboard #leadChannelsListTable tbody tr td:nth-child(1)::before {
+        content: "ID";
+    }
+
+    .dashboard #leadChannelsListTable tbody tr td:nth-child(2)::before {
+        content: "Name";
+    }
+
+    .dashboard #leadChannelsListTable tbody tr td:nth-child(3)::before {
+        content: "Consumer Brand";
+    }
+
+    .dashboard #leadChannelsListTable tbody tr td:nth-child(4)::before {
+        content: "Status";
+    }
+
+    .dashboard #leadChannelsListTable tbody tr td:nth-child(5)::before {
+        content: "Lead Category";
+    }
+	
+	.dashboard #leadChannelsListTable tbody tr td:nth-child(6)::before {
+        content: "Delivery Method";
+    }
+
+    .dashboard #leadChannelsListTable tbody tr td:nth-child(7)::before {
+        content: "Lead Class";
+    }
+
     .grid_600px_340px{
         grid-template-columns: auto !important;
     }
@@ -707,7 +735,7 @@ ul.leadstore_bullets{
 .dashboard .wizard-integration-details img.sidebar {
         display: block;
         margin: 0 auto 16px;
-    }
+}
 
 .volumeGuidanceDiv{
     position: relative !important;
