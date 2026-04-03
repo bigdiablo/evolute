@@ -18,6 +18,12 @@
     gap: 20px;
 }
 
+.flex-col-5{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 .grid-22 {
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -164,8 +170,8 @@ a.btn-primary:hover{
 }
 #bidRelatedDiv{
     /*display:grid;
-    grid-template-columns: 1fr;
-    min-width: auto !important*/
+    grid-template-columns: 1fr;*/
+    min-width: auto !important
 }
 
 #bidTabs {
@@ -373,6 +379,42 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
     .dashboard table tbody, .dashboard table thead#price-grid-head {
         display: contents;
         width: 100%;
+    }
+
+    .dashboard #ordersTable tbody tr td:nth-child(1)::before {
+        content: "NAME (ORDER ID)";
+    }
+
+    .dashboard #ordersTable tbody tr td:nth-child(2)::before {
+        content: "ACTIONS";
+    }
+
+    .dashboard #ordersTable tbody tr td:nth-child(3)::before {
+        content: "PRODUCT";
+    }
+
+    .dashboard #ordersTable tbody tr td:nth-child(4)::before {
+        content: "STATUS";
+    }
+
+    .dashboard #ordersTable tbody tr td:nth-child(5)::before {
+        content: "CHANGE NOTICE";
+    }
+	
+	.dashboard #ordersTable tbody tr td:nth-child(6)::before {
+        content: "WEEKDAY LEAD LIMIT";
+    }
+
+    .dashboard #ordersTable tbody tr td:nth-child(7)::before {
+        content: "WEEKEND LEAD LIMIT";
+    }
+
+    .dashboard #ordersTable tbody tr td:nth-child(8)::before {
+        content: "LEADS TODAY";
+    }
+
+    .dashboard .channels table.nestedListTable tbody tr td:nth-child(2) a:is(.copy-link,.edit-link){
+        width: auto !important;
     }
 }
 
