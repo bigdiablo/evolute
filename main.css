@@ -10083,14 +10083,14 @@ img.calendarIcon {
     .dashboard #leadChannelsListTable thead .colheaders,
     .dashboard .channels .roundedBox2 > b.bt,
     .dashboard .channels .roundedBox2 > b.bb,
-    .dashboard .channels table.nestedListTable thead,
+    .dashboard .channels table.nestedListTable:not(#leadChannelsListTable) thead,
     .dashboard .channels table.nestedListTable tbody tr td:nth-child(7),
     .dashboard .channels table.nestedListTable tbody tr td:nth-child(8),
     .dashboard .channels table.nestedListTable tbody tr td:nth-child(9),
     .dashboard .channels table.nestedListTable tbody tr td:nth-child(10),
     .dashboard .labelValue .clear,
     .yui-panel-container.yui-dialog .underlay,
-    .dashboard .nestedListTable thead,
+    .dashboard .nestedListTable:not(#leadChannelsListTable) thead,
     .dashboard .activeOrders thead tr.colheaders,
     .dashboard table.listTable thead,
     .dashboard table.leadListTable thead,
@@ -10282,6 +10282,10 @@ img.calendarIcon {
     .dashboard #leadChannelsListTable thead .actions .paginationTop .buttonGroup {
         width: 100% !important;
         justify-content: center !important;
+    }
+
+    .dashboard #leadChannelsListTable thead .actions .paginationTop .buttonGroup {
+        width: unset !important;
     }
 
     .paginationContainer .pagination ul,

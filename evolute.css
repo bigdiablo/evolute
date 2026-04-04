@@ -442,6 +442,20 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
     .dashboard #testLeadsTable tbody tr td:nth-child(5)::before {
         content: "STATUS";
     }
+
+    .dashboard .dynamicTable thead tr.actions td.paginationTop .buttonGroup,
+    .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 100;
+        padding: 0 !important;
+        width: auto !important;
+    }
+
+    .dashboard #formContainer{
+        padding: 5px;
+    }
 }
 
 @media (max-width: 1024px) {
