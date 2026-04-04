@@ -3390,6 +3390,8 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .formSectionContent .mainLabelContent {
     padding-right: 16px;
+    display: flex;
+    gap: 5px;
 }
 
 .dashboard .formSectionContent .requiredMarker,
@@ -3973,6 +3975,9 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard #formContainer {
     padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .dashboard #formContainer .inputGroup {
@@ -5359,6 +5364,7 @@ form[name="ticketLogForm"] .formSectionContent {
     border: 1px solid var(--color-error) !important;
     border-radius: 12px !important;
     overflow: hidden !important;
+    margin: 10px auto !important;
 }
 
 /* Override inline width on parent container of validation errors */
@@ -9750,16 +9756,17 @@ img.calendarIcon {
         width: 100% !important;
         height: 40px !important;
         padding: 0 !important;
-        gap: 0 !important;
+        gap: 5px !important;
     }
 
-    .dashboard .formSectionContent .buttonGroup .yui-submit-button button#backButton-button {
+    /** Commented for channel integration **/
+    /* .dashboard .formSectionContent .buttonGroup .yui-submit-button button#backButton-button {
         position: absolute;
         top: 0;
         left: 0;
-    }
+    } */
 
-    .dashboard .formSectionContent .buttonGroup .yui-submit-button button#nextButton-button,
+    /* .dashboard .formSectionContent .buttonGroup .yui-submit-button button#nextButton-button, */
     .dashboard .formSectionContent .buttonGroup .yui-submit-button.login-button button#activateButton-button {
         position: absolute;
         top: 0;
@@ -10734,7 +10741,6 @@ img.calendarIcon {
     .dashboard .boxContent,
     .dashboard .pageContent {
         padding: 12px 14px;
-        align-items: flex-start !important;
         width: 100% !important;
     }
 
@@ -11362,6 +11368,10 @@ img.calendarIcon {
         border-bottom: 1px solid var(--border) !important;
     }
 
+    .dashboard .formSectionContent > table#testLeadsTable > tbody > tr > td:last-child{
+        justify-content: space-between !important;
+    }
+
     .dashboard .formSectionContent > table > tbody > tr > td:last-child {
         border-bottom: none !important;
         display: flex !important;
@@ -11596,6 +11606,25 @@ img.calendarIcon {
         mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20'/%3E%3C/svg%3E") !important;
     }
 
+    .dashboard #formContainer{
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .dashboard .settings select,
+    .dashboard #bidoptions select,
+    .dashboard .channels select {
+        max-width: 100% !important;
+        width: 100% !important;
+        min-width: 100px !important;
+        flex: 1
+    }
+
+    .dashboard .optionsContent .option{
+        width: 100%;
+    }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {

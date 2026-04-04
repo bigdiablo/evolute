@@ -222,6 +222,11 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
     color: white !important;
 }
 
+.inputGroup .mainLabelContent label span.operatorOnly{
+    color: var(--color-orange) !important;
+    background: none !important;
+}
+
 /********************************/
 
 /* tabs colors */
@@ -415,6 +420,27 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
 
     .dashboard .channels table.nestedListTable tbody tr td:nth-child(2) a:is(.copy-link,.edit-link){
         width: auto !important;
+    }
+
+    .dashboard #testLeadsTable tbody tr td:nth-child(1)::before {
+        content: "LEAD ID";
+        color: var(--color-white) !important;
+    }
+
+    .dashboard #testLeadsTable tbody tr td:nth-child(2)::before {
+        content: "PRODUCT";
+    }
+
+    .dashboard #testLeadsTable tbody tr td:nth-child(3)::before {
+        content: "E-MAIL";
+    }
+
+    .dashboard #testLeadsTable tbody tr td:nth-child(4)::before {
+        content: "TIME";
+    }
+
+    .dashboard #testLeadsTable tbody tr td:nth-child(5)::before {
+        content: "STATUS";
     }
 }
 
