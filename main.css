@@ -7839,8 +7839,6 @@ img.calendarIcon {
     color: var(--color-primary);
 }
 
-.dashboard table.table tbody tr td a::before,
-.dashboard table.table tbody tr td .linkSpan::before,
 .dashboard .channels table.nestedListTable tbody tr td:nth-child(2) a::before {
     content: '';
     display: inline-block;
