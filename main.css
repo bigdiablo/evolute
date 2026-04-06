@@ -4721,6 +4721,7 @@ div.grid_1_1#leftInnerGrid {
     background-color: var(--bg-light) !important;
 }
 
+.dashboard table.nestedListTable tbody tr td .linkSpan,
 .dashboard .settings table.nestedListTable tbody tr td a {
     color: var(--color-primary-light) !important;
     font-weight: 500 !important;
@@ -11389,7 +11390,7 @@ img.calendarIcon {
         background: var(--color-white) !important;
     }
 
-    .dashboard .formSectionContent > table > tbody > tr > td:first-child {
+    .dashboard .formSectionContent > table:not(#testLeadsTable) > tbody > tr > td:first-child {
         background: var(--color-primary) !important;
         color: var(--color-white) !important;
         font-weight: 600 !important;

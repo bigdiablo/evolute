@@ -822,7 +822,9 @@ ul.leadstore_bullets{
 
 /**** Links underline in tables ****/
 .dashboard #dateTimeLink:hover,
+.dashboard table.dynamicTable tbody tr td a:hover, 
 .dashboard table.table tbody tr td a:hover, 
+.dashboard table.dynamicTable tbody tr td .linkSpan:hover,
 .dashboard table.table tbody tr td .linkSpan:hover {
   text-decoration: underline;
   text-decoration-color: var(--color-primary);
