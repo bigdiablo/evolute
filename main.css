@@ -60,6 +60,7 @@ svg {
     flex-shrink: 0;
 }
 
+.linkSpan,
 a {
     color: inherit;
     cursor: pointer;
@@ -942,7 +943,8 @@ dialog.modal {
 .table tbody tr:hover td {
     background: var(--bg-info);
 }
-.table tbody td a {
+
+.table tbody td :is(a, .linkSpan) {
     color: var(--color-primary);
 }
 .table .actions {

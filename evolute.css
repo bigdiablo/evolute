@@ -802,7 +802,7 @@ ul.leadstore_bullets{
 }
 
 /**** Links underline in tables ****/
-.dashboard table.table tbody tr td a:hover {
+.dashboard table.table tbody tr td :is(a:hover, .linkSpan:hover) {
   text-decoration: underline;
   text-decoration-color: var(--color-primary);
   text-decoration-thickness: 1px;
