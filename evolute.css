@@ -850,3 +850,34 @@ ul.leadstore_bullets{
 .dashboard table.pricegrid{
     table-layout: fixed;
 }
+
+/** Reports **/
+
+.filter:is(.flex-col-20, .flex-row-20) .inputGroup{
+    padding: 0 !important;
+}
+
+form.detail .filter:is(.flex-col-20, .flex-row-20){
+    align-items: center !important;
+}
+
+.dashboard .reports #PrimaryContent > table#report{
+    display: contents;
+}
+
+.dashboard .reports table#report tbody tr, .dashboard .reports table.reportResults tbody tr{
+    display: table-row !important;
+}
+
+.dashboard .reports table#report tbody td, .dashboard .reports table.reportResults tbody td{
+    display: table-cell !important;
+}
+
+/**   order tracking   **/
+.dashboard #settingsContainer .inputGroup .options:is(#httpTrackingOptionContainer, #xmlTrackingOptionContainer){
+    display: block;
+}
+
+.dashboard #settingsContainer .inputGroup .options.hidden:is(#httpTrackingOptionContainer, #xmlTrackingOptionContainer){
+    display: none;
+}
