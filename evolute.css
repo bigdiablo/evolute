@@ -441,6 +441,24 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
         content: "STATUS";
     }
 
+    .dashboard #pgpKeyTable tbody tr td:nth-child(1)::before {
+        content: "KEY NAME";
+    }
+
+    .dashboard #pgpKeyTable tbody tr td:nth-child(2)::before {
+        content: "STATUS";
+    }
+
+    .dashboard #pgpKeyTable tbody tr td:nth-child(3)::before {
+        content: "DATE";
+    }
+
+    .dashboard #pgpKeyTable tbody tr td:nth-child(4)::before {
+        content: "ACTIONS";
+    }
+
+    pgpKeyTable
+
     .dashboard .dynamicTable thead tr.actions td.paginationTop .buttonGroup,
     .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup {
         position: fixed;
@@ -608,8 +626,9 @@ input[disabled]:hover{
     justify-content: end;
 }
 
-.dashboard .tableAcctionsBottom .buttonGroup .yui-button.yui-submit-button{
-    flex: unset;
+.dashboard .tableAcctionsBottom .buttonGroup .yui-button.yui-submit-button,
+.dashboard .tableAcctionsBottom .buttonGroup .yui-button.yui-link-button{
+    flex: unset !important;
 }
 
 .table#activeOrdersList{
@@ -830,4 +849,35 @@ ul.leadstore_bullets{
 
 .dashboard table.pricegrid{
     table-layout: fixed;
+}
+
+/** Reports **/
+
+.filter:is(.flex-col-20, .flex-row-20) .inputGroup{
+    padding: 0 !important;
+}
+
+form.detail .filter:is(.flex-col-20, .flex-row-20){
+    align-items: center !important;
+}
+
+.dashboard .reports #PrimaryContent > table#report{
+    display: contents;
+}
+
+.dashboard .reports table#report tbody tr, .dashboard .reports table.reportResults tbody tr{
+    display: table-row !important;
+}
+
+.dashboard .reports table#report tbody td, .dashboard .reports table.reportResults tbody td{
+    display: table-cell !important;
+}
+
+/**   order tracking   **/
+.dashboard #settingsContainer .inputGroup .options:is(#httpTrackingOptionContainer, #xmlTrackingOptionContainer){
+    display: block;
+}
+
+.dashboard #settingsContainer .inputGroup .options.hidden:is(#httpTrackingOptionContainer, #xmlTrackingOptionContainer){
+    display: none;
 }
