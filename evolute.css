@@ -377,7 +377,7 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
         flex: unset !important;
     }
   
-    #orderSearchBar{
+    #ordersTable #orderSearchBar{
         display: flex !important;
     }
 
