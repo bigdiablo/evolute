@@ -876,10 +876,10 @@ form.detail .filter:is(.flex-col-20, .flex-row-20){
 }
 
 /**   order tracking   **/
-.dashboard #settingsContainer .inputGroup .options:is(#httpTrackingOptionContainer, #xmlTrackingOptionContainer){
-    display: block;
+.dashboard #settingsContainer .inputGroup .options:is(#httpTrackingOptionContainer, #xmlTrackingOptionContainer, #customTrackingOptionContainer, #noCustomTrackingOptionContainer){
+    display: block !important;
 }
-
-.dashboard #settingsContainer .inputGroup .options.hidden:is(#httpTrackingOptionContainer, #xmlTrackingOptionContainer){
-    display: none;
+ 
+.dashboard #settingsContainer .inputGroup .options.hidden:is(#httpTrackingOptionContainer, #xmlTrackingOptionContainer, #customTrackingOptionContainer, #noCustomTrackingOptionContainer){
+    display: none !important;
 }
