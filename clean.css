@@ -353,40 +353,6 @@ aside {
     color: var(--color-primary);
 }
 
-@media (max-width: 768px) {
-    .main  {
-        margin: 0;
-    }
-
-    .content {
-        width: 100%;
-        max-width: 100%;
-        padding-left: 24px;
-        padding-right: 24px;
-    }
-
-    aside {
-        display: none;
-    }
-
-    .search {
-        align-items: stretch;
-        flex-direction: column;
-    }
-
-    #show-available {
-        display: block;
-        cursor: pointer;
-        text-align: center;
-    }
-
-    .custom-fields {
-        align-items: stretch;
-        flex-direction: column;
-    }
-}
-
-/* ── Price Grid V1 ───────────────────────────────────────────────────────── */
 #content-price table.grid {
     width: 100% !important;
     border-collapse: collapse !important;
@@ -472,7 +438,6 @@ aside {
     border-right: 1px solid var(--border) !important;
 }
 
-/* ── Price Grid V2 ───────────────────────────────────────────────────────── */
 .tiles {
     display: flex;
     flex-direction: column;
@@ -542,13 +507,11 @@ aside {
     font-weight: 400;
 }
 
-/* Per-column color accents — V2 header */
 .trow.thead .grade:nth-child(2) { color: #16a34a; border-top: 2px solid #16a34a; }
 .trow.thead .grade:nth-child(3) { color: #0ea5e9; border-top: 2px solid #0ea5e9; }
 .trow.thead .grade:nth-child(4) { color: #f59e0b; border-top: 2px solid #f59e0b; }
 .trow.thead .grade:nth-child(5) { color: #dc2626; border-top: 2px solid #dc2626; }
 
-/* ── Reorder V2 ──────────────────────────────────────────────────────────── */
 .pos-input {
     display: flex;
     align-items: center;
@@ -575,4 +538,37 @@ aside {
 .pos-input input[type="number"]::-webkit-inner-spin-button,
 .pos-input input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none !important;
+}
+
+@media (max-width: 768px) {
+    .main  {
+        margin: 0;
+    }
+
+    .content {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    aside {
+        display: none;
+    }
+
+    .search {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    #show-available {
+        display: block;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .custom-fields {
+        align-items: stretch;
+        flex-direction: column;
+    }
 }
