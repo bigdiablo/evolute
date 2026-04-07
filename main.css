@@ -549,7 +549,7 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
 }
 
 .dashboard #Main:has(form[name="buyer_signup_1"]) #MainContent {
-    width: 600px;
+    width: 400px;
     min-height: auto;
     padding: 0;
 }
@@ -563,6 +563,11 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
 
 .dashboard #Main:has(form[name="buyer_signup_1"]) #MainContent #PrimaryContent .grid_450px_350px .secondary .sideBar {
     padding: 0 !important;
+}
+
+.dashboard #Main:has(form[name="buyer_signup_1"]) #MainContent #PrimaryContent .formSectionContent .inputGroup {
+    flex-direction: column !important;
+    align-items: stretch !important;
 }
 
 
