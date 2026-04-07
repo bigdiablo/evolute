@@ -472,6 +472,10 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
     .dashboard #formContainer{
         padding: 5px;
     }
+
+    .dashboard .reports .filter{
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -875,11 +879,24 @@ form.detail .filter:is(.flex-col-20, .flex-row-20){
     display: table-cell !important;
 }
 
+.dashboard .reports .filter .inputGroup{
+    min-width: unset !important;
+    max-width: unset !important;
+}
+
+.dashboard .formSectionContent .options{
+    width: auto !important;
+}
+
+table#report td.rptHeaderCenter, table#report td.rptHeaderLeft, table.bodyListing th {
+    background: rgb(30, 58, 95);
+}
+
 /**   order tracking   **/
 .dashboard #settingsContainer .inputGroup .options:is(#httpTrackingOptionContainer, #xmlTrackingOptionContainer, #customTrackingOptionContainer, #noCustomTrackingOptionContainer){
     display: block !important;
 }
  
-.dashboard #settingsContainer .inputGroup .options.hidden:is(#httpTrackingOptionContainer, #xmlTrackingOptionContainer, #customTrackingOptionContainer, #noCustomTrackingOptionContainer){
+.dashboard #settingsContainer .inputGroup .options.hidden-tracking-option:is(#httpTrackingOptionContainer, #xmlTrackingOptionContainer, #customTrackingOptionContainer, #noCustomTrackingOptionContainer){
     display: none !important;
 }
