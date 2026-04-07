@@ -3194,13 +3194,10 @@ div.grid_1_1#leftInnerGrid {
     background-color: var(--border);
 }
 
-.dashboard .sellerHomeContentBoxL .boxContent > a::before,
-.dashboard .sellerHomeContentBoxR .boxContent > a::before {
-    content: '';
-    width: 22px;
-    height: 22px;
-    background-repeat: no-repeat;
-    background-size: contain;
+.dashboard .sellerHomeContentBoxL .boxContent > a img,
+.dashboard .sellerHomeContentBoxR .boxContent > a img {
+    width: 20px;
+    height: 20px;
 }
 
 .dashboard .sellerHomeContentBoxL .boxContent > a[href*="settings.est"]::before {
