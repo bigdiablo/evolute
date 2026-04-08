@@ -866,10 +866,16 @@ ul.leadstore_bullets{
 
 /**** Links underline ****/
 
-#MainContent a:not( .buttonGroup a, #settingssubnav a,
-                 .pagination a, th a, .yui-button a,
-                 #bidgridTabs a, .reportLink2, .oliDiv .right a,
-                 .addLink a),
+#MainContent a:not( .buttonGroup a,
+                    #settingssubnav a,
+                    .pagination a, 
+                    th a, 
+                    .yui-button a,
+                    #bidgridTabs a, 
+                    .reportLink2, 
+                    .oliDiv .right a,
+                    .addLink a,
+                    .integration-support a),
 #reportLink,
 #sidebar a,
 tbody td a ,
