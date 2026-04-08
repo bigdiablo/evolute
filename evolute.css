@@ -1058,7 +1058,6 @@ ul.cb-tabs.yui-nav > li:not(.selected):hover >a >em{
 .sectionHeader:is(.channelInfo,.channelSettings) :is(.headerLeft, .headerRight) {
     margin: 0 !important;
     padding: 10px 20px !important;
-    cursor: pointer;
     border: 1px solid var(--border);
     border-bottom: none;
     border-radius: 8px 8px 0 0 !important;
