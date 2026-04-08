@@ -927,6 +927,15 @@ table#report td.rptHeaderCenter, table#report td.rptHeaderLeft, table.bodyListin
     background: rgb(30, 58, 95);
 }
 
+.dashboard .reports table#report.reportResults td.rptDataLeft{
+    background-color: unset !important;
+    color: var(--color-primary) !important;
+}
+
+.dashboard .reports>#PrimaryContent{
+    display: block;
+}
+
 /**   order tracking   **/
 .dashboard #settingsContainer .inputGroup .options:is(#httpTrackingOptionContainer, #xmlTrackingOptionContainer, #customTrackingOptionContainer, #noCustomTrackingOptionContainer){
     display: block !important;
