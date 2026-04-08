@@ -40,7 +40,7 @@
 
 .dashboard .grid_600px_340px {
     display: grid;
-    grid-template-columns: fit-content(80%) fit-content(20%);
+    grid-template-columns: 4fr 2fr;
     gap: 10px;
 }
 
