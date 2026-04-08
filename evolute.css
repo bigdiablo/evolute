@@ -932,6 +932,11 @@ table#report td.rptHeaderCenter, table#report td.rptHeaderLeft, table.bodyListin
     color: var(--color-primary) !important;
 }
 
+.dashboard .reports table#report.reportResults td{
+    font-size: x-small !important;
+    padding: 2px !important;
+}
+
 .dashboard .reports>#PrimaryContent{
     display: block;
 }
