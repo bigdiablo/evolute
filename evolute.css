@@ -507,9 +507,14 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
 
     #searchFieldDiv{
     max-width: unset !important;
-}
+    }
+
     #customFieldsTrackingOptionContainer.flex-row-20{
         flex-direction: column;
+    }
+
+    .weekly-radio-dropdown select{
+        flex: unset !important;
     }
 }
 
@@ -987,4 +992,26 @@ ul.cb-tabs.yui-nav > li:not(.selected):hover >a >em{
 
 #searchFieldDiv{
     max-width: 270px;
+}
+
+/** Report scheduling **/
+.weekly-radio-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.weekly-radio-dropdown input[type="radio"] {
+  flex: 0 0 auto; /* don’t shrink */
+}
+
+.weekly-radio-dropdown label {
+  flex: 1;        /* take available space */
+  margin: 0;
+  min-width: max-content;
+}
+
+.weekly-radio-dropdown select {
+  flex: 0 0 auto; /* fixed size, don’t shrink label */
+  max-width: 150px; /* optional: control dropdown width */
 }
