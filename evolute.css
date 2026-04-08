@@ -946,6 +946,11 @@ table#report td.rptHeaderCenter, table#report td.rptHeaderLeft, table.bodyListin
     display: block;
 }
 
+.dashboard .reports .rptHeaderCenter a img, .dashboard .reports .rptHeaderLeft a img, .dashboard .reports .rptHeaderRight a img{
+    width: 20px !important;
+    height: 20px !important;
+}
+
 /**   order tracking   **/
 .dashboard #settingsContainer .inputGroup .options:is(#httpTrackingOptionContainer, #xmlTrackingOptionContainer, #customTrackingOptionContainer, #noCustomTrackingOptionContainer){
     display: block !important;
@@ -1002,16 +1007,16 @@ ul.cb-tabs.yui-nav > li:not(.selected):hover >a >em{
 }
 
 .weekly-radio-dropdown input[type="radio"] {
-  flex: 0 0 auto; /* don’t shrink */
+  flex: 0 0 auto;
 }
 
 .weekly-radio-dropdown label {
-  flex: 1;        /* take available space */
+  flex: 1;
   margin: 0;
   min-width: max-content;
 }
 
 .weekly-radio-dropdown select {
-  flex: 0 0 auto; /* fixed size, don’t shrink label */
-  max-width: 150px; /* optional: control dropdown width */
+  flex: 0 0 auto;
+  max-width: 150px;
 }
