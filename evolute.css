@@ -505,9 +505,15 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
         flex-direction: column;
     }
 
+<<<<<<< Updated upstream
     #searchFieldDiv{
     max-width: unset !important;
 }
+=======
+    #customFieldsTrackingOptionContainer.flex-row-20{
+        flex-direction: column;
+    }
+>>>>>>> Stashed changes
 }
 
 @media (max-width: 1024px) {
@@ -931,6 +937,11 @@ table#report td.rptHeaderCenter, table#report td.rptHeaderLeft, table.bodyListin
  
 .dashboard #settingsContainer .inputGroup .options.hidden-tracking-option:is(#httpTrackingOptionContainer, #xmlTrackingOptionContainer, #customTrackingOptionContainer, #noCustomTrackingOptionContainer){
     display: none !important;
+}
+
+.dashboard #bidoptions select, .dashboard .channels select:is(#xmlOrderTrackingName){
+    min-width: unset !important;
+    max-width: unset !important;
 }
 
 /*** settings custom brand ***/
