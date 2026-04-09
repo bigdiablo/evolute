@@ -6,25 +6,25 @@
     --color-blue-third: #00ade1;
 }
 
-.flex-row-20 {
+.dashboard .flex-row-20 {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 
-.flex-col-20 {
+.dashboard .flex-col-20 {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.flex-col-5{
+.dashboard .flex-col-5{
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.grid-22 {
+.dashboard .grid-22 {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
@@ -32,7 +32,7 @@
     width: 100%;
 }
 
-.checkboxes-container {
+.dashboard .checkboxes-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -64,14 +64,14 @@
     line-height: 1.3;
 }
 
-.sample-form-container {
+.dashboard .sample-form-container {
     display: grid;
     grid-template-rows: repeat(3, fit-content(40%));
     grid-template-columns: 1fr repeat(2, fit-content(40%));
     gap: 13px 5px;
 }
 
-.sample-form-link {
+.dashboard .sample-form-link {
     font-size: 13px;
     font-weight: 500;
     color: var(--color-primary);
@@ -83,7 +83,7 @@
     padding: 5px;
 }
 
-.proposal-products {
+.dashboard .proposal-products {
     padding: 10px;
     background-color: var(--bg-light);
     border: 1px solid var(--border);
@@ -91,21 +91,21 @@
     width: 100%;
 }
 
-.proposal-product {
+.dashboard .proposal-product {
     flex-grow: 1;
 }
 
-details > summary {
+.dashboard details > summary {
     cursor: pointer;
 }
 
-#bidGroupVo\.maxLeadsPerWeekDayField:disabled, 
-#bidGroupVo\.maxLeadsPerWeekendDayField:disabled{
+.dashboard #bidGroupVo\.maxLeadsPerWeekDayField:disabled, 
+.dashboard #bidGroupVo\.maxLeadsPerWeekendDayField:disabled{
     background-color: var(--bg-light) !important;
     color: var(--color-muted) !important;
 }
 
-.proposal-settings-amt-dt{
+.dashboard .proposal-settings-amt-dt{
     position: unset !important;
     left: 0;
     margin-bottom: unset;
@@ -117,24 +117,24 @@ details > summary {
     display: block !important;
 }
 
-h1.operatorOnly, h2.operatorOnly, h3.operatorOnly, h4.operatorOnly, p.operatorOnly{
+.dashboard h1.operatorOnly, h2.operatorOnly, h3.operatorOnly, h4.operatorOnly, p.operatorOnly{
     color: var(--color-orange) !important;
 }
 
-#FormFields .inputGroup label p.operatorOnly{
+.dashboard #FormFields .inputGroup label p.operatorOnly{
    color: var(--color-orange) !important; 
 }
 
-a.btn-primary{
+.dashboard a.btn-primary{
     text-decoration: none;
     background: var(--color-primary);
 }
 
-a.btn-primary:hover{
+.dashboard a.btn-primary:hover{
     background: var(--color-primary-light);
 }
 
-.boxContent > ul {
+.dashboard .boxContent > ul {
     margin: 1em;
 }
 
@@ -153,12 +153,12 @@ a.btn-primary:hover{
     border: unset !important;
 }
 
-.advanced{
+.dashboard .advanced{
     border-radius: 1em 1em 0 0 !important;
     background: #009da1 !important;
 }
 
-.advanced :is(h2, p){
+.dashboard .advanced :is(h2, p){
     color: white !important;
 }
 
@@ -166,25 +166,25 @@ a.btn-primary:hover{
 .dashboard .radioContainer{
     flex-direction: column;
 }
-#bidRelatedDiv{
+.dashboard #bidRelatedDiv{
     /*display:grid;
     grid-template-columns: 1fr;*/
     min-width: auto !important
 }
 
-#bidTabs {
+.dashboard #bidTabs {
     display: grid;
     grid-template-columns: 1fr fit-content(20%);
     gap: 20px;
     width: 65%;
 }
 
-#howtoLink{
+.dashboard #howtoLink{
     align-self: center;
     padding-left: 20px;
 }
 
-#toggleViewSpan{
+.dashboard #toggleViewSpan{
     margin: 10px !important;
     align-self: center;
 }
@@ -199,28 +199,28 @@ a.btn-primary:hover{
 
 /*Header colors for cards*/
 .dashboard .roundedBox .hdr,
-.roundedBox div.sectionHeader,
-.roundedBox2 div.sectionHeader,
-.roundedBox3 div.sectionHeader,
-.roundedBox4 div.sectionHeader,
-div.confirmationSectionHeader,
+.dashboard .roundedBox div.sectionHeader,
+.dashboard .roundedBox2 div.sectionHeader,
+.dashboard .roundedBox3 div.sectionHeader,
+.dashboard .roundedBox4 div.sectionHeader,
+.dashboard div.confirmationSectionHeader,
 .dashboard #formContainer .roundedBox .hdr,
 .dashboard .reportListWrapper .roundedBox .hdr,
 .dashboard .settings .roundedBox .sectionHeader,
-thead,
-tr.actions,
-td.paginationTop {
+.dashboard thead,
+.dashboard tr.actions,
+.dashboard td.paginationTop {
     background: var(--bg-info) !important;
     color: var(--color-primary) !important;
 }
 
-div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly .operatorOnly,
-div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
+.dashboard div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly .operatorOnly,
+.dashboard div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
     background: var(--color-orange) !important;
     color: white !important;
 }
 
-.inputGroup .mainLabelContent label span.operatorOnly{
+.dashboard .inputGroup .mainLabelContent label span.operatorOnly{
     color: var(--color-orange) !important;
     background: none !important;
 }
@@ -281,19 +281,19 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
     color: #f0f7ff !important;
 }
 
-.sample-form-link:hover {
+.dashboard .sample-form-link:hover {
     background: #e0efff;
     border-color: var(--color-primary);
     color: var(--color-primary-light);
 }
 
 @media (min-width: 600px) {
-    .grid-22 {
+    .dashboard .grid-22 {
         width: 100%;
     }
 }
 
-.row-card-hidden {
+.dashboard .row-card-hidden {
 	display: none;
 }
 .dashboard .channels table.nestedListTable.ordersTable tbody tr td .oliDiv {
@@ -362,11 +362,11 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
         content: "Lead Class";
     }
 
-    .grid_600px_340px{
+    .dashboard .grid_600px_340px{
         grid-template-columns: auto !important;
     }
 
-    #bidTabs{
+    .dashboard #bidTabs{
         display:block;
         width: 100%;
     }
@@ -375,8 +375,8 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
         flex: unset !important;
     }
   
-    #proposalsTable #proposalsSearchBar,
-    #ordersTable #orderSearchBar{
+    .dashboard #proposalsTable #proposalsSearchBar,
+    .dashboard #ordersTable #orderSearchBar{
         display: flex !important;
     }
 
@@ -505,15 +505,15 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
         flex-direction: column;
     }
 
-    #searchFieldDiv{
+    .dashboard #searchFieldDiv{
     max-width: unset !important;
     }
 
-    #customFieldsTrackingOptionContainer.flex-row-20{
+    .dashboard #customFieldsTrackingOptionContainer.flex-row-20{
         flex-direction: column;
     }
 
-    .weekly-radio-dropdown select{
+    .dashboard .weekly-radio-dropdown select{
         flex: unset !important;
     }
 }
@@ -536,27 +536,27 @@ div.operatorOnly, span.operatorOnly, div.sectionHeader.operatorOnly{
     flex: 0 1 auto !important;
 }
 
-.plainText {
+.dashboard .plainText {
 	padding-right: 5px;
 	display:flex;
 	align-items: center;
 }
 
-.checkboxes.grid3,
-.radios.grid3 {
+.dashboard .checkboxes.grid3,
+.dashboard .radios.grid3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
 }
 
-.checkboxes.grid4,
-.radios.grid4 {
+.dashboard .checkboxes.grid4,
+.dashboard .radios.grid4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 8px;
 }
 
-div.checkAllNone{
+.dashboard div.checkAllNone{
     display: flex;
     justify-content: center;
     padding: 8px 4px;
@@ -564,10 +564,10 @@ div.checkAllNone{
     font-weight: bold;
 }
 
-table div.lsPaginationTop,
-table div.lsPaginationBottom
-table.leadListTable div.lsPaginationTop,
-table.leadListTable div.lsPaginationBottom {
+.dashboard table div.lsPaginationTop,
+.dashboard table div.lsPaginationBottom
+.dashboard table.leadListTable div.lsPaginationTop,
+.dashboard table.leadListTable div.lsPaginationBottom {
     white-space: nowrap;
     padding: 4px;
     display: flex;
@@ -591,17 +591,17 @@ table.leadListTable div.lsPaginationBottom {
     white-space: nowrap;
 }
 
-select[disabled],
-select[disabled]:hover,
-input[disabled],
-input[disabled]:hover{
+.dashboard select[disabled],
+.dashboard select[disabled]:hover,
+.dashboard input[disabled],
+.dashboard input[disabled]:hover{
     opacity: 0.4 !important;
     cursor: not-allowed !important;
     border-color: var(--color-muted) !important;
     background: var(--lt-color-gray-300) !important;
 }
 
-.assigned-lead{
+.dashboard .assigned-lead{
     padding: 10px;
     border: 1px solid;
     border-color: var(--border);
@@ -618,17 +618,17 @@ input[disabled]:hover{
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230060a7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71'/%3E%3Cpath d='M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71'/%3E%3C/svg%3E") no-repeat center !important;
 }
 
-.xsmallGrey{
+.dashboard .xsmallGrey{
     font-size: xx-small;
 }
 
-#leadStoreWrapper #infoDiv {
+.dashboard #leadStoreWrapper #infoDiv {
     justify-content: end;
     gap: 12px;
     padding: 10px;
 }
 
-.grid_1_1 > div {
+.dashboard .grid_1_1 > div {
     flex: 1;
 }
 
@@ -655,7 +655,7 @@ input[disabled]:hover{
     color: var(--color-dark) !important;
 }
 
-.boxContent2 label { 
+.dashboard .boxContent2 label { 
     display: block;
 	float: left;
 	font-weight: bold
@@ -675,20 +675,20 @@ input[disabled]:hover{
     flex: unset !important;
 }
 
-.table#activeOrdersList{
+.dashboard .table#activeOrdersList{
     border-radius: unset !important;
 }
 
-.lowerContainer {
+.dashboard .lowerContainer {
     display: flex  !important;       
 }
 
-#ccContainer {
+.dashboard #ccContainer {
     display: flex;
     gap: 12px;
 }
 
-.outlineContent {
+.dashboard .outlineContent {
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -709,7 +709,7 @@ input[disabled]:hover{
 }
 
 /* delivery default mapping styles */
-div.mapping-h{
+.dashboard div.mapping-h{
     display: grid;
     grid-template-columns: 50% 50%;
     background: var(--bg-info) !important;
@@ -726,14 +726,14 @@ div.mapping-h{
     white-space: nowrap !important;
 }
 
-details.mapping > summary{
+.dashboard details.mapping > summary{
   display: grid;
   grid-template-columns: 50% 50%;
   cursor: default;
   list-style: none;
 }
 
-details.mapping.plus > summary {
+.dashboard details.mapping.plus > summary {
   display: grid;
   grid-template-columns: 2% 48% 50%;
   align-items: center;
@@ -741,60 +741,60 @@ details.mapping.plus > summary {
   list-style: none;
 }
 
-details.mapping.plus > summary::before {
+.dashboard details.mapping.plus > summary::before {
   content: "▶️";
   margin-right: 0.5rem;
 }
 
-details.mapping.plus[open] > summary::before {
+.dashboard details.mapping.plus[open] > summary::before {
   content: "🔽";
 }
 
-details.mapping {
+.dashboard details.mapping {
   padding: 0.5rem;
 }
 
-details.mapping.even {
+.dashboard details.mapping.even {
   background-color: rgb(251, 251, 251);
 }
 
-details.mapping.odd {
+.dashboard details.mapping.odd {
   background-color: rgb(255, 255, 255);
 }
 
-details.mapping>table {
+.dashboard details.mapping>table {
     width: 50%;
     font-size: smaller;
     margin: 10px;
 }
 
-.actionRequired2-pa {
+.dashboard .actionRequired2-pa {
     font-weight: 600;
     text-align: center;
 }
 
-.ai-center {
+.dashboard .ai-center {
     align-items: center;
 }
 
-table#accountOverview{
+.dashboard table#accountOverview{
     width: 90% !important;
     margin: 0 auto !important
 }
 
-.options:has(.width-100pct){
+.dashboard .options:has(.width-100pct){
     width: 100% !important;
 }
 
-.options:has(.width-50pct){
+.dashboard .options:has(.width-50pct){
     width: 50% !important;
 }
 
-.padding-10{
+.dashboard .padding-10{
     padding: 10px;
 }
 
-.pcBody{
+.dashboard .pcBody{
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -811,12 +811,12 @@ table#accountOverview{
 
 /************Menu item selected*************/
 
-a#agreementLink {
+.dashboard a#agreementLink {
     color: #00ade1 !important;
 }
 
 /*     home/leadstore bullets     */
-ul.leadstore_bullets{
+.dashboard ul.leadstore_bullets{
     list-style: inside;
 }
 
@@ -849,24 +849,24 @@ ul.leadstore_bullets{
     max-width: unset !important;
 }
 
-#filterByState, #filterByZip{
+.dashboard #filterByState, #filterByZip{
     margin: 5px;
 }
 
 /* volume guidance*/
-#volumeGuidanceBar{
+.dashboard #volumeGuidanceBar{
     width: 100% !important;
     float: unset;
     margin-right: 0px !important;
 }
 
-#volumeGuidanceDiv{
+.dashboard #volumeGuidanceDiv{
     width: 100% !important;
 }
 
 /**** Links underline ****/
 
-#MainContent a:not( .buttonGroup a,
+.dashboard #MainContent a:not( .buttonGroup a,
                     #settingssubnav a,
                     .pagination a, 
                     th a, 
@@ -876,12 +876,12 @@ ul.leadstore_bullets{
                     .oliDiv .right a,
                     .addLink a,
                     .integration-support a),
-#reportLink,
-#sidebar a,
-tbody td a ,
-h2 a,
-.inputGroup a,
-.linkSpan
+.dashboard #reportLink,
+.dashboard #sidebar a,
+.dashboard tbody td a ,
+.dashboard h2 a,
+.dashboard .inputGroup a,
+.dashboard .linkSpan
 {
   color: var(--color-primary) !important;
   text-decoration: underline !important;
@@ -890,13 +890,13 @@ h2 a,
   font-weight: 500 !important;
 }
 
-th a {
+.dashboard th a {
     color: var(--color-primary) !important;
     text-decoration: unset !important;
     font-weight: 600 !important;
 }
 
-th a:hover {
+.dashboard th a:hover {
   text-decoration: underline !important;
   text-decoration-color: var(--color-primary) !important;
 }
@@ -909,11 +909,11 @@ th a:hover {
         margin: 0 auto 16px;
 }
 
-.volumeGuidanceDiv{
+.dashboard .volumeGuidanceDiv{
     position: relative !important;
 }
 
-#price-grid-head th{
+.dashboard #price-grid-head th{
     border: none !important;
     text-wrap-mode: wrap !important;
 }
@@ -924,11 +924,11 @@ th a:hover {
 
 /** Reports **/
 
-.filter:is(.flex-col-20, .flex-row-20) .inputGroup{
+.dashboard .filter:is(.flex-col-20, .flex-row-20) .inputGroup{
     padding: 0 !important;
 }
 
-form.detail .filter:is(.flex-col-20, .flex-row-20){
+.dashboard form.detail .filter:is(.flex-col-20, .flex-row-20){
     align-items: center !important;
 }
 
@@ -953,7 +953,7 @@ form.detail .filter:is(.flex-col-20, .flex-row-20){
     width: auto !important;
 }
 
-table#report td.rptHeaderCenter, table#report td.rptHeaderLeft, table.bodyListing th {
+.dashboard table#report td.rptHeaderCenter, table#report td.rptHeaderLeft, table.bodyListing th {
     background: rgb(30, 58, 95);
 }
 
@@ -991,11 +991,11 @@ table#report td.rptHeaderCenter, table#report td.rptHeaderLeft, table.bodyListin
 }
 
 /*** settings custom brand ***/
-ul.cb-tabs.yui-nav{
+.dashboard ul.cb-tabs.yui-nav{
     padding-top: 10px;
 }
 
-ul.cb-tabs.yui-nav > li{
+.dashboard ul.cb-tabs.yui-nav > li{
     padding: 10px 20px;
     border-radius: 10px 10px 0 0;
     border: solid 1px var(--color-primary);
@@ -1004,58 +1004,58 @@ ul.cb-tabs.yui-nav > li{
     margin:0 !important;
 }
 
-ul.cb-tabs.yui-nav > li:is(.selected){
+.dashboard ul.cb-tabs.yui-nav > li:is(.selected){
     background: var(--color-orange)
 }
 
-ul.cb-tabs.yui-nav > li > a >em{
+.dashboard ul.cb-tabs.yui-nav > li > a >em{
     color: var(--color-white) !important
 }
 
-ul.cb-tabs.yui-nav > li:not(.selected):hover{
+.dashboard ul.cb-tabs.yui-nav > li:not(.selected):hover{
     background: var(--color-bg-light)
 }
 
-ul.cb-tabs.yui-nav > li:not(.selected):hover >a >em{
+.dashboard ul.cb-tabs.yui-nav > li:not(.selected):hover >a >em{
     color: var(--color-primary) !important;
 }
 
-#searchFieldDiv{
+.dashboard #searchFieldDiv{
     max-width: 270px;
 }
 
 /** Report scheduling **/
-.weekly-radio-dropdown {
+.dashboard .weekly-radio-dropdown {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.weekly-radio-dropdown input[type="radio"] {
+.dashboard .weekly-radio-dropdown input[type="radio"] {
   flex: 0 0 auto;
 }
 
-.weekly-radio-dropdown label {
+.dashboard .weekly-radio-dropdown label {
   flex: 1;
   margin: 0;
   min-width: max-content;
 }
 
-.weekly-radio-dropdown select {
+.dashboard .weekly-radio-dropdown select {
   flex: 0 0 auto;
   max-width: 150px;
 }
 
 /* ========== LEAD CHANNEL DETAIL ========== */
-.sectionHeader.channelInfo,
-.sectionHeader.channelSettings {
+.dashboard .sectionHeader.channelInfo,
+.dashboard .sectionHeader.channelSettings {
     display: flex;
     gap: 2px;
     border-bottom: 1px solid var(--border) !important;
     padding: unset !important
 }
 
-.sectionHeader:is(.channelInfo,.channelSettings) :is(.headerLeft, .headerRight) {
+.dashboard .sectionHeader:is(.channelInfo,.channelSettings) :is(.headerLeft, .headerRight) {
     margin: 0 !important;
     padding: 10px 20px !important;
     border: 1px solid var(--border);
@@ -1063,20 +1063,20 @@ ul.cb-tabs.yui-nav > li:not(.selected):hover >a >em{
     border-radius: 8px 8px 0 0 !important;
 }
 
-.sectionHeader.channelInfo .headerRight,
-.sectionHeader.channelSettings .headerLeft {
+.dashboard .sectionHeader.channelInfo .headerRight,
+.dashboard .sectionHeader.channelSettings .headerLeft {
     border-bottom: 1px solid var(--color-white) !important;
     background: var(--color-white);
     position: relative;
     top: 1px;
 }
 
-.sectionHeader.channelInfo .headerRight {
+.dashboard .sectionHeader.channelInfo .headerRight {
     border-top: unset !important;
     border-right: unset !important;
 }
 
-.sectionHeader.channelSettings .headerLeft {
+.dashboard .sectionHeader.channelSettings .headerLeft {
     border-top: unset !important;
     border-left: unset !important;
 }
