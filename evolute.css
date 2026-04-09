@@ -963,7 +963,6 @@
 }
 
 .dashboard .reports table#report.reportResults td{
-    font-size: x-small !important;
     padding: 2px !important;
 }
 
