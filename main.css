@@ -3189,8 +3189,8 @@ div.grid_1_1#leftInnerGrid {
 
 .dashboard .sellerHomeContentBoxL .boxContent > a img,
 .dashboard .sellerHomeContentBoxR .boxContent > a img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
 }
 
 .dashboard .sellerHomeContentBoxL .boxContent > a[href*="settings.est"]::before {
