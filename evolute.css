@@ -975,6 +975,14 @@
     height: 20px !important;
 }
 
+.product-opts{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+
 /**   order tracking   **/
 .dashboard #settingsContainer .inputGroup .options:is(#httpTrackingOptionContainer, #xmlTrackingOptionContainer, #customTrackingOptionContainer, #noCustomTrackingOptionContainer){
     display: block !important;
@@ -1078,4 +1086,9 @@
 .dashboard .sectionHeader.channelSettings .headerLeft {
     border-top: unset !important;
     border-left: unset !important;
+}
+
+/*** sign up ***/
+#FormPageContent .formSectionContent #nextButton{
+    margin: 0 15px 15px;
 }
