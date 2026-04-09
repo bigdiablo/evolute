@@ -1093,6 +1093,14 @@
     margin: 0 15px 15px;
 }
 
+.dashboard #Main:has([name="publisher_signup_v2_1"]) .inputGroup:has(.note), .dashboard #Main:has([name="publisher_signup_v2_2"]) .inputGroup:has(.note) {
+     display: flex !important
+}
+
+.dashboard #Main:has(#buyerSignupFormv22) #FormHeader, .dashboard #Main:has([name="publisher_signup_v2_1"]) #FormHeader, .dashboard #Main:has([name="publisher_signup_v2_2"]) #FormHeader{
+    display: block !important;
+}
+
 .dashboard .usPhoneNumber {
     display: flex;
     gap: 5px;
@@ -1104,4 +1112,5 @@
 .dashboard .usPhoneNumber .phoneExt {
     display: flex;
     gap: 5px;
+
 }
