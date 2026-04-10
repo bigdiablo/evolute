@@ -965,7 +965,7 @@
     white-space: nowrap !important;
 }
 
-.dashboard .reports table#report.reportResults tr>td {
+.dashboard .reports table#report.reportResults tr>td:is(.rptDataRight,.rptDataLeft,.rptHeaderCenter) {
     padding: 2px !important;
     border: solid 1px black !important;
 }
