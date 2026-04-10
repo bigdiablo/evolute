@@ -946,7 +946,7 @@
 
 .dashboard .reports .filter .inputGroup{
     min-width: unset !important;
-    max-width: unset !important;
+    max-width: fit-content !important;
 }
 
 .dashboard .formSectionContent .options{
@@ -960,10 +960,16 @@
 .dashboard .reports table#report.reportResults td.rptDataLeft{
     background-color: unset !important;
     color: var(--color-primary) !important;
+    word-break: normal;
 }
 
 .dashboard .reports table#report.reportResults td{
     padding: 2px !important;
+    border: solid 1px black !important;
+}
+
+.dashboard .reports table#report, .dashboard .reports table.reportResult{
+    border-radius: none;
 }
 
 .dashboard .reports>#PrimaryContent{
