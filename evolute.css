@@ -44,6 +44,10 @@
     gap: 10px;
 }
 
+.dashboard .grid_600px_340px:not(:has(> :nth-child(2))) {
+  grid-template-columns: 1fr;
+}
+
 .dashboard #outerDiv.grid_600px_340px {
     grid-template-columns: fit-content(65%) fit-content(35%);
 
@@ -302,6 +306,7 @@
 .dashboard .ordersTable tbody td .oliDiv {
 	flex-wrap: nowrap !important;
 }
+
 @media (max-width: 768px) {
 	.dashboard .ordersTable tbody tr td.nowrap {
 		flex-direction: row !important;
@@ -374,7 +379,7 @@
     .dashboard #settingsContainer .inputGroup .mainLabel{
         flex: unset !important;
     }
-  
+
     .dashboard #proposalsTable #proposalsSearchBar,
     .dashboard #ordersTable #orderSearchBar{
         display: flex !important;
@@ -486,7 +491,6 @@
         content: "START DATE";
     }
 
-
     .dashboard .dynamicTable thead tr.actions td.paginationTop .buttonGroup,
     .dashboard .ordersTable thead tr.actions td.paginationTop .buttonGroup {
         position: fixed;
@@ -524,6 +528,105 @@
         width: 100%;
         order: -1;
     }
+
+    .dashboard #consumerBrandTable tbody tr td:nth-child(1)::before {
+        content: "SELECTED";
+    }
+
+    .dashboard #consumerBrandTable tbody tr td:nth-child(2)::before {
+        content: "ID#";
+    }
+
+    .dashboard #consumerBrandTable tbody tr td:nth-child(3)::before {
+        content: "CONSUMER BRAND NAME";
+    }
+
+    .dashboard #consumerBrandTable tbody tr td:nth-child(4)::before {
+        content: "LOGO IMAGE";
+    }
+
+    .dashboard #consumerBrandTable tbody tr td:nth-child(5)::before {
+        content: "WEBSITE URL";
+    }
+
+    .dashboard #consumerBrandTable tbody tr td:nth-child(6)::before {
+        content: "CREATED";
+    }
+
+    .dashboard #manageUserTable tbody tr td:nth-child(1)::before {
+        content: "USER";
+    }
+
+    .dashboard #manageUserTable tbody tr td:nth-child(2)::before {
+        content: "TYPE";
+    }
+
+    .dashboard #manageUserTable tbody tr td:nth-child(3)::before {
+        content: "LAST LOGIN DATE";
+    }
+
+    .dashboard #manageUserTable tbody tr td:nth-child(4)::before {
+        content: "ACTIONS";
+    }
+
+
+    .dashboard table.nestedListTable thead tr.colheaders {
+        display: none !important;
+    }
+
+    .dashboard table#consumerBrandTable.nestedListTable thead {
+        display: flex !important;
+        flex-direction: row-reverse;
+    }
+
+    .dashboard .settings table.nestedListTable tbody tr td.checkbox {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 1280px) {
+
+    .dashboard .grid_580px_240px {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .dashboard .grid_75_25 .inputGroup,
+    .dashboard .grid_600px_340px .inputGroup {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+
+    .dashboard .table,
+    .dashboard .nestedListTable {
+        width: 100% !important;
+        table-layout: fixed !important;
+    }
+
+    .dashboard .table th,
+    .dashboard .table td,
+    .dashboard .nestedListTable th,
+    .dashboard .nestedListTable td {
+        white-space: normal !important;
+        word-wrap: break-word !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    .dashboard .table td span {
+        white-space: normal !important;
+    }
+}
+
+.dashboard .grid_200px_n > * {
+    min-width: 0;
+}
+
+
+.dashboard .grid_200px_n * {
+    max-width: 100% !important;
+    overflow-wrap: break-word;
 }
 
 .dashboard .formSectionContent .optionsContent {

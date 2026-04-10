@@ -2712,8 +2712,18 @@ body.login {
 
 .dashboard .grid_580px_240px {
     display: grid;
-    grid-template-columns: 1fr 320px;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 3fr);
     gap: 24px;
+}
+
+.dashboard .grid_580px_240px > * {
+    min-width: 0;
+}
+
+
+.dashboard .grid_580px_240px * {
+    max-width: 100% !important;
+    overflow-wrap: break-word;
 }
 
 .dashboard .grid_580px_240px .column1,
@@ -9781,40 +9791,8 @@ img.calendarIcon {
 
 }
 
-/* ========== TABLET ========== */
-
-@media (max-width: 768px) {
-
-    .dashboard #Main:has([name="publisher_signup_v2_1"]) #MainContent,
-    .dashboard #Main:has([name="publisher_signup_v2_2"]) #MainContent {
-        padding: 24px 16px !important;
-    }
-
-    .dashboard #Main:has(#buyerSignupFormv22) #MainContent #NestedFormPage,
-    .dashboard .yui-button,
-    .dashboard .channels .paginationTop .buttonGroup,
-    .dashboard .settings .options,
-    .dashboard #search .buttonGroup .yui-button,
-    .dashboard #search .buttonGroup .yui-link-button,
-    .dashboard #FormPage,
-    .dashboard #FormPageContent,
-    .dashboard #FormFields,
-    .dashboard .roundedBox2 select,
-    .dashboard #leadSearchFormWidgets .yui-button,
-    .dashboard #leadSearchFormWidgets .yui-submit-button,
-    .dashboard #leadSearchFormWidgets .yui-button button,
-    .dashboard #leadSearchFormWidgets .yui-submit-button button,
-    .dashboard .blueBox,
-    .dashboard .redBox,
-    .dashboard #secondaryMetrics,
-    .dashboard #secondaryMetricsContent,
-    .dashboard #chartsContainer,
-    .dashboard #ordersContainer,
-    .dashboard .inputGroup .options,
-    .dashboard .categoryContainer select#productCategoryId {
-        width: 100% !important;
-    }
-
+@media (max-width: 1024px) {
+    /* Mobile Menu */
     #mobilemenu {
         position: fixed;
         top: 0;
@@ -9975,6 +9953,43 @@ img.calendarIcon {
         margin: 0 0 16px !important;
     }
 
+    /* Mobile Menu */
+}
+
+/* ========== TABLET ========== */
+
+@media (max-width: 768px) {
+
+    .dashboard #Main:has([name="publisher_signup_v2_1"]) #MainContent,
+    .dashboard #Main:has([name="publisher_signup_v2_2"]) #MainContent {
+        padding: 24px 16px !important;
+    }
+
+    .dashboard #Main:has(#buyerSignupFormv22) #MainContent #NestedFormPage,
+    .dashboard .yui-button,
+    .dashboard .channels .paginationTop .buttonGroup,
+    .dashboard .settings .options,
+    .dashboard #search .buttonGroup .yui-button,
+    .dashboard #search .buttonGroup .yui-link-button,
+    .dashboard #FormPage,
+    .dashboard #FormPageContent,
+    .dashboard #FormFields,
+    .dashboard .roundedBox2 select,
+    .dashboard #leadSearchFormWidgets .yui-button,
+    .dashboard #leadSearchFormWidgets .yui-submit-button,
+    .dashboard #leadSearchFormWidgets .yui-button button,
+    .dashboard #leadSearchFormWidgets .yui-submit-button button,
+    .dashboard .blueBox,
+    .dashboard .redBox,
+    .dashboard #secondaryMetrics,
+    .dashboard #secondaryMetricsContent,
+    .dashboard #chartsContainer,
+    .dashboard #ordersContainer,
+    .dashboard .inputGroup .options,
+    .dashboard .categoryContainer select#productCategoryId {
+        width: 100% !important;
+    }
+
     .dashboard .roundedBox,
     .dashboard .roundedBox2,
     .dashboard .blueBox,
@@ -10090,6 +10105,7 @@ img.calendarIcon {
     .dashboard .activeOrders thead tr.colheaders,
     .dashboard table.listTable thead,
     .dashboard table.leadListTable thead,
+    .dashboard table.nestedListTable thead tr.colheaders,
     .dashboard .reports table#report thead,
     .dashboard .reports table.reportResults thead,
     .dashboard table#savedSearchesTable tbody tr td:has(input[type="checkbox"])::before,
