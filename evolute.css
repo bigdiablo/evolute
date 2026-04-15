@@ -310,6 +310,14 @@
 	flex-wrap: nowrap !important;
 }
 
+@media (max-width: 480px) {
+    .dashboard #helpContainer .contentInline {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+}
+
 @media (max-width: 768px) {
 	.dashboard .ordersTable tbody tr td.nowrap {
 		flex-direction: row !important;
@@ -625,12 +633,6 @@
 
     .dashboard .table td span {
         white-space: normal !important;
-    }
-
-    .dashboard .contentInline {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 10px !important;
     }
 
     .dashboard .formSectionContent .inputGroup {
