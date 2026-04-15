@@ -3000,7 +3000,7 @@ div.titleDiv {
     flex-wrap: wrap;
     gap: 12px;
 }
-/** pending to test and approve**/
+
 .dashboard .optionsContent .option .subOption{
     padding-left: 10px;
 }
@@ -10752,9 +10752,6 @@ img.calendarIcon {
     }
 
     .yui-panel-container.yui-dialog .yui-panel {
-        /* -- test all dialog */
-        /* width: 100% !important;
-        height: 100% !important; */
         max-width: 90% !important;
         max-height: 90% !important;
         border-radius: 10px !important;
