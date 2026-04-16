@@ -1303,3 +1303,8 @@ div.titleDiv{
 div.titleDiv > a.agreementLink{
     top: 0;
 }
+
+.dashboard #createOrderForm #leadTypeContainer .radioContainer,
+.dashboard #createOrderForm #buttonsContainer .radioContainer {
+    align-items: start;
+}
