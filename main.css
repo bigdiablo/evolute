@@ -642,7 +642,7 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
     left: -100%;
 }
 
-.dashboard #Main:has(form[name="friendship_accept_signup_form"]) form[name="friendship_accept_signup_form"] .userLogin .inputGroup {
+.dashboard #Main:has(form[name="friendship_accept_signup_form"]) .userLogin .inputGroup {
     padding: 0 !important;
     flex-direction: column;
     align-items: flex-start;
