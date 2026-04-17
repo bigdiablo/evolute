@@ -1308,3 +1308,7 @@ div.titleDiv > a.agreementLink{
 .dashboard #createOrderForm #buttonsContainer .radioContainer {
     align-items: start;
 }
+
+.dashboard .modal.info-modal table.pricegrid{
+    overflow: auto !important;
+}
