@@ -1370,3 +1370,12 @@ div.titleDiv > a.agreementLink{
 }
 
 /* temp changes for customization page */
+
+/*** seller test lead modal ***/
+body:has(dialog[open]){
+    overflow: hidden;
+}
+
+.modal .body .roundedBox{
+    overflow: unset !important;
+}
