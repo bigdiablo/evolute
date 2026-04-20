@@ -648,7 +648,7 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
     align-items: flex-start;
 }
 
-.dashboard #Main:has(form[name="friendship_accept_signup_form"]) .userLogin .inputGroup:has(.loginButton) .mainLabel {
+.dashboard #Main:has(form[name="friendship_accept_signup_form"]) .userLogin .inputGroup:has(#loginButton) .mainLabel {
     display: none !important;
 }
 
