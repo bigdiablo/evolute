@@ -631,10 +631,6 @@
     .dashboard .settings table.nestedListTable tbody tr td.checkbox {
         width: 100% !important;
     }
-
-    #pricing .pricegridContainer{
-        max-width: 40vh;
-    }
 }
 
 @media (max-width: 1280px) {
@@ -1384,8 +1380,6 @@ body:has(dialog[open]){
     overflow: unset !important;
 }
 
-@media(min-width: 756px) and (max-width: 1024px){
-    #pricing .pricegridContainer{
-        max-width: 50vh;
-    }
+#pricing .pricegridContainer{
+    max-width: 90vw;
 }
