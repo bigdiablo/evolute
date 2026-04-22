@@ -655,7 +655,8 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
 }
 
 .dashboard #Main:has(form[name="friendship_accept_signup_form"]) #lpConnect .primary,
-.dashboard #Main:has(form[name="friendship_accept_signup_form"]) .yui-submit-button {
+.dashboard #Main:has(form[name="friendship_accept_signup_form"]) .yui-submit-button,
+.dashboard #Main:has(form[name="friendship_accept_signup_form"]) .options {
     width: 100% !important;
 }
 
