@@ -961,34 +961,50 @@
     const reorderSearch  = document.getElementById('reorder-search');
     const showMoreBtn    = document.getElementById('show-available');
 
-    // key: field name, value: custom alias (editable)
+    // key: unique id (name, or `${name}#n` for repeatables), value: { name, alias }
     const selected = new Map();
+    const openIds  = new Set();
     let dragSrc = null;
     let visibleCount = 4;
+    let repCounter = 0;
     const SHOW_STEP = 5;
     const isMobile = () => window.innerWidth <= 768;
+    const esc  = s => s.replace(/"/g, '&quot;');
+    const has  = name => [...selected.values()].some(v => v.name === name);
 
     function toKey(name) { return name.replace(/\s+/g, '_').toUpperCase(); }
+    function uid(name)   { return REPEATABLE.has(name) ? `${name}#${++repCounter}` : name; }
+
+    function availableItem(f) {
+        return `
+            <li data-field="${esc(f)}">
+                <div class="field-control" style="flex:1">${f}</div>
+                <div class="custom-actions">
+                    <button class="btn btn-primary reorder-add">${SVG_PLUS}</button>
+                </div>
+            </li>`;
+    }
 
     function renderAvailable(filter, resetVisible) {
         if (resetVisible) visibleCount = 4;
         const q = (filter || '').toLowerCase();
-        const available = FIELDS.filter(f => !selected.has(f) && (!q || f.toLowerCase().includes(q)));
-        const slice = isMobile() ? available.slice(0, visibleCount) : available;
+        const match = f => !q || f.toLowerCase().includes(q);
+        const regular    = FIELDS.filter(f => !REPEATABLE.has(f) && !has(f) && match(f));
+        const repeatable = FIELDS.filter(f =>  REPEATABLE.has(f) && match(f));
+        const regSlice   = isMobile() ? regular.slice(0, visibleCount) : regular;
 
-        availableList.innerHTML = slice.length
-            ? slice.map(f => `
-                <li data-field="${f.replace(/"/g, '&quot;')}">
-                    <div class="field-control" style="flex:1">${f}</div>
-                    <div class="custom-actions">
-                        <button class="btn btn-primary reorder-add">${SVG_PLUS}</button>
-                    </div>
-                </li>`).join('')
+        const parts = [];
+        if (regSlice.length) regSlice.forEach(f => parts.push(availableItem(f)));
+        if (repeatable.length) {
+            parts.push(`<li class="category">Repeatable</li>`);
+            repeatable.forEach(f => parts.push(availableItem(f)));
+        }
+        availableList.innerHTML = parts.length
+            ? parts.join('')
             : `<li><div class="field-control" style="flex:1;color:var(--color-muted)">No fields found</div></li>`;
 
-        // Show/hide "Show more" — mobile only, hide when all visible
-        if (isMobile() && available.length > visibleCount) {
-            const remaining = available.length - visibleCount;
+        if (isMobile() && regular.length > visibleCount) {
+            const remaining = regular.length - visibleCount;
             showMoreBtn.textContent = `Show ${Math.min(SHOW_STEP, remaining)} more`;
             showMoreBtn.style.display = '';
         } else {
@@ -998,7 +1014,7 @@
         availableList.querySelectorAll('.reorder-add').forEach(btn => {
             btn.addEventListener('click', () => {
                 const name = btn.closest('li').dataset.field;
-                selected.set(name, toKey(name));
+                selected.set(uid(name), { name, alias: toKey(name) });
                 renderAvailable(reorderSearch.value);
                 renderSelected();
             });
@@ -1016,46 +1032,65 @@
             return;
         }
 
-        selectedList.innerHTML = [...selected.entries()].map(([name, alias]) => `
-            <li draggable="true" data-field="${name.replace(/"/g, '&quot;')}">
+        selectedList.innerHTML = [...selected.entries()].map(([id, { name, alias }]) => {
+            const subs = SUB_FIELDS[name] || [];
+            const exp  = subs.length > 0;
+            const cls  = exp ? `expandable${openIds.has(id) ? ' open' : ''}` : '';
+            return `
+            <li draggable="true" data-id="${esc(id)}"${cls ? ` class="${cls}"` : ''}>
                 <div class="field-drag">${SVG_DRAG}</div>
                 <div class="field-control" style="flex:1">
-                    ${name}
-                    <input type="text" value="${alias}">
+                    <span>${name}${exp ? ` <span class="field-count">(${subs.length})</span>` : ''}</span>
+                    <input type="text" value="${esc(alias)}">
                 </div>
                 <div class="custom-actions">
+                    ${exp ? `<button class="btn btn-secondary field-toggle">${SVG_CHEV}</button>` : ''}
                     <button class="btn btn-primary reorder-save" disabled>${SVG_SAVE}</button>
                     <button class="btn btn-danger reorder-remove">${SVG_TRASH}</button>
                 </div>
-            </li>`).join('');
+                ${exp ? `<ul class="field-subs">${subs.map(s => `
+                    <li>
+                        <div class="field-control" style="flex:1">
+                            <span>${s}</span>
+                            <input type="text" value="${esc(toKey(s))}">
+                        </div>
+                    </li>`).join('')}</ul>` : ''}
+            </li>`;
+        }).join('');
 
-        selectedList.querySelectorAll('li').forEach(li => {
-            const input     = li.querySelector('input');
+        selectedList.querySelectorAll(':scope > li').forEach(li => {
+            const id        = li.dataset.id;
+            const input     = li.querySelector(':scope > .field-control input[type="text"]');
             const saveBtn   = li.querySelector('.reorder-save');
             const origAlias = input.value;
 
-            // Enable save only when value differs from saved alias
             input.addEventListener('input', () => {
                 saveBtn.disabled = input.value.trim() === origAlias;
             });
 
-            // Save alias
             saveBtn.addEventListener('click', () => {
                 const newAlias = input.value.trim();
                 if (newAlias) {
-                    selected.set(li.dataset.field, newAlias);
+                    const entry = selected.get(id);
+                    selected.set(id, { ...entry, alias: newAlias });
                     saveBtn.disabled = true;
                 }
             });
 
-            // Remove
             li.querySelector('.reorder-remove').addEventListener('click', () => {
-                selected.delete(li.dataset.field);
+                selected.delete(id);
+                openIds.delete(id);
                 renderAvailable(reorderSearch.value);
                 renderSelected();
             });
 
-            // Drag & drop
+            const toggle = li.querySelector('.field-toggle');
+            if (toggle) toggle.addEventListener('click', () => {
+                li.classList.toggle('open');
+                if (li.classList.contains('open')) openIds.add(id);
+                else openIds.delete(id);
+            });
+
             li.addEventListener('dragstart', () => { dragSrc = li; li.classList.add('dragging'); });
             li.addEventListener('dragend',   () => { dragSrc = null; selectedList.querySelectorAll('li').forEach(x => x.classList.remove('dragging', 'drag-over')); });
             li.addEventListener('dragover',  e => { e.preventDefault(); if (li !== dragSrc) li.classList.add('drag-over'); });
@@ -1064,12 +1099,11 @@
                 e.preventDefault();
                 li.classList.remove('drag-over');
                 if (!dragSrc || dragSrc === li) return;
-                // Rebuild Map order
                 const keys = [...selected.keys()];
-                const fromIdx = keys.indexOf(dragSrc.dataset.field);
-                const toIdx   = keys.indexOf(li.dataset.field);
+                const fromIdx = keys.indexOf(dragSrc.dataset.id);
+                const toIdx   = keys.indexOf(li.dataset.id);
                 keys.splice(fromIdx, 1);
-                keys.splice(toIdx, 0, dragSrc.dataset.field);
+                keys.splice(toIdx, 0, dragSrc.dataset.id);
                 const reordered = new Map(keys.map(k => [k, selected.get(k)]));
                 selected.clear();
                 reordered.forEach((v, k) => selected.set(k, v));
@@ -1089,29 +1123,43 @@
     const search2     = document.getElementById('reorder2-search');
     const showMore2   = document.getElementById('show2-available');
 
-    const showMore2Sel    = document.getElementById('show2-selected');
     const selected2       = new Map();
+    const openIds2        = new Set();
     let visible2Count     = 4;
-    let visible2SelCount  = 5;
+    let repCounter2       = 0;
+    const has2 = name => [...selected2.values()].some(v => v.name === name);
+    const uid2 = name => REPEATABLE.has(name) ? `${name}#${++repCounter2}` : name;
+
+    function availableItem2(f) {
+        return `
+            <li data-field="${esc(f)}">
+                <div class="field-control" style="flex:1">${f}</div>
+                <div class="custom-actions">
+                    <button class="btn btn-primary reorder2-add">${SVG_PLUS}</button>
+                </div>
+            </li>`;
+    }
 
     function renderAvailable2(filter, resetVisible) {
         if (resetVisible) visible2Count = 4;
         const q = (filter || '').toLowerCase();
-        const available = FIELDS.filter(f => !selected2.has(f) && (!q || f.toLowerCase().includes(q)));
-        const slice = isMobile() ? available.slice(0, visible2Count) : available;
+        const match = f => !q || f.toLowerCase().includes(q);
+        const regular    = FIELDS.filter(f => !REPEATABLE.has(f) && !has2(f) && match(f));
+        const repeatable = FIELDS.filter(f =>  REPEATABLE.has(f) && match(f));
+        const regSlice   = isMobile() ? regular.slice(0, visible2Count) : regular;
 
-        avail2List.innerHTML = slice.length
-            ? slice.map(f => `
-                <li data-field="${f.replace(/"/g, '&quot;')}">
-                    <div class="field-control" style="flex:1">${f}</div>
-                    <div class="custom-actions">
-                        <button class="btn btn-primary reorder2-add">${SVG_PLUS}</button>
-                    </div>
-                </li>`).join('')
+        const parts = [];
+        if (regSlice.length) regSlice.forEach(f => parts.push(availableItem2(f)));
+        if (repeatable.length) {
+            parts.push(`<li class="category">Repeatable</li>`);
+            repeatable.forEach(f => parts.push(availableItem2(f)));
+        }
+        avail2List.innerHTML = parts.length
+            ? parts.join('')
             : `<li><div class="field-control" style="flex:1;color:var(--color-muted)">No fields found</div></li>`;
 
-        if (isMobile() && available.length > visible2Count) {
-            const remaining = available.length - visible2Count;
+        if (isMobile() && regular.length > visible2Count) {
+            const remaining = regular.length - visible2Count;
             showMore2.textContent = `Show ${Math.min(SHOW_STEP, remaining)} more`;
             showMore2.style.display = '';
         } else {
@@ -1121,7 +1169,7 @@
         avail2List.querySelectorAll('.reorder2-add').forEach(btn => {
             btn.addEventListener('click', () => {
                 const name = btn.closest('li').dataset.field;
-                selected2.set(name, toKey(name));
+                selected2.set(uid2(name), { name, alias: toKey(name) });
                 renderAvailable2(search2.value);
                 renderSelected2();
             });
@@ -1133,83 +1181,84 @@
         renderAvailable2(search2.value);
     });
 
-    showMore2Sel.addEventListener('click', () => {
-        visible2SelCount += SHOW_STEP;
-        renderSelected2();
-    });
-
     function renderSelected2() {
         if (!selected2.size) {
             sel2List.innerHTML = `<li><div class="field-control" style="flex:1;color:var(--color-muted)">No fields added yet</div></li>`;
-            showMore2Sel.style.display = 'none';
             return;
         }
 
         const entries = [...selected2.entries()];
-        const slice = entries.slice(0, visible2SelCount);
 
-        sel2List.innerHTML = slice.map(([name, alias], idx) => `
-            <li data-field="${name.replace(/"/g, '&quot;')}">
+        sel2List.innerHTML = entries.map(([id, { name, alias }], idx) => {
+            const subs = SUB_FIELDS[name] || [];
+            const exp  = subs.length > 0;
+            const cls  = exp ? `expandable${openIds2.has(id) ? ' open' : ''}` : '';
+            return `
+            <li data-id="${esc(id)}"${cls ? ` class="${cls}"` : ''}>
                 <div class="pos-input">
-                    <input type="number" min="1" max="${selected2.size}" value="${idx + 1}">
+                    <input type="number" min="1" max="${entries.length}" value="${idx + 1}">
                 </div>
                 <div class="field-control" style="flex:1">
-                    ${name}
-                    <input type="text" value="${alias}">
+                    <span>${name}${exp ? ` <span class="field-count">(${subs.length})</span>` : ''}</span>
+                    <input type="text" value="${esc(alias)}">
                 </div>
                 <div class="custom-actions">
+                    ${exp ? `<button class="btn btn-secondary field-toggle">${SVG_CHEV}</button>` : ''}
                     <button class="btn btn-primary reorder2-save" disabled>${SVG_SAVE}</button>
                     <button class="btn btn-danger reorder2-remove">${SVG_TRASH}</button>
                 </div>
-            </li>`).join('');
+                ${exp ? `<ul class="field-subs">${subs.map(s => `
+                    <li>
+                        <div class="field-control" style="flex:1">
+                            <span>${s}</span>
+                            <input type="text" value="${esc(toKey(s))}">
+                        </div>
+                    </li>`).join('')}</ul>` : ''}
+            </li>`;
+        }).join('');
 
-        // Show/hide selected "show more"
-        if (entries.length > visible2SelCount) {
-            const rem = entries.length - visible2SelCount;
-            showMore2Sel.textContent = `Show ${Math.min(SHOW_STEP, rem)} more`;
-            showMore2Sel.style.display = '';
-        } else {
-            showMore2Sel.style.display = 'none';
-        }
-
-        sel2List.querySelectorAll('li').forEach((li, idx) => {
-            const textInput = li.querySelector('.field-control input');
+        sel2List.querySelectorAll(':scope > li').forEach(li => {
+            const id        = li.dataset.id;
+            const textInput = li.querySelector(':scope > .field-control input[type="text"]');
             const saveBtn   = li.querySelector('.reorder2-save');
             const posInput  = li.querySelector('.pos-input input');
-            // idx here is the slice index; real position is idx (0-based from full entries)
-            const realIdx   = entries.findIndex(([n]) => n === li.dataset.field);
+            const realIdx   = entries.findIndex(([k]) => k === id);
             const origAlias = textInput.value;
-            posInput.value  = realIdx + 1;
 
-            // Enable save when alias changes
             textInput.addEventListener('input', () => {
                 saveBtn.disabled = textInput.value.trim() === origAlias;
             });
             saveBtn.addEventListener('click', () => {
                 const newAlias = textInput.value.trim();
                 if (newAlias) {
-                    selected2.set(li.dataset.field, newAlias);
+                    const entry = selected2.get(id);
+                    selected2.set(id, { ...entry, alias: newAlias });
                     saveBtn.disabled = true;
                 }
             });
 
-            // Remove
             li.querySelector('.reorder2-remove').addEventListener('click', () => {
-                selected2.delete(li.dataset.field);
-                visible2SelCount = Math.max(5, visible2SelCount - 1);
+                selected2.delete(id);
+                openIds2.delete(id);
                 renderAvailable2(search2.value);
                 renderSelected2();
             });
 
-            // Position input reorder
+            const toggle = li.querySelector('.field-toggle');
+            if (toggle) toggle.addEventListener('click', () => {
+                li.classList.toggle('open');
+                if (li.classList.contains('open')) openIds2.add(id);
+                else openIds2.delete(id);
+            });
+
             posInput.addEventListener('change', () => {
                 let newPos = parseInt(posInput.value, 10);
                 const size = selected2.size;
                 if (isNaN(newPos)) { posInput.value = realIdx + 1; return; }
-                newPos = Math.max(1, Math.min(size, newPos)) - 1; // 0-based
+                newPos = Math.max(1, Math.min(size, newPos)) - 1;
                 const keys = [...selected2.keys()];
                 keys.splice(realIdx, 1);
-                keys.splice(newPos, 0, li.dataset.field);
+                keys.splice(newPos, 0, id);
                 const reordered = new Map(keys.map(k => [k, selected2.get(k)]));
                 selected2.clear();
                 reordered.forEach((v, k) => selected2.set(k, v));

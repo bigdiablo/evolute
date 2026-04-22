@@ -954,6 +954,7 @@ dialog.modal {
     font-size: 14px;
     font-weight: 500;
     line-height: 1;
+    cursor: pointer;
     border-radius: 8px;
     border-width: 2px;
     border-style: solid;
