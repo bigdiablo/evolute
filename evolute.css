@@ -1274,6 +1274,10 @@
     display: none !important;
 }
 
+div.hidden-tracking-option:is(#httpTrackingOptionContainer, #xmlTrackingOptionContainer, #customTrackingOptionContainer, #noCustomTrackingOptionContainer){
+    display: none !important;
+}
+
 .dashboard #bidoptions select, .dashboard .channels select:is(#xmlOrderTrackingName){
     min-width: unset !important;
     max-width: unset !important;
