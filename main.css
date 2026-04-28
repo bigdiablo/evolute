@@ -12065,16 +12065,6 @@ aside {
         text-align: left !important;
     }
 
-    .dashboard .nestedListTable tbody tr.odd td:nth-child(1)::before,
-    .dashboard .nestedListTable tbody tr.even td:nth-child(1)::before {
-        content: "Order ID";
-    }
-
-    .dashboard .nestedListTable tbody tr.odd td:nth-child(2)::before,
-    .dashboard .nestedListTable tbody tr.even td:nth-child(2)::before {
-        content: "Name";
-    }
-
     .dashboard .grid_340px_600px .primary {
         gap: 16px !important;
     }
