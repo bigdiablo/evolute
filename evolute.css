@@ -625,6 +625,18 @@
     .dashboard input[type="text"]#unsignedRelationshipFactorValue{
         width: unset !important;
     }
+
+    .dashboard form[name="downloadLeadDetailCsvForm"] {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .dashboard #leadDetailsContainer .formSectionContent > table > tbody > tr > td:first-child{
+        background: unset !important;
+        color: unset !important;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -1519,9 +1531,3 @@ body:has(dialog[open]){
   font-size: 16px !important;
 }
 
-.dashboard form[name="downloadLeadDetailCsvForm"] {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
-}
