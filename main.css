@@ -575,6 +575,7 @@ form[name="ticketLogForm"] .buttonGroup .yui-button button {
     font-size: 12px;
 }
 
+.dashboard #Main:has(#reseller-signup),
 .dashboard #Main:has(form[name="friendship_accept_signup_form"]) {
     position: fixed;
     display: flex;
@@ -1024,6 +1025,12 @@ dialog.modal {
 .btn-danger {
     color: white;
     background-color: var(--color-error) !important;
+}
+
+.btn-delete{
+    border-color: var(--color-error);
+    color: var(--color-error);
+    background-color: transparent;
 }
 
 .modal .form {
@@ -2541,6 +2548,7 @@ body.login {
     background-color: var(--bg-light);
 }
 
+.dashboard #Main:has(#reseller-signup),
 .dashboard #Main:has(#signup #addCCSubmitButton),
 .dashboard #Main:has(#buyerSignupFormv22),
 .dashboard #Main:has([name="publisher_signup_v2_1"]),
@@ -9954,8 +9962,10 @@ aside {
     .content {
         width: 100%;
         max-width: 100%;
-        padding-left: 24px;
-        padding-right: 24px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 20px;
+        padding-top: 20px;
     }
 
     aside {
@@ -11225,7 +11235,7 @@ aside {
     }
 
     .dashboard #leadChannelsListTable thead .actions .paginationTop {
-        padding: 16px !important;
+        padding: 0px !important;
         display: flex !important;
         justify-content: center !important;
     }
@@ -12063,16 +12073,6 @@ aside {
         background: transparent !important;
         border: none !important;
         text-align: left !important;
-    }
-
-    .dashboard .nestedListTable tbody tr.odd td:nth-child(1)::before,
-    .dashboard .nestedListTable tbody tr.even td:nth-child(1)::before {
-        content: "Order ID";
-    }
-
-    .dashboard .nestedListTable tbody tr.odd td:nth-child(2)::before,
-    .dashboard .nestedListTable tbody tr.even td:nth-child(2)::before {
-        content: "Name";
     }
 
     .dashboard .grid_340px_600px .primary {

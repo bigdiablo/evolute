@@ -319,6 +319,10 @@
 }
 
 @media (max-width: 768px) {
+
+    .dashboard #settingsContainer{
+        padding: 10px !important;
+    }
 	.dashboard .ordersTable tbody tr td.nowrap {
 		flex-direction: row !important;
 	}
@@ -376,6 +380,34 @@
 
     .dashboard #leadChannelsListTable tbody tr td:nth-child(7)::before {
         content: "Lead Class";
+    }
+
+	.dashboard #leadManagerTable tbody tr td:nth-child(1)::before {
+        content: "ID";
+    }
+
+    .dashboard #leadManagerTable tbody tr td:nth-child(2)::before {
+        content: "CONTACT DETAILS";
+    }
+
+    .dashboard #leadManagerTable tbody tr td:nth-child(3)::before {
+        content: "STATE";
+    }
+
+    .dashboard #leadManagerTable tbody tr td:nth-child(4)::before {
+        content: "PRODUCT";
+    }
+
+    .dashboard #leadManagerTable tbody tr td:nth-child(5)::before {
+        content: "TIME";
+    }
+	
+	.dashboard #leadManagerTable tbody tr td:nth-child(6)::before {
+        content: "STATUS";
+    }
+
+    .dashboard #leadManagerTable tbody tr td:nth-child(7)::before {
+        content: "ASSIGNMENTS";
     }
 
     .dashboard .grid_600px_340px{
@@ -439,7 +471,7 @@
 
     .dashboard #testLeadsTable tbody tr td:nth-child(1)::before {
         content: "LEAD ID";
-        color: var(--color-white) !important;
+        /*color: var(--color-white) !important;*/
     }
 
     .dashboard #testLeadsTable tbody tr td:nth-child(2)::before {
@@ -591,6 +623,53 @@
     
     .dashboard input[type="text"]#unsignedRelationshipFactorValue{
         width: unset !important;
+    }
+
+    .dashboard form[name="downloadLeadDetailCsvForm"] {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .dashboard #leadDetailsContainer .formSectionContent > table > tbody > tr > td:first-child{
+        background: unset !important;
+        color: unset !important;
+    }
+
+    .dashboard .grid_1_1{
+        flex-direction: column !important;
+        max-width: 100%;
+    }
+
+    #reseller-signup{
+        margin: 0 !important;
+    }
+
+    .dashboard .settings table.nestedListTable tbody tr td.checkbox:has(input[type="checkbox"]) {
+        width: 50px !important;
+    }
+
+}
+
+@media print {
+    .dashboard #leadDetailsContainer .grid_1_1 {
+        display: flex;
+        flex-direction: column;
+        overflow-y: hidden;
+        width: 100%;
+    }
+
+    .dashboard #leadDetailsContainer .formSectionContent > table >tbody > tr > td {
+        width: 100%;
+    }
+
+    .dashboard .formSectionContent > table > tbody{
+        display: flex;
+    }
+
+    .dashboard #Header #mobilemenu {
+        display: none;
     }
 }
 
@@ -761,6 +840,10 @@
     .dashboard .nestedListTable {
         width: 100% !important;
         table-layout: fixed !important;
+    }
+
+    .dashboard #leadManagerTable {
+        table-layout: auto !important;
     }
 
     .dashboard .table th,
@@ -1429,64 +1512,6 @@ div.titleDiv > a.agreementLink{
     overflow: auto !important;
 }
 
-/* temp changes for customization page */
-
-.dashboard .settings #customizationFieldsComponent .formSectionContent.grid_600px_340px #leftSide,
-.dashboard .settings #customizationFieldsComponent .formSectionContent.grid_600px_340px #rightSide {
-    width: unset !important;
-}
-
-.dashboard .settings #customizationFieldsComponent .formSectionContent.grid_600px_340px #leftSide .items {
-    width: unset !important;
-}
-
-.dashboard .settings #customizationFieldsComponent .formSectionContent.grid_600px_340px #rightSide .box.leadpoint {
-    float: unset !important;
-}
-
-.dashboard .settings #customizationFieldsComponent .formSectionContent.grid_600px_340px #leftSide .item,
-.dashboard .settings #customizationFieldsComponent .formSectionContent.grid_600px_340px #rightSide .item {
-    gap: unset !important;
-    width: unset !important;
-    padding: unset !important;
-}
-
-.dashboard .settings #customizationFieldsComponent .formSectionContent.grid_600px_340px #leftSide .item .content,
-.dashboard .settings #customizationFieldsComponent .formSectionContent.grid_600px_340px #rightSide .item .content {
-    flex-direction: row !important;
-    gap: 5px !important;
-    padding: 5px !important;
-}
-
-.dashboard .settings #customizationFieldsComponent .formSectionContent.grid_600px_340px #leftSide .item .content.cChildren {
-    flex-direction: column !important;
-    align-items: start;
-}
-
-.dashboard .settings #customizationFieldsComponent .formSectionContent.grid_600px_340px #leftSide .item .content.cChildren p {
-    display: flex;
-    flex-direction: row !important;
-    gap: 5px !important;
-    align-items: center;
-    white-space: nowrap;
-}
-
-.dashboard .settings #customizationFieldsComponent .grid_600px_340px{
-    grid-template-columns: 4fr 4fr !important;
-}
-
-.dashboard .settings #customizationFieldsComponent .formSectionContent.grid_600px_340px #rightSide .items {
-    width: unset !important;
-}
-
-@media (max-width: 481px) {
-    .dashboard .settings #customizationFieldsComponent .formSectionContent.grid_600px_340px {
-        flex-direction: column-reverse !important;
-    }
-}
-
-/* temp changes for customization page */
-
 /*** seller test lead modal ***/
 body:has(dialog[open]){
     overflow: hidden;
@@ -1538,4 +1563,19 @@ body:has(dialog[open]){
   border-radius: 4px !important;
   text-shadow: none !important;
   font-size: 16px !important;
+}
+
+#reseller-signup{
+    text-align: center;
+    margin: 0 25%;
+}
+
+.hs-form-frame{
+    background: white;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.dashboard .primaryContainer {
+    width: 100% !important;
 }
